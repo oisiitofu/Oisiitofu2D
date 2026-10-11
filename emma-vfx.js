@@ -1,0 +1,21 @@
+'use strict';
+const EmmaVFX=(()=>{
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.emma?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;SlashVFX.image('emma',n,img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,h,face=1,alpha=1,rot=0){const img=characterArt.emma?.frames[40+n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-h*img.width/img.height/2,-h/2,h*img.width/img.height,h);ctx.restore();}
+ function vine(x,y,p,alpha=1){const dx=p.x-x,dy=p.y-y,len=Math.hypot(dx,dy);if(!len)return;ctx.save();ctx.globalAlpha*=alpha;ctx.lineCap='round';ctx.strokeStyle='#314632';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(p.x,p.y);ctx.stroke();ctx.strokeStyle='#b6d38c';ctx.lineWidth=1.4;ctx.stroke();for(let n=10;n<len;n+=14){const u=n/len,px=lerp(x,p.x,u),py=lerp(y,p.y,u),nx=-dy/len,ny=dx/len,side=Math.floor(n/14)%2?1:-1;ctx.fillStyle=side>0?'#b9d48a':'#5f8b64';ctx.beginPath();ctx.moveTo(px,py);ctx.quadraticCurveTo(px+nx*side*10,py+ny*side*10,px+nx*side*7+dx/len*7,py+ny*side*7+dy/len*7);ctx.quadraticCurveTo(px+dx/len*3,py+dy/len*3,px,py);ctx.fill();}ctx.restore();}
+ function impact(v){const u=(v.max-v.life)/v.max;stamp(6,v.x,v.y,90+v.power*13,90+v.power*13,1,(1-u)**1.7);}
+ function drawObjects(){for(const q of EmmaRules.objects){const alpha=Math.min(1,(q.life-q.age+1)/6);if(q.kind==='shot'){stamp(1,q.x,q.y,q.radius*(q.charged?8:9),q.radius*4,q.face,alpha,Math.atan2(q.vy,Math.abs(q.vx)));}else if(q.kind==='koo'){const img=characterArt.emma?.frames[40+q.pose];if(img){const h=q.pose===0||q.pose===5?94:q.pose===1||q.pose===4?70:q.pose===2?61:90;prop(q.pose,q.x,q.y-h*.5,h,q.face,alpha);if(q.age>q.delay&&q.age<=q.delay+q.duration&&!q.recalled)stamp(4,q.x,q.y-30,140,105,q.face,.5);}}}
+  for(const f of fighters){if(f.characterId!=='emma')continue;const a=f.attack,t=f.timer;if(a?.vineVault&&a.hook&&t>=a.startupFrames){const u=clamp((t-a.startupFrames+1)/(a.hookFrame-a.startupFrames+1),0,1),hand=t<a.hookFrame?{x:f.x+f.face*28,y:f.y-38}:{x:f.x+f.face*a.handX,y:f.y-a.handOffset},p=t<a.hookFrame?{x:lerp(a.castOrigin.x,a.hook.x,u),y:lerp(a.castOrigin.y,a.hook.y,u)}:a.hook;vine(hand.x,hand.y,p);prop(6,p.x,p.y,33);stamp(5,p.x,p.y,60,55,1,.6);if(t>=a.releaseMin)text('←→ / X・ジャンプで跳躍',f.x,f.y-135,10,'#c9e7bf');}if(f.grabbed)vine(f.x+f.face*22,f.y-38,{x:f.grabbed.x,y:f.grabbed.y-32},.9);}
+ }
+ function draw(f){const a=f.attack;if(!a)return;const t=f.timer;if(a.hold)stamp(a.trackShot?1:2,f.x+f.face*28,f.y-42,55+a.charge*70,45+a.charge*50,f.face,.5);if(a.vineVault)return;
+  if(a.trackShot&&t>=a.startupFrames&&t<a.startupFrames+3)stamp(1,f.x+f.face*42,f.y-40,65,40,f.face,.8);
+  const w=CombatData.activeWindow(a,t)||a.activeFrames.filter(w=>w.end<t).at(-1);if(!w||['grab','pummel'].includes(a.type)||a.type.endsWith('Throw'))return;const alpha=t<=w.end?1:Math.max(0,1-(t-w.end)/5)*.6;if(!alpha)return;
+  const up=w.shape==='up',low=['low','down','plunge','shockwave'].includes(w.shape),spin=w.shape==='spin',back=w.shape==='back',x=f.x+(up||spin||w.shape==='shockwave'?0:back?-45:45)*f.face,y=f.y-(up?65:low?20:40),size=(w.reach??a.reach)*FIGHTER_SCALE*1.7;
+  if(a.thornStorm){prop(7,f.x,f.y-a.thornHeight*.5,a.thornHeight,1,alpha);stamp(3,f.x,f.y-a.thornHeight*.5,130,a.thornHeight*1.2,1,alpha);return;}
+  if(a.helmSlam||w.shape==='shockwave'){stamp(7,f.x,f.y-24,size,95,1,alpha);stamp(2,f.x,f.y-32,size,110,1,alpha*.7);return;}
+  if(a.kooUpper){prop(5,f.x-f.face*34,f.y-80,105,f.face,alpha*.7);stamp(4,f.x,f.y-65,120,160,f.face,alpha*.5);}
+  {const slashIndex=a.petals?2:0;if([0,2].includes(slashIndex)&&w.shape!=='spin')SlashVFX.melee(f,w,slashIndex,alpha);else stamp(a.petals?2:0,x,y,size,spin?130:up?150:low?90:105,back?-f.face:f.face,alpha,up?-Math.PI/2:low&&w.shape==='plunge'?Math.PI/2:0);}
+ }
+ function hud(f,x,y){if(f.characterId!=='emma')return;const a=f.attack,status=a?.vineVault?'VINE / '+(a.hook?'SWING → X':'支点なし'):a?.kooCommand?'KOO / '+(a.recalled?'RECALL':'FLANK → POUNCE'):f.emmaKooCooldown>0?'KOO '+(f.emmaKooCooldown/60).toFixed(1)+'s':'SWORD / KOO / VINE';text(status,x+52,y+54,8,'#b6d9fa','left');}
+ return{stamp,prop,vine,impact,drawObjects,draw,hud};
+})();

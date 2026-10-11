@@ -1,0 +1,15 @@
+{
+  "name": "oisiitofu-brothers",
+  "version": "1.0.0",
+  "private": true,
+  "description": "おいしいとうふブラザーズ — 2〜4人・チーム・CPU・トレーニング・オンライン対戦",
+  "scripts": {
+    "start": "node server.cjs",
+    "check": "node check.cjs",
+    "test": "node test-all.cjs",
+    "test:multiplayer": "node multiplayer-test.cjs && node multiplayer-online-test.cjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}

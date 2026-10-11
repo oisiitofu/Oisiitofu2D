@@ -1,0 +1,1 @@
+const fs=require('fs');let s=fs.readFileSync('.tools/newcomer-test.cjs','utf8').replace("f.x=800;f.y=-100;f.grounded=false;attack(f,'dash');tick(67", "f.x=160;f.face=-1;f.y=200;f.grounded=false;attack(f,'dash');tick(67").replace("Math.abs(f.x-800)<1&&!f.attack","Math.abs(f.x-160)<1&&!f.attack");fs.writeFileSync('.tools/newcomer-test.cjs',s);

@@ -1,0 +1,14 @@
+'use strict';
+const KasaneVFX=(()=>{
+ // Native axes: knife0 / slash1 / rock2 RIGHT, knife pillar6 UP. Other effects symmetric.
+ // Transform order: translate -> horizontal reflection -> local rotation.
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.kasane?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function directed(n,x,y,w,h,angle,alpha=1,sourceAngle=0){const face=Math.cos(angle)<0?-1:1,img=characterArt.kasane?.effects[n],source=sourceAngle&&img?Math.atan2(Math.sin(sourceAngle)*h/img.height,Math.cos(sourceAngle)*w/img.width):0;stamp(n,x,y,w,h,face,alpha,Math.atan2(Math.sin(angle),Math.cos(angle)*face)-source);}
+ function draw(f){if(f.respawn)return;if(f.state==='guard')stamp(5,f.x,f.y-45,100,100,1,.25);if(f.kasaneFieldTime>0)stamp(5,f.x,f.y-45,145,135,1,.2+.03*Math.sin(frame*.15));const a=f.attack;if(!a)return;for(const b of attackBoxes(f)){if(a.type==='smash'){directed(2,(b.x1+b.x2)/2,b.y1,140,55,f.face<0?Math.PI:0,.95);continue;}if(a.type==='upsmash'){stamp(6,b.x1,f.y-65,48,135,1,.95);continue;}const angle=Math.atan2(b.y2-b.y1,b.x2-b.x1);directed(1,(b.x1+b.x2)/2,(b.y1+b.y2)/2,Math.max(40,Math.hypot(b.x2-b.x1,b.y2-b.y1)+20),40,angle,.85);}
+  if(a.hold)stamp(2,f.x+f.face*35,f.y-75,35+35*a.charge,20+20*a.charge,f.face,.85);if(a.kasaneWarp&&f.timer<12){stamp(4,a.exit.x,a.exit.y-45,50,80,1,.4);ctx.save();ctx.strokeStyle='#ff7593';ctx.lineWidth=1;ctx.setLineDash([4,6]);ctx.beginPath();ctx.moveTo(f.x,f.y-45);ctx.lineTo(a.exit.x,a.exit.y-45);ctx.stroke();ctx.restore();}if(a.kasaneWarp&&a.phase==='warp')stamp(4,f.x,f.y-45,70,110,1,.8);
+ }
+ function drawObjects(){for(const q of KasaneRules.objects){if(q.kind==='rock')directed(2,q.x,q.y,65+55*q.charge,38+28*q.charge,Math.atan2(q.vy,q.vx));else if(q.kind==='psiKnife')directed(0,q.x,q.y,q.empowered?65:48,q.empowered?27:20,Math.atan2(q.vy,q.vx));else if(q.kind==='echo'){const f=fighters[q.owner];drawSprite({...f,x:q.x,y:q.y,face:q.face,attack:null,state:'idle',mode:'Idle',inv:0},.4,42);stamp(3,q.x,q.y-45,95,75,q.face,.7);}else if(q.kind==='warpTrace'){stamp(4,q.x,q.y,70,90,1,(q.life-q.age)/q.life*.8);stamp(4,q.targetX,q.targetY,70,90,1,(q.life-q.age)/q.life*.8);}else if(q.kind==='mindBlast')stamp(0,q.x,q.y,100,65,q.face,(q.life-q.age+1)/q.life);else if(q.kind==='fieldBurst')stamp(5,q.x,q.y,155,150,1,(q.life-q.age+1)/q.life*.7);}}
+ function impact(v){stamp(7,v.x,v.y,30+v.power*2,30+v.power*2,1,(v.life/v.max)**1.5);}
+ function hud(f,x,y){if(f.characterId==='kasane')text(f.kasaneFieldTime>0?'ブレインフィールド '+(f.kasaneFieldTime/60).toFixed(1)+'s':'ブレインゲージ '+Math.floor(kasaneGauge(f))+'/100',x+52,y+54,11,f.kasaneFieldTime>0?'#ff83a5':'#d5deff','left');}
+ return{stamp,directed,draw,drawObjects,impact,hud};
+})();

@@ -1,0 +1,8 @@
+'use strict';
+// Fixed cells keep adjacent luminous trails from merging two pose components.
+function extractRoxasAtlas(sheet,columns,rows){return Array.from({length:columns*rows},(_,n)=>{const c=document.createElement('canvas');c.width=Math.floor(sheet.width/columns);c.height=Math.floor(sheet.height/rows);const g=c.getContext('2d',{willReadFrequently:true});g.drawImage(sheet,n%columns*c.width,Math.floor(n/columns)*c.height,c.width,c.height,0,0,c.width,c.height);const d=g.getImageData(0,0,c.width,c.height).data;let x0=c.width,y0=c.height,x1=-1,y1=-1;for(let p=0;p<d.length;p+=4)if(d[p+3]>30){const x=p/4%c.width,y=Math.floor(p/4/c.width);x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y);}if(x1<0)throw Error('Empty Roxas sprite '+n);const out=document.createElement('canvas');out.width=x1-x0+1;out.height=y1-y0+1;out.getContext('2d').drawImage(c,x0,y0,out.width,out.height,0,0,out.width,out.height);return out;});}
+async function loadRoxasArt(){await loadIsaacArt('roxas');}
+// The charge/dash and ascent/spin trails touch across columns. Split those
+// regions explicitly rather than assigning a two-body component to one pose.
+const ROXAS_POSE_REGIONS={7:[256,270,256,255],8:[512,270,256,255],14:[512,560,245,208],15:[757,530,291,238],16:[1048,530,238,238],17:[1286,540,250,228]};
+function extractRoxasPoses(sheet){const frames=extractAtlas(sheet,6,4,'alpha');for(const [n,rect]of Object.entries(ROXAS_POSE_REGIONS)){const [x,y,w,h]=rect,sx=sheet.width/1536,sy=sheet.height/1024,c=document.createElement('canvas');c.width=Math.round(w*sx);c.height=Math.round(h*sy);c.getContext('2d').drawImage(sheet,Math.round(x*sx),Math.round(y*sy),c.width,c.height,0,0,c.width,c.height);frames[n]=extractRoxasAtlas(c,1,1)[0];}return frames;}

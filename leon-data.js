@@ -1,0 +1,61 @@
+'use strict';
+const LeonWeapons=['ハンドガン','ショットガン','マシンピストル','マグナム'],LeonItems=['閃光手榴弾','焼夷手榴弾','スティングレイセンサー','ハーブ'];
+const LeonMoves=(()=>{
+ const m=CombatData.createMove,w=CombatData.window,opt={special:true,newcomerHit:true,soundFamily:'punch'},a=NewcomerCore.moves(['ハンドガン射撃','連射','蹴り','マチェット斬り','ナイフ突き上げ','回し蹴り','ショルダータックル','ショットガン','閃光手榴弾','スイーパー','ハンドガン射撃','回し蹴り','バックエルボー','ナイフ切り上げ','真下に蹴り'],{
+ dragon:m('ハンドガン射撃・武器切替',12,[],29,17,{...opt,leonGun:true,projectile:true,pose:6,preserveVelocity:false,airControlMultiplier:.3}),
+ dash:m('タックル・体術追撃',9,[w(9,18,'front')],25,22,{...opt,leonTackle:true,pose:9,damage:7,baseKnockback:1.6,knockbackGrowth:.018,preserveVelocity:false,airControlMultiplier:0,gravityMultiplier:.45}),
+ rise:m('グラップルショット',12,[],108,24,{...opt,leonGrapple:true,pose:43,tether:true,helpless:true,ledgeGrabStart:12,preserveVelocity:false,gravityMultiplier:.25,airControlMultiplier:0}),
+ gale:m('サバイバルアイテム',20,[],23,20,{...opt,leonItem:true,pose:18,preserveVelocity:false,airControlMultiplier:.25}),
+ airDrop:m('サバイバルアイテム・空中',20,[],23,20,{...opt,leonItem:true,pose:18,aerial:true,preserveVelocity:false,airControlMultiplier:.25}),
+ tackleKick:m('体術追撃・回し蹴り',5,[w(5,9,'front')],22,22,{...opt,leonKick:true,pose:13,damage:11,baseKnockback:4.7,knockbackGrowth:.08,preserveVelocity:false,airControlMultiplier:.15})
+ },'punch',110);
+ const poses={jab:6,jab2:7,jab3:13,heavy:8,up:10,low:11,dashAttack:9,smash:40,upsmash:44,downsmash:11,air:12,fair:13,bair:14,uair:10,dair:16,grab:17,pummel:14,ledge:8,getupAttack:11,forwardThrow:6,backThrow:14,upThrow:10,downThrow:11};
+ for(const[k,n]of Object.entries(poses)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=n;}
+ a.downsmash.activeFrames=[w(22,26,'low',{pose:11}),w(30,34,'back',{pose:14})];a.upsmash.grenadeSmash=true;a.upsmash.activeFrames=[w(20,24,'up',{pose:44})];a.grab.newcomerHit=false;
+ for(const v of Object.values(a)){v.motionEndFrames=v.totalFrames;v.FAF=v.totalFrames+1;v.animation={...v.animation,anticipationPose:3,accelerationPose:v.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};}return a;
+})();
+// Endpoints are measured in cropped native poses. Pose14 strikes backwards
+// already; only the final facing reflection applies to both art and boxes.
+const LeonWeaponPoints={6:[.78,.14,.98,.14],7:[.80,.13,.98,.13],8:[.71,.26,.985,.25],10:[.67,.32,.98,.015],11:[.49,.55,.98,.62],12:[.70,.16,.98,.16],13:[.61,.20,.98,.25],14:[.43,.19,.025,.19],15:[.65,.18,.98,.38],16:[.48,.49,.77,.98],40:[.69,.125,.98,.125],41:[.72,.2,.98,.2],42:[.76,.125,.98,.125],43:[.70,.11,.99,.015]};
+function leonWeapon(f,n){const p=LeonWeaponPoints[n];if(!p)return null;const r=LeonArtRects.frames[n],s=leonNativeScale(n)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.leon[n],point=(x,y)=>({x:f.x+(x-anchor)*r[2]*s*f.face,y:f.y+(y-1)*r[3]*s});return[point(p[0],p[1]),point(p[2],p[3])];}
+function leonDuration(f,a,total){const d=total-a.totalFrames;a.totalFrames=a.motionEndFrames=total;a.FAF=total+1;f.faf+=d;f.stateEnd+=d;}
+function leonDetach(f,a,success,i){a.phase='release';a.tether=false;a.gravityMultiplier=1;a.released=true;f.vx=success?clamp(i.x,-1,1)*6:f.vx*.5;f.vy=success?-9:Math.max(0,f.vy);leonDuration(f,a,f.timer+(success?18:24));}
+function leonHook(f,a,i){
+ const main=platforms.find(p=>p.main),r=f.character.ecb.radius,source=leonWeapon(f,43)[1],below=f.y-f.character.ecb.height>=main.y+89&&f.x>main.x&&f.x<main.x+main.w;
+ const aim={x:Math.abs(i.x)>.2?i.x:Math.sign(main.x+main.w/2-f.x)||f.face,y:-Math.max(.35,Math.abs(i.y))},len=Math.hypot(aim.x,aim.y);aim.x/=len;aim.y/=len;
+ const candidates=platforms.flatMap(p=>[{x:p.x-r-8,y:p.y-18},{x:p.x+p.w+r+8,y:p.y-18}]).map(p=>{const dx=p.x-source.x,dy=p.y-source.y,dist=Math.hypot(dx,dy),route=below?{x:p.x,y:main.y+102}:null,path=route?Math.hypot(route.x-source.x,route.y-source.y)+Math.hypot(p.x-route.x,p.y-route.y):dist;return{...p,route,path,score:below?-path/1000:(dx*aim.x+dy*aim.y)/Math.max(1,dist)-dist/1000};}).filter(p=>p.path<=480&&p.y<source.y+70&&(below?(p.x<main.x-r||p.x>main.x+main.w+r):p.score>-.1)).sort((p,q)=>q.score-p.score);
+ a.tip={...source};a.anchor=candidates[0]||null;if(a.anchor)f.face=Math.sign(a.anchor.x-source.x)||f.face;a.phase='shoot';a.route=a.anchor?.route?{...a.anchor.route}:null;a.tipRoute=a.route?{...a.route}:null;a.aim=aim;a.travel=0;f.recovered=true;f.specialLandingLag=24;
+}
+const LeonRules=NewcomerCore.create('leon',LeonMoves,{
+ prepare(f,a){f.leonWeapon??=0;f.leonItem??=0;f.leonItemCooldown??=0;if(a.leonGun){a.weapon=f.leonWeapon;a.selectLatch=false;a.aimY=0;}if(a.leonGrapple){a.phase='startup';a.specialWas=true;}if(a.leonItem)a.item=f.leonItem;if(a.leonTackle){a.followVictim=null;a.followWindow=0;a.specialWas=true;}},
+ action(f,i,r){const a=f.attack,t=f.timer;
+  if(a.leonGun){f.vx*=.8;if(t<8){const pushed=Math.abs(i.x)>.65;if(pushed&&!a.selectLatch){f.leonWeapon=(f.leonWeapon+(i.x>0?1:3))%4;a.weapon=f.leonWeapon;}a.selectLatch=pushed;}a.pose=[6,40,41,42][a.weapon];a.aimY=clamp(i.y,-1,1)*3;
+   if(t===12)leonDuration(f,a,[36,48,49,56][a.weapon]);const frames=a.weapon===0?[12,20,28]:a.weapon===1||a.weapon===3?[12]:[12,15,18,21,24,27,30,33];
+   if(frames.includes(t)&&(t===12||i.specialHeld)){const p=leonWeapon(f,a.pose)[1],spread=a.weapon===1?[-3.2,-1.6,0,1.6,3.2]:[0];for(const dy of spread)r.spawn(f,{kind:'bullet',x:p.x,y:p.y,vx:f.face*[18,15,18,23][a.weapon],vy:a.aimY+dy,radius:a.weapon===3?8:5,damage:[5,3,2,15][a.weapon],life:[35,13,31,40][a.weapon],weapon:a.weapon});}
+  }
+  if(a.leonTackle){f.buffer=null;f.face=a.originFace;const held=!!i.specialHeld,fresh=!!i.special||held&&!a.specialWas;a.specialWas=held;if(t>=9&&t<=18&&a.followVictim===null)f.vx=a.originFace*(a.originGrounded?12:9);else f.vx*=.6;if(a.followVictim!==null&&fresh&&t<=a.followWindow){attack(f,'tackleKick');return;}}
+  if(a.leonGrapple){f.buffer=null;f.fastFall=false;if(t===12)leonHook(f,a,i);if(a.phase==='shoot'){f.vx*=.8;const goal=a.tipRoute||a.anchor,dx=goal?goal.x-a.tip.x:a.aim.x*480,dy=goal?goal.y-a.tip.y:a.aim.y*480,dist=Math.hypot(dx,dy),step=Math.min(24,dist);a.tip.x+=dx/Math.max(1,dist)*step;a.tip.y+=dy/Math.max(1,dist)*step;a.travel+=step;if(goal&&dist<=24){if(a.tipRoute)a.tipRoute=null;else{a.phase='pull';a.gravityMultiplier=0;f.grounded=false;if(a.route)a.route.y=platforms.find(p=>p.main).y+f.character.ecb.height+102;}}else if(a.travel>=480||t>=42)leonDetach(f,a,false,i);}
+   if(a.phase==='pull'){f.grounded=false;a.gravityMultiplier=0;const goal=a.route||{x:a.anchor.x,y:a.anchor.y+18},dx=goal.x-f.x,dy=goal.y-f.y,dist=Math.hypot(dx,dy),step=Math.min(16,dist),p=AdolRules.clearPath(f.x,f.y,f.x+dx/Math.max(1,dist)*step,f.y+dy/Math.max(1,dist)*step,f);f.vx=p.x-f.x;f.vy=p.y-f.y;if(dist<=18){if(a.route)a.route=null;else leonDetach(f,a,true,i);}else if(t>=96||step>2&&Math.hypot(f.vx,f.vy)<1)leonDetach(f,a,false,i);}
+  }
+  if(a.leonItem){f.vx*=.7;a.pose=[44,45,46,47][a.item];if(t===20&&!a.fired){a.fired=true;f.leonItem=(a.item+1)%4;f.leonItemCooldown=180;if(a.item===3){f.damage=Math.max(0,f.damage-6);r.spawn(f,{kind:'heal',x:f.x,y:f.y-50,vx:0,vy:0,life:35});}else r.spawn(f,{kind:a.item===0?'flash':a.item===1?'fire':'sensor',x:f.x+f.face*36,y:f.y-52,vx:a.item===2?f.face*3:f.face*6,vy:a.item===2?0:-5,radius:12,life:a.item===2?240:130,damage:a.item===0?2:3});}}
+ },
+ onHit(f,o,a){if(a.leonTackle&&f.attack?.leonTackle){f.attack.followVictim=o.id;f.attack.followWindow=f.timer+20;f.vx=0;}},
+ boxes(f,a,w){if(a.leonTackle)return[{x1:f.x+f.face*15,y1:f.y-38,x2:f.x+f.face*57,y2:f.y-34,radius:19,window:w}];if(a.grenadeSmash)return[{x1:f.x,y1:f.y-48,x2:f.x+f.face*22,y2:f.y-130,radius:26,window:w}];const n=w.pose??a.pose,weapon=leonWeapon(f,n);if(weapon)return[{x1:weapon[0].x,y1:weapon[0].y,x2:weapon[1].x,y2:weapon[1].y,radius:12,window:w}];return[{x1:f.x,y1:f.y-45,x2:f.x+f.face*(w.shape==='back'?-60:60),y2:f.y-(w.shape==='up'?120:45),radius:12,window:w}];},
+ hurtboxes(f){const low=[3,11,22,32,36,46].includes(pose(f));return[{part:'head',x:f.x,y:f.y-(low?34:82),r:16},{part:'torso',x:f.x,y:f.y-(low?22:46),r:21},{part:'legs',x:f.x,y:f.y-14,r:16}];},
+ projectile(q,f,o,r){
+  if(f.respawn||q.age>=q.life){q.dead=true;return true;}if(q.kind==='heal'){q.x=f.x;q.y=f.y-50;return true;}
+  if(q.kind!=='bullet'&&!q.burst){q.previousX=q.x;q.previousY=q.y;q.x+=q.vx;q.y+=q.vy;q.vy+=.32;const floor=platforms.find(p=>q.x>p.x&&q.x<p.x+p.w&&q.previousY<=p.y-5&&q.y>=p.y-5);if(floor){q.y=floor.y-5;q.vx=q.vy=0;}if(q.kind==='sensor'){if(Math.hypot(o.x-q.x,o.y-45-q.y)<240&&!o.respawn){o.leonMarked=120;o.leonMarkOwner=f.id;}return true;}if(q.age>=35||floor){q.burst=true;q.burstAge=0;q.vx=q.vy=0;q.radius=q.kind==='flash'?105:62;}}
+  if(q.kind==='bullet'){q.previousX=q.x;q.previousY=q.y;q.x+=q.vx;q.y+=q.vy;const main=platforms.find(p=>p.main);if(platforms.some(p=>q.x>p.x&&q.x<p.x+p.w&&q.previousY<=p.y&&q.y>=p.y)||q.x>main.x&&q.x<main.x+main.w&&q.y>main.y&&q.y<main.y+90){q.dead=true;return true;}}
+  else if(!q.burst)return true;else{q.burstAge++;if(q.burstAge>(q.kind==='flash'?8:55)){q.dead=true;return true;}}
+  const b=q.kind==='bullet'?{x1:q.previousX,y1:q.previousY,x2:q.x,y2:q.y,radius:q.radius}:{x1:q.x,y1:q.y,x2:q.x,y2:q.y,radius:q.radius},rehit=q.kind==='fire'&&q.burstAge%12===1;
+  if((!q.hits.has(o.id)||rehit)&&!o.respawn&&!CombatSystem.protection(o).intangible){const touch=CombatSystem.contact(b,o),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(o.mode)&&CombatSystem.shieldCovers(o,b);if(touch||shield){q.hits.add(o.id);const a={...LeonMoves.dragon,type:q.kind,projectile:true,damage:q.damage,charge:0,staleMultiplier:q.stale,launchDirection:q.face,baseKnockback:q.weapon===3?4:1.2,knockbackGrowth:q.weapon===3?.07:.02,hitstunBase:q.kind==='flash'?24:3,hitstunScale:q.kind==='flash'?0:1.35};if(o.attack?.counterWindow&&o.timer>=o.attack.counterWindow[0]&&o.timer<=o.attack.counterWindow[1]){o.face=Math.sign(f.x-o.x)||o.face;attack(o,o.attack.counterMove);o.inv=o.attack.totalFrames;}else CombatSystem.hit(f,o,a,b,touch);if(q.kind==='bullet')q.dead=true;}}return true;
+ },
+ cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(!a){const dist=Math.abs(o.x-f.x);f.leonWeapon=dist<190?1:dist>430?3:dist>280?2:0;}if(a?.leonGrapple){clear();i.x=Math.sign(p.x+p.w/2-f.x);i.y=-1;}if(a?.leonGun){clear();i.y=clamp((o.y-f.y)/160,-1,1);i.specialHeld=true;}if(a?.leonTackle&&a.followVictim!==null){clear();i.special=a.specialWas===false;i.specialHeld=false;}if(!a&&f.grounded&&!f.leonItemCooldown&&frame%180===f.id){clear();i.x=0;i.y=1;i.special=true;}}
+});
+(()=>{const reset=LeonRules.reset,tick=LeonRules.tick;LeonRules.reset=()=>{reset();for(const f of fighters){f.leonMarked=0;f.leonMarkOwner=null;if(f.characterId==='leon')f.leonWeapon=f.leonItem=f.leonItemCooldown=0;}};LeonRules.tick=()=>{tick();for(const f of fighters){if(f.leonMarked>0){const owner=fighters[f.leonMarkOwner];if(f.respawn||!owner||owner.respawn||owner.characterId!=='leon')f.leonMarked=0;else f.leonMarked--;}if(f.characterId==='leon'){f.leonItemCooldown??=0;if(f.respawn)f.leonWeapon=f.leonItem=f.leonItemCooldown=0;else if(f.leonItemCooldown>0)f.leonItemCooldown--;}}};})();
+function leonPose(f){const a=f.attack;if(a?.leonGun)return[6,40,41,42][a.weapon];if(a?.leonItem)return[44,45,46,47][a.item];if(a?.leonGrapple)return a.phase==='pull'?38:a.phase==='release'?33:43;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,ledge:38,grab:17,caught:21,throw:6})[f.state]??0;}
+
+
+
+
+

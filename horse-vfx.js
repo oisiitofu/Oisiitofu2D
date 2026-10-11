@@ -1,0 +1,11 @@
+'use strict';
+const HorseVFX=(()=>{
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.horse?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,w,h,face=1,rot=0){const img=characterArt.horse?.frames[40+n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function draw(f){const a=f.attack;if(!a)return;const t=f.timer;if(a.crossbow)prop(0,f.x+f.face*35,f.y-54,65,40,f.face);if(a.bowBurst)prop(0,f.x+f.face*8,f.y-78,55,32,f.face,-Math.PI/2);if(a.puckKick&&t<12)prop(1,f.x+f.face*38,f.y-12,27,18,f.face);if(a.cannonJump&&t<25){const aim=a.aim||0,face=Math.sign(aim)||f.face,angle=Math.atan2(-23+Math.abs(aim)*2,Math.abs(aim*13));/* Cannon source already tilts 0.65 rad upward; reflect then rotate by target minus source. */prop(2,a.origin.x,a.origin.y-15,90,70,face,angle+.65);if(t>=22)stamp(9,a.origin.x,a.origin.y-36,90,60,face,1,angle);}if(a.voidPop&&t<18)stamp(11,f.x+f.face*65,f.y-50,45,45,f.face,.75);
+ const w=CombatData.activeWindow(a,t);if(!w)return;for(const b of attackBoxes(f)){const d=AdolVFX.direction(b),n=w.shape==='back'?1:w.shape==='up'?2:a.type==='downsmash'?6:a.type==='smash'?3:a.cannonJump?4:0;stamp(n,d.x,d.y,d.len+30,w.shape==='spin'?95:48,d.face,.88,d.rot);if(a.type==='smash')prop(4,f.x+f.face*60,f.y-45,90,50,f.face);if(a.type==='downsmash')prop(5,d.x,d.y,40,40,d.face,t*.25);}}
+ function drawObjects(){for(const q of HorseRules.objects){const face=Math.sign(q.vx)||q.face,rot=Math.atan2(q.vy,q.vx*face);if(q.kind==='hole'){stamp(q.age<60?11:12,q.x,q.y,q.age<60?115:160,q.age<60?115:160,1,Math.min(1,(q.life-q.age)/8),q.age*.04);continue;}if(q.kind==='puck'){stamp(4,q.x-face*14,q.y,55,20,face,.7,rot);prop(1,q.x,q.y,27,18,face);if(q.bounced&&q.age%5===0)stamp(8,q.x,q.y,22,22,1,.5);continue;}stamp(5,q.x-face*14,q.y,45,14,face,.8,rot);prop(7,q.x,q.y,35,9,face,rot);}}
+ function impact(v){stamp(15,v.x,v.y,50+v.power*4,50+v.power*4,1,(v.life/v.max)**1.7);}
+ function hud(f,x,y){if(f.characterId==='horse')text('→B RICOCHET PUCK / ↑B AIM CANNON',x+52,y+54,8,'#bfe6ff','left');}
+ return{stamp,prop,draw,drawObjects,impact,hud};
+})();

@@ -1,0 +1,11 @@
+'use strict';
+const AerithVFX=(()=>{
+ // Native wind/slash face RIGHT, blossom pillar UP. Translate -> reflect -> rotate.
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.aerith?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function directed(n,x,y,w,h,angle,alpha=1,sourceAngle=0){const face=Math.cos(angle)<0?-1:1,img=characterArt.aerith?.effects[n],source=sourceAngle&&img?Math.atan2(Math.sin(sourceAngle)*h/img.height,Math.cos(sourceAngle)*w/img.width):0;stamp(n,x,y,w,h,face,alpha,Math.atan2(Math.sin(angle),Math.cos(angle)*face)-source);}
+ function draw(f){const a=f.attack;if(!a||f.respawn)return;for(const b of attackBoxes(f)){if(a.type==='upsmash')stamp(7,f.x,f.y-75,90,160);else directed(2,(b.x1+b.x2)/2,(b.y1+b.y2)/2,Math.max(60,Math.hypot(b.x2-b.x1,b.y2-b.y1)+24),45,Math.atan2(b.y2-b.y1,b.x2-b.x1),.85);}if(a.hold)stamp(0,f.x+f.face*45,f.y-45,35+a.charge*35,35+a.charge*35,f.face,.7);if(a.aerithStep&&['rise','second'].includes(a.phase))stamp(7,f.x,f.y-20,45,80,1,.5);if(a.aerithCommand&&a.phase==='menu'){stamp(4,f.x,f.y-40,75,75,1,.5);const names=['← ファイガ','↑ エアロガ','→ ケアル'];ctx.save();ctx.fillStyle='rgba(6,16,28,.9)';ctx.fillRect(f.x-70,f.y-145,140,65);names.forEach((v,j)=>text(v,f.x,f.y-130+j*18,11,j===a.command?'#a5ffcd':'#d5e4ee'));ctx.restore();}}
+ function drawObjects(){for(const q of AerithRules.objects){if(q.kind==='fire'){if(q.phase==='warning'){stamp(4,q.x,q.y+20,q.radius*2,25,1,.65);stamp(0,q.x,q.y,20,20,1,.35);}else stamp(0,q.x,q.y,q.radius*2.4,q.radius*2.2,1,q.phase==='fade'?(q.life-q.age)/10:1);}if(q.kind==='wind')directed(1,q.x,q.y,q.phase==='burst'?115:80,q.phase==='burst'?110:70,q.face<0?Math.PI:0,.85);if(q.kind==='flower')stamp(3,q.x,q.y,90,30,1,Math.min(1,(q.life-q.age)/6));if(q.kind==='heal')stamp(5,q.x,q.y,95,95,1,(q.life-q.age)/q.life);}}
+ function impact(v){stamp(6,v.x,v.y,30+v.power*2,30+v.power*2,1,(v.life/v.max)**1.5);}
+ function hud(f,x,y){if(f.characterId==='aerith')text('ATB '+Math.floor(aerithATB(f))+(f.aerithCommandCooldown>0?' · '+(f.aerithCommandCooldown/60).toFixed(1)+'s':''),x+52,y+54,10,'#a5ffcd','left');}
+ return{stamp,directed,draw,drawObjects,impact,hud};
+})();

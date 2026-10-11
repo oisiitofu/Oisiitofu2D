@@ -1,0 +1,44 @@
+'use strict';
+function eveEnergy(f){return Number.isFinite(f.eveEnergy)?clamp(f.eveEnergy,0,100):50;}
+const EveMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opt={special:true,newcomerHit:true,soundFamily:'sword'},a=NewcomerCore.moves(['高速斬り','返し斬り','連続斬り','横薙ぎ','逆袈裟斬り上げ','低姿勢スライド斬り','踏み込み連撃','シールドブレイカー','クアッドライズ','インフィニットラッシュ','回転斬り','二連斬り','連蹴り・逆手斬り','三日月斬り','エアリアルブロウ'],{
+ dragon:m('ドローンアーマメント',10,[],10,10,{...opt,eveDrone:true,pose:41,projectile:true,chargeFrame:3,chargeButton:'special',chargeMaxFrames:36,airControlMultiplier:.25}),
+ dash:m('ショックウェーブ → クロスウェーブ',12,[],22,12,{...opt,eveWave:true,pose:42,projectile:true,airControlMultiplier:.3}),
+ rise:m('ブリンクドライブ',8,[],40,14,{...opt,eveBlink:true,pose:44,helpless:true,gravityMultiplier:0,airControlMultiplier:0,ledgeGrabStart:18}),
+ gale:m('タキモード',16,[],10,12,{...opt,eveTachy:true,pose:46,airControlMultiplier:.3}),
+ airDrop:m('タキモード・空中',16,[],10,12,{...opt,eveTachy:true,pose:46,airControlMultiplier:.3,aerial:true})
+ },'sword',145),poses={jab:6,jab2:7,jab3:10,heavy:9,up:8,low:11,dashAttack:9,smash:9,upsmash:15,downsmash:11,air:12,fair:13,bair:14,uair:15,dair:16,grab:17,pummel:18,ledge:6,getupAttack:11,forwardThrow:19,backThrow:14,upThrow:15,downThrow:16};
+ for(const[k,n]of Object.entries(poses)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=v.shape==='back'&&['downsmash','getupAttack'].includes(k)?14:n;}a.grab.newcomerHit=false;
+ for(const v of Object.values(a)){v.motionEndFrames=v.totalFrames;v.FAF=v.totalFrames+1;v.animation={...v.animation,anticipationPose:3,accelerationPose:v.pose,recoveryPose:v.pose,lean:0,lunge:0,impactScale:1};}return a;
+})();
+// Native sword grip and tip, in the source's RIGHT-facing coordinate system.
+const EveStrikePoints={6:[.58,.36,.99,.35],7:[.55,.28,.98,.08],8:[.55,.40,.93,.01],9:[.56,.41,.99,.40],10:[.58,.47,.99,.94],11:[.55,.49,.99,.89],12:[.55,.23,.99,.01],13:[.57,.41,.99,.03],14:[.45,.40,.01,.36],15:[.60,.38,.45,.01],16:[.60,.51,.98,.99],18:[.70,.35,.99,.39],19:[.70,.35,.99,.35],43:[.58,.28,.99,.83],45:[.58,.26,.99,.25],47:[.55,.35,.99,.80],52:[.62,.34,.99,.31],53:[.58,.42,.95,.01],54:[.53,.32,.01,.15],55:[.56,.37,.99,.97],56:[.60,.36,.99,.90]};
+function eveVisiblePose(f,n){if(!f.eveTachyTime||n===48||[5,17,18,19,20,21,22,37,38,39].includes(n))return n;if([8,15].includes(n))return 53;if(n===14)return 54;if(n===16)return 55;if([11,43,47].includes(n))return 56;if([6,7,9,10,12,13,42,45].includes(n))return 52;if(n===44||[4,33,34,35].includes(n))return 51;if(n===3||n>=24&&n<=32||n===36)return 50;return 49;}
+function eveStrike(f,n){n=eveVisiblePose(f,n);const p=EveStrikePoints[n];if(!p)return null;const r=EveArtRects.frames[n],s=eveNativeScale(n)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.eve[n],boost=f.eveTachyTime>0?1.12:1;return[0,2].map(j=>({x:f.x+(p[j]-anchor)*r[2]*s*f.face*boost,y:f.y+(p[j+1]-1)*r[3]*s}));}
+function eveDuration(f,a,total){const d=total-a.totalFrames;a.totalFrames=a.motionEndFrames=total;a.FAF=total+1;f.faf+=d;f.stateEnd+=d;}
+function eveBlinkAim(f,a,i){a.aimX=a.clearedUnderStage?0:Math.abs(i.x)>.2?clamp(i.x,-1,1):a.launchFace*.35;a.aimY=-Math.max(.55,Math.abs(i.y));const d=Math.hypot(a.aimX,a.aimY);a.aimX/=d;a.aimY/=d;}
+function eveBlinkStart(f,a){a.phase='aim';a.aimAt=f.timer;f.vx=f.vy=0;eveDuration(f,a,f.timer+44);}
+const EveRules=NewcomerCore.create('eve',EveMoves,{
+ reset(){for(const f of fighters)if(f.characterId==='eve'){f.eveEnergy=50;f.eveTachyTime=0;}},
+ status(f){if(f.respawn){f.eveEnergy=50;f.eveTachyTime=0;}else if(f.eveTachyTime>0)f.eveTachyTime--;for(const k of ['walkSpeed','initialDashSpeed','runSpeed','airSpeed'])f.character[k]=CharacterData.eve[k]*(f.eveTachyTime>0?1.12:1);},
+ prepare(f,a){a.activeFrames=a.activeFrames.map(w=>({...w}));a.phase='startup';a.launchFace=f.face;a.evePowered=f.eveTachyTime>0;if(a.evePowered&&!a.eveTachy){a.damage*=1.15;if(!a.special){a.activeFrames=a.activeFrames.map(w=>({...w,start:Math.max(2,w.start-2),end:Math.max(3,w.end-2)}));a.startupFrames=Math.max(2,a.startupFrames-2);a.activeStart=a.activeFrames[0]?.start;a.activeEnd=a.activeFrames.at(-1)?.end;const total=a.totalFrames-4;eveDuration(f,a,total);}}if(a.eveWave)a.followUntil=24;if(a.eveBlink){f.vx=f.vy=0;a.aimX=f.face*.35;a.aimY=-1;}},
+ action(f,i,r){const a=f.attack,t=f.timer,p=platforms.find(p=>p.main);
+  if(a.eveDrone){a.pose=41;f.vx*=.7;if(t===10&&!a.fired){a.fired=true;const c=a.charge||0;a.volleyEnd=c>=.5?10:18;if(c>=.5)r.spawn(f,{kind:'laser',x:f.x+f.face*70,y:f.y-49,vx:f.face*23,vy:0,radius:12+10*c,damage:12+5*c,life:26,charge:c});else for(let j=0;j<3;j++)r.spawn(f,{kind:'slug',x:f.x+f.face*67,y:f.y-49,vx:f.face*18,vy:0,radius:5,damage:3,life:36,delay:j*4});}}
+  if(a.eveWave){f.vx*=.65;a.pose=a.followed?43:42;if(t===12&&!a.fired){a.fired=true;r.spawn(f,{kind:'wave',x:f.x+f.face*65,y:f.y-42,vx:f.face*11,vy:0,radius:19,damage:8,life:28});}if(t>=15&&t<=a.followUntil&&i.special&&!a.specialWas&&!a.followed){a.followed=true;a.followAt=t;a.followUntil=t+5;a.activeFrames=[CombatData.window(t+2,t+5,'front',{pose:43,hitID:1,damage:8})];a.animationWindows=[{start:t,end:t+15,pose:43}];r.spawn(f,{kind:'cross',x:f.x+f.face*75,y:f.y-42,vx:f.face*15,vy:0,radius:25,damage:10,life:22});}a.specialWas=!!i.special;}
+  if(a.eveBlink){f.fastFall=false;f.grounded=false;
+   if(t===8){f.recovered=true;f.specialLandingLag=14;if(f.x>p.x-f.character.ecb.radius&&f.x<p.x+p.w+f.character.ecb.radius&&f.y-f.character.ecb.height>=p.y+89){NewcomerCore.escape(f,a);a.phase='escape';eveDuration(f,a,t+80);}else eveBlinkStart(f,a);}
+   if(a.phase==='escape'){NewcomerCore.escapeAction(f,a,0);if(!a.escapeSide){a.clearedUnderStage=true;eveBlinkStart(f,a);}return;}
+   if(a.phase==='aim'){f.vx=f.vy=0;eveBlinkAim(f,a,i);a.pose=44;if(t-a.aimAt>=5){const distance=270,nx=f.x+a.aimX*distance,ny=f.y+a.aimY*distance,q=AdolRules.clearPath(f.x,f.y,nx,ny,f);a.departure={x:f.x,y:f.y};f.x=q.x;f.y=q.y;a.arrival={x:f.x,y:f.y};a.arriveAt=t;a.phase='arrival';a.pose=45;f.vx=f.vy=0;eveDuration(f,a,t+18);}}
+   else if(a.phase==='arrival'){f.vx=f.vy=0;a.pose=45;const dt=t-a.arriveAt;if(dt>=2&&dt<=8&&i.special&&!a.specialWas){const o=BattlePlayers.target(f),dx=o.x-f.x,dy=o.y-f.y;a.followed=true;a.finishAt=t;a.phase='strike';if(!o.respawn&&Math.hypot(dx,dy)<115){const q=AdolRules.clearPath(f.x,f.y,o.x-Math.sign(dx||f.face)*55,o.y,f);f.x=q.x;f.y=q.y;f.face=Math.sign(dx)||f.face;}a.activeFrames=[CombatData.window(t+1,t+4,'front',{pose:45,hitID:1,damage:9})];eveDuration(f,a,t+12);}else if(dt>=8){a.phase='exit';a.exitAt=t;a.exitFace=Math.abs(i.x)>.2?Math.sign(i.x):0;a.gravityMultiplier=.7;a.pose=35;f.vx=a.exitFace*5;f.vy=-3;eveDuration(f,a,t+10);}}
+   else if(a.phase==='strike'&&t>=a.finishAt+5){a.phase='exit';a.exitAt=t;a.exitFace=Math.abs(i.x)>.2?Math.sign(i.x):f.face;a.gravityMultiplier=.7;a.pose=35;f.vx=a.exitFace*5;f.vy=-3;eveDuration(f,a,t+8);}
+   else if(a.phase==='exit'&&t<a.exitAt+5)f.vx=a.exitFace*5;
+   a.specialWas=!!i.special;
+  }
+  if(a.eveTachy){a.pose=46;f.vx*=.65;if(t===16&&!a.fired){a.fired=true;f.eveEnergy=0;f.eveTachyTime=360;}}
+ },
+ onHit(f,o,strike){if(!f.eveTachyTime&&!strike.eveNoEnergy)f.eveEnergy=Math.min(100,eveEnergy(f)+(strike.projectile?3:10));},
+ boxes(f,a,w){const n=w.pose??a.pose,p=eveStrike(f,n);if(p)return[{x1:p[0].x,y1:p[0].y,x2:p[1].x,y2:p[1].y,radius:10,window:w,modifiers:w,...(w.hitID!==undefined?{hitID:w.hitID}:{})}];},
+ hurtboxes(f){const low=[3,11,22,32,36,37].includes(pose(f));return[{part:'head',x:f.x,y:f.y-(low?39:78),r:14},{part:'torso',x:f.x,y:f.y-(low?24:47),r:18},{part:'legs',x:f.x,y:f.y-14,r:16}];},
+ projectile(q,f,o,r){if(q.delay&&q.age<=q.delay)return true;return false;},
+ cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.eveBlink){clear();i.x=a.escapeSide||Math.sign(p.x+p.w/2-f.x);i.y=-1;i.specialHeld=false;if(a.phase==='arrival'&&f.timer===a.arriveAt+3&&Math.hypot(o.x-f.x,o.y-f.y)<110)i.special=true;}if(a?.eveWave){clear();i.special=f.timer===18;i.specialHeld=false;}if(a?.eveDrone){clear();i.specialHeld=Math.abs(o.x-f.x)>270&&a.chargeFrames<30;}if(!a&&f.grounded&&eveEnergy(f)>=100&&!f.eveTachyTime&&Math.abs(o.x-f.x)>160){clear();i.x=0;i.y=1;i.special=true;}if(!a&&f.grounded&&Math.abs(o.x-f.x)>190&&frame%100===f.id){clear();i.x=Math.sign(o.x-f.x);i.y=0;i.special=true;}}
+});
+function evePose(f){const a=f.attack;if(a?.eveDrone||a?.eveWave||a?.eveBlink||a?.eveTachy)return eveVisiblePose(f,a.pose);if(a)return eveVisiblePose(f,CombatData.sample(a,f.timer).pose);if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return eveVisiblePose(f,32);if(f.state==='walk')return eveVisiblePose(f,24+Math.floor(frame/6)%4);if(f.state==='run')return eveVisiblePose(f,28+Math.floor(frame/3)%4);return eveVisiblePose(f,({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0);}

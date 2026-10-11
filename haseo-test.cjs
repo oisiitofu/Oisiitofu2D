@@ -1,0 +1,1 @@
+require('./.tools/newcomer-test.cjs')('haseo').catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,0 +1,306 @@
+{
+  "sampleRate": 48000,
+  "variants": 3,
+  "sounds": {
+    "punch-light": [
+      "/assets/audio/se/punch-light-1.wav",
+      "/assets/audio/se/punch-light-2.wav",
+      "/assets/audio/se/punch-light-3.wav"
+    ],
+    "punch-heavy": [
+      "/assets/audio/se/punch-heavy-1.wav",
+      "/assets/audio/se/punch-heavy-2.wav",
+      "/assets/audio/se/punch-heavy-3.wav"
+    ],
+    "body-slam": [
+      "/assets/audio/se/body-slam-1.wav",
+      "/assets/audio/se/body-slam-2.wav",
+      "/assets/audio/se/body-slam-3.wav"
+    ],
+    "slash-light": [
+      "/assets/audio/se/slash-light-1.wav",
+      "/assets/audio/se/slash-light-2.wav",
+      "/assets/audio/se/slash-light-3.wav"
+    ],
+    "slash-heavy": [
+      "/assets/audio/se/slash-heavy-1.wav",
+      "/assets/audio/se/slash-heavy-2.wav",
+      "/assets/audio/se/slash-heavy-3.wav"
+    ],
+    "saber-swing": [
+      "/assets/audio/se/saber-swing-1.wav",
+      "/assets/audio/se/saber-swing-2.wav",
+      "/assets/audio/se/saber-swing-3.wav"
+    ],
+    "sword-hit": [
+      "/assets/audio/se/sword-hit-1.wav",
+      "/assets/audio/se/sword-hit-2.wav",
+      "/assets/audio/se/sword-hit-3.wav"
+    ],
+    "spear-thrust": [
+      "/assets/audio/se/spear-thrust-1.wav",
+      "/assets/audio/se/spear-thrust-2.wav",
+      "/assets/audio/se/spear-thrust-3.wav"
+    ],
+    "staff-swing": [
+      "/assets/audio/se/staff-swing-1.wav",
+      "/assets/audio/se/staff-swing-2.wav",
+      "/assets/audio/se/staff-swing-3.wav"
+    ],
+    "staff-hit": [
+      "/assets/audio/se/staff-hit-1.wav",
+      "/assets/audio/se/staff-hit-2.wav",
+      "/assets/audio/se/staff-hit-3.wav"
+    ],
+    "hammer-swing": [
+      "/assets/audio/se/hammer-swing-1.wav",
+      "/assets/audio/se/hammer-swing-2.wav",
+      "/assets/audio/se/hammer-swing-3.wav"
+    ],
+    "hammer-hit": [
+      "/assets/audio/se/hammer-hit-1.wav",
+      "/assets/audio/se/hammer-hit-2.wav",
+      "/assets/audio/se/hammer-hit-3.wav"
+    ],
+    "claw-swing": [
+      "/assets/audio/se/claw-swing-1.wav",
+      "/assets/audio/se/claw-swing-2.wav",
+      "/assets/audio/se/claw-swing-3.wav"
+    ],
+    "claw-hit": [
+      "/assets/audio/se/claw-hit-1.wav",
+      "/assets/audio/se/claw-hit-2.wav",
+      "/assets/audio/se/claw-hit-3.wav"
+    ],
+    "wing-swing": [
+      "/assets/audio/se/wing-swing-1.wav",
+      "/assets/audio/se/wing-swing-2.wav",
+      "/assets/audio/se/wing-swing-3.wav"
+    ],
+    "fire-cast": [
+      "/assets/audio/se/fire-cast-1.wav",
+      "/assets/audio/se/fire-cast-2.wav",
+      "/assets/audio/se/fire-cast-3.wav"
+    ],
+    "fire-hit": [
+      "/assets/audio/se/fire-hit-1.wav",
+      "/assets/audio/se/fire-hit-2.wav",
+      "/assets/audio/se/fire-hit-3.wav"
+    ],
+    "ice-cast": [
+      "/assets/audio/se/ice-cast-1.wav",
+      "/assets/audio/se/ice-cast-2.wav",
+      "/assets/audio/se/ice-cast-3.wav"
+    ],
+    "ice-hit": [
+      "/assets/audio/se/ice-hit-1.wav",
+      "/assets/audio/se/ice-hit-2.wav",
+      "/assets/audio/se/ice-hit-3.wav"
+    ],
+    "thunder-cast": [
+      "/assets/audio/se/thunder-cast-1.wav",
+      "/assets/audio/se/thunder-cast-2.wav",
+      "/assets/audio/se/thunder-cast-3.wav"
+    ],
+    "thunder-hit": [
+      "/assets/audio/se/thunder-hit-1.wav",
+      "/assets/audio/se/thunder-hit-2.wav",
+      "/assets/audio/se/thunder-hit-3.wav"
+    ],
+    "wind-cast": [
+      "/assets/audio/se/wind-cast-1.wav",
+      "/assets/audio/se/wind-cast-2.wav",
+      "/assets/audio/se/wind-cast-3.wav"
+    ],
+    "wind-hit": [
+      "/assets/audio/se/wind-hit-1.wav",
+      "/assets/audio/se/wind-hit-2.wav",
+      "/assets/audio/se/wind-hit-3.wav"
+    ],
+    "water-cast": [
+      "/assets/audio/se/water-cast-1.wav",
+      "/assets/audio/se/water-cast-2.wav",
+      "/assets/audio/se/water-cast-3.wav"
+    ],
+    "water-hit": [
+      "/assets/audio/se/water-hit-1.wav",
+      "/assets/audio/se/water-hit-2.wav",
+      "/assets/audio/se/water-hit-3.wav"
+    ],
+    "earth-cast": [
+      "/assets/audio/se/earth-cast-1.wav",
+      "/assets/audio/se/earth-cast-2.wav",
+      "/assets/audio/se/earth-cast-3.wav"
+    ],
+    "earth-hit": [
+      "/assets/audio/se/earth-hit-1.wav",
+      "/assets/audio/se/earth-hit-2.wav",
+      "/assets/audio/se/earth-hit-3.wav"
+    ],
+    "light-cast": [
+      "/assets/audio/se/light-cast-1.wav",
+      "/assets/audio/se/light-cast-2.wav",
+      "/assets/audio/se/light-cast-3.wav"
+    ],
+    "light-hit": [
+      "/assets/audio/se/light-hit-1.wav",
+      "/assets/audio/se/light-hit-2.wav",
+      "/assets/audio/se/light-hit-3.wav"
+    ],
+    "dark-cast": [
+      "/assets/audio/se/dark-cast-1.wav",
+      "/assets/audio/se/dark-cast-2.wav",
+      "/assets/audio/se/dark-cast-3.wav"
+    ],
+    "dark-hit": [
+      "/assets/audio/se/dark-hit-1.wav",
+      "/assets/audio/se/dark-hit-2.wav",
+      "/assets/audio/se/dark-hit-3.wav"
+    ],
+    "beam-shot": [
+      "/assets/audio/se/beam-shot-1.wav",
+      "/assets/audio/se/beam-shot-2.wav",
+      "/assets/audio/se/beam-shot-3.wav"
+    ],
+    "beam-hit": [
+      "/assets/audio/se/beam-hit-1.wav",
+      "/assets/audio/se/beam-hit-2.wav",
+      "/assets/audio/se/beam-hit-3.wav"
+    ],
+    "gun-shot": [
+      "/assets/audio/se/gun-shot-1.wav",
+      "/assets/audio/se/gun-shot-2.wav",
+      "/assets/audio/se/gun-shot-3.wav"
+    ],
+    "bullet-hit": [
+      "/assets/audio/se/bullet-hit-1.wav",
+      "/assets/audio/se/bullet-hit-2.wav",
+      "/assets/audio/se/bullet-hit-3.wav"
+    ],
+    "explosion": [
+      "/assets/audio/se/explosion-1.wav",
+      "/assets/audio/se/explosion-2.wav",
+      "/assets/audio/se/explosion-3.wav"
+    ],
+    "engine": [
+      "/assets/audio/se/engine-1.wav",
+      "/assets/audio/se/engine-2.wav",
+      "/assets/audio/se/engine-3.wav"
+    ],
+    "rocket": [
+      "/assets/audio/se/rocket-1.wav",
+      "/assets/audio/se/rocket-2.wav",
+      "/assets/audio/se/rocket-3.wav"
+    ],
+    "chain": [
+      "/assets/audio/se/chain-1.wav",
+      "/assets/audio/se/chain-2.wav",
+      "/assets/audio/se/chain-3.wav"
+    ],
+    "boomerang": [
+      "/assets/audio/se/boomerang-1.wav",
+      "/assets/audio/se/boomerang-2.wav",
+      "/assets/audio/se/boomerang-3.wav"
+    ],
+    "jump": [
+      "/assets/audio/se/jump-1.wav",
+      "/assets/audio/se/jump-2.wav",
+      "/assets/audio/se/jump-3.wav"
+    ],
+    "double-jump": [
+      "/assets/audio/se/double-jump-1.wav",
+      "/assets/audio/se/double-jump-2.wav",
+      "/assets/audio/se/double-jump-3.wav"
+    ],
+    "land-light": [
+      "/assets/audio/se/land-light-1.wav",
+      "/assets/audio/se/land-light-2.wav",
+      "/assets/audio/se/land-light-3.wav"
+    ],
+    "land-heavy": [
+      "/assets/audio/se/land-heavy-1.wav",
+      "/assets/audio/se/land-heavy-2.wav",
+      "/assets/audio/se/land-heavy-3.wav"
+    ],
+    "dodge": [
+      "/assets/audio/se/dodge-1.wav",
+      "/assets/audio/se/dodge-2.wav",
+      "/assets/audio/se/dodge-3.wav"
+    ],
+    "dash": [
+      "/assets/audio/se/dash-1.wav",
+      "/assets/audio/se/dash-2.wav",
+      "/assets/audio/se/dash-3.wav"
+    ],
+    "footstep": [
+      "/assets/audio/se/footstep-1.wav",
+      "/assets/audio/se/footstep-2.wav",
+      "/assets/audio/se/footstep-3.wav"
+    ],
+    "shield-on": [
+      "/assets/audio/se/shield-on-1.wav",
+      "/assets/audio/se/shield-on-2.wav",
+      "/assets/audio/se/shield-on-3.wav"
+    ],
+    "shield-hit": [
+      "/assets/audio/se/shield-hit-1.wav",
+      "/assets/audio/se/shield-hit-2.wav",
+      "/assets/audio/se/shield-hit-3.wav"
+    ],
+    "shield-break": [
+      "/assets/audio/se/shield-break-1.wav",
+      "/assets/audio/se/shield-break-2.wav",
+      "/assets/audio/se/shield-break-3.wav"
+    ],
+    "parry": [
+      "/assets/audio/se/parry-1.wav",
+      "/assets/audio/se/parry-2.wav",
+      "/assets/audio/se/parry-3.wav"
+    ],
+    "grab": [
+      "/assets/audio/se/grab-1.wav",
+      "/assets/audio/se/grab-2.wav",
+      "/assets/audio/se/grab-3.wav"
+    ],
+    "throw": [
+      "/assets/audio/se/throw-1.wav",
+      "/assets/audio/se/throw-2.wav",
+      "/assets/audio/se/throw-3.wav"
+    ],
+    "ledge": [
+      "/assets/audio/se/ledge-1.wav",
+      "/assets/audio/se/ledge-2.wav",
+      "/assets/audio/se/ledge-3.wav"
+    ],
+    "charge": [
+      "/assets/audio/se/charge-1.wav",
+      "/assets/audio/se/charge-2.wav",
+      "/assets/audio/se/charge-3.wav"
+    ],
+    "menu": [
+      "/assets/audio/se/menu-1.wav",
+      "/assets/audio/se/menu-2.wav",
+      "/assets/audio/se/menu-3.wav"
+    ],
+    "countdown": [
+      "/assets/audio/se/countdown-1.wav",
+      "/assets/audio/se/countdown-2.wav",
+      "/assets/audio/se/countdown-3.wav"
+    ],
+    "go": [
+      "/assets/audio/se/go-1.wav",
+      "/assets/audio/se/go-2.wav",
+      "/assets/audio/se/go-3.wav"
+    ],
+    "ko": [
+      "/assets/audio/se/ko-1.wav",
+      "/assets/audio/se/ko-2.wav",
+      "/assets/audio/se/ko-3.wav"
+    ],
+    "respawn": [
+      "/assets/audio/se/respawn-1.wav",
+      "/assets/audio/se/respawn-2.wav",
+      "/assets/audio/se/respawn-3.wav"
+    ]
+  }
+}
