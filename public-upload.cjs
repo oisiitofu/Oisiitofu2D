@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),{Readable}=require('node:stream');
 async function hiddenInput(){return new Promise(resolve=>{let value='';const terminal=process.stdin.isTTY;function finish(){process.stdin.removeAllListeners('data');if(terminal)process.stdin.setRawMode(false);process.stdin.pause();resolve(JSON.parse(value));}if(terminal)process.stdin.setRawMode(true);process.stdin.setEncoding('utf8');process.stdin.on('data',chunk=>{value+=chunk;if(value.includes('\n')||value.includes('\r'))finish();});process.stdin.resume();console.log('Ready for upload JSON on stdin (input is hidden).');});}
 (async()=>{
- const {token,url}=await hiddenInput(),inputs=JSON.parse(fs.readFileSync(path.join(__dirname,'.tools/local-public-site/upload-inputs.json'))),failures=[];let complete=0,bytes=0,last=0;
+ const {token,url,hashes}=await hiddenInput(),inputs=JSON.parse(fs.readFileSync(path.join(__dirname,'.tools/local-public-site/upload-inputs.json'))).filter(item=>!hashes||hashes.includes(item.sha)),failures=[];let complete=0,bytes=0,last=0;
  await Promise.all(Array.from({length:6},async()=>{while(inputs.length){const item=inputs.shift(),target=url+'/_asset-upload/'+item.sha;let done=false;
   for(let attempt=0;attempt<4&&!done;attempt++)try{
    const headers={Authorization:'Bearer '+token};

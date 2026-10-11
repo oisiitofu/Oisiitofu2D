@@ -37,7 +37,7 @@ const server=http.createServer((req,res)=>{
   await page.reload();await page.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});
   const expected=JSON.parse(fs.readFileSync(path.join(root,'public-site.json'))).onlineUrl;
   let destination;await page.route(expected+'/**',route=>{destination=route.request().url();return route.abort();});
-  await page.click('#enter-online');await page.waitForTimeout(300);assert.equal(destination.replace(/\/$/,''),expected);
+  await page.click('#enter-online');await page.waitForTimeout(300);const onlineEntry=new URL(expected);onlineEntry.searchParams.set('mode','online');assert.equal(destination,onlineEntry.href);
   assert.deepEqual(sockets,[]);assert.deepEqual(missing,[]);assert.deepEqual(errors,[]);
   console.log('CPU, training, lossless BGM parts, online link, no API/WebSocket: passed');
   await browser.close();browser=null;
