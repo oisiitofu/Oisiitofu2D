@@ -38,6 +38,14 @@ const PlayerController=(()=>{
   else{enterIf(f,'Walk');f.vx=moveToward(f.vx,x*c.walkSpeed,c.walkAcceleration);}
  }
  function enterIf(f,name){if(f.mode!==name)enter(f,name);}
+ // These button presses stop launch momentum even while hitstun still owns
+ // the fighter. They never shorten hitstun or execute/buffer an action then.
+ function stopLaunchOnPress(f,i){
+  if(!(f.pendingLaunch||f.hitstun>0||f.tumbling)||!['jump','jab','heavy','smash','special'].some(key=>i[key]))return;
+  f.vx=f.vy=0;
+  if(f.pendingLaunch)f.pendingLaunch.speed=0;
+  if(f.pendingLaunch||f.hitstun>0)f.buffer=null;
+ }
  function releaseGrab(f){let o=f.grabbed;if(o){o.grabImmunity=60;o.grabOwner=null;enter(o,o.grounded?'Idle':'Fall');}f.grabbed=null;enter(f,f.grounded?'Idle':'Fall');}
  function tech(f,i,surface){if(!f.tumbling)return false;if(f.techBuffer>0&&f.techLock<=0){f.techBuffer=0;f.techLock=40;f.hitstun=0;f.tumbling=false;f.intangible=20;f.attack=null;
    if(surface==='floor'){let roll=Math.abs(i.x)>.4;enter(f,roll?'TechRoll':'Tech',roll?26:20);f.vx=roll?Math.sign(i.x)*6:0;f.vy=0;}
@@ -75,7 +83,7 @@ const PlayerController=(()=>{
  function ready(f,i){i=InputFrames.consume(f,i);const order=InputFrames.priority[f.grounded?'ground':'air'];
   if(i.jump&&i.jumpAerial){beginJump(f,i);return;}
   if(f.grounded&&i.shieldUpSmash&&i.smash&&InputFrames.attackDirection(i).y<-.5){attack(f,'upsmash');return;}
-  if(f.grounded&&i.y>.65&&Math.abs(i.y)>Math.abs(i.x)&&platforms.some(p=>!p.main&&Math.abs(p.y-f.y)<2&&f.x>p.x&&f.x<p.x+p.w)){f.drop=18;f.y+=8;f.vy=2;f.grounded=false;enter(f,'Fall');}
+  if(f.grounded&&!i.guard&&i.y>.65&&Math.abs(i.y)>Math.abs(i.x)&&!['jump','jab','heavy','smash','special'].some(key=>i[key])&&platforms.some(p=>!p.main&&Math.abs(p.y-f.y)<2&&f.x>p.x&&f.x<p.x+p.w)){f.drop=18;f.y+=8;f.vy=2;f.grounded=false;enter(f,'Fall');}
   for(let cmd of order){if(!i[cmd])continue;
    if(cmd==='guard'){if(f.grounded){if(i.grab){attack(f,'grab');return;}f.shieldHeldFrames=0;enter(f,'ShieldStart',1);if(i.dodgePressed)beginDodge(f,i);return;}if(i.guardPressed&&!f.airDodged){beginDodge(f,i);return;}continue;}
    if(cmd==='jump'){beginJump(f,i);return;}
@@ -84,6 +92,7 @@ const PlayerController=(()=>{
   if(f.grounded){groundMove(f,i);if(i.y>.5&&Math.abs(i.x)<.1)enterIf(f,'Crouch');}else{airControl(f,i);enterIf(f,f.fastFall?'FastFall':f.vy<0?'Jump':'Fall');}
  }
  function tick(f,raw){if(!f.mode)prepareFighter(f);const c=f.character,i=InputFrames.sample(f,raw);for(let key of ['inv','intangible','grabImmunity','techBuffer','techLock','drop','ledgeCooldown'])f[key]=Math.max(0,(f[key]||0)-1);if(i.guardPressed)f.techBuffer=11;if(++f.dodgeRest>=180){f.dodgeStale=Math.max(0,f.dodgeStale-1);f.dodgeRest=0;}InputFrames.queue(f,i);
+  stopLaunchOnPress(f,i);
   f.shadowTimeSlowed=ShadowRules.slowSkip(f,i);if(f.shadowTimeSlowed){f.stateEnd++;f.faf++;return;}
   if(f.hitlag>0){CombatSystem.hitlag(f,i);return;}if(f.attack?.hauntDelay>0&&!f.hitstun&&!f.tumbling&&!f.respawn){f.attack.hauntDelay--;f.stateEnd++;f.faf++;physics(f,i);return;}if(f.laytonThink>0&&!f.hitstun&&!f.tumbling&&!f.respawn){f.laytonThink=Math.max(0,f.laytonThink-i.mash*2);f.buffer=null;f.vx*=.75;physics(f,i);return;}f.timer++;f.stateFrame++;f.landingLag=['NormalLanding','HardLanding','AerialLanding','SpecialLanding'].includes(f.mode)?Math.max(0,f.stateDuration-f.stateFrame+1):0;
   if(f.respawn>0){enterIf(f,'Dead');if(f.squad&&f.stocks<=0)return;if(--f.respawn===0){let oldStocks=f.stocks,stats=f.stats,color=f.color,id=f.id,team=f.team,control=f.control,evolution=AgumonEvolution.preserve(f);if(!SquadBattle.respawn(f))Object.assign(f,prepareFighter(makeFighterBase(id,color,f.characterId)),evolution);f.stocks=oldStocks;f.stats=stats;f.team=team;f.control=control;f.x=BattlePlayers.spawnX(f);f.y=120;f.grounded=false;f.intangible=150;enter(f,'Respawn',1);}return;}
@@ -102,7 +111,8 @@ const PlayerController=(()=>{
   // Input precedes physics: include the frame that gravity crosses zero so a
   // down flick at the apex is not discarded while vy is still slightly negative.
   const reachesApex=!f.gravityOff&&PlayerStates.defs[f.mode].gravity&&f.vy+c.gravity*(f.attack?.gravityMultiplier??1)>=0;
-  if(!f.grounded&&(f.vy>=0||reachesApex)&&i.downFlick&&!f.fastFall&&!f.hitstun&&!f.tumbling){f.fastFall=true;ring(f.x,f.y,colors[f.color],26);}
+  const downSpecial=(i.special&&InputFrames.attackDirection(i).y>.5)||f.attack?.downSpecialInput;
+  if(!f.grounded&&(f.vy>=0||reachesApex)&&i.downFlick&&!downSpecial&&!f.fastFall&&!f.hitstun&&!f.tumbling){f.fastFall=true;ring(f.x,f.y,colors[f.color],26);}
   if(f.hitstun>0){f.hitstun--;f.vx=moveToward(f.vx,0,f.launchDecay??.075);if(!f.hitstun)enter(f,f.grounded?'Idle':f.tumbling?'Tumble':'Fall');}
   else if(f.mode==='JumpSquat'){f.jumpShort ||= i.jumpReleased||i.twoJumps;if(f.buffer?.key==='jump'&&f.buffer.shortHopAttack){f.jumpAerial=InputFrames.consume(f,i).jumpAerial;f.jumpShort=true;}else if(!f.jumpAerial&&['jab','heavy','smash'].includes(f.buffer?.key))f.jumpAerial=InputFrames.jumpAttack(InputFrames.consume(f,i));if(f.stateFrame>c.jumpSquatFrames){let aerial=f.jumpAerial;f.jumpAerial=null;launchJump(f,f.jumpShort);if(aerial)selectAttack(f,aerial);}}
   else if(f.attack){if(f.grounded){if(!f.attack.horse)f.vx=moveToward(f.vx,0,c.groundFriction);}else airControl(f,i,f.attack.airControlMultiplier);const pending=f.buffer;advanceAttack(f,i);if(CombatData.finishedMotion(f)){f.attack=null;f.gravityOff=false;f.buffer??=pending;enter(f,f.grounded?'Idle':'Fall');ready(f,i);}}
@@ -110,7 +120,7 @@ const PlayerController=(()=>{
   else if(f.mode==='ShieldBreak'){}
   else if(f.mode==='Stunned'){f.stateDuration-=i.mash*4;if(f.stateFrame>f.stateDuration){f.shield=c.shieldHP;enter(f,'Idle');}}
   else if(f.mode==='Knockdown'){f.vx=moveToward(f.vx,0,c.traction);if(f.stateFrame>10){if(i.jab||i.heavy){attack(f,'getupAttack');f.mode='GetupAttack';}else if(Math.abs(i.x)>.5){enter(f,'GetupRoll',30);f.vx=Math.sign(i.x)*5;f.intangible=16;}else if(i.jump||i.y<-.5||f.stateFrame>120){enter(f,'Getup',24);f.intangible=12;}}}
-  else if(dodgeData[f.mode]){const d=f.dodge;if(f.stateFrame>=d.inv[0]&&f.stateFrame<=d.inv[1])f.intangible=Math.max(f.intangible,1);if(f.mode==='SpotDodge'&&f.stateFrame>=d.attackCancel+Math.min(6,d.stale*2)&&spotDodgeAttack(f,i)){}else if(f.stateFrame>f.stateDuration){let next=InputFrames.consume(f,f.committedDrop||i);f.committedDrop=null;if(next.jump||next.grab||next.jab||next.heavy||next.smash||next.special)next={...next,guard:false};enter(f,f.grounded?'Idle':'Fall');ready(f,next);}else if(f.grounded)f.vx*=.97;}
+  else if(dodgeData[f.mode]){const d=f.dodge;if(f.stateFrame>=d.inv[0]&&f.stateFrame<=d.inv[1])f.intangible=Math.max(f.intangible,1);if(f.mode==='SpotDodge'&&f.stateFrame>=d.attackCancel+Math.min(6,d.stale*2)&&spotDodgeAttack(f,i)){}else if(f.stateFrame>f.stateDuration){if(f.mode==='ForwardRoll')f.face=-d.direction;let next=InputFrames.consume(f,f.committedDrop||i);f.committedDrop=null;if(next.jump||next.grab||next.jab||next.heavy||next.smash||next.special)next={...next,guard:false};enter(f,f.grounded?'Idle':'Fall');ready(f,next);}else if(f.grounded)f.vx*=.97;}
   else if(f.mode==='Helpless'){airControl(f,i);}
   else if(['NormalLanding','HardLanding','AerialLanding','SpecialLanding','ShieldDrop','Tech','TechRoll','WallTech','CeilingTech','Getup','GetupRoll','LedgeGetup','LedgeRoll','LedgeTrump','Clank','Throw'].includes(f.mode)){if(f.stateFrame>f.stateDuration){let next=f.committedDrop||i;f.committedDrop=null;enter(f,f.grounded?'Idle':'Fall');ready(f,next);}else if(f.grounded)f.vx=moveToward(f.vx,0,c.groundFriction);}
   else ready(f,i);
@@ -118,15 +128,26 @@ const PlayerController=(()=>{
   if(!is(f,'ShieldStart','ShieldHold','ShieldBreak','Stunned')&&!f.shieldStun)f.shield=Math.min(c.shieldHP,f.shield+c.shieldRegen);
   physics(f,i);
  }
- function physics(f,i){let c=f.character,oldX=f.x,oldY=f.y,wasAir=!f.grounded,oldVx=f.vx,oldVy=f.vy,def=PlayerStates.defs[f.mode];if(def.gravity&&!f.gravityOff&&!BattleFeel.dodgeMotion(f)){let gravity=c.gravity*(f.attack?.gravityMultiplier??1);if(f.fastFall&&!f.tumbling&&!f.hitstun)gravity=Math.max(gravity,MovementTuning.fastFallAcceleration);let next=f.vy+gravity;f.vy=f.tumbling||f.hitstun?next:Math.min(f.attack?.glideStart&&f.timer>=f.attack.glideStart&&f.timer<=f.attack.glideEnd?f.attack.glideFallSpeed:f.attack?.diveSpeed&&f.timer>=f.attack.startupFrames?f.attack.diveSpeed:f.fastFall?c.fastFallSpeed:c.fallSpeed,next);}f.x+=f.vx*(!f.hitstun&&!f.tumbling?(f.logicSlow??1)*JibanyanRules.hauntScale(f)*PiposaruRules.speed(f)*TwinbeeRules.speed(f):1);f.y+=f.vy;f.grounded=false;
+ function physics(f,i){let c=f.character,oldX=f.x,oldY=f.y,wasAir=!f.grounded,oldVx=f.vx,oldVy=f.vy,def=PlayerStates.defs[f.mode];
+  const dodgeFloor=f.grounded&&is(f,'SpotDodge','ForwardRoll','BackwardRoll','TechRoll','GetupRoll','LedgeRoll')?platforms.find(p=>Math.abs(oldY-p.y)<6&&oldX>=p.x-9&&oldX<=p.x+p.w+9):null;
+  if(def.gravity&&!f.gravityOff&&!BattleFeel.dodgeMotion(f)){let gravity=c.gravity*(f.attack?.gravityMultiplier??1);if(f.fastFall&&!f.tumbling&&!f.hitstun)gravity=Math.max(gravity,MovementTuning.fastFallAcceleration);let next=f.vy+gravity;f.vy=f.tumbling||f.hitstun?next:Math.min(f.attack?.glideStart&&f.timer>=f.attack.glideStart&&f.timer<=f.attack.glideEnd?f.attack.glideFallSpeed:f.attack?.diveSpeed&&f.timer>=f.attack.startupFrames?f.attack.diveSpeed:f.fastFall?c.fastFallSpeed:c.fallSpeed,next);}f.x+=f.vx*(!f.hitstun&&!f.tumbling?(f.logicSlow??1)*JibanyanRules.hauntScale(f)*PiposaruRules.speed(f)*TwinbeeRules.speed(f):1);f.y+=f.vy;
+  if(dodgeFloor){const x=clamp(f.x,dodgeFloor.x+1,dodgeFloor.x+dodgeFloor.w-1);if(x!==f.x)f.vx=0;f.x=x;f.y=dodgeFloor.y;f.vy=0;}
+  f.grounded=false;
   let p=platforms.find(p=>p.main),left=p.x-c.ecb.radius,right=p.x+p.w+c.ecb.radius,bottom=p.y+90,dx=f.x-oldX,dy=f.y-oldY;
   if(dy<0&&oldY-c.ecb.height>=bottom&&f.y-c.ecb.height<bottom){let x=oldX+dx*(bottom+c.ecb.height-oldY)/dy;if(x>left&&x<right){f.y=bottom+c.ecb.height;if(!tech(f,i,'ceiling'))f.vy=f.tumbling?-oldVy*.35:0;}}
   if(dx){let wall=dx>0?left:right,t=(wall-oldX)/dx;if(t>=0&&t<=1){let y=oldY+dy*t;if(y>p.y+1&&y-c.ecb.height<bottom){f.x=wall;if(!tech(f,i,'wall'))f.vx=f.tumbling?-oldVx*.5:0;}}}
   if(f.vy>=0)for(let floor of platforms){if(!floor.main&&f.drop)continue;if(f.x>floor.x-9&&f.x<floor.x+floor.w+9&&oldY<=floor.y+6&&f.y>=floor.y){f.y=floor.y;f.vy=0;f.grounded=true;if(wasAir)land(f,i,oldVy);break;}}
   if(f.characterId==='hunter')HunterRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='adol')AdolRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='valkyrie')ValkyrieRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='terry')TerryRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='agumon')AgumonRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='pawapuro')PawapuroRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='headmaster')HeadmasterRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(NewcomerCore.ids.includes(f.characterId))NewcomerCore.registry[f.characterId].collision(f,i,{oldX,oldY,oldVx,oldVy});
   AruruRules.platform(f,i,{oldX,oldY,oldVx,oldVy,wasAir});
+  // Leaving the top lip is an outbound movement, not a recovery attempt.
+  // Re-enable grabs after clearing that ledge's grab region. Recovery moves
+  // approaching from below can still grab while rising.
+  if(f.grounded)f.ledgeExitSide=0;
+  else if(oldX>=p.x-9&&oldX<=p.x+p.w+9&&(f.x<p.x-9||f.x>p.x+p.w+9)&&oldY<=p.y+8)f.ledgeExitSide=f.x<p.x?1:-1;
+  const exited=StageRules.ledges.find(l=>l.face===f.ledgeExitSide);
+  if(exited&&(Math.abs(f.x-exited.x)>c.ledgeGrabRange[0]+12||f.y>exited.y+c.ledgeGrabRange[1]+12))f.ledgeExitSide=0;
   let canLedge=!f.attack?.tether&&(PlayerStates.defs[f.mode].ledge||f.attack?.ledgeGrabStart&&f.timer>=f.attack.ledgeGrabStart);
-  if(!f.grounded&&canLedge&&!f.hitstun&&!f.ledgeCooldown&&i.y<.65)for(let l of StageRules.ledges)if(Math.abs(f.x-l.x)<c.ledgeGrabRange[0]&&(f.x-l.x)*l.face<35&&f.y>l.y-24&&f.y<l.y+c.ledgeGrabRange[1]){catchLedge(f,l);break;}
+  if(!f.grounded&&canLedge&&!f.hitstun&&!f.ledgeCooldown&&i.y<.65)for(let l of StageRules.ledges)if(l.face!==f.ledgeExitSide&&Math.abs(f.x-l.x)<c.ledgeGrabRange[0]&&(f.x-l.x)*l.face<35&&f.y>l.y+8&&f.y<l.y+c.ledgeGrabRange[1]){catchLedge(f,l);break;}
   if(blastZoneSide(f))ko(f);
  }
  function land(f,i,landingSpeed=Math.abs(f.vy)){if(NewcomerCore.ids.includes(f.characterId)&&NewcomerCore.land(f,i))return;if(f.characterId==='adol'&&AdolRules.land(f,i))return;let c=f.character,a=f.attack,wasFast=f.fastFall;BattleFeel.landing(f,Math.abs(landingSpeed),wasFast);f.shortHop=false;f.airJumps=c.airJumpCount;f.jumps=0;f.airDodged=false;f.ledgeGrabs=0;f.recovered=false;f.fastFall=false;f.helpless=false;
@@ -142,5 +163,5 @@ const PlayerController=(()=>{
   else if(a&&a.landingLagFrames&&f.timer>=a.landingFlag[0]&&f.timer<=a.landingFlag[1]&&!a.autoCancelWindow.some(([x,y])=>f.timer>=x&&f.timer<=y)){lag=a.landingLagFrames;name='AerialLanding';}
   f.attack=null;f.gravityOff=false;f.specialLandingLag=0;f.lastLandingLag=lag;f.landingLag=lag;enter(f,name,lag);
  }
- return{tick,physics,land,tech,catchLedge,releaseGrab,breakShield,beginDodge,launchJump,dodgeData};
+ return{tick,physics,land,tech,catchLedge,releaseGrab,breakShield,beginDodge,launchJump,dodgeData,stopLaunchOnPress};
 })();

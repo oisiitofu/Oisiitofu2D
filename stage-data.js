@@ -2,8 +2,8 @@
 // Shared by the browser and server so new stages join every selection pool.
 const StageCatalog=(()=>{
  const stages=[
-  {id:'0',name:'月影の空中神殿',folder:'moonlit-sanctum',previewBackground:'assets/astral-sanctum.png',color:'#73dbff',platforms:[{x:320,y:560,w:800,main:true},{x:405,y:388,w:215},{x:820,y:388,w:215},{x:632,y:265,w:176}]},
-  {id:'1',name:'雷鳴の双塔',folder:'thunder-towers',previewBackground:'assets/astral-sanctum.png',color:'#bda3ff',platforms:[{x:220,y:560,w:1000,main:true},{x:345,y:390,w:230},{x:865,y:390,w:230}]},
+  {id:'0',name:'月影の空中神殿',folder:'moonlit-sanctum',previewBackground:'assets/astral-sanctum.png',color:'#73dbff',platforms:[{x:240,y:560,w:960,main:true},{x:360,y:412,w:215},{x:865,y:412,w:215},{x:632,y:300,w:176}]},
+  {id:'1',name:'雷鳴の双塔',folder:'thunder-towers',previewBackground:'assets/astral-sanctum.png',color:'#bda3ff',platforms:[{x:160,y:560,w:1120,main:true},{x:310,y:420,w:230},{x:900,y:420,w:230}]},
   {id:'2',name:'蒼天の飛翔艇',theme:'sky',folder:'sky-voyage',color:'#8ceaff',platforms:[{x:280,y:560,w:880,main:true},{x:400,y:390,w:200,motion:{x:150,period:360}},{x:840,y:335,w:180,motion:{y:65,period:300}}]},
   {id:'3',name:'風渡る冒険遺跡',theme:'adventure',folder:'adventure-ruins',color:'#dfba76',platforms:[{x:200,y:560,w:1040,main:true},{x:320,y:400,w:210},{x:910,y:400,w:210},{x:630,y:285,w:180}]},
   {id:'4',name:'星灯りの舞踏宮',theme:'waltz',folder:'starlit-waltz',color:'#e6b8ff',platforms:[{x:300,y:560,w:840,main:true},{x:630,y:355,w:180,motion:{x:235,period:420}},{x:480,y:445,w:180},{x:780,y:445,w:180}]},

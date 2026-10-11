@@ -48,7 +48,8 @@ const {chromium}=require('playwright');
     for(const id of ['nier','miku','naruhodo']){
      const f=makeFighter(0,0,id);f.x=700;f.y=560;f.inv=0;fighters=[f,makeFighter(1,0,'dragoon')];attack(f,'heavy');f.timer=f.attack.activeFrames[0].start;
      const raw=baseAttackBoxes(f),boxes=attackBoxes(f),s=BattleSize.geometry(f);
-     check(id+' weapon hit follows resized sprite',boxes.length===raw.length&&boxes.every((b,i)=>near(b.x1-f.x,(raw[i].x1-f.x)*s)&&near(b.y1-f.y,(raw[i].y1-f.y)*s)));
+     const expected=MeleeBalance.boxes(f,f.attack,raw.map(b=>({...b,x1:f.x+(b.x1-f.x)*s,x2:f.x+(b.x2-f.x)*s,y1:f.y+(b.y1-f.y)*s,y2:f.y+(b.y2-f.y)*s,radius:b.radius*s})));
+     check(id+' weapon geometry keeps melee reach and inner coverage',boxes.length===expected.length&&boxes.every((b,i)=>near(b.x1,expected[i].x1)&&near(b.y1,expected[i].y1)&&near(b.x2,expected[i].x2)&&near(b.y2,expected[i].y2)&&near(b.radius,expected[i].radius)));
     }
     const f=makeFighter(0,0,'morphie');f.x=700;f.y=400;fighters=[f,makeFighter(1,0,'dragoon')];const regular=capture(f,0).height;
     for(const s of [.65,1.5,2]){MorphieRules.resize(f,s);check('intentional size shift '+s,near(capture(f,0).height,regular*s));}

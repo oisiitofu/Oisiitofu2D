@@ -86,7 +86,7 @@ function ledgeHangPosition(f,ledge){
 function ledgeSpriteOffset(f,n,img){if(!['LedgeCatch','LedgeHang'].includes(f.mode))return 0;const{grip,flip}=ledgeArt(f),width=img.width*BattleSize.native(f.characterId,n)*FIGHTER_SCALE*BattleSize.art(f.characterId);return f.face*width*(Math.abs(grip[0])-grip[0]*(flip?-1:1));}
 function resolveFighterBodies(previous){
  
- const skip=f=>f.attack?.bodyPassFrames&&CombatSystem.inWindow(f.attack.bodyPassFrames,f.timer)||!f.grounded||f.respawn||f.hitlag||f.hitstun||f.grabbed||['ForwardRoll','BackwardRoll','Grabbed','Pummel','GrabHold','LedgeCatch','LedgeHang'].includes(f.mode);
+ const skip=f=>f.attack?.bodyPassFrames&&CombatSystem.inWindow(f.attack.bodyPassFrames,f.timer)||!f.grounded||f.respawn||f.hitlag||f.hitstun||f.grabbed||['SpotDodge','ForwardRoll','BackwardRoll','TechRoll','GetupRoll','LedgeRoll','Grabbed','Pummel','GrabHold','LedgeCatch','LedgeHang'].includes(f.mode);
  for(let i=0;i<fighters.length;i++)for(let j=i+1;j<fighters.length;j++){const a=fighters[i],b=fighters[j];if(skip(a)||skip(b)||Math.abs(a.y-b.y)>12)continue;
  const direction=Math.sign(previous[j].x-previous[i].x)||Math.sign(b.x-a.x)||1;
  const gap=(b.x-a.x)*direction,spacing=a.character.ecb.radius+b.character.ecb.radius;
