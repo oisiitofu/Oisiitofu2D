@@ -9,7 +9,7 @@ const PokoaVFX=(()=>{
   if((a.surf||a.dragonGlide)&&f.timer>=3&&f.timer<=12)stamp(5,f.x,f.y-35,75,75,1,.7);
   if(a.magnetRise){stamp(4,f.x,f.y-4,68,30,1,.8);if(f.timer>=12){ctx.save();ctx.strokeStyle='#fff39b';ctx.lineWidth=1.4;ctx.setLineDash([3,5]);ctx.beginPath();ctx.ellipse(f.x,f.y-36,32,42,0,0,TAU);ctx.stroke();ctx.restore();}}
   if(a.dragonGlide&&f.timer>=12&&f.timer%5<3)stamp(6,f.x-f.vx*2,f.y-25,45,22,f.face,.3);
-  const w=CombatData.activeWindow(a,f.timer);if(!w)return;for(const b of attackBoxes(f)){const d=direction(b),fx=a.pokoaEffect??0;
+  const w=CombatData.activeWindow(a,f.timer);if(!w)return;for(const b of attackVisualBoxes(f)){const d=direction(b),fx=a.pokoaEffect??0;
    if(w.shape==='spin')stamp(fx,d.x,d.y,d.len+25,55,1,.9);
    else if(fx===2)stamp(2,d.x,d.y,d.len+20,70,d.face,.9);
    else stamp(fx,d.x,d.y,d.len+18,fx===7?36:30,d.face,.9,d.rot);

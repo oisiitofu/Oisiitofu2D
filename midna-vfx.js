@@ -10,9 +10,9 @@ const MidnaVFX=(()=>{
   if(a.hairGrapple&&t>=4&&t<=a.reelEnd){hair(f,MidnaRules.handPoint(f,a,t),false,a.hook||a.targetId!==null?2:0);if(!w)return;}
   if(a.hold&&!a.midnaField)stamp(1,f.x,f.y-38,70+60*a.charge,80,1,.65);
   if(!w)return;
-  if(a.shadowCrush){const b=attackBoxes(f)[0];stamp(3,f.x,f.y-30,Math.abs(b.x2-b.x1)+30,110);stamp(4,f.x,f.y-25,100,95,1,1,0,true);return;}
-  if(a.midnaPillar){for(const b of attackBoxes(f))stamp(3,b.x1,f.y-65,64,150);return;}
-  for(const b of attackBoxes(f)){const d=direction(b);if(a.midnaHand||a.midnaWarp){hair(f,{x:b.x2,y:b.y2},a.type==='smash',a.midnaWarp?7:w.shape==='back'||w.shape==='low'?3:a.type==='grab'?2:0);stamp(0,d.x,d.y,d.length+30,55,d.face,.85,d.rotation);}else if(a.hairGrapple&&t>=28)stamp(7,b.x2,b.y2,80,80);}
+  if(a.shadowCrush){const b=attackVisualBoxes(f)[0];stamp(3,f.x,f.y-30,Math.abs(b.x2-b.x1)+30,110);stamp(4,f.x,f.y-25,100,95,1,1,0,true);return;}
+  if(a.midnaPillar){for(const b of attackVisualBoxes(f))stamp(3,b.x1,f.y-65,64,150);return;}
+  for(const b of attackVisualBoxes(f)){const d=direction(b);if(a.midnaHand||a.midnaWarp){hair(f,{x:b.x2,y:b.y2},a.type==='smash',a.midnaWarp?7:w.shape==='back'||w.shape==='low'?3:a.type==='grab'?2:0);stamp(0,d.x,d.y,d.length+30,55,d.face,.85,d.rotation);}else if(a.hairGrapple&&t>=28)stamp(7,b.x2,b.y2,80,80);}
  }
  function impact(v){stamp(7,v.x,v.y,80+v.power*12,80+v.power*12,1,(v.life/v.max)**1.6);}
  function hud(f,x,y){if(f.characterId==='midna')text('HAIR GRAPPLE / WARP',x+52,y+54,8,'#fcb66b','left');}

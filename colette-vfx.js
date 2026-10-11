@@ -21,7 +21,7 @@ const ColetteVFX=(()=>{
   if(a.type==='upsmash'){stamp(2,f.x,f.y-70,160,195,1,alpha);drawSprite(f);return;}
   const up=w.shape==='up',back=w.shape==='back',down=w.shape==='down',spin=w.shape==='spin';
   if(w.shape!=='spin')SlashVFX.melee(f,w,0,alpha);else stamp(0,f.x+(spin||up?0:back?-45:45)*f.face,f.y-(up?65:down?12:35),(a.reach||150)*FIGHTER_SCALE*1.4,up?138:spin?120:88,back?-f.face:f.face,alpha,up?-Math.PI/2:down?Math.PI/2:0);
-  const b=attackBoxes(f)[0];if(b)stamp(1,b.x2,b.y2,35,35,1,alpha,t*.4);
+  const b=attackVisualBoxes(f)[0];if(b)stamp(1,b.x2,b.y2,35,35,1,alpha,t*.4);
  }
  return{draw,impact};
 })();

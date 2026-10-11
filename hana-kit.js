@@ -50,7 +50,7 @@ const HanaKit=(()=>{
  function visuals(id){return{
   stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt[id]?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();},
   directed(n,b,alpha=.85){const angle=Math.atan2(b.y2-b.y1,b.x2-b.x1),face=Math.cos(angle)<0?-1:1;this.stamp(n,(b.x1+b.x2)/2,(b.y1+b.y2)/2,Math.hypot(b.x2-b.x1,b.y2-b.y1)+25,45,face,alpha,Math.atan2(Math.sin(angle),Math.cos(angle)*face));},
-  draw(f){if(f.respawn)return;for(const b of attackBoxes(f))this.directed(5,b);if(f.hanaFlash>0||f.attack?.hanaSwitch)this.stamp(4,f.x,f.y-f.character.ecb.height*.5,115,125,1,.45);},
+  draw(f){if(f.respawn)return;for(const b of attackVisualBoxes(f))this.directed(5,b);if(f.hanaFlash>0||f.attack?.hanaSwitch)this.stamp(4,f.x,f.y-f.character.ecb.height*.5,115,125,1,.45);},
   drawObjects(){for(const q of NewcomerCore.registry[id].objects){const alpha=Math.min(1,(q.life-q.age)/5);if(q.kind==='storm')this.stamp(0,q.x,q.y,85,65,q.face,alpha);else if(q.kind==='missile'||q.kind==='recoil')this.directed(1,{x1:q.x-q.vx*5,y1:q.y-q.vy*5,x2:q.x,y2:q.y},alpha);else if(q.kind==='laser')this.directed(2,{x1:q.x-q.vx*4,y1:q.y-q.vy*4,x2:q.x,y2:q.y},alpha);else if(q.kind==='beam')this.directed(2,{x1:q.x,y1:q.y,x2:q.x+q.face*q.length,y2:q.y},alpha);else if(q.kind==='biter')this.stamp(3,q.x,q.y,85,65,1,alpha);else if(q.kind==='burst')this.stamp(6,q.x,q.y,80,80,1,alpha);}},
   impact(v){this.stamp(6,v.x,v.y,35+v.power*2,35+v.power*2,1,(v.life/v.max)**1.5);},
   hud(f,x,y){if(f.characterId===id)text('下必殺で形態切替',x+242,y+23,9,'#ffbce6','right');}

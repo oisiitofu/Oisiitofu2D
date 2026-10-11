@@ -6,7 +6,7 @@ const TifaVFX=(()=>{
  function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.tifa?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
  function directed(n,x,y,w,h,angle,alpha=1){const face=Math.cos(angle)<0?-1:1,rot=Math.atan2(Math.sin(angle),Math.cos(angle)*face);stamp(n,x,y,w,h,face,alpha,rot);}
  function draw(f){if(f.respawn)return;const a=f.attack;if(f.tifaKiTime>0)stamp(3,f.x,f.y-43,116,127,1,.27);if(a?.tifaKi&&f.timer>8)stamp(3,f.x,f.y-40,130,145,1,Math.min(.65,f.timer/50));if(!a)return;
-  for(const b of attackBoxes(f)){const d=AdolVFX.direction(b),n=b.window.pose??a.pose,angle=Math.atan2(b.y2-b.y1,b.x2-b.x1);if([6,7,42].includes(n)){directed(1,d.x,d.y,d.len+25,28,angle,.7);stamp(0,b.x2,b.y2,32,32,1,.45);}else directed(2,d.x,d.y,d.len+28,48,angle,.75);}
+  for(const b of attackVisualBoxes(f)){const d=AdolVFX.direction(b),n=b.window.pose??a.pose,angle=Math.atan2(b.y2-b.y1,b.x2-b.x1);if([6,7,42].includes(n)){directed(1,d.x,d.y,d.len+25,28,angle,.7);stamp(0,b.x2,b.y2,32,32,1,.45);}else directed(2,d.x,d.y,d.len+28,48,angle,.75);}
  }
  function drawObjects(){}
  function impact(v){stamp(v.power>14?4:0,v.x,v.y,35+v.power*2,35+v.power*2,1,(v.life/v.max)**1.5);}

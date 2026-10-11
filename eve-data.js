@@ -12,7 +12,13 @@ const EveMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opt={spec
 })();
 // Native sword grip and tip, in the source's RIGHT-facing coordinate system.
 const EveStrikePoints={6:[.58,.36,.99,.35],7:[.55,.28,.98,.08],8:[.55,.40,.93,.01],9:[.56,.41,.99,.40],10:[.58,.47,.99,.94],11:[.55,.49,.99,.89],12:[.55,.23,.99,.01],13:[.57,.41,.99,.03],14:[.45,.40,.01,.36],15:[.60,.38,.45,.01],16:[.60,.51,.98,.99],18:[.70,.35,.99,.39],19:[.70,.35,.99,.35],43:[.58,.28,.99,.83],45:[.58,.26,.99,.25],47:[.55,.35,.99,.80],52:[.62,.34,.99,.31],53:[.58,.42,.95,.01],54:[.53,.32,.01,.15],55:[.56,.37,.99,.97],56:[.60,.36,.99,.90]};
-function eveVisiblePose(f,n){if(!f.eveTachyTime||n===48||[5,17,18,19,20,21,22,37,38,39].includes(n))return n;if([8,15].includes(n))return 53;if(n===14)return 54;if(n===16)return 55;if([11,43,47].includes(n))return 56;if([6,7,9,10,12,13,42,45].includes(n))return 52;if(n===44||[4,33,34,35].includes(n))return 51;if(n===3||n>=24&&n<=32||n===36)return 50;return 49;}
+function eveVisiblePose(f,n){
+ if(!f.eveTachyTime||n===48||[5,17,18,19,20,21,22,37,38,39].includes(n))return n;
+ const powered=[8,15].includes(n)?53:n===14?54:n===16?55:[11,43,47].includes(n)?56:[6,7,9,10,12,13,42,45].includes(n)?52:n===44||[4,33,34,35].includes(n)?51:n===3||n>=24&&n<=32||n===36?50:49;
+ // The shipped atlas has no separate Tachy poses. Keep the actual sword pose
+ // for drawing and collisions, with the mode's existing aura and bonuses.
+ return EveArtRects.frames[powered]?powered:n;
+}
 function eveStrike(f,n){n=eveVisiblePose(f,n);const p=EveStrikePoints[n];if(!p)return null;const r=EveArtRects.frames[n],s=eveNativeScale(n)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.eve[n],boost=f.eveTachyTime>0?1.12:1;return[0,2].map(j=>({x:f.x+(p[j]-anchor)*r[2]*s*f.face*boost,y:f.y+(p[j+1]-1)*r[3]*s}));}
 function eveDuration(f,a,total){const d=total-a.totalFrames;a.totalFrames=a.motionEndFrames=total;a.FAF=total+1;f.faf+=d;f.stateEnd+=d;}
 function eveBlinkAim(f,a,i){a.aimX=a.clearedUnderStage?0:Math.abs(i.x)>.2?clamp(i.x,-1,1):a.launchFace*.35;a.aimY=-Math.max(.55,Math.abs(i.y));const d=Math.hypot(a.aimX,a.aimY);a.aimX/=d;a.aimY/=d;}

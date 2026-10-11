@@ -18,7 +18,7 @@ const SlashVFX=(()=>{
   return{face,rot:Math.atan2(dy,dx*face),x:(b.x1+b.x2)/2,y:(b.y1+b.y2)/2,len:Math.hypot(dx,dy)};}
  function melee(f,w,n,alpha=1){
   const img=characterArt[f.characterId]?.effects[n];if(!img)return;
-  const t=Math.min(f.timer,w.end),boxes=attackBoxes(f,f.attack,t);
+  const t=Math.min(f.timer,w.end),boxes=attackVisualBoxes(f,f.attack,t);
   for(const b of boxes){const d=direction(b),width=d.len+24,height=Math.max(42,Math.min(110,d.len*.6+b.radius*2));
    ctx.save();ctx.translate(d.x,d.y);ctx.scale(d.face,1);ctx.rotate(d.rot);
    ctx.globalAlpha*=alpha;

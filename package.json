@@ -7,7 +7,8 @@
     "start": "node server.cjs",
     "check": "node check.cjs",
     "test": "node test-all.cjs",
-    "test:multiplayer": "node multiplayer-test.cjs && node multiplayer-online-test.cjs"
+    "test:multiplayer": "node multiplayer-test.cjs && node multiplayer-online-test.cjs",
+    "test:balance": "node melee-balance-test.cjs && node balance-sparring-test.cjs"
   },
   "dependencies": {
     "ws": "^8.18.3"

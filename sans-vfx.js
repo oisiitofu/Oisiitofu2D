@@ -10,7 +10,7 @@ const SansVFX=(()=>{
   if(a.shortcut){if(t>=8&&t<=17){stamp(3,a.origin.x,a.origin.y-40,75,90,1,.55);stamp(3,a.target.x,a.target.y-40,75,90,1,.7);}if(a.returned&&t>=a.returnVanish&&t<=a.returnFrame+3)stamp(3,a.origin.x,a.origin.y-40,80,90,1,.7);}
   if(a.soulWarp){prop(5,f.x,f.y-58,20,20,1,.8);if(!a.committed){stamp(2,f.x,f.y-28,65,95,1,.5);stamp(5,a.target.x,a.target.y-30,42,42,1,.45);}else if(t>=a.vanishStart&&t<=a.warpFrame+3){stamp(3,a.origin.x,a.origin.y-35,85,100,1,.6);stamp(3,a.target.x,a.target.y-35,85,100,1,.75);}}
   if(a.hold)stamp(5,f.x,f.y-45,65+50*a.charge,65+50*a.charge,1,.65);
-  const w=CombatData.activeWindow(a,t);if(!w)return;for(const b of attackBoxes(f)){const d=direction(b);if(a.sansPillars){prop(1,d.x,d.y,24,d.length+12,1,.95);stamp(6,d.x,d.y,40,d.length+20,1,.65);}else{stamp(0,d.x,d.y,d.length+16,32,d.face,.8,d.rotation);prop(0,d.x,d.y,d.length,16,d.face,.95,d.rotation);}}
+  const w=CombatData.activeWindow(a,t);if(!w)return;for(const b of attackVisualBoxes(f)){const d=direction(b);if(a.sansPillars){prop(1,d.x,d.y,24,d.length+12,1,.95);stamp(6,d.x,d.y,40,d.length+20,1,.65);}else{stamp(0,d.x,d.y,d.length+16,32,d.face,.8,d.rotation);prop(0,d.x,d.y,d.length,16,d.face,.95,d.rotation);}}
  }
  function hidden(f){const a=f.attack,t=f.timer;return !!a&&(a.shortcut&&(t>=8&&t<=13||a.returned&&t>=a.returnVanish&&t<a.returnFrame)||a.soulWarp&&a.committed&&t>=a.vanishStart&&t<a.warpFrame);}
  function impact(v){stamp(7,v.x,v.y,70+v.power*10,70+v.power*10,1,(v.life/v.max)**1.7);}

@@ -6,7 +6,7 @@ const KittenVFX=(()=>{
  function draw(f){const a=f.attack,style=f.gravityStyle||0;prop(f.grounded?40:41,f.x-f.face*60,f.y-(f.grounded?13:65),44,35,f.face,.92);if(style)stamp(style===1?6:1,f.x,f.y-57,85,80,1,.2);if(!a)return;const t=f.timer;
   if(a.stasisField&&(a.hold||t<16)){stamp(2,f.x+f.face*55,f.y-65,65+a.charge*45,65+a.charge*45,1,.7);for(let n=0;n<a.collected;n++){const angle=frame*.05+n*2.1;prop(42,f.x+f.face*55+Math.cos(angle)*37,f.y-65+Math.sin(angle)*37,30,26,1);}}
   if(a.styleSwitch&&t>=12&&t<=25)stamp(style===1?6:style===2?7:0,f.x,f.y-50,110,100,1,.5);
-  const w=CombatData.activeWindow(a,t);if(!w)return;for(const b of attackBoxes(f)){const d=AdolVFX.direction(b);if(w.shape==='shockwave'){stamp(5,d.x,d.y-30,d.len+35,90,1,.9);continue;}stamp(style===1?6:style===2?1:0,d.x,d.y,d.len+30,50,d.face,.85,d.rot);}
+  const w=CombatData.activeWindow(a,t);if(!w)return;for(const b of attackVisualBoxes(f)){const d=AdolVFX.direction(b);if(w.shape==='shockwave'){stamp(5,d.x,d.y-30,d.len+35,90,1,.9);continue;}stamp(style===1?6:style===2?1:0,d.x,d.y,d.len+30,50,d.face,.85,d.rot);}
  }
  function drawObjects(){for(const q of KittenRules.objects){if(q.kind==='hole'){stamp(5,q.x,q.y,q.radius*2,q.radius*1.3,1,Math.min(1,(q.life-q.age)/5));continue;}const face=Math.sign(q.vx)||q.face;stamp(4,q.x,q.y,q.radius*5,q.radius*3,face,Math.min(1,(q.life-q.age)/5),Math.atan2(q.vy,q.vx*face));}}
  function impact(v){stamp(7,v.x,v.y,45+v.power*4,45+v.power*4,1,(v.life/v.max)**1.7);}

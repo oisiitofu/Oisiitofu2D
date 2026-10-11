@@ -54,7 +54,7 @@ const CombatVFX=(()=>{
   for(let j=0;j<(smash?14:8);j++){let t=(j*.173+progress*.11)%1,angle=-1.5+t*3,rr=r*(.78+(j%3)*.13),x=Math.cos(angle)*rr,y=Math.sin(angle)*rr;stroke([[x,y],[x+Math.cos(angle)*10,y+Math.sin(angle)*10]],j%3?colors[1]:colors[2],j%3?1:2);}
   if(live){ctx.shadowBlur=8;stroke([[8,0],[r,0]],colors[1],4);stroke([[12,0],[r,0]],'#efffff',1.3);path([[r+7,0],[r-5,-3],[r-2,0],[r-5,3]],'#ecffff');}
   ctx.restore();
-  if(live&&training&&$('#show-hitboxes').checked){ctx.save();ctx.globalAlpha=.7;for(let b of attackBoxes(f))stroke([[b.x1,b.y1],[b.x2,b.y2]],'#ffd76a88',b.radius*2);ctx.restore();}
+  if(live&&training&&$('#show-hitboxes').checked){ctx.save();ctx.globalAlpha=.7;for(let b of attackVisualBoxes(f))stroke([[b.x1,b.y1],[b.x2,b.y2]],'#ffd76a88',b.radius*2);ctx.restore();}
  }
  function drawLandingBursts(){for(const v of landings){let t=(28-v.life)/28,col=palettes[v.color],r=45+135*Math.min(1,t*2);ctx.save();ctx.translate(v.x,v.y);ctx.globalCompositeOperation='lighter';ctx.globalAlpha=(1-t)**1.4;ctx.shadowColor=col[0];ctx.shadowBlur=18;
   let glow=ctx.createRadialGradient(0,-10,0,0,-10,r);glow.addColorStop(0,col[2]+'9a');glow.addColorStop(.35,col[1]+'55');glow.addColorStop(1,col[0]+'00');ctx.fillStyle=glow;ctx.fillRect(-r,-r,r*2,r*1.5);

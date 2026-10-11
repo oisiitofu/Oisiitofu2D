@@ -14,7 +14,7 @@ const IsaacVFX=(()=>{
   if(a.earthEffect==='granite'&&f.timer<=27){stamp(3,f.x-f.face*44,f.y+Math.sin(frame*.09)*3,73,89,f.face);}
   if(a.hold){pulse(f,26+32*a.charge,0);ctx.restore();return;}
   if(!w||fade<=0){ctx.restore();return;}ctx.globalAlpha*=fade;
-  if(a.earthSpikes){for(const b of attackBoxes(f,a,live?f.timer:w.end)){const height=b.y1-b.y2;stamp(0,b.x1,f.y+3,68,height+15,f.face);}}
+  if(a.earthSpikes){for(const b of attackVisualBoxes(f,a,live?f.timer:w.end)){const height=b.y1-b.y2;stamp(0,b.x1,f.y+3,68,height+15,f.face);}}
   else if(w.shape==='shockwave'){pulse(f,a.reach*FIGHTER_SCALE*(.4+.6*clamp((f.timer-w.start)/(w.end-w.start||1),0,1)),age);}
   else {ribbon(f,w,1);if(['gaia','rock','orbit'].includes(a.earthEffect)){for(let n=0;n<7;n++){const ang=n/7*TAU+f.timer*.2,r=(w.reach??a.reach)*FIGHTER_SCALE*.78;rock(f.x+Math.cos(ang)*r,f.y-38+Math.sin(ang)*r,9+n%3,n);}}if(a.earthEffect==='ragnarok'){stamp(5,f.x+f.face*83,f.y+5,110,190,f.face);}}
   ctx.restore();

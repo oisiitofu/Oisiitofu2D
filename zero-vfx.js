@@ -9,7 +9,7 @@ const ZeroVFX=(()=>{
  if(a.type==='rise'&&t<=18){const p=ZeroRules.hook(f);chain(f.x,f.y-35,p.x,p.y,t<=10?1:(19-t)/9);}
  if(a.type==='dash'&&t>=7&&t<=19)stamp(6,f.x-f.face*65,f.y-32,180,70,f.face,.8);
  if(a.spellShots)return;const w=CombatData.activeWindow(a,t)||a.activeFrames.filter(w=>w.end<t).at(-1);if(!w)return;const alpha=t<=w.end?1:Math.max(0,1-(t-w.end)/7)*.6;if(!alpha)return;
- if(['grab','low','dashAttack'].includes(a.type)){const box=attackBoxes(f)[0];if(box)chain(box.x1,box.y1,box.x2,box.y2,alpha);return;}
+ if(['grab','low','dashAttack'].includes(a.type)){const box=attackVisualBoxes(f)[0];if(box)chain(box.x1,box.y1,box.x2,box.y2,alpha);return;}
  if(a.type.endsWith('Throw')||a.type==='pummel')return;
  const up=w.shape==='up',back=w.shape==='back',down=w.shape==='down',spin=w.shape==='spin';{const slashIndex=up?5:0;if([0].includes(slashIndex)&&w.shape!=='spin')SlashVFX.melee(f,w,slashIndex,alpha);else stamp(up?5:0,f.x+(spin||up?0:back?-45:45)*f.face,f.y-(up?65:down?10:35),(a.reach||150)*FIGHTER_SCALE*1.35,up?150:spin?125:95,back?-f.face:f.face,alpha,down?Math.PI/2:0);}
  }

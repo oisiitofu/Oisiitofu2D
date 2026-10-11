@@ -16,7 +16,7 @@ const KosmosVFX=(()=>{
   if(a.feint){stamp(5,f.x+f.face*30,f.y-40,120,90,f.face,Math.max(0,1-t/a.totalFrames)*.6);return;}
   if(a.beamShot){if(t>=a.startupFrames&&t<=a.startupFrames+5){stamp(2,f.x+f.face*45,f.y-42,85+a.charge*55,85+a.charge*55,f.face,1-(t-a.startupFrames)/6);if(a.charge<.75)weapon(41,f.x+f.face*18,f.y-40,56,f.face,.8);}return;}
   const w=CombatData.activeWindow(a,t)||a.activeFrames.filter(w=>w.end<t).at(-1);if(!w||['grab','pummel'].includes(a.type)||a.type.endsWith('Throw'))return;const alpha=t<=w.end?1:Math.max(0,1-(t-w.end)/5)*.6;if(!alpha)return;
-  const boxes=attackBoxes(f,a,Math.min(t,w.end));
+  const boxes=attackVisualBoxes(f,a,Math.min(t,w.end));
   if(a.nodeArray){for(const b of boxes){weapon(42,b.x1,b.y1,40,1,alpha);beam(b,1,alpha);stamp(3,b.x2,b.y2,45,45,1,alpha);}return;}
   if(a.cannonMelee||a.type==='jab3'){for(const b of boxes){beam(b,1,alpha);stamp(2,b.x1,b.y1,55,55,1,alpha*.7);}return;}
   if(a.drill){const b=boxes[0];if(b){beam(b,6,alpha);weapon(45,(b.x1+b.x2)/2,(b.y1+b.y2)/2,70,1,alpha,Math.atan2(b.y2-b.y1,b.x2-b.x1));}return;}

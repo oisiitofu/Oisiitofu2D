@@ -13,7 +13,7 @@ const RyzaVFX=(()=>{
   const w=CombatData.activeWindow(a,t);if(!w)return;
   if(a.corePillar){stamp(1,f.x,f.y-a.pillarHeight*.5,90,a.pillarHeight,1,1);stamp(7,f.x,f.y-a.pillarHeight,95,80);return;}
   if(a.barrelCrash){prop(0,f.x-55,f.y-18,42);prop(5,f.x+55,f.y-18,45);stamp(2,f.x,f.y-32,a.reach*FIGHTER_SCALE*2,100);return;}
-  const boxes=attackBoxes(f);for(const b of boxes){const d=direction(b);stamp(0,d.x,d.y,d.length+b.radius*2,b.radius*4,d.face,1,d.rotation);}
+  const boxes=attackVisualBoxes(f);for(const b of boxes){const d=direction(b);stamp(0,d.x,d.y,d.length+b.radius*2,b.radius*4,d.face,1,d.rotation);}
  }
  function hud(f,x,y){if(f.characterId!=='ryza')return;const item=f.ryzaItem;text(item?'ITEM / '+RyzaRules.items[item.index].name+(item.charged?' ★':''):'ALCHEMY / Xで調合',x+52,y+54,8,'#ffdc95','left');}
  return{stamp,prop,direction,impact,drawObjects,draw,hud};
