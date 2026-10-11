@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http'),crypto=require('node:crypto'),{spawn}=require('node:child_process');
 const {chromium}=require('playwright');
-const root=__dirname,site=path.join(root,'.tools/local-public-site'),dist=path.join(site,'dist');
+const root=__dirname,site=path.join(root,'.tools/local-public-site'),dist=path.join(site,'payload');
 const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.webp':'image/webp','.wav':'audio/wav'};
 const server=http.createServer((req,res)=>{
  let file;try{file=path.resolve(dist,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));}catch{res.writeHead(400).end();return;}

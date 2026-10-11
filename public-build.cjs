@@ -4,7 +4,7 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 function build(site,assetRoot){
- const output=path.join(site,'dist'),inventory=JSON.parse(fs.readFileSync(path.join(site,'asset-inputs.json'),'utf8'));
+ const output=path.join(site,'payload'),inventory=JSON.parse(fs.readFileSync(path.join(site,'asset-inputs.json'),'utf8'));
  fs.mkdirSync(output,{recursive:true});
  fs.cpSync(path.join(site,'app'),output,{recursive:true});
  let bytes=0;

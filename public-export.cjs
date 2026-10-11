@@ -73,9 +73,13 @@ for(const id of [...audio.stages.map(s=>s.id),'menu']){
 }
 fs.writeFileSync(path.join(site,'asset-inputs.json'),JSON.stringify({characters:Object.keys(manifest.characters).length,onlineUrl:config.onlineUrl,upstream:'https://github.com/oisiitofu/Oisiitofu2D',revision:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),files:inputs},null,2));
 fs.copyFileSync(path.join(root,'public-build.cjs'),path.join(site,'build.cjs'));
-fs.writeFileSync(path.join(site,'.gitignore'),'dist/\nnode_modules/\n');
+fs.copyFileSync(path.join(root,'public-worker.mjs'),path.join(site,'worker.mjs'));
+fs.copyFileSync(path.join(root,'public-worker-build.cjs'),path.join(site,'worker-build.cjs'));
+fs.writeFileSync(path.join(site,'.gitignore'),'dist/\npayload/\nupload-inputs.json\nnode_modules/\n');
 const manifestPath=path.join(site,'.openai/hosting.json');fs.mkdirSync(path.dirname(manifestPath),{recursive:true});
 const hosting=fs.existsSync(manifestPath)?JSON.parse(fs.readFileSync(manifestPath,'utf8')):{};
 if(hosting.project_id&&hosting.project_id!==config.projectId)throw Error('Site identity mismatch');
-fs.writeFileSync(manifestPath,JSON.stringify({...hosting,project_id:config.projectId,static:{directory:'dist'}},null,2));
+delete hosting.static;
+fs.writeFileSync(manifestPath,JSON.stringify({...hosting,project_id:config.projectId,d1:null,r2:'BUCKET'},null,2));
 build(site,root);
+execFileSync(process.execPath,[path.join(site,'worker-build.cjs')],{cwd:site,stdio:'inherit'});
