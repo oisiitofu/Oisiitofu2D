@@ -95,7 +95,9 @@ function resolveFighterBodies(previous){
  a.x=center-direction*spacing/2;b.x=center+direction*spacing/2;
  // Remove velocity into the opponent. Momentum cannot tunnel through a body.
  if(a.vx*direction>0)a.vx=0;if(b.vx*direction<0)b.vx=0;}
- for(const f of fighters){const floor=platforms.find(p=>Math.abs(p.y-f.y)<2&&f.x>p.x-9&&f.x<p.x+p.w+9);if(!floor){f.grounded=false;f.vy=0;}}
+ // Only grounded fighters can lose support after being pushed. Airborne
+ // velocity belongs to physics, including jumps, falling and knockback.
+ for(const f of fighters){if(!f.grounded)continue;const floor=platforms.find(p=>Math.abs(p.y-f.y)<2&&f.x>p.x-9&&f.x<p.x+p.w+9);if(!floor){f.grounded=false;f.vy=0;}}
 }
 function loupePosition(f){
  const p={x:W/2+(f.x-camera.x)*camera.z,y:H*.47+(f.y-42-camera.y)*camera.z};

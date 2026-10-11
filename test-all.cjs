@@ -1,4 +1,6 @@
 const {spawnSync}=require('node:child_process');
+console.log('\nRunning battle-movement-test.cjs');
+const movementCheck=spawnSync(process.execPath,['battle-movement-test.cjs'],{stdio:'inherit'});if(movementCheck.status!==0)process.exit(movementCheck.status||1);
 console.log('\nRunning .tools/motion-actionability-test.cjs');
 const motionCheck=spawnSync(process.execPath,['.tools/motion-actionability-test.cjs'],{stdio:'inherit'});if(motionCheck.status!==0)process.exit(motionCheck.status||1);
 console.log('\nRunning roster-name-test.cjs');
