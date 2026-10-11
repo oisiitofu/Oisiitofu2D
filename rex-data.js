@@ -12,7 +12,7 @@ const RexMoves=(()=>{
   smash:m('ダブルスピニングエッジ',13,[w(13,15,'front',{damage:6,baseKnockback:1.4,knockbackGrowth:.015}),w(20,23,'spin',{damage:15})],23,0,{damage:15,reach:212,pose:10,chargeFrame:4,chargeMaxFrames:60,baseKnockback:6.2,knockbackGrowth:.1,soundFamily:'sword'}),
   upsmash:m('プロミネンスリボルト',14,[w(14,18,'up')],24,0,{damage:19,reach:225,pose:8,angle:-1.5,chargeFrame:4,chargeMaxFrames:60,soundFamily:'fire'}),
   downsmash:m('ローリングスマッシュ',12,[w(12,15,'spin'),w(20,22,'back')],23,0,{damage:17,reach:188,pose:10,chargeFrame:4,chargeMaxFrames:60,soundFamily:'sword'}),
-  air:m('エアスピンエッジ',6,[w(6,7,'front',{damage:3}),w(15,20,'spin',{damage:7})],12,7,{damage:7,reach:154,pose:10,aerial:true,soundFamily:'sword'}),
+  air:m('エアスピンエッジ',6,[w(6,7,'front',{damage:3,baseKnockback:1.4,knockbackGrowth:.015}),w(15,20,'spin',{damage:7})],12,7,{damage:7,reach:154,pose:10,aerial:true,soundFamily:'sword'}),
   fair:m('ドライバークロス',6,[w(6,8)],12,10,{damage:10,reach:171,pose:9,aerial:true,soundFamily:'sword'}),
   bair:m('リバースエッジ',7,[w(7,11,'back')],12,10,{damage:11,reach:163,pose:7,aerial:true,soundFamily:'sword'}),
   uair:m('ライジングエーギス',5,[w(5,9,'up')],13,8,{damage:9,reach:148,pose:8,aerial:true,angle:-1.5,soundFamily:'sword'}),

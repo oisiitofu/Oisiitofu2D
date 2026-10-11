@@ -14,7 +14,7 @@ const IsaacMoves=(()=>{
   smash:m('ラグナロク',13,[w(13,16)],17,0,{damage:20,reach:187,pose:9,baseKnockback:6.4,knockbackGrowth:.105,chargeFrame:4,chargeMaxFrames:60,earthEffect:'ragnarok'}),
   upsmash:m('ガイア',13,[w(13,18,'up')],17,0,{damage:17,reach:165,pose:8,angle:-1.48,baseKnockback:6,knockbackGrowth:.095,chargeFrame:4,chargeMaxFrames:60,earthEffect:'gaia'}),
   downsmash:m('クエイク',12,[w(12,17,'shockwave')],18,0,{damage:16,reach:195,pose:17,angle:-.8,baseKnockback:5.5,knockbackGrowth:.09,chargeFrame:3,chargeMaxFrames:60,earthEffect:'quake'}),
-  air:m('ストーンオービット',6,[w(6,7,'front',{damage:3}),w(15,20,'spin',{damage:7})],10,7,{damage:7,reach:138,pose:10,aerial:true,earthEffect:'orbit'}),
+  air:m('ストーンオービット',6,[w(6,7,'front',{damage:3,baseKnockback:1.4,knockbackGrowth:.015}),w(15,20,'spin',{damage:7})],10,7,{damage:7,reach:138,pose:10,aerial:true,earthEffect:'orbit'}),
   fair:m('空前・斬り下ろし',6,[w(6,8)],10,10,{damage:10,reach:156,pose:9,aerial:true}),
   bair:m('空後・返し刃',7,[w(7,11,'back')],10,10,{damage:11,reach:154,pose:10,aerial:true}),
   uair:m('空上・天突き',5,[w(5,9,'up')],10,8,{damage:9,reach:137,pose:8,angle:-1.5,aerial:true}),

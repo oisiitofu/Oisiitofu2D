@@ -1,4 +1,6 @@
 const {spawnSync}=require('node:child_process');
+console.log('\nRunning multihit-balance-test.cjs');
+const multihitCheck=spawnSync(process.execPath,['multihit-balance-test.cjs'],{stdio:'inherit'});if(multihitCheck.status!==0)process.exit(multihitCheck.status||1);
 for(const file of ['battle-size-test.cjs','motion-size-test.cjs','battle-input-regression-test.cjs']){console.log('\nRunning '+file);const result=spawnSync(process.execPath,[file],{stdio:'inherit'});if(result.status!==0)process.exit(result.status||1);}
 console.log('\nRunning battle-movement-test.cjs');
 const movementCheck=spawnSync(process.execPath,['battle-movement-test.cjs'],{stdio:'inherit'});if(movementCheck.status!==0)process.exit(movementCheck.status||1);
