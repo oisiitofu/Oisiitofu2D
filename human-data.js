@@ -14,7 +14,7 @@ const HumanMoves=(()=>{
 })();
 const HumanRules=NewcomerCore.create('human',HumanMoves,{
  prepare(f,a){if(a.ropeSwing){a.length=170;a.theta=a.originFace*.25;a.omega=a.originFace*.038;a.anchor={x:f.x-Math.sin(a.theta)*a.length,y:f.y-Math.cos(a.theta)*a.length};a.released=false;a.swingVX=a.swingVY=0;}if(a.catapult){a.aim=0;a.launched=false;a.clearing=false;}if(a.extinguisher){a.sprayEnd=56;a.fuel=48;}},
- action(f,i,r){const a=f.attack,t=f.timer;f.fastFall=false;
+ action(f,i,r){const a=f.attack,t=f.timer;if(a.special)f.fastFall=false;
   if(a.extinguisher){f.face=a.originFace;if(t>=8&&t<=a.sprayEnd){if(t>=14&&!i.specialHeld)a.sprayEnd=t;if((t-8)%6===0&&a.fuel>0){a.fuel-=6;r.spawn(f,{bodyOrigin:true,kind:'jet',x:f.x+f.face*47,y:f.y-65,vx:f.face*9,vy:clamp(i.y,-1,1)*2,radius:16,damage:2,life:16});f.vx=-f.face*(a.originGrounded?.7:1.7);if(!a.originGrounded)f.vy=Math.min(f.vy,-.3);}}if(t>=a.sprayEnd){a.totalFrames=a.sprayEnd+18;a.motionEndFrames=a.totalFrames;a.FAF=a.totalFrames+1;a.animationWindows=[{start:1,end:a.sprayEnd,pose:13},{start:a.sprayEnd+1,end:a.totalFrames,pose:0}];}}
   if(a.ropeSwing){f.buffer=null;f.face=a.originFace;if(t<9){f.vx=f.vy=0;}else if(!a.released){a.omega=clamp((a.omega-.0019*Math.sin(a.theta)+clamp(i.x,-1,1)*.0013)*.995,-.078,.078);a.theta=clamp(a.theta+a.omega,-1.15,1.15);if(Math.abs(a.theta)===1.15)a.omega*=-.8;
     const nx=a.anchor.x+Math.sin(a.theta)*a.length,ny=a.anchor.y+Math.cos(a.theta)*a.length,p=AdolRules.clearPath(f.x,f.y,nx,ny,f);a.swingVX=p.x-f.x;a.swingVY=p.y-f.y;f.vx=a.swingVX;f.vy=a.swingVY;f.grounded=false;
