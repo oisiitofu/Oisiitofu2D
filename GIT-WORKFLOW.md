@@ -1,6 +1,6 @@
 # GitHubでの管理
 
-非公開リポジトリ: https://github.com/oisiitofu/Oisiitofu2D
+公開リポジトリ: https://github.com/oisiitofu/Oisiitofu2D
 
 ゲームのコード、テスト、元素材、音声を保存します。画像・音声はGit LFSで管理します。`node_modules/`、検証用スクリーンショット、ログ、再生成できる`assets/ready/`は保存対象外です。
 
