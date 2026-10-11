@@ -13,7 +13,7 @@ const server=http.createServer((req,res)=>{
  if(req.method==='HEAD')res.end();else fs.createReadStream(file,{start,end}).pipe(res);
 });
 (async()=>{
- await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const url='http://127.0.0.1:'+server.address().port;
+ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const url=process.env.PUBLIC_TEST_URL||'http://127.0.0.1:'+server.address().port;
  if(process.argv.includes('--serve')){console.log(url);return;}
  let browser;
  try{
