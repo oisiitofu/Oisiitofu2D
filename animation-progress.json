@@ -3,10 +3,9 @@
   "qualityReference": "sukapon",
   "orderSource": "Roster.selectable displayNumber / roster.js selectionOrder",
   "completed": [
-    "sukapon",
-    "chocobo"
+    "sukapon"
   ],
-  "current": null,
+  "current": "chocobo",
   "updatedAt": "2026-10-12",
   "publicUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
   "continuation": "manual_one_character_at_a_time",
@@ -18,5 +17,7 @@
     "deploymentId": "appgdep_6acc4e52b980819190524ba1a3d8ba53",
     "status": "succeeded",
     "liveChecks": 8568
-  }
+  },
+  "currentStatus": "original_design_restored_animation_needs_rework",
+  "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation."
 }
