@@ -12,7 +12,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    const original=ctx.drawImage;let draws=[];
    // Inspect the real canvas transform, including per-attack transforms and
    // return blends. Pixel area is measured separately from the generated scale.
-   ctx.drawImage=function(img,...a){if(a.length===4){const m=ctx.getTransform();draws.push({img,areaScale:Math.abs(m.a*m.d-m.b*m.c)*a[2]*a[3]/img.width/img.height,widthScale:Math.hypot(m.a,m.b)*a[2]/img.width,heightScale:Math.hypot(m.c,m.d)*a[3]/img.height,alpha:ctx.globalAlpha});}};
+   ctx.drawImage=function(img,...a){if(a.length===2||a.length===4){const m=ctx.getTransform(),w=a.length===2?img.width:a[2],h=a.length===2?img.height:a[3];draws.push({img,areaScale:Math.abs(m.a*m.d-m.b*m.c)*w*h/img.width/img.height,widthScale:Math.hypot(m.a,m.b)*w/img.width,heightScale:Math.hypot(m.c,m.d)*h/img.height,alpha:ctx.globalAlpha});}};
    const capture=(f,n=null)=>{draws=[];ctx.save();ctx.setTransform(1,0,0,1,0,0);drawSprite(f,1,n);ctx.restore();return draws;};
    try{
     for(const {id}of Roster.definitions){

@@ -20,6 +20,6 @@
     "status": "succeeded",
     "liveChecks": 2888
   },
-  "currentStatus": "original_design_restored_animation_needs_rework",
+  "currentStatus": "original_pixels_rig_validated_publication_pending",
   "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation."
 }

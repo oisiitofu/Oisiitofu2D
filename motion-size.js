@@ -519,7 +519,7 @@ const MotionSize={
    ]
   },
   "chocobo": {
-   "atlas": "assets/ready/chocobo-atlas-607308dac46e4bb9.webp",
+   "atlas": "assets/ready/chocobo-atlas-83b1b8557f2e0319.webp",
    "poses": [
     0,
     1,

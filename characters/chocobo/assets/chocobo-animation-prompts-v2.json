@@ -1,0 +1,13 @@
+{
+  "tool": "built-in image_gen",
+  "use": "Hidden torso underpainting only; all visible anatomy stays original pixels.",
+  "reference": "characters/chocobo/previews/original-stand.png",
+  "sourceStandingFrame": 0,
+  "prompt": "Use case: precise-object-edit. Asset type: hidden torso underpainting for an existing 2D game character, NOT a redesign or a new character. Input image is the exact approved standing Chocobo. Generate only the compact rounded golden feathered torso that is hidden behind this bird's folded near wing. Remove the head AND ALL neck, the tail, both wings, both legs and feet. Keep the ORIGINAL torso's squat plump proportions, fluffy soft feather rendering, original small brown backpack on its upper left back, and original brown leather chest harness and small brass buckle at the right chest. Fill the feathered body surface behind the removed near wing so it can be revealed when the existing original wing moves. This is a short ROUND egg shaped torso, never a tall bird torso; original visible body runs roughly x80..190 and y110..200 in the 213x240 reference. The original head, neck, wings and feet will be reused from their exact original pixels separately, so do NOT draw any of them and do NOT propose a different assembled bird. Single isolated headless neckless wingless tailless legless torso, centered, full silhouette with transparent margins. Match the exact original painted feather detail, lighting, golden yellow shades and brown leather. TRUE transparent alpha background, no ground, no cast shadow, no labels, no checkerboard, no effects.",
+  "crop": [
+    210,
+    187,
+    958,
+    805
+  ]
+}
