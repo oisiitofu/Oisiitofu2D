@@ -6,7 +6,7 @@
     "sukapon",
     "chocobo"
   ],
-  "current": "chocobo",
+  "current": "tifa",
   "updatedAt": "2026-10-12",
   "publicUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
   "continuation": "manual_one_character_at_a_time",
@@ -22,6 +22,16 @@
     "liveChecks": 9708,
     "livePublicModeChecks": 1495
   },
-  "currentStatus": "completed_published_awaiting_manual_next",
-  "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation."
+  "currentStatus": "validated_awaiting_publication",
+  "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation.",
+  "stoppedCharacters": {
+    "moogle": {
+      "characterId": "moogle",
+      "date": "2026-10-12",
+      "stage": "hidden_torso_underpainting",
+      "requestId": "e19e1aed-ae2b-4ebb-bfb0-b79f9f631ec4",
+      "runtimeRegistered": false,
+      "publicationChanged": false
+    }
+  }
 }
