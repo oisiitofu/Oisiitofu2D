@@ -18,7 +18,7 @@ const TifaRasterAnimation=(()=>{
  // bent poses keep their head/body dimensions instead of being fitted to a height.
  const sizes=[...Array(3).fill(.65),...Array(3).fill(.65),...Array(3).fill(.65),
   ...Array(3).fill(.65),...Array(3).fill(.65),...Array(9).fill(1.28),
-  ...Array(4).fill(.90),...Array(4).fill(.94),...Array(9).fill(1.26)];
+  .9448,.9576,.9626,.9610, .9585,.9519,.9638,.9832,...Array(9).fill(1.26)];
  const roots=[.5,.5,.5, .42,.42,.42, .69,.69,.69, .47,.47,.47,
   .5,.5,.5, .52,.52,.52, .5,.5,.5, .5,.5,.5,
   .56,.56,.56,.56, .60,.60,.60,.60, .48,.48,.48, .5,.5,.5, .52,.52,.52];
@@ -62,7 +62,7 @@ const TifaRasterAnimation=(()=>{
  }
  function placement(f,n){
   if(n>=49){const img=characterArt.tifa.frames[n],i=n-49;return{unit:BattleSize.native('tifa',n),root:roots[i],floor:img.height-3};}
-  const originalRoots={9:.52,13:.5,17:.48,20:.5,21:.52,40:.5,42:.5},size={20:1.08,21:1.10};
+  const originalRoots={9:.52,13:.5,17:.48,20:.5,21:.52,24:.56,25:.56,26:.56,27:.56,28:.60,29:.60,30:.60,31:.60,34:.53,35:.60,40:.5,42:.5},size={20:1.08,21:1.10};
   return{unit:BattleSize.native('tifa',n)*(size[n]??1),root:originalRoots[n]??NewcomerArtAnchors.tifa[n]??.5,floor:characterArt.tifa.frames[n].height-BattleSize.baseline(f,n)};
  }
  function drawFrame(f,n,alpha=1,scale=1){

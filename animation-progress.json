@@ -103,7 +103,7 @@
     "physicsChanged": false,
     "requiresUserReviewBeforeNextCharacter": true,
     "tests": {
-      "animation": 17207,
+      "animation": 17217,
       "mechanics": 176,
       "online": 56,
       "actionability": 16922,
