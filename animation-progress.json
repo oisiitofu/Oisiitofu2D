@@ -4,25 +4,26 @@
   "orderSource": "Roster.selectable displayNumber / roster.js selectionOrder",
   "completed": [
     "sukapon",
-    "chocobo"
+    "chocobo",
+    "tifa"
   ],
   "current": "tifa",
   "updatedAt": "2026-10-12",
   "publicUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
   "continuation": "manual_one_character_at_a_time",
   "lastPublication": {
-    "characterId": "chocobo",
-    "kind": "original_stance_animation_v2",
+    "characterId": "tifa",
+    "kind": "original_stance_articulated_animation_v1",
     "animationCompleted": true,
-    "githubCommit": "3fb9fc033be72b843cb963293bcdb71da4a19896",
-    "siteSourceCommit": "9c3ffab3da495dd0e3eb96c0d3808bf15ba407d2",
-    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_b5c9936d6e288191b402ffac0d2d1f87",
-    "deploymentId": "appgdep_6acc61ab768481919f5e8c925222f4c2",
+    "githubCommit": "fd753ca93733becb1e55d75b61822f0de24d0181",
+    "siteSourceCommit": "9fb114244379d1c95e4877b40f413531a3e26f04",
+    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_669a90b0dcac819191a986deb504898a",
+    "deploymentId": "appgdep_6acc76caa56c819193ef5ecc8967c85a",
     "status": "succeeded",
-    "liveChecks": 9708,
+    "liveChecks": 14682,
     "livePublicModeChecks": 1495
   },
-  "currentStatus": "validated_awaiting_publication",
+  "currentStatus": "completed_published_awaiting_user_next",
   "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation.",
   "stoppedCharacters": {
     "moogle": {

@@ -1,6 +1,6 @@
 const fs=require('node:fs'),assert=require('node:assert/strict'),crypto=require('node:crypto'),{chromium}=require('playwright');
 (async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{
- for(const[p,hash]of Object.entries(JSON.parse(fs.readFileSync('characters/tifa/tests/legacy-combat-hashes.json'))))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'),hash,'combat unchanged: '+p);
+ for(const[p,hash]of Object.entries(JSON.parse(fs.readFileSync('characters/tifa/tests/legacy-combat-hashes.json'))))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(p,'utf8').replace(/\r\n/g,'\n')).digest('hex'),hash,'combat unchanged: '+p);
  const old=JSON.parse(fs.readFileSync('characters/tifa/tests/legacy-art-checks.json')),page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(process.env.GAME_URL||'http://localhost:4173');await page.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});
  const now=await page.evaluate(async()=>(await(await fetch('assets/ready/manifest.json')).json()).characters.tifa);
  assert.deepEqual(now.checks.frames.slice(0,49),old.checks.frames);assert.deepEqual(now.checks.effects,old.checks.effects);for(let c=0;c<5;c++)assert.deepEqual(now.checks.tints[c].slice(0,49),old.checks.tints[c]);for(const k of ['portraits','selectionPortraits','selectionThumbnails','selectionCrop'])assert.deepEqual(now[k],old[k],k);
