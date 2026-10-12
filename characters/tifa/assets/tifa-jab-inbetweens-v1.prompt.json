@@ -1,0 +1,13 @@
+{
+  "mode": "built-in image_gen",
+  "purpose": "Local raster inbetween prototype, not registered in game",
+  "references": [
+    "../previews/tifa-original-idle.png",
+    "../previews/tifa-original-jab.png"
+  ],
+  "originalPoseIds": [
+    0,
+    6
+  ],
+  "prompt": "Create a transparent raster inbetween animation sprite strip for an existing 2D fighting game. Two attached images are the APPROVED ORIGINAL ENDPOINTS, not inspiration for a redesign: image 1 is adult Tifa's idle fighting stance, image 2 is her right-facing straight jab. Produce ONLY THREE NEW INBETWEEN SPRITES in a horizontal row of three equal 320 by 320 cells (overall 960 by 320). They represent 25%, 50%, and 75% of the movement from image 1 to image 2. Do NOT redraw the endpoint sprites in this output.\n\nMatch their exact small hand-drawn anime game sprite appearance, slender athletic adult anatomy, face, dark brown long hair, short white sleeveless top with black shoulder straps, bare abdomen, short black pleated skirt, belts, opaque black thigh-high stockings, red lace-up combat boots, red and black boxing gloves. Do not add jewelry, clothing, extra straps or change the face. Use the same head size, neck length, torso length and limb thickness as the originals. No chibi, no photorealism, no new costume. Not a segmented paper puppet: draw coherent whole-body intermediate drawings with natural anatomy. No rubber limbs or excessive spine bending.\n\nIn all three cells she faces RIGHT and extends the SAME arm from the raised guard beside her face toward the final straight punch. First cell: striking elbow beginning to open, fist forward at approximately face height, opposite glove stays by her chest. Second: elbow about halfway extended and slight shoulder turn. Third: punch nearly extended but not yet locked, approaching the supplied final pose. Smooth, economical forward punch. Her planted red boots stay on a shared ground line near y=304, full feet visible, wide guard stance, head at similar height and knees adjust gradually toward the jab endpoint. Long hair trails gently left behind her, no enormous motion. Use the same camera, view, linework, shading and palette. Each sprite fully contained in its own cell with clear transparent separation and at least 12 px margin. No captions, grid lines, labels, motion blurs, impact effects, background, floor or cast shadow. True transparent RGBA background. Output only the strip."
+}

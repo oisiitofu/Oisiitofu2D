@@ -4,8 +4,7 @@
   "orderSource": "Roster.selectable displayNumber / roster.js selectionOrder",
   "completed": [
     "sukapon",
-    "chocobo",
-    "tifa"
+    "chocobo"
   ],
   "current": "tifa",
   "updatedAt": "2026-10-12",
@@ -14,16 +13,17 @@
   "lastPublication": {
     "characterId": "tifa",
     "kind": "original_stance_articulated_animation_v1",
-    "animationCompleted": true,
+    "animationCompleted": false,
     "githubCommit": "fd753ca93733becb1e55d75b61822f0de24d0181",
     "siteSourceCommit": "9fb114244379d1c95e4877b40f413531a3e26f04",
     "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_669a90b0dcac819191a986deb504898a",
     "deploymentId": "appgdep_6acc76caa56c819193ef5ecc8967c85a",
     "status": "succeeded",
     "liveChecks": 14682,
-    "livePublicModeChecks": 1495
+    "livePublicModeChecks": 1495,
+    "userRejected": true
   },
-  "currentStatus": "completed_published_awaiting_user_next",
+  "currentStatus": "original_art_restored_raster_jab_prototype_for_review",
   "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation.",
   "stoppedCharacters": {
     "moogle": {
@@ -34,5 +34,24 @@
       "runtimeRegistered": false,
       "publicationChanged": false
     }
+  },
+  "rejectedMethods": {
+    "tifa": {
+      "date": "2026-10-12",
+      "method": "articulated_standing_pixel_rig",
+      "reason": "User reported unnatural wriggling and changed appearance; use raster inbetween frames between approved originals instead."
+    }
+  },
+  "animationMethod": "approved_original_endpoints_and_raster_inbetween_frames",
+  "prototype": {
+    "characterId": "tifa",
+    "move": "jab",
+    "originalPoses": [
+      0,
+      6
+    ],
+    "generatedFrames": 3,
+    "runtimeRegistered": false,
+    "status": "draft_for_visual_review"
   }
 }
