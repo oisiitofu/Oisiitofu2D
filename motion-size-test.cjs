@@ -19,9 +19,20 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
      const meta=MotionSize.characters[id],f=makeFighter(0,0,id);Object.assign(f,{x:720,y:560,grounded:true,inv:0,input:emptyInput()});fighters=[f,makeFighter(1,0,'dragoon')];
      check(id+' calibration matches baked atlas',meta.atlas===manifest.characters[id].image);
      const hist=n=>{const img=characterArt[id].frames[n],data=img.getContext('2d').getImageData(0,0,img.width,img.height).data,h=Array(64).fill(0);for(let y=0;y<img.height;y++)for(let x=0;x<img.width;x++){if(meta.exclude?.[n]?.some(([l,t,w,d])=>x>=l&&x<l+w&&y>=t&&y<t+d))continue;const k=(y*img.width+x)*4;h[(data[k]>>6)*16+(data[k+1]>>6)*4+(data[k+2]>>6)]+=data[k+3]/255;}return h;};
-     const idleHistogram=hist(0),idleArea=idleHistogram.reduce((a,b)=>a+b,0),weights=idleHistogram.map(a=>Math.min(1,a/idleArea/.005)),mass=n=>hist(n).reduce((s,a,k)=>s+a*weights[k],0);
-     const referenceMass=mass(0)*capture(f,0)[0].areaScale;
+     // Transformations with a different body shape must be compared against
+     // their own idle, rather than shrunk to the human silhouette's pixel mass.
+     const references=new Map();
+     const referenceFor=n=>{
+      const reference=meta.forms?.find(g=>n>=g.first&&n<=g.last)?.reference??0;
+      if(!references.has(reference)){
+       const h=hist(reference),area=h.reduce((a,b)=>a+b,0),weights=h.map(a=>Math.min(1,a/area/.005));
+       const mass=n=>hist(n).reduce((s,a,k)=>s+a*weights[k],0);
+       references.set(reference,{mass,referenceMass:mass(reference)*capture(f,reference)[0].areaScale});
+      }
+      return references.get(reference);
+     };
      for(const n of meta.poses){
+      const {mass,referenceMass}=referenceFor(n);
       const bodyMass=mass(n);poses++;
       for(const face of [-1,1]){f.face=face;const d=capture(f,n)[0],ratio=Math.sqrt(bodyMass*d.areaScale/referenceMass);
        check(id+'/'+n+'/'+face+' body size is stable',ratio>=.76&&ratio<=1.12,{ratio});
