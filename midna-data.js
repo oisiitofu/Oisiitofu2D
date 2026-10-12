@@ -51,7 +51,9 @@ const MidnaRules=(()=>{
    if(t===a.reelEnd+1){if(a.hook){release(f,i);return;}a.gravityMultiplier=1;}
   }
   if(a.midnaWarp){if(t>=a.aimFrames[0]&&t<=a.aimFrames[1]){if(Math.hypot(i.x,i.y)>.3)a.warpDirection={x:i.x,y:i.y};a.target=destination(f,a);}if(t<=a.warpFrame){f.vx=f.vy=0;f.fastFall=false;}
-   if(t===a.vanishFrames[0]){f.grounded=false;f.recovered=true;f.specialLandingLag=a.landingLagFrames;GameAudio.cue('dark-cast',.75,f);}
+   // Vanishing does not take off: becoming airborne on the floor would immediately
+   // trigger landing and cancel the warp. Change grounding at the destination instead.
+   if(t===a.vanishFrames[0]){f.recovered=true;f.specialLandingLag=a.landingLagFrames;GameAudio.cue('dark-cast',.75,f);}
    if(t===a.warpFrame){const q=destination(f,a);f.x=q.x;f.y=q.y;a.target=q;f.face=Math.sign(a.warpDirection.x)||f.face;f.grounded=false;a.gravityMultiplier=1;GameAudio.cue('dark-hit',.6,f);}
   }
  }
