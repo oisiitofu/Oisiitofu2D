@@ -53,3 +53,6 @@ const KittenRules=NewcomerCore.create('kitten',KittenMoves,{
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.stasisField){i.specialHeld=Math.abs(o.x-f.x)>180&&a.chargeFrames<36;i.y=clamp((o.y-f.y)/160,-1,1);}if(a?.gravitySlide){clear();i.x=a.originFace;}if(a?.gravityShift){clear();i.y=-1;i.x=f.y>p.y+80&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);}if(!a&&f.grounded&&frame%240===f.id&&f.newCooldown<=0){clear();i.special=true;i.y=1;}}
 });
 (()=>{const reset=KittenRules.reset,tick=KittenRules.tick;KittenRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='kitten'){f.gravityStyle=0;applyKittenStyle(f);}};KittenRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='kitten'){if(f.respawn)f.gravityStyle=0;applyKittenStyle(f);const a=f.attack;if(a?.stasisField&&a.hold){a.collected=Math.min(3,Math.max(a.collected,1+Math.floor(a.chargeFrames/20)));for(const r of Object.values(NewcomerCore.registry))for(const q of r.objects){if(q.owner===f.id||q.dead||!['shot','bullet','ki','crate','cannon','rock'].includes(q.kind)||Math.hypot(q.x-(f.x+f.face*60),q.y-(f.y-65))>105)continue;q.dead=true;a.captured++;a.collected=Math.min(3,a.collected+1);}}}};})();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(KittenMoves.dragon,{rangedInterval:40,rangedRearm:20});

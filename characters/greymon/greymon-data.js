@@ -68,3 +68,6 @@ const DigimonKit=(()=>{
 const GreymonMoves=DigimonKit.moves('greymon');
 const GreymonRules=DigimonKit.rules('greymon',GreymonMoves);
 function greymonPose(f){return DigimonKit.pose(f);}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(GreymonMoves.dragon,{rangedInterval:40,rangedRearm:20});

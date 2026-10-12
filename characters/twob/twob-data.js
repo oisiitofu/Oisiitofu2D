@@ -22,3 +22,6 @@ const TwoBRules=(()=>{
  }if(o.age>(o.kind==='bullet'?55:58)||o.x<-900||o.x>2300)o.dead=true;}objects=objects.filter(o=>!o.dead);}
  return{reset,action,tick,box,pod,get objects(){return objects}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(TwoBMoves.dragon,{rangedInterval:48,rangedRearm:24});

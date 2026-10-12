@@ -36,3 +36,6 @@ const MarukuRules=NewcomerCore.create('maruku',MarukuMoves,{
 });
 (()=>{const reset=MarukuRules.reset,tick=MarukuRules.tick;MarukuRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='maruku')f.marukuHoleCooldown=0;};MarukuRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='maruku'){if(f.respawn)f.marukuHoleCooldown=0;else if(f.marukuHoleCooldown>0)f.marukuHoleCooldown--;}};})();
 function marukuPose(f){const a=f.attack;if(a?.marukuCannon||a?.marukuCutter||a?.marukuWarp||a?.marukuHole)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,ledge:38,grab:17,caught:21,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(MarukuMoves.dragon,{rangedInterval:40,rangedRearm:20});

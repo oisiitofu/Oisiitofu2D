@@ -86,3 +86,6 @@ const EmmaRules=(()=>{
  }
  return{reset,terrain,anchorTarget,prepare,release,callKoo,action,onHit,thornBox,collide,tick,cpu,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(EmmaMoves.dragon,{rangedInterval:40,rangedRearm:20});

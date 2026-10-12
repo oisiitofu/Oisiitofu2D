@@ -93,3 +93,9 @@ const NoctisRules=(()=>{
  }
  return{reset,prepare,action,tick,cpu,marker,safeWarp,box,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(NoctisMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(NoctisMoves.dash,{rangedInterval:32,rangedRearm:16});

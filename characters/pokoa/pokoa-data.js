@@ -67,3 +67,6 @@ const PokoaRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main);if(f.attack?.dragonGlide){i.x=f.attack.escapeSide&&f.y>p.y?f.attack.escapeSide:Math.sign(720-f.x);i.y=0;i.special=i.guard=i.jab=i.heavy=i.smash=i.grab=false;i.jump=f.timer>=32&&!f.attack.flapUsed&&f.y>p.y-120;}else if(f.attack?.surf){i.x=Math.sign(o.x-f.x);i.y=0;i.special=false;i.jump=f.timer>35&&(f.x<p.x+60||f.x>p.x+p.w-60);i.guard=i.jab=i.heavy=i.smash=i.grab=false;}else if(f.attack?.magnetRise){i.x=Math.sign(720-f.x);i.y=0;i.special=false;i.jump=f.timer>35;i.guard=i.jab=i.heavy=i.smash=i.grab=false;}else if(!f.attack&&!f.grounded&&!f.recovered&&(f.y>p.y-90&&(f.x<p.x||f.x>p.x+p.w)||f.y>p.y+35)){i.x=f.y>p.y+35&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;i.special=true;i.specialHeld=false;i.jump=i.guard=i.jab=i.heavy=i.smash=i.grab=false;}if(f.attack?.waterGun)i.specialHeld=Math.abs(o.x-f.x)>220&&f.attack.chargeFrames<25;return i;}
  return{reset,prepare,action,spawn,solid,safePoint,geometry,boxes,box,tick,cpu,form,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(PokoaMoves.dragon,{rangedInterval:40,rangedRearm:20});

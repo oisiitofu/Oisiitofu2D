@@ -25,3 +25,10 @@ const ZeroRules=(()=>{
  function hook(f){const t=f.timer;return{x:f.x+f.face*(30+Math.min(1,t/8)*42),y:f.y-40-Math.min(1,t/8)*150};}
  return{reset,action,tick,box,hook,get objects(){return objects}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(ZeroMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(ZeroMoves.gale,{rangedInterval:40,rangedRearm:20});
+if(ZeroMoves.airDrop)Object.assign(ZeroMoves.airDrop,{rangedInterval:40,rangedRearm:20});

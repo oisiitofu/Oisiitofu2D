@@ -33,3 +33,6 @@ const VincentRules=NewcomerCore.create('vincent',VincentMoves,{
 });
 (()=>{const reset=VincentRules.reset,tick=VincentRules.tick;VincentRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='vincent')f.vincentAmmo=6;};VincentRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='vincent'&&f.respawn)f.vincentAmmo=6;};})();
 function vincentPose(f){const a=f.attack;if(a?.vincentFlight||a?.vincentGun||a?.vincentSlide||a?.vincentJump||a?.vincentChaos)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,ledge:38,grab:17,caught:21,throw:6})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(VincentMoves.dragon,{rangedInterval:32,rangedRearm:16});

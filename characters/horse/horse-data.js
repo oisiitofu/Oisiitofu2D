@@ -22,3 +22,6 @@ const HorseRules=NewcomerCore.create('horse',HorseMoves,{
  },
  cpu(f,o,i,clear){if(f.attack?.crossbow)i.specialHeld=f.attack.chargeFrames<25&&Math.abs(o.x-f.x)>180;if(f.attack?.cannonJump&&f.attack.clearing){clear();i.y=-1;i.x=f.y>560?0:Math.sign(720-f.x);}}
 });
+
+// The outgoing/returning puck is one commitment; do not stack several passes.
+Object.assign(HorseMoves.dash,{rangedInterval:60,rangedRearm:30});

@@ -48,3 +48,9 @@ const EveRules=NewcomerCore.create('eve',EveMoves,{
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.eveBlink){clear();i.x=a.escapeSide||Math.sign(p.x+p.w/2-f.x);i.y=-1;i.specialHeld=false;if(a.phase==='arrival'&&f.timer===a.arriveAt+3&&Math.hypot(o.x-f.x,o.y-f.y)<110)i.special=true;}if(a?.eveWave){clear();i.special=f.timer===18;i.specialHeld=false;}if(a?.eveDrone){clear();i.specialHeld=Math.abs(o.x-f.x)>270&&a.chargeFrames<30;}if(!a&&f.grounded&&eveEnergy(f)>=100&&!f.eveTachyTime&&Math.abs(o.x-f.x)>160){clear();i.x=0;i.y=1;i.special=true;}if(!a&&f.grounded&&Math.abs(o.x-f.x)>190&&frame%100===f.id){clear();i.x=Math.sign(o.x-f.x);i.y=0;i.special=true;}}
 });
 function evePose(f){const a=f.attack;if(a?.eveDrone||a?.eveWave||a?.eveBlink||a?.eveTachy)return eveVisiblePose(f,a.pose);if(a)return eveVisiblePose(f,CombatData.sample(a,f.timer).pose);if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return eveVisiblePose(f,32);if(f.state==='walk')return eveVisiblePose(f,24+Math.floor(frame/6)%4);if(f.state==='run')return eveVisiblePose(f,28+Math.floor(frame/3)%4);return eveVisiblePose(f,({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0);}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(EveMoves.dragon,{rangedInterval:48,rangedRearm:24});
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(EveMoves.dash,{rangedInterval:40,rangedRearm:20});

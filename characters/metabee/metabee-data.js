@@ -1,6 +1,6 @@
 'use strict';
 const MetabeeMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opts={special:true,projectile:true,soundFamily:'saber',airControlMultiplier:0},barrage=air=>m('メダフォース・全弾発射',26,[],49,24,{...opts,medaforce:true,aerial:air,pose:10,spellShots:[26],animationWindows:[{start:1,end:25,pose:12},{start:26,end:38,pose:10},{start:39,end:75,pose:0}]}),a=NewcomerCore.moves(['バレルパンチ','リバースアーム','至近射撃','リボルバー連射','頭部ミサイルアッパー','脚部スイープ','ショルダーブースト','パワーライフル','ライジングミサイル','ガトリング掃射','全方位射撃','リボルバー斬撃','後方バースト','上方ミサイル','反動射撃'],{
- dragon:m('ライフルショット',10,[],24,16,{...opts,rifleShot:true,pose:13,spellShots:[10,16,22],animationWindows:[{start:1,end:9,pose:12},{start:10,end:26,pose:13},{start:27,end:46,pose:0}]}),
+ dragon:m('ライフルショット',10,[],24,16,{...opts,rifleShot:true,pose:13,spellShots:[10,24,38],animationWindows:[{start:1,end:9,pose:12},{start:10,end:42,pose:13},{start:43,end:62,pose:0}]}),
  dash:m('クロスファイア',11,[],22,20,{...opts,crossfire:true,pose:13,spellShots:[11,19,27,36],animationWindows:[{start:1,end:10,pose:12},{start:11,end:15,pose:13},{start:16,end:23,pose:16},{start:24,end:31,pose:7},{start:32,end:41,pose:9},{start:42,end:58,pose:0}]}),
  rise:m('リコイルブースト',11,[],99,26,{...opts,recoilBoost:true,pose:14,helpless:true,gravityMultiplier:.7,animationWindows:[{start:1,end:10,pose:12},{start:11,end:68,pose:14},{start:69,end:110,pose:5}]}),gale:barrage(false),airDrop:barrage(true)
  },'saber',160);a.jab2.pose=6;a.jab3.pose=9;a.heavy.pose=13;a.up.pose=8;a.grab.pose=18;
@@ -17,7 +17,7 @@ const MetabeeRules=NewcomerCore.create('metabee',MetabeeMoves,{
  prepare(f,a){a.flashShots=[];a.burst=1;if(a.recoilBoost){a.launched=false;a.pulses=0;a.boostFrame=0;}},
  action(f,i,r){const a=f.attack,t=f.timer,held=!!i.specialHeld,fresh=held&&!a.specialWas;a.specialWas=held;
   if(a.ballistic){const damage=a.damage*(1+(a.charge||0)*(f.character.smashMultiplier-1));if(t===a.startupFrames){const n=a.pose;if(a.type==='upsmash')for(let k=0;k<2;k++)metabeeFire(f,r,8,k,damage/2,'missile');else if(a.type==='uair')metabeeFire(f,r,8,0,damage,'missile');else if(a.type==='air')for(let k=0;k<2;k++)metabeeFire(f,r,10,k,damage/2);else metabeeFire(f,r,n,0,a.type==='heavy'?damage/3:damage);if(a.type==='dair')f.vy=-3;}if(a.type==='heavy'&&[a.startupFrames+2,a.startupFrames+4].includes(t))metabeeFire(f,r,13,0,damage/3);}
-  if(a.rifleShot){f.face=a.originFace;f.vx*=.8;if(t===10){a.burst=held?3:1;metabeeFire(f,r,13);}if(a.burst===3&&[16,22].includes(t))metabeeFire(f,r,13);}
+  if(a.rifleShot){f.face=a.originFace;f.vx*=.8;if(t===10){a.burst=held?3:1;metabeeFire(f,r,13);}if(a.burst===3&&[24,38].includes(t))metabeeFire(f,r,13);}
   if(a.crossfire){f.buffer=null;f.face=a.originFace;f.vx=clamp(i.x,-1,1)*(f.grounded?1.3:.75);if(fresh&&t>=16&&t<32){f.timer=32;return;}if(t===11)metabeeFire(f,r,13,0,5);if(t===19)metabeeFire(f,r,16,0,6);if(t===27)metabeeFire(f,r,7,0,7);if(t===36)metabeeFire(f,r,9,0,11);}
   if(a.recoilBoost){f.buffer=null;f.fastFall=false;if(t<11)f.vx=f.vy=0;if(t===11){a.launched=true;f.grounded=false;f.recovered=true;f.specialLandingLag=a.landingLagFrames;const p=platforms.find(p=>p.main);if(f.x>p.x&&f.x<p.x+p.w&&f.y-f.character.ecb.height>=p.y+89){a.clearing=true;NewcomerCore.escape(f,a);}else metabeeBoost(f,i,r);}
    if(a.escapeSide){NewcomerCore.escapeAction(f,a,0);if(!a.escapeSide){metabeeBoost(f,{...i,x:a.clearing?0:i.x},r);}return;}
@@ -37,3 +37,6 @@ const MetabeeRules=NewcomerCore.create('metabee',MetabeeMoves,{
 const metabeeReset=MetabeeRules.reset,metabeeTick=MetabeeRules.tick;
 MetabeeRules.reset=()=>{metabeeReset();for(const f of fighters)if(f.characterId==='metabee'){f.medaforce=100;f.medaforceCooldown=0;f.medaforceDamage=f.damage;}};
 MetabeeRules.tick=()=>{for(const f of fighters)if(f.characterId==='metabee'){if(f.medaforce===undefined){f.medaforce=35;f.medaforceCooldown=0;f.medaforceDamage=f.damage;}if(f.respawn){f.medaforce=35;f.medaforceDamage=0;}else{f.medaforce=Math.min(100,f.medaforce+Math.max(0,f.damage-(f.medaforceDamage||0))*.5);f.medaforceDamage=f.damage;}if(f.medaforceCooldown>0)f.medaforceCooldown--;}metabeeTick();};
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(MetabeeMoves.dragon,{rangedInterval:52,rangedRearm:24});

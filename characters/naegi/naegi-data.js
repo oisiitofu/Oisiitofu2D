@@ -83,3 +83,6 @@ const NaegiRules=(()=>{
  }
  return{supports,reset,prepare,action,tick,cpu,terrain,safeStep,box,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(NaegiMoves.dragon,{rangedInterval:40,rangedRearm:20});

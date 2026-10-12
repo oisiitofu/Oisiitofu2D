@@ -39,3 +39,6 @@ const GoemonRules=NewcomerCore.create('goemon',GoemonMoves,{
  cpu(f,o,i,clear){const a=f.attack;if(a?.coinThrow){i.specialHeld=Math.abs(o.x-f.x)>240&&a.chargeFrames<30;i.y=clamp((o.y-f.y)/150,-1,1);}if(a?.kiseruSpin){clear();i.x=clamp((o.x-f.x)/90,-1,1);i.y=clamp((o.y-f.y)/100,-1,1);}if(a?.kiseruHook){clear();i.x=a.anchor?-a.anchor.side:Math.sign(720-f.x);i.y=-1;i.special=false;}if(!a&&f.grounded&&!f.impactTime&&(f.impactCooldown||0)<=0&&Math.abs(o.x-f.x)>180&&frame%240===f.id){clear();i.special=true;i.y=1;}}
 });
 (()=>{const reset=GoemonRules.reset,tick=GoemonRules.tick;GoemonRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='goemon')f.impactTime=f.impactCooldown=0;};GoemonRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='goemon'){f.impactTime??=0;f.impactCooldown??=0;if(f.respawn){f.impactTime=f.impactCooldown=0;}else{if(f.impactCooldown>0)f.impactCooldown--;if(f.impactTime>0&&! --f.impactTime)f.impactCooldown=180;}}};})();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(GoemonMoves.dragon,{rangedInterval:40,rangedRearm:20});

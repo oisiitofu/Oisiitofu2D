@@ -13,3 +13,6 @@ function tick(){for(const o of objects){const f=fighters[o.owner],enemy=BattlePl
 else{const old=o.x;o.x+=o.vx;const p=platforms[0];if(o.y>p.y&&o.y<p.y+90&&Math.max(old,o.x)>p.x&&Math.min(old,o.x)<p.x+p.w)o.dead=true;const b=box(o),touch=CombatSystem.contact(b,enemy),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(enemy.mode)&&CombatSystem.shieldCovers(enemy,b);if(!o.dead&&!o.hit&&!enemy.respawn&&(touch||shield)&&!CombatSystem.protection(enemy).intangible){o.hit=true;const counter=enemy.attack;if(counter?.counterWindow&&enemy.timer>=counter.counterWindow[0]&&enemy.timer<=counter.counterWindow[1]){attack(enemy,counter.counterMove);enemy.inv=enemy.attack.totalFrames;}else CombatSystem.hit(f,enemy,{...CombatData.moves.dragon,type:'dragon',damage:10+8*o.charge,charge:0,staleMultiplier:o.stale,projectile:true,angle:-.5,baseKnockback:4.6,knockbackGrowth:.078,launchDirection:o.face},b,touch);o.dead=true;}}
 if(o.age>(o.kind==='mist'?120:65)||o.x<-900||o.x>2300)o.dead=true;}objects=objects.filter(o=>!o.dead);}
 return{reset,action,tick,box,get objects(){return objects}};})();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(OkamiMoves.dragon,{rangedInterval:40,rangedRearm:20});

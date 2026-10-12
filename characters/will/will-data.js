@@ -85,3 +85,6 @@ const WillRules=(()=>{
  }
  return{forms,form,tune,reset,prepare,action,tick,marker,slideStep,box,cpu,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(WillMoves.dragon,{rangedInterval:40,rangedRearm:20});

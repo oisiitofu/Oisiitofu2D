@@ -31,3 +31,6 @@ const RocbouquetRules=NewcomerCore.create('rocbouquet',RocbouquetMoves,{
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.rocbouquetRide){clear();i.x=a.escapeSide||Math.sign(p.x+p.w/2-f.x);i.y=-1;i.specialHeld=a.phase!=='ride'||f.y>p.y-90||f.x<p.x+30||f.x>p.x+p.w-30;}if(a?.rocbouquetWind){clear();i.specialHeld=Math.abs(o.x-f.x)>260&&a.chargeFrames<24;}if(!a&&f.grounded&&Math.abs(o.x-f.x)>180&&frame%90===f.id){clear();i.x=Math.sign(o.x-f.x)||f.face;i.y=0;i.special=true;}}
 });
 function rocbouquetPose(f){const a=f.attack;if(a?.rocbouquetWind||a?.rocbouquetPlasma||a?.rocbouquetRide||a?.rocbouquetTempt)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(RocbouquetMoves.dragon,{rangedInterval:40,rangedRearm:20});

@@ -87,3 +87,6 @@ const KosmosRules=(()=>{
  function arrayBoxes(f,a,w){return [-1,0,1].map(dir=>({x1:f.x+dir*35,y1:f.y-45,x2:f.x+dir*85,y2:f.y-(w.reach??a.reach)*FIGHTER_SCALE-45,radius:10,window:w}));}
  return{reset,prepare,action,onHit,tick,cpu,terrain,tip,chainBox,arrayBoxes,node,beamBox,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(KosmosMoves.dragon,{rangedInterval:48,rangedRearm:24});

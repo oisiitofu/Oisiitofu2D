@@ -43,3 +43,6 @@ const AruruRules=NewcomerCore.create('aruru',AruruMoves,{
  AruruRules.platform=(f,i,v)=>{if(f.respawn||f.ledge||f.mode==='Grabbed')return;for(const q of AruruRules.objects){if(q.kind!=='field'||!q.settled||q.dead)continue;const top=q.y-20,left=q.x-42-f.character.ecb.radius,right=q.x+42+f.character.ecb.radius,dx=f.x-v.oldX;if(f.vy>=0&&v.oldY<=top+6&&f.y>=top&&f.x>q.x-42&&f.x<q.x+42){const wasAir=v.wasAir;f.y=top;f.vy=0;f.grounded=true;if(wasAir)PlayerController.land(f,i,v.oldVy);}else if(dx){const edge=dx>0?left:right,t=(edge-v.oldX)/dx;if(t>=0&&t<=1&&f.y>top+3&&f.y-f.character.ecb.height<q.y+18){f.x=edge;f.vx=0;}}}};
 })();
 function aruruPose(f){const a=f.attack;if(a?.aruruShot||a?.aruruChain||a?.aruruRide||a?.aruruField)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,ledge:38,grab:17,caught:21,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(AruruMoves.dragon,{rangedInterval:40,rangedRearm:20});

@@ -55,3 +55,9 @@ const ElmaRules=NewcomerCore.create('elma',ElmaMoves,{
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.elmaRifle){i.specialHeld=Math.abs(o.x-f.x)>270&&a.chargeFrames<35;i.y=clamp((o.y-f.y)/160,-1,1);}if(a?.battleStep){clear();i.x=Math.abs(o.x-f.x)<130?-f.face:f.face;i.y=0;}if(a?.boostDodge||a?.ocgHover){clear();i.x=f.y>p.y+90&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;i.specialHeld=!!a.ocgHover&&a.fuel>0;if(a.boostDodge&&!a.secondBoost&&!a.escapeSide&&f.timer===a.boostStart+16)i.special=true;}if(!a&&f.grounded&&!f.ocgTime&&f.ocgCooldown<=0&&frame%300===f.id){clear();i.special=true;i.y=1;}}
 });
 (()=>{const reset=ElmaRules.reset,tick=ElmaRules.tick;ElmaRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='elma'){f.ocgTime=f.ocgCooldown=0;applyElmaOCG(f);}};ElmaRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='elma'){if(f.respawn){f.ocgTime=f.ocgCooldown=0;}if(f.ocgCooldown>0)f.ocgCooldown--;if(f.ocgTime>0){f.ocgTime--;if(!f.ocgTime&&f.attack?.ocg&&!f.attack.ejected)f.ocgTime=1;else if(!f.ocgTime)f.ocgCooldown=90;if(f.ledge){f.ocgTime=0;f.ocgCooldown=90;}}applyElmaOCG(f);}};})();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(ElmaMoves.dragon,{rangedInterval:48,rangedRearm:24});
+Object.assign(ElmaOCGMoves.dragon,{rangedInterval:54,rangedRearm:24});
+Object.assign(ElmaOCGMoves.gale,{rangedInterval:54,rangedRearm:24});
+Object.assign(ElmaOCGMoves.airDrop,{rangedInterval:54,rangedRearm:24});

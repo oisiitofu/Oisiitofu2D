@@ -70,3 +70,6 @@ const LloydRules=(()=>{
  }
  return{reset,prepare,action,onHit,geometry,bladeBoxes,spawn,box,hit,tick,cpu,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(LloydMoves.dragon,{rangedInterval:40,rangedRearm:20});

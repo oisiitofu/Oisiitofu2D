@@ -66,3 +66,6 @@ const DanteRules=NewcomerCore.create('dante',DanteMoves,{
 })();
 
 function dantePose(f){const a=f.attack;let n;if(a?.airStinger)n=a.phase==='burst'?(Math.abs(a.burstX)>Math.abs(a.burstY)?9:19):a.phase==='hover'?34:a.phase==='recovery'?5:3;else if(a)n=CombatData.sample(a,f.timer).pose;else if(['LedgeCatch','LedgeHang'].includes(f.mode))n=38;else if(f.mode==='LedgeGetup')n=39;else if(f.mode==='JumpSquat')n=32;else if(f.state==='walk')n=24+Math.floor(frame/6)%4;else if(f.state==='run')n=28+Math.floor(frame/3)%4;else n=({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,ledge:38,grab:17,caught:21,throw:7})[f.state]??0;return f.danteDevilTime>0?danteReturnPose(n):n;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(DanteMoves.dragon,{rangedInterval:48,rangedRearm:24});

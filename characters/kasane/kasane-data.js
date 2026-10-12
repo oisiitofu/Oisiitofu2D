@@ -34,3 +34,9 @@ const KasaneRules=NewcomerCore.create('kasane',KasaneMoves,{
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.kasaneWarp){clear();i.x=Math.sign(p.x+p.w/2-f.x);i.y=-1;i.specialHeld=false;if(a.phase==='cut'&&f.y>p.y-20&&f.timer===19)i.special=true;}if(a?.kasaneThrow){clear();i.specialHeld=!a.empowered&&Math.abs(o.x-f.x)>220&&a.chargeFrames<24;}if(a?.kasaneCross){clear();i.specialHeld=false;i.x=Math.sign(o.x-f.x);if(f.timer===18&&Math.abs(o.x-f.x)<90)i.special=true;}if(!a&&f.grounded&&kasaneGauge(f)>=50&&!f.kasaneFieldTime&&Math.abs(o.x-f.x)>250&&frame%180===f.id){clear();i.y=1;i.special=true;}else if(!a&&f.grounded&&Math.abs(o.x-f.x)>140&&Math.abs(o.x-f.x)<300&&!KasaneRules.objects.some(q=>q.owner===f.id&&q.kind==='echo')&&frame%120===f.id){clear();i.x=Math.sign(o.x-f.x);i.y=0;i.special=true;}}
 });
 function kasanePose(f){const a=f.attack;if(a?.kasaneThrow||a?.kasaneCross||a?.kasaneWarp||a?.kasaneField)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;if(f.state==='idle'&&f.kasaneFieldTime>0)return 47;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(KasaneMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(KasaneMoves.dash,{rangedInterval:48,rangedRearm:24});

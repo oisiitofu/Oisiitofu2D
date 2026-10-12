@@ -29,3 +29,6 @@ const SukaponRules=NewcomerCore.create('sukapon',SukaponMoves,{
 function rHead(f){return SukaponRules.objects.find(q=>q.kind==='head'&&q.owner===f.id&&!q.dead);}
 (()=>{const reset=SukaponRules.reset,tick=SukaponRules.tick;SukaponRules.reset=()=>{for(const f of fighters)if(f.characterId==='sukapon'){if(f.grabbed)PlayerController.releaseGrab(f);f.sukaponHeadAway=false;}reset();};SukaponRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='sukapon')f.sukaponHeadAway=!!rHead(f);};})();
 function sukaponPose(f){const a=f.attack;if(a?.sukaponShot||a?.sukaponHead||a?.sukaponRoll||a?.sukaponNage)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(rHead(f)&&!['fly','hit','down'].includes(f.state))return 42;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(SukaponMoves.dragon,{rangedInterval:40,rangedRearm:20});

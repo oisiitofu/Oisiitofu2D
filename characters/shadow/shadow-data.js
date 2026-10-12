@@ -35,3 +35,6 @@ const ShadowRules=NewcomerCore.create('shadow',ShadowMoves,{
 // Clock fields slow active movement/action time, never hitstun, hitlag, shields or invulnerability.
 ShadowRules.slowSkip=function(f,i){if(f.respawn||f.hitlag||f.hitstun||f.tumbling||f.ledge||i.guard||f.mode==='Grabbed'||f.grabbed||CombatSystem.protection(f).intangible||CombatSystem.protection(f).invincible||['ShieldStart','ShieldHold','ShieldDrop'].includes(f.mode))return false;return frame%2===0&&ShadowRules.objects.some(q=>q.kind==='clock'&&!q.dead&&q.owner!==f.id&&!fighters[q.owner].respawn&&Math.hypot(f.x-q.x,f.y-40-q.y)<q.radius);};
 function shadowPose(f){const a=f.attack;if(a?.shadowSpear||a?.shadowBoost||a?.shadowControl||a?.shadowBlast)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(ShadowMoves.dragon,{rangedInterval:40,rangedRearm:20});

@@ -37,3 +37,6 @@ const HumanRules=NewcomerCore.create('human',HumanMoves,{
  },
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.extinguisher){i.specialHeld=Math.abs(o.x-f.x)<240&&a.fuel>0;i.y=clamp((o.y-f.y)/100,-1,1);}if(a?.ropeSwing){clear();i.x=a.originFace;i.special=f.timer>26&&Math.abs(a.swingVX)>6;}if(a?.catapult){clear();i.x=a.clearing&&f.y>p.y?0:f.y>p.y+80&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;}}
 });
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(HumanMoves.dragon,{rangedInterval:48,rangedRearm:24});

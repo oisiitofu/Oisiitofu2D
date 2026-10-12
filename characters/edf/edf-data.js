@@ -45,3 +45,9 @@ const EdfRules=NewcomerCore.create('edf',EdfMoves,{
 (()=>{const reset=EdfRules.reset,tick=EdfRules.tick;EdfRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='edf'){f.edfFuel=60;f.edfWeapon=0;f.edfStrikeCooldown=0;}};EdfRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='edf'){if(f.respawn){f.edfFuel=60;f.edfWeapon=f.edfStrikeCooldown=0;}else{if((f.grounded&&!f.attack?.edfJet)||f.ledge)f.edfFuel=60;if(f.edfStrikeCooldown>0)f.edfStrikeCooldown--;}}};})();
 function edfMotion(f){return{rotation:0,scale:1,offset:0,flip:f.attack?.type==='downsmash'&&CombatData.activeWindow(f.attack,f.timer)?.shape==='back'};}
 function edfPose(f){const a=f.attack;if(a?.edfGun)return[6,40,42,41,23][(a.baseWeapon+Math.floor(a.chargeFrames/18))%5];if(a?.edfGrenade||a?.edfJet||a?.edfStrike)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(EdfMoves.dragon,{rangedInterval:48,rangedRearm:24});
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(EdfMoves.dash,{rangedInterval:48,rangedRearm:24});

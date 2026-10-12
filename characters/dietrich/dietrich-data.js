@@ -34,3 +34,6 @@ const DietrichRules=NewcomerCore.create('dietrich',DietrichMoves,{
 });
 (()=>{const reset=DietrichRules.reset,tick=DietrichRules.tick;DietrichRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='dietrich'){f.dietrichGauge=0;f.dietrichFieldCooldown=0;}};DietrichRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='dietrich'){if(f.respawn){f.dietrichGauge=0;f.dietrichFieldCooldown=0;}else if(f.dietrichFieldCooldown>0)f.dietrichFieldCooldown--;}};})();
 function dietrichPose(f){const a=f.attack;if(a?.dietrichSwordWave||a?.dietrichRush||a?.dietrichWing||a?.dietrichField)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,ledge:38,grab:17,caught:21,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(DietrichMoves.dragon,{rangedInterval:40,rangedRearm:20});

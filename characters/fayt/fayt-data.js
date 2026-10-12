@@ -73,3 +73,6 @@ const FaytRules=(()=>{
  }
  return{reset,prepare,portal,configureShot,action,onHit,stoneBoxes,kickBox,terrain,collide,tick,cpu,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(FaytMoves.dragon,{rangedInterval:48,rangedRearm:24});

@@ -49,3 +49,6 @@ const SansRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main);if(f.attack?.soulWarp){const a=f.attack,target={x:clamp(f.x,p.x+35,p.x+p.w-35),y:p.y-80},dx=target.x-f.x,dy=target.y-f.y,len=Math.hypot(dx,dy);i.x=dx/(len||1);i.y=dy/(len||1);i.specialHeld=i.special=i.jump=i.guard=i.jab=i.heavy=i.smash=false;}else if(f.attack?.shortcut){i.x=f.face;i.y=0;i.special=i.guard=i.jump=i.jab=i.heavy=i.smash=false;}else if(!f.attack&&!f.grounded&&!f.recovered&&(f.y>p.y-100&&(f.x<p.x||f.x>p.x+p.w)||f.y>p.y+30)){i.x=Math.sign(720-f.x)*.5;i.y=-1;i.special=true;i.jump=i.guard=i.jab=i.heavy=i.smash=false;}else if(!f.attack&&f.grounded&&Math.abs(o.x-f.x)>180&&frame%90===0){i.x=i.y=0;i.special=true;i.jab=i.heavy=i.smash=i.guard=false;}if(f.attack?.blasterChannel){i.specialHeld=Math.abs(o.x-f.x)>160&&f.timer<65;i.x=0;i.y=clamp((o.y-f.y)/400,-1,1);}return i;}
  return{reset,prepare,spawn,beam,commit,action,onHit,solid,warpTarget,pointSolid,geometry,boxes,beamBox,fieldBoxes,strike,collide,tick,cpu,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(SansMoves.dragon,{rangedInterval:48,rangedRearm:24});

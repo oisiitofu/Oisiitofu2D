@@ -23,3 +23,6 @@ const RinRules=(()=>{
  }if(o.age>85||o.x<-900||o.x>2300)o.dead=true;}objects=objects.filter(o=>!o.dead);}
  return{reset,action,tick,box,get objects(){return objects}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(RinMoves.dragon,{rangedInterval:40,rangedRearm:20});

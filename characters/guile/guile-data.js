@@ -29,3 +29,9 @@ const GuileRules=NewcomerCore.create('guile',GuileMoves,{
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.guileSomersault){clear();i.x=a.escapeSide||Math.sign(p.x+p.w/2-f.x);i.y=-1;i.specialHeld=false;}if(a?.guileBoom){clear();i.specialHeld=Math.abs(o.x-f.x)>280&&a.chargeFrames<20;}if(a?.guileBlade){clear();i.specialHeld=Math.abs(o.x-f.x)>220&&a.chargeFrames<24;i.y=clamp((o.y-f.y)/180,-1,0);}if(a?.guileKnee){clear();i.x=a.launchFace;}if(!a&&f.grounded&&o.y<f.y-90&&Math.abs(o.x-f.x)<300&&!GuileRules.objects.some(q=>q.kind==='blade'&&q.owner===f.id)&&frame%60===f.id){clear();i.special=true;i.x=Math.sign(o.x-f.x);i.y=0;}}
 });
 function guilePose(f){const a=f.attack;if(a?.guileBoom||a?.guileBlade||a?.guileSomersault||a?.guileKnee)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(GuileMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(GuileMoves.dash,{rangedInterval:40,rangedRearm:20});

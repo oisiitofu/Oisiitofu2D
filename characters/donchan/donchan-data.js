@@ -39,3 +39,9 @@ const DonchanRules=NewcomerCore.create('donchan',DonchanMoves,{
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.donBalloon){clear();i.y=-1;i.x=a.escapeSide||Math.sign(p.x+p.w/2-f.x)*.9;i.special=a.phase==='ride'&&f.y<p.y-35&&f.timer-a.rideAt>14;}if(a?.donNote){clear();i.specialHeld=Math.abs(o.x-f.x)>260&&a.chargeFrames<16;}if(!a&&f.grounded&&donchanSoul(f)>=100&&!f.donMaxTime&&Math.abs(o.x-f.x)>180){clear();i.x=0;i.y=1;i.special=true;}else if(!a&&f.grounded&&Math.abs(o.x-f.x)>110&&Math.abs(o.x-f.x)<360&&frame%120===f.id){clear();i.x=Math.sign(o.x-f.x);i.y=0;i.special=true;}}
 });
 function donchanPose(f){const a=f.attack;if(a?.donNote||a?.donLane||a?.donBalloon||a?.donFestival)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(DonchanMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(DonchanMoves.dash,{rangedInterval:48,rangedRearm:24});

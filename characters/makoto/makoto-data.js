@@ -73,3 +73,9 @@ const MakotoRules=(()=>{
  }
  return{reset,prepare,action,tick,cpu,terrain,surface,box,active,get objects(){return objects;}};
 })();
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(MakotoMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(MakotoMoves.dash,{rangedInterval:48,rangedRearm:24});

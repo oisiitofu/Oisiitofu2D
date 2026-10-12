@@ -40,3 +40,6 @@ const PneumaRules=NewcomerCore.create('pneuma',PneumaMoves,{
 function pneumaPose(f){const a=f.attack;if(a?.pneumaBeam||a?.pneumaFlare||a?.pneumaWings||a?.pneumaGenesis)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
 
 function pneumaLand(f){const a=f.attack;if(!a?.pneumaFlare||!['path','warp'].includes(a.phase))return false;f.vy=0;f.grounded=true;f.fastFall=false;return true;}
+
+// Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
+Object.assign(PneumaMoves.dragon,{rangedInterval:48,rangedRearm:24});
