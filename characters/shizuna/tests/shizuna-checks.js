@@ -1,0 +1,5 @@
+for(const face of[-1,1]){
+ [f,o]=reset();f.face=face;attack(f,'dragon');tick(9,{},false);const shadow=Rules.objects.find(q=>q.kind==='shadow');check('delayed shadow exists '+face,!!shadow);if(shadow){f.x+=250;tick(13,{},false);o.x=shadow.x+face*95;o.y=shadow.y;o.grounded=true;Rules.tick();check('shadow remains at slash origin '+face,o.damage>0&&Math.abs(f.x-shadow.x)>200);}tick(20,{},false);check('neutral ends with motion '+face,!f.attack);
+ [f,o]=reset();f.y=280;f.grounded=false;f.face=face;attack(f,'rise');tick(8,{x:face},false);check('first rising slash '+face,f.attack?.step===1&&f.vy<0);tick(9,{x:-face},false);tick(1,{x:-face,special:true},false);check('fresh second input redirects '+face,f.attack?.step===2&&Math.sign(f.vx)===-face);tick(9,{x:face},false);tick(1,{x:face,special:true},false);check('third input redirects '+face,f.attack?.step===3&&Math.sign(f.vx)===face);tick(30,{},false);check('finite recovery with helpless '+face,!f.attack&&f.helpless);
+ [f,o]=reset();f.shizunaCP=100;attack(f,'gale');check('CP spent once and powers actual hit',f.shizunaCP===0&&f.attack.damage===25);tick(40,{},false);check('CP slash no idle freeze',!f.attack);
+}

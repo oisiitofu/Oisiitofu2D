@@ -1,0 +1,44 @@
+{
+  "name": "エーデルガルド",
+  "style": "FIRE EMBLEM / BLACK EAGLES",
+  "family": "sword",
+  "height": 96,
+  "radius": 18,
+  "effects": 9,
+  "stats": {
+    "weight": 108,
+    "walkSpeed": 2.5,
+    "initialDashSpeed": 5.7,
+    "runSpeed": 5.1,
+    "airSpeed": 4.2,
+    "airAcceleration": 0.27,
+    "gravity": 0.78,
+    "fullHopVelocity": 13.5
+  },
+  "mask": "r>g*1.55&&r>b*1.4&&r>55",
+  "gate": "if(f.characterId==='edelgard'&&['gale','airDrop'].includes(type)&&f.edelgardFlagCooldown>0)return false;",
+  "description": "通常必殺はアイムールを溜めて重い一撃。横必殺は方向を固定した突進、命中後の攻撃・必殺入力で薙ぎ払いに派生。上必殺は斜め上へ斧を振り上げ、頂点で追加入力すると急降下攻撃。下必殺は帝国の旗を設置し、予告後に周囲の相手を引き寄せる。",
+  "artLayouts": [
+    [
+      "atlas-a",
+      4,
+      3
+    ],
+    [
+      "atlas-b",
+      4,
+      3
+    ],
+    [
+      "locomotion",
+      4,
+      4
+    ],
+    [
+      "arsenal",
+      2,
+      4
+    ]
+  ],
+  "customPreparation": true
+}

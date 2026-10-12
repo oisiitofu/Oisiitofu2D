@@ -1,0 +1,35 @@
+# ホロウナイト / 放浪する小さな騎士
+
+88体目・選択番号89。添付 `C:/Users/haro_/Downloads/horounaito.png` をキャラとモーションの参照に使用。
+
+## 技と操作
+
+- 通常必殺「シェイドソウル」：ソウル33を消費して前方に影の弾。射出後10Fで行動可能。
+- 横必殺「サイクロンスラッシュ」：その場で釘の回転斬り。長押しで最大41Fまで延長、左右入力は小さく移動。各回転が別に当たる。空中では着地まで1回。
+- 上必殺「モナークウィング」：斜め上へ羽ばたく。最初の羽ばたきから9〜24Fに押し直すと、入力方向へ2回目の羽ばたき。壁との接触時は短くつかまり、ジャンプ・必殺の押し直し・壁と反対への入力で蹴って跳ぶ。敵への接触でも一度だけ跳び直す。壁蹴りの繰り返しは不可。落下後は着地硬直18F。
+- 下必殺「ディセンディングダーク」：ソウル33を消費して急降下し、着地で周囲に影の衝撃。地上ではその場で衝撃。急降下開始直後に短い無敵時間。
+- 釘の通常攻撃が当たるとソウル11を回収、最大99。下空中攻撃は命中時に上へ跳ねる。KO・試合リセットでソウルを99に戻す。
+
+横必殺は近距離で回転を維持する技。上必殺は2回目の羽ばたきの方向と接触後の跳び直しを使う復帰技として、操作・軌道・用途を分けた。
+
+## 素材と配信
+
+built-in imagegenで48動作ポーズ、選択用の頭・肩までの肖像、専用エフェクト8点を生成。5カラーと透過を維持し、ハッシュ付きアトラスを事前生成してmanifestと配信する。
+
+- `characters/knight/assets/knight-atlas.png`、`characters/knight/assets/knight-actions.png`
+- `characters/knight/assets/knight-effects.png`、`characters/knight/assets/knight-selection.png`
+- `characters/knight/assets/knight-native.png`、`assets/ready/`
+- プロンプト全文：`.tools/knight-prompts-final.json`
+- 前後上下・左右両向きの確認画像：`characters/knight/previews/knight-direction-preview.png`
+
+釘の実際の先端から判定を作成。素材の向きは斬撃・弾が右、急降下が下、地上衝撃が上。描画順は座標移動→左右反転→ローカル回転。
+
+## 検証
+
+- `node characters/knight/tests/knight-test.cjs`：174項目成功。ソウル、釘の攻撃、回転延長、2回目の羽ばたき、壁・敵の反動、急降下着地、ポゴ、両向きの判定と崖の手位置、CPUを含む2ステージ16復帰ケース。
+- `node characters/knight/tests/knight-online-test.cjs`：112項目成功。2クライアントの101スナップショット一致、ソウル消費、延長回転、羽ばたき、場外から実際に着地、急降下と着地衝撃、KO時のリセット。
+- `node special-recovery-test.cjs`：216ケース・7916項目成功。
+
+データ：`characters/knight/knight-data.js`、エフェクトとHUD：`characters/knight/knight-vfx.js`。ソウルのリセットと毎フレーム状態更新には共通エンジンの専用フックを追加。
+
+`node art-loading-test.cjs`：4040ポーズ・732エフェクト・20200カラーで透過・色が一致、エラーなし。

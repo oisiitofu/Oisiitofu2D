@@ -2,33 +2,33 @@
 
 ## Shiren / シレン — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/siren.png。完成素材: assets/shiren-atlas.png（24身体）、shiren-locomotion.png（16歩行／走行）、shiren-props.png（8コッパ／杖／壺／盾／草／巻物）、shiren-effects.png（8FX）。正確な4プロンプトと絶対保存先: .tools/shiren-prompts.md。三度笠・赤い衣服・縞のマントと描画を統一。alphaとポーズ寸法を保持し、衣服を5色に変更。右向きFXは反転後のローカル回転で実際の判定軸へ配置。空後は二重反転しない。崖の手位置を実測。ART_IDS=shirenでready48スプライト／8FX／5色とポートレートを焼き、先行37人を保持。shiren-contact-preview.pngとshiren-direction-preview.pngで視覚確認。
+参照: C:/Users/haro_/Downloads/siren.png。完成素材: characters/shiren/assets/shiren-atlas.png（24身体）、shiren-locomotion.png（16歩行／走行）、shiren-props.png（8コッパ／杖／壺／盾／草／巻物）、shiren-effects.png（8FX）。正確な4プロンプトと絶対保存先: .tools/shiren-prompts.md。三度笠・赤い衣服・縞のマントと描画を統一。alphaとポーズ寸法を保持し、衣服を5色に変更。右向きFXは反転後のローカル回転で実際の判定軸へ配置。空後は二重反転しない。崖の手位置を実測。ART_IDS=shirenでready48スプライト／8FX／5色とポートレートを焼き、先行37人を保持。characters/shiren/previews/shiren-contact-preview.pngとcharacters/shiren/previews/shiren-direction-preview.pngで視覚確認。
 
 ライチュウの生成失敗・不採用素材とコード下書きは .tools/pending-raichu/ に記録。完成アートには含めていない。
 
 ## Lloyd / ロイド — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/roido.png。完成素材: assets/lloyd-atlas.png（24身体）、lloyd-locomotion.png（16歩行／走行）、lloyd-effects.png（8FX）。正確な4プロンプト（頭上斬りの全身修正を含む）と絶対保存先: .tools/lloyd-prompts.md。二本の剣・赤い上着とブーツ・白いスカーフと絵柄を統一。透過alpha0とポーズ寸法を保持し、赤い衣服を5色に変更。右向きFXは反転後にローカル回転し、二本の刃の判定軸へそれぞれ描画。空後の逆向き身体は二重反転しない。崖の手の位置を実測。ART_IDS=lloydでready40ポーズ／8FX／5色とポートレートを生成し、先行36人を保持。lloyd-contact-preview.png、lloyd-direction-preview.pngで確認。
+参照: C:/Users/haro_/Downloads/roido.png。完成素材: characters/lloyd/assets/lloyd-atlas.png（24身体）、lloyd-locomotion.png（16歩行／走行）、lloyd-effects.png（8FX）。正確な4プロンプト（頭上斬りの全身修正を含む）と絶対保存先: .tools/lloyd-prompts.md。二本の剣・赤い上着とブーツ・白いスカーフと絵柄を統一。透過alpha0とポーズ寸法を保持し、赤い衣服を5色に変更。右向きFXは反転後にローカル回転し、二本の刃の判定軸へそれぞれ描画。空後の逆向き身体は二重反転しない。崖の手の位置を実測。ART_IDS=lloydでready40ポーズ／8FX／5色とポートレートを生成し、先行36人を保持。characters/lloyd/previews/lloyd-contact-preview.png、characters/lloyd/previews/lloyd-direction-preview.pngで確認。
 
 ## Sans / サンズ — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/sanzu.png。完成素材: assets/sans-atlas.png（24身体）、sans-locomotion.png（16歩行／走行）、sans-props.png（8骨／ブラスター／ソウル）、sans-effects.png（8FX）。正確な5プロンプト（身体の修正を含む）と絶対保存先: .tools/sans-prompts.md。青いパーカー・白い頭骨・黒い短パン・ピンクのスリッパと描画を統一。透明領域はalpha0を保持し、待機高220px。青い服を5色に変更。右向き骨／ビームは反転後のローカル回転で実際の判定線へ描画。空後の逆向き指差しは二重反転しない。ブラスターの口位置と崖の手位置を測定。ART_IDS=sansでready48ポーズ／8FX／5色とポートレートを生成、先行35人を保持。sans-contact-preview.pngとsans-direction-preview.pngで確認。
+参照: C:/Users/haro_/Downloads/sanzu.png。完成素材: characters/sans/assets/sans-atlas.png（24身体）、sans-locomotion.png（16歩行／走行）、sans-props.png（8骨／ブラスター／ソウル）、sans-effects.png（8FX）。正確な5プロンプト（身体の修正を含む）と絶対保存先: .tools/sans-prompts.md。青いパーカー・白い頭骨・黒い短パン・ピンクのスリッパと描画を統一。透明領域はalpha0を保持し、待機高220px。青い服を5色に変更。右向き骨／ビームは反転後のローカル回転で実際の判定線へ描画。空後の逆向き指差しは二重反転しない。ブラスターの口位置と崖の手位置を測定。ART_IDS=sansでready48ポーズ／8FX／5色とポートレートを生成、先行35人を保持。characters/sans/previews/sans-contact-preview.pngとcharacters/sans/previews/sans-direction-preview.pngで確認。
 
 ## Bomberman / ボンバーマン — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/bombberman.png。完成素材: assets/bomberman-atlas.png（24身体）、bomberman-locomotion.png（16歩行／走行）、bomberman-props.png（8爆弾／ルーイ）、bomberman-effects.png（8FX）。正確な4つの成功プロンプトと絶対保存先: .tools/bomberman-prompts.md。全モーションで白いヘルメット・ピンクの手足・青い服・顔の描画を統一。透過alphaを保持し、待機高220px。青い服を5色に変更。グローブ／キックのFXと直線の爆風は右向きで制作し、反転後のローカル回転で判定軸に配置。空後は素材の左へのパンチを二重反転しない。実際の崖の手位置を測定。ART_IDS=bombermanでready48ポーズ／8FX／5色・ポートレートを生成し、既存34人を保持。bomberman-contact-preview.pngとbomberman-direction-preview.pngで確認。
+参照: C:/Users/haro_/Downloads/bombberman.png。完成素材: characters/bomberman/assets/bomberman-atlas.png（24身体）、bomberman-locomotion.png（16歩行／走行）、bomberman-props.png（8爆弾／ルーイ）、bomberman-effects.png（8FX）。正確な4つの成功プロンプトと絶対保存先: .tools/bomberman-prompts.md。全モーションで白いヘルメット・ピンクの手足・青い服・顔の描画を統一。透過alphaを保持し、待機高220px。青い服を5色に変更。グローブ／キックのFXと直線の爆風は右向きで制作し、反転後のローカル回転で判定軸に配置。空後は素材の左へのパンチを二重反転しない。実際の崖の手位置を測定。ART_IDS=bombermanでready48ポーズ／8FX／5色・ポートレートを生成し、既存34人を保持。characters/bomberman/previews/bomberman-contact-preview.pngとcharacters/bomberman/previews/bomberman-direction-preview.pngで確認。
 
 ## Midna / ミドナ — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/midona.png。完成素材: assets/midna-atlas.png（24身体）、midna-locomotion.png（16歩行／走行）、midna-hands.png（8髪の手）、midna-effects.png（8FX）。正確な4つの成功プロンプトと絶対保存先: .tools/midna-prompts.md。最初の生成は出力段階で拒否され、参照とポーズに絞った生成で完了。透過alphaを保持し、待機高220px。橙色の髪・彫刻ヘルメットを保持、ターコイズの模様のみ5色に変更。右向きFXは反転後にローカル回転し、髪の手と判定方向を一致。実際の崖の手位置を測定。ART_IDS=midnaでready48ポーズ／8FX／5色・ポートレートを生成し、既存33人を保持。midna-contact-preview.pngとmidna-direction-preview.pngで確認。
+参照: C:/Users/haro_/Downloads/midona.png。完成素材: characters/midna/assets/midna-atlas.png（24身体）、midna-locomotion.png（16歩行／走行）、midna-hands.png（8髪の手）、midna-effects.png（8FX）。正確な4つの成功プロンプトと絶対保存先: .tools/midna-prompts.md。最初の生成は出力段階で拒否され、参照とポーズに絞った生成で完了。透過alphaを保持し、待機高220px。橙色の髪・彫刻ヘルメットを保持、ターコイズの模様のみ5色に変更。右向きFXは反転後にローカル回転し、髪の手と判定方向を一致。実際の崖の手位置を測定。ART_IDS=midnaでready48ポーズ／8FX／5色・ポートレートを生成し、既存33人を保持。characters/midna/previews/midna-contact-preview.pngとcharacters/midna/previews/midna-direction-preview.pngで確認。
 
 ## Noah / ノア — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/noa.png。完成素材: assets/noah-atlas.png（24身体）、noah-locomotion.png（16歩行／走行）、noah-effects.png（8FX）、noah-poses-patch.png（空後・空N修正）。正確な5プロンプトと保存先: .tools/noah-prompts.md。全40身体のジャケット・ポニーテール・剣・顔と描画を統一。元の透過を保持し、FXの先端は右向き、反転後に回転して実際の判定線へ描画。後ろへ剣を伸ばす空後は二重反転を止め、空Nの剣は上右へ向けた修正版に置換。待機高260px、赤い衣装のみ5色に変更。実際の崖の手位置を測定。ART_IDS=noahでready40ポーズ／8FX／5色・ポートレートを生成し、先行32人を保持。noah-direction-preview.pngで12技の両向きを確認。
+参照: C:/Users/haro_/Downloads/noa.png。完成素材: characters/noah/assets/noah-atlas.png（24身体）、noah-locomotion.png（16歩行／走行）、noah-effects.png（8FX）、noah-poses-patch.png（空後・空N修正）。正確な5プロンプトと保存先: .tools/noah-prompts.md。全40身体のジャケット・ポニーテール・剣・顔と描画を統一。元の透過を保持し、FXの先端は右向き、反転後に回転して実際の判定線へ描画。後ろへ剣を伸ばす空後は二重反転を止め、空Nの剣は上右へ向けた修正版に置換。待機高260px、赤い衣装のみ5色に変更。実際の崖の手位置を測定。ART_IDS=noahでready40ポーズ／8FX／5色・ポートレートを生成し、先行32人を保持。characters/noah/previews/noah-direction-preview.pngで12技の両向きを確認。
 
 ## Ryza / ライザ — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/raiza.png。完成素材: assets/ryza-atlas.png（24身体）、ryza-locomotion.png（16歩行／走行）、ryza-items.png（8アイテム）、ryza-poses-patch.png（上攻撃・空後修正）、ryza-effects.png（8FX）。正確な6プロンプトと保存先: .tools/ryza-prompts.md。全40身体の衣装と絵柄を統一。元の透過を保持し、全8FXを透明の余白で分離。待機高260px、赤い服のみ5色に変更。ready画像・マスク・ポートレート生成済み。上攻撃の杖と空後の逆向き素材を修正し、実際の判定線へFXを一致。9技を左右の比較画像と描画行列で検証。
+参照: C:/Users/haro_/Downloads/raiza.png。完成素材: characters/ryza/assets/ryza-atlas.png（24身体）、ryza-locomotion.png（16歩行／走行）、ryza-items.png（8アイテム）、ryza-poses-patch.png（上攻撃・空後修正）、ryza-effects.png（8FX）。正確な6プロンプトと保存先: .tools/ryza-prompts.md。全40身体の衣装と絵柄を統一。元の透過を保持し、全8FXを透明の余白で分離。待機高260px、赤い服のみ5色に変更。ready画像・マスク・ポートレート生成済み。上攻撃の杖と空後の逆向き素材を修正し、実際の判定線へFXを一致。9技を左右の比較画像と描画行列で検証。
 
 Generated using the built-in image_gen tool. Original outputs are preserved; project assets are copied into `assets/`. The runtime keys out the green background and finds connected sprite regions to avoid cutting long spears at cell boundaries. No external image services are used during play.
 
@@ -49,7 +49,7 @@ Use case: stylized-concept. Asset type: 2D side-view platform fighting game envi
 Use case: stylized-concept. Asset type: 2D videogame animation atlas. EXACTLY 8 columns and 2 rows, 16 sprites total on plain solid green #008000 background. 2048x1024 wide landscape. Same chibi white-haired male elf dragoon as reference (reference depicts character only): cyan eyes, pointed ears, black and ornate silver armor, white trailing cape, blue crystal tipped silver lance. All face RIGHT and all full body, consistent size, widely spaced, each sprite fits inside its grid cell with margin. No text no lines no shadows no effects. First row: EIGHT sequential frames of an elegant full walking cycle, large alternating steps, both legs clearly moving, shoulders counter-rotate, cape follows. Second row: EIGHT sequential frames of a dynamic full sprint cycle, deeply leaning forwards, long spear carried pointing forwards, extremely clear alternating extended legs and tucked legs, airborne strides and contact strides, cape billowing behind. Every frame a DIFFERENT consecutive pose with dramatic leg changes. High-density polished anime hand-painted cel shaded art, detailed face and armor, consistent character scale and weapon length. Do NOT repeat a still pose. Keep spear within each cell.
 # Isaac / ロビン assets — 2026-09-27
 
-Generated with the built-in `image_gen` tool, using the user's Golden Sun Robin motion sheet as the character reference. Outputs copied to `assets/isaac-atlas.png`, `assets/isaac-locomotion.png`, `assets/isaac-effects.png`. Original generated outputs retained in Codex generated_images. Runtime extracts alpha/chroma and produces costume variants without a network dependency.
+Generated with the built-in `image_gen` tool, using the user's Golden Sun Robin motion sheet as the character reference. Outputs copied to `characters/isaac/assets/isaac-atlas.png`, `characters/isaac/assets/isaac-locomotion.png`, `characters/isaac/assets/isaac-effects.png`. Original generated outputs retained in Codex generated_images. Runtime extracts alpha/chroma and produces costume variants without a network dependency.
 
 ## Character atlas prompt
 
@@ -64,7 +64,7 @@ Transparent game sprite atlas, exactly 16 full bodies in 8 columns x 2 rows. Sam
 Premium 2D anime RPG magic effect sprite atlas for Golden Sun Isaac earth Psynergy. Genuine transparent alpha, no text or scenery. Eight isolated effects in 4 columns x 2 rows. Row 1: one tall fractured golden-brown rock spire with glowing fissures and shards; three clustered spires; pale cyan spectral five-fingered hand reaching right with swirling ribbon; compact golden-brown rocky earth Djinn with large eyes and pointed ears. Row 2: thick twisting leafy green vine with yellow energy; celestial silver sword striking diagonally downward with blue-gold energy; perspective earth shockwave ring with floating rock fragments; seven orbiting sandstone rocks and magic sigil. Intricate geological texture, crisp silhouettes, hand-painted cel shading and elegant highlights. Clear gutters, no character bodies, landscape 1536x1024.
 # Ulgrim / ウルグリム assets
 
-Built-in `image_gen` used with the user's attached Ulgrim design as visual reference. Final runtime assets: `assets/ulgrim-atlas-final.png`, `assets/ulgrim-locomotion.png`, `assets/ulgrim-effects.png`. The initial atlas is retained as `assets/ulgrim-atlas.png`; original generated outputs are also preserved. Runtime preserves alpha and creates 5 costume palettes.
+Built-in `image_gen` used with the user's attached Ulgrim design as visual reference. Final runtime assets: `characters/ulgrim/assets/ulgrim-atlas-final.png`, `characters/ulgrim/assets/ulgrim-locomotion.png`, `characters/ulgrim/assets/ulgrim-effects.png`. The initial atlas is retained as `characters/ulgrim/assets/ulgrim-atlas.png`; original generated outputs are also preserved. Runtime preserves alpha and creates 5 costume palettes.
 
 ## Character atlas prompt
 
@@ -81,7 +81,7 @@ Transparent game atlas with exactly16 full bodies in 8 columns x2 rows. Same rug
 Premium high-density 2D anime sword-fighting effect atlas. Exactly8 isolated effects in 4 columns x2 rows, transparent alpha, no characters, text or scenery. Intricate razor-thin white cutting edges, cobalt/cyan light, feathered brushstroke trails, fine sparkling fragments and wind threads, controlled bloom. Row1: horizontal crescent cutting right, upward crescent, narrow horizontal rush thrust and wake pointing right, reverse sweeping crescent. Row2: low wide ground sweep, rising helical wind vortex, shattered blue-white counterattack burst, ornate translucent steel-blue guard sigil. Fully contained effects, transparent gutters, crisp painted detail and dissolving tails, no simple solid geometric crescents or baked checkerboard.
 # Chiikawa / ちいかわ assets
 
-Generated with the built-in `image_gen` tool from the user's attached character/motion reference. Saved runtime files: `assets/chiikawa-atlas.png`, `assets/chiikawa-locomotion.png`, `assets/chiikawa-effects.png`. Original generation outputs retained. Alpha preserved; runtime extracts sprites and creates five costume palettes.
+Generated with the built-in `image_gen` tool from the user's attached character/motion reference. Saved runtime files: `characters/chiikawa/assets/chiikawa-atlas.png`, `characters/chiikawa/assets/chiikawa-locomotion.png`, `characters/chiikawa/assets/chiikawa-effects.png`. Original generation outputs retained. Alpha preserved; runtime extracts sprites and creates five costume palettes.
 
 ## Character atlas prompt
 
@@ -96,7 +96,7 @@ Transparent animation sheet,16 sprites in8 columns x2 rows. Same round white Chi
 Cute2D ink-line game atlas,8 isolated sprites in4 columns x2 rows, genuine alpha. Row1: Hachiware alone with blue cap-shaped head/ears, white face/body, black eyes, pink cheeks, charging right with sasumata; Hachiware thrusting right; yellow-orange comic starburst with small stars and pink flecks and empty center; sky-blue curved staff swing with white streaks and gold stars. Row2: fresh weeds, roots, flying leaves and soil upward; circular leaves/soil/flowers around empty center; pale-blue upward pole-vault speed trail with stars; luminous pink/blue shield ring with stars. Full effects within cells, transparent gutters, charming dark outlines and soft painted shading. No labels, panels, ground or scenery.
 # Chocobo / チョコボ assets
 
-Built-in `image_gen` used with the user's `chocobo.png` motion sheet as the visual reference. Runtime sprite assets: `assets/chocobo-atlas.png`, `assets/chocobo-locomotion.png`; mage/effect asset: `assets/chocobo-effects-final.png`. Initial effects retained in `assets/chocobo-effects.png`. Original tool outputs retained in Codex generated_images. Runtime preserves alpha, extracts mage sprites and applies five feather palettes.
+Built-in `image_gen` used with the user's `chocobo.png` motion sheet as the visual reference. Runtime sprite assets: `characters/chocobo/assets/chocobo-atlas.png`, `characters/chocobo/assets/chocobo-locomotion.png`; mage/effect asset: `characters/chocobo/assets/chocobo-effects-final.png`. Initial effects retained in `characters/chocobo/assets/chocobo-effects.png`. Original tool outputs retained in Codex generated_images. Runtime preserves alpha, extracts mage sprites and applies five feather palettes.
 
 ## Character atlas prompt
 
@@ -113,7 +113,7 @@ Transparent8-asset atlas in4 columns x2 rows, detailed anime painted cel art. To
 Final layout correction: strict4x2 grid, each asset with at least12% transparent padding on all sides. Keep all mage feet/hats entirely in the top half; remove long casting trail crossing into meteor cell. No stray feet in lower-row effects. Preserve artwork and alpha.
 # Monokuma — 2026-09-27
 
-Built-in imagegen, transparent_background=true, reference: `C:/Users/haro_/Downloads/monokuma.png`. Generated assets copied into `assets/monokuma-atlas.png`, `assets/monokuma-locomotion.png`, `assets/monokuma-effects.png`; originals retained. Prompts summarized below.
+Built-in imagegen, transparent_background=true, reference: `C:/Users/haro_/Downloads/monokuma.png`. Generated assets copied into `characters/monokuma/assets/monokuma-atlas.png`, `characters/monokuma/assets/monokuma-locomotion.png`, `characters/monokuma/assets/monokuma-effects.png`; originals retained. Prompts summarized below.
 
 Character atlas: Exactly 24 full-body sprites in a strict 6-column × 4-row transparent grid. Match the reference Monokuma: round asymmetric black/white bear, jagged red eye, white muzzle and belly with navel, mischievous grin. Polished cel shading, organic outlines, expressive full-body silhouette changes. Consistent scale, facing right, generous transparent gutters, no text, floor, scenery or opponent mannequins. Poses: idle, walk, run, crouch, jump, fall; claw jab, backhand, bite lunge, large forward hammer, reverse kick, downward stomp; empty grab, hammer throw, windup, rolling dash, rocket-jump body, low sweep; guard, roll, hurt, tumble, down, ledge hang with right paw raised.
 
@@ -123,7 +123,7 @@ Effects atlas: Exactly 8 separate assets, 4 columns × 2 rows, transparent backg
 # Riki — 2026-09-27
 
 Mode: built-in imagegen; transparent_background=true. Visual reference: `C:/Users/haro_/Downloads/riki.png`.
-Final project assets: `assets/riki-atlas.png`, `assets/riki-locomotion-v2.png`, `assets/riki-effects.png`. The first locomotion version is retained but unused.
+Final project assets: `characters/riki/assets/riki-atlas.png`, `characters/riki/assets/riki-locomotion-v2.png`, `characters/riki/assets/riki-effects.png`. The first locomotion version is retained but unused.
 
 Character prompt: Production game atlas, exactly24 full-body sprites in strict6columns×4rows, alpha transparent background. Riki from Xenoblade: small round cream furry Nopon, enormous orange-peach wing ears, red-orange crest, tiny feet, teal-purple patterned vest with pink spiral, backpack, green organic biting staff. Detailed anime cel shading matching reference, consistent scale, facing right, transparent gutters, no text/floor/opponents. Row1 idle/walk/run/crouch/jump/fall; row2 jab/secondpoke/upwardlift/largeforwardswing/backwardearkick/downslam; row3 emptygrab/throw/windup/lowtackle/puffedballoonrecovery/lowsweep; row4 guard/roll/hurt/tumble/down/ledgehang. Expressive full-body silhouettes.
 
@@ -133,7 +133,7 @@ Correction prompt: Preserve design; remove ALL grid lines, borders and stray edg
 Effects prompt: Exactly8 isolated assets in strict4columns×2rows, true alpha,15% gutters. Row1 rightward orange-red fireball streak, fire explosion, towering blue ice-crystal eruption, green-purple poison cloud with subtle skull motif. Row2 whole Riki hiding in green leaf camouflage, turquoise updraft with gold stars, large peach-orange ear-like crescent slash, blue-green shield ring. Detailed painted anime effects with light cores, glowing edges and fragments. No text/backgrounds/panels/scenery.
 # Roxas — 2026-09-27
 
-Built-in imagegen, transparent_background=true, reference `C:/Users/haro_/Downloads/roxas.png`. Final assets: `assets/roxas-atlas.png`, `assets/roxas-locomotion.png`, `assets/roxas-effects.png`. The reference sheet is retained only as reference; it is not used as the gameplay atlas.
+Built-in imagegen, transparent_background=true, reference `C:/Users/haro_/Downloads/roxas.png`. Final assets: `characters/roxas/assets/roxas-atlas.png`, `characters/roxas/assets/roxas-locomotion.png`, `characters/roxas/assets/roxas-effects.png`. The reference sheet is retained only as reference; it is not used as the gameplay atlas.
 
 Atlas prompt: Professional 2D anime Roxas atlas, exactly24 full-body sprites in strict6columns×4rows, alpha transparency. Blond spiky hair, blue eyes, long black hooded zipper coat, gloves/boots, black Oblivion and white-blue-gold Oathkeeper keyblades. Consistent anatomy, right-facing, strong silhouette changes, flowing coat. Whole blades/limbs/chains inside cells with15% gutters. No text/grid/floor/opponents. Row1 idle/walk/run/crouch/jump/fall; row2 firstslash/secondslash/upslash/crossslash/reverseslash/downplunge; row3 grab/throw/windup/dash/spiraljump/lowsweep; row4 guard/roll/hurt/tumble/down/ledgehang.
 
@@ -145,7 +145,7 @@ Initial atlas and locomotion generation attempts were rejected at the output mod
 
 # 2B — 2026-09-28
 
-Built-in imagegen, transparent_background=true; reference `C:/Users/haro_/Downloads/2B.png`. Final project assets: `assets/twob-atlas.png`, `assets/twob-locomotion.png`, `assets/twob-effects.png`. Original generated files retained.
+Built-in imagegen, transparent_background=true; reference `C:/Users/haro_/Downloads/2B.png`. Final project assets: `characters/twob/assets/twob-atlas.png`, `characters/twob/assets/twob-locomotion.png`, `characters/twob/assets/twob-effects.png`. Original generated files retained.
 
 Atlas prompt: Production2D anime sprite atlas of adult android2B, exactly24 separate whole-body sprites in6columns×4rows. Silver-white bob, black eye visor, embroidered black long-sleeve combat dress, leggings/boots/gloves, white katana and larger silver sword. Consistent anatomy and scale, right-facing, expressive full-body action, flowing hair/skirt, all blades in cell with20% alpha gutters. No text/panels/grid/scenery/floor/opponents/large effects or Pod. Row1 idle/walk/run/crouch/jump/fall; row2 slash/return/upslash/largeforward/reverse/downplunge; row3 grab/throw/windup/slide/spiralrise/lowsweep; row4 guard/roll/hurt/tumble/down/ledgehang. Athletic combat presentation, polished cel art matching reference.
 
@@ -155,7 +155,7 @@ Effects prompt: Eight assets4columns×2rows, true alpha,20% gutters. Row1 gray r
 
 # Okami — 2026-09-28
 
-Built-in imagegen, transparent_background=true; reference `C:/Users/haro_/Downloads/ookami.png`. Saved assets: `assets/okami-atlas.png`, `assets/okami-locomotion.png`, `assets/okami-effects.png`.
+Built-in imagegen, transparent_background=true; reference `C:/Users/haro_/Downloads/ookami.png`. Saved assets: `characters/okami/assets/okami-atlas.png`, `characters/okami/assets/okami-locomotion.png`, `characters/okami/assets/okami-effects.png`.
 
 Atlas prompt: Exactly24 full-body Amaterasu sprites6columns×4rows, alpha transparency. White quadrupedal wolf, red markings, curling ink fur and tail, flaming divine mirror on back. Japanese painted ink/cel detail, right-facing, consistent scale,20% empty gutters, no text/paper/floor/opponents/large effects. Row1 idle/walk/run/crouch/jump/fall; row2 pawswipe/bite/uppounce/lunge/backkick/downdive; row3 grab/headtoss/windup/rush/vineleap/lowsweep; row4 guard/roll/hurt/tumble/down/ledgehang.
 
@@ -165,7 +165,7 @@ Effects prompt: Eight ink VFX4columns×2rows. Black-red-white brush slash with s
 
 # Gundam — 2026-09-28
 
-Built-in imagegen with transparent_background=true. Reference: `C:/Users/haro_/Downloads/gundam.png`. Saved: `assets/gundam-atlas.png`, `assets/gundam-locomotion.png`, `assets/gundam-effects.png`.
+Built-in imagegen with transparent_background=true. Reference: `C:/Users/haro_/Downloads/gundam.png`. Saved: `characters/gundam/assets/gundam-atlas.png`, `characters/gundam/assets/gundam-locomotion.png`, `characters/gundam/assets/gundam-effects.png`.
 
 Atlas prompt: RX-78-2 game sprites, exactly24 full robots6columns×4rows, alpha background. White angular armor, blue torso, yellow vents, red feet, white V-fin, yellow eyes, red shield, articulated mechanical detail. Reference compact proportions, right-facing, consistent scale,20% empty gutters, no text/grid/floor/opponents/largeVFX. Row1 idle/walk/run/crouch/jump/fall; row2 punch/shieldbash/upsaber/forwardsaber/backkick/downkick; row3 grab/throw/windup/shoulderdash/vernierrise/lowkick; row4 guard/roll/hurt/tumble/down/ledgehang.
 
@@ -176,7 +176,7 @@ Equipment/effects prompt: Eight separate assets4columns×2rows. Row1 right-facin
 
 # Vivi — 2026-09-29
 
-Built-in imagegen, transparent_background=true. Reference: C:/Users/haro_/Downloads/bibi.png. Final assets: assets/vivi-atlas.png, assets/vivi-locomotion.png, assets/vivi-effects.png.
+Built-in imagegen, transparent_background=true. Reference: C:/Users/haro_/Downloads/bibi.png. Final assets: characters/vivi/assets/vivi-atlas.png, characters/vivi/assets/vivi-locomotion.png, characters/vivi/assets/vivi-effects.png.
 
 Atlas prompt: Vivi from FFIX, high-detail cel shaded game art matching the supplied motion sheet. Large golden floppy hat with red band, black face with two luminous yellow eyes, blue coat, red necktie, brown gloves and boots, striped cream trousers, wooden spiral staff. Exactly 24 full-body right-facing sprites, 6 columns x 4 rows, consistent scale, 20% transparent gutters. Row1 idle walk run crouch jump fall; row2 staff jab second poke upward cast forward cast backward cast downward ice pose; row3 grab throw windup dash cast wind rise low sweep; row4 guard roll hurt tumble down ledge hang with right hand raised. No text, grid, opponents, scenery or large effects. Runtime maps the generated prone pose to down and the airborne hurt pose to tumble.
 
@@ -186,7 +186,7 @@ Effects prompt: Eight isolated high-density anime magic effects, 4 columns x 2 r
 
 # Zero — 2026-09-29
 
-Built-in imagegen, transparent_background=true. Character/style reference: C:/Users/haro_/Downloads/rockman_zero.png. Assets: assets/zero-atlas.png, assets/zero-locomotion.png, assets/zero-effects.png.
+Built-in imagegen, transparent_background=true. Character/style reference: C:/Users/haro_/Downloads/rockman_zero.png. Assets: characters/zero/assets/zero-atlas.png, characters/zero/assets/zero-locomotion.png, characters/zero/assets/zero-effects.png.
 
 Atlas prompt: Exactly24 full-body right-facing Zero sprites6columns x4rows, transparent alpha. Rockman Zero design, red angular helmet with cyan forehead crystal, red armor, navy bodysuit, white mechanical hands, long golden ponytail, green energy Z Saber. High-density cel-shaded anime, compact consistent proportions, full body/hair/weapons inside isolated18% gutters. Row1 idle/walk/run/crouch/rising jump/fall; row2 first horizontal saber/second rising saber/upward cut/forward cut/backward cut/downward dive; row3 chain grab/throw pull/deep windup/rushing slash/rod upward lift/low sweep; row4 guard/roll/hurt/tumble/prone/ledge hang right hand overhead. No text/grid/background/shadows/opponents/largeVFX.
 
@@ -194,13 +194,13 @@ Initial locomotion prompt: Same character,16 full-body sprites8x2, transparent20
 
 Effects prompt: Eight isolated high-detail cel-shaded assets4x2 on alpha. Cyan-green saber crescent with white core/fine trails, rightward blue buster orb, gold-blue mechanical spinning shield, silver hook with articulated chain; cyan-white-orange impact sparks, green rising saber spiral, cyan layered dash filaments, red-cyan hexagonal shield aura.20% gutters, no characters/text/scenery/panels.
 
-Final locomotion uses assets/zero-locomotion-v2.png. Revised prompt: Crisp flat cel-shaded Zero, exactly16 sprites8x2. Walk phases explicitly alternate heel contact, planted support, lifted passing knee, forward extension, then opposite leg cycle. Run phases alternate contact, compression, toe push and airborne wide split. Long golden ponytail sways, opposite arm swing, entire low saber/body/hair in18% alpha gutters; no duplicates, no text/grid/background.
+Final locomotion uses characters/zero/assets/zero-locomotion-v2.png. Revised prompt: Crisp flat cel-shaded Zero, exactly16 sprites8x2. Walk phases explicitly alternate heel contact, planted support, lifted passing knee, forward extension, then opposite leg cycle. Run phases alternate contact, compression, toe push and airborne wide split. Long golden ponytail sways, opposite arm swing, entire low saber/body/hair in18% alpha gutters; no duplicates, no text/grid/background.
 
-Weapon poses: assets/zero-weapons.png, built-in imagegen alpha. Prompt: Exactly8 full-body Zero sprites4x2, same crisp cel-shaded red/navy/white armor and golden ponytail, right-facing,20% gutters. Row1 arm-buster windup, wide firing stance without projectile, braced charging pose without glow, cannon lowered after recoil. Row2 small gold-blue shield poised to throw, shield release with empty hand, shield catch, victorious saber overhead. No chain rod/text/background/opponents/largeeffects. Extra poses are normalized to the base idle height and share5 armor palettes.
+Weapon poses: characters/zero/assets/zero-weapons.png, built-in imagegen alpha. Prompt: Exactly8 full-body Zero sprites4x2, same crisp cel-shaded red/navy/white armor and golden ponytail, right-facing,20% gutters. Row1 arm-buster windup, wide firing stance without projectile, braced charging pose without glow, cannon lowered after recoil. Row2 small gold-blue shield poised to throw, shield release with empty hand, shield catch, victorious saber overhead. No chain rod/text/background/opponents/largeeffects. Extra poses are normalized to the base idle height and share5 armor palettes.
 
 # Lyn / リン — 2026-09-29
 
-Built-in imagegen, transparent_background=true. Reference: C:/Users/haro_/Downloads/rin.png. Game assets: assets/rin-atlas.png, assets/rin-locomotion.png, assets/rin-effects.png.
+Built-in imagegen, transparent_background=true. Reference: C:/Users/haro_/Downloads/rin.png. Game assets: characters/rin/assets/rin-atlas.png, characters/rin/assets/rin-locomotion.png, characters/rin/assets/rin-effects.png.
 
 Atlas prompt:24 full-body Lyn sprites6columns x4rows on alpha. Long emerald high ponytail, teal-blue gold-trimmed split tunic, black gauntlets/boots, gold earrings, silver Mani Katti. Detailed cel-shaded athletic adult anime woman, right-facing, broad full-body poses,20% gutters. Row1 idle/walk/run/crouch/jump/fall; row2 horizontal cut/rising cut/upcut/lunge/backcut/downthrust; row3 grab/throw/windup/dash/upward spinning leap/low sweep; row4 guard/roll/hurt/tumble/prone/ledgehang. Entire hair/sword/feet, no text/grid/opponents/background/shadows/largeVFX.
 
@@ -208,11 +208,11 @@ Locomotion prompt:16 full-body sprites8x2, matching design, strict right-facing 
 
 Effects prompt:8 isolated effects4x2. Blue-white fine katana crescent, red-white heavy crescent, sharp rightward blue wind blade, emerald upward tornado with green leaves; orange-white-blue impact, blue circular low sword ring, cyan horizontal dash wind with leaves, pale-blue guard aura. Luminous cores and layered filaments,20% alpha gutters, no figures/text/scenery/panels.
 
-Runtime atlas extraction note (2026-09-30): two adjacent sword poses are connected by touching blade pixels. The Rin-specific extraction path separates those components at their gutters and retains the extended thrust blade with its own pose. All40 extracted frames are checked for nonempty alpha and visually inspected in rin-contact-preview.png. The source PNG remains intact.
+Runtime atlas extraction note (2026-09-30): two adjacent sword poses are connected by touching blade pixels. The Rin-specific extraction path separates those components at their gutters and retains the extended thrust blade with its own pose. All40 extracted frames are checked for nonempty alpha and visually inspected in characters/rin/previews/rin-contact-preview.png. The source PNG remains intact.
 
 # Nia / ニア — 2026-09-30
 
-Built-in imagegen with transparent_background=true. Reference: C:/Users/haro_/Downloads/nia.png. Final files: assets/nia-atlas.png, assets/nia-locomotion.png, assets/nia-effects.png.
+Built-in imagegen with transparent_background=true. Reference: C:/Users/haro_/Downloads/nia.png. Final files: characters/nia/assets/nia-atlas.png, characters/nia/assets/nia-locomotion.png, characters/nia/assets/nia-effects.png.
 
 Atlas prompt: Exactly24 full-body Nia Driver sprites6x4 on alpha. Short silver bob/cat ears/amber eyes, mustard yellow covered armored jumpsuit, white red-trim scarf with flowing ribbons, black-white diamond leggings/armored boots/two ring blades. High-detail cel-shaded compact anime design, right-facing consistent scale, full figure/ribbons/weapons within65% width75% height of each cell. Row1 idle/walk/run/crouch/jump/fall; row2 first/second/up/forward/back/down ring attacks; row3 grab/throw/windup/dash/rising spin/low sweep; row4 guard/roll/hurt/tumble/prone/ledgehang. No text/grid/opponents/scenery/shadows/largeVFX.
 
@@ -222,7 +222,7 @@ Effects prompt: Eight isolated assets4x2 alpha,20% gutters. Pink-cyan ring-blade
 
 # Lightning / ライトニング — 2026-09-30
 
-Built-in imagegen. Locomotion/effects use transparent_background=true; final atlas background edit uses transparent_background=false for chroma green. Reference: C:/Users/haro_/Downloads/lightning.png. Final game files: assets/lightning-atlas.png, assets/lightning-locomotion.png, assets/lightning-effects.png.
+Built-in imagegen. Locomotion/effects use transparent_background=true; final atlas background edit uses transparent_background=false for chroma green. Reference: C:/Users/haro_/Downloads/lightning.png. Final game files: characters/lightning/assets/lightning-atlas.png, characters/lightning/assets/lightning-locomotion.png, characters/lightning/assets/lightning-effects.png.
 
 Atlas prompt: 24 separate full-body Lightning sprites, 6 columns by 4 rows, transparent alpha. Athletic adult woman, pale pink side-swept shoulder-length hair, white sleeveless coat, brown leather outfit, olive shoulder armor, black fingerless gloves, tall brown boots, red cape, silver-red transforming gunblade. Detailed crisp anime cel art, consistent scale, right-facing, whole figure/weapon within70% of cell, wide transparent gutters. Row1 idle/walk/run/crouch/jump/fall; row2 pommeljab/returnslash/upslash/forwardlunge/backslash/downstab; row3 grab/gunform aiming/windup/dashslash/rising slash/lowsweep; row4 guard/roll/hurt/tumble/prone/ledgehang. No text, grids, opponents, effects, ground shadows or colored backgrounds. Earlier gradient-backed outputs rejected. Final built-in edit prompt: Replace ALL brown background with perfectly flat solid chroma green RGB(0,255,0), no gradient, shadow or haze; preserve all24 poses and exact positions. The existing runtime chroma-key extractor produces transparent canvases.
 
@@ -230,11 +230,11 @@ Locomotion prompt:16 full-body sprites8x2, same adult character and clothing,8 w
 
 Effects prompt:8 isolated effects4x2 alpha with20% gutters. Pink-blue-white slash crescent, orange gun muzzle flash, right-moving blue-purple Ruin orb, triple Ruinga orb cluster; violet-blue-white lightning pillar, red Commando glyph, blue Ravager glyph, green Medic glyph with healing motes. Luminous cores and layered detail. No characters, labels, scenery or grid.
 
-Runtime extraction note (2026-10-03): two adjacent running sprites touch at the middle gutter. The Lightning locomotion extractor splits that connected component at the image midpoint, preserving40 nonempty poses. All poses inspected in lightning-contact-preview.png.
+Runtime extraction note (2026-10-03): two adjacent running sprites touch at the middle gutter. The Lightning locomotion extractor splits that connected component at the image midpoint, preserving40 nonempty poses. All poses inspected in characters/lightning/previews/lightning-contact-preview.png.
 
 # Colette / コレット — 2026-10-03
 
-Built-in imagegen. Reference: C:/Users/haro_/Downloads/koretto.png. Final files: assets/colette-atlas.png, assets/colette-locomotion.png, assets/colette-effects.png. Locomotion and effects use generated transparent alpha. Atlas uses the existing runtime chroma-key extraction to transparent canvases.
+Built-in imagegen. Reference: C:/Users/haro_/Downloads/koretto.png. Final files: characters/colette/assets/colette-atlas.png, characters/colette/assets/colette-locomotion.png, characters/colette/assets/colette-effects.png. Locomotion and effects use generated transparent alpha. Atlas uses the existing runtime chroma-key extraction to transparent canvases.
 
 Atlas prompt:24 full-body Colette Brunel sprites6columns x4rows. Long golden blonde hair, blue eyes, modest white long-sleeve coat with blue-violet edging and gold ornaments, navy leggings, white-blue shoes, two ornate gold chakrams with pink inner rings. Compact youthful anime proportions, crisp detailed cel shading, right-facing, broad distinct silhouettes,20% gutters. Row1 idle/walk/run/crouch/jump/fall; row2 right jab/left slash/upslash/forward slash/backslash/downslash; row3 grab/throw/overhead windup/dash/angel flight body/low sweep; row4 guard/roll/hurt/tumble/prone/ledgehang. Entire hair/rings/feet visible, no text/grid/opponents/effects/wings/background/shadows. Initial colored-background output rejected. Final built-in edit: replace ALL gold-brown gradient with perfectly flat chroma green RGB(0,255,0), including ring holes; preserve all24 sprites, exact positions, details and colors,6x4 layout. No gradients/shadows/haze/text. Runtime green-key extractor creates transparent sprites.
 
@@ -242,11 +242,11 @@ Locomotion prompt:16 full-body sprites8x2, same detailed Colette design. Eight w
 
 Effects prompt:8 isolated assets4x2 alpha,18% gutters, finely layered luminous anime filaments. Row1 pink-gold-white chakram crescent; ornate gold circular chakram prop with bright pink ring and cyan gems; cyan-white Grand Cross with four rays; symmetric cyan-white angel wings pair with detailed feathers, no person. Row2 red toy hammer/yellow star/brown handle; gold lucky-item sparkle with blue heart; cyan-white rightward angel feather projectile; dense pink-white-gold impact starburst. No text/panels/figures/scenery/background.
 
-All40 extracted poses were inspected in colette-contact-preview.png. Wing motion and chakram rotation are animated by the game; projectile collision and flight/steal movement follow the fixed60Hz simulation.
+All40 extracted poses were inspected in characters/colette/previews/colette-contact-preview.png. Wing motion and chakram rotation are animated by the game; projectile collision and flight/steal movement follow the fixed60Hz simulation.
 
 # Rean Schwarzer / リィン — 2026-10-03
 
-Built-in imagegen. Reference: C:/Users/haro_/Downloads/riin.png. Final game files: assets/rean-atlas.png, assets/rean-locomotion.png, assets/rean-effects.png. Main atlas uses a flat chroma-green background removed by the existing runtime extractor; locomotion and effects retain generated transparent alpha. All40 extracted sprites inspected in rean-contact-preview.png.
+Built-in imagegen. Reference: C:/Users/haro_/Downloads/riin.png. Final game files: characters/rean/assets/rean-atlas.png, characters/rean/assets/rean-locomotion.png, characters/rean/assets/rean-effects.png. Main atlas uses a flat chroma-green background removed by the existing runtime extractor; locomotion and effects retain generated transparent alpha. All40 extracted sprites inspected in characters/rean/previews/rean-contact-preview.png.
 
 ## Exact generation prompts
 
@@ -265,7 +265,7 @@ Locomotion spacing edit: Edit target Image1: preserve all16 Rean Schwarzer walki
 Original outputs are preserved under C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/. Final atlas: exec-b1683c53-852d-4d7f-9331-0ad00521fb60.png. Final locomotion: exec-10f4f5cb-e1d7-4104-8256-8eaa456187c2.png. Effects: exec-0aab7d5b-3282-43ec-b98a-02e9a565c6a4.png.
 # Estelle Bright / エステル — 2026-10-03
 
-Built-in imagegen. Reference: C:/Users/haro_/Downloads/esuteru.png. Final game files: assets/estelle-atlas.png, assets/estelle-locomotion.png, assets/estelle-effects.png. Atlas and effects use flat chroma green removed by the runtime extractor. Locomotion retains generated alpha. All40 extracted poses inspected in estelle-contact-preview.png.
+Built-in imagegen. Reference: C:/Users/haro_/Downloads/esuteru.png. Final game files: characters/estelle/assets/estelle-atlas.png, characters/estelle/assets/estelle-locomotion.png, characters/estelle/assets/estelle-effects.png. Atlas and effects use flat chroma green removed by the runtime extractor. Locomotion retains generated alpha. All40 extracted poses inspected in characters/estelle/previews/estelle-contact-preview.png.
 
 ## Exact generation prompts
 
@@ -283,49 +283,49 @@ Original outputs preserved under C:/Users/haro_/.codex/generated_images/01a0d8c0
 
 
 ## Noctis / FFXV
-Built-in image_gen. Exact prompts: .tools/noctis-prompts.md. Alpha PNGs: assets/noctis-atlas.png, assets/noctis-locomotion.png, assets/noctis-effects.png, assets/noctis-jabs.png. The corrective pair replaces atlas poses 6 and 7 to prevent merged characters. Production ready assets rebuilt with .tools/build-art.cjs.
+Built-in image_gen. Exact prompts: .tools/noctis-prompts.md. Alpha PNGs: characters/noctis/assets/noctis-atlas.png, characters/noctis/assets/noctis-locomotion.png, characters/noctis/assets/noctis-effects.png, characters/noctis/assets/noctis-jabs.png. The corrective pair replaces atlas poses 6 and 7 to prevent merged characters. Production ready assets rebuilt with .tools/build-art.cjs.
 
 ## Clive Rosfield / クライヴ — built-in image_gen
 Reference: C:/Users/haro_/Downloads/kuraivu.png
-Final assets: assets/clive-atlas.png, assets/clive-locomotion-v2.png, assets/clive-reactions.png, assets/clive-effects.png.
+Final assets: characters/clive/assets/clive-atlas.png, characters/clive/assets/clive-locomotion-v2.png, characters/clive/assets/clive-reactions.png, characters/clive/assets/clive-effects.png.
 Exact initial prompts: .tools/clive-prompts.md. Final corrective prompts: .tools/clive-corrections-prompts.md.
 The reaction patch replaces merged prone/hang cells; v2 locomotion supplies distinct passing/contact strides. Atlas normalized to 265px idle height. Lossless ready atlases/palettes/portraits baked for 21 fighters.
 
 ## Makoto Yuki / 結城 理 — built-in image_gen
-Reference: C:/Users/haro_/Downloads/yuki makoto.png. Final assets: assets/makoto-atlas.png, assets/makoto-locomotion.png, assets/makoto-personas.png, assets/makoto-effects.png. Exact prompt set: .tools/makoto-prompts.md. Real alpha verified,40 body poses plus8 companion poses. Body normalized to260px idle height. Ready assets rebuilt for22 fighters.
+Reference: C:/Users/haro_/Downloads/yuki makoto.png. Final assets: characters/makoto/assets/makoto-atlas.png, characters/makoto/assets/makoto-locomotion.png, characters/makoto/assets/makoto-personas.png, characters/makoto/assets/makoto-effects.png. Exact prompt set: .tools/makoto-prompts.md. Real alpha verified,40 body poses plus8 companion poses. Body normalized to260px idle height. Ready assets rebuilt for22 fighters.
 
 ## Neku Sakuraba / ネク — built-in image_gen
-Reference: C:/Users/haro_/Downloads/neku.png. Final assets: assets/neku-atlas.png (24 isolated full-body poses), assets/neku-locomotion.png (8 walk + 8 run), assets/neku-effects.png (8 psychic/flame/thunder/teleport effects). Exact prompts: .tools/neku-prompts.md. Real transparent alpha verified. 40 body poses, idle normalized to260px; left and right ledge alignment uses the actual gripping hand. Visually inspected all poses in neku-contact-preview.png and gameplay/menu screenshots. Lossless ready atlases, palettes and portraits rebuilt for23 fighters; no runtime segmentation in production.
+Reference: C:/Users/haro_/Downloads/neku.png. Final assets: characters/neku/assets/neku-atlas.png (24 isolated full-body poses), characters/neku/assets/neku-locomotion.png (8 walk + 8 run), characters/neku/assets/neku-effects.png (8 psychic/flame/thunder/teleport effects). Exact prompts: .tools/neku-prompts.md. Real transparent alpha verified. 40 body poses, idle normalized to260px; left and right ledge alignment uses the actual gripping hand. Visually inspected all poses in characters/neku/previews/neku-contact-preview.png and gameplay/menu screenshots. Lossless ready atlases, palettes and portraits rebuilt for23 fighters; no runtime segmentation in production.
 ## Yu Narukami / 鳴上 悠 — built-in image_gen
 Reference: C:/Users/haro_/Downloads/narukami.png.
-Final assets: assets/narukami-atlas.png, assets/narukami-locomotion.png, assets/narukami-personas.png, assets/narukami-effects.png, assets/narukami-personas-patch.png.
-Exact prompts: .tools/narukami-prompts.md and .tools/narukami-correction-prompts.md. The two-companion patch replaces Jiraiya and Konohana Sakuya (slots44/45) to separate touching scarves and petals. Real transparent alpha verified. 40 body poses plus8 companions,5 palette variants,8 effects; idle height260px. All48 poses visually inspected in narukami-contact-preview.png and game screenshots. Grip uses the topmost raised hand in pose23 for both faces. Lossless ready atlases/palettes/portraits rebuilt for24 characters.
+Final assets: characters/narukami/assets/narukami-atlas.png, characters/narukami/assets/narukami-locomotion.png, characters/narukami/assets/narukami-personas.png, characters/narukami/assets/narukami-effects.png, characters/narukami/assets/narukami-personas-patch.png.
+Exact prompts: .tools/narukami-prompts.md and .tools/narukami-correction-prompts.md. The two-companion patch replaces Jiraiya and Konohana Sakuya (slots44/45) to separate touching scarves and petals. Real transparent alpha verified. 40 body poses plus8 companions,5 palette variants,8 effects; idle height260px. All48 poses visually inspected in characters/narukami/previews/narukami-contact-preview.png and game screenshots. Grip uses the topmost raised hand in pose23 for both faces. Lossless ready atlases/palettes/portraits rebuilt for24 characters.
 
 ## Makoto Naegi / 苗木 誠 — built-in image_gen
-Reference: C:/Users/haro_/Downloads/naegi.png. Final assets: assets/naegi-atlas.png, assets/naegi-locomotion.png, assets/naegi-support.png, assets/naegi-effects.png. Exact complete prompt set: .tools/naegi-prompts.md. Real transparent alpha min0/max254 verified. 40 body poses plus8 bear/prop sprites and8 effects;5 palette colors. Same clothing and rendering throughout the atlas and locomotion. All sprites isolated in naegi-contact-preview.png. Grip follows the actual raised hand in frame23. Ready art regenerated for25 fighters; production never parses all source sheets at startup.
+Reference: C:/Users/haro_/Downloads/naegi.png. Final assets: characters/naegi/assets/naegi-atlas.png, characters/naegi/assets/naegi-locomotion.png, characters/naegi/assets/naegi-support.png, characters/naegi/assets/naegi-effects.png. Exact complete prompt set: .tools/naegi-prompts.md. Real transparent alpha min0/max254 verified. 40 body poses plus8 bear/prop sprites and8 effects;5 palette colors. Same clothing and rendering throughout the atlas and locomotion. All sprites isolated in characters/naegi/previews/naegi-contact-preview.png. Grip follows the actual raised hand in frame23. Ready art regenerated for25 fighters; production never parses all source sheets at startup.
 
 ## Luke fon Fabre / ルーク — built-in image_gen
 
-Reference: C:/Users/haro_/Downloads/Luke.png. Final assets: assets/luke-atlas.png (24 body poses), assets/luke-locomotion.png (8 walk + 8 run phases), assets/luke-jabs.png (isolated jab correction for frames6/7), assets/luke-effects.png (8 crimson/gold sword, tiger, lion, falcon and demon effects). Exact four prompts: .tools/luke-prompts.md. True transparent alpha verified, body max254 and effects max253. The jab patch replaces touching sword silhouettes so every frame has exactly one character. All40 poses and8 effects visually inspected in luke-contact-preview.png and public gameplay. Idle normalized to260px; raised-hand position determines both ledge grips. Five palette variants preserve red hair and recolor dark equipment. Effects segmented as complete components with transparent gutters. Lossless ready atlas, masks and portraits baked for Luke with ART_IDS=luke, retaining the existing26 character entries. Full27-character alpha/color and startup-loading checks passed.
+Reference: C:/Users/haro_/Downloads/Luke.png. Final assets: characters/luke/assets/luke-atlas.png (24 body poses), characters/luke/assets/luke-locomotion.png (8 walk + 8 run phases), characters/luke/assets/luke-jabs.png (isolated jab correction for frames6/7), characters/luke/assets/luke-effects.png (8 crimson/gold sword, tiger, lion, falcon and demon effects). Exact four prompts: .tools/luke-prompts.md. True transparent alpha verified, body max254 and effects max253. The jab patch replaces touching sword silhouettes so every frame has exactly one character. All40 poses and8 effects visually inspected in characters/luke/previews/luke-contact-preview.png and public gameplay. Idle normalized to260px; raised-hand position determines both ledge grips. Five palette variants preserve red hair and recolor dark equipment. Effects segmented as complete components with transparent gutters. Lossless ready atlas, masks and portraits baked for Luke with ART_IDS=luke, retaining the existing26 character entries. Full27-character alpha/color and startup-loading checks passed.
 
 ## Rex / レックス — built-in image_gen
 
-Reference: C:/Users/haro_/Downloads/rex.png. Final assets: assets/rex-atlas.png, assets/rex-locomotion.png, assets/rex-props.png, assets/rex-effects-v2.png, assets/rex-pose-patch.png. Exact six prompts: .tools/rex-prompts.md. Real alpha min0/max254 (body) and max255 (props/effects) verified. 40 body poses,8 separate weapons/effect props,5 palette variants,8 effects. The body patch isolates spin/tether/ledge poses without adjacent characters or ropes; the extended-hand cast uses frame12 so the simulated anchor is rendered once. Actual topmost hand aligns to both ledges and the pendulum rope. V2 effects are segmented by complete connected components so the ring and sparks never terminate at a rectangular cell edge. All eight effects have transparent outer gutters. Original PNGs are retained; ready atlases and portraits use lossless compression. Contact sheet: rex-contact-preview.png. The build tool supports ART_IDS=rex to refresh one character while retaining the other ready entries; the default still rebuilds the whole roster.
+Reference: C:/Users/haro_/Downloads/rex.png. Final assets: characters/rex/assets/rex-atlas.png, characters/rex/assets/rex-locomotion.png, characters/rex/assets/rex-props.png, characters/rex/assets/rex-effects-v2.png, characters/rex/assets/rex-pose-patch.png. Exact six prompts: .tools/rex-prompts.md. Real alpha min0/max254 (body) and max255 (props/effects) verified. 40 body poses,8 separate weapons/effect props,5 palette variants,8 effects. The body patch isolates spin/tether/ledge poses without adjacent characters or ropes; the extended-hand cast uses frame12 so the simulated anchor is rendered once. Actual topmost hand aligns to both ledges and the pendulum rope. V2 effects are segmented by complete connected components so the ring and sparks never terminate at a rectangular cell edge. All eight effects have transparent outer gutters. Original PNGs are retained; ready atlases and portraits use lossless compression. Contact sheet: characters/rex/previews/rex-contact-preview.png. The build tool supports ART_IDS=rex to refresh one character while retaining the other ready entries; the default still rebuilds the whole roster.
 
 ## Will / ウィル — built-in image_gen
 
-Reference: C:/Users/haro_/Downloads/metafa.png. Final assets: assets/will-atlas.png (24 body poses), assets/will-locomotion.png (16 walk/run phases), assets/will-summons.png (4 spectral horse phases,3 archetypes,1 sword target), assets/will-effects.png (8 blue/gold sword,green wind,horse,target,heroic,elemental effects). Exact four prompts: .tools/will-prompts.md. Forty consistent body poses plus8 isolated summons,5 palette variants,8 effects. Rider rendered once over a rider-free animated horse; archetypes and target sword use separate images. Idle normalized to260px; actual topmost gripping hand aligns both ledges. Complete-component extraction preserves translucent tips and adds a transparent gutter. All48 sprites visually inspected in will-contact-preview.png and gameplay; ready atlas, palette masks and five portraits baked with ART_IDS=will while preserving the other27 entries.
+Reference: C:/Users/haro_/Downloads/metafa.png. Final assets: characters/will/assets/will-atlas.png (24 body poses), characters/will/assets/will-locomotion.png (16 walk/run phases), characters/will/assets/will-summons.png (4 spectral horse phases,3 archetypes,1 sword target), characters/will/assets/will-effects.png (8 blue/gold sword,green wind,horse,target,heroic,elemental effects). Exact four prompts: .tools/will-prompts.md. Forty consistent body poses plus8 isolated summons,5 palette variants,8 effects. Rider rendered once over a rider-free animated horse; archetypes and target sword use separate images. Idle normalized to260px; actual topmost gripping hand aligns both ledges. Complete-component extraction preserves translucent tips and adds a transparent gutter. All48 sprites visually inspected in characters/will/previews/will-contact-preview.png and gameplay; ready atlas, palette masks and five portraits baked with ART_IDS=will while preserving the other27 entries.
 
 
 
 ## KOS-MOS / コスモス — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/kosmos.png。24身体ポーズ・16歩行走行・8武装・8エフェクト・空下の下向き射撃修正を生成。淡いラベンダーの長髪、赤い瞳、白黒金の装甲、青い機械コアで全モーションを統一。全生成プロンプト: .tools/kosmos-prompts.md。完成元素材: assets/kosmos-atlas.png、kosmos-locomotion.png、kosmos-weapons.png、kosmos-effects.png、kosmos-dair.png。組み込みツールの透過を保持し、ゲームの切り出しと色マスクを使用。48ポーズ×5カラーと8FXをassets/ready/へ可逆圧縮、元デザインの髪と白い装甲を維持し黒いパーツをカラーバリエーション化。上必殺のノード、横必殺のチェーンと弧状スイング、キャノンの射線とドリルの判定位置に対応した描画を実装。
+参照: C:/Users/haro_/Downloads/kosmos.png。24身体ポーズ・16歩行走行・8武装・8エフェクト・空下の下向き射撃修正を生成。淡いラベンダーの長髪、赤い瞳、白黒金の装甲、青い機械コアで全モーションを統一。全生成プロンプト: .tools/kosmos-prompts.md。完成元素材: characters/kosmos/assets/kosmos-atlas.png、kosmos-locomotion.png、kosmos-weapons.png、kosmos-effects.png、kosmos-dair.png。組み込みツールの透過を保持し、ゲームの切り出しと色マスクを使用。48ポーズ×5カラーと8FXをassets/ready/へ可逆圧縮、元デザインの髪と白い装甲を維持し黒いパーツをカラーバリエーション化。上必殺のノード、横必殺のチェーンと弧状スイング、キャノンの射線とドリルの判定位置に対応した描画を実装。
 
 ## Fayt Leingod / フェイト — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/fate.png。完成元素材: assets/fayt-atlas.png（24身体ポーズ）、assets/fayt-locomotion.png（16歩行・走行）、assets/fayt-effects-v2.png（8FX）。正確な4プロンプト: .tools/fayt-prompts.md。画像は組み込みimage_genで生成・修正し、生成時の透過を保持。青い短髪、白青金のベスト、銀の剣で全40ポーズの衣装と描画を統一。FXを再編集して全ての発光と粒子を独立した透明の余白に収め、完全な部品として切り出す。初稿fayt-effects.pngは保持するがゲームでは使用しない。待機高260px、5カラーは暗い装備を着色し青髪・白い装甲を維持。崖ポーズ23の実際に上へ伸びた手を測定し左右の崖位置へ合わせる。fayt-contact-preview.pngで全40ポーズと8FXを確認。ART_IDS=faytで可逆圧縮ready素材を生成し、他29人を保持。全30人の透過・カラーマスク・起動経路に不一致なし。横必殺は消失と位置マーカー、上必殺は曲がる飛行と下方弾、キックは実際の足位置に判定と赤い衝撃を配置。
+参照: C:/Users/haro_/Downloads/fate.png。完成元素材: characters/fayt/assets/fayt-atlas.png（24身体ポーズ）、characters/fayt/assets/fayt-locomotion.png（16歩行・走行）、characters/fayt/assets/fayt-effects-v2.png（8FX）。正確な4プロンプト: .tools/fayt-prompts.md。画像は組み込みimage_genで生成・修正し、生成時の透過を保持。青い短髪、白青金のベスト、銀の剣で全40ポーズの衣装と描画を統一。FXを再編集して全ての発光と粒子を独立した透明の余白に収め、完全な部品として切り出す。初稿fayt-effects.pngは保持するがゲームでは使用しない。待機高260px、5カラーは暗い装備を着色し青髪・白い装甲を維持。崖ポーズ23の実際に上へ伸びた手を測定し左右の崖位置へ合わせる。characters/fayt/previews/fayt-contact-preview.pngで全40ポーズと8FXを確認。ART_IDS=faytで可逆圧縮ready素材を生成し、他29人を保持。全30人の透過・カラーマスク・起動経路に不一致なし。横必殺は消失と位置マーカー、上必殺は曲がる飛行と下方弾、キックは実際の足位置に判定と赤い衝撃を配置。
 
 ## Emma / エマ — built-in image_gen
 
-参照: C:/Users/haro_/Downloads/ema.png。完成元素材: assets/emma-atlas.png（24身体ポーズ）、emma-locomotion.png（16歩行／走行）、emma-koo.png（クー6ポーズ／植物2素材）、emma-effects.png（8FX）、emma-pose-patch.png（斬撃／歩行修正）、emma-attacks-patch.png（強い斬撃／回転修正）。正確な全7プロンプト: .tools/emma-prompts.md。全40身体ポーズの編み笠・衣装・刀・絵柄を統一。真の透過を保持し、植物とクーを独立して描画。初稿のクーシートは使用しない。隣の人物と刀が連結したポーズを修正パッチへ置換し、完全な部品の切り出しでFXの粒子や輪が矩形端で途切れないようにする。歩行8／走行8の正しい順へ並べ直し、待機高260pxに正規化。黒い装備だけ5カラーへ着色し髪・白袖を保持。実際に伸ばした手を測定し、左右の崖と蔦の接続に使用。emma-contact-preview.pngで全48ポーズと8FX、emma-public-preview.pngとemma-public-roster-preview.pngで公開画面を確認。ART_IDS=emmaでreadyアトラス／マスク／ポートレートを可逆圧縮で生成し、他30人を保持。全31人の透過・色・起動経路に不一致なし。
+参照: C:/Users/haro_/Downloads/ema.png。完成元素材: characters/emma/assets/emma-atlas.png（24身体ポーズ）、emma-locomotion.png（16歩行／走行）、emma-koo.png（クー6ポーズ／植物2素材）、emma-effects.png（8FX）、emma-pose-patch.png（斬撃／歩行修正）、emma-attacks-patch.png（強い斬撃／回転修正）。正確な全7プロンプト: .tools/emma-prompts.md。全40身体ポーズの編み笠・衣装・刀・絵柄を統一。真の透過を保持し、植物とクーを独立して描画。初稿のクーシートは使用しない。隣の人物と刀が連結したポーズを修正パッチへ置換し、完全な部品の切り出しでFXの粒子や輪が矩形端で途切れないようにする。歩行8／走行8の正しい順へ並べ直し、待機高260pxに正規化。黒い装備だけ5カラーへ着色し髪・白袖を保持。実際に伸ばした手を測定し、左右の崖と蔦の接続に使用。characters/emma/previews/emma-contact-preview.pngで全48ポーズと8FX、characters/emma/previews/emma-public-preview.pngとcharacters/emma/previews/emma-public-roster-preview.pngで公開画面を確認。ART_IDS=emmaでreadyアトラス／マスク／ポートレートを可逆圧縮で生成し、他30人を保持。全31人の透過・色・起動経路に不一致なし。

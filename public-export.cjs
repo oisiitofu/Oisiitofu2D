@@ -9,7 +9,7 @@ const app=path.join(site,'app');fs.mkdirSync(app,{recursive:true});
 const write=(name,data)=>{const file=path.join(app,name);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,data);};
 function replace(source,from,to){if(!source.includes(from))throw Error('Static adapter is outdated: '+from.slice(0,90));return source.replace(from,to);}
 let html=read('index.html');
-const scripts=[...html.matchAll(/<script (?:defer )?src="([a-z0-9-]+\.js)"><\/script>/g)].map(m=>m[1]);
+const scripts=require('./script-bundle.cjs').files(root);
 if(!scripts.includes('online.js')||!scripts.includes('audio.js'))throw Error('Missing registered scripts');
 let bundle='const PublicOnlineConfig='+JSON.stringify({onlineUrl:config.onlineUrl})+';\n';
 for(const file of scripts){

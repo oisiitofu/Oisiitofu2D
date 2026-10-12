@@ -55,7 +55,7 @@ async function save(name,data,webp=false){let bytes=Buffer.from(data.split(',')[
     if(portraitsOnly)return{portraits,selectionPortraits,selectionCrop,...selectionMetadata};
     let extra=[];
     if(id==='isaac'){
-     const sheet=new Image();sheet.src='assets/isaac-effects.png';await sheet.decode();
+     const sheet=new Image();sheet.src='characters/isaac/assets/isaac-effects.png';await sheet.decode();
      extra=Array.from({length:8},(_,n)=>{const c=document.createElement('canvas');c.width=sheet.width/4;c.height=sheet.height/2;c.getContext('2d').drawImage(sheet,n%4*c.width,Math.floor(n/4)*c.height,c.width,c.height,0,0,c.width,c.height);return c;});
      items.push(...extra);
     }

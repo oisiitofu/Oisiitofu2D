@@ -1,6 +1,7 @@
 node_modules/
 assets/ready/
 /*.png
+characters/*/previews/
 *.log
 *.tmp
 *.bak

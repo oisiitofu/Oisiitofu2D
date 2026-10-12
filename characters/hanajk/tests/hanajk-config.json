@@ -1,0 +1,20 @@
+{
+  "name": "ハナJK",
+  "style": "ゼノブレイド2 / HANA JK",
+  "family": "punch",
+  "height": 104,
+  "radius": 23,
+  "stats": {
+    "weight": 105,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.3,
+    "runSpeed": 6.7,
+    "airSpeed": 6,
+    "airAcceleration": 0.32,
+    "gravity": 0.61,
+    "fullHopVelocity": 14
+  },
+  "mask": "r>60&&r>green*1.45&&r>b*1.15",
+  "customPreparation": true,
+  "description": "下必殺でJS → JK → JD → JSへ切り替え。JSはドリルとバイターの射出、JKは巨大アームとミサイル反動、JDは可変セイバーと方向転換で戦う。"
+}

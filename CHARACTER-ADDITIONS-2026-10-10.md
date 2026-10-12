@@ -22,4 +22,4 @@
 
 公開URLのbundleに7体のデータ・描画・アートコードが含まれ、manifestがローカルの最新版と一致することを確認。各キャラの本体アトラス・カラーパレット・選択画像・サムネイル計28ファイルはHTTP200、バイト列とハッシュが一致した。結果：`.tools/public-additions-results.json`。
 
-詳細は`ARUS-IMPLEMENTATION.md`、`KNIGHT-IMPLEMENTATION.md`、`MAELLE-IMPLEMENTATION.md`、`SUMINO-IMPLEMENTATION.md`、`ROCBOUQUET-IMPLEMENTATION.md`、`FROG-IMPLEMENTATION.md`、`TRESSA-IMPLEMENTATION.md`。
+詳細は`characters/arus/docs/ARUS-IMPLEMENTATION.md`、`characters/knight/docs/KNIGHT-IMPLEMENTATION.md`、`characters/maelle/docs/MAELLE-IMPLEMENTATION.md`、`characters/sumino/docs/SUMINO-IMPLEMENTATION.md`、`characters/rocbouquet/docs/ROCBOUQUET-IMPLEMENTATION.md`、`characters/frog/docs/FROG-IMPLEMENTATION.md`、`characters/tressa/docs/TRESSA-IMPLEMENTATION.md`。

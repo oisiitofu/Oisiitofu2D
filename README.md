@@ -2,6 +2,12 @@
 
 GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW.md)を参照してください。
 
+## キャラ別のフォルダ
+
+キャラ専用ファイルは `characters/<キャラID>/` にまとめています。[キャラ一覧と配置ルール](characters/README.md)から各フォルダを開けます。技・固有ルールは `<ID>-data.js`、描画は `<ID>-art.js` と `<ID>-vfx.js`、元画像は `assets/`、専用テストとその設定は `tests/`、実装メモは `docs/` です。検証画像の `previews/` はGit管理外です。
+
+コマンドはプロジェクトのルートから実行します。例：`node characters/midna/tests/midna-warp-test.cjs`。共通テストは従来通りルート、`npm test` は新しい配置に対応しています。共通エンジン、ステージ素材、音声、配信用キャッシュ `assets/ready/` は共有します。
+
 ## キャラの表示サイズ
 
 `battle-size.js`の`calibration`で全113形態の表示を調整します。`height`は透明な余白を除いた体の高さ、`body`は元画像上の基準寸法、`neutral`は待機ポーズだけの補正、`pads`は各ポーズの足元の透明な余白です。小柄なキャラ・人型・大型の体格差を残し、しゃがみや前傾を立ち姿と同じ高さへ引き伸ばしません。接地中の全身上下揺れを抑え、崖つかまりでは足元補正を使わず手の位置を基準にします。戦闘の判定寸法は表示用のサイズから独立しています。検証は`node battle-size-test.cjs`。
@@ -51,7 +57,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 専用436項目・公開オンライン76項目・全73本の回帰テスト通過。2391ポーズ・448FX・11955カラー素材の不一致0。9画面サイズで54人を表示し、縮小中にキャラ選択へ戻っても寸法とUIが変わらないことを確認。
 
-制作・設計・検証記録: .tools/morphie-image-prompts.json / .tools/morphie-design.md / .tools/morphie-validation.md。完成素材: assets/morphie-atlas.png / assets/morphie-locomotion.png / assets/morphie-props.png / assets/morphie-effects.png。
+制作・設計・検証記録: .tools/morphie-image-prompts.json / .tools/morphie-design.md / .tools/morphie-validation.md。完成素材: characters/morphie/assets/morphie-atlas.png / characters/morphie/assets/morphie-locomotion.png / characters/morphie/assets/morphie-props.png / characters/morphie/assets/morphie-effects.png。
 
 ## アキラ（53人目）
 
@@ -66,7 +72,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 専用361項目・公開オンライン75項目・全71本の回帰テスト通過。2343ポーズ・432FX・11715カラー素材に不一致0。9画面サイズで53人を1ページ表示。
 
-制作・設計・検証記録: .tools/akira-prompts.json / .tools/akira-design.md / .tools/akira-validation.md。完成素材: assets/akira-atlas.png / assets/akira-locomotion.png / assets/akira-props.png / assets/akira-effects.png。
+制作・設計・検証記録: .tools/akira-prompts.json / .tools/akira-design.md / .tools/akira-validation.md。完成素材: characters/akira/assets/akira-atlas.png / characters/akira/assets/akira-locomotion.png / characters/akira/assets/akira-props.png / characters/akira/assets/akira-effects.png。
 
 ## オーバークック（52人目）
 
@@ -79,7 +85,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 通常・空中攻撃・スマッシュ・投げ・防御・被弾・崖・CPU・SE・オンラインに対応。包丁とフライパン、皿、鍋、消火器の方向を実際の判定に合わせる。元のFXは右向き、平行移動→左右反転→ローカル回転。前・後・上・下と専用技を左右両向きで視覚確認。
 
-制作・設計・検証記録: .tools/chef-prompts.json / .tools/chef-design.md / .tools/chef-validation.md。最終素材: assets/chef-atlas.png / assets/chef-locomotion.png / assets/chef-props.png / assets/chef-effects.png。
+制作・設計・検証記録: .tools/chef-prompts.json / .tools/chef-design.md / .tools/chef-validation.md。最終素材: characters/chef/assets/chef-atlas.png / characters/chef/assets/chef-locomotion.png / characters/chef/assets/chef-props.png / characters/chef/assets/chef-effects.png。
 
 専用341項目・公開オンライン75項目・全70本の回帰テスト通過。2295ポーズ・416FX・11475カラー素材の不一致0。9画面サイズで52人を1ページ表示。
 
@@ -94,7 +100,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 上スマッシュは上向きクロスボウの3本の矢、横スマッシュはパンチャー、下スマッシュはのこぎり。通常・空中攻撃・投げ・防御・被弾・崖・CPU・SE・オンラインに対応。元のFXは右向き、平行移動→左右反転→ローカル回転。大砲の元画像の上向き傾斜を差し引いて発射角に合わせる。前・後・上・下と専用技を左右両向きで視覚確認。
 
-制作・設計・検証記録: .tools/horse-prompts.json / .tools/horse-design.md / .tools/horse-validation.md。最終素材: assets/horse-atlas.png / assets/horse-locomotion.png / assets/horse-props.png / assets/horse-effects.png。
+制作・設計・検証記録: .tools/horse-prompts.json / .tools/horse-design.md / .tools/horse-validation.md。最終素材: characters/horse/assets/horse-atlas.png / characters/horse/assets/horse-locomotion.png / characters/horse/assets/horse-props.png / characters/horse/assets/horse-effects.png。
 
 専用255項目・公開オンライン75項目・全69本の回帰テスト通過。2243ポーズ・400FX・11215カラー素材の不一致0。9画面サイズで51人を1ページ表示。
 
@@ -126,7 +132,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 通常・スマッシュ・空中攻撃、投げ、被弾、防御、崖、専用被弾判定、CPU、SE、オンラインに対応。左右両向きでバット・エフェクト・攻撃判定を目視確認。
 
-設計: .tools/pawapuro-design.md。正確な制作プロンプト・生成元・絶対保存先: .tools/pawapuro-prompts-final.json。検証: .tools/pawapuro-validation.md。完成素材: assets/pawapuro-atlas.png / assets/pawapuro-locomotion.png / assets/pawapuro-specials.png / assets/pawapuro-poses-patch.png / assets/pawapuro-effects.png。
+設計: .tools/pawapuro-design.md。正確な制作プロンプト・生成元・絶対保存先: .tools/pawapuro-prompts-final.json。検証: .tools/pawapuro-validation.md。完成素材: characters/pawapuro/assets/pawapuro-atlas.png / characters/pawapuro/assets/pawapuro-locomotion.png / characters/pawapuro/assets/pawapuro-specials.png / characters/pawapuro/assets/pawapuro-poses-patch.png / characters/pawapuro/assets/pawapuro-effects.png。
 
 専用240項目・公開オンライン63項目・全64本の回帰テスト通過。readyアート1995ポーズ・352FX・9975カラー素材に不一致なし。9画面サイズで全46人を1ページ表示。
 
@@ -145,7 +151,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 専用210項目、公開オンライン61項目、全45人を含む63本の回帰スクリプト通過。readyアート1947ポーズ・344FX・9735カラー素材に不一致なし。9画面サイズで全45人を1ページ表示。
 
-設計: .tools/agumon-design.md。正確なプロンプトと絶対保存先: .tools/agumon-prompts.json。検証: .tools/agumon-validation.md。完成素材: assets/agumon-atlas.png / assets/agumon-locomotion.png / assets/agumon-effects.png。
+設計: .tools/agumon-design.md。正確なプロンプトと絶対保存先: .tools/agumon-prompts.json。検証: .tools/agumon-validation.md。完成素材: characters/agumon/assets/agumon-atlas.png / characters/agumon/assets/agumon-locomotion.png / characters/agumon/assets/agumon-effects.png。
 
 アグモン追加時の共有URL: https://gets-eval-uniform-vehicle.trycloudflare.com （4181のサーバーとトンネル起動中のみ有効）。
 
@@ -161,7 +167,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 専用594項目、公開オンライン159項目と全44人の回帰チェック通過。readyアートは1907ポーズ枠・336FX・9535カラー素材、透過・色の不一致なし。9画面サイズで44人を1ページに表示。ローカル測定はポートレート359ms／対戦素材1322ms。音声303チェック通過。
 
-設計と素材保存先: .tools/three-fighters-design.md。正確なプロンプト: .tools/three-fighters-prompts.json。検証: .tools/three-fighters-validation.md。公開画面: three-fighters-public-roster-preview.png / adol-public-preview.png / terry-public-preview.png / valkyrie-public-preview.png。
+設計と素材保存先: .tools/three-fighters-design.md。正確なプロンプト: .tools/three-fighters-prompts.json。検証: .tools/three-fighters-validation.md。公開画面: three-fighters-public-roster-preview.png / characters/adol/previews/adol-public-preview.png / characters/terry/previews/terry-public-preview.png / characters/valkyrie/previews/valkyrie-public-preview.png。
 
 前回の共有URL: https://extra-lifestyle-aus-warner.trycloudflare.com （4180のサーバーとトンネル起動中のみ有効）。
 
@@ -176,7 +182,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 重量109、通常／スマッシュ／空中攻撃、投げ、防御・被弾・崖、CPU、SE、オンラインに対応。剣の絵に合わせて判定の始点と角度を調整し、左右両向きを視覚確認。専用243項目・公開オンライン67項目・全41人の回帰チェック通過。1779ポーズ枠・312FX・8895カラーに不一致なし。9画面サイズで41人を1ページ表示。ローカル測定: ポートレート286ms／対戦素材1021ms。BGM初期25%を保持。
 
-詳細: .tools/hunter-design.md / .tools/hunter-validation.md。実際の対戦画像: hunter-public-preview.png。
+詳細: .tools/hunter-design.md / .tools/hunter-validation.md。実際の対戦画像: characters/hunter/previews/hunter-public-preview.png。
 
 ハンター公開時のURL: https://taxes-mix-scotia-beach.trycloudflare.com （4178のサーバーとトンネル起動中のみ有効）。現在の共有URLは冒頭を参照。
 
@@ -241,7 +247,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 通常技・スマッシュ・空中技・つかみと投げ・防御・被弾・崖、CPUとオンラインに対応。エフェクトは右向き素材の反転後にローカル回転し、骨の軸・ブラスターの口・ビーム判定に一致。後ろ攻撃は逆向きに描いた身体を二重反転しない。崖の手位置は素材から測定。歩行・ジャンプ専用SE、BGM初期25%と手動差し替えを維持。
 
-制作方法: built-in image_gen。正確なプロンプトと素材保存先: .tools/sans-prompts.md。専用テスト: sans-test.cjs、オンライン: .tools/sans-online.log、全体: .tools/sans-regression.log、共有URL: .tools/sans-public.log。
+制作方法: built-in image_gen。正確なプロンプトと素材保存先: .tools/sans-prompts.md。専用テスト: characters/sans/tests/sans-test.cjs、オンライン: .tools/sans-online.log、全体: .tools/sans-regression.log、共有URL: .tools/sans-public.log。
 
 専用189チェック、2クライアントのオンライン59チェック、全36人の回帰テストが通過。1539ポーズ／272FX／7695カラー素材に透過・色の不一致なし。9画面サイズで全36人が1ページに収まり、255音声チェック通過。今回の画像表示292ms、対戦素材準備1019ms。共有URLで4必殺技とSE配信を確認済み。
 
@@ -256,7 +262,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 通常技・スマッシュ・空中技・つかみと投げ・防御・被弾・崖モーション、CPUとオンラインに対応。右向き素材を左右反転してからローカル回転し、グローブ／キックの軌道と実際の十字爆風判定に合わせて描画。崖の手位置は素材から測定。歩行とジャンプ専用音を維持し、打撃はpunch、爆発はexplosion、ルーイの踏み切りはwind／double-jump。BGM初期25%と手動差し替えを維持。
 
-制作方法: built-in image_gen。正確なプロンプトと素材保存先: .tools/bomberman-prompts.md。専用テスト: bomberman-test.cjs、全体: .tools/bomberman-regression.log、オンライン: .tools/bomberman-online-final.log、共有URL: .tools/bomberman-public.log。
+制作方法: built-in image_gen。正確なプロンプトと素材保存先: .tools/bomberman-prompts.md。専用テスト: characters/bomberman/tests/bomberman-test.cjs、全体: .tools/bomberman-regression.log、オンライン: .tools/bomberman-online-final.log、共有URL: .tools/bomberman-public.log。
 
 専用146チェック、2クライアントのオンライン59チェック、全35人の回帰テストが通過。1491ポーズ／264FX／7455カラー素材に透過・色の不一致なし。9画面サイズで全35人が1ページに収まり、249音声チェック通過。今回の画像表示273ms、対戦素材準備867ms。共有URLで4必殺技とSEの配信を確認済み。
 
@@ -271,7 +277,7 @@ GitHubへの保存・別のPCでの起動手順は[GIT-WORKFLOW.md](GIT-WORKFLOW
 
 歩行・ジャンプ専用SEを維持。髪の打撃はclaw、引き寄せはchain、影とワープはdark、離脱はwind。BGM初期25%・手動差し替え・保存済み音量を維持。崖は実際の手の位置を測定。10種以上の攻撃を左右両向きで検証。CPUは方向指定ワープで場外とステージ下から復帰。オンラインは同じ入力フレームから髪の手・対象・フック・移動先を計算する。
 
-専用170チェック、2クライアントのオンライン52チェック、全34人の回帰テストが通過。1443ポーズ／256FX／7215カラー素材に透過・色の不一致なし。9画面サイズで全34人が1ページに収まり、243音声チェック通過。今回の画像表示226ms、対戦素材準備929ms。共有URLで4必殺技とSE配信を確認済み。\n\n制作方法: built-in image_gen。正確なプロンプトと保存先: .tools/midna-prompts.md。専用テスト: midna-test.cjs、全体: .tools/midna-regression.log、オンライン: .tools/midna-online-final.log、共有URL: .tools/midna-public-final.log。
+専用170チェック、2クライアントのオンライン52チェック、全34人の回帰テストが通過。1443ポーズ／256FX／7215カラー素材に透過・色の不一致なし。9画面サイズで全34人が1ページに収まり、243音声チェック通過。今回の画像表示226ms、対戦素材準備929ms。共有URLで4必殺技とSE配信を確認済み。\n\n制作方法: built-in image_gen。正確なプロンプトと保存先: .tools/midna-prompts.md。専用テスト: characters/midna/tests/midna-test.cjs、全体: .tools/midna-regression.log、オンライン: .tools/midna-online-final.log、共有URL: .tools/midna-public-final.log。
 
 ## ノア（33人目）
 
@@ -419,7 +425,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 空下（空中で下＋Z）：9Fから下向き速度34で槍を構えて急降下。空振りでも下降が続き、着地で衝撃波へ移行。落下途中に被弾すると中断します。
 - 着地衝撃波：着地したフレームから5F、左右に広がる攻撃判定（8ダメージ）。その後の戻りは14F。衝撃波の見た目の余韻には追加判定はありません。
 - 上B（上＋X）：ハイジャンプ。12F目から空中攻撃へキャンセルでき、終了後もしりもち状態になりません。上B→下＋Zでジャンプからの急降下が可能です。上Bの再使用は着地または崖つかまりまで制限します。
-- dragoon-test.cjs で突撃距離、空中突撃、上B→空下、急降下速度、衝撃波の両方向命中・1回判定、被弾中断を確認します。
+- characters/dragoon/tests/dragoon-test.cjs で突撃距離、空中突撃、上B→空下、急降下速度、衝撃波の両方向命中・1回判定、被弾中断を確認します。
 # ロビン（黄金の太陽）参戦
 
 キャラ選択で「ロビン」を選択できます。CPU・トレーニングの相手も個別に選べます。オンラインでは各プレイヤーの選択キャラを共有します。
@@ -432,9 +438,9 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 下＋X：グラニト。6～27Fでカウンター。受けなくても32～36Fに大地の衝撃波。
 - 空下：ロックブレイク。12Fにメテオ判定。
 
-通常技・必殺技・投げ・ガード・回避・崖動作は共通の60Hzシミュレーションで動作し、専用の技データは `isaac-data.js` に集約。専用演出は `isaac-vfx.js`、生成画像は `assets/isaac-*.png`、制作プロンプトは `ART-PROMPTS.md`。
+通常技・必殺技・投げ・ガード・回避・崖動作は共通の60Hzシミュレーションで動作し、専用の技データは `characters/isaac/isaac-data.js` に集約。専用演出は `characters/isaac/isaac-vfx.js`、生成画像は `assets/isaac-*.png`、制作プロンプトは `ART-PROMPTS.md`。
 
-追加検証：`node isaac-test.cjs`。オンラインの異キャラ検証：PowerShellで `$env:ISAAC_ONLINE='1'; node online-test.cjs`。
+追加検証：`node characters/isaac/tests/isaac-test.cjs`。オンラインの異キャラ検証：PowerShellで `$env:ISAAC_ONLINE='1'; node online-test.cjs`。
 # ウルグリム参戦
 
 キャラ選択とCPU相手選択に「ウルグリム」を追加。CPU・トレーニング・オンライン対戦に対応します。
@@ -448,7 +454,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 下＋X：鋼の構え。6～27Fのカウンター受付、反撃の発生4F。
 - S＋方向：専用の横・上・下スマッシュ。空下は12Fにメテオ。
 
-独立した技データ：`ulgrim-data.js`。専用検証：`node ulgrim-test.cjs`。異キャラ間オンライン検証：`$env:ULGRIM_ONLINE='1'; node online-test.cjs`。
+独立した技データ：`characters/ulgrim/ulgrim-data.js`。専用検証：`node characters/ulgrim/tests/ulgrim-test.cjs`。異キャラ間オンライン検証：`$env:ULGRIM_ONLINE='1'; node online-test.cjs`。
 # ちいかわ参戦
 
 キャラ選択とCPU相手選択に「ちいかわ」を追加。専用40ポーズ・5カラー、星のインパクト、ハチワレ、草むしり、ポールジャンプのアートを搭載。CPU・トレーニング・オンラインに対応。
@@ -461,7 +467,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 空下：さすまた落とし。11Fがメテオ。相手に当たると少し上へ跳ね返り、ガードされた場合は跳ね返らない。
 - S＋方向：本気の討伐！／うわァッ！ふり上げ／ぐるっといやッ！
 
-技データは `chiikawa-data.js`、演出は `chiikawa-vfx.js`。検証は `node chiikawa-test.cjs`、異キャラオンラインは `$env:CHIIKAWA_ONLINE='1'; node online-test.cjs`。
+技データは `characters/chiikawa/chiikawa-data.js`、演出は `characters/chiikawa/chiikawa-vfx.js`。検証は `node characters/chiikawa/tests/chiikawa-test.cjs`、異キャラオンラインは `$env:CHIIKAWA_ONLINE='1'; node online-test.cjs`。
 # チョコボ参戦
 
 キャラ選択・CPU相手選択に「チョコボ」を追加。基本／戦闘24・歩き8・走り8・黒魔道士3の43ポーズ、羽色5種類。CPU・トレーニング・オンライン対応。
@@ -473,7 +479,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 下＋X：黒魔道のまほう。黒魔道士の帽子とローブに変身し、16～21Fに紫の魔法を放つ。
 - 空下：チョコスタンプ。12Fでメテオ、命中時には跳ね返る。
 
-技データと固有挙動は `chocobo-data.js`、演出は `chocobo-vfx.js`。専用検証：`node chocobo-test.cjs`。異キャラオンライン：`$env:CHOCOBO_ONLINE='1'; node online-test.cjs`。
+技データと固有挙動は `characters/chocobo/chocobo-data.js`、演出は `characters/chocobo/chocobo-vfx.js`。専用検証：`node characters/chocobo/tests/chocobo-test.cjs`。異キャラオンライン：`$env:CHOCOBO_ONLINE='1'; node online-test.cjs`。
 # モノクマ追加
 
 キャラクター選択の6人目。CPU・トレーニング・オンラインに対応。
@@ -483,9 +489,9 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 上＋X：おしおきロケット。上昇後は空中攻撃に移行可能。着地するまで再使用不可。
 - 下＋X：学級裁判トラップ。設置20F後に受付開始、接近を検知すると12Fの予告後に爆発。同じ種類の設置物は各プレイヤー1個まで。
 
-40枚の専用ポーズ・歩行走行スプライトと8種の小道具／エフェクトを使用。発生・持続・後隙は `monokuma-data.js` に定義。投擲物・設置物は本体の攻撃終了後も存続し、撃墜・試合開始・トレーニングリセット時に消去されます。技フレーム表は本体の動作を表示します。
+40枚の専用ポーズ・歩行走行スプライトと8種の小道具／エフェクトを使用。発生・持続・後隙は `characters/monokuma/monokuma-data.js` に定義。投擲物・設置物は本体の攻撃終了後も存続し、撃墜・試合開始・トレーニングリセット時に消去されます。技フレーム表は本体の動作を表示します。
 
-検証：`node monokuma-test.cjs`、`MONOKUMA_ONLINE=1` を環境変数に設定して `node online-test.cjs`。
+検証：`node characters/monokuma/tests/monokuma-test.cjs`、`MONOKUMA_ONLINE=1` を環境変数に設定して `node online-test.cjs`。
 # リキ追加
 
 7人目のプレイアブルキャラクター。CPU・トレーニング・オンライン、5カラーに対応。
@@ -498,7 +504,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 
 やけどは最大3回×1.5%、毒は最大4回×1.2%の追加ダメージ。継続ダメージ自体は硬直を発生させません。同種の飛び道具／霧は所有者ごとに1個まで。撃墜やリセットで状態異常を消去します。
 
-専用検証：`node riki-test.cjs`。オンライン検証は環境変数 `RIKI_ONLINE=1` を設定して `node online-test.cjs`。
+専用検証：`node characters/riki/tests/riki-test.cjs`。オンライン検証は環境変数 `RIKI_ONLINE=1` を設定して `node online-test.cjs`。
 # ロクサス追加
 
 8人目のプレイアブルキャラクター。黒コートと二刀のキーブレード、専用40ポーズ、青と金のエフェクト、5カラー。CPU・トレーニング・オンライン対応。
@@ -509,7 +515,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 下＋X：ライトサークル。設置から45F後に光の柱。判定は45～52F、所有者ごとに1個まで。
 
 飛び道具と魔法陣は本体の攻撃終了後も存続し、撃墜・リセットで消去。技の途中に被弾すると未発射の設置物は生成されません。
-検証：`node roxas-test.cjs`。オンラインは `ROXAS_ONLINE=1` を環境変数に設定して `node online-test.cjs`。
+検証：`node characters/roxas/tests/roxas-test.cjs`。オンラインは `ROXAS_ONLINE=1` を環境変数に設定して `node online-test.cjs`。
 # 2B追加
 
 9人目のプレイアブルキャラクター。専用40ポーズ、5カラー、随伴するポッド042。CPU・トレーニング・オンライン対応。
@@ -520,7 +526,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 下＋X：ポッド・プログラム：トラップサークル。16Fに設置し、設置から36～45Fに攻撃判定。所有者ごとに1個まで。
 
 ポッドの弾と設置トラップは本体の技終了後も残り、所有者の撃墜・試合開始・トレーニングリセットで消去。ポッド自体には当たり判定を持たせていません。
-検証：`node twob-test.cjs`。オンラインは環境変数 `TWOB_ONLINE=1` を設定して `node online-test.cjs`。
+検証：`node characters/twob/tests/twob-test.cjs`。オンラインは環境変数 `TWOB_ONLINE=1` を設定して `node online-test.cjs`。
 
 # 大神追加
 
@@ -532,7 +538,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 下＋X：霧隠れ。2秒間残る霧を生成。範囲内の相手の通常移動を減速する。ダメージ・攻撃フレーム・吹っ飛びは変えない。
 
 同種の飛び道具／霧は所有者ごとに1つまで。撃墜・リセットで消去。
-検証：`node okami-test.cjs`、環境変数 `OKAMI_ONLINE=1` で `node online-test.cjs`。
+検証：`node characters/okami/tests/okami-test.cjs`、環境変数 `OKAMI_ONLINE=1` で `node online-test.cjs`。
 
 # ガンダム追加
 
@@ -544,7 +550,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 下＋X：ハイパー・バズーカ。発生23F。地上は水平、空中は斜め下へ発射。敵・地形への接触や時間経過で爆発。
 
 爆発は1回だけ命中。発射済みの弾は技終了後も進み、所有者の撃墜やリセットで消去。
-検証：`node gundam-test.cjs`、環境変数 `GUNDAM_ONLINE=1` で `node online-test.cjs`。
+検証：`node characters/gundam/tests/gundam-test.cjs`、環境変数 `GUNDAM_ONLINE=1` で `node online-test.cjs`。
 
 
 # ビビ追加
@@ -557,7 +563,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 下＋X：フレアバースト。溜め可能な周囲への爆発。攻撃判定28～33F、後隙24F、着地隙18F。
 
 弾は発射後に本体が行動しても進み、接触時に一度だけ命中。所有者の撃墜・リセットで消去。通常技と空中技は杖と各属性の魔法を使い分ける。
-検証：node vivi-test.cjs。VIVI_ONLINE=1 を設定して node online-test.cjs で2画面の同期を確認。
+検証：node characters/vivi/tests/vivi-test.cjs。VIVI_ONLINE=1 を設定して node online-test.cjs で2画面の同期を確認。
 
 # ゼロ追加
 
@@ -569,7 +575,7 @@ roster.js の definitions がキャラクター名・スタイル・説明・選
 - 下＋X：シールドブーメラン。13F発射、後隙17F。27F飛んだ後に持ち主へ戻る。往路と復路で各1回命中。同時に1枚まで。
 
 Cのつかみ・下強・ダッシュ攻撃ではロッドを使用。弾と盾は本体の技終了後も動き、持ち主の撃墜・リセットで消える。バスターも同時に1発まで。
-検証：node zero-test.cjs。環境変数 ZERO_ONLINE=1 で node online-test.cjs。
+検証：node characters/zero/tests/zero-test.cjs。環境変数 ZERO_ONLINE=1 で node online-test.cjs。
 
 # リン追加
 
@@ -581,7 +587,7 @@ Cのつかみ・下強・ダッシュ攻撃ではロッドを使用。弾と盾�
 - 下＋X：回天剣。溜め可能。9～10F、14～15Fの回転斬りから、21～24Fの踏み込み斬りへ。後隙17F、着地隙14F。
 
 技データからモーションと判定を制御。烈風刃は接触で一度だけ命中し、撃墜・リセットで消える。
-検証：node rin-test.cjs。環境変数 RIN_ONLINE=1 で node online-test.cjs。
+検証：node characters/rin/tests/rin-test.cjs。環境変数 RIN_ONLINE=1 で node online-test.cjs。
 
 # ニア追加
 
@@ -593,7 +599,7 @@ Cのつかみ・下強・ダッシュ攻撃ではロッドを使用。弾と盾�
 - 下＋X：アクアバースト。20～25Fに左右へ水の衝撃波。威力12、命中で2%回復。後隙22F、着地隙16F。
 
 回復は実際にダメージを与えた際だけ発生。空振り・ガード・無敵への接触では回復せず、0%未満にはならない。発射済みのリングは技終了後も進み、撃墜・リセットで消える。
-検証：node nia-test.cjs。環境変数 NIA_ONLINE=1 で node online-test.cjs。
+検証：node characters/nia/tests/nia-test.cjs。環境変数 NIA_ONLINE=1 で node online-test.cjs。
 
 # ライトニング追加
 
@@ -607,7 +613,7 @@ Cのつかみ・下強・ダッシュ攻撃ではロッドを使用。弾と盾�
 切り替え後のコマンドは次の通常攻撃・スマッシュ・空中攻撃1回を1.2倍に強化。レイヴェジャーは次のルインを溜めなしの3連弾（6×3）に強化。メディックは切り替え時に2%回復し、再回復まで300F（5秒）。0%未満にはならない。頭上のロール名と✦で強化の有無を表示。
 
 弾は技終了後も進み、同じ持ち主の次の発射・撃墜・リセットで消去。空下は急降下し、命中時に小さく跳ねる。
-検証：node lightning-test.cjs。環境変数 LIGHTNING_ONLINE=1 で node online-test.cjs。
+検証：node characters/lightning/tests/lightning-test.cjs。環境変数 LIGHTNING_ONLINE=1 で node online-test.cjs。
 
 # コレット追加
 
@@ -621,7 +627,7 @@ Cのつかみ・下強・ダッシュ攻撃ではロッドを使用。弾と盾�
 アイテムスティールの実際の命中で、ヒール（3%回復）→スピード（180Fだけ移動速度1.15倍）→ガード（シールド12回復）の順に効果が出る。1回の技につき1効果。空振り・ガード・無敵では取得しない。ダメージは0%未満に、シールドは最大値より大きくならない。
 
 上必殺は飛行中の操縦と終了時の羽の狙い、横必殺は相手の位置に応じた回り込みと背後の攻撃が特徴。CPUも翼を操縦し、ステージの下では横へ抜けるルートを選ぶ。
-検証：node colette-test.cjs。環境変数 COLETTE_ONLINE=1 で node online-test.cjs。
+検証：node characters/colette/tests/colette-test.cjs。環境変数 COLETTE_ONLINE=1 で node online-test.cjs。
 
 # リィン追加
 
@@ -635,7 +641,7 @@ Cのつかみ・下強・ダッシュ攻撃ではロッドを使用。弾と盾�
 
 通常攻撃は発生4〜8Fが中心。二段の空前、11Fだけの空下メテオ、発生13F・後隙19Fの横スマッシュで、速い牽制と大技のリスクを区別する。モーション・当たり判定・移動イベントは同じフレームデータを使用。鬼気解放は各ファイターのコピーされた能力値に適用し、他キャラや共通データを変更しない。CPUは螺旋撃の進路を操り、ステージ下面では先に横へ抜ける。
 
-検証：node rean-test.cjs。環境変数 REAN_ONLINE=1 で node online-test.cjs。公開中の共有URLからも、再読み込みして選択可能。
+検証：node characters/rean/tests/rean-test.cjs。環境変数 REAN_ONLINE=1 で node online-test.cjs。公開中の共有URLからも、再読み込みして選択可能。
 
 # エステル追加
 
@@ -649,7 +655,7 @@ Cのつかみ・下強・ダッシュ攻撃ではロッドを使用。弾と盾�
 
 通常攻撃は発生4〜8Fを中心とし、棒の長い間合いと短い攻撃判定を両立。上必殺の支点回転・方向選択、横必殺の命中確認と連携、下必殺の小さな位置調整で用途を区別する。CPUも跳び出す方向を選び、ステージの下面では横へ抜ける。
 
-検証：node estelle-test.cjs。環境変数 ESTELLE_ONLINE=1 で node online-test.cjs。公開中の共有URLは再読み込みして選択可能。
+検証：node characters/estelle/tests/estelle-test.cjs。環境変数 ESTELLE_ONLINE=1 で node online-test.cjs。公開中の共有URLは再読み込みして選択可能。
 
 2026-10-03検証結果：エステル専用112項目、エステルのオンライン22項目、test-all.cjsの全回帰チェックが通過。共有URLでも19キャラ・エステル40ポーズの読み込みと対戦開始を確認。
 
@@ -686,9 +692,9 @@ UIはグラファイトを基調に青／シアンで統一。ホーム、全19�
 
 通常技は発生4〜8Fが中心、強攻撃とスマッシュは範囲・威力・戻りを区別。発生・持続・後隙・着地隙・全体Fと移動／転移イベントをNoctisMovesで管理し、60Hzの戦闘時計で描画と判定を同期。横必殺は事前に置いた剣への再入力、上必殺は発動中に選ぶ固定支点への移動という用途の違いを持つ。CPUも目印の剣を再入力で追い、上必殺の支点を選ぶ。
 
-画像生成は組み込みimage_genを使用。元の透過PNGはassets/noctis-atlas.png、noctis-locomotion.png、noctis-effects.png、noctis-jabs.png。制作プロンプトは.tools/noctis-prompts.md。配信はハッシュ付きの可逆圧縮画像・事前生成ポートレートを使い、起動時に全キャラの元画像解析を行わない。
+画像生成は組み込みimage_genを使用。元の透過PNGはcharacters/noctis/assets/noctis-atlas.png、noctis-locomotion.png、noctis-effects.png、noctis-jabs.png。制作プロンプトは.tools/noctis-prompts.md。配信はハッシュ付きの可逆圧縮画像・事前生成ポートレートを使い、起動時に全キャラの元画像解析を行わない。
 
-検証：node noctis-test.cjs、node art-loading-test.cjs、node test-all.cjs。NOCTIS_ONLINE=1でnode online-test.cjs。共有URLも同じファイルを配信するので、再読み込みして選択可能。
+検証：node characters/noctis/tests/noctis-test.cjs、node art-loading-test.cjs、node test-all.cjs。NOCTIS_ONLINE=1でnode online-test.cjs。共有URLも同じファイルを配信するので、再読み込みして選択可能。
 
 2026-10-03 ノクティス検証完了：専用108項目、オンライン28項目、既存キャラを含むtest-all.cjs全回帰チェック通過。画像整合性811ポーズ・144エフェクト・4,055カラーポーズに不一致なし。全20人を9種類の画面サイズで1ページ表示。崖の手位置を左右とも合わせ、共通操作感43項目も確認。共有URLで20人の選択・40ポーズ・5カラー・ワープ・斬撃SE・新ソース配信を確認。ログは.tools/noctis-final.log、.tools/noctis-online.log、.tools/noctis-regression.log、.tools/noctis-ledge-regression.log、.tools/noctis-public.log。
 
@@ -703,7 +709,7 @@ UIはグラファイトを基調に青／シアンで統一。ホーム、全19�
 
 BGMの初期音量は25%（従来32%）。保存済みの音量設定を維持し、音量パネルから自由に調整できます。
 
-クライヴ検証: clive-test.cjs 115項目、CLIVE_ONLINE=1 のオンライン31項目、全回帰テスト通過。共有URLで選択・魔法派生・アート・SE配信とBGM初期25%を確認。
+クライヴ検証: characters/clive/tests/clive-test.cjs 115項目、CLIVE_ONLINE=1 のオンライン31項目、全回帰テスト通過。共有URLで選択・魔法派生・アート・SE配信とBGM初期25%を確認。
 
 ## 結城 理（ペルソナ3）
 
@@ -731,9 +737,9 @@ BGMの初期音量は25%（従来32%）。保存済みの音量設定を維持�
 
 CPU・敵停止トレーニング・キーコン・ゲームパッド・オンラインに対応。全23人をキャラ選択の1ページに表示。元画像の起動時解析を避け、可逆圧縮の事前生成アート・カラー情報・ポートレートを配信。BGM初期25%と保存済み音量、手動BGMを維持。
 
-素材は組み込みimage_genで生成。元PNG: assets/neku-atlas.png、neku-locomotion.png、neku-effects.png。正確なプロンプト: .tools/neku-prompts.md。
+素材は組み込みimage_genで生成。元PNG: characters/neku/assets/neku-atlas.png、neku-locomotion.png、neku-effects.png。正確なプロンプト: .tools/neku-prompts.md。
 
-検証: node neku-test.cjs、NEKU_ONLINE=1でnode online-test.cjs、node art-loading-test.cjs、node test-all.cjs。共有URLの検証はnode .tools/neku-public.cjs。
+検証: node characters/neku/tests/neku-test.cjs、NEKU_ONLINE=1でnode online-test.cjs、node art-loading-test.cjs、node test-all.cjs。共有URLの検証はnode .tools/neku-public.cjs。
 
 ネク検証完了: 固有131項目（溜め炎のガード／ヒットストップを含む）、オンライン32項目、全回帰チェック通過。全23人・939ポーズ・168エフェクト・4695カラーポーズの透過／色に不一致なし。キャラ選択ポートレート311ms、プレイ準備731msをローカルで計測。9画面サイズで全23人を1ページに表示。共有URLの選択・転移先操作・引き寄せ・岩投げ・アート・SE配信も確認。ログ: .tools/neku-final.log、.tools/neku-online.log、.tools/neku-regression.log、.tools/neku-public.log。
 ## 鳴上 悠（ペルソナ4）
@@ -764,7 +770,7 @@ CPU・敵停止トレーニング・キーコン・ゲームパッド・オン�
 
 通常技は発生4〜8F中心、スマッシュは13〜15F。空中技は着地隙7／8／10／14Fを区別。予備動作・加速・判定・振り抜き・戻り、召喚と跳躍の各段階をNaegiMovesのフレームデータで制御。希望の跳躍の移動区間と中間の構えも、判定がないポーズ区間としてデータ化しています。
 
-制作は組み込みimage_gen。素材：assets/naegi-atlas.png、naegi-locomotion.png、naegi-support.png、naegi-effects.png。正確なプロンプト：.tools/naegi-prompts.md。全48ポーズとエフェクトをnaegi-contact-preview.pngと実際の戦闘画面で視覚確認し、透過PNGを保持。実際の手の位置で左右の崖つかまりを整列。配信は可逆圧縮画像・事前生成カラー／ポートレートを使用。BGM初期25%・保存済み音量・手動BGMは維持しています。
+制作は組み込みimage_gen。素材：characters/naegi/assets/naegi-atlas.png、naegi-locomotion.png、naegi-support.png、naegi-effects.png。正確なプロンプト：.tools/naegi-prompts.md。全48ポーズとエフェクトをcharacters/naegi/previews/naegi-contact-preview.pngと実際の戦闘画面で視覚確認し、透過PNGを保持。実際の手の位置で左右の崖つかまりを整列。配信は可逆圧縮画像・事前生成カラー／ポートレートを使用。BGM初期25%・保存済み音量・手動BGMは維持しています。
 
 ## ルーク（テイルズ オブ ジ アビス）
 
@@ -777,7 +783,7 @@ CPU・敵停止トレーニング・キーコン・ゲームパッド・オン�
 
 通常技の発生は4〜8F中心、スマッシュは11〜13F。通常技は10〜13Fで戻り、スマッシュは23〜24Fの後隙を持ちます。空中技の着地隙は空N7F・空上8F・空前後10F・空下14F。LukeMovesの60Hzフレームデータで判定・モーション・派生・移動・効果音を同期し、モーションの終了と同時に行動を再開します。
 
-制作は組み込みimage_gen。最終素材：assets/luke-atlas.png、assets/luke-locomotion.png、assets/luke-jabs.png、assets/luke-effects.png。正確な全プロンプト：.tools/luke-prompts.md。元画像の剣先で2体がつながった弱攻撃を別制作した透過パッチで置換。luke-contact-preview.pngで全40ポーズと8エフェクトを視覚確認。赤髪を保ったまま黒い装備のカラーを変更し、崖の接続は実際の上げた手の位置で左右とも整列しました。配信画像・ポートレートは可逆圧縮で事前生成し、元シート解析を起動時に戻しません。
+制作は組み込みimage_gen。最終素材：characters/luke/assets/luke-atlas.png、characters/luke/assets/luke-locomotion.png、characters/luke/assets/luke-jabs.png、characters/luke/assets/luke-effects.png。正確な全プロンプト：.tools/luke-prompts.md。元画像の剣先で2体がつながった弱攻撃を別制作した透過パッチで置換。characters/luke/previews/luke-contact-preview.pngで全40ポーズと8エフェクトを視覚確認。赤髪を保ったまま黒い装備のカラーを変更し、崖の接続は実際の上げた手の位置で左右とも整列しました。配信画像・ポートレートは可逆圧縮で事前生成し、元シート解析を起動時に戻しません。
 
 検証：固有145項目、オンライン45項目、test-all.cjsの全既存回帰チェック通過。CPUは左右の崖横とステージ下4地点から自律復帰。全27人の1,123ポーズ・200エフェクト・5,615カラーポーズの透過／色に不一致なし。9画面サイズで全員1ページ表示。単独ローカル実測はポートレート338ms・対戦画像825ms。共有URLでキャラ選択、フェイント、斜め上昇、横蹴り、事前生成画像とSE・ソース配信を確認。ログ：.tools/luke-regression.log、luke-online-final.log、luke-art-loading.log、luke-public.log。BGM初期25%・保存済み音量・手動BGMは維持。
 
@@ -794,7 +800,7 @@ CPU・敵停止トレーニング・キーコン・ゲームパッド・オン�
 
 通常技は発生4〜8F中心、スマッシュは12〜14F。空中技の着地隙は空N7F・空上8F・空前後10F・空下14F。全技をRexMovesで管理し、当たり判定・モーション・派生・効果音を同じ60Hzの時計で同期。身体を2体映していた元シートの回転／フック部分は透過パッチで修正し、ロープとアンカーを実際の座標で別描画。崖とフックの接続位置は実際の手位置に整列。
 
-制作は組み込みimage_gen。最終素材：assets/rex-atlas.png、rex-locomotion.png、rex-props.png、rex-effects-v2.png、rex-pose-patch.png。正確な全プロンプト：.tools/rex-prompts.md。接触シート：rex-contact-preview.png。全26人の可逆圧縮アトラスとポートレートを事前生成し、起動時の元シート解析を避けています。BGM初期25%・保存済み音量・手動BGMは維持。
+制作は組み込みimage_gen。最終素材：characters/rex/assets/rex-atlas.png、rex-locomotion.png、rex-props.png、rex-effects-v2.png、rex-pose-patch.png。正確な全プロンプト：.tools/rex-prompts.md。接触シート：characters/rex/previews/rex-contact-preview.png。全26人の可逆圧縮アトラスとポートレートを事前生成し、起動時の元シート解析を避けています。BGM初期25%・保存済み音量・手動BGMは維持。
 
 ## ウィル（メタファー：リファンタジオ）
 
@@ -807,7 +813,7 @@ CPU・敵停止トレーニング・キーコン・ゲームパッド・オン�
 
 通常技は発生4〜8F中心、スマッシュは10〜13F、空中着地隙は7／8／10／14F。判定・モーション・派生・召喚・移動・SEはWillMovesの60Hzフレームデータから制御。単に上下の突進を着色する設計にせず、横必殺は操縦する騎乗状態、上必殺は先に位置を決めて移動する状態です。
 
-組み込みimage_genで制作。素材：assets/will-atlas.png、assets/will-locomotion.png、assets/will-summons.png、assets/will-effects.png。正確なプロンプト：.tools/will-prompts.md。全48素材をwill-contact-preview.pngと実際の戦闘で視覚確認。崖つかまりは実際の手位置に整列し、透明な余白ごと可逆圧縮配信へ事前生成。既存の27キャラ・キー設定・手動BGM・音量設定は保持。
+組み込みimage_genで制作。素材：characters/will/assets/will-atlas.png、characters/will/assets/will-locomotion.png、characters/will/assets/will-summons.png、characters/will/assets/will-effects.png。正確なプロンプト：.tools/will-prompts.md。全48素材をcharacters/will/previews/will-contact-preview.pngと実際の戦闘で視覚確認。崖つかまりは実際の手位置に整列し、透明な余白ごと可逆圧縮配信へ事前生成。既存の27キャラ・キー設定・手動BGM・音量設定は保持。
 
 
 
@@ -825,7 +831,7 @@ CPU・敵停止トレーニング・キーコン・ゲームパッド・オン�
 
 通常技は発生4〜8F中心、スマッシュは10〜14F。空中着地隙は空N7F、空上8F、前後10F、空下14F。モーション・判定・SE・派生・移動はKosmosMovesの60Hzフレームデータを使用する。発生後に残る光は描画上の余韻であり、攻撃判定を延長しない。長押しで連続発動／段階派生しない。
 
-画像生成は組み込みimage_gen。完全なプロンプトと参照画像は .tools/kosmos-prompts.md。元画像は assets/kosmos-atlas.png、kosmos-locomotion.png、kosmos-weapons.png、kosmos-effects.png、kosmos-dair.png。透過・カラーを保った配信用データをART_IDS=kosmosでassets/ready/へ追加し、既存28人の画像を維持。
+画像生成は組み込みimage_gen。完全なプロンプトと参照画像は .tools/kosmos-prompts.md。元画像は characters/kosmos/assets/kosmos-atlas.png、kosmos-locomotion.png、kosmos-weapons.png、kosmos-effects.png、kosmos-dair.png。透過・カラーを保った配信用データをART_IDS=kosmosでassets/ready/へ追加し、既存28人の画像を維持。
 
 検証: 固有154項目、2つの別セッションによるオンライン49項目、全既存test-all.cjs回帰チェック通過。CPUは左右の崖横・ステージ下4地点から復帰。全29人1,219ポーズ・216FX・6,095カラーポーズで透過／色の不一致なし。9画面サイズで全29人が1ページ表示。ローカル実測は選択用画像320ms・対戦画像871ms。共有URLでも固有のチェーン派生・ワープ・ビーム・ドリルと素材／SEの配信を確認。ログ: .tools/kosmos-test.log、kosmos-online-final.log、kosmos-regression.log、kosmos-public.log。
 
@@ -857,7 +863,7 @@ CPU・敵停止トレーニング・キーコン・ゲームパッド・オン�
 
 空下も下降斬りから花弁の着地衝撃へ移行し、命中で小さく跳ね返ります。弱は5／4／7F、強攻撃は6〜8F、主要空中技は5〜9F、スマッシュは10〜13F発生。空N7F・空上8F・空前後10F・空下14Fの着地隙。発生・持続・後隙・着地隙・全体をEmmaMovesに定義し、同じ60Hz時計で判定・予備動作・振り抜き・戻り・SEを制御。モーション終了後に行動再開。崖の接続は実際に伸ばした手へ整列。
 
-組み込みimage_genで制作・修正。完成元素材: assets/emma-atlas.png、emma-locomotion.png、emma-koo.png、emma-effects.png、emma-pose-patch.png、emma-attacks-patch.png。正確な全7プロンプト: .tools/emma-prompts.md。全48ポーズ・8FXをemma-contact-preview.pngと公開画面で視覚確認し、隣の人物と連結した斬撃／回転を独立した透過パッチで置換。歩行と走行を正しい周期へ並べ直し、全5色のready画像・ポートレートを可逆圧縮で事前生成。起動時に元シート解析を戻しません。
+組み込みimage_genで制作・修正。完成元素材: characters/emma/assets/emma-atlas.png、emma-locomotion.png、emma-koo.png、emma-effects.png、emma-pose-patch.png、emma-attacks-patch.png。正確な全7プロンプト: .tools/emma-prompts.md。全48ポーズ・8FXをcharacters/emma/previews/emma-contact-preview.pngと公開画面で視覚確認し、隣の人物と連結した斬撃／回転を独立した透過パッチで置換。歩行と走行を正しい周期へ並べ直し、全5色のready画像・ポートレートを可逆圧縮で事前生成。起動時に元シート解析を戻しません。
 
 検証: 固有177項目・別セッション2つのオンライン61項目・test-all.cjs全回帰チェック通過。CPUは左右の崖横とステージ下4地点から自律復帰。全31人の1,307ポーズ・232FX・6,535カラーポーズに透過／色の不一致なし。9画面サイズで31人を1ページ表示。ローカル実測は選択用画像305ms・対戦画像923ms。共有URLで挟み撃ち・呼び戻し・蔦の接続／振り／解除・溜め射撃・跳ね返り／着地衝撃・素材とSE配信を確認。ログ: .tools/emma-test-final.log、emma-online.log、emma-regression.log、emma-public.log。既存音源を使用し、BGM初期25%・保存済み音量・手動BGMを維持。
 
@@ -873,4 +879,4 @@ CPU・敵停止トレーニング・キーコン・ゲームパッド・オン�
 
 技の終了は最後の射撃・追加入力・斬撃に合わせ、待機ポーズで長時間拘束しない。CPUとオンラインにも同じ専用ルールを使用。エフェクトは右向き素材を左右反転してからローカル回転し、実際の剣・弾の方向へ合わせる。
 
-制作プロンプトと素材一覧: `.tools/eve-generation-record.json`。原寸透過アトラス: `assets/eve-native.png`。検証: `node eve-test.cjs`、`node eve-online-test.cjs`、`node art-loading-test.cjs`。
+制作プロンプトと素材一覧: `.tools/eve-generation-record.json`。原寸透過アトラス: `characters/eve/assets/eve-native.png`。検証: `node characters/eve/tests/eve-test.cjs`、`node characters/eve/tests/eve-online-test.cjs`、`node art-loading-test.cjs`。

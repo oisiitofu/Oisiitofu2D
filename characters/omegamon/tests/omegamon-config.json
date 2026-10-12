@@ -1,0 +1,21 @@
+{
+  "name": "オメガモン",
+  "style": "デジモン",
+  "family": "sword",
+  "height": 122,
+  "radius": 24,
+  "stats": {
+    "weight": 112,
+    "walkSpeed": 3.8500000000000005,
+    "initialDashSpeed": 7,
+    "runSpeed": 7,
+    "airSpeed": 6.5,
+    "airAcceleration": 0.32,
+    "gravity": 0.64,
+    "fullHopVelocity": 14
+  },
+  "mask": "r>90&&r>green*1.5&&r>b*1.25",
+  "customPreparation": true,
+  "description": "アグモンの進化形態。固有の武器・技で戦うオメガモン。",
+  "gate": "if(f.characterId==='omegamon'&&['gale','airDrop'].includes(type)&&f.digiModeCooldown>0)return false;"
+}

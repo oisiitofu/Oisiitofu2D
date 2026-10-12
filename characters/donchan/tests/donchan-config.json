@@ -1,0 +1,8 @@
+{
+ "name":"どんちゃん","style":"太鼓の達人","family":"staff","height":86,"radius":23,
+ "stats":{"weight":88,"walkSpeed":3.1,"initialDashSpeed":6.3,"runSpeed":6.7,"airSpeed":6.1,"airAcceleration":0.36,"gravity":0.58,"fullHopVelocity":13.5},
+ "mask":"r>110&&r>green*1.6&&r>b*1.5",
+ "customPreparation":true,
+ "gate":"if(f.characterId==='donchan'&&(type==='dash'&&DonchanRules.objects.some(q=>q.owner===f.id&&q.kind==='lane'&&!q.dead)||['gale','airDrop'].includes(type)&&(donchanSoul(f)<100||f.donMaxTime>0)))return false;",
+ "description":"バチと音符で戦う太鼓。横必殺は近・中・遠へ順に走る連打レーン。上必殺は風船を左右に操り、再入力で破裂させて飛び出す。魂が満タンになったら下必殺でお祭りタイム。"
+}

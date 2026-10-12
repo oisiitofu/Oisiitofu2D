@@ -24,7 +24,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
    return{poses,effects,costumes,mismatches};
   });
   assert.equal(checks.mismatches.length,0,'Alpha / opaque pixel mismatches: '+checks.mismatches.slice(0,20).join(', '));
-  assert.equal(requests.filter(p=>/^\/assets\/[a-z0-9_-]+-(atlas|atlas-final|locomotion|locomotion-v2|effects|effects-final)\.png$/.test(p)).length,0,'Original production sheets must not be requested');
+  assert.equal(requests.filter(p=>/^\/characters\/[a-z0-9-]+\/assets\//.test(p)).length,0,'Original production sheets must not be requested');
   assert.deepEqual(requests.filter(p=>p.endsWith('.js')),['/game-bundle.js'],'Game scripts must use one ordered bundle');
   await page.click('#swatches button:first-child');await page.click('[data-id="estelle"]');await page.click('#start');
   assert.equal(await page.evaluate(()=>fighters[0].characterId),'estelle');

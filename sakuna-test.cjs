@@ -1,1 +1,0 @@
-require('./.tools/newcomer-test.cjs')('sakuna').catch(e=>{console.error(e);process.exitCode=1;});

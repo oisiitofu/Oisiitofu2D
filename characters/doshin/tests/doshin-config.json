@@ -1,0 +1,21 @@
+{
+  "name": "ドシン",
+  "style": "GIANT DOSHIN",
+  "family": "punch",
+  "height": 120,
+  "radius": 25,
+  "stats": {
+    "weight": 130,
+    "walkSpeed": 2.6,
+    "initialDashSpeed": 5.2,
+    "runSpeed": 5.6,
+    "airSpeed": 5.2,
+    "airAcceleration": 0.28,
+    "gravity": 0.8,
+    "fullHopVelocity": 14.5
+  },
+  "mask": "r>100&&green>60&&r>green*1.05&&green>b*1.4&&b<150",
+  "customPreparation": true,
+  "gate": "if(f.characterId==='doshin'&&['gale','airDrop'].includes(type)&&f.doshinPlayCooldown>0)return false;",
+  "description": "長い腕を持つ巨人。地形を作って両者が乗れる足場にし、再使用で破壊。壁で跳ね返る大ジャンプと着地の地震。"
+}

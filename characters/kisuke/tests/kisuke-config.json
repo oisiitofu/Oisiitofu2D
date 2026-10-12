@@ -1,0 +1,20 @@
+{
+  "name": "鬼助",
+  "style": "朧村正 / KISUKE",
+  "family": "sword",
+  "height": 94,
+  "radius": 16,
+  "stats": {
+    "weight": 87,
+    "walkSpeed": 3.6,
+    "initialDashSpeed": 8.4,
+    "runSpeed": 8.2,
+    "airSpeed": 6.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.62,
+    "fullHopVelocity": 14.5
+  },
+  "mask": "green>r*1.25&&b>r*1.2&&green>45",
+  "customPreparation": true,
+  "description": "下必殺で朧村正・真名・八雲を切り替える。通常必殺は刀に応じて旋風・夜光・双炎に変化し、霊力を消費。横必殺は低く滑り込み、追加入力で相手の背後へ回る返し斬り。上必殺は押し直しで最大3段、方向を変えて斬り上がる。使っていない刀は霊力が回復する。"
+}

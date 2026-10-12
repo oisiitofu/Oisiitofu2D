@@ -1,0 +1,21 @@
+{
+  "name": "モーグリ",
+  "style": "FINAL FANTASY",
+  "family": "magic",
+  "height": 82,
+  "radius": 17,
+  "stats": {
+    "weight": 72,
+    "walkSpeed": 3.3,
+    "initialDashSpeed": 6.4,
+    "runSpeed": 6.8,
+    "airSpeed": 6.4,
+    "airAcceleration": 0.38,
+    "gravity": 0.57,
+    "fullHopVelocity": 13
+  },
+  "mask": "r>100&&r>green*1.4&&r>b*1.15",
+  "customPreparation": true,
+  "gate": "if(f.characterId==='moogle'&&['gale','airDrop'].includes(type)&&(moogleMP(f)<40||f.moogleCureCooldown>0))return false;",
+  "description": "ファイア・ブリザド・エアロ・ケアルで戦うモーグリ。氷結晶を砕き、両者が乗れる風の柱から飛び出す。"
+}

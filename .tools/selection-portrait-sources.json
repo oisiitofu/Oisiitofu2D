@@ -1,6 +1,6 @@
 {
   "dragoon": {
-    "source": "assets/dragoon-selection.png",
+    "source": "characters/dragoon/assets/dragoon-selection.png",
     "crop": [
       51,
       0,
@@ -12,7 +12,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create a new high-resolution face and upper-chest portrait of the Lalafell dragoon in the reference. Input image 1 is character identity, outfit and palette reference, not an image to upscale. Preserve the pale silver lavender tousled hair, large vivid blue eyes, pointed ears, youthful chibi proportions, and ornate black-and-silver dragoon armor. Draw fresh clean anime illustration with crisp lines and polished detailed shading at least as good as the reference. Composition: landscape 3:2 canvas, face centered, 3/4 view slightly toward viewer's right, focused confident expression. Hair and ears fully visible with small margins. Head and shoulders fill most of the frame, cropped below upper chest at the bottom; face easily readable at tiny roster tile size. True transparent background. No spear crossing the face, no legs, no full body, no other characters, no text, logos, borders, scenery, glows or checkerboard drawn into image."
   },
   "isaac": {
-    "source": "assets/isaac-selection.png",
+    "source": "characters/isaac/assets/isaac-selection.png",
     "crop": [
       51,
       0,
@@ -24,7 +24,7 @@
     "prompt": "Use case: stylized-concept. Asset type: fighting-game character selection portrait. Create a new high-resolution bust illustration of Isaac (ロビン) from Golden Sun, matching image 1, which is an identity, palette and costume reference. Blonde spiky hair, blue eyes, blue tunic with gold trim, yellow scarf, rounded golden shoulder armor and dark gloves. Match his young confident anime hero identity. Clean detailed anime illustration, crisp outlines and polished shading. Landscape 3:2 canvas, large centered face and shoulders in three-quarter view facing slightly right, eyes toward viewer, confident expression. Only head and upper torso cropped at bottom, head occupying 65 percent of image height; leave a small clear margin above complete hair and around both sides of head. No sword crossing face. True transparent background with zero backdrop or ambient glow. No legs, no full body, no extra characters, no text, logos, frame, scenery or checkerboard. This is fresh dedicated portrait art, not enlarging a sprite."
   },
   "ulgrim": {
-    "source": "assets/ulgrim-selection.png",
+    "source": "characters/ulgrim/assets/ulgrim-selection.png",
     "crop": [
       51,
       0,
@@ -36,7 +36,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game roster portrait. Reference image 1 defines the existing character Ulgrim / ウルグリム and must be faithfully matched. Create fresh polished high-resolution anime game illustration of his face and upper chest. Mature rugged man, swept-back charcoal hair, stern brows, short gray beard and mustache, dark navy high-collared longcoat with ornate gold piping, gold shoulder details, dark gloves. Keep the exact costume design and mature identity of the reference. Landscape 3:2 composition: centered large face, three-quarter angle slightly right, confident stern expression, head-and-shoulders only with bottom crop at upper chest. Complete head with small margin at top, face occupying about 60% of height and readable in a very small tile. Crisp ink contours, carefully shaded hair and fabric, premium game portrait quality. True transparent background, no glow, no scenery. No sword, no legs, no full body, no additional characters, no lettering, logos or borders."
   },
   "chiikawa": {
-    "source": "assets/chiikawa-selection.png",
+    "source": "characters/chiikawa/assets/chiikawa-selection.png",
     "crop": [
       51,
       0,
@@ -48,7 +48,7 @@
     "prompt": "Use case: stylized-concept. Dedicated character selection portrait of Chiikawa / ちいかわ, precisely matching reference image 1. Create fresh high-resolution clean illustrated portrait of the little white round hamster-like character: tiny round ears, black oval eyes, tiny brows, tiny w-shaped mouth, pink blush cheeks. Keep the cute simple official-like proportions and cream-white body, thick smooth dark outline and soft subtle pastel shading. Landscape 3:2 transparent canvas, large centered head and upper body, happy determined gentle expression, facing viewer slightly right. Head fills about 70 percent of canvas height, small clear margin above complete ears; shoulders/upper body cut at bottom. A little of the blue fork handle may appear near lower right, must not block face. True transparent background, no scenery, glow, text, labels, watermarks, frame, extra characters, full-body or legs. Render a crisp polished new illustration, not a magnified old sprite."
   },
   "chocobo": {
-    "source": "assets/chocobo-selection.png",
+    "source": "characters/chocobo/assets/chocobo-selection.png",
     "crop": [
       51,
       0,
@@ -60,7 +60,7 @@
     "prompt": "Use case: stylized-concept. Dedicated fighting-game character selection portrait of Chocobo / チョコボ. Image 1 is identity, costume and palette reference. Create fresh high-resolution detailed anime illustration of the yellow fluffy bird's complete head, neck and upper chest. Large bright blue eyes, orange curved beak, swept-back spiky golden crest, layered bright yellow feathers, brown leather harness with bronze ring clasps. Preserve cheerful reference identity. Landscape 3:2 framing: center head and face, three-quarter view slightly right, playful confident expression; head occupies about 65 percent of image height, crest fully visible with top margin, bust cropped below chest at bottom. Crisp lines, rich feather shading, polished premium roster art readily recognizable at tiny size. True transparent background; no ambient glow, scenery, text, logos, other characters, full-body or feet."
   },
   "monokuma": {
-    "source": "assets/monokuma-selection.png",
+    "source": "characters/monokuma/assets/monokuma-selection.png",
     "crop": [
       51,
       0,
@@ -72,7 +72,7 @@
     "prompt": "Use case: stylized-concept. Dedicated fighting-game character selection portrait of Monokuma / モノクマ. Image 1 is the character design reference. Create a fresh high-resolution head and upper-chest illustration matching the distinctive vertically split bear: viewer-left half white with round black eye and gentle bear mouth; viewer-right half jet black with red jagged eye and wide mischievous toothy grin; round ears and round short muzzle. Preserve exact left/right split and reference identity. Clean crisp anime mascot illustration, smooth dark outlines, polished subtle soft shading. Landscape 3:2, centered large face, near-front three-quarter slight right, both ears fully visible with small top margin, head fills 70 percent of height, lower chest cropped at bottom. True transparent background and clean cutout silhouette, no glow/backdrop/scenery. No full-body, legs, extra characters, text, logos, borders or watermarks. Make facial features easy to identify in a tiny tile."
   },
   "riki": {
-    "source": "assets/riki-selection.png",
+    "source": "characters/riki/assets/riki-selection.png",
     "crop": [
       51,
       0,
@@ -84,7 +84,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art. Input image 1 is identity, palette and costume reference, not an image to upscale. Subject: Riki / リキ from Xenoblade, a cheerful round Nopon. Match the reference's cream tan fur, enormous fan-like peach-orange ears, coral tuft, tiny black eyes, wide joyful mouth, light blue patterned sleeveless vest with pink center emblem and brown backpack straps. Show just complete head/ears and upper torso. Do not include the creature-shaped staff or any companion. Composition: landscape 3:2, large centered face and head, three-quarter angle slightly toward viewer's right, face readily readable in a tiny roster card. Head occupies 70% of image height, small top margin with complete hair/ears/hat, upper chest cut at bottom. Polished detailed anime game illustration, crisp outlines and fine shading, at least reference quality. True transparent background, clean silhouette, no ambient glow or backdrop. No legs or full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "roxas": {
-    "source": "assets/roxas-selection.png",
+    "source": "characters/roxas/assets/roxas-selection.png",
     "crop": [
       51,
       0,
@@ -96,7 +96,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art. Input image 1 is identity, palette and costume reference, not an image to upscale. Subject: Roxas / ロクサス from Kingdom Hearts. Match reference's blonde spiky hair, youthful face and vivid blue eyes, black hooded Organization XIII coat with high neckline, silver zipper and twin silver chain details. Confident gentle expression. Head and upper chest only; no keyblade. Composition: landscape 3:2, large centered face and head, three-quarter angle slightly toward viewer's right, face readily readable in a tiny roster card. Head occupies 70% of image height, small top margin with complete hair/ears/hat, upper chest cut at bottom. Polished detailed anime game illustration, crisp outlines and fine shading, at least reference quality. True transparent background, clean silhouette, no ambient glow or backdrop. No legs or full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "twob": {
-    "source": "assets/twob-selection.png",
+    "source": "characters/twob/assets/twob-selection.png",
     "crop": [
       51,
       0,
@@ -108,7 +108,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art. Input image 1 is identity, palette and costume reference, not an image to upscale. Subject: 2B from NieR Automata. Faithfully preserve the reference's pale skin, straight silver-white bob with long bangs, black eye-covering blindfold and black headband, elegant black high-neck outfit with subtle chest embroidery and puff shoulder sleeves. Calm poised expression, small visible mouth. Head and upper chest only. No weapon, no sexualized pose. Composition: landscape 3:2, large centered face and head, three-quarter angle slightly toward viewer's right, face readily readable in a tiny roster card. Head occupies 70% of image height, small top margin with complete hair/ears/hat, upper chest cut at bottom. Polished detailed anime game illustration, crisp outlines and fine shading, at least reference quality. True transparent background, clean silhouette, no ambient glow or backdrop. No legs or full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "okami": {
-    "source": "assets/okami-selection.png",
+    "source": "characters/okami/assets/okami-selection.png",
     "crop": [
       51,
       0,
@@ -120,7 +120,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art. Input image 1 is identity, palette and costume reference, not an image to upscale. Subject: Amaterasu / 大神, the white wolf from Okami. Faithfully match the white fur, long pointed ears, red markings around eyes and on forehead and shoulders, noble narrow canine face, black nose. Draw head, neck and upper chest only in an expressive crisp brush-ink anime illustration with restrained soft shading. No flaming disc or scenery, no other animals. Composition: landscape 3:2, large centered face and head, three-quarter angle slightly toward viewer's right, face readily readable in a tiny roster card. Head occupies 70% of image height, small top margin with complete hair/ears/hat, upper chest cut at bottom. Polished detailed anime game illustration, crisp outlines and fine shading, at least reference quality. True transparent background, clean silhouette, no ambient glow or backdrop. No legs or full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "gundam": {
-    "source": "assets/gundam-selection.png",
+    "source": "characters/gundam/assets/gundam-selection.png",
     "crop": [
       51,
       0,
@@ -132,7 +132,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art. Input image 1 is identity, palette and costume reference, not an image to upscale. Subject: RX-78-2 Gundam / ガンダム. Faithfully match the reference's white angular helmet, twin white V-fin antennae, red forehead crest and chin, yellow eyes, gray cheek vents, blue upper torso armor with yellow rectangular chest vents and white shoulder armor. Head and upper chest only. Detailed clean anime mechanical illustration, confident heroic 3/4 pose. No weapon or other robots. Composition: landscape 3:2, large centered face and head, three-quarter angle slightly toward viewer's right, face readily readable in a tiny roster card. Head occupies 70% of image height, small top margin with complete hair/ears/hat, upper chest cut at bottom. Polished detailed anime game illustration, crisp outlines and fine shading, at least reference quality. True transparent background, clean silhouette, no ambient glow or backdrop. No legs or full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "vivi": {
-    "source": "assets/vivi-selection.png",
+    "source": "characters/vivi/assets/vivi-selection.png",
     "crop": [
       51,
       0,
@@ -144,7 +144,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art. Input image 1 is identity, palette and costume reference, not an image to upscale. Subject: Vivi / ビビ from Final Fantasy IX. Match oversized floppy golden yellow pointed wizard hat with brown hatband, black shadow face with two glowing oval yellow eyes and no visible mouth, vivid blue coat, pale ribbed inner chest fabric and tiny red neck tie. Complete hat and face fill the frame with gentle curious pose, upper chest only. No staff or other characters. Composition: landscape 3:2, large centered face and head, three-quarter angle slightly toward viewer's right, face readily readable in a tiny roster card. Head occupies 70% of image height, small top margin with complete hair/ears/hat, upper chest cut at bottom. Polished detailed anime game illustration, crisp outlines and fine shading, at least reference quality. True transparent background, clean silhouette, no ambient glow or backdrop. No legs or full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "zero": {
-    "source": "assets/zero-selection.png",
+    "source": "characters/zero/assets/zero-selection.png",
     "crop": [
       51,
       0,
@@ -156,7 +156,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art, faithfully matching image 1 as identity, costume and palette reference; do not upscale the sprite. Subject: Zero / ゼロ from Mega Man X. Match red angular helmet with turquoise forehead jewel and white side fins, youthful human-like face with blue-green eyes, long golden blonde ponytail, red shoulder armor, dark navy undersuit and gold upper chest details. Determined expression, head and upper chest only, no weapon. Composition: landscape 3:2, very large centered face, head and shoulders in three-quarter view slightly right, face immediately readable in a tiny roster tile. Head fills 70% of height, small top margin, upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background and clean cutout silhouette, no ambient glow or scenery. No legs/full-body, extra characters, lettering, logos, borders or watermarks."
   },
   "rin": {
-    "source": "assets/rin-selection.png",
+    "source": "characters/rin/assets/rin-selection.png",
     "crop": [
       51,
       0,
@@ -168,7 +168,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art, faithfully matching image 1 as identity, costume and palette reference; do not upscale the sprite. Subject: Lyn / リン from Fire Emblem. Match teal-green long hair in high ponytail, green eyes, dark blue sleeveless high-collar tunic with gold edging, gold shoulder piping, and brown strap. Confident composed young swordswoman, head and upper chest only, no sword. Composition: landscape 3:2, very large centered face, head and shoulders in three-quarter view slightly right, face immediately readable in a tiny roster tile. Head fills 70% of height, small top margin, upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background and clean cutout silhouette, no ambient glow or scenery. No legs/full-body, extra characters, lettering, logos, borders or watermarks."
   },
   "nia": {
-    "source": "assets/nia-selection.png",
+    "source": "characters/nia/assets/nia-selection.png",
     "crop": [
       51,
       0,
@@ -180,7 +180,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art, faithfully matching image 1 as identity, costume and palette reference; do not upscale the sprite. Subject: Nia / ニア from Xenoblade Chronicles 2, specifically the reference's original yellow-and-white armored outfit. Match silver-gray bobbed hair and triangular cat ears, warm amber eyes, white upper collar and red accents, golden mustard chest armor and shoulder details. Cheerful self-assured expression. Head and upper chest only, no weapon. Composition: landscape 3:2, very large centered face, head and shoulders in three-quarter view slightly right, face immediately readable in a tiny roster tile. Head fills 70% of height, small top margin, upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background and clean cutout silhouette, no ambient glow or scenery. No legs/full-body, extra characters, lettering, logos, borders or watermarks."
   },
   "lightning": {
-    "source": "assets/lightning-selection.png",
+    "source": "characters/lightning/assets/lightning-selection.png",
     "crop": [
       51,
       0,
@@ -192,7 +192,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art, faithfully matching image 1 as identity, costume and palette reference; do not upscale the sprite. Subject: Lightning / ライトニング from Final Fantasy XIII. Match long asymmetric rose-pink hair swept over one eye, pale aqua eyes, mature focused face, white sleeveless high-collar jacket, brown straps and shoulder details, red cape visible near one shoulder. Confident determined expression. Head and upper chest only, no weapon. Composition: landscape 3:2, very large centered face, head and shoulders in three-quarter view slightly right, face immediately readable in a tiny roster tile. Head fills 70% of height, small top margin, upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background and clean cutout silhouette, no ambient glow or scenery. No legs/full-body, extra characters, lettering, logos, borders or watermarks."
   },
   "colette": {
-    "source": "assets/colette-selection.png",
+    "source": "characters/colette/assets/colette-selection.png",
     "crop": [
       51,
       0,
@@ -204,7 +204,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art, faithfully matching image 1 as identity, costume and palette reference; do not upscale the sprite. Subject: Colette / コレット from Tales of Symphonia. Match long straight golden blonde hair and blunt bangs, bright blue eyes, youthful gentle face, white tunic with sky-blue trim, high collar and small gold-and-blue necklace pendant. Warm confident smile, head and upper chest only, no weapon. Composition: landscape 3:2, very large centered face, head and shoulders in three-quarter view slightly right, face immediately readable in a tiny roster tile. Head fills 70% of height, small top margin, upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background and clean cutout silhouette, no ambient glow or scenery. No legs/full-body, extra characters, lettering, logos, borders or watermarks."
   },
   "rean": {
-    "source": "assets/rean-selection.png",
+    "source": "characters/rean/assets/rean-selection.png",
     "crop": [
       51,
       0,
@@ -216,7 +216,7 @@
     "prompt": "Precise portrait edit using supplied Rean reference: silver layered hair, red eyes, black long-sleeved asymmetric coat with gray lapels and silver piping, broad light gray diagonal chest harness with metal ring, plain black open-neck shirt, small red cuff accents. Remove blue eyes, red scarf/collar and ornate invented armor. Preserve existing head-and-shoulders composition and facing, crisp anime rendering and actual alpha transparency."
   },
   "estelle": {
-    "source": "assets/estelle-selection.png",
+    "source": "characters/estelle/assets/estelle-selection.png",
     "crop": [
       51,
       0,
@@ -228,7 +228,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art, faithfully matching image 1 as identity, costume and palette reference; do not upscale the sprite. Subject: Estelle Bright / エステル from Trails in the Sky. Match chestnut-orange hair in long twin ponytails, bright amber-brown eyes, red short jacket with white collar and dark sleeves, brown straps and small round hair clips. Energetic confident smile, head and upper chest only, no staff. Composition: landscape 3:2, very large centered face, head and shoulders in three-quarter view slightly right, face immediately readable in a tiny roster tile. Head fills 70% of height, small top margin, upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background and clean cutout silhouette, no ambient glow or scenery. No legs/full-body, extra characters, lettering, logos, borders or watermarks."
   },
   "noctis": {
-    "source": "assets/noctis-selection.png",
+    "source": "characters/noctis/assets/noctis-selection.png",
     "crop": [
       51,
       0,
@@ -240,7 +240,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art, faithfully matching image 1 as identity, costume and palette reference; do not upscale the sprite. Subject: Noctis / ノクティス from Final Fantasy XV. Match layered spiky blue-black hair, blue eyes, young male face, black open high-collar jacket with subtle textured lapel details and dark shirt. Calm confident expression. Head and upper chest only, no weapon. Composition: landscape 3:2, very large centered face, head and shoulders in three-quarter view slightly right, face immediately readable in a tiny roster tile. Head fills 70% of height, small top margin, upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background and clean cutout silhouette, no ambient glow or scenery. No legs/full-body, extra characters, lettering, logos, borders or watermarks."
   },
   "clive": {
-    "source": "assets/clive-selection.png",
+    "source": "characters/clive/assets/clive-selection.png",
     "crop": [
       51,
       0,
@@ -252,7 +252,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Clive / クライヴ from Final Fantasy XVI. Match tousled dark brown-black hair, mature rugged face, blue-gray eyes, light stubble, intricate black shoulder armor and red leather upper-chest armor with metal fasteners, a touch of red cape. Serious determined expression. Bust only, no weapon. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "makoto": {
-    "source": "assets/makoto-selection.png",
+    "source": "characters/makoto/assets/makoto-selection.png",
     "crop": [
       51,
       0,
@@ -264,7 +264,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Makoto Yuki / 結城 理 from Persona 3. Match dark blue asymmetrical bangs partially covering one eye, blue-gray eyes, youthful calm face, black school jacket with silver buttons, white collared shirt and black tie, small red armband edge on shoulder. Bust only, no weapon. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "neku": {
-    "source": "assets/neku-selection.png",
+    "source": "characters/neku/assets/neku-selection.png",
     "crop": [
       51,
       0,
@@ -276,7 +276,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Neku / ネク from The World Ends With You. Match wild spiky orange hair, blue-purple over-ear headphones with dark pads, blue eyes, high folded purple collar and navy sleeveless shirt with lavender details. Self-assured slightly smirking young male face, head and upper chest only, no props. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "narukami": {
-    "source": "assets/narukami-selection.png",
+    "source": "characters/narukami/assets/narukami-selection.png",
     "crop": [
       51,
       0,
@@ -288,7 +288,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Yu Narukami / 鳴上 悠 from Persona 4. Match neat silver-gray short layered hair, gray eyes, dark rectangular glasses, black school uniform jacket with white stitch details and white shirt. Calm confident expression, head and upper chest only, no sword. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "naegi": {
-    "source": "assets/naegi-selection.png",
+    "source": "characters/naegi/assets/naegi-selection.png",
     "crop": [
       51,
       0,
@@ -300,7 +300,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Makoto Naegi / 苗木 誠 from Danganronpa. Match messy ash-brown hair with one distinctive thin upward ahoge, soft green-gray eyes, young male face, black jacket over an olive-green hoodie with red drawcord and zipper accents. Gentle determined smile, head and upper chest only, no props. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "rex": {
-    "source": "assets/rex-selection.png",
+    "source": "characters/rex/assets/rex-selection.png",
     "crop": [
       51,
       0,
@@ -312,7 +312,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Rex / レックス from Xenoblade Chronicles 2. Match short spiky chestnut brown hair, golden brown eyes, young energetic male face, blue salvager armor with gold trim and brass clasps, brown shoulder harness and glowing green chest crystal. Confident bright smile, head and upper chest only, no weapon. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "luke": {
-    "source": "assets/luke-selection.png",
+    "source": "characters/luke/assets/luke-selection.png",
     "crop": [
       51,
       0,
@@ -324,7 +324,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Luke / ルーク from Tales of the Abyss. Match long vivid red hair, emerald-green eyes, youthful confident face, white open short-sleeved upper jacket with gold trim, black undershirt collar and small gold central necklace. Head and upper chest only, no sword. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "will": {
-    "source": "assets/will-selection.png",
+    "source": "characters/will/assets/will-selection.png",
     "crop": [
       51,
       0,
@@ -336,7 +336,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Will / ウィル, the protagonist of Metaphor: ReFantazio, matching this reference. Short layered deep-blue hair, thin gold headband, youthful face, heterochromatic blue and amber eyes, white high-collar tailored jacket with black trim, black diagonal straps and metal clasps. Calm determined expression, head and upper chest only, no sword. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "kosmos": {
-    "source": "assets/kosmos-selection.png",
+    "source": "characters/kosmos/assets/kosmos-selection.png",
     "crop": [
       51,
       0,
@@ -348,7 +348,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: KOS-MOS from Xenosaga. Match long pale blue-lavender hair, red eyes, pale face, white futuristic android armor with navy panels and gold trim, gold metallic forehead ornament and blue ear housings. Calm assured expression, head and upper chest only, no weapon. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "fayt": {
-    "source": "assets/fayt-selection.png",
+    "source": "characters/fayt/assets/fayt-selection.png",
     "crop": [
       51,
       0,
@@ -360,7 +360,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Fayt / フェイト from Star Ocean 3. Match tousled bright blue short hair, green-blue eyes, youthful male face, blue high-collar undersuit, white and dark-gray shoulder armor with gold edging and brown chest straps. Confident gentle smile, head and upper chest only, no sword. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "emma": {
-    "source": "assets/emma-selection.png",
+    "source": "characters/emma/assets/emma-selection.png",
     "crop": [
       51,
       0,
@@ -372,7 +372,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Emma / エマ as specifically depicted in reference image. A young dark-haired swordswoman with long black-brown hair, a broad shallow woven straw hat with reddish tie, calm serious face, charcoal layered robe with white sleeve cloth, weathered brown leather shoulder/chest harness and dark high collar. Faithfully preserve this exact design. Head and upper chest only, hat visible, no sword. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "ryza": {
-    "source": "assets/ryza-selection.png",
+    "source": "characters/ryza/assets/ryza-selection.png",
     "crop": [
       51,
       0,
@@ -384,7 +384,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Ryza / ライザ from Atelier Ryza. Match chestnut brown short hair with small curled top tuft, brown-gold eyes, white rounded beret with brown hair ribbon, yellow short jacket over white ruffled top, brown leather straps and small green neck ornament. Friendly energetic smile, head and upper chest only, no staff. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "noah": {
-    "source": "assets/noah-selection.png",
+    "source": "characters/noah/assets/noah-selection.png",
     "crop": [
       51,
       0,
@@ -396,7 +396,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Noah / ノア from Xenoblade Chronicles 3. Match deep blue-black hair tied in high ponytail, red eyes, calm youthful male face, vivid red high-collar jacket with black shoulder panels and silver-black fasteners. Confident resolved expression, head and upper chest only, no sword. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "midna": {
-    "source": "assets/midna-selection.png",
+    "source": "characters/midna/assets/midna-selection.png",
     "crop": [
       51,
       0,
@@ -408,7 +408,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Midna / ミドナ from Zelda Twilight Princess, imp form. Match oversized dark carved stone helmet with gold etched maze designs covering one eye, visible orange-red eye, gray imp face, pointed turquoise ear and bright orange hair flowing behind, black upper torso with luminous turquoise tribal markings. Mischievous confident grin. Head and upper chest only; complete prominent helmet. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "bomberman": {
-    "source": "assets/bomberman-selection.png",
+    "source": "characters/bomberman/assets/bomberman-selection.png",
     "crop": [
       51,
       0,
@@ -420,7 +420,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Bomberman / ボンバーマン. Match rounded white helmet, black opening around peach face with two vertical oval black eyes, tiny angular brows, pink spherical antenna atop helmet, blue upper suit and round pink gloves just near bottom edge if visible. Cute determined expression, head and upper chest only. Smooth crisp clean anime mascot illustration. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "sans": {
-    "source": "assets/sans-selection.png",
+    "source": "characters/sans/assets/sans-selection.png",
     "crop": [
       51,
       0,
@@ -432,7 +432,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Sans / サンズ from Undertale, matching the reference's smooth illustrated style rather than pixelating it. White round skull with black empty eye sockets, little white dot pupils, tiny black triangular nose and broad playful toothy grin, bright blue hoodie with lavender-gray hood lining over white shirt. Head and upper chest only, relaxed cheerful expression. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "lloyd": {
-    "source": "assets/lloyd-selection.png",
+    "source": "characters/lloyd/assets/lloyd-selection.png",
     "crop": [
       51,
       0,
@@ -444,7 +444,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Lloyd Irving / ロイド from Tales of Symphonia. Match spiky chestnut brown hair, brown eyes, red high-collar jacket with two rows of silver studs, brown shoulder straps and pale scarf tails near shoulder. Confident upbeat young male face. Bust only, no swords. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "shiren": {
-    "source": "assets/shiren-selection.png",
+    "source": "characters/shiren/assets/shiren-selection.png",
     "crop": [
       51,
       0,
@@ -456,7 +456,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Shiren / シレン from Shiren the Wanderer. Match broad woven straw kasa hat, shaggy reddish-brown hair, brown eyes, red-orange adventurer tunic, dark armor straps and blue-and-white striped cloak visible over shoulder. Friendly confident youthful swordsman, head and upper chest only, no weapon or companion. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "pokoa": {
-    "source": "assets/pokoa-selection.png",
+    "source": "characters/pokoa/assets/pokoa-selection.png",
     "crop": [
       51,
       0,
@@ -468,7 +468,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: ぽこあメタモン / Pokoa as depicted in reference. Preserve the unusual simplified cartoon face: tiny black dot eyes, broad flat red smiling mouth, brown floppy shoulder-length hair with oversized sweeping bangs, white rounded cap with purple and yellow trim, purple short-sleeved hoodie with white drawstrings, yellow backpack straps. Cheerful portrait, head and upper chest only. Keep simplified face, do not turn it into a realistic face, no companion. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "hunter": {
-    "source": "assets/hunter-selection.png",
+    "source": "characters/hunter/assets/hunter-selection.png",
     "crop": [
       51,
       0,
@@ -480,7 +480,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Monster Hunter / ハンター, matching this reference's dark jagged dragon armor. Angular black-brown metal helmet with two upward horns and reddish accents, stern partially visible male face, layered spiky charcoal shoulder armor, red scarf/cape at neckline, ornate dark chest plates and bronze fittings. Head and upper chest only, no oversized sword or cat companion. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "adol": {
-    "source": "assets/adol-selection.png",
+    "source": "characters/adol/assets/adol-selection.png",
     "crop": [
       51,
       0,
@@ -492,7 +492,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Adol Christin / アドル from Ys. Match bright red tousled spiky hair, blue eyes, youthful heroic male face, blue combat tunic with gold-trimmed shoulder armor, white scarf and small red cape accents, brown chest straps. Warm confident smile, head and upper chest only, no sword. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "terry": {
-    "source": "assets/terry-selection.png",
+    "source": "characters/terry/assets/terry-selection.png",
     "crop": [
       51,
       0,
@@ -504,7 +504,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Young Terry / テリー from Dragon Quest Monsters: Terry's Wonderland. Match blue cloth headscarf tied behind the head, silver-white short bangs, very large blue eyes, cheerful young boy face, blue tunic, brown chest straps, and yellow backpack straps. Head and upper chest only; preserve chibi proportions, no sword or monster companion. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "valkyrie": {
-    "source": "assets/valkyrie-selection.png",
+    "source": "characters/valkyrie/assets/valkyrie-selection.png",
     "crop": [
       51,
       0,
@@ -516,7 +516,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Valkyrie Lenneth / ヴァルキリー from Valkyrie Profile. Match long silver-blue hair, blue eyes, gold-and-blue ornate headband helmet with white feather-wing ornaments, blue chest armor with gold decorative trim and white upper shoulder panels. Noble determined young woman, head and upper chest only, no sword or bow. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "agumon": {
-    "source": "assets/agumon-selection.png",
+    "source": "characters/agumon/assets/agumon-selection.png",
     "crop": [
       51,
       0,
@@ -528,7 +528,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Agumon / アグモン from Digimon. Match bright orange-yellow dinosaur skin, large green eyes, rounded reptile snout with nostrils, happy open mouth with small white triangular teeth and pink tongue, small upper chest and shoulders. Cheerful brave expression, head and upper chest only; no fireball or other characters. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "pawapuro": {
-    "source": "assets/pawapuro-selection.png",
+    "source": "characters/pawapuro/assets/pawapuro-selection.png",
     "crop": [
       51,
       0,
@@ -540,7 +540,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Pawapuro-kun: simple tan round cartoon face without a nose, long black oval eyes, white baseball cap with red brim and red K on the cap, white/red baseball jersey. Preserve his iconic simplified cute proportions. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering except specified cap emblem, logos, borders, scenery or watermarks."
   },
   "headmaster": {
-    "source": "assets/headmaster-selection.png",
+    "source": "characters/headmaster/assets/headmaster-selection.png",
     "crop": [
       51,
       0,
@@ -552,7 +552,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Big Brain Academy Headmaster: elongated rounded yellow head, small round black-rimmed spectacles, black mortarboard with gold tassel, pink cheeks and tiny friendly smile. Preserve the simple mascot design. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering except specified cap emblem, logos, borders, scenery or watermarks."
   },
   "sakuna": {
-    "source": "assets/sakuna-selection.png",
+    "source": "characters/sakuna/assets/sakuna-selection.png",
     "crop": [
       51,
       0,
@@ -564,7 +564,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Sakuna-hime: dark navy hair in tall looped tufts tied with red ornaments, large brown eyes, red-orange patterned kimono and dark collar, cream divine raiment near shoulders. Preserve the youthful chibi identity. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering except specified cap emblem, logos, borders, scenery or watermarks."
   },
   "haseo": {
-    "source": "assets/haseo-selection.png",
+    "source": "characters/haseo/assets/haseo-selection.png",
     "crop": [
       0,
       0,
@@ -575,7 +575,7 @@
     "original": "see .tools/haseo-design-generation.json"
   },
   "terrarian": {
-    "source": "assets/terrarian-selection.png",
+    "source": "characters/terrarian/assets/terrarian-selection.png",
     "crop": [
       51,
       0,
@@ -587,7 +587,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Terraria player: brown-red blocky spiky hair, pale square face with black pixel eyes, olive-gray tunic. MUST preserve authentic crisp pixel art style and large clean square pixel blocks, detailed pixel-shaded head and shoulders, no smooth anime reinterpretation. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering except specified cap emblem, logos, borders, scenery or watermarks."
   },
   "horse": {
-    "source": "assets/horse-selection.png",
+    "source": "characters/horse/assets/horse-selection.png",
     "crop": [
       51,
       0,
@@ -599,7 +599,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Ultimate Chicken Horse horse: angular brown cartoon horse with square elongated muzzle, small black oval eyes, pointed ears and sawtooth dark-brown mane. MUST preserve the simple angular flat graphic design, clean geometric planes, not realistic animal anatomy or furry anime. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering except specified cap emblem, logos, borders, scenery or watermarks."
   },
   "chef": {
-    "source": "assets/chef-selection.png",
+    "source": "characters/chef/assets/chef-selection.png",
     "crop": [
       51,
       0,
@@ -611,7 +611,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Overcooked chef: large puffy white chef toque with blue band, curly brown hair, small black oval eyes, rosy round cheerful face, white and blue chef coat and red neckerchief. Preserve cute cartoon proportions, no food or pans blocking face. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering except specified cap emblem, logos, borders, scenery or watermarks."
   },
   "akira": {
-    "source": "assets/akira-selection.png",
+    "source": "characters/akira/assets/akira-selection.png",
     "crop": [
       51,
       0,
@@ -623,7 +623,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Astral Chain Akira: tousled brown hair, focused young male face, blue and black police armor with white chest panel and metal shoulder pieces. Blue accent details. No Legion or extra person. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering except specified cap emblem, logos, borders, scenery or watermarks."
   },
   "morphie": {
-    "source": "assets/morphie-selection.png",
+    "source": "characters/morphie/assets/morphie-selection.png",
     "crop": [
       51,
       0,
@@ -635,7 +635,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Morphies Law robot: vivid blue mechanical humanoid with a white Mexican sugar-skull mask, black round eye sockets, blue and orange floral marks around eyes, open red-orange smiling mouth, white skeleton bone markings on dark-blue shoulder and chest armor. No gun obscuring head. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "fei": {
-    "source": "assets/fei-selection.png",
+    "source": "characters/fei/assets/fei-selection.png",
     "crop": [
       51,
       0,
@@ -647,7 +647,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Fei Fong Wong from Xenogears: handsome young martial artist with long black hair tied in a high ponytail, brown eyes, white martial arts shirt with blue trim, yellow braided shoulder cords, calm determined expression. Preserve the reference outfit and hair. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "human": {
-    "source": "assets/human-selection.png",
+    "source": "characters/human/assets/human-selection.png",
     "crop": [
       51,
       0,
@@ -659,7 +659,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Human Fall Flat Human: featureless off-white smooth round head with ABSOLUTELY NO eyes, nose or mouth, rounded white shoulders and torso, soft 3D cartoon clay shading, gentle playful tilted-head pose. Preserve minimalist faceless identity. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "bayleef": {
-    "source": "assets/bayleef-selection.png",
+    "source": "characters/bayleef/assets/bayleef-selection.png",
     "crop": [
       51,
       0,
@@ -671,7 +671,7 @@
     "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Pokemon Bayleef: yellow-green friendly dinosaur face with large red-brown eyes, curved dark-green leaf on top of head and dark-green pointed leaf collar around neck, small smiling mouth. Show full characteristic head leaf as far as possible, large face and upper neck. Only Bayleef, no trainer or other Pokemon. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium game illustration, crisp clean outlines and polished shading appropriate to original visual style. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
   },
   "layton": {
-    "source": "assets/layton-selection.png",
+    "source": "characters/layton/assets/layton-selection.png",
     "crop": [
       51,
       0,
@@ -682,7 +682,7 @@
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-dd057298-7635-42b7-8517-73525c79df4f.png"
   },
   "dante": {
-    "source": "assets/dante-selection.png",
+    "source": "characters/dante/assets/dante-selection.png",
     "crop": [
       303,
       0,
@@ -694,7 +694,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "leon": {
-    "source": "assets/leon-selection.png",
+    "source": "characters/leon/assets/leon-selection.png",
     "crop": [
       51,
       0,
@@ -706,7 +706,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "tifa": {
-    "source": "assets/tifa-selection.png",
+    "source": "characters/tifa/assets/tifa-selection.png",
     "crop": [
       51,
       0,
@@ -718,7 +718,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "zidane": {
-    "source": "assets/zidane-selection.png",
+    "source": "characters/zidane/assets/zidane-selection.png",
     "crop": [
       -43,
       0,
@@ -730,7 +730,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "yuffie": {
-    "source": "assets/yuffie-selection.png",
+    "source": "characters/yuffie/assets/yuffie-selection.png",
     "crop": [
       -183,
       0,
@@ -742,7 +742,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "vincent": {
-    "source": "assets/vincent-selection.png",
+    "source": "characters/vincent/assets/vincent-selection.png",
     "crop": [
       140,
       0,
@@ -754,7 +754,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "kiryu": {
-    "source": "assets/kiryu-selection.png",
+    "source": "characters/kiryu/assets/kiryu-selection.png",
     "crop": [
       -66,
       0,
@@ -766,7 +766,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "crash": {
-    "source": "assets/crash-selection.png",
+    "source": "characters/crash/assets/crash-selection.png",
     "crop": [
       100,
       0,
@@ -778,7 +778,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "charlotta": {
-    "source": "assets/charlotta-selection.png",
+    "source": "characters/charlotta/assets/charlotta-selection.png",
     "crop": [
       249,
       20,
@@ -790,7 +790,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "ryofu": {
-    "source": "assets/ryofu-selection.png",
+    "source": "characters/ryofu/assets/ryofu-selection.png",
     "crop": [
       310,
       15,
@@ -802,7 +802,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "mametchi": {
-    "source": "assets/mametchi-selection.png",
+    "source": "characters/mametchi/assets/mametchi-selection.png",
     "crop": [
       51,
       0,
@@ -813,7 +813,7 @@
     "original": "built-in imagegen; see .tools/mametchi-prompts.json"
   },
   "piposaru": {
-    "source": "assets/piposaru-selection.png",
+    "source": "characters/piposaru/assets/piposaru-selection.png",
     "crop": [
       166,
       0,
@@ -825,7 +825,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "twinbee": {
-    "source": "assets/twinbee-selection.png",
+    "source": "characters/twinbee/assets/twinbee-selection.png",
     "crop": [
       302,
       51,
@@ -837,7 +837,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "aruru": {
-    "source": "assets/aruru-selection.png",
+    "source": "characters/aruru/assets/aruru-selection.png",
     "crop": [
       173,
       15,
@@ -849,7 +849,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "maruku": {
-    "source": "assets/maruku-selection.png",
+    "source": "characters/maruku/assets/maruku-selection.png",
     "crop": [
       94,
       0,
@@ -861,7 +861,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "dietrich": {
-    "source": "assets/dietrich-sword-selection.png",
+    "source": "characters/dietrich/assets/dietrich-sword-selection.png",
     "crop": [
       295,
       15,
@@ -873,7 +873,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "edf": {
-    "source": "assets/edf-selection.png",
+    "source": "characters/edf/assets/edf-selection.png",
     "crop": [
       245,
       15,
@@ -885,7 +885,7 @@
     "framing": "head and shoulders; matched to roster 1-55"
   },
   "edelgard": {
-    "source": "assets/edelgard-selection.png",
+    "source": "characters/edelgard/assets/edelgard-selection.png",
     "crop": [
       0,
       0,
@@ -896,7 +896,7 @@
     "original": "see .tools/edelgard-design-generation.json"
   },
   "guile": {
-    "source": "assets/guile-selection.png",
+    "source": "characters/guile/assets/guile-selection.png",
     "crop": [
       51,
       0,
@@ -907,7 +907,7 @@
     "original": "built-in imagegen; see .tools/guile-prompts-final.json"
   },
   "sukapon": {
-    "source": "assets/sukapon-selection.png",
+    "source": "characters/sukapon/assets/sukapon-selection.png",
     "crop": [
       51,
       0,
@@ -918,7 +918,7 @@
     "original": "built-in imagegen; see .tools/sukapon-prompts-final.json"
   },
   "pneuma": {
-    "source": "assets/pneuma-selection.png",
+    "source": "characters/pneuma/assets/pneuma-selection.png",
     "crop": [
       51,
       0,
@@ -929,7 +929,7 @@
     "original": "built-in imagegen; see .tools/pneuma-prompts-final.json"
   },
   "arus": {
-    "source": "assets/arus-selection.png",
+    "source": "characters/arus/assets/arus-selection.png",
     "crop": [
       51,
       0,
@@ -940,7 +940,7 @@
     "original": "built-in imagegen; see .tools/arus-prompts-final.json"
   },
   "knight": {
-    "source": "assets/knight-selection.png",
+    "source": "characters/knight/assets/knight-selection.png",
     "crop": [
       51,
       0,
@@ -951,7 +951,7 @@
     "original": "built-in imagegen; see .tools/knight-prompts-final.json"
   },
   "maelle": {
-    "source": "assets/maelle-selection.png",
+    "source": "characters/maelle/assets/maelle-selection.png",
     "crop": [
       51,
       0,
@@ -962,7 +962,7 @@
     "original": "built-in imagegen; see .tools/maelle-prompts-final.json"
   },
   "sumino": {
-    "source": "assets/sumino-selection.png",
+    "source": "characters/sumino/assets/sumino-selection.png",
     "crop": [
       51,
       0,
@@ -973,7 +973,7 @@
     "original": "built-in imagegen; see .tools/sumino-prompts-final.json"
   },
   "rocbouquet": {
-    "source": "assets/rocbouquet-selection.png",
+    "source": "characters/rocbouquet/assets/rocbouquet-selection.png",
     "crop": [
       51,
       0,
@@ -984,7 +984,7 @@
     "original": "built-in imagegen; see .tools/rocbouquet-prompts-final.json"
   },
   "frog": {
-    "source": "assets/frog-selection.png",
+    "source": "characters/frog/assets/frog-selection.png",
     "crop": [
       51,
       0,
@@ -995,7 +995,7 @@
     "original": "built-in imagegen; see .tools/frog-prompts-final.json"
   },
   "tressa": {
-    "source": "assets/tressa-selection.png",
+    "source": "characters/tressa/assets/tressa-selection.png",
     "crop": [
       51,
       0,
@@ -1006,7 +1006,7 @@
     "original": "built-in imagegen; see .tools/tressa-prompts-final.json"
   },
   "eve": {
-    "source": "assets/eve-selection.png",
+    "source": "characters/eve/assets/eve-selection.png",
     "crop": [
       51,
       0,
@@ -1017,7 +1017,7 @@
     "original": "built-in imagegen; see .tools/eve-prompts-final.json"
   },
   "odio": {
-    "source": "assets/odio-selection.png",
+    "source": "characters/odio/assets/odio-selection.png",
     "crop": [
       51,
       0,
@@ -1028,7 +1028,7 @@
     "original": "built-in imagegen; see .tools/odio-prompts-final.json"
   },
   "laharl": {
-    "source": "assets/laharl-selection.png",
+    "source": "characters/laharl/assets/laharl-selection.png",
     "crop": [
       51,
       0,
@@ -1039,7 +1039,7 @@
     "original": "built-in imagegen; see .tools/laharl-prompts-final.json"
   },
   "deemo": {
-    "source": "assets/deemo-selection.png",
+    "source": "characters/deemo/assets/deemo-selection.png",
     "crop": [
       51,
       0,
@@ -1050,7 +1050,7 @@
     "original": "built-in imagegen; see .tools/deemo-prompts-final.json"
   },
   "kasane": {
-    "source": "assets/kasane-selection.png",
+    "source": "characters/kasane/assets/kasane-selection.png",
     "crop": [
       51,
       0,
@@ -1061,7 +1061,7 @@
     "original": "built-in imagegen; see .tools/kasane-prompts-final.json"
   },
   "shadow": {
-    "source": "assets/shadow-selection.png",
+    "source": "characters/shadow/assets/shadow-selection.png",
     "crop": [
       51,
       0,
@@ -1072,7 +1072,7 @@
     "original": "built-in imagegen; see .tools/shadow-prompts-final.json"
   },
   "saki": {
-    "source": "assets/saki-selection.png",
+    "source": "characters/saki/assets/saki-selection.png",
     "crop": [
       51,
       0,
@@ -1083,7 +1083,7 @@
     "original": "built-in imagegen; see .tools/saki-prompts-final.json"
   },
   "aerith": {
-    "source": "assets/aerith-selection.png",
+    "source": "characters/aerith/assets/aerith-selection.png",
     "crop": [
       51,
       0,
@@ -1094,7 +1094,7 @@
     "original": "built-in imagegen; see .tools/aerith-prompts-final.json"
   },
   "doshin": {
-    "source": "assets/doshin-selection.png",
+    "source": "characters/doshin/assets/doshin-selection.png",
     "crop": [
       0,
       0,
@@ -1105,7 +1105,7 @@
     "original": "built-in imagegen; see .tools/doshin-prompts-final.json"
   },
   "moogle": {
-    "source": "assets/moogle-selection.png",
+    "source": "characters/moogle/assets/moogle-selection.png",
     "crop": [
       0,
       0,
@@ -1116,7 +1116,7 @@
     "original": "built-in imagegen; see .tools/moogle-prompts-final.json"
   },
   "greymon": {
-    "source": "assets/greymon-selection.png",
+    "source": "characters/greymon/assets/greymon-selection.png",
     "crop": [
       0,
       0,
@@ -1127,7 +1127,7 @@
     "original": "built-in imagegen; see .tools/digimon-prompts-final-v2.json"
   },
   "metalgreymon": {
-    "source": "assets/metalgreymon-selection.png",
+    "source": "characters/metalgreymon/assets/metalgreymon-selection.png",
     "crop": [
       0,
       0,
@@ -1138,7 +1138,7 @@
     "original": "built-in imagegen; see .tools/digimon-prompts-final-v2.json"
   },
   "wargreymon": {
-    "source": "assets/wargreymon-selection.png",
+    "source": "characters/wargreymon/assets/wargreymon-selection.png",
     "crop": [
       51,
       0,
@@ -1149,7 +1149,7 @@
     "original": "built-in imagegen; see .tools/digimon-prompts-final-v2.json"
   },
   "omegamon": {
-    "source": "assets/omegamon-selection.png",
+    "source": "characters/omegamon/assets/omegamon-selection.png",
     "crop": [
       51,
       0,
@@ -1160,7 +1160,7 @@
     "original": "built-in imagegen; see .tools/digimon-prompts-final-v2.json"
   },
   "donchan": {
-    "source": "assets/donchan-selection.png",
+    "source": "characters/donchan/assets/donchan-selection.png",
     "crop": [
       51,
       0,
@@ -1171,7 +1171,7 @@
     "original": "built-in imagegen; see .tools/donchan-prompts-final.json"
   },
   "shizuna": {
-    "source": "assets/shizuna-selection.png",
+    "source": "characters/shizuna/assets/shizuna-selection.png",
     "crop": [
       51,
       0,
@@ -1182,7 +1182,7 @@
     "original": "built-in imagegen; see .tools/shizuna-generation-record.json"
   },
   "hanajs": {
-    "source": "assets/hanajs-selection.png",
+    "source": "characters/hanajs/assets/hanajs-selection.png",
     "crop": [
       0,
       0,
@@ -1193,7 +1193,7 @@
     "original": "built-in imagegen; see .tools/hana-prompts-final.json"
   },
   "hanajk": {
-    "source": "assets/hanajk-selection.png",
+    "source": "characters/hanajk/assets/hanajk-selection.png",
     "crop": [
       0,
       0,
@@ -1204,7 +1204,7 @@
     "original": "built-in imagegen; see .tools/hana-prompts-final.json"
   },
   "hanajd": {
-    "source": "assets/hanajd-selection.png",
+    "source": "characters/hanajd/assets/hanajd-selection.png",
     "crop": [
       0,
       0,
@@ -1215,7 +1215,7 @@
     "original": "built-in imagegen; see .tools/hana-prompts-final.json"
   },
   "kisuke": {
-    "source": "assets/kisuke-selection.png",
+    "source": "characters/kisuke/assets/kisuke-selection.png",
     "crop": [
       0,
       0,
