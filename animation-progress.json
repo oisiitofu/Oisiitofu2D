@@ -11,12 +11,14 @@
   "continuation": "manual_one_character_at_a_time",
   "lastPublication": {
     "characterId": "chocobo",
-    "githubCommit": "6050429",
-    "siteSourceCommit": "1970f81c981b9b9fc375c1a6ee89415b11799437",
-    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_d8e5af0f90788191837d9da9f09323ac",
-    "deploymentId": "appgdep_6acc4e52b980819190524ba1a3d8ba53",
+    "kind": "original_design_restore",
+    "animationCompleted": false,
+    "githubCommit": "7cf15c0",
+    "siteSourceCommit": "ecc979e4c1e6f467bc3a3403ce047f448d7004a3",
+    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_dc21f6280cf48191a02331922a0457ea",
+    "deploymentId": "appgdep_6acc54634964819190f35e72fe7d2e67",
     "status": "succeeded",
-    "liveChecks": 8568
+    "liveChecks": 2888
   },
   "currentStatus": "original_design_restored_animation_needs_rework",
   "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation."
