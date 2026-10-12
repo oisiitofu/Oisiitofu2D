@@ -6,7 +6,8 @@ const TifaRasterAnimation=(()=>{
   ['arsenal-jab',3,1,[0,1,2]],['arsenal-highkick',3,1,[0,1,2]],
   ['arsenal-backkick',3,1,[0,1,2]],['arsenal-knee',3,1,[0,1,2]],
   ['arsenal-heel',3,1,[0,1,2]],['arsenal-ground',4,3,[1,2,3,5,6,7,9,10,11]],
-  ['locomotion',4,2,[0,1,2,3,4,5,6,7]],['reaction',3,3,[0,1,2,3,4,5,6,7,8]]
+  ['locomotion',4,2,[0,1,2,3,4,5,6,7]],['reaction',3,3,[0,1,2,3,4,5,6,7,8]],
+  ['walk-cycle',4,2,[0,1,2,3,4,5,6,7]],['run-cycle',4,2,[0,1,2,3,4,5,6,7]]
  ];
  const tracks={punch:{end:42,mids:[49,50,51]},high:{end:43,mids:[52,53,54]},
   back:{end:44,mids:[55,56,57]},knee:{end:46,mids:[58,59,60]},
@@ -18,13 +19,15 @@ const TifaRasterAnimation=(()=>{
  // bent poses keep their head/body dimensions instead of being fitted to a height.
  const sizes=[...Array(3).fill(.65),...Array(3).fill(.65),...Array(3).fill(.65),
   ...Array(3).fill(.65),...Array(3).fill(.65),...Array(9).fill(1.28),
-  .9448,.9576,.9626,.9610, .9585,.9519,.9638,.9832,...Array(9).fill(1.26)];
+  .9448,.9576,.9626,.9610, .9585,.9519,.9638,.9832,...Array(9).fill(1.26),
+  ...Array(16).fill(.90)];
  const roots=[.5,.5,.5, .42,.42,.42, .69,.69,.69, .47,.47,.47,
   .5,.5,.5, .52,.52,.52, .5,.5,.5, .5,.5,.5,
-  .56,.56,.56,.56, .60,.60,.60,.60, .48,.48,.48, .5,.5,.5, .52,.52,.52];
+  .56,.56,.56,.56, .60,.60,.60,.60, .48,.48,.48, .5,.5,.5, .52,.52,.52,
+  ...Array(8).fill(.60),...Array(8).fill(.60)];
  async function append(art){
   if(art.frames.length!==49)return; // Production already contains baked middles.
-  for(const [name,cols,rows,indices]of sources){const sheet=new Image();sheet.src='characters/tifa/assets/tifa-'+name+'-inbetweens-v1.png';await sheet.decode();
+  for(const [name,cols,rows,indices]of sources){const sheet=new Image();sheet.src='characters/tifa/assets/tifa-'+name+(name.endsWith('-cycle')?'-v2.png':'-inbetweens-v1.png');await sheet.decode();
    const cells=extractAtlas(sheet,cols,rows,'alpha');
    for(const n of indices){if(!cells[n]||cells[n].width<20||cells[n].height<20)throw Error('Missing Tifa raster '+name+':'+n);art.frames.push(cells[n]);}
   }
@@ -53,7 +56,7 @@ const TifaRasterAnimation=(()=>{
   }
   const s=Math.max(0,(f.stateFrame||1)-1);
   if(f.state==='idle')return{pose:40};
-  if(f.state==='walk'||f.state==='run'){const run=f.state==='run',part=Math.floor(s/(run?1.5:3))%8;return{pose:part%2?(run?77:73)+Math.floor(part/2):(run?28:24)+Math.floor(part/2)};}
+  if(f.state==='walk'||f.state==='run'){const run=f.state==='run',part=Math.floor(s/(run?2:4))%8;return{pose:(run?98:90)+part};}
   if(f.state==='guard')return{pose:s<3?tracks.guard.mids[s]:20};
   if(f.state==='hit'||f.state==='fly')return{pose:s<3?tracks.hit.mids[s]:21};
   if(f.mode==='JumpSquat'||f.state==='crouch')return{pose:s<2?tracks.low.mids[s]:f.mode==='JumpSquat'?32:3};
@@ -61,6 +64,13 @@ const TifaRasterAnimation=(()=>{
   return{pose:pose(f)};
  }
  function placement(f,n){
+  if(n>=90){const img=characterArt.tifa.frames[n],run=n>=98,i=n-(run?98:90),unit=BattleSize.native('tifa',n),
+   chest=run?[266.187,221.536,280.884,241.940,265.683,219.945,281.041,241.905]:[223.580,214.848,217.695,210.540,222.750,214.104,215.137,216.222],
+   ref=run?28:24,refOffset=run?205.657-275*.60:141.420-209*.56;
+   // Cropping widths change as the boots pass. Anchor the torso, not a fraction
+   // of each frame's silhouette width. Every frame remains a single intact image.
+   return{unit,root:(chest[i]-refOffset*BattleSize.native('tifa',ref)/unit)/img.width,floor:img.height-3};
+  }
   if(n>=49){const img=characterArt.tifa.frames[n],i=n-49;return{unit:BattleSize.native('tifa',n),root:roots[i],floor:img.height-3};}
   const originalRoots={9:.52,13:.5,17:.48,20:.5,21:.52,24:.56,25:.56,26:.56,27:.56,28:.60,29:.60,30:.60,31:.60,34:.53,35:.60,40:.5,42:.5},size={20:1.08,21:1.10};
   return{unit:BattleSize.native('tifa',n)*(size[n]??1),root:originalRoots[n]??NewcomerArtAnchors.tifa[n]??.5,floor:characterArt.tifa.frames[n].height-BattleSize.baseline(f,n)};
@@ -76,5 +86,15 @@ const TifaRasterAnimation=(()=>{
  }
  function draw(f,alpha,scale){const v=sample(f);return v?drawFrame(f,v.pose,alpha,scale):false;}
  function native(n){return BattleSize.native('tifa',40)*sizes[n-49];}
- return{append,sample,placement,draw,drawFrame,native,tracks,sourceCount:41};
+ // Contacts measured on the DISPLAYED full sprite, not the old logical pose.
+ // Same root, floor and uniform scale as drawFrame; no simulation mutation.
+ const contacts={9:[.66,.43,.95,.30],11:[.53,.69,.975,.80],13:[.59,.57,.98,.60],
+  17:[.65,.34,.97,.23],42:[.62,.25,.98,.22],43:[.65,.58,.91,.035],
+  44:[.61,.48,.025,.26],45:[.57,.63,.89,.97],46:[.58,.64,.83,.45]};
+ function strike(f){const v=sample(f),n=v?.pose,p=contacts[n];if(!p)return null;
+  const im=characterArt.tifa.frames[n],pl=placement(f,n),s=FIGHTER_SCALE*MorphieRules.scale(f)*BattleSize.art('tifa')*pl.unit;
+  const point=(x,y)=>({x:f.x+(x-pl.root)*im.width*s*f.face,y:f.y+(y*im.height-pl.floor)*s});
+  return{pose:n,from:point(p[0],p[1]),to:point(p[2],p[3])};
+ }
+ return{append,sample,placement,draw,drawFrame,native,tracks,strike,contacts,sourceCount:57};
 })();

@@ -33,7 +33,7 @@
     "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
     "environmentRevision": 36
   },
-  "currentStatus": "tifa_raster_pass_published",
+  "currentStatus": "tifa_raster_visual_sync_validated",
   "designReference": "User-specified characters/tifa/assets/tifa-arsenal.png; preserve top-left standing and third top-row punch as immutable endpoints.",
   "stoppedCharacters": {
     "moogle": {
@@ -90,10 +90,10 @@
   ],
   "rasterPass": {
     "characterId": "tifa",
-    "version": 1,
+    "version": 2,
     "source": "characters/tifa/assets/tifa-arsenal.png",
     "originalPoses": 49,
-    "generatedMiddles": 41,
+    "generatedMiddles": 57,
     "coverage": [
       "normal attacks",
       "aerial attacks",
@@ -112,7 +112,7 @@
     "physicsChanged": false,
     "requiresUserReviewBeforeNextCharacter": true,
     "tests": {
-      "animation": 17217,
+      "animation": 17216,
       "mechanics": 176,
       "online": 56,
       "actionability": 16922,
@@ -125,11 +125,22 @@
         "matches": 2,
         "framesPerMatch": 1800
       },
-      "motionSize": 117360
+      "motionSize": 117360,
+      "visualSync": 4066
     },
     "runtime": "characters/tifa/tifa-raster-animation.js",
-    "publicationVerified": true,
-    "nextCharacter": "manual_user_instruction"
+    "publicationVerified": false,
+    "nextCharacter": "manual_user_instruction",
+    "locomotionCyclePoses": {
+      "walk": [
+        90,
+        97
+      ],
+      "run": [
+        98,
+        105
+      ]
+    }
   },
   "previousPublications": [
     {

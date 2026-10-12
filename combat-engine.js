@@ -75,7 +75,7 @@ function advanceAttack(f,i){
  if(a.diveSpeed&&CombatData.activeWindow(a,f.timer)){f.fastFall=false;f.vy=a.diveSpeed;}
  const cancel=a.cancel,b=f.buffer;if(cancel&&b&&f.timer>=cancel.start&&f.timer<=cancel.end&&(b.key===cancel.input||cancel.input==='jab'&&b.key==='heavy')){let next=cancel.next||cancel.branch+(b.y<0?'Up':b.y>0?'Down':'');attack(f,next);a=f.attack;}
  GameAudio.attackTick(f);if(f.timer===a.startupFrames){if(a.verticalImpulse){f.grounded=false;f.recovered=true;f.specialLandingLag=a.landingLagFrames;ring(f.x,f.y,colors[f.color],90);}}
- if(CombatData.activeWindow(a,f.timer)&&frame%2===0&&!(f.characterId==='pokoa'&&PokoaRules.form(f))){ghosts.push({x:f.x,y:f.y,face:f.face,pose:CombatData.sample(a,f.timer).pose,characterId:f.characterId,color:f.color,morphSize:f.morphSize,life:14});}
+ if(CombatData.activeWindow(a,f.timer)&&frame%2===0&&!(f.characterId==='pokoa'&&PokoaRules.form(f))){ghosts.push({x:f.x,y:f.y,face:f.face,pose:CombatData.sample(a,f.timer).pose,characterId:f.characterId,color:f.color,morphSize:f.morphSize,...(f.characterId==='tifa'?{rasterPose:TifaRasterAnimation.sample(f)?.pose}:{}),life:14});}
 }
 function resolveCombat(){CombatSystem.resolve();}
 function hit(f,o,a){CombatSystem.hit(f,o,a);}
