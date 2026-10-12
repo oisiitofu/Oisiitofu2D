@@ -13,6 +13,7 @@ const BattlePlayers=(()=>{
  function refresh(){
   if(!initialized)return;
   const relay=SquadBattle.size()>1,joined=document.querySelector('#battle-mode').value==='online'&&!!Net.code;document.querySelector('#stock-count').disabled=relay||joined&&Net.slot!==0;document.querySelector('#player-count').disabled=relay||joined;document.querySelector('#battle-format').disabled=relay||joined;
+  document.querySelector('#time-limit').disabled=joined&&Net.slot!==0;document.querySelector('#time-limit-setting').classList.toggle('hidden',document.querySelector('#battle-mode').value==='training');document.querySelector('#squad-size').disabled=joined&&(Net.slot!==0||Number(document.querySelector('#player-count').value)>2);
   const n=relay?2:count(),online=document.querySelector('#battle-mode').value==='online',allowed=['battle','online'].includes(document.querySelector('#battle-mode').value);
   document.querySelector('#multiplayer-settings').classList.toggle('hidden',!allowed);
   document.querySelector('#local-seat-settings').classList.toggle('hidden',online||!allowed);
@@ -33,7 +34,8 @@ const BattlePlayers=(()=>{
  function setCharacter(id){if(selection<2)return false;seats[selection].character=id;refresh();Roster.refreshSelection();return true;}
  function setColor(value){if(selection<2)return false;seats[selection].color=value;refresh();Roster.artReady();return true;}
  const stockCount=()=>clamp(Number(document.querySelector('#stock-count').value)||3,1,10);
- function config(){return{stocks:stockCount(),playerCount:SquadBattle.size()>1?2:count(),format:document.querySelector('#battle-format').value,players:seats.slice(0,SquadBattle.size()>1?2:count()).map((s,n)=>({...s,character:Roster.resolve(n===0?Roster.selected:n===1?document.querySelector('#cpu-character').value:s.character),color:n===0?selected:n===1?+document.querySelector('#color2').value:s.color}))};}
+ const timeLimit=()=>MatchRules.time(document.querySelector('#time-limit').value);
+ function config(){return{timeLimit:timeLimit(),stocks:stockCount(),playerCount:SquadBattle.size()>1?2:count(),format:document.querySelector('#battle-format').value,players:seats.slice(0,SquadBattle.size()>1?2:count()).map((s,n)=>({...s,character:Roster.resolve(n===0?Roster.selected:n===1?document.querySelector('#cpu-character').value:s.character),color:n===0?selected:n===1?+document.querySelector('#color2').value:s.color}))};}
  function start(config){
   teams=config.format==='teams'&&config.players.length>2;initialStocks=clamp(config.stocks||3,1,10);
   if(teams&&new Set(config.players.map(s=>s.battleTeam??s.team)).size<2)return false;
@@ -59,6 +61,8 @@ const BattlePlayers=(()=>{
  function init(){
   initialized=true;try{const saved=+localStorage.getItem('tofu-stock-count');if(saved>=1&&saved<=10)document.querySelector('#stock-count').value=String(saved);}catch{}
   document.querySelector('#stock-count').onchange=()=>{try{localStorage.setItem('tofu-stock-count',String(stockCount()));}catch{}Roster.summary();};
+  try{document.querySelector('#time-limit').value=String(MatchRules.time(localStorage.getItem('tofu-time-limit')??240));}catch{}
+  document.querySelector('#time-limit').onchange=()=>{try{localStorage.setItem('tofu-time-limit',String(timeLimit()));}catch{}Roster.summary();};
   const targets=document.querySelector('.roster-targets'),swatches=targets.querySelector('.costume-row');
   for(let slot=2;slot<4;slot++){const b=document.createElement('button');b.id='select-seat-'+slot;b.className='roster-target hidden';b.innerHTML=`<span>${slot+1}P</span><img alt=""><b>おまかせ</b>`;b.onclick=()=>setSelection(slot);targets.insertBefore(b,swatches);}
   const container=document.querySelector('#local-seat-settings');
@@ -67,5 +71,5 @@ const BattlePlayers=(()=>{
   document.querySelector('#battle-format').onchange=()=>{if(document.querySelector('#battle-format').value==='teams')document.querySelector('#player-count').value='4';refresh();Roster.refreshSelection();Roster.fit();};
   refresh();
  }
- return{seats,count,stockCount,refresh,init,start,config,target,targets,projectileTarget,sameTeam,out,color,spawnX,localInput,eliminatedInput,canShare,share,ended,winner,winnerLabel,setSelection,setCharacter,setColor,get initialStocks(){return initialStocks},get selection(){return selection},get teamBattle(){return teams}};
+ return{seats,count,stockCount,timeLimit,refresh,init,start,config,target,targets,projectileTarget,sameTeam,out,color,spawnX,localInput,eliminatedInput,canShare,share,ended,winner,winnerLabel,setSelection,setCharacter,setColor,get initialStocks(){return initialStocks},get selection(){return selection},get teamBattle(){return teams}};
 })();

@@ -15,5 +15,5 @@ const Net=(()=>{
   }
  }
  const noop=()=>{};
- return{init,leave:noop,capture:noop,finished:noop,ready:noop,status:noop,active:false,applying:false,code:'',slot:0,config:null,inputs:null,starting:false};
+ return{init,returnToSelection:noop,leave:noop,capture:noop,finished:noop,ready:noop,status:noop,active:false,applying:false,code:'',slot:0,config:null,inputs:null,starting:false};
 })();

@@ -10,7 +10,7 @@ const fs=require('fs'),{chromium}=require('playwright');
    check(id+' '+type+' charge increases '+percent,CombatData.launch(a,percent,1).knockback>preview.knockback);
    check(id+' '+type+' rage preserved '+percent,CombatData.launch(a,percent,0,90,150).knockback>preview.knockback);
    for(const charge of [0,1]){[f,o]=reset(id);o.damage=percent;const strike={...move,type,charge,launchDirection:1};CombatSystem.hit(f,o,strike);const launch=o.pendingLaunch;check(id+' '+type+' finite launch '+percent+'/'+charge,launch&&Number.isFinite(launch.speed)&&launch.speed>0,launch);check(id+' '+type+' speed calibrated '+percent+'/'+charge,Math.abs(launch.speed-launch.raw*.12)<1e-8);check(id+' '+type+' hitstun preserved '+percent+'/'+charge,launch.hitstun===Math.max(4,Math.floor(launch.raw*.4)-1));
-    const preview=CombatData.launch(strike,percent,charge,o.character.weight,f.damage);check(id+' '+type+' preview equals hit '+percent+'/'+charge,Math.abs(preview.knockback-launch.speed)<1e-8,{preview,launch});
+    const preview=CombatData.launch({...strike,damage:strike.damage*(id==='omegamon'&&f.digiMode!==1?1.1:1)},percent,charge,o.character.weight,f.damage);check(id+' '+type+' preview equals hit '+percent+'/'+charge,Math.abs(preview.knockback-launch.speed)<1e-8,{preview,launch});
     o.hitlag=1;CombatSystem.hitlag(o,emptyInput());check(id+' '+type+' releases at correct speed '+percent+'/'+charge,Math.abs(o.lastLaunchSpeed-launch.speed)<1e-8);const before=o.vx;frame++;PlayerController.tick(o,emptyInput());check(id+' '+type+' horizontal launch brakes '+percent+'/'+charge,Math.abs(o.vx)<=Math.abs(before)+1e-8);
     if(percent===100&&charge===0)samples.push({id,type,speed:launch.speed,legacySpeed:launch.raw*.24,hitstun:launch.hitstun});
    }

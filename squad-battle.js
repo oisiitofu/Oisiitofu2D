@@ -26,7 +26,7 @@ const SquadBattle=(()=>{
  }
  function hud(f,x,y){if(!f.squad)return;for(let n=0;n<f.squad.length;n++){const px=x+50+n*36,img=ArtLoader.hudPortrait(f.squad[n],f.color);ctx.save();ctx.globalAlpha=n<f.squadIndex?.22:1;ctx.fillStyle=n===f.squadIndex?'#e8f4ff':'#37445b';ctx.fillRect(px-1,y-28,34,24);if(img)ctx.drawImage(img,px,y-27,32,22);ctx.restore();}}
  function init(){
-  const select=document.querySelector('#squad-size');select.onchange=()=>{refresh();Roster.fit();};
+  const select=document.querySelector('#squad-size');select.onchange=()=>{refresh();BattlePlayers.refresh();Roster.summary();Roster.fit();};
   document.querySelector('#enter-squad').onclick=()=>Roster.open('squad3');refresh();
  }
  return{init,size,choose,refresh,config,start,onKO,respawn,hud,teams};
