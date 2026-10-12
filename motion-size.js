@@ -12095,7 +12095,7 @@ const MotionSize={
    ]
   },
   "sukapon": {
-   "atlas": "assets/ready/sukapon-atlas-7baae2750fae7666.webp",
+   "atlas": "assets/ready/sukapon-atlas-6c750ed98e5f6367.webp",
    "poses": [
     0,
     1,
