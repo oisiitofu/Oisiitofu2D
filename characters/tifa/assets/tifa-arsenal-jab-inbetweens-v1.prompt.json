@@ -1,0 +1,14 @@
+{
+  "mode": "built-in image_gen",
+  "purpose": "Only raster inbetweens from the user-selected tifa-arsenal.png",
+  "baseline": "../tests/pre-inbetween-baseline.json",
+  "references": [
+    "tifa-arsenal-base-idle.png",
+    "tifa-arsenal-base-jab.png"
+  ],
+  "originalPoseIds": [
+    40,
+    42
+  ],
+  "prompt": "Create THREE genuine hand-drawn whole-body animation inbetween frames between the two attached adult Tifa sprites. These exact sprites are from the user's specified tifa-arsenal.png: reference image 1 is the TOP-LEFT relaxed wide standing pose with BOTH HANDS DOWN, and reference image 2 is the TOP-ROW THIRD straight punch. These are the locked endpoints. Use ONLY these as the character design and animation basis. Do not use a raised-fists idle from another sprite sheet, concept art, or any previous inbetween drafts.\n\nOutput a transparent raster strip, three square cells in one horizontal row, showing 25%, 50%, 75% of the transition FROM THAT HANDS-DOWN STANDING POSE TO THAT STRAIGHT PUNCH. The first inbetween must still clearly resemble the supplied hands-down stance: striking hand starts lifting and moving forward, elbow bends, the opposite glove starts lifting toward her chest. Second is halfway into the punch: slight torso turn, striking arm partially extended, the other glove approaching the cheek/chest. Third nearly matches the original punch: almost fully extended striking arm to the RIGHT, other glove guarding near the chest. Planted boot positions and knee bends change gradually. Only a small natural body turn. Same fixed anatomy and scale across all three; do not fake lowered posture by shrinking a sprite.\n\nMatch the SPECIFIC identity, facial features, adult head proportions, small eyes, short neck, shoulder width, arm thickness, original waist and chest proportions, long dark brown hair locks, simple white sleeveless athletic crop top, same black straps, black short pleated skirt and belt, opaque black thigh-high stockings, red-and-black gloves and red lace-up boots in these references. Preserve their exact muted anime game illustration style, fine clean lines and shading. Do not beautify, redesign or re-proportion the character. No larger eyes, longer neck, slimmer body, different face, new accessories, different skirt details, more voluminous hair, or rubber anatomy. The two endpoint images will be used unchanged by the game; draw only the THREE MIDDLE WHOLE-BODY POSES. No endpoint redraws.\n\nAll three face RIGHT, same camera and consistent body size, feet on one common horizontal baseline, fully visible with transparent margins in their separate square cells. True RGBA transparency. No grid lines, text, labels, borders, brown background, floor, shadows, motion trails, effects, ghosting or blur. Output only the three sprites."
+}

@@ -1,0 +1,31 @@
+{
+  "source": "characters/tifa/assets/tifa-arsenal.png",
+  "sha256": "dc821962dd1d2c72b6f328a236fdfd3b9b05b412bc691fe864c284e2a1b325e4",
+  "sourceCommit": "3204911",
+  "userExplicitReference": true,
+  "originalSourceUnchanged": true,
+  "poses": [
+    {
+      "pose": 40,
+      "file": "characters/tifa/assets/tifa-arsenal-base-idle.png",
+      "rect": [
+        1652,
+        1400,
+        366,
+        454
+      ],
+      "sha256": "85c9f1d487c135fcdca54774b5067d0e17d787cb04433ecc35b14ace610d68e5"
+    },
+    {
+      "pose": 42,
+      "file": "characters/tifa/assets/tifa-arsenal-base-jab.png",
+      "rect": [
+        312,
+        1858,
+        411,
+        435
+      ],
+      "sha256": "e0afaa1b2807a8b0aad10eaccca3826cebd8a00ab9a1952a122d36b53d47527c"
+    }
+  ]
+}

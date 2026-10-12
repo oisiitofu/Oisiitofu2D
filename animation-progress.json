@@ -25,7 +25,7 @@
     "livePublicModeChecks": 1495
   },
   "currentStatus": "original_art_restored_raster_jab_prototype_for_review",
-  "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation.",
+  "designReference": "User-specified characters/tifa/assets/tifa-arsenal.png; preserve top-left standing and third top-row punch as immutable endpoints.",
   "stoppedCharacters": {
     "moogle": {
       "characterId": "moogle",
@@ -40,18 +40,27 @@
     "tifa": {
       "date": "2026-10-12",
       "method": "articulated_standing_pixel_rig",
-      "reason": "User reported unnatural wriggling and changed appearance; use raster inbetween frames between approved originals instead."
+      "reason": "User reported unnatural wriggling and changed appearance; use raster inbetween frames between approved originals instead.",
+      "rejectedDrafts": [
+        "atlas_idle_jab_inbetweens_v1",
+        "atlas_idle_jab_inbetweens_v2"
+      ]
     }
   },
   "animationMethod": "approved_original_endpoints_and_raster_inbetween_frames",
   "prototype": {
     "characterId": "tifa",
     "move": "jab",
+    "version": "arsenal_v1",
+    "baselineCommit": "3204911",
+    "baselineFile": "characters/tifa/tests/pre-inbetween-baseline.json",
+    "source": "characters/tifa/assets/tifa-arsenal.png",
     "originalPoses": [
-      0,
-      6
+      40,
+      42
     ],
     "generatedFrames": 3,
+    "asset": "characters/tifa/assets/tifa-arsenal-jab-inbetweens-v1.png",
     "runtimeRegistered": false,
     "status": "draft_for_visual_review"
   },
