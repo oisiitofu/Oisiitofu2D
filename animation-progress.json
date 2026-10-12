@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "qualityReference": "sukapon",
+  "orderSource": "Roster.selectable displayNumber / roster.js selectionOrder",
+  "completed": [
+    "sukapon"
+  ],
+  "current": {
+    "id": "chocobo",
+    "status": "verified_pending_publication"
+  },
+  "updatedAt": "2026-10-12",
+  "publicUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "continuation": "manual_one_character_at_a_time"
+}
