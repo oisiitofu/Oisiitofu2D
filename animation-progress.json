@@ -12,19 +12,28 @@
   "continuation": "manual_one_character_at_a_time",
   "lastPublication": {
     "characterId": "tifa",
-    "kind": "restore_approved_original_art_remove_rejected_joint_animation",
+    "kind": "whole_raster_inbetween_pass_v1",
+    "passCompleted": true,
     "animationCompleted": false,
-    "githubCommit": "550f80a",
-    "siteSourceCommit": "d5ddfa0183f8bbf56a358cec4e82383ce8497c74",
-    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_52776e5a64888191b6c34a90ff604c64",
-    "deploymentId": "appgdep_6acc920990f0819183b029c01db922a3",
+    "originalMotionRetained": [
+      "ledge catch / hang / climb",
+      "down / getup"
+    ],
+    "githubCommit": "a4e7b09",
+    "siteSourceCommit": "e36fba8f590eb06cfd1bce37a1c824b607cfde8a",
+    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_600f84efede48191a035f96bcff8591a",
+    "versionNumber": 19,
+    "deploymentId": "appgdep_6acca45d2e2481918f348fa8dddb3a65",
     "status": "succeeded",
-    "liveChecks": 14,
-    "prototypeRegistered": false,
+    "liveChecks": 17217,
+    "livePublicModeChecks": 1495,
+    "originalPoses": 49,
+    "generatedMiddles": 41,
+    "prototypeRegistered": true,
     "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
-    "livePublicModeChecks": 1495
+    "environmentRevision": 36
   },
-  "currentStatus": "tifa_raster_pass_verified_pending_publication",
+  "currentStatus": "tifa_raster_pass_published",
   "designReference": "User-specified characters/tifa/assets/tifa-arsenal.png; preserve top-left standing and third top-row punch as immutable endpoints.",
   "stoppedCharacters": {
     "moogle": {
@@ -118,6 +127,24 @@
       },
       "motionSize": 117360
     },
-    "runtime": "characters/tifa/tifa-raster-animation.js"
-  }
+    "runtime": "characters/tifa/tifa-raster-animation.js",
+    "publicationVerified": true,
+    "nextCharacter": "manual_user_instruction"
+  },
+  "previousPublications": [
+    {
+      "characterId": "tifa",
+      "kind": "restore_approved_original_art_remove_rejected_joint_animation",
+      "animationCompleted": false,
+      "githubCommit": "550f80a",
+      "siteSourceCommit": "d5ddfa0183f8bbf56a358cec4e82383ce8497c74",
+      "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_52776e5a64888191b6c34a90ff604c64",
+      "deploymentId": "appgdep_6acc920990f0819183b029c01db922a3",
+      "status": "succeeded",
+      "liveChecks": 14,
+      "prototypeRegistered": false,
+      "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+      "livePublicModeChecks": 1495
+    }
+  ]
 }
