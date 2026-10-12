@@ -12,16 +12,17 @@
   "continuation": "manual_one_character_at_a_time",
   "lastPublication": {
     "characterId": "tifa",
-    "kind": "original_stance_articulated_animation_v1",
+    "kind": "restore_approved_original_art_remove_rejected_joint_animation",
     "animationCompleted": false,
-    "githubCommit": "fd753ca93733becb1e55d75b61822f0de24d0181",
-    "siteSourceCommit": "9fb114244379d1c95e4877b40f413531a3e26f04",
-    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_669a90b0dcac819191a986deb504898a",
-    "deploymentId": "appgdep_6acc76caa56c819193ef5ecc8967c85a",
+    "githubCommit": "550f80a",
+    "siteSourceCommit": "d5ddfa0183f8bbf56a358cec4e82383ce8497c74",
+    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_52776e5a64888191b6c34a90ff604c64",
+    "deploymentId": "appgdep_6acc920990f0819183b029c01db922a3",
     "status": "succeeded",
-    "liveChecks": 14682,
-    "livePublicModeChecks": 1495,
-    "userRejected": true
+    "liveChecks": 14,
+    "prototypeRegistered": false,
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "livePublicModeChecks": 1495
   },
   "currentStatus": "original_art_restored_raster_jab_prototype_for_review",
   "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation.",
@@ -53,5 +54,20 @@
     "generatedFrames": 3,
     "runtimeRegistered": false,
     "status": "draft_for_visual_review"
-  }
+  },
+  "rejectedPublications": [
+    {
+      "characterId": "tifa",
+      "kind": "original_stance_articulated_animation_v1",
+      "animationCompleted": false,
+      "githubCommit": "fd753ca93733becb1e55d75b61822f0de24d0181",
+      "siteSourceCommit": "9fb114244379d1c95e4877b40f413531a3e26f04",
+      "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_669a90b0dcac819191a986deb504898a",
+      "deploymentId": "appgdep_6acc76caa56c819193ef5ecc8967c85a",
+      "status": "succeeded",
+      "liveChecks": 14682,
+      "livePublicModeChecks": 1495,
+      "userRejected": true
+    }
+  ]
 }
