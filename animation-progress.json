@@ -3,13 +3,20 @@
   "qualityReference": "sukapon",
   "orderSource": "Roster.selectable displayNumber / roster.js selectionOrder",
   "completed": [
-    "sukapon"
+    "sukapon",
+    "chocobo"
   ],
-  "current": {
-    "id": "chocobo",
-    "status": "verified_pending_publication"
-  },
+  "current": null,
   "updatedAt": "2026-10-12",
   "publicUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
-  "continuation": "manual_one_character_at_a_time"
+  "continuation": "manual_one_character_at_a_time",
+  "lastPublication": {
+    "characterId": "chocobo",
+    "githubCommit": "6050429",
+    "siteSourceCommit": "1970f81c981b9b9fc375c1a6ee89415b11799437",
+    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_d8e5af0f90788191837d9da9f09323ac",
+    "deploymentId": "appgdep_6acc4e52b980819190524ba1a3d8ba53",
+    "status": "succeeded",
+    "liveChecks": 8568
+  }
 }
