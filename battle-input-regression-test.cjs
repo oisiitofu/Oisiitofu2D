@@ -48,30 +48,28 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
       const f=reset(id),ledge=StageRules.ledges.find(l=>l.face===-side);Object.assign(f,{x:ledge.x+side*22,y:ledge.y+24,grounded:false,vy,face:-side});PlayerStates.enter(f,'Fall');tick();
       check(id+'/'+side+'/'+vy+' recovery grabs below',f.mode==='LedgeCatch',snap(f));
      }
-     // Presses stop both launch components, without shortening the existing
-     // hitstun, executing an attack/jump, or buffering that forbidden action.
+     // Hitstun owns momentum until it ends, even when attack/jump is mashed.
      for(const button of ['jump','jab','heavy','smash','special']){
       const f=reset(id);Object.assign(f,{x:720,y:80,grounded:false,vx:12*side,vy:-8,hitstun:20,tumbling:true});PlayerStates.enter(f,'Tumble');tick({[button]:true});
-      check(id+'/'+side+'/'+button+' stops momentum',f.vx===0&&Math.abs(f.vy-f.character.gravity)<1e-8,snap(f));
-      check(id+'/'+side+'/'+button+' retains stun',f.hitstun===19&&!f.attack&&f.airJumps===1&&!f.buffer,snap(f));
+      check(id+'/'+side+'/'+button+' keeps launch during stun',Math.abs(f.vx-(12-.075)*side)<1e-8&&Math.abs(f.vy-(-8+f.character.gravity))<1e-8,snap(f));
+      check(id+'/'+side+'/'+button+' retains stun without action',f.hitstun===19&&!f.attack&&f.airJumps===1,snap(f));
      }
      for(const fast of [false,true]){
       const f=reset(id);Object.assign(f,{x:720,y:80,grounded:false,vy:2,face:side,fastFall:fast,eveEnergy:100,donSoul:100});PlayerStates.enter(f,'Fall');tick({y:1,special:true});
       check(id+'/'+side+'/'+fast+' down special suppresses fast fall',!f.fastFall&&!!f.attack?.downSpecialInput,snap(f));
      }
     }
-    // A button during the hit freeze also cancels the queued launch without
-    // cancelling the freeze or the subsequent stun. No action leaks through.
+    // A button during hitlag cannot erase the queued launch or skip the stun.
     for(const button of ['jump','jab','special']){
      const f=reset();Object.assign(f,{grounded:false,y:80});CombatSystem.freeze(f,4);f.pendingLaunch={angle:-.7,speed:15,raw:70,hitstun:24};tick({[button]:true});
-     check(button+' hitlag keeps freeze',f.hitlag===3&&f.pendingLaunch.speed===0&&!f.buffer,snap(f));tick({},3);
-     check(button+' queued launch stays cancelled',f.hitlag===0&&f.hitstun===24&&f.vx===0&&f.vy===0&&!f.attack,snap(f));
+     check(button+' hitlag keeps freeze and launch',f.hitlag===3&&f.pendingLaunch.speed===15,snap(f));tick({},3);
+     check(button+' queued launch releases',f.hitlag===0&&f.hitstun===24&&f.vx>10&&f.vy<-9&&!f.attack,snap(f));
     }
     // Ordinary down flicks and down-special's authored dive remain distinct.
     for(const button of ['jump','jab','special']){
      const f=reset();Object.assign(f,{grounded:false,y:80,vx:12,vy:-8,hitstun:20,tumbling:true});PlayerStates.enter(f,'Tumble');hitstop=2;tick({[button]:true});
-     check(button+' KO freeze still stops momentum',hitstop===1&&f.hitstun===20&&f.vx===0&&f.vy===0&&!f.buffer,snap(f));tick({},2);
-     check(button+' KO freeze does not buffer forbidden action',f.hitstun===19&&!f.attack&&!f.buffer&&f.airJumps===1,snap(f));
+     check(button+' KO freeze keeps momentum',hitstop===1&&f.hitstun===20&&f.vx===12&&f.vy===-8,snap(f));tick({},2);
+     check(button+' KO freeze does not execute forbidden action',f.hitstun===19&&!f.attack&&f.airJumps===1,snap(f));
     }
     // A nearby opponent and a moving platform must not defeat the edge guard.
     for(const stage of ['0','2'])for(const side of [-1,1])for(const mode of ['SpotDodge','ForwardRoll','BackwardRoll','TechRoll','GetupRoll','LedgeRoll']){

@@ -38,13 +38,11 @@ const PlayerController=(()=>{
   else{enterIf(f,'Walk');f.vx=moveToward(f.vx,x*c.walkSpeed,c.walkAcceleration);}
  }
  function enterIf(f,name){if(f.mode!==name)enter(f,name);}
- // These button presses stop launch momentum even while hitstun still owns
- // the fighter. They never shorten hitstun or execute/buffer an action then.
+ // Cancel residual launch momentum only once the fighter can act. A mash
+ // during hitlag/hitstun must never erase the queued or ongoing knockback.
  function stopLaunchOnPress(f,i){
-  if(!(f.pendingLaunch||f.hitstun>0||f.tumbling)||!['jump','jab','heavy','smash','special'].some(key=>i[key]))return;
-  f.vx=f.vy=0;
-  if(f.pendingLaunch)f.pendingLaunch.speed=0;
-  if(f.pendingLaunch||f.hitstun>0)f.buffer=null;
+  if(f.pendingLaunch||f.hitlag>0||f.hitstun>0||hitstop>0||!f.tumbling||!['jump','jab','heavy','smash','special'].some(key=>i[key]))return;
+  f.vx=f.vy=0;f.tumbling=false;
  }
  function releaseGrab(f){let o=f.grabbed;if(o){o.grabImmunity=60;o.grabOwner=null;enter(o,o.grounded?'Idle':'Fall');}f.grabbed=null;enter(f,f.grounded?'Idle':'Fall');}
  function tech(f,i,surface){if(!f.tumbling)return false;if(f.techBuffer>0&&f.techLock<=0){f.techBuffer=0;f.techLock=40;f.hitstun=0;f.tumbling=false;f.intangible=20;f.attack=null;
@@ -80,7 +78,7 @@ const PlayerController=(()=>{
   }return false;
  }
  function breakShield(f){f.shield=0;f.hitstun=0;f.attack=null;f.grounded=false;f.vy=-9;f.vx=0;enter(f,'ShieldBreak');label(f.x,f.y-90,'SHIELD BREAK');}
- function ready(f,i){i=InputFrames.consume(f,i);const order=InputFrames.priority[f.grounded?'ground':'air'];
+ function ready(f,i){i=InputFrames.consume(f,i);stopLaunchOnPress(f,i);const order=InputFrames.priority[f.grounded?'ground':'air'];
   if(i.jump&&i.jumpAerial){beginJump(f,i);return;}
   if(f.grounded&&i.shieldUpSmash&&i.smash&&InputFrames.attackDirection(i).y<-.5){attack(f,'upsmash');return;}
   if(f.grounded&&!i.guard&&i.y>.65&&Math.abs(i.y)>Math.abs(i.x)&&!['jump','jab','heavy','smash','special'].some(key=>i[key])&&platforms.some(p=>!p.main&&Math.abs(p.y-f.y)<2&&f.x>p.x&&f.x<p.x+p.w)){f.drop=18;f.y+=8;f.vy=2;f.grounded=false;enter(f,'Fall');}

@@ -12,8 +12,12 @@ const CombatSystem=(()=>{
   if(--f.hitlag>0)return;let frozen=f.frozen;f.frozen=null;if(frozen)Object.assign(f,frozen);
   if(f.pendingLaunch){let p=f.pendingLaunch;f.pendingLaunch=null;let base=p.angle,cross=Math.cos(base)*i.y-Math.sin(base)*i.x,angle=base+(p.raw>=50&&Math.abs(Math.sin(base))>Math.sin(BattleFeel.tuning.diAngle)?clamp(cross,-1,1)*BattleFeel.tuning.diAngle:0),speed=p.speed;if(p.raw>=50&&Math.abs(Math.sin(angle))<=Math.sin(65*Math.PI/180))speed*=i.y<0?1-i.y*.095:1-i.y*.08;
    // Only the horizontal component was underpowered. Keep vertical KOs,
-   // raw knockback, hitstun and the requested button momentum cancel intact.
-   f.vx=Math.cos(angle)*speed*(p.smash&&Math.abs(Math.cos(base))>=Math.SQRT1_2?1.5:1);f.vy=Math.sin(angle)*speed;f.launchDecay=p.smash?.204*Math.abs(Math.cos(angle)):.075;f.hitstun=p.hitstun;f.lastLaunchAngle=angle;f.lastLaunchSpeed=speed;f.lastKnockback=p.raw;f.tumbling=p.raw>=50;f.grounded=false;PlayerStates.enter(f,f.tumbling?'Tumble':'Hitstun');}
+   // raw knockback, hitstun and vertical launch relationships intact.
+   f.vx=Math.cos(angle)*speed*(p.smash&&Math.abs(Math.cos(base))>=Math.SQRT1_2?1.5:1);f.vy=Math.sin(angle)*speed;f.launchDecay=p.smash?.204*Math.abs(Math.cos(angle)):.075;f.hitstun=p.hitstun;f.lastLaunchAngle=angle;f.lastLaunchSpeed=speed;f.lastKnockback=p.raw;f.tumbling=p.raw>=50;
+   // A flat ground hit has not landed from the air. Keep its support until
+   // physics actually lifts it or carries it past the lip; otherwise the
+   // first gravity step turns it into a knockdown and discards its launch.
+   f.grounded=f.grounded&&f.vy+f.character.gravity>=0;PlayerStates.enter(f,f.tumbling?'Tumble':'Hitstun');}
  }
  function protection(f,part){let a=f.attack,t=f.timer;return{intangible:f.intangible>0||a&&inWindow(a.intangibleFrames,t),invincible:f.inv>0||a&&inWindow(a.invincibleFrames,t),armor:a?.armorFrames.find(w=>t>=(w.start??w[0])&&t<=(w.end??w[1])&&(!w.part||w.part===part))};}
  function contact(box,f){let best=null;const dx=box.x2-box.x1,dy=box.y2-box.y1,ll=dx*dx+dy*dy;for(let h of hurtboxes(f)){let t=clamp(((h.x-box.x1)*dx+(h.y-box.y1)*dy)/Math.max(1,ll),0,1),x=box.x1+dx*t,y=box.y1+dy*t;if(Math.hypot(h.x-x,h.y-y)<=h.r+box.radius)best={part:h.part,x,y};}return best;}

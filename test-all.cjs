@@ -3,7 +3,7 @@ console.log('\nRunning multihit-balance-test.cjs');
 const multihitCheck=spawnSync(process.execPath,['multihit-balance-test.cjs'],{stdio:'inherit'});if(multihitCheck.status!==0)process.exit(multihitCheck.status||1);
 console.log('\nRunning aerial-fastfall-test.cjs');
 const aerialFastfallCheck=spawnSync(process.execPath,['aerial-fastfall-test.cjs'],{stdio:'inherit'});if(aerialFastfallCheck.status!==0)process.exit(aerialFastfallCheck.status||1);
-for(const file of ['horizontal-burst-test.cjs','time-limit-test.cjs','online-rematch-squad-test.cjs','character-layout-test.cjs','battle-size-test.cjs','motion-size-test.cjs','battle-input-regression-test.cjs']){console.log('\nRunning '+file);const result=spawnSync(process.execPath,[file],{stdio:'inherit'});if(result.status!==0)process.exit(result.status||1);}
+for(const file of ['knockback-motion-test.cjs','knockback-online-test.cjs','horizontal-burst-test.cjs','time-limit-test.cjs','online-rematch-squad-test.cjs','character-layout-test.cjs','battle-size-test.cjs','motion-size-test.cjs','battle-input-regression-test.cjs']){console.log('\nRunning '+file);const result=spawnSync(process.execPath,[file],{stdio:'inherit'});if(result.status!==0)process.exit(result.status||1);}
 console.log('\nRunning battle-movement-test.cjs');
 const movementCheck=spawnSync(process.execPath,['battle-movement-test.cjs'],{stdio:'inherit'});if(movementCheck.status!==0)process.exit(movementCheck.status||1);
 console.log('\nRunning .tools/motion-actionability-test.cjs');
