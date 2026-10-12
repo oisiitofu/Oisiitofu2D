@@ -3,7 +3,8 @@
   "qualityReference": "sukapon",
   "orderSource": "Roster.selectable displayNumber / roster.js selectionOrder",
   "completed": [
-    "sukapon"
+    "sukapon",
+    "chocobo"
   ],
   "current": "chocobo",
   "updatedAt": "2026-10-12",
@@ -11,15 +12,16 @@
   "continuation": "manual_one_character_at_a_time",
   "lastPublication": {
     "characterId": "chocobo",
-    "kind": "original_design_restore",
-    "animationCompleted": false,
-    "githubCommit": "7cf15c0",
-    "siteSourceCommit": "ecc979e4c1e6f467bc3a3403ce047f448d7004a3",
-    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_dc21f6280cf48191a02331922a0457ea",
-    "deploymentId": "appgdep_6acc54634964819190f35e72fe7d2e67",
+    "kind": "original_stance_animation_v2",
+    "animationCompleted": true,
+    "githubCommit": "3fb9fc033be72b843cb963293bcdb71da4a19896",
+    "siteSourceCommit": "9c3ffab3da495dd0e3eb96c0d3808bf15ba407d2",
+    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_b5c9936d6e288191b402ffac0d2d1f87",
+    "deploymentId": "appgdep_6acc61ab768481919f5e8c925222f4c2",
     "status": "succeeded",
-    "liveChecks": 2888
+    "liveChecks": 9708,
+    "livePublicModeChecks": 1495
   },
-  "currentStatus": "original_pixels_rig_validated_publication_pending",
+  "currentStatus": "completed_published_awaiting_manual_next",
   "designReference": "Preserve original idle silhouette and proportions; compare rendered frames before accepting animation."
 }
