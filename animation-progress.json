@@ -12,28 +12,25 @@
   "continuation": "manual_one_character_at_a_time",
   "lastPublication": {
     "characterId": "tifa",
-    "kind": "whole_raster_inbetween_pass_v1",
+    "kind": "locomotion_cycle_and_raster_vfx_sync_v2",
     "passCompleted": true,
     "animationCompleted": false,
-    "originalMotionRetained": [
-      "ledge catch / hang / climb",
-      "down / getup"
-    ],
-    "githubCommit": "a4e7b09",
-    "siteSourceCommit": "e36fba8f590eb06cfd1bce37a1c824b607cfde8a",
-    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_600f84efede48191a035f96bcff8591a",
-    "versionNumber": 19,
-    "deploymentId": "appgdep_6acca45d2e2481918f348fa8dddb3a65",
+    "githubCommit": "24b0ef9",
+    "siteSourceCommit": "b7f168d1419895a64e528b3cc7fbfe5c8cf2b9fa",
+    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_d7f896d7a800819181b880cb2565db0c",
+    "versionNumber": 20,
+    "deploymentId": "appgdep_6accb5f8a460819183bfe11210c0a78c",
     "status": "succeeded",
-    "liveChecks": 17217,
-    "livePublicModeChecks": 1495,
+    "environmentRevision": 38,
+    "liveChecks": 17216,
+    "liveVisualSyncChecks": 4066,
     "originalPoses": 49,
-    "generatedMiddles": 41,
-    "prototypeRegistered": true,
+    "generatedMiddles": 57,
     "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
-    "environmentRevision": 36
+    "livePublicModeChecks": 1495,
+    "livePublicModeRetry": "parallel first-load timeout; isolated rerun passed"
   },
-  "currentStatus": "tifa_raster_visual_sync_validated",
+  "currentStatus": "tifa_raster_visual_sync_v2_published",
   "designReference": "User-specified characters/tifa/assets/tifa-arsenal.png; preserve top-left standing and third top-row punch as immutable endpoints.",
   "stoppedCharacters": {
     "moogle": {
@@ -117,9 +114,9 @@
       "online": 56,
       "actionability": 16922,
       "art": {
-        "poses": 5319,
+        "poses": 5335,
         "effects": 932,
-        "colors": 26595
+        "colors": 26675
       },
       "cpu": {
         "matches": 2,
@@ -129,7 +126,7 @@
       "visualSync": 4066
     },
     "runtime": "characters/tifa/tifa-raster-animation.js",
-    "publicationVerified": false,
+    "publicationVerified": true,
     "nextCharacter": "manual_user_instruction",
     "locomotionCyclePoses": {
       "walk": [
@@ -156,6 +153,29 @@
       "prototypeRegistered": false,
       "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
       "livePublicModeChecks": 1495
+    },
+    {
+      "characterId": "tifa",
+      "kind": "whole_raster_inbetween_pass_v1",
+      "passCompleted": true,
+      "animationCompleted": false,
+      "originalMotionRetained": [
+        "ledge catch / hang / climb",
+        "down / getup"
+      ],
+      "githubCommit": "a4e7b09",
+      "siteSourceCommit": "e36fba8f590eb06cfd1bce37a1c824b607cfde8a",
+      "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_600f84efede48191a035f96bcff8591a",
+      "versionNumber": 19,
+      "deploymentId": "appgdep_6acca45d2e2481918f348fa8dddb3a65",
+      "status": "succeeded",
+      "liveChecks": 17217,
+      "livePublicModeChecks": 1495,
+      "originalPoses": 49,
+      "generatedMiddles": 41,
+      "prototypeRegistered": true,
+      "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+      "environmentRevision": 36
     }
   ]
 }
