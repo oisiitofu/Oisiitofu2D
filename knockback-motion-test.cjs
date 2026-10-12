@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),{execFileSync}=require('node:child_process'),{chromium}=require('playwright');
 (async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{
  const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.stack));
- if(process.env.KNOCKBACK_BASELINE==='1')await page.route('**/game-bundle.js',async route=>{const response=await route.fetch();let body=await response.text();for(const file of ['combat-system.js','player-controller.js']){const current=fs.readFileSync(file,'utf8'),old=execFileSync('git',['show','HEAD:'+file],{encoding:'utf8'});assert.ok(body.includes(current),file+' registered in bundle');body=body.replace(current,old);}await route.fulfill({response,body});});
+ if(process.env.KNOCKBACK_BASELINE==='1')await page.route('**/game-bundle.js',async route=>{const response=await route.fetch();let body=await response.text();for(const file of ['combat-system.js','player-controller.js']){const current=fs.readFileSync(file,'utf8'),old=execFileSync('git',['show',(process.env.KNOCKBACK_BASE_REF||'c7de64e')+':'+file],{encoding:'utf8'});assert.ok(body.includes(current),file+' registered in bundle');body=body.replace(current,old);}await route.fulfill({response,body});});
  await page.goto(process.env.GAME_URL||'http://localhost:4173');await page.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});
  const result=await page.evaluate(()=>{
   state='pause';training=false;countdown=hitstop=0;StageRules.oneOnOne=false;
