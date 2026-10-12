@@ -9,14 +9,15 @@ const TifaVFX=(()=>{
   for(const v of segments(f)){const dx=v.to.x-v.from.x,dy=v.to.y-v.from.y,len=Math.hypot(dx,dy);
    // Trail ends at the actual fist/boot. Hit flashes belong to impact(), not
    // every active frame of a whiff. Reflection precedes local rotation.
-   directed(v.pose===42?1:2,(v.from.x+v.to.x)/2,(v.from.y+v.to.y)/2,len+10,v.pose===42?16:24,Math.atan2(dy,dx),v.alpha);
+   directed(v.effect,(v.from.x+v.to.x)/2,(v.from.y+v.to.y)/2,len+10,v.height,Math.atan2(dy,dx),v.alpha);
   }
  }
  function segments(f){const a=f.attack;if(!a||a.type==='grab'||a.tifaKi)return[];
   const active=CombatData.activeWindow(a,f.timer);if(!active)return[];
   const raster=TifaRasterAnimation.strike(f);if(!raster)return[];
   const age=f.timer-active.start,span=active.end-active.start+1;
-  return[{...raster,alpha:.70*(1-.4*age/Math.max(1,span-1))}];
+  const fist=[42,107,108,113,114,115,120].includes(raster.pose),family=a.tifaRush?'rush':a.tifaBeat?'beat':a.tifaAerial?'aerial':'normal';
+  return[{...raster,family,effect:fist?1:2,height:family==='rush'?18:family==='beat'?22:family==='aerial'?28:fist?16:24,alpha:.70*(1-.4*age/Math.max(1,span-1))}];
  }
  function drawObjects(){}
  function impact(v){stamp(v.power>14?4:0,v.x,v.y,35+v.power*2,35+v.power*2,1,(v.life/v.max)**1.5);}

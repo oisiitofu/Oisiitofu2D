@@ -13,7 +13,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
   const p=await b.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(process.env.GAME_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded);
   const r=await p.evaluate(()=>{
    state='pause';const failures=[];let n=0;const check=(name,yes)=>{n++;if(!yes)failures.push(name);};
-   check('106 full raster poses',characterArt.tifa.frames.length===106);check('8 effects and 5 colors',characterArt.tifa.effects.length===8&&characterArt.tifa.tints.length===5);check('no rejected rig',typeof TifaAnimation==='undefined');
+   check('128 full raster poses',characterArt.tifa.frames.length===128);check('8 effects and 5 colors',characterArt.tifa.effects.length===8&&characterArt.tifa.tints.length===5);check('no rejected rig',typeof TifaAnimation==='undefined');
    const f=makeFighter(0,0,'tifa');Object.assign(f,{inv:0,grounded:true,face:1,hitlag:0});
    for(const face of[-1,1])for(let color=0;color<5;color++){
     f.face=face;f.color=color;f.attack=null;f.state='idle';check('immutable neutral '+face+color,TifaRasterAnimation.sample(f).pose===40);
@@ -41,6 +41,6 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
    for(let pose=49;pose<90;pose++){const im=characterArt.tifa.frames[pose],g=im.getContext('2d',{willReadFrequently:true}),d=g.getImageData(0,0,im.width,im.height).data;let transparent=0,solid=0;for(let k=3;k<d.length;k+=4){if(!d[k])transparent++;if(d[k]>200)solid++;}check('transparent intact middle '+pose,transparent>0&&solid>1000);}
    return{checks:n,failures,sequence};
   });assert.deepEqual(r.failures,[]);assert.deepEqual(errors,[]);checks+=r.checks+2;
-  console.log(JSON.stringify({checks,failed:[],originalPoses:49,generatedMiddles:57,rasterRegistered:true,jab:r.sequence,errors}));
+  console.log(JSON.stringify({checks,failed:[],originalPoses:49,generatedMiddles:79,rasterRegistered:true,jab:r.sequence,errors}));
  }finally{await b.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

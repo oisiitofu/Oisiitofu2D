@@ -9412,7 +9412,7 @@ const MotionSize={
    ]
   },
   "tifa": {
-   "atlas": "assets/ready/tifa-atlas-b902e6d7d1c50971.webp",
+   "atlas": "assets/ready/tifa-atlas-7c138e1198bf51ca.webp",
    "poses": [
     0,
     1,

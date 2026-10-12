@@ -30,7 +30,7 @@
     "livePublicModeChecks": 1495,
     "livePublicModeRetry": "parallel first-load timeout; isolated rerun passed"
   },
-  "currentStatus": "tifa_raster_visual_sync_v2_published",
+  "currentStatus": "tifa_dedicated_special_raster_validated",
   "designReference": "User-specified characters/tifa/assets/tifa-arsenal.png; preserve top-left standing and third top-row punch as immutable endpoints.",
   "stoppedCharacters": {
     "moogle": {
@@ -87,10 +87,10 @@
   ],
   "rasterPass": {
     "characterId": "tifa",
-    "version": 2,
+    "version": 3,
     "source": "characters/tifa/assets/tifa-arsenal.png",
     "originalPoses": 49,
-    "generatedMiddles": 57,
+    "generatedMiddles": 79,
     "coverage": [
       "normal attacks",
       "aerial attacks",
@@ -114,19 +114,21 @@
       "online": 56,
       "actionability": 16922,
       "art": {
-        "poses": 5335,
+        "poses": 5357,
         "effects": 932,
-        "colors": 26675
+        "colors": 26785
       },
       "cpu": {
         "matches": 2,
         "framesPerMatch": 1800
       },
       "motionSize": 117360,
-      "visualSync": 4066
+      "visualSync": 4066,
+      "specialIdentity": 31836,
+      "publicLocal": 1495
     },
     "runtime": "characters/tifa/tifa-raster-animation.js",
-    "publicationVerified": true,
+    "publicationVerified": false,
     "nextCharacter": "manual_user_instruction",
     "locomotionCyclePoses": {
       "walk": [
@@ -136,6 +138,24 @@
       "run": [
         98,
         105
+      ]
+    },
+    "specialPoses": {
+      "rush": [
+        106,
+        111
+      ],
+      "beat": [
+        112,
+        117
+      ],
+      "aerial": [
+        118,
+        123
+      ],
+      "ki": [
+        124,
+        127
       ]
     }
   },
