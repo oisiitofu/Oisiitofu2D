@@ -12,25 +12,24 @@
   "continuation": "manual_one_character_at_a_time",
   "lastPublication": {
     "characterId": "tifa",
-    "kind": "locomotion_cycle_and_raster_vfx_sync_v2",
+    "kind": "dedicated_special_raster_v1",
     "passCompleted": true,
     "animationCompleted": false,
-    "githubCommit": "24b0ef9",
-    "siteSourceCommit": "b7f168d1419895a64e528b3cc7fbfe5c8cf2b9fa",
-    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_d7f896d7a800819181b880cb2565db0c",
-    "versionNumber": 20,
-    "deploymentId": "appgdep_6accb5f8a460819183bfe11210c0a78c",
+    "githubCommit": "f94d102",
+    "siteSourceCommit": "4692ba2d19ffd43269c8d48670dc11761b5ab5ab",
+    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_c0cf65650bd88191b03c27773d52ca91",
+    "versionNumber": 21,
+    "deploymentId": "appgdep_6accc61c359881919336215b68f14744",
     "status": "succeeded",
-    "environmentRevision": 38,
-    "liveChecks": 17216,
+    "environmentRevision": 40,
+    "liveChecks": 31836,
     "liveVisualSyncChecks": 4066,
     "originalPoses": 49,
-    "generatedMiddles": 57,
+    "generatedMiddles": 79,
     "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
-    "livePublicModeChecks": 1495,
-    "livePublicModeRetry": "parallel first-load timeout; isolated rerun passed"
+    "livePublicModeChecks": 1495
   },
-  "currentStatus": "tifa_dedicated_special_raster_validated",
+  "currentStatus": "tifa_dedicated_special_raster_published",
   "designReference": "User-specified characters/tifa/assets/tifa-arsenal.png; preserve top-left standing and third top-row punch as immutable endpoints.",
   "stoppedCharacters": {
     "moogle": {
@@ -128,7 +127,7 @@
       "publicLocal": 1495
     },
     "runtime": "characters/tifa/tifa-raster-animation.js",
-    "publicationVerified": false,
+    "publicationVerified": true,
     "nextCharacter": "manual_user_instruction",
     "locomotionCyclePoses": {
       "walk": [
@@ -196,6 +195,26 @@
       "prototypeRegistered": true,
       "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
       "environmentRevision": 36
+    },
+    {
+      "characterId": "tifa",
+      "kind": "locomotion_cycle_and_raster_vfx_sync_v2",
+      "passCompleted": true,
+      "animationCompleted": false,
+      "githubCommit": "24b0ef9",
+      "siteSourceCommit": "b7f168d1419895a64e528b3cc7fbfe5c8cf2b9fa",
+      "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_d7f896d7a800819181b880cb2565db0c",
+      "versionNumber": 20,
+      "deploymentId": "appgdep_6accb5f8a460819183bfe11210c0a78c",
+      "status": "succeeded",
+      "environmentRevision": 38,
+      "liveChecks": 17216,
+      "liveVisualSyncChecks": 4066,
+      "originalPoses": 49,
+      "generatedMiddles": 57,
+      "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+      "livePublicModeChecks": 1495,
+      "livePublicModeRetry": "parallel first-load timeout; isolated rerun passed"
     }
   ]
 }
