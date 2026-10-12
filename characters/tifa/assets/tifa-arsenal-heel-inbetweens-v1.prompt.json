@@ -1,0 +1,11 @@
+{
+  "tool": "builtin_image_gen",
+  "prompt": "Use case: identity-preserve. Draw one transparent wide horizontal THREE equal square cell sprite strip: three genuine full-body hand-drawn animation intermediates for the adult Tifa from attached immutable tifa-arsenal.png, between TOP ROW SECOND airborne knee pose and BOTTOM ROW SECOND downward heel strike pose. Endpoint originals are fixed and reused, so match adult face, head size, proportions and outfit precisely. Facing RIGHT consistently. Cell1 starts folding raised knee toward chest and raises bent arm; cell2 tucks the body more tightly, hair follows overhead, boot starts pointing down; cell3 turns bent kicking leg into the downward heel strike, near original target, other leg folded behind. Maintain original anatomy and identical scale, no body shrinking to imitate crouching. Same dark brown hair, white sleeveless top, black straps/skirt, opaque black thigh-highs, red gloves and red lace boots, fine original anime rendering. All hair and limbs fully visible in generous transparent margins, center each full character in its cell. No text/effects/shadows/background/blur/new accessories/rubber limbs/disassembled parts.",
+  "references": [
+    "characters/tifa/assets/tifa-arsenal.png"
+  ],
+  "endpointPoses": [
+    41,
+    45
+  ]
+}

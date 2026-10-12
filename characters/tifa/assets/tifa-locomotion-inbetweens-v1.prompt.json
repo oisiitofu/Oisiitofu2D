@@ -1,0 +1,22 @@
+{
+  "tool": "builtin_image_gen",
+  "prompt": "Transparent sprite sheet, FOUR equal columns by TWO equal rows (8 full-body cells). Reference image1 is the fixed adult Tifa relaxed stance and immutable design; image2 is her existing locomotion sheet, poses retained as endpoints. Generate intermediate WHOLE BODY poses only, same adult face/head size, short neck, exact white top/black skirt/thigh-high/red glove/red boot outfit and dark hair, matching fine anime shading. ROW1: four WALK inbetweens between successive first-row locomotion reference poses 1->2,2->3,3->4,4->1. ROW2: four RUN inbetweens between successive second-row poses1->2,2->3,3->4,4->1. All face RIGHT. Natural restrained weight shift and foot passing, same proportions; running leans forward, walking upright. Identical anatomical scale across all cells, feet on aligned row baseline, full hair and boots entirely in cells with large transparent gutters. No standing endpoint repeated, no text, no floor/shadow/background/effects/blur/new clothes, no stretching, no segment or joint rig. Genuinely transparent alpha background, no brown backdrop.",
+  "references": [
+    "characters/tifa/assets/tifa-arsenal-base-idle.png",
+    "characters/tifa/assets/tifa-locomotion.png"
+  ],
+  "endpointPoses": [
+    [
+      24,
+      25,
+      26,
+      27
+    ],
+    [
+      28,
+      29,
+      30,
+      31
+    ]
+  ]
+}

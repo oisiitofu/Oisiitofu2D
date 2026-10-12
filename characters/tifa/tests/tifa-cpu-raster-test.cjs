@@ -1,0 +1,9 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true});try{const p=await b.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(process.env.GAME_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded);await p.click('#enter-roster');
+ const results=await p.evaluate(()=>{GameAudio.setMuted(true);GameAudio.begin=()=>Promise.resolve();$('#battle-mode').value='battle';$('#difficulty').value='hard';$('#player-count').value='2';$('#battle-format').value='free';$('#stage').value='0';const results=[],old=Math.random;
+ try{for(const opponent of ['chiikawa','rean']){let seed=0x89121;Math.random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};Roster.setTarget('player');Roster.chooseForSlot('tifa');$('#cpu-character').value=opponent;start();countdown=hitstop=0;frame=0;fighters.forEach((f,i)=>Object.assign(f,{control:'cpu',stocks:99,inv:0,respawn:0,x:650+i*140,y:560}));const poses=new Set(),failures=[];
+ for(let i=0;i<1800;i++){update(true);effects();const f=fighters[0],s=TifaRasterAnimation.sample(f);if(s)poses.add(s.pose);drawSprite(f);if(!fighters.every(v=>[v.x,v.y,v.vx,v.vy,v.damage].every(Number.isFinite)))failures.push(i);}
+ results.push({opponent,frames:1800,poses:[...poses].sort((a,b)=>a-b),hits:fighters[0].stats.hits,failures});state='pause';}
+ }finally{Math.random=old;}return results;});
+ for(const r of results){assert.deepEqual(r.failures,[]);assert(r.poses.some(n=>n>=49),'CPU must exercise raster middles');}assert.deepEqual(errors,[]);fs.writeFileSync('characters/tifa/previews/tifa-cpu-raster-results.json',JSON.stringify({results,errors},null,2));console.log(JSON.stringify({results,errors}));
+}finally{await b.close()}})().catch(e=>{console.error(e);process.exitCode=1});

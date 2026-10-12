@@ -1,0 +1,11 @@
+{
+  "tool": "builtin_image_gen",
+  "prompt": "Use case: identity-preserve. Asset type: transparent raster animation inbetween strip for the existing adult Tifa game character. Reference image is the user's immutable tifa-arsenal.png. Preserve its exact adult face, long brown hair, white tank top, black skirt/shorts, black thigh-highs, red boots and red gloves, rendering style and bodily proportions. Create ONE horizontal strip of THREE equal square cells, transparent background, one complete full-body character per cell, all facing RIGHT, same camera and anatomical scale. These are ONLY the 25%, 50%, 75% inbetween poses from the TOP LEFT hands-down relaxed wide standing pose toward TOP ROW FOURTH vertical high kick. Left cell: lifting attacking knee and raising gloves; middle: knee higher at waist with bent kicking leg, balanced on other foot; right: extending the lifted leg upward toward the high kick, not quite fully vertical. Keep planted boot baseline level in each cell, full hair and limbs visible with generous gutters. Do not reproduce endpoint poses. No text, effects, background, shadows, motion blur, extra limbs, part segmentation or rubber distortions. The endpoints will be inserted unchanged from the original sheet, so match their face, head size, torso and boot size precisely. Wide horizontal canvas.",
+  "references": [
+    "characters/tifa/assets/tifa-arsenal.png"
+  ],
+  "endpointPoses": [
+    40,
+    43
+  ]
+}

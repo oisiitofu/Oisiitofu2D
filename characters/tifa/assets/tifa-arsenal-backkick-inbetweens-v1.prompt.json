@@ -1,0 +1,11 @@
+{
+  "tool": "builtin_image_gen",
+  "prompt": "Use case: identity-preserve. Make a transparent horizontal strip of THREE equal square full-body raster animation inbetween cells for the adult Tifa in the attached user's fixed tifa-arsenal.png. ONLY reference this sheet's TOP LEFT relaxed hands-down stance and BOTTOM LEFT backward horizontal kick. The original endpoints will be inserted unchanged. Preserve original adult face, small eyes, short neck, head size, torso/limb thickness, long dark brown hair, white athletic top, black skirt and straps, thigh-highs, red gloves and boots, precise anime illustration shading. She faces RIGHT in every cell, the attacking leg swings BACK to the LEFT while other leg supports her, torso leans FORWARD toward RIGHT. Three successive intermediates at roughly 25/50/75%: first transfers weight and bends backward kicking knee slightly; second bends torso forward and opens the kicking leg backward diagonally; third almost extends back leg to the left horizontally, hands move naturally to original guard. Maintain identical anatomical scale and head size. Planted boot aligned to same floor baseline in all cells. Complete hair and boots with generous gutters, transparent background. No effects, text, blur, duplicate limbs, segmentation or endpoint redraw. Keep coherent stable body proportions; do not enlarge heads or shrink bodies to fit poses.",
+  "references": [
+    "characters/tifa/assets/tifa-arsenal.png"
+  ],
+  "endpointPoses": [
+    40,
+    44
+  ]
+}

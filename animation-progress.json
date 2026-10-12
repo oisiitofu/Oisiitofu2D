@@ -24,7 +24,7 @@
     "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
     "livePublicModeChecks": 1495
   },
-  "currentStatus": "original_art_restored_raster_jab_prototype_for_review",
+  "currentStatus": "tifa_raster_pass_verified_pending_publication",
   "designReference": "User-specified characters/tifa/assets/tifa-arsenal.png; preserve top-left standing and third top-row punch as immutable endpoints.",
   "stoppedCharacters": {
     "moogle": {
@@ -61,8 +61,8 @@
     ],
     "generatedFrames": 3,
     "asset": "characters/tifa/assets/tifa-arsenal-jab-inbetweens-v1.png",
-    "runtimeRegistered": false,
-    "status": "draft_for_visual_review"
+    "runtimeRegistered": true,
+    "status": "accepted_by_user"
   },
   "rejectedPublications": [
     {
@@ -78,5 +78,46 @@
       "livePublicModeChecks": 1495,
       "userRejected": true
     }
-  ]
+  ],
+  "rasterPass": {
+    "characterId": "tifa",
+    "version": 1,
+    "source": "characters/tifa/assets/tifa-arsenal.png",
+    "originalPoses": 49,
+    "generatedMiddles": 41,
+    "coverage": [
+      "normal attacks",
+      "aerial attacks",
+      "special attack phases",
+      "walk",
+      "run",
+      "guard",
+      "hit",
+      "jump startup",
+      "crouch startup"
+    ],
+    "unchangedOriginalMotion": [
+      "ledge catch / hang / climb",
+      "down / getup"
+    ],
+    "physicsChanged": false,
+    "requiresUserReviewBeforeNextCharacter": true,
+    "tests": {
+      "animation": 17207,
+      "mechanics": 176,
+      "online": 56,
+      "actionability": 16922,
+      "art": {
+        "poses": 5319,
+        "effects": 932,
+        "colors": 26595
+      },
+      "cpu": {
+        "matches": 2,
+        "framesPerMatch": 1800
+      },
+      "motionSize": 117360
+    },
+    "runtime": "characters/tifa/tifa-raster-animation.js"
+  }
 }

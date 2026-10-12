@@ -1,0 +1,17 @@
+{
+  "tool": "builtin_image_gen",
+  "prompt": "Create one transparent THREE COLUMNS by THREE ROWS raster animation inbetween sheet of the adult Tifa. Nine equal square cells, complete full body in each cell, facing RIGHT. Image1 is the IMMUTABLE DESIGN reference tifa-arsenal.png, use its top-left hands-down relaxed stance as the starting pose and its adult face, head/body proportions, clothing and painterly anime linework. Images2/3/4 are EXACT existing final poses for three moves; endpoints reused unchanged, generate only middle poses. ROW1 goes from relaxed standing into Image2 forward leaning shoulder tackle: 25/50/75% lean and step, arm drawn back and guard raised. ROW2 goes from standing into Image3 low sweep crouch: 25/50/75% progressively bending knees, lowering hips and extending low leg while supporting hand approaches floor. ROW3 goes from standing into Image4 forward horizontal kick: 25/50/75% knee lift then leg extension RIGHT while torso leans slightly back. Same anatomical scale across ALL cells, no shrinking a whole character to fake crouch; retain same head/boot size even when low. Preserve exact adult face, short neck, long dark brown hair, white tank top, black straps/skirt, opaque thigh-highs and red gloves/boots. Transparent background and generous gutters. No text, special effects, shadows, motion blur, stretching, disassembled parts, redesign or duplicated limbs. Keep each pose entirely within its own equal square cell.",
+  "alphaEditPrompt": "Edit the attached generated sprite sheet ONLY to remove ALL brown/dark backdrop, making the background genuinely transparent. Keep every existing adult Tifa character pixel/design/pose/layout unchanged as far as possible. It is FOUR equal columns and THREE equal rows; preserve this 4x3 layout, no rearrangement, no text, no extra frames. Do not repaint characters, clothing, faces or proportions. Keep clean antialiased alpha around hair/gloves/boots with zero brown halo, transparent gutters between sprites. Output transparent PNG RGBA.",
+  "references": [
+    "characters/tifa/assets/tifa-arsenal.png",
+    "previews/references/pose-9.png",
+    "previews/references/pose-11.png",
+    "previews/references/pose-13.png"
+  ],
+  "endpointPoses": [
+    9,
+    11,
+    13
+  ],
+  "layout": "4 columns, 3 rows; generated neutral column excluded; alpha verified"
+}

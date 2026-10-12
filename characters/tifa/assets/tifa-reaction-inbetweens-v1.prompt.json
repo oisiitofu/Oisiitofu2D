@@ -1,0 +1,15 @@
+{
+  "tool": "builtin_image_gen",
+  "prompt": "Generate a transparent sprite sheet THREE columns by THREE rows of whole-body raster animation intermediates for the adult Tifa. Image1 is immutable relaxed hands-down standing design. Images2,3,4 are existing exact endpoint sprites, NOT to be redrawn in output. Row1: THREE sequential 25/50/75% intermediates from standing into image2 forward grab lunge, gradually bend knees and reach BOTH arms RIGHT, open gloves. Row2: three sequential 25/50/75% intermediates standing into image3 crossed forearm guard, raise gloves progressively and cross arms defensively in front of face, feet stable. Row3: three intermediates standing into image4 backward hit recoil, progressively lean back with chest moving LEFT, startled expression, gloves drawn toward torso, never flip facing. All face RIGHT, same anatomical scale across all rows, head size/limb thickness/boot size constant even when bending. Preserve original adult face, small eyes, short neck, long dark brown hair, white sleeveless top, black straps/skirt/opaque thigh-highs, red gloves and boots, original fine anime shading. Generous transparent margins around each full character. No original standing endpoints repeated, no text, backgrounds, blur, shadows, effects, redesign, puppet parts or extra limbs. GENUINE transparent alpha background, no brown colors outside the character silhouettes. Exactly 9 characters in 3x3 cells.",
+  "references": [
+    "characters/tifa/assets/tifa-arsenal-base-idle.png",
+    "previews/references/pose-17.png",
+    "previews/references/pose-20.png",
+    "previews/references/pose-21.png"
+  ],
+  "endpointPoses": [
+    17,
+    20,
+    21
+  ]
+}

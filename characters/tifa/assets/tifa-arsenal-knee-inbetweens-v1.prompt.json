@@ -1,0 +1,11 @@
+{
+  "tool": "builtin_image_gen",
+  "prompt": "Use case: identity-preserve. Transparent horizontal strip THREE equal square cells, each a full-body hand-drawn raster inbetween for adult Tifa, matching attached immutable tifa-arsenal.png. Transition from TOP LEFT hands-down wide relaxed stance toward BOTTOM ROW THIRD rising knee with raised bent punching arm. Endpoints are reused unchanged, don't redraw them. 25/50/75%: left glove begins rising with elbow bent while knee starts lifting; middle raised bent arm beside head, knee halfway up; right almost matching the original raised knee and arm. Face RIGHT, same camera, same scale of head/torso/boots in all frames, supporting foot on same baseline. Preserve original small adult face, short neck, dark brown hair, white tank top, black skirt and thigh-highs, red gloves and lace boots, fine anime linework/shading. Complete limbs/hair, generous transparent margins. No text, effects, blur, background, redesign, larger eyes, extra limbs, puppet segmentation or stretching. Keep anatomy coherent.",
+  "references": [
+    "characters/tifa/assets/tifa-arsenal.png"
+  ],
+  "endpointPoses": [
+    40,
+    46
+  ]
+}
