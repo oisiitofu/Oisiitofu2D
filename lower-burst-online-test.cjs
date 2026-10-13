@@ -1,0 +1,15 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=require('playwright');
+(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true,args:['--disable-background-timer-throttling','--disable-renderer-backgrounding']});try{
+ const pages=[],errors=[];let checks=0;const check=(a,b)=>{checks++;assert.deepEqual(a,b);};
+ for(let n=0;n<2;n++){const context=await browser.newContext(),page=await context.newPage();pages.push(page);page.on('pageerror',e=>errors.push(e.stack));await page.goto(process.env.GAME_URL||'http://localhost:4173');await page.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});await page.click('#enter-online');}
+ await pages[0].click('#open-room');await pages[0].click('#create-room');await pages[0].waitForFunction(()=>Net.code.length===6);const code=await pages[0].evaluate(()=>Net.code);await pages[1].click('#open-room');await pages[1].fill('#room-code',code);await pages[1].click('#join-room');await pages[1].waitForFunction(()=>Net.code.length===6);await pages[0].click('#ready-room');await pages[1].click('#ready-room');await Promise.all(pages.map(p=>p.waitForFunction(()=>Net.active&&countdown===0)));const target=Math.max(...await Promise.all(pages.map(p=>p.evaluate(()=>frame))))+60;
+ for(const page of pages)await page.evaluate(target=>{window.lowerSnapshots={};Controls.read=emptyInput;addEventListener('online-frame',e=>{const n=e.detail-target;
+  if(n>=0&&n<=275&&n%25===0){setupStage(n===275?'0':String(n/25));hitstop=0;burstEffects=[];fighters=[makeFighter(0,0,'dragoon'),makeFighter(1,1,'shizuna')];const p=platforms.find(p=>p.main);for(const[id,f]of fighters.entries()){Object.assign(f,{x:id?p.x+p.w+120:p.x-120,y:n===275?1198:1192,vx:0,vy:n===275?-8:0,grounded:false,gravityOff:true,face:id?-1:1,inv:0,intangible:0,stocks:3,control:'online'});PlayerStates.enter(f,'Fall');}}
+  if(n>=0&&n<275&&n%25===5)for(const f of fighters)f.vy=2;
+  if(n>=0&&n<=300&&n%5===0)lowerSnapshots[n]={bottom:StageRules.blast.bottom,stage:activeStage,players:fighters.map(f=>({x:f.x,y:f.y,vx:f.vx,vy:f.vy,mode:f.mode,stocks:f.stocks,respawn:f.respawn})),burst:burstEffects.map(b=>b.side)};
+ });},target);
+ await Promise.all(pages.map(p=>p.waitForFunction(()=>lowerSnapshots[300],null,{timeout:30000})));const snapshots=await Promise.all(pages.map(p=>p.evaluate(()=>lowerSnapshots)));for(const[n,s]of Object.entries(snapshots[0]))check(snapshots[1][n],s);
+ for(let n=0;n<275;n+=25){check(snapshots[0][n+5].players.every(f=>f.stocks===3),true);check(snapshots[0][n+15].players.every(f=>f.stocks===2&&f.respawn>0),true);check(snapshots[0][n+15].burst,['bottom','bottom']);}
+ check(snapshots[0][300].players.every(f=>f.stocks===3&&f.y<1198),true);check(snapshots[0][300].bottom,1200);check(errors,[]);fs.writeFileSync('.tools/lower-burst-online-results.json',JSON.stringify({checks,snapshots:snapshots[0],errors},null,2));console.log(JSON.stringify({checks,matchingSnapshots:Object.keys(snapshots[0]).length,stages:11,bottom:1200,errors}));
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

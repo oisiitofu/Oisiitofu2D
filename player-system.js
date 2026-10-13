@@ -117,7 +117,7 @@ CharacterData.hanajd={...CharacterData.dragoon,...{"weight":89,"walkSpeed":3.7,"
 CharacterData.kisuke={...CharacterData.dragoon,...{"weight":87,"walkSpeed":3.6,"initialDashSpeed":8.4,"runSpeed":8.2,"airSpeed":6.5,"airAcceleration":0.4,"gravity":0.62,"fullHopVelocity":14.5},ecb:{radius:16,height:94},shieldSize:45.12,shieldOffset:[0,-42.300000000000004],ledgeGrip:[-0.14179841897233203,0.9578947368421052]};
 const MovementTuning={shortHopReleaseGraceFrames:2,fastFallMultiplier:1.25,fastFallAcceleration:1.1};
 for(const character of Object.values(CharacterData))character.fastFallSpeed=character.fallSpeed*MovementTuning.fastFallMultiplier;
-const StageRules={blast:{left:-780,right:2220,top:-480,bottom:1550},camera:{minX:-560,maxX:2000,minY:-400,maxY:1350,minZoom:.56,maxZoom:1.5},loupe:{radius:39,inset:48},ledges:[],oneOnOne:false};
+const StageRules={blast:{left:-780,right:2220,top:-480,bottom:1200},camera:{minX:-560,maxX:2000,minY:-400,maxY:1350,minZoom:.56,maxZoom:1.5},loupe:{radius:39,inset:48},ledges:[],oneOnOne:false};
 // Taper the main island below its unchanged top lip. Floating platforms remain one-way.
 const StageGeometry={
  profile(p){return{lip:12,depth:90,bevel:Math.min(p.w*.4,360)};},
