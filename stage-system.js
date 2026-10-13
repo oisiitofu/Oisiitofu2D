@@ -99,16 +99,21 @@ function resolveFighterBodies(previous){
  // velocity belongs to physics, including jumps, falling and knockback.
  for(const f of fighters){if(!f.grounded)continue;const floor=platforms.find(p=>Math.abs(p.y-f.y)<2&&f.x>p.x-9&&f.x<p.x+p.w+9);if(!floor){f.grounded=false;f.vy=0;}}
 }
+function battleViewBounds(){const z=StageRules.blast,d=StageRules.loupe.warningDistance;return{left:z.left+d,right:z.right-d,top:z.top+d,bottom:z.bottom-d};}
+function blastEdgeDistances(f){const z=StageRules.blast,h=f.character?.ecb.height??CharacterData[f.characterId]?.ecb.height??BODY_HEIGHT;return[{side:'left',distance:f.x-z.left,v:-f.vx},{side:'right',distance:z.right-f.x,v:f.vx},{side:'top',distance:f.y-h/2-z.top,v:-f.vy},{side:'bottom',distance:z.bottom-f.y,v:f.vy}];}
+function blastWarningSide(f){return blastEdgeDistances(f).sort((a,b)=>a.distance-b.distance).find(e=>e.distance<=StageRules.loupe.warningDistance)?.side||null;}
 function loupePosition(f){
  if(f.respawn||BattlePlayers.out(f))return null;
  const p={x:W/2+(f.x-camera.x)*camera.z,y:H*.47+(f.y-42-camera.y)*camera.z};
- const z=StageRules.blast,h=f.character.ecb.height,launched=!!(f.tumbling||f.hitstun>0||f.pendingLaunch);
- const edges=[{side:'left',distance:f.x-z.left,v:-f.vx},{side:'right',distance:z.right-f.x,v:f.vx},{side:'top',distance:f.y-h/2-z.top,v:-f.vy},{side:'bottom',distance:z.bottom-f.y,v:f.vy}];
+ const launched=!!(f.tumbling||f.hitstun>0||f.pendingLaunch),edges=blastEdgeDistances(f);
  // A fast uninterrupted launch may burst directly; voluntary movement always warns.
  if(launched&&edges.some(e=>e.v>0&&e.distance/e.v<=8))return null;
  const near=edges.sort((a,b)=>a.distance-b.distance).find(e=>e.distance<=StageRules.loupe.warningDistance);
- if(!near&&p.x>=0&&p.x<=W&&p.y>=0&&p.y<=H)return null;
  const inset=StageRules.loupe.inset,r=StageRules.loupe.radius,left=inset,right=W-inset,top=Math.max(inset,matchClockTop+r+18),bottom=H-165;
+ // A fighter below the health HUD also needs an indicator, even before reaching
+ // the warning strip. The camera must not follow farther just to expose them.
+ const bodyTop=H*.47+(f.y-f.character.ecb.height-camera.y)*camera.z,feet=H*.47+(f.y-camera.y)*camera.z,halfWidth=f.character.ecb.radius*camera.z;
+ if(!near&&p.x-halfWidth>=inset&&p.x+halfWidth<=right&&bodyTop>=Math.max(55,matchClockTop)&&feet<=H-125)return null;
  const cx=W/2,cy=(top+bottom)/2,dx=p.x-cx,dy=p.y-cy;
  const t=Math.min((right-cx)/Math.max(.001,Math.abs(dx)),(bottom-cy)/Math.max(.001,Math.abs(dy)));
  let q=near?{x:clamp(p.x,left,right),y:clamp(p.y,top,bottom)}:{x:cx+dx*t,y:cy+dy*t};

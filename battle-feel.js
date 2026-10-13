@@ -21,10 +21,15 @@ const BattleFeel=(()=>{
  }
  function updateCamera(){
   const alive=fighters.filter(f=>!f.respawn&&!BattlePlayers.out(f));if(!alive.length)return;
-  const rule=StageRules.camera;
+  const rule=StageRules.camera,view=battleViewBounds(),framed=alive.filter(f=>!blastWarningSide(f));
+  // Keep the entire viewport inside the camera area, not just its center.
+  // Warning-area fighters are shown in loupes and no longer pull the camera.
+  const minZoom=Math.max(rule.minZoom,W/(view.right-view.left),H/(view.bottom-view.top));
+  const constrain=()=>{camera.z=Math.max(minZoom,camera.z);camera.x=clamp(camera.x,view.left+W/2/camera.z,view.right-W/2/camera.z);camera.y=clamp(camera.y,view.top+H*.47/camera.z,view.bottom-H*.53/camera.z);};
+  if(!framed.length){cameraKick*=.84;constrain();return;}
   // Frame every live body, with a little room in its direction of travel.
   // Bounded anticipation handles launches without chasing a distant projectile.
-  const bounds=alive.map(f=>{const dx=clamp((f.vx||0)*7,-110,110),dy=clamp((f.vy||0)*5,-90,90);return{
+  const bounds=framed.map(f=>{const dx=clamp((f.vx||0)*7,-110,110),dy=clamp((f.vy||0)*5,-90,90);return{
    left:f.x-f.character.ecb.radius+Math.min(0,dx),right:f.x+f.character.ecb.radius+Math.max(0,dx),
    top:f.y-f.character.ecb.height+Math.min(0,dy),bottom:f.y+Math.max(0,dy)};});
   const left=Math.min(...bounds.map(b=>b.left)),right=Math.max(...bounds.map(b=>b.right));
@@ -32,11 +37,12 @@ const BattleFeel=(()=>{
   const target={x:clamp((left+right)/2,rule.minX,rule.maxX),y:clamp((top+bottom)/2-24,rule.minY,rule.maxY)};
   // Reserve attack/recovery space and keep the fixed HUD clear. Close fights
   // can fill the view; the stage center no longer pins offstage fights above us.
-  const zoom=clamp(Math.min((W-200)/(right-left+420),(H-210)/(bottom-top+260)),rule.minZoom,rule.maxZoom);
+  const zoom=clamp(Math.min((W-200)/(right-left+420),(H-210)/(bottom-top+260)),minZoom,rule.maxZoom);
   camera.x=lerp(camera.x,target.x,.085);camera.y=lerp(camera.y,target.y,.08);
   // Pull out promptly when fighters separate, ease in more slowly when they meet.
   // Only 60 Hz effects() updates this state, independent of render frequency.
   camera.z=lerp(camera.z,clamp(zoom+cameraKick,rule.minZoom,rule.maxZoom+cameraKick),cameraKick>0?.2:zoom<camera.z?.15:.035);
+  constrain();
   cameraKick*=.84;
  }
  function update(){
