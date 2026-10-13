@@ -2,6 +2,8 @@
 
 [公開URL](https://oisiitofu-bros.oisiitofu0141.chatgpt.site)
 
+現在の[オンライン版](https://displaying-verse-colours-enable.trycloudflare.com/?mode=online)（2026-10-13復旧）。旧 `english-seemed-pin-variables.trycloudflare.com` はトンネル停止後に名前解決できなくなったため、既存の4173番サーバーへQuick Tunnelを起動し直した。PCとサーバー・トンネルの稼働中のみ有効。再起動でURLが変わった場合は、下記手順で公開版のリンクも更新する。
+
 CPU戦、トレモ、団体戦などのローカルモードを静的ファイルだけで動かします。タイトルのオンラインボタンは `public-site.json` の `onlineUrl` に `?mode=online` を付けて移動し、オンライン対戦のキャラ選択画面を直接開きます。そのサーバーが停止していれば、移動先で接続エラーになる仕様です。
 
 通常の `npm start` で動くオンライン版は `?mode=online` を付けるとキャラ選択画面から開始します。対戦処理は共通のままです。公開用の書き出し時だけ、オンライン機能をリンクに置き換え、BGM一覧をJSONファイルにします。
