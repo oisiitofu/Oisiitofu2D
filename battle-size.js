@@ -131,8 +131,8 @@ const BattleSize=(()=>{
  // Display-only tuning preserves the approved pose, aspect ratio and foot/hand
  // anchors. Keep the authored differences within each size group.
  const displayScale=Object.fromEntries([
-  ...['pneuma','rex','maruku','isaac','kasane','maelle','edf','naruhodo','leon','guile','shiren','metabee','horse','sakuna','pokoa'].map(id=>[id,.94]),
-  ...['dragoon','zidane','terry','tressa','midna','agumon'].map(id=>[id,.88]),
+  ...['pneuma','rex','maruku','isaac','kasane','maelle','edf','naruhodo','leon','guile','shiren','metabee','horse','sakuna'].map(id=>[id,.94]),
+  ...['dragoon','zidane','terry','tressa','midna','agumon','pokoa'].map(id=>[id,.88]),
   ['yuffie',.92]
  ]);
  const heights=Object.fromEntries(Object.entries(calibration).map(([id,c])=>[id,c.height*(displayScale[id]??1)]));
