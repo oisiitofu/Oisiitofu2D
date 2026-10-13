@@ -230,3 +230,7 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 /* Menu attribution stays readable at the lower right on smaller screens. */
 .tofu-footer{align-items:flex-end;gap:12px}.tofu-footer .footer-meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px;margin-left:auto}.menu-copyright{color:#91a2ba;font-size:10px;font-weight:400;letter-spacing:.3px;white-space:nowrap}
 @media(max-width:600px){.tofu-footer>b{display:none}}
+
+/* Physical controller focus remains visible without changing card dimensions. */
+.pad-focused{outline:3px solid #ffe18a!important;outline-offset:-3px;box-shadow:0 0 15px #ffd25c60!important}.pad-editing{outline-color:#79f4d5!important}.pad-menu-hint{position:fixed;top:25px;bottom:auto;left:50%;transform:translateX(-50%);z-index:2000;padding:5px 12px;border:1px solid #6a809c;background:#091423ef;color:#e2ebfa;border-radius:5px;font-size:11px;white-space:nowrap;pointer-events:none;max-width:calc(100vw - 720px);overflow:hidden;text-overflow:ellipsis}dialog .pad-menu-hint{position:sticky;left:auto;top:auto;bottom:0;max-width:100%;transform:none;text-align:center;margin-top:12px;white-space:normal}
+@media(max-width:900px){.pad-menu-hint{top:auto;bottom:6px;max-width:95vw;font-size:10px}}

@@ -7,7 +7,7 @@ const {chromium}=require('playwright');
   const result=await page.evaluate(()=>{
    state='pause';countdown=0;const failed=[];let checks=0;
    const check=(name,pass,detail)=>{checks++;if(!pass)failed.push({name,detail});};
-   const reset=(id='dragoon',air=false)=>{const f=makeFighter(0,0,id);f.x=720;f.y=air?200:560;f.grounded=!air;f.face=1;f.inv=f.intangible=f.hitlag=f.hitstun=0;fighters=[f,makeFighter(1,0,'dragoon')];fighters[1].x=1400;return f;};
+   const reset=(id='dragoon',air=false)=>{const f=makeFighter(0,0,id);f.x=720;f.y=air?200:560;f.grounded=!air;f.face=1;f.inv=f.intangible=f.hitlag=f.hitstun=0;if(id==='eve')f.eveEnergy=100;if(id==='donchan')f.donSoul=100;fighters=[f,makeFighter(1,0,'dragoon')];fighters[1].x=1400;return f;};
    const tick=(f,i={})=>{frame++;updateFighter(f,{...emptyInput(),...i});};
    const directions=[[-.9,-.45,'smash','dash','heavy','bair'],[-.7,-.7,'smash','dash','heavy','bair'],[-.69,-.71,'upsmash','rise','up','uair'],[-.45,-.9,'upsmash','rise','up','uair'],[.9,-.45,'smash','dash','heavy','fair'],[.45,-.9,'upsmash','rise','up','uair'],[-.9,.45,'smash','dash','heavy','bair'],[-.69,.71,'downsmash','gale','low','dair'],[.9,.45,'smash','dash','heavy','fair'],[.45,.9,'downsmash','gale','low','dair']];
    for(const {id}of Roster.definitions){

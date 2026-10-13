@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),{chromium}=require('playwright');
 (async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{
- const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://localhost:4173');await page.waitForFunction(()=>AstralEdge.assetsLoaded);
+ const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://localhost:4173');await page.waitForFunction(()=>AstralEdge.assetsLoaded);await page.click('#enter-roster');await page.click('#start');
  const results=await page.evaluate(()=>{
   state='pause';const checks=[],check=(name,pass)=>checks.push({name,pass:!!pass}),key=(code,down)=>dispatchEvent(new KeyboardEvent(down?'keydown':'keyup',{code}));
   for(const [device,attack,special]of [['keyboard','KeyZ','KeyX'],['keyboard2','KeyU','KeyO']])for(const order of [[attack,special],[special,attack]]){
