@@ -3,8 +3,12 @@ const NaegiVFX=(()=>{
  function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.naegi?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
  function prop(n,x,y,height,face=1,alpha=1,rot=0){const img=characterArt.naegi?.frames[40+n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;const w=height*img.width/img.height;ctx.drawImage(img,-w/2,-height/2,w,height);ctx.restore();}
  function impact(v){const u=(v.max-v.life)/v.max;stamp(1,v.x,v.y,85+v.power*24,85+v.power*24,1,(1-u)**1.5);}
+ // Rotate the bullet's positive-X axis into its actual velocity. Text is drawn
+ // outside that transform so it stays readable when facing left or aiming up.
+ function kotodama(o,alpha){const r=o.radius,l=o.length,angle=Math.atan2(o.vy,o.vx);ctx.save();ctx.translate(o.x,o.y);ctx.rotate(angle);ctx.globalAlpha*=alpha;ctx.shadowColor='#ffcd36';ctx.shadowBlur=12;const g=ctx.createLinearGradient(-l-r,0,r,0);g.addColorStop(0,'#c88719');g.addColorStop(.4,'#ffe998');g.addColorStop(1,'#fffce0');ctx.fillStyle=g;ctx.strokeStyle='#fff8b1';ctx.lineWidth=2;ctx.beginPath();ctx.roundRect(-l-r,-r,l+r*2,r*2,r);ctx.fill();ctx.stroke();ctx.shadowBlur=0;ctx.strokeStyle='#6c4114';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-l-r*.2,-r*.7);ctx.lineTo(-l-r*.2,r*.7);ctx.stroke();ctx.restore();text('言弾',o.x-Math.cos(angle)*l*.5,o.y-Math.sin(angle)*l*.5,11,'#3e260e');}
  function drawObjects(){for(const o of NaegiRules.objects){const fade=Math.min(1,(o.life-o.age)/8);
-  if(o.kind==='shot'){stamp(2,o.x-o.face*12,o.y,90+o.charged*55,55+o.charged*25,o.face,fade,Math.atan2(o.vy,Math.abs(o.vx)));prop(7,o.x,o.y,30+o.charged*8,o.face,fade,o.age*.12);}
+  if(o.kind==='shot')kotodama(o,fade);
+  if(o.kind==='refutation'){ctx.save();ctx.globalAlpha*=fade;ctx.translate(o.x,o.y-8*Math.min(1,o.age/8));ctx.rotate(-.08);ctx.font='900 25px "Noto Sans JP", sans-serif';ctx.textAlign='center';ctx.lineWidth=5;ctx.strokeStyle='#25111d';ctx.strokeText('論破',0,0);ctx.fillStyle='#ffec72';ctx.fillText('論破',0,0);ctx.restore();}
   if(o.kind==='evidence'){const live=o.age>=o.warning&&o.age<o.warning+o.active;stamp(6,o.x,o.y,live?78:48,live?78:48,1,fade*(live?1:.45));prop(7,o.x,o.y,live?50:32,o.face,fade,o.age*.06);if(live)stamp(1,o.x,o.y,90,90,1,fade);}
   if(o.kind==='foothold'){stamp(3,o.x,o.y+2,90,45,1,fade);stamp(7,o.x,o.y+7,55,30,1,.3*fade);}
   if(o.kind==='spark')stamp(1,o.x,o.y,90,90,1,fade);

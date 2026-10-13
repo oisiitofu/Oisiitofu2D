@@ -128,11 +128,18 @@ const BattleSize=(()=>{
   "hanajd":{"height":112,"body":210,"neutral":1.03,"pads":[11,19,15,32,8,17,12,18,20,29,17,27,33,8,17,12,17,16,21,14,17,27,32,15,15,19,13,11,13,23,18,10,29,8,13,32,33,54,9,23]},
   "kisuke":{"height":98,"body":218,"neutral":1.06,"pads":[21,40,59,52,19,15,32,20,33,26,24,63,48,9,33,25,18,45,26,26,20,18,11,19,19,31,46,25,22,23,34,35,37,11,11,9,44,50,13,8]}
  };
- const heights=Object.fromEntries(Object.entries(calibration).map(([id,c])=>[id,c.height]));
+ // Display-only tuning preserves the approved pose, aspect ratio and foot/hand
+ // anchors. Keep the authored differences within each size group.
+ const displayScale=Object.fromEntries([
+  ...['pneuma','rex','maruku','isaac','kasane','maelle','edf','naruhodo','leon','guile','shiren','metabee','horse','sakuna','pokoa'].map(id=>[id,.94]),
+  ...['dragoon','zidane','terry','tressa','midna','agumon'].map(id=>[id,.88]),
+  ['yuffie',.92]
+ ]);
+ const heights=Object.fromEntries(Object.entries(calibration).map(([id,c])=>[id,c.height*(displayScale[id]??1)]));
  function baseNative(id,n){return sourceNative(id,n)*(n===0?calibration[id]?.neutral||1:1);}
- function native(id,n){return baseNative(id,n)*(MotionSize.characters[id]?.scale[n]??1);}
+ function native(id,n){return baseNative(id,n)*(MotionSize.characters[id]?.scale[n]??1)*(id==='yuffie'&&n>=28&&n<=31?.94:1);}
  function imagePose(f,n){if(f.characterId==='zero')return n===18?44:n===0&&f.zeroCatchUntil>frame?46:n;if(f.characterId==='vivi')return n===22?21:n===21?20:n;return n;}
- function art(id){const c=calibration[id];return c?c.height/(c.body*native(id,0)*FIGHTER_SCALE):1;}
+ function art(id){const c=calibration[id];return c?heights[id]/(c.body*native(id,0)*FIGHTER_SCALE):1;}
  function baseline(f,n){
   // Ledge art is positioned by its hand anchor, not by its lowest opaque pixel.
   if(['LedgeCatch','LedgeHang'].includes(f.mode))return 0;
@@ -143,6 +150,6 @@ const BattleSize=(()=>{
  function geometry(f){const id=f.characterId,img=characterArt[id]?.frames[0];return geometryIds.has(id)&&img?physicsHeights[id]/(img.height*sourceNative(id,0)*FIGHTER_SCALE):1;}
  function originY(f){return f.characterId==='kitten'?kittenDrawOriginY(f):f.y;}
  function point(f,p){const s=geometry(f),y=originY(f);return{x:f.x+(p.x-f.x)*s,y:y+(p.y-y)*s};}
- function prepare(f){const s=geometry(f),c=f.character;c.ecb={radius:c.ecb.radius*s,height:Math.min(c.ecb.height*s,physicsHeights[f.characterId]||Infinity)};c.shieldSize*=s;c.shieldOffset=c.shieldOffset.map(v=>v*s);}
+ function prepare(f){const s=geometry(f),c=f.character;c.ecb={radius:c.ecb.radius*s,height:Math.min(c.ecb.height*s,physicsHeights[f.characterId]||Infinity,displayScale[f.characterId]?heights[f.characterId]:Infinity)};c.shieldSize*=s;c.shieldOffset=c.shieldOffset.map(v=>v*s);}
  return{heights,native,baseNative,imagePose,art,baseline,geometry,originY,point,prepare};
 })();

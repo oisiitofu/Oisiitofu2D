@@ -19,11 +19,11 @@ const NaegiMoves=(()=>{
   bair:m('モノクマ後方投げ',7,[w(7,11,'back')],12,10,{damage:11,reach:158,pose:7,companion:2,aerial:true,soundFamily:'punch'}),
   uair:m('上向き書類弾',5,[w(5,9,'up')],13,8,{damage:9,reach:144,pose:8,prop:7,aerial:true,angle:-1.5,soundFamily:'light'}),
   dair:m('証拠・叩き下ろし',9,[w(9,13,'plunge')],16,14,{damage:13,reach:120,pose:11,prop:7,aerial:true,meteorFrame:11,meteorAngle:1.45,soundFamily:'punch'}),
-  dragon:m('証拠提示',11,[],16,12,{pose:13,spellShots:[11],chargeFrame:4,chargeButton:'special',chargeMaxFrames:60,soundFamily:'light',shotLife:65,shotSpeed:10,shotRadius:13,aimRange:.6}),
+  dragon:m('コトダマ：それは違うよ！',11,[],16,12,{pose:13,spellShots:[11],chargeFrame:4,chargeButton:'special',chargeMaxFrames:60,soundFamily:'light',shotLife:65,shotSpeed:10,shotRadius:13,shotLength:28,kotodama:true,aimRange:.6}),
   dash:m('議論スクランブル',10,[],35,14,{pose:13,spellShots:[10,17,24],soundFamily:'light',debate:true,evidenceOffsets:[90,155,220],evidenceWarning:12,evidenceActive:3,evidenceLife:28,branchStart:20,branchEnd:45,debateDamage:3}),
   debateFinish:m('論破・フィニッシュ',8,[w(8,11)],18,14,{damage:15,reach:275,pose:9,canClank:false,baseKnockback:5.1,knockbackGrowth:.082,soundFamily:'light',special:true}),
   rise:m('希望の跳躍',6,[w(6,8,'spin',{damage:3}),w(28,31,'spin',{damage:7})],14,18,{damage:7,reach:130,pose:16,soundFamily:'wind',airControlMultiplier:0,gravityMultiplier:0,hopeStep:true,aimEnd:5,firstStart:6,firstEnd:17,secondInputStart:18,secondInputEnd:23,secondStart:24,secondEnd:35,firstDistance:105,firstHeight:155,secondDistance:135,secondHeight:170,hopArc:35,ledgeGrabStart:18,helpless:false,animation:{anticipationEnd:2,anticipationPose:3,accelerationPose:16,followThroughFrames:4,recoveryPose:5,lean:-.08,lunge:0,impactScale:1.1}}),
-  gale:m('モノクマ召喚',12,[],16,14,{pose:12,spellShots:[12],soundFamily:'light',supportWarning:18,supportLife:95,supportActive:4,supportDamage:10,supportCooldown:100})
+  gale:m('モノクマ召喚',12,[],16,14,{pose:12,spellShots:[12],soundFamily:'light',supportWarning:18,supportLife:95,supportActive:4,supportDamage:10,supportCooldown:100,supportRadii:[38,56,32]})
  };
  // The second hop's endpoint is an event after the last hitbox.
  moves.rise.totalFrames=moves.rise.secondEnd+moves.rise.recoveryFrames;moves.rise.FAF=moves.rise.totalFrames+1;
@@ -48,7 +48,7 @@ const NaegiRules=(()=>{
  function hop(f,a,origin,target,start,end,t){const u=clamp((t-start+1)/(end-start+1),0,1),p={x:lerp(origin.x,target.x,u),y:lerp(origin.y,target.y,u)-Math.sin(Math.PI*u)*a.hopArc},q=safeStep(f,p);if(q.blocked)a.hopBlocked=true;f.vx=q.x-f.x;f.vy=q.y-f.y;f.grounded=false;f.fastFall=false;}
  function releaseHope(f){f.attack=null;f.gravityOff=false;f.vx*=.3;f.vy=0;PlayerStates.enter(f,'Fall');}
  function action(f,i=emptyInput()){const a=f.attack;if(!a)return;const t=f.timer;
-  if(a.type==='dragon'){if(t<a.startupFrames&&Math.abs(i.y)>.15)a.aimY=clamp(i.y,-a.aimRange,a.aimRange);if(t===a.startupFrames&&!a.objectSpawned){a.objectSpawned=true;const speed=a.shotSpeed*(1+a.charge*.3),angle=a.aimY*.85;spawn(f,'shot',{vx:f.face*Math.cos(angle)*speed,vy:Math.sin(angle)*speed,damage:7+a.charge*7,radius:a.shotRadius+a.charge*7,life:a.shotLife,charged:a.charge,prop:7,family:'light'});}}
+  if(a.type==='dragon'){if(t<a.startupFrames&&Math.abs(i.y)>.15)a.aimY=clamp(i.y,-a.aimRange,a.aimRange);if(t===a.startupFrames&&!a.objectSpawned){a.objectSpawned=true;const speed=a.shotSpeed*(1+a.charge*.3),angle=a.aimY*.85;spawn(f,'shot',{vx:f.face*Math.cos(angle)*speed,vy:Math.sin(angle)*speed,damage:7+a.charge*7,radius:a.shotRadius+a.charge*7,length:a.shotLength*(1+a.charge*.5),kotodama:true,life:a.shotLife,charged:a.charge,family:'light'});label(f.x,f.y-110,'それは違うよ！','#ffe16a');}}
   if(a.debate){if(a.spellShots.includes(t)&&!a.eventsDone.has('evidence:'+t)){a.eventsDone.add('evidence:'+t);const n=a.spellShots.indexOf(t),x=f.x+f.face*a.evidenceOffsets[n],y=f.y-36;if(!terrain(x,y,16))spawn(f,'evidence',{x,y,serial:a.serial,warning:a.evidenceWarning,active:a.evidenceActive,life:a.evidenceLife,damage:a.debateDamage,n,family:'light'});}
    if(a.debateConfirmed&&t>=a.branchStart&&t<=a.branchEnd&&(i.special||f.buffer?.key==='special')){const serial=a.serial;objects=objects.filter(q=>!(q.owner===f.id&&q.kind==='evidence'&&q.serial===serial));attack(f,'debateFinish');return;}}
   if(a.hopeStep){if(t<=a.aimEnd&&Math.abs(i.x)>.2){a.hopDirection=Math.sign(i.x);a.firstTarget={x:a.hopOrigin.x+a.hopDirection*a.firstDistance,y:a.hopOrigin.y-a.firstHeight};}
@@ -59,13 +59,13 @@ const NaegiRules=(()=>{
    if(t>=a.secondStart&&t<=a.secondEnd&&a.secondTarget)hop(f,a,a.midOrigin,a.secondTarget,a.secondStart,a.secondEnd,t);
    if(t>a.secondEnd){a.gravityMultiplier=1;f.vx*=.65;}
   }
-  if(a.type==='gale'&&t===a.startupFrames&&!a.objectSpawned){a.objectSpawned=true;const type=f.naegiSupport||0;f.naegiSupport=(type+1)%supports.length;f.naegiSupportCooldown=a.supportCooldown;spawn(f,'support',{x:f.x+f.face*(type===2?-24:110),y:f.y-34,type,warning:a.supportWarning,active:a.supportActive,life:a.supportLife,damage:a.supportDamage,family:supports[type].family});label(f.x,f.y-100,supports[type].name,'#fca6e5');}
+  if(a.type==='gale'&&t===a.startupFrames&&!a.objectSpawned){a.objectSpawned=true;const type=f.naegiSupport||0;f.naegiSupport=(type+1)%supports.length;f.naegiSupportCooldown=a.supportCooldown;spawn(f,'support',{x:f.x+f.face*(type===2?-24:110),y:f.y-34,type,radius:a.supportRadii[type],warning:a.supportWarning,active:a.supportActive,life:a.supportLife,damage:a.supportDamage,family:supports[type].family});label(f.x,f.y-100,supports[type].name,'#fca6e5');}
  }
- function box(o){const r=o.kind==='support'?(o.type===1?48:32):o.kind==='evidence'?21:o.radius||13;return{x1:o.previousX??o.x,y1:o.previousY??o.y,x2:o.x,y2:o.y,radius:r};}
+ function box(o){const r=o.kind==='evidence'?21:o.radius||13;if(o.kotodama){const speed=Math.hypot(o.vx,o.vy)||1,length=Math.max(o.length,speed);return{x1:o.x-o.vx/speed*length,y1:o.y-o.vy/speed*length,x2:o.x,y2:o.y,radius:r};}return{x1:o.previousX??o.x,y1:o.previousY??o.y,x2:o.x,y2:o.y,radius:r};}
  function collide(q,f,unused){for(const o of BattlePlayers.targets(f)){if(q.dead)break;collideOne(q,f,o);}}
  function collideOne(q,f,o){if(o.respawn||o.hitlag||q.hits.has(o.id))return;const b=box(q),touch=CombatSystem.contact(b,o),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(o.mode)&&CombatSystem.shieldCovers(o,b),p=CombatSystem.protection(o);if(!(touch||shield)||p.intangible)return;
   q.hits.add(o.id);const counter=o.attack;if(counter?.counterWindow&&o.timer>=counter.counterWindow[0]&&o.timer<=counter.counterWindow[1]){attack(o,counter.counterMove);o.inv=o.attack.totalFrames;}else{CombatSystem.hit(f,o,{...NaegiMoves.dragon,type:q.kind==='evidence'?'dash':q.kind==='support'?'gale':'dragon',damage:q.damage,charge:0,projectile:true,staleMultiplier:q.stale,soundFamily:q.family,baseKnockback:q.kind==='evidence'?1.5:3.8,knockbackGrowth:q.kind==='evidence'?.018:.067,angle:q.kind==='support'&&q.type===1?-1.25:-.4,launchDirection:q.face},b,touch);if(q.kind==='evidence'&&!shield&&!p.invincible&&!p.armor&&f.attack?.debate&&f.attack.serial===q.serial)f.attack.debateConfirmed=true;}
-  if(q.kind==='shot')q.dead=true;spawn(f,'spark',{x:q.x,y:q.y,life:10});
+  if(q.kind==='shot'){q.dead=true;if(q.kotodama&&touch&&!shield&&!p.invincible&&!p.armor&&!counter?.counterWindow)spawn(f,'refutation',{x:o.x,y:o.y-65,life:22});}spawn(f,'spark',{x:q.x,y:q.y,life:10});
  }
  function tick(){for(const f of fighters)if(f.characterId==='naegi'){if(f.grounded||f.ledge||f.respawn)f.naegiSideUsed=false;if(f.respawn){f.naegiSupport=0;f.naegiSupportCooldown=0;}else if(!f.hitlag)f.naegiSupportCooldown=Math.max(0,(f.naegiSupportCooldown||0)-1);}
   for(const q of [...objects]){const f=fighters[q.owner],o=BattlePlayers.projectileTarget(q);if(!f||f.respawn){q.dead=true;continue;}q.age++;q.previousX=q.x;q.previousY=q.y;
