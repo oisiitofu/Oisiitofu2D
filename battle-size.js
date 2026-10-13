@@ -131,13 +131,13 @@ const BattleSize=(()=>{
  // Display-only tuning preserves the approved pose, aspect ratio and foot/hand
  // anchors. Keep the authored differences within each size group.
  const displayScale=Object.fromEntries([
-  ...['pneuma','rex','maruku','isaac','kasane','maelle','edf','naruhodo','leon','guile','shiren','metabee','horse','sakuna'].map(id=>[id,.94]),
-  ...['dragoon','zidane','terry','tressa','midna','agumon','pokoa'].map(id=>[id,.88]),
-  ['yuffie',.92]
+  ...['pneuma','rex','maruku','isaac','kasane','maelle','edf','naruhodo','leon','guile','shiren','metabee','horse','sakuna'].map(id=>[id,.84]),
+  ...['dragoon','zidane','terry','tressa','midna','agumon','pokoa'].map(id=>[id,.74]),
+  ['yuffie',.80]
  ]);
  const heights=Object.fromEntries(Object.entries(calibration).map(([id,c])=>[id,c.height*(displayScale[id]??1)]));
  function baseNative(id,n){return sourceNative(id,n)*(n===0?calibration[id]?.neutral||1:1);}
- function native(id,n){return baseNative(id,n)*(MotionSize.characters[id]?.scale[n]??1)*(id==='yuffie'&&n>=28&&n<=31?.94:1);}
+ function native(id,n){return baseNative(id,n)*(MotionSize.characters[id]?.scale[n]??1)*(id==='yuffie'&&n>=28&&n<=31?.88:1);}
  function imagePose(f,n){if(f.characterId==='zero')return n===18?44:n===0&&f.zeroCatchUntil>frame?46:n;if(f.characterId==='vivi')return n===22?21:n===21?20:n;return n;}
  function art(id){const c=calibration[id];return c?heights[id]/(c.body*native(id,0)*FIGHTER_SCALE):1;}
  function baseline(f,n){
