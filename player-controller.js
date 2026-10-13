@@ -57,7 +57,7 @@ const PlayerController=(()=>{
  }
  function ledgeAction(f,i){const l=f.ledge;if(!l)return;f.vx=f.vy=0;
   if(f.mode==='LedgeCatch'){let t=Math.min(1,f.stateFrame/4);let grip=ledgeHangPosition(f,l);f.x=lerp(f.snapFrom[0],grip.x,t);f.y=lerp(f.snapFrom[1],grip.y,t);if(f.stateFrame>f.stateDuration)enter(f,'LedgeHang');return;}
-  i=InputFrames.consume(f,i);let name=i.guard?'LedgeRoll':i.jab||i.heavy?'LedgeAttack':i.jump?'LedgeJump':i.y>.5||i.x*l.face<-.5?'LedgeDrop':i.y<-.5||i.x*l.face>.5||f.stateFrame>300?'LedgeGetup':null;if(!name)return;
+  i=InputFrames.consume(f,i);let name=i.guard?'LedgeRoll':i.jab||i.heavy||i.smash?'LedgeAttack':i.jump?'LedgeJump':i.y>.5||i.x*l.face<-.5?'LedgeDrop':i.y<-.5||i.x*l.face>.5||f.stateFrame>300?'LedgeGetup':null;if(!name)return;
   f.ledgeCooldown=45;f.ledge=null;f.intangible=f.ledgeGrabs===1?({LedgeGetup:15,LedgeRoll:20,LedgeAttack:10,LedgeJump:8}[name]||0):0;
   if(name==='LedgeDrop'){enter(f,name,1);f.x=l.x-l.face*(f.character.ecb.radius+3);f.vy=1;return;}
   if(name==='LedgeJump'){f.x=l.x-l.face*(f.character.ecb.radius+3);launchJump(f,false,true);return;}
@@ -120,6 +120,7 @@ const PlayerController=(()=>{
   else if(f.mode==='Knockdown'){f.vx=moveToward(f.vx,0,c.traction);if(f.stateFrame>10){if(i.jab||i.heavy){attack(f,'getupAttack');f.mode='GetupAttack';}else if(Math.abs(i.x)>.5){enter(f,'GetupRoll',30);f.vx=Math.sign(i.x)*5;f.intangible=16;}else if(i.jump||i.y<-.5||f.stateFrame>120){enter(f,'Getup',24);f.intangible=12;}}}
   else if(dodgeData[f.mode]){const d=f.dodge;if(f.stateFrame>=d.inv[0]&&f.stateFrame<=d.inv[1])f.intangible=Math.max(f.intangible,1);if(f.mode==='SpotDodge'&&f.stateFrame>=d.attackCancel+Math.min(6,d.stale*2)&&spotDodgeAttack(f,i)){}else if(f.stateFrame>f.stateDuration){if(f.mode==='ForwardRoll')f.face=-d.direction;let next=InputFrames.consume(f,f.committedDrop||i);f.committedDrop=null;if(next.jump||next.grab||next.jab||next.heavy||next.smash||next.special)next={...next,guard:false};enter(f,f.grounded?'Idle':'Fall');ready(f,next);}else if(f.grounded)f.vx*=.97;}
   else if(f.mode==='Helpless'){airControl(f,i);}
+  else if(f.mode==='LedgeRoll'){if(f.stateFrame>f.stateDuration){f.vx=0;enter(f,'Idle');ready(f,InputFrames.consume(f,i));}else f.vx=f.face*4;}
   else if(['NormalLanding','HardLanding','AerialLanding','SpecialLanding','ShieldDrop','Tech','TechRoll','WallTech','CeilingTech','Getup','GetupRoll','LedgeGetup','LedgeRoll','LedgeTrump','Clank','Throw'].includes(f.mode)){if(f.stateFrame>f.stateDuration){let next=f.committedDrop||i;f.committedDrop=null;enter(f,f.grounded?'Idle':'Fall');ready(f,next);}else if(f.grounded)f.vx=moveToward(f.vx,0,c.groundFriction);}
   else ready(f,i);
   if(f.grounded&&!is(f,'LedgeGetup','LedgeRoll','LedgeAttack'))f.ledgeGrabs=0;
@@ -131,9 +132,22 @@ const PlayerController=(()=>{
   if(def.gravity&&!f.gravityOff&&!BattleFeel.dodgeMotion(f)){let gravity=c.gravity*(f.attack?.gravityMultiplier??1);if(f.fastFall&&!f.tumbling&&!f.hitstun)gravity=Math.max(gravity,MovementTuning.fastFallAcceleration);let next=f.vy+gravity;f.vy=f.tumbling||f.hitstun?next:Math.min(f.attack?.glideStart&&f.timer>=f.attack.glideStart&&f.timer<=f.attack.glideEnd?f.attack.glideFallSpeed:f.attack?.diveSpeed&&f.timer>=f.attack.startupFrames?f.attack.diveSpeed:f.fastFall?c.fastFallSpeed:c.fallSpeed,next);}f.x+=f.vx*(!f.hitstun&&!f.tumbling?(f.logicSlow??1)*JibanyanRules.hauntScale(f)*PiposaruRules.speed(f)*TwinbeeRules.speed(f):1);f.y+=f.vy;
   if(dodgeFloor){const x=clamp(f.x,dodgeFloor.x+1,dodgeFloor.x+dodgeFloor.w-1);if(x!==f.x)f.vx=0;f.x=x;f.y=dodgeFloor.y;f.vy=0;}
   f.grounded=false;
-  let p=platforms.find(p=>p.main),left=p.x-c.ecb.radius,right=p.x+p.w+c.ecb.radius,bottom=p.y+90,dx=f.x-oldX,dy=f.y-oldY;
-  if(dy<0&&oldY-c.ecb.height>=bottom&&f.y-c.ecb.height<bottom){let x=oldX+dx*(bottom+c.ecb.height-oldY)/dy;if(x>left&&x<right){f.y=bottom+c.ecb.height;if(!tech(f,i,'ceiling'))f.vy=f.tumbling?-oldVy*.35:0;}}
-  if(dx){let wall=dx>0?left:right,t=(wall-oldX)/dx;if(t>=0&&t<=1){let y=oldY+dy*t;if(y>p.y+1&&y-c.ecb.height<bottom){f.x=wall;if(!tech(f,i,'wall'))f.vx=f.tumbling?-oldVx*.5:0;}}}
+  let p=platforms.find(p=>p.main),dy=f.y-oldY;
+  // Sweep the whole body against the tapered underside, including fast recoveries.
+  const terrain=oldY>p.y+1?StageGeometry.sweep(p,f,{x:oldX,y:oldY},{x:f.x,y:f.y}):null;
+  if(terrain){
+   if(terrain.wall){f.x=terrain.side<0?p.x-c.ecb.radius:p.x+p.w+c.ecb.radius;if(!tech(f,i,'wall'))f.vx=f.tumbling?-oldVx*.5:0;}
+   else{const proposedY=f.y;f.x=terrain.x;f.y=terrain.bottom+c.ecb.height+.001;
+    if(dy<0&&terrain.slope&&!f.tumbling&&!f.hitstun&&!f.attack?.tether){
+     // Rising into a slant nudges us toward its lip instead of killing the rise.
+     // Keep natural gravity/recovery duration; no extra jump or upward impulse.
+     f.x+=terrain.side*Math.min(10,-dy*.55);
+     f.y=f.x+c.ecb.radius>p.x&&f.x-c.ecb.radius<p.x+p.w?Math.max(proposedY,StageGeometry.bottom(p,f.x,c.ecb.radius)+c.ecb.height+.001):proposedY;
+    }else if(!tech(f,i,'ceiling')){const nx=terrain.side*terrain.slope,length=Math.hypot(nx,1),normalX=nx/length,normalY=1/length,dot=f.vx*normalX+f.vy*normalY;
+     if(f.tumbling&&dot<0){f.vx-=1.35*dot*normalX;f.vy-=1.35*dot*normalY;}else f.vy=0;
+    }
+   }
+  }
   if(f.vy>=0)for(let floor of platforms){if(!floor.main&&f.drop)continue;if(f.x>floor.x-9&&f.x<floor.x+floor.w+9&&oldY<=floor.y+6&&f.y>=floor.y){f.y=floor.y;f.vy=0;f.grounded=true;if(wasAir)land(f,i,oldVy);break;}}
   if(f.characterId==='hunter')HunterRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='adol')AdolRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='valkyrie')ValkyrieRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='terry')TerryRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='agumon')AgumonRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='pawapuro')PawapuroRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='headmaster')HeadmasterRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(NewcomerCore.ids.includes(f.characterId))NewcomerCore.registry[f.characterId].collision(f,i,{oldX,oldY,oldVx,oldVy});
   AruruRules.platform(f,i,{oldX,oldY,oldVx,oldVy,wasAir});

@@ -118,6 +118,15 @@ CharacterData.kisuke={...CharacterData.dragoon,...{"weight":87,"walkSpeed":3.6,"
 const MovementTuning={shortHopReleaseGraceFrames:2,fastFallMultiplier:1.25,fastFallAcceleration:1.1};
 for(const character of Object.values(CharacterData))character.fastFallSpeed=character.fallSpeed*MovementTuning.fastFallMultiplier;
 const StageRules={blast:{left:-780,right:2220,top:-480,bottom:1550},camera:{minX:-560,maxX:2000,minY:-400,maxY:1350,minZoom:.56,maxZoom:1.5},loupe:{radius:39,inset:48},ledges:[],oneOnOne:false};
+// Taper the main island below its unchanged top lip. Floating platforms remain one-way.
+const StageGeometry={
+ profile(p){return{lip:12,depth:90,bevel:Math.min(p.w*.4,360)};},
+ bottom(p,x,r=0){const q=clamp(p.x+p.w/2,x-r,x+r),s=this.profile(p),inset=Math.max(0,Math.min(q-p.x,p.x+p.w-q));return p.y+s.lip+(s.depth-s.lip)*Math.min(1,inset/s.bevel);},
+ overlaps(p,x,y,r=0,h=0){return x+r>p.x&&x-r<p.x+p.w&&y>p.y+1&&y-h<this.bottom(p,x,r)-.0001;},
+ sweep(p,f,from,to){const e=f.character.ecb;if(this.overlaps(p,from.x,from.y,e.radius,e.height))return null;const n=Math.max(1,Math.ceil(Math.max(Math.abs(to.x-from.x),Math.abs(to.y-from.y))/5));let previous=0;
+  for(let j=0;j<=n;j++){const t=j/n,x=lerp(from.x,to.x,t),y=lerp(from.y,to.y,t);if(this.overlaps(p,x,y,e.radius,e.height)){let low=previous,high=t;for(let k=0;k<14;k++){const mid=(low+high)/2;if(this.overlaps(p,lerp(from.x,to.x,mid),lerp(from.y,to.y,mid),e.radius,e.height))high=mid;else low=mid;}const px=lerp(from.x,to.x,low),py=lerp(from.y,to.y,low),s=this.profile(p),q=clamp(p.x+p.w/2,px-e.radius,px+e.radius),side=px<p.x+p.w/2?-1:1;return{x:px,y:py,t:low,side,wall:px<=p.x-e.radius+.01||px>=p.x+p.w+e.radius-.01,bottom:this.bottom(p,px,e.radius),slope:Math.min(q-p.x,p.x+p.w-q)<s.bevel?(s.depth-s.lip)/s.bevel:0};}previous=t;}return null;
+ }
+};
 const PlayerStates=(()=>{
  const names='Idle Walk InitialDash Run RunTurn RunBrake Turn Crouch JumpSquat Jump Fall FastFall NormalLanding HardLanding AerialLanding SpecialLanding GroundAttack AerialAttack GroundSpecial AirSpecial ShieldStart ShieldHold ShieldDrop SpotDodge ForwardRoll BackwardRoll NeutralAirDodge DirectionalAirDodge Grab GrabHold Grabbed Pummel Throw Hitlag Hitstun Tumble Knockdown Tech TechRoll WallTech CeilingTech Getup GetupRoll GetupAttack LedgeCatch LedgeHang LedgeGetup LedgeRoll LedgeAttack LedgeJump LedgeDrop LedgeTrump Helpless ShieldBreak Stunned Dead Respawn Clank'.split(' ');
  const free=new Set('Idle Walk InitialDash Run RunTurn RunBrake Turn Crouch Jump Fall FastFall'.split(' '));
@@ -129,7 +138,7 @@ const PlayerStates=(()=>{
  return{defs,enter,visual};
 })();
 const InputFrames=(()=>{
- const priority={ground:['guard','grab','jump','smash','heavy','jab','special'],air:['guard','jump','jab','heavy','smash','special'],shield:['jump','grab','smash','special','guard','heavy','jab'],ledge:['guard','jab','heavy','jump'],hit:['guard']};
+ const priority={ground:['guard','grab','jump','smash','heavy','jab','special'],air:['guard','jump','jab','heavy','smash','special'],shield:['jump','grab','smash','special','guard','heavy','jab'],ledge:['guard','jab','heavy','smash','jump'],hit:['guard']};
  // Resolve attack sectors at 45 degrees; ties belong to the horizontal sector.
  // Leave movement/aim axes intact so recovery steering and dodges stay analog.
  function attackDirection(i){const x=i.stickAttack?.x??i.x,y=i.stickAttack?.y??i.y;return Math.abs(x)>=Math.abs(y)?{...i,x,y:0}:{...i,x:0,y};}
@@ -168,7 +177,7 @@ const InputFrames=(()=>{
   i.mash=Object.values(buttons).filter(b=>b.press).length+(i.flickX||i.flickY?1:0);
   f.input=i;f.inputHistory??=[];f.inputHistory.push({frame,x:i.x,y:i.y,rx:i.rx||0,ry:i.ry||0,buttons:Object.entries(buttons).filter(([,v])=>v.value).map(([k])=>k),bufferAge:f.lastBufferAge??0});if(f.inputHistory.length>120)f.inputHistory.shift();return i;
  }
- function queue(f,i){let group=f.grounded?'ground':'air',key=i.jumpAerial?'jump':priority[group].find(k=>k!=='guard'&&i[k]);if(!f.grounded&&i.guardPressed&&!f.airDodged&&!i.jumpAerial)key='guard';else if(i.dodgePressed&&!key)key='dodge';if(key)f.buffer={key,x:['guard','dodge'].includes(key)?i.x:i.stickAttack?.x??i.x,y:['guard','dodge'].includes(key)?i.y:i.stickAttack?.y??i.y,age:0,smashFlick:i.smashFlick,forceTilt:i.forceTilt,jumpAerial:i.jumpAerial,shortHopAttack:i.shortHopAttack,twoJumps:i.twoJumps,shieldUpSmash:i.shieldUpSmash};else if(f.buffer&&++f.buffer.age>9)f.buffer=null;
+ function queue(f,i){let group=f.ledge?'ledge':f.grounded?'ground':'air',key=i.jumpAerial?'jump':priority[group].find(k=>k!=='guard'&&i[k]);if(!f.grounded&&i.guardPressed&&!f.airDodged&&!i.jumpAerial)key='guard';else if(i.dodgePressed&&!key)key='dodge';if(key)f.buffer={key,x:['guard','dodge'].includes(key)?i.x:i.stickAttack?.x??i.x,y:['guard','dodge'].includes(key)?i.y:i.stickAttack?.y??i.y,age:0,smashFlick:i.smashFlick,forceTilt:i.forceTilt,jumpAerial:i.jumpAerial,shortHopAttack:i.shortHopAttack,twoJumps:i.twoJumps,shieldUpSmash:i.shieldUpSmash};else if(f.buffer&&++f.buffer.age>9)f.buffer=null;
  }
  function consume(f,i){if(!f.buffer)return i;let b=f.buffer;f.buffer=null;f.lastBufferAge=b.age;const next={...i,[b.key]:true,x:b.x,y:b.y,smashFlick:b.smashFlick,forceTilt:b.forceTilt,jumpAerial:b.jumpAerial,shortHopAttack:b.shortHopAttack,twoJumps:b.twoJumps,shieldUpSmash:b.shieldUpSmash};if(b.key==='guard')next.guardPressed=true;if(b.key==='dodge'){next.dodgePressed=true;next.dodgeDirection=dodgeDirection(next);}return next;}
  return{sample,queue,consume,priority,attackDirection,dodgeDirection,jumpAttack};

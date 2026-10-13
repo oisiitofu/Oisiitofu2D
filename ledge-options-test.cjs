@@ -1,0 +1,18 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=require('playwright');
+(async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});try{const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.stack));await page.goto(process.env.GAME_URL||'http://localhost:4173');await page.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});
+ const result=await page.evaluate(()=>{state='pause';training=false;countdown=hitstop=0;setupStage('0');const failed=[];let checks=0;const check=(name,pass,detail)=>{checks++;if(!pass)failed.push({name,detail});};
+  const tick=(f,i={})=>{frame++;updateFighter(f,{...emptyInput(),...i});};
+  function reset(id,side){fighters=[makeFighter(0,0,id),makeFighter(1,1,'dragoon')];const f=fighters[0],l=StageRules.ledges.find(l=>l.face===side);Object.assign(f,{x:l.x-side*20,y:l.y+60,grounded:false,inv:0,respawn:0,hitlag:0,hitstun:0,control:'primary'});fighters[1].x=1900;PlayerController.catchLedge(f,l);for(let n=0;n<f.character.ledgeCatchFrames+2;n++)tick(f);return[f,l];}
+  for(const{id}of Roster.definitions)for(const side of[-1,1]){
+   let[f,l]=reset(id,side);tick(f,{jab:true});check(id+'/'+side+' attack climb',f.mode==='LedgeAttack'&&f.attack?.type==='ledge'&&f.grounded&&f.face===side);f.timer=f.attack?.activeStart;check(id+'/'+side+' attack climb has active hitbox',attackBoxes(f).length>0);
+   [f,l]=reset(id,side);tick(f,{guard:true});check(id+'/'+side+' roll climb starts',f.mode==='LedgeRoll'&&f.grounded);for(let n=0;n<30;n++)tick(f);check(id+'/'+side+' roll travels inward',side*(f.x-l.x)>125&&f.mode==='Idle',{x:f.x,mode:f.mode});
+   [f,l]=reset(id,side);const jumps=f.airJumps;tick(f,{jump:true});check(id+'/'+side+' jump climb',f.mode==='LedgeJump'&&!f.grounded&&f.vy<0&&f.airJumps===jumps);
+   [f,l]=reset(id,side);tick(f,{y:-1});for(let n=0;n<23;n++)tick(f);check(id+'/'+side+' standing climb stays at lip',f.mode==='Idle'&&f.grounded&&Math.abs(side*(f.x-l.x)-25)<.1,{x:f.x,mode:f.mode});
+   [f,l]=reset(id,side);tick(f,{x:side});check(id+'/'+side+' inward stick standing climb',f.mode==='LedgeGetup');
+   [f,l]=reset(id,side);tick(f,{rx:side,ry:0,rightStickMode:'smash'});check(id+'/'+side+' smash stick attack climb',f.mode==='LedgeAttack'&&f.attack?.type==='ledge');
+  }
+  let[f]=reset('dragoon',1);const original=text,seen=[];text=(s,...a)=>{seen.push(s);return original(s,...a);};try{drawLedgeOptions();check('four choices shown while hanging',seen.some(s=>s.includes('攻撃上がり')&&s.includes('回避上がり')&&s.includes('ジャンプ上がり')&&s.includes('その場上がり')));seen.length=0;f.ledge=null;drawLedgeOptions();check('choices disappear off ledge',seen.length===0);}finally{text=original;}
+  return{characters:Roster.definitions.length,checks,failed};
+ });fs.writeFileSync('.tools/ledge-options-results.json',JSON.stringify({...result,errors},null,2));console.log(JSON.stringify({...result,failed:result.failed.slice(0,15),failureCount:result.failed.length,errors},null,2));assert.deepEqual(errors,[]);assert.equal(result.failed.length,0);
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

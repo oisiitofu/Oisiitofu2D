@@ -40,7 +40,7 @@ const NekuRules=(()=>{
  function clearLine(x,y,tx,ty){const n=Math.max(1,Math.ceil(Math.hypot(tx-x,ty-y)/6));for(let j=1;j<=n;j++)if(terrain(lerp(x,tx,j/n),lerp(y,ty,j/n)))return false;return true;}
  function surface(x,y,maxDrop=1000){return platforms.filter(p=>x>=p.x&&x<=p.x+p.w&&p.y>=y-5&&p.y<=y+maxDrop).sort((a,b)=>a.y-b.y)[0];}
  // Sweep the complete body, not just the destination, against the solid island.
- function safeWarp(f,target){const p=platforms.find(p=>p.main),e=f.character.ecb,dx=target.x-f.x,dy=target.y-f.y,n=Math.max(1,Math.ceil(Math.hypot(dx,dy)/6));let q={x:f.x,y:f.y,blocked:false};for(let j=1;j<=n;j++){const x=f.x+dx*j/n,y=f.y+dy*j/n;if(x>p.x-e.radius&&x<p.x+p.w+e.radius&&y>p.y+1&&y-e.height<p.y+90){q.blocked=true;break;}q={x,y,blocked:false};}return q;}
+ function safeWarp(f,target){const p=platforms.find(p=>p.main),e=f.character.ecb,dx=target.x-f.x,dy=target.y-f.y,n=Math.max(1,Math.ceil(Math.hypot(dx,dy)/6));let q={x:f.x,y:f.y,blocked:false};for(let j=1;j<=n;j++){const x=f.x+dx*j/n,y=f.y+dy*j/n;if(StageGeometry.overlaps(p,x,y,e.radius,e.height)){q.blocked=true;break;}q={x,y,blocked:false};}return q;}
  function spawn(f,kind,v={}){const o={kind,owner:f.id,face:f.face,x:f.x+f.face*35,y:f.y-35,vx:0,vy:0,age:0,life:35,hits:new Set(),stale:f.attack?.staleMultiplier??1,...v};objects.push(o);return o;}
  function teleport(f,target){const from={x:f.x,y:f.y},q=safeWarp(f,target);f.x=q.x;f.y=q.y;f.grounded=false;f.fastFall=false;f.vx=f.vy=0;for(const v of[from,q])spawn(f,'warpFlash',{x:v.x,y:v.y-35,life:13});GameAudio.cue('light-cast',.75,f);return q;}
  function prepare(f){const a=f.attack;a.originGrounded=f.grounded;

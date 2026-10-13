@@ -33,7 +33,7 @@ const MidnaMoves=(()=>{
 })();
 const MidnaRules=(()=>{
  function reset(){for(const f of fighters)if(f.characterId==='midna')f.midnaSideUsed=f.midnaCrushUsed=false;}
- function solid(f,x,y){const p=platforms.find(p=>p.main),c=f.character.ecb;return x+c.radius>p.x&&x-c.radius<p.x+p.w&&y>p.y+1&&y-c.height<p.y+90;}
+ function solid(f,x,y){const p=platforms.find(p=>p.main),c=f.character.ecb;return StageGeometry.overlaps(p,x,y,c.radius,c.height);}
  // Warp traverses shadows, but an occupied destination is backed out along its last segment.
  function destination(f,a){const d=a.warpDirection,len=Math.hypot(d.x,d.y)||1;for(let n=a.range;n>=0;n-=5){const q={x:a.origin.x+d.x/len*n,y:a.origin.y+d.y/len*n};if(!solid(f,q.x,q.y))return{...q,blocked:n<a.range};}return{...a.origin,blocked:true};}
  function anchor(f,a){const hand={x:f.x+f.face*a.handX,y:f.y-a.handOffset};return platforms.flatMap(p=>[{x:p.x,y:p.y},{x:p.x+p.w,y:p.y}]).filter(p=>(p.x-hand.x)*f.face>=0&&p.y<hand.y+30&&Math.hypot(p.x-hand.x,p.y-hand.y)<=a.anchorReach&&!Array.from({length:24},(_,n)=>EmmaRules.terrain(lerp(hand.x,p.x,(n+1)/25),lerp(hand.y,p.y,(n+1)/25))).some(Boolean)).sort((p,q)=>Math.hypot(p.x-hand.x,p.y-hand.y)-Math.hypot(q.x-hand.x,q.y-hand.y))[0]||null;}

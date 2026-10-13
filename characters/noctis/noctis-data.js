@@ -37,7 +37,7 @@ const NoctisRules=(()=>{
  function marker(f){return objects.find(o=>o.owner===f.id&&o.kind==='marker'&&!o.dead);}
  function reset(){objects=[];for(const f of fighters)if(f.characterId==='noctis'){f.noctisSideUsed=false;f.noctisElementIndex=0;}}
  function spawn(f,kind,values={}){const o={kind,owner:f.id,face:f.face,x:f.x+f.face*28,y:f.y-36,age:0,life:60,stale:f.attack?.staleMultiplier??1,hits:new Set(),...values};objects.push(o);return o;}
- function blocked(f,x,y){const p=platforms.find(p=>p.main),e=f.character.ecb;return x>p.x-e.radius&&x<p.x+p.w+e.radius&&y>p.y+1&&y-e.height<p.y+90;}
+ function blocked(f,x,y){const p=platforms.find(p=>p.main),e=f.character.ecb;return StageGeometry.overlaps(p,x,y,e.radius,e.height);}
  // Sample the whole path, including the ECB: warps cannot tunnel through the solid main island.
  function safeWarp(f,target){const dx=target.x-f.x,dy=target.y-f.y,n=Math.max(1,Math.ceil(Math.hypot(dx,dy)/6));let point={x:f.x,y:f.y,blocked:false};for(let j=1;j<=n;j++){const x=f.x+dx*j/n,y=f.y+dy*j/n;if(blocked(f,x,y)){point.blocked=true;break;}point={x,y,blocked:false};}return point;}
  function teleport(f,target){const from={x:f.x,y:f.y},q=safeWarp(f,target);f.x=q.x;f.y=q.y;f.grounded=false;f.fastFall=false;f.vx=0;f.vy=-1.5;for(const p of [from,q])spawn(f,'warpFlash',{x:p.x,y:p.y-36,life:12});GameAudio.cue('light-cast',.6,f);return q;}

@@ -38,7 +38,7 @@ const NaegiRules=(()=>{
  const supports=[{name:'ハンマー',family:'hammer',pose:0},{name:'メガホン',family:'light',pose:2},{name:'ガード',family:'shield',pose:4}];
  function reset(){objects=[];for(const f of fighters)if(f.characterId==='naegi'){f.naegiSupport=0;f.naegiSupportCooldown=0;f.naegiSideUsed=false;f.naegiSerial=0;}}
  function terrain(x,y,r=0){const p=platforms.find(p=>p.main);return x>p.x-r&&x<p.x+p.w+r&&y>p.y-r&&y<p.y+90+r;}
- function safeStep(f,target){const p=platforms.find(p=>p.main),e=f.character.ecb,n=Math.max(1,Math.ceil(Math.hypot(target.x-f.x,target.y-f.y)/5));let q={x:f.x,y:f.y,blocked:false};for(let j=1;j<=n;j++){const x=lerp(f.x,target.x,j/n),y=lerp(f.y,target.y,j/n);if(x>p.x-e.radius&&x<p.x+p.w+e.radius&&y>p.y+1&&y-e.height<p.y+90){q.blocked=true;break;}q={x,y,blocked:false};}return q;}
+ function safeStep(f,target){const p=platforms.find(p=>p.main),e=f.character.ecb,n=Math.max(1,Math.ceil(Math.hypot(target.x-f.x,target.y-f.y)/5));let q={x:f.x,y:f.y,blocked:false};for(let j=1;j<=n;j++){const x=lerp(f.x,target.x,j/n),y=lerp(f.y,target.y,j/n);if(StageGeometry.overlaps(p,x,y,e.radius,e.height)){q.blocked=true;break;}q={x,y,blocked:false};}return q;}
  function spawn(f,kind,v={}){const q={kind,owner:f.id,x:f.x+f.face*28,y:f.y-36,face:f.face,age:0,life:65,vx:0,vy:0,damage:7,hits:new Set(),stale:f.attack?.staleMultiplier??1,...v};objects.push(q);return q;}
  function prepare(f){const a=f.attack;f.naegiSerial=(f.naegiSerial||0)+1;a.serial=f.naegiSerial;a.originGrounded=f.grounded;
   if(a.type==='dragon')a.aimY=clamp(f.input?.y||0,-a.aimRange,a.aimRange);
