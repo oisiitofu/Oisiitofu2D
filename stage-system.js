@@ -1,7 +1,7 @@
 'use strict';
 let burstEffects=[];
 // Feet are the movement anchor; use the body's center at the upper blast line.
-function blastZoneSide(f){const z=StageRules.blast;if(f.y-f.character.ecb.height/2<z.top)return'top';if(f.y>z.bottom)return'bottom';if(f.x<z.left)return'left';if(f.x>z.right)return'right';return null;}
+function blastZoneSide(f){const z=StageRules.blast;if(f.y-f.character.ecb.height/2<z.top&&(f.tumbling||f.hitstun>0||f.pendingLaunch))return'top';if(f.y>z.bottom)return'bottom';if(f.x<z.left)return'left';if(f.x>z.right)return'right';return null;}
 function addBurstEffect(f){const side=blastZoneSide(f)||'top',vertical=side==='top'||side==='bottom',sx=W/2+(f.x-camera.x)*camera.z,sy=H*.47+(f.y-42-camera.y)*camera.z;burstEffects.push({side,x:vertical?clamp(sx,110,W-110):side==='left'?0:W,y:vertical?(side==='top'?0:H):clamp(sy,120,H-120),angle:side==='top'?Math.PI/2:side==='bottom'?-Math.PI/2:side==='left'?0:Math.PI,life:38,color:colors[f.color]});}
 function drawBurstEffects(){for(const b of burstEffects){const progress=1-b.life/38,alpha=Math.min(1,b.life/14),length=380+progress*200,width=(1-progress)*110;ctx.save();ctx.translate(b.x,b.y);ctx.rotate(b.angle);ctx.globalCompositeOperation='lighter';ctx.globalAlpha=alpha;let glow=ctx.createLinearGradient(0,0,length,0);glow.addColorStop(0,'#fff');glow.addColorStop(.22,b.color);glow.addColorStop(1,b.color+'00');path([[0,-width],[length,0],[0,width]],glow);for(let n=0;n<9;n++){let offset=(n-4)*23,reach=length*(.65+.35*Math.sin(n*4.7));line([[0,offset],[reach,offset*(1+progress)]],n%2?'#fff':b.color,Math.max(1,(1-progress)*(n%2?3:6)));}ctx.globalAlpha=alpha*.7;ctx.strokeStyle='#fff';ctx.lineWidth=5*(1-progress)+1;ctx.beginPath();ctx.ellipse(0,0,50+progress*230,90+progress*200,0,0,TAU);ctx.stroke();ctx.restore();}}
 // Positions are world coordinates; the loupe is drawn in the fixed screen viewport.
@@ -100,11 +100,22 @@ function resolveFighterBodies(previous){
  for(const f of fighters){if(!f.grounded)continue;const floor=platforms.find(p=>Math.abs(p.y-f.y)<2&&f.x>p.x-9&&f.x<p.x+p.w+9);if(!floor){f.grounded=false;f.vy=0;}}
 }
 function loupePosition(f){
+ if(f.respawn||BattlePlayers.out(f))return null;
  const p={x:W/2+(f.x-camera.x)*camera.z,y:H*.47+(f.y-42-camera.y)*camera.z};
- if(p.x>=0&&p.x<=W&&p.y>=0&&p.y<=H)return null;
- const inset=StageRules.loupe.inset,dx=p.x-W/2,dy=p.y-H/2;
- const t=Math.min((W/2-inset)/Math.max(.001,Math.abs(dx)),(H/2-inset)/Math.max(.001,Math.abs(dy)));
- return{x:W/2+dx*t,y:H/2+dy*t,angle:Math.atan2(dy,dx)};
+ const z=StageRules.blast,h=f.character.ecb.height,launched=!!(f.tumbling||f.hitstun>0||f.pendingLaunch);
+ const edges=[{side:'left',distance:f.x-z.left,v:-f.vx},{side:'right',distance:z.right-f.x,v:f.vx},{side:'top',distance:f.y-h/2-z.top,v:-f.vy},{side:'bottom',distance:z.bottom-f.y,v:f.vy}];
+ // A fast uninterrupted launch may burst directly; voluntary movement always warns.
+ if(launched&&edges.some(e=>e.v>0&&e.distance/e.v<=8))return null;
+ const near=edges.sort((a,b)=>a.distance-b.distance).find(e=>e.distance<=StageRules.loupe.warningDistance);
+ if(!near&&p.x>=0&&p.x<=W&&p.y>=0&&p.y<=H)return null;
+ const inset=StageRules.loupe.inset,r=StageRules.loupe.radius,left=inset,right=W-inset,top=Math.max(inset,matchClockTop+r+18),bottom=H-165;
+ const cx=W/2,cy=(top+bottom)/2,dx=p.x-cx,dy=p.y-cy;
+ const t=Math.min((right-cx)/Math.max(.001,Math.abs(dx)),(bottom-cy)/Math.max(.001,Math.abs(dy)));
+ let q=near?{x:clamp(p.x,left,right),y:clamp(p.y,top,bottom)}:{x:cx+dx*t,y:cy+dy*t};
+ if(near){if(near.side==='left')q.x=left;if(near.side==='right')q.x=right;if(near.side==='top')q.y=top;if(near.side==='bottom')q.y=bottom;}
+ // Keep the fixed clock clear while loupes render above the rest of the HUD.
+ if(!training&&Number.isFinite(matchTime)&&q.y-r<matchClockTop+90&&q.x+r>W-266)q.x=W-266-r-12;
+ return{...q,angle:near?{left:Math.PI,right:0,top:-Math.PI/2,bottom:Math.PI/2}[near.side]:Math.atan2(dy,dx),side:near?.side||null};
 }
 function drawOffscreenLoupes(){
  for(const f of fighters){if(f.respawn)continue;const p=loupePosition(f);if(!p)continue;
