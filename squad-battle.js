@@ -1,7 +1,7 @@
 'use strict';
 // A stock belongs to a team member. Replacing a member never resets the opponent.
 const SquadBattle=(()=>{
- const teams={player:['dragoon','random','random','random','random'],cpu:['dragoon','random','random','random','random']},slots={player:0,cpu:0};let previousSize=1;
+ const teams={player:['dragoon','random','random','random','random'],cpu:['random','random','random','random','random']},slots={player:0,cpu:0};let previousSize=1;
  const size=()=>{const mode=document.querySelector('#battle-mode').value;return mode==='squad3'?3:mode==='squad5'?5:mode==='online'?+document.querySelector('#squad-size').value:1;};
  function choose(id){if(size()<2)return;teams[Roster.target][slots[Roster.target]]=id;}
  function refresh(){
