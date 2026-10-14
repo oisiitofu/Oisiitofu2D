@@ -10,9 +10,9 @@ const exclude={piposaru:{0:[[0,0,104,124]],47:[[0,0,503,80],[250,0,253,345]]},ar
  const browser=await chromium.launch({channel:'msedge',headless:true});let runtime;
  try{
   const p=await browser.newPage();await p.goto(process.env.TEST_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});
-  runtime=await p.evaluate(()=>{
+  runtime=await p.evaluate(requested=>{
    state='pause';setupStage('0');const result=[];
-   for(const {id}of Roster.definitions){
+   for(const {id}of Roster.definitions.filter(d=>!requested||requested.includes(d.id))){
     const f=makeFighter(0,0,id),used=new Set(Array.from({length:40},(_,n)=>n));f.input=emptyInput();fighters=[f,makeFighter(1,0,'dragoon')];
     for(const type of ['jab','jab2','jab3','dashAttack','heavy','up','low','smash','upsmash','downsmash','air','fair','bair','uair','dair','dragon','gale','rise','grab']){f.attack=null;f.grounded=true;attack(f,type);if(!f.attack)continue;const a=f.attack;for(let t=1;t<=Math.min(300,a.totalFrames);t++){f.timer=t;used.add(BattleSize.imagePose(f,pose(f)));}if(a.hold){f.timer=1;used.add(BattleSize.imagePose(f,pose(f)));}}
     for(const mode of Object.keys(PlayerStates.defs)){f.attack=null;PlayerStates.enter(f,mode);for(const t of [0,5,12,24,48]){frame=t;used.add(BattleSize.imagePose(f,pose(f)));}}
@@ -25,9 +25,9 @@ const exclude={piposaru:{0:[[0,0,104,124]],47:[[0,0,503,80],[250,0,253,345]]},ar
     if(id==='zero'){used.add(44);used.add(46);}
     result.push({id,used:[...used],scales:characterArt[id].frames.map((_,n)=>BattleSize.baseNative(id,n))});
    }return result;
-  });
+  },process.env.MOTION_IDS?.split(',')||null);
  }finally{await browser.close();}
- const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/ready/manifest.json'))),characters={};let poses=0;
+ const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/ready/manifest.json'))),characters=process.env.MOTION_IDS?require('node:vm').runInNewContext(fs.readFileSync(path.join(root,'motion-size.js'),'utf8')+';MotionSize.characters'):{};let poses=0;
  for(const {id,used,scales}of runtime){
   const entry=manifest.characters[id],{data,info}=await sharp(path.join(root,entry.image)).ensureAlpha().raw().toBuffer({resolveWithObject:true}),areas=[],pads=[],histograms=[];
   for(const [n,[left,top,width,height]]of entry.frames.entries()){

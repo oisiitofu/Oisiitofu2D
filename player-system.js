@@ -115,6 +115,8 @@ CharacterData.hanajs={...CharacterData.dragoon,...{"weight":110,"walkSpeed":2.8,
 CharacterData.hanajk={...CharacterData.dragoon,...{"weight":105,"walkSpeed":3.1,"initialDashSpeed":6.3,"runSpeed":6.7,"airSpeed":6,"airAcceleration":0.32,"gravity":0.61,"fullHopVelocity":14},ecb:{radius:23,height:104},shieldSize:49.92,shieldOffset:[0,-46.800000000000004],ledgeGrip:[0.4922341944986589,0.9746192893401016]};
 CharacterData.hanajd={...CharacterData.dragoon,...{"weight":89,"walkSpeed":3.7,"initialDashSpeed":7.5,"runSpeed":8,"airSpeed":6.9,"airAcceleration":0.32,"gravity":0.61,"fullHopVelocity":14.6},ecb:{radius:18,height:110},shieldSize:52.8,shieldOffset:[0,-49.5],ledgeGrip:[-0.013257852447041585,0.9498069498069498]};
 CharacterData.kisuke={...CharacterData.dragoon,...{"weight":87,"walkSpeed":3.6,"initialDashSpeed":8.4,"runSpeed":8.2,"airSpeed":6.5,"airAcceleration":0.4,"gravity":0.62,"fullHopVelocity":14.5},ecb:{radius:16,height:94},shieldSize:45.12,shieldOffset:[0,-42.300000000000004],ledgeGrip:[-0.14179841897233203,0.9578947368421052]};
+CharacterData.ray={...CharacterData.dragoon,weight:83,walkSpeed:3.4,initialDashSpeed:7.4,runSpeed:7.2,airSpeed:6.4,airAcceleration:.34,gravity:.62,fullHopVelocity:14.2,ecb:{radius:17,height:78},shieldSize:42,shieldOffset:[0,-38],ledgeGrip:[0,.90]};
+CharacterData.alain={...CharacterData.dragoon,weight:102,walkSpeed:3.2,initialDashSpeed:7,runSpeed:6.8,airSpeed:5.6,airAcceleration:.28,gravity:.66,fullHopVelocity:14.5,ecb:{radius:17,height:96},shieldSize:47,shieldOffset:[0,-45],ledgeGrip:[0,.90]};
 const MovementTuning={shortHopReleaseGraceFrames:2,fastFallMultiplier:1.25,fastFallAcceleration:1.1};
 for(const character of Object.values(CharacterData))character.fastFallSpeed=character.fallSpeed*MovementTuning.fastFallMultiplier;
 const StageRules={blast:{left:-780,right:2220,top:-480,bottom:1200},camera:{minX:-560,maxX:2000,minY:-400,maxY:1350,minZoom:.56,maxZoom:1.5},loupe:{radius:39,inset:48,warningDistance:180},ledges:[],oneOnOne:false};
@@ -164,7 +166,7 @@ const InputFrames=(()=>{
   const smashFlick=strength>=.7&&(previousStrength<.7&&(f.smashNeutralAge<=6||strength-previousStrength>=.25)||reversed);
   f.smashFlickAge=smashFlick?0:(f.smashFlickAge??99)+1;i.smashFlick=f.smashFlickAge<=6&&strength>=.62;
   const rightStrength=Math.hypot(i.rx||0,i.ry||0);if(rightStrength<=.35)f.rightStickReady=true;
-  if(rightStrength>=.65&&(f.rightStickReady??true)){f.rightStickReady=false;i.stickAttack={x:i.rx,y:i.ry};if(raw.rightStickMode==='smash')i.smash=true;else{i.heavy=true;i.forceTilt=true;}}
+  if(rightStrength>=.65&&(f.rightStickReady??true)){f.rightStickReady=false;i.stickAttack={x:i.rx,y:i.ry};if(!f.grounded&&!f.ledge){i.heavy=true;i.forceTilt=true;}else if(raw.rightStickMode==='smash')i.smash=true;else{i.heavy=true;i.forceTilt=true;}}
   // Record shield + normal-attack as a grab before buffering. This preserves
   // the command through shield stun without repeating it while buttons are held.
   const guardMode=f.frozen?.mode??f.mode;

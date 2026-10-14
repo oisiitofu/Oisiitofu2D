@@ -31,7 +31,7 @@ const CombatSystem=(()=>{
   if(HunterRules.guard(f,o,a,box))return;
   if(PawapuroRules.field(f,o,a,box,touch))return;
   if(ChefRules.field(f,o,a,box,touch))return;
-  let modifier=a.staleMultiplier??stale(f,a.type),charge=1+(a.charge||0)*(f.character.smashMultiplier-1),dmg=(a.damage??a.dmg??0)*(f.characterId==='morphie'&&!a.projectile?clamp(.8+.2*MorphieRules.scale(f),.85,1.2):1)*modifier*charge*(a.shortHopMultiplier||1)*(StageRules.oneOnOne?1.2:1)*(o.characterId==='goemon'&&o.impactTime>0?1.25:1)*(o.characterId==='rean'&&o.reanDemonTime>0?ReanMoves.gale.demonIncomingMultiplier:1)*(f.characterId==='omegamon'&&f.digiMode!==1?1.1:1)*(o.characterId==='omegamon'&&o.digiMode===1?.85:1),lag=BattleFeel.hitlag({...a,damage:(a.damage??a.dmg??0)*charge});
+  let modifier=a.staleMultiplier??stale(f,a.type),charge=1+(a.charge||0)*(f.character.smashMultiplier-1),dmg=(a.damage??a.dmg??0)*(f.characterId==='morphie'&&!a.projectile?clamp(.8+.2*MorphieRules.scale(f),.85,1.2):1)*modifier*charge*(a.shortHopMultiplier||1)*(StageRules.oneOnOne?1.2:1)*(o.characterId==='goemon'&&o.impactTime>0?1.25:1)*(o.characterId==='rean'&&o.reanDemonTime>0?ReanMoves.gale.demonIncomingMultiplier:1)*(f.characterId==='omegamon'&&f.digiMode!==1?1.1:1)*(o.characterId==='omegamon'&&o.digiMode===1?.85:1)*(o.characterId==='alain'&&o.alainOrderTime>0?.88:1),lag=BattleFeel.hitlag({...a,damage:(a.damage??a.dmg??0)*charge});
   if(f.attack&&f.attack.type===a.type&&!f.attack.staleRecorded){f.staleQueue.unshift(a.type);f.staleQueue.length=Math.min(9,f.staleQueue.length);f.attack.staleRecorded=true;}
   // Closely spaced projectiles can arrive during shield hitlag. The saved
   // shield state still blocks them until its hitlag has finished.

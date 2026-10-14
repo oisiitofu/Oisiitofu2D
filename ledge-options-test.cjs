@@ -14,7 +14,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    [f,l]=reset(id,side);tick(f,{x:side});check(id+'/'+side+' inward stick standing climb',f.mode==='LedgeGetup');
    [f,l]=reset(id,side);tick(f,{rx:side,ry:0,rightStickMode:'smash'});check(id+'/'+side+' smash stick attack climb',f.mode==='LedgeAttack'&&f.attack?.type==='ledge');
   }
-  let[f]=reset('dragoon',1);const original=text,seen=[];text=(s,...a)=>{seen.push(s);return original(s,...a);};try{drawLedgeOptions();check('four choices shown while hanging',seen.some(s=>s.includes('攻撃上がり')&&s.includes('回避上がり')&&s.includes('ジャンプ上がり')&&s.includes('その場上がり')));seen.length=0;f.ledge=null;drawLedgeOptions();check('choices disappear off ledge',seen.length===0);}finally{text=original;}
+  let[f]=reset('dragoon',1);const original=text,seen=[];text=(s,...a)=>{seen.push(s);return original(s,...a);};try{drawLedgeOptions();check('ledge controls hint hidden while hanging',seen.length===0);seen.length=0;f.ledge=null;drawLedgeOptions();check('choices disappear off ledge',seen.length===0);}finally{text=original;}
   return{characters:Roster.definitions.length,checks,failed};
  });fs.writeFileSync('.tools/ledge-options-results.json',JSON.stringify({...result,errors},null,2));console.log(JSON.stringify({...result,failed:result.failed.slice(0,15),failureCount:result.failed.length,errors},null,2));assert.deepEqual(errors,[]);assert.equal(result.failed.length,0);
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

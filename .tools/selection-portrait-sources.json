@@ -1224,5 +1224,23 @@
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/kisuke-generation.json"
+  },
+  "ray": {
+    "source": "characters/ray/assets/ray-native.png",
+    "crop": [
+      2,
+      2099,
+      424,
+      424
+    ]
+  },
+  "alain": {
+    "source": "characters/alain/assets/alain-native.png",
+    "crop": [
+      2,
+      2095,
+      507,
+      348
+    ]
   }
 }
