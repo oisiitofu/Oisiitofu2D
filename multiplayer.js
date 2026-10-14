@@ -1,7 +1,7 @@
 'use strict';
 // Fighter IDs are seats (0..3), independent of teams, colors and character IDs.
 const BattlePlayers=(()=>{
- const seats=[{character:'dragoon',color:0,control:'primary',team:0},{character:'random',color:2,control:'cpu',team:1},{character:'random',color:1,control:'cpu',team:0},{character:'random',color:4,control:'cpu',team:1}];
+ const seats=[{character:'random',color:0,control:'primary',team:0},{character:'random',color:2,control:'cpu',team:1},{character:'random',color:1,control:'cpu',team:0},{character:'random',color:4,control:'cpu',team:1}];
  const seatColors=['#68baff','#ff718d','#ffd269','#8ce6ad'];let selection=0,teams=false,initialized=false,initialStocks=3;
  const count=()=>SquadBattle.size()>1?2:['battle','online'].includes(document.querySelector('#battle-mode')?.value)?Number(document.querySelector('#player-count')?.value||2):2;
  const sameTeam=(a,b)=>teams&&a.team!==undefined&&a.team===b.team;

@@ -124,7 +124,7 @@ const Roster=(()=>{
  const randomPortrait='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160"><circle cx="80" cy="80" r="65" fill="#193854" stroke="#78cdff" stroke-width="3"/><text x="80" y="119" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="112" fill="#e2f4ff">?</text></svg>');
  const definitionFor=id=>id==='random'?randomChoice:definitions.find(d=>d.id===id);
  function resolve(id){return id==='random'?selectable[Math.floor(Math.random()*selectable.length)].id:id;}
- let chosen='dragoon',target='player';
+ let chosen='random',target='player';
  const $roster=id=>document.getElementById(id);
  function activeId(){if(BattlePlayers.selection>=2)return BattlePlayers.seats[BattlePlayers.selection].character;return target==='cpu'?$roster('cpu-character').value:chosen;}
  function activeColor(){if(BattlePlayers.selection>=2)return BattlePlayers.seats[BattlePlayers.selection].color;return target==='cpu'?+$roster('color2').value:selected;}
