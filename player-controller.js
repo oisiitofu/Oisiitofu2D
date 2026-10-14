@@ -2,6 +2,10 @@
 const PlayerController=(()=>{
  const enter=(f,n,d)=>PlayerStates.enter(f,n,d),is=(f,...n)=>n.includes(f.mode);
  const dodgeData={SpotDodge:{duration:25,inv:[3,17],speed:0,attackCancel:21},ForwardRoll:{duration:29,inv:[4,15],speed:11},BackwardRoll:{duration:34,inv:[5,16],speed:10.5},NeutralAirDodge:{duration:36,inv:[3,25],speed:0,landing:10},DirectionalAirDodge:{duration:45,inv:[3,21],speed:14,landing:19,earlyLanding:11}};
+ // The entry frame places the fighter at the lip without running physics.
+ // Preserve the former 29 moving frames * 4 units while shortening recovery.
+ const ledgeRoll={duration:26,distance:116};
+ const ledgeRollSpeed=ledgeRoll.distance/(ledgeRoll.duration-1);
  function beginDodge(f,i){let air=!f.grounded;if(air&&f.airDodged)return;let groundDirection=i.dodgeDirection||InputFrames.dodgeDirection(i),dir=air?Math.sign(i.x):groundDirection?.x||0,name=air?(Math.hypot(i.x,i.y)>.3?'DirectionalAirDodge':'NeutralAirDodge'):groundDirection?.y?'SpotDodge':dir===f.face?'ForwardRoll':'BackwardRoll';let d=dodgeData[name],stale=f.dodgeStale;
   f.dodge={...d,inv:[d.inv[0]+stale,Math.max(d.inv[0]+stale+1,d.inv[1]-stale)],direction:dir,stale};f.dodgeStale=Math.min(5,stale+1);f.dodgeRest=0;f.airDodged ||= air;f.tumbling=false;f.fastFall=false;enter(f,name,d.duration+(air?0:Math.min(6,stale*2)));
   if(air&&name==='DirectionalAirDodge'){let length=Math.max(.01,Math.hypot(i.x,i.y)),speed=d.speed*(1-stale*.08);f.vx=i.x/length*speed;f.vy=i.y/length*speed;f.fastFall=false;}else if(!air)f.vx=dir*d.speed*(1-stale*.05);
@@ -63,7 +67,7 @@ const PlayerController=(()=>{
   if(name==='LedgeJump'){f.x=l.x-l.face*(f.character.ecb.radius+3);launchJump(f,false,true);return;}
   f.x=l.x+l.face*25;f.y=l.y;f.grounded=true;
   if(name==='LedgeAttack'){attack(f,'ledge');f.mode='LedgeAttack';return;}
-  enter(f,name,name==='LedgeRoll'?30:23);f.vx=name==='LedgeRoll'?l.face*4:0;
+  enter(f,name,name==='LedgeRoll'?ledgeRoll.duration:23);f.vx=name==='LedgeRoll'?l.face*ledgeRollSpeed:0;
  }
  function shield(f,i){let c=f.character;if(f.shieldStun>0){f.shieldStun--;return true;}if(['ShieldStart','ShieldHold'].includes(f.mode))i=InputFrames.consume(f,i);if(is(f,'ShieldStart','ShieldHold')){
    f.shieldHeldFrames++;f.shieldOffset=[i.x*9,i.y*7];f.shield=Math.max(0,f.shield-c.shieldDrain);if(f.shield<=0){breakShield(f);return true;}
@@ -120,7 +124,7 @@ const PlayerController=(()=>{
   else if(f.mode==='Knockdown'){f.vx=moveToward(f.vx,0,c.traction);if(f.stateFrame>10){if(i.jab||i.heavy){attack(f,'getupAttack');f.mode='GetupAttack';}else if(Math.abs(i.x)>.5){enter(f,'GetupRoll',30);f.vx=Math.sign(i.x)*5;f.intangible=16;}else if(i.jump||i.y<-.5||f.stateFrame>120){enter(f,'Getup',24);f.intangible=12;}}}
   else if(dodgeData[f.mode]){const d=f.dodge;if(f.stateFrame>=d.inv[0]&&f.stateFrame<=d.inv[1])f.intangible=Math.max(f.intangible,1);if(f.mode==='SpotDodge'&&f.stateFrame>=d.attackCancel+Math.min(6,d.stale*2)&&spotDodgeAttack(f,i)){}else if(f.stateFrame>f.stateDuration){if(f.mode==='ForwardRoll')f.face=-d.direction;let next=InputFrames.consume(f,f.committedDrop||i);f.committedDrop=null;if(next.jump||next.grab||next.jab||next.heavy||next.smash||next.special)next={...next,guard:false};enter(f,f.grounded?'Idle':'Fall');ready(f,next);}else if(f.grounded)f.vx*=.97;}
   else if(f.mode==='Helpless'){airControl(f,i);}
-  else if(f.mode==='LedgeRoll'){if(f.stateFrame>f.stateDuration){f.vx=0;enter(f,'Idle');ready(f,InputFrames.consume(f,i));}else f.vx=f.face*4;}
+  else if(f.mode==='LedgeRoll'){if(f.stateFrame>f.stateDuration){f.vx=0;enter(f,'Idle');ready(f,InputFrames.consume(f,i));}else f.vx=f.face*ledgeRollSpeed;}
   else if(['NormalLanding','HardLanding','AerialLanding','SpecialLanding','ShieldDrop','Tech','TechRoll','WallTech','CeilingTech','Getup','GetupRoll','LedgeGetup','LedgeRoll','LedgeTrump','Clank','Throw'].includes(f.mode)){if(f.stateFrame>f.stateDuration){let next=f.committedDrop||i;f.committedDrop=null;enter(f,f.grounded?'Idle':'Fall');ready(f,next);}else if(f.grounded)f.vx=moveToward(f.vx,0,c.groundFriction);}
   else ready(f,i);
   if(f.grounded&&!is(f,'LedgeGetup','LedgeRoll','LedgeAttack'))f.ledgeGrabs=0;
