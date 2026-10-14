@@ -42,6 +42,10 @@ const PlayerController=(()=>{
   else{enterIf(f,'Walk');f.vx=moveToward(f.vx,x*c.walkSpeed,c.walkAcceleration);}
  }
  function enterIf(f,name){if(f.mode!==name)enter(f,name);}
+ // A held direction can start running in a tiny gap between normal attacks.
+ // Keep the existing 9F input-buffer interval available for another tilt;
+ // running longer or deliberately flicking the stick again restores dash attacks.
+ function finishNormalAttack(f){if(f.grounded&&f.attack&&!f.attack.special&&f.attack.type!=='dashAttack')f.dashAttackResumeUntil=frame+9;}
  // Cancel residual launch momentum only once the fighter can act. A mash
  // during hitlag/hitstun must never erase the queued or ongoing knockback.
  function stopLaunchOnPress(f,i){
@@ -102,7 +106,7 @@ const PlayerController=(()=>{
   if(f.mode==='Grabbed'){f.vx=f.vy=0;f.grabEscape-=1+i.mash*7;if(f.grabEscape<=0&&f.grabOwner)releaseGrab(f.grabOwner);return;}
   if(is(f,'GrabHold','Pummel')){let o=f.grabbed;if(!o){enter(f,'Idle');return;}o.x=f.x+f.face*35;o.y=f.y-8;if(f.mode==='Pummel'){if(f.stateFrame===2){o.damage+=movesFor(f).pummel.damage;f.stats.damage+=movesFor(f).pummel.damage;CombatVFX.impact(o.x,o.y-35,f.color,2,f.face);}if(f.stateFrame>movesFor(f).pummel.totalFrames)enter(f,'GrabHold');return;}if(i.jab||i.heavy){enter(f,'Pummel',movesFor(f).pummel.totalFrames);return;}if(f.stateFrame>=5&&(Math.abs(i.x)>.4||Math.abs(i.y)>.4||i.grab)){throwTarget(f,i);o.grabImmunity=60;o.grabOwner=null;return;}return;}
   if(is(f,'LedgeCatch','LedgeHang')){ledgeAction(f,i);return;}
-  if(f.attack&&f.timer>f.attack.totalFrames){let helpless=f.attack.helpless;f.attack=null;f.gravityOff=false;f.helpless=!!helpless;enter(f,helpless?'Helpless':f.grounded?'Idle':'Fall');}
+  if(f.attack&&f.timer>f.attack.totalFrames){let helpless=f.attack.helpless;finishNormalAttack(f);f.attack=null;f.gravityOff=false;f.helpless=!!helpless;enter(f,helpless?'Helpless':f.grounded?'Idle':'Fall');}
   // Accept a brief release just after takeoff without delaying full hops.
   // Subtract only the full/short launch difference, preserving elapsed gravity.
   if(f.shortHopGrace>0){
@@ -117,7 +121,7 @@ const PlayerController=(()=>{
   if(!f.grounded&&(f.vy>=0||reachesApex)&&i.downFlick&&!downSpecial&&!f.fastFall&&!f.hitstun&&!f.tumbling){f.fastFall=true;ring(f.x,f.y,colors[f.color],26);}
   if(f.hitstun>0){f.hitstun--;f.vx=moveToward(f.vx,0,f.launchDecay??.075);if(!f.hitstun)enter(f,f.grounded?'Idle':f.tumbling?'Tumble':'Fall');}
   else if(f.mode==='JumpSquat'){f.jumpShort ||= i.jumpReleased||i.twoJumps;if(f.buffer?.key==='jump'&&f.buffer.shortHopAttack){f.jumpAerial=InputFrames.consume(f,i).jumpAerial;f.jumpShort=true;}else if(!f.jumpAerial&&['jab','heavy','smash'].includes(f.buffer?.key))f.jumpAerial=InputFrames.jumpAttack(InputFrames.consume(f,i));if(f.stateFrame>c.jumpSquatFrames){let aerial=f.jumpAerial;f.jumpAerial=null;launchJump(f,f.jumpShort);if(aerial)selectAttack(f,aerial);}}
-  else if(f.attack){if(f.grounded){if(!f.attack.horse)f.vx=moveToward(f.vx,0,c.groundFriction*DashAttackTuning.friction(f));}else airControl(f,i,f.attack.airControlMultiplier);const pending=f.buffer;advanceAttack(f,i);DashAttackTuning.motion(f);if(CombatData.finishedMotion(f)){f.attack=null;f.gravityOff=false;f.buffer??=pending;enter(f,f.grounded?'Idle':'Fall');ready(f,i);}}
+  else if(f.attack){if(f.grounded){if(!f.attack.horse)f.vx=moveToward(f.vx,0,c.groundFriction*DashAttackTuning.friction(f));}else airControl(f,i,f.attack.airControlMultiplier);const pending=f.buffer;advanceAttack(f,i);DashAttackTuning.motion(f);if(CombatData.finishedMotion(f)){finishNormalAttack(f);f.attack=null;f.gravityOff=false;f.buffer??=pending;enter(f,f.grounded?'Idle':'Fall');ready(f,i);}}
   else if(shield(f,i)){}
   else if(f.mode==='ShieldBreak'){}
   else if(f.mode==='Stunned'){f.stateDuration-=i.mash*4;if(f.stateFrame>f.stateDuration){f.shield=c.shieldHP;enter(f,'Idle');}}

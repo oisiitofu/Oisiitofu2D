@@ -96,7 +96,7 @@ function selectAttack(f,i){
  if(f.grounded&&i.x&&(i.smash||i.jab||i.heavy))f.face=Math.sign(i.x);
  if(i.special){if(i.x&&Math.abs(i.y)<.5)f.face=Math.sign(i.x);return attack(f,i.y<0?'rise':i.y>0?'gale':i.x?'dash':'dragon');}
  if((i.smash||(i.jab||i.heavy)&&i.smashFlick&&!i.forceTilt)&&f.grounded)return attack(f,i.y<0?'upsmash':i.y>0?'downsmash':'smash');
- if(i.jab||i.heavy){if(!f.grounded)return attack(f,aerial());if(['Run','InitialDash'].includes(f.mode)&&!i.forceTilt&&Math.abs(i.y)<.2)return attack(f,'dashAttack');return attack(f,i.heavy?(i.y<0?'up':i.y>0?'low':'heavy'):'jab');}
+ if(i.jab||i.heavy){if(!f.grounded)return attack(f,aerial());if(['Run','InitialDash'].includes(f.mode)&&(!f.dashAttackResumeUntil||frame>f.dashAttackResumeUntil)&&!i.forceTilt&&Math.abs(i.y)<.2)return attack(f,'dashAttack');return attack(f,i.heavy?(i.y<0?'up':i.y>0?'low':'heavy'):'jab');}
  return false;
 }
 

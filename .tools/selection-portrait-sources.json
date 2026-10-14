@@ -1228,19 +1228,19 @@
   "ray": {
     "source": "characters/ray/assets/ray-native.png",
     "crop": [
-      2,
+      57,
       2099,
-      424,
-      424
+      280,
+      200
     ]
   },
   "alain": {
     "source": "characters/alain/assets/alain-native.png",
     "crop": [
-      2,
+      84,
       2095,
-      507,
-      348
+      294,
+      210
     ]
   }
 }

@@ -133,7 +133,7 @@ const BattleSize=(()=>{
  const displayScale=Object.fromEntries([
   ...['pneuma','rex','maruku','isaac','kasane','maelle','edf','naruhodo','leon','guile','shiren','metabee','horse','sakuna'].map(id=>[id,.84]),
   ...['dragoon','zidane','terry','tressa','midna','agumon','pokoa'].map(id=>[id,.74]),
-  ['yuffie',.80]
+  ['yuffie',.80],['estelle',.92]
  ]);
  const heights=Object.fromEntries(Object.entries(calibration).map(([id,c])=>[id,c.height*(displayScale[id]??1)]));
  function baseNative(id,n){return sourceNative(id,n)*(n===0?calibration[id]?.neutral||1:1);}
