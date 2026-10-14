@@ -24,7 +24,15 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
   }
   if(width===390)await page.screenshot({path:'.tools/roster-cpu-mobile.png'});
  }
- await page.evaluate(()=>Roster.open('online'));assert.equal(await page.evaluate(()=>Roster.target),'player');assert.equal(await page.locator('#select-cpu').isVisible(),false);assert.equal(await page.locator('.cpu-mark:visible').count(),0);await card('vivi').click();assert.equal(await page.evaluate(()=>Roster.selected),'vivi');assert.equal(await page.locator('#cpu-character').inputValue(),'morphie');
- await page.evaluate(()=>Roster.open('battle'));assert.equal(await page.locator('#select-cpu').isVisible(),true);assert.equal(await page.locator('#select-cpu b').textContent(),'モーフィーズロウ');
+ if(await page.evaluate(()=>typeof PublicOnlineConfig==='undefined')){
+  await page.evaluate(()=>Roster.open('online'));assert.equal(await page.evaluate(()=>Roster.target),'player');assert.equal(await page.locator('#select-cpu').isVisible(),false);assert.equal(await page.locator('.cpu-mark:visible').count(),0);await card('vivi').click();assert.equal(await page.evaluate(()=>Roster.selected),'vivi');assert.equal(await page.locator('#cpu-character').inputValue(),'morphie');
+  await page.evaluate(()=>Roster.open('battle'));assert.equal(await page.locator('#select-cpu').isVisible(),true);assert.equal(await page.locator('#select-cpu b').textContent(),'モーフィーズロウ');
+ }else{
+  // Static edition delegates online to a separate server; it has no online mode option.
+  const base=await page.evaluate(()=>PublicOnlineConfig.onlineUrl);let destination;
+  await page.route(base+'/**',route=>{destination=route.request().url();return route.abort();});
+  await page.click('#back-home');await page.click('#enter-online');await page.waitForTimeout(300);
+  const expected=new URL(base);expected.searchParams.set('mode','online');assert.equal(destination,expected.href);
+ }
  assert.deepEqual(errors,[]);console.log('PASS: shared CPU/player roster, independent colors, mirror match, settings sync, battle/training return, responsive layouts and online isolation');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
