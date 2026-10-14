@@ -21,7 +21,11 @@ const BattleFeel=(()=>{
  }
  function updateCamera(){
   const alive=fighters.filter(f=>!f.respawn&&!BattlePlayers.out(f));if(!alive.length)return;
-  const rule=StageRules.camera,view=battleViewBounds(),framed=alive.filter(f=>!blastWarningSide(f));
+  const rule=StageRules.camera,view=battleViewBounds(),safe=alive.filter(f=>!blastWarningSide(f)),visible=safe.filter(f=>!fighterOutsideViewport(f));
+  // A body represented by a loupe must not pull back the view of the remaining
+  // visible fight. If no safe body is visible, reacquire the safe group so a
+  // group leaving the old viewport together can still be followed.
+  const framed=visible.length?visible:safe;
   // Keep the entire viewport inside the camera area, not just its center.
   // Warning-area fighters are shown in loupes and no longer pull the camera.
   const minZoom=Math.max(rule.minZoom,W/(view.right-view.left),H/(view.bottom-view.top));
