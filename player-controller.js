@@ -117,7 +117,7 @@ const PlayerController=(()=>{
   if(!f.grounded&&(f.vy>=0||reachesApex)&&i.downFlick&&!downSpecial&&!f.fastFall&&!f.hitstun&&!f.tumbling){f.fastFall=true;ring(f.x,f.y,colors[f.color],26);}
   if(f.hitstun>0){f.hitstun--;f.vx=moveToward(f.vx,0,f.launchDecay??.075);if(!f.hitstun)enter(f,f.grounded?'Idle':f.tumbling?'Tumble':'Fall');}
   else if(f.mode==='JumpSquat'){f.jumpShort ||= i.jumpReleased||i.twoJumps;if(f.buffer?.key==='jump'&&f.buffer.shortHopAttack){f.jumpAerial=InputFrames.consume(f,i).jumpAerial;f.jumpShort=true;}else if(!f.jumpAerial&&['jab','heavy','smash'].includes(f.buffer?.key))f.jumpAerial=InputFrames.jumpAttack(InputFrames.consume(f,i));if(f.stateFrame>c.jumpSquatFrames){let aerial=f.jumpAerial;f.jumpAerial=null;launchJump(f,f.jumpShort);if(aerial)selectAttack(f,aerial);}}
-  else if(f.attack){if(f.grounded){if(!f.attack.horse)f.vx=moveToward(f.vx,0,c.groundFriction);}else airControl(f,i,f.attack.airControlMultiplier);const pending=f.buffer;advanceAttack(f,i);if(CombatData.finishedMotion(f)){f.attack=null;f.gravityOff=false;f.buffer??=pending;enter(f,f.grounded?'Idle':'Fall');ready(f,i);}}
+  else if(f.attack){if(f.grounded){if(!f.attack.horse)f.vx=moveToward(f.vx,0,c.groundFriction*DashAttackTuning.friction(f));}else airControl(f,i,f.attack.airControlMultiplier);const pending=f.buffer;advanceAttack(f,i);DashAttackTuning.motion(f);if(CombatData.finishedMotion(f)){f.attack=null;f.gravityOff=false;f.buffer??=pending;enter(f,f.grounded?'Idle':'Fall');ready(f,i);}}
   else if(shield(f,i)){}
   else if(f.mode==='ShieldBreak'){}
   else if(f.mode==='Stunned'){f.stateDuration-=i.mash*4;if(f.stateFrame>f.stateDuration){f.shield=c.shieldHP;enter(f,'Idle');}}

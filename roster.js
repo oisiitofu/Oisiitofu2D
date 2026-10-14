@@ -212,7 +212,7 @@ const Roster=(()=>{
  }
  function initPanels(){
   const cpu=$roster('cpu-character'),previous=cpu.value;
-  for(const d of selectable){const option=[...cpu.options].find(o=>o.value===d.id);if(option)cpu.append(option);}
+  for(const d of selectable){const option=[...cpu.options].find(o=>o.value===d.id)||new Option(d.name,d.id);cpu.append(option);}
   const random=[...cpu.options].find(o=>o.value==='random');if(random)cpu.append(random);cpu.value=previous;
   document.querySelector('#open-match-settings').onclick=()=>document.querySelector('#match-settings').showModal();document.querySelector('#close-match-settings').onclick=()=>document.querySelector('#match-settings').close();document.querySelector('#open-room').onclick=()=>document.querySelector('#online-room').showModal();document.querySelector('#close-room').onclick=()=>document.querySelector('#online-room').close();for(const id of ['cpu-character','difficulty','stage','color2','one-on-one'])document.getElementById(id).addEventListener('change',()=>{if(id==='cpu-character'||id==='color2')refreshSelection();else summary();});document.querySelector('#match-settings').addEventListener('click',e=>{if(e.target.closest('.open-settings,#help'))document.querySelector('#match-settings').close();},true);addEventListener('resize',fit);document.fonts.ready.then(fit);document.fonts.addEventListener('loadingdone',fit);summary();}
  return{definitions,selectable,fit,chooseForSlot:select,init(){initStages();init();initPanels();SquadBattle.init();BattlePlayers.init();},open,artReady,summary,closePanels,setColor,setTarget,refreshSelection,resolve,get target(){return target},get selected(){return chosen},get current(){return definitionFor(chosen)}};
