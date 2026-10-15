@@ -1,0 +1,20 @@
+const fs=require('fs'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true,args:['--disable-background-timer-throttling','--disable-renderer-backgrounding']}),errors=[];try{
+ const pages=[];for(let n=0;n<2;n++){const c=await b.newContext(),p=await c.newPage();p.on('pageerror',e=>errors.push(e.message));await p.goto('http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded);await p.click('#enter-online');await p.click('[data-id="hinako"]');pages.push(p);}
+ await pages[0].click('#open-room');await pages[0].click('#create-room');await pages[0].waitForFunction(()=>Net.code.length===6);const code=await pages[0].evaluate(()=>Net.code);await pages[1].click('#open-room');await pages[1].fill('#room-code',code);await pages[1].click('#join-room');await pages[1].waitForFunction(()=>Net.code.length===6);await pages[0].click('#ready-room');await pages[1].click('#ready-room');await Promise.all(pages.map(p=>p.waitForFunction(()=>Net.active&&countdown<=0)));
+ const target=Math.max(...await Promise.all(pages.map(p=>p.evaluate(()=>frame))))+90;
+ for(let slot=0;slot<2;slot++)await pages[slot].evaluate(({target,slot})=>{window.hinakoSnapshots={};addEventListener('online-frame',e=>{const n=e.detail-target;if(n<0||n>500)return;const key=(code,down)=>{if(slot===0)dispatchEvent(new KeyboardEvent(down?'keydown':'keyup',{code}));};
+  const place=(x=500,y=560)=>{for(const code of['KeyX','KeyZ','ArrowRight','ArrowLeft','ArrowUp','ArrowDown'])key(code,false);fighters=[makeFighter(0,0,'hinako'),makeFighter(1,1,'hinako')];HinakoRules.reset();for(const[f,k]of fighters.map((f,k)=>[f,k]))Object.assign(f,{x:k?1800:x,y:k?560:y,grounded:k?true:y===560,gravityOff:!!k,vx:0,vy:0,inv:0,intangible:0,respawn:0,hitlag:0,hitstun:0,stocks:99,face:k?-1:1,ledgeCooldown:0});hitstop=0;};
+  if(n===0){place();attack(fighters[0],'dragon');key('KeyX',true);}if(n===50)key('KeyX',false);
+  if(n===100){place();fighters[1].x=570;attack(fighters[0],'dash');}
+  if(n===200){place(170,690);attack(fighters[0],'rise');key('ArrowRight',true);}if(n===275)key('ArrowRight',false);
+  if(n===300){place();attack(fighters[0],'gale');}
+  if(n===345){const[f,o]=fighters;f.attack=null;f.x=500;f.y=560;f.grounded=true;o.x=565;o.y=560;attack(f,'dash');}
+  if(n===405){const f=fighters[0];f.attack=null;f.recovered=false;f.ledge=null;f.ledgeCooldown=100;f.x=170;f.y=690;f.grounded=false;PlayerStates.enter(f,'Fall');attack(f,'rise');key('ArrowRight',true);fighters[1].x=1800;}
+  if(n===475){fighters[0].respawn=20;key('ArrowRight',false);}
+  hinakoSnapshots[n]=fighters.map(f=>({id:f.characterId,x:f.x,y:f.y,vx:f.vx,vy:f.vy,mode:f.mode,timer:f.timer,damage:f.damage,attack:f.attack?.type,pose:pose(f),image:BattleSize.imagePose(f,pose(f)),mask:f.hinakoMaskTime,cooldown:f.hinakoMaskCooldown,beast:f.attack?.hinakoBeast,orbit:f.attack?.orbit,victim:f.attack?.victimId,grabbed:f.grabbed?.id,owner:f.grabOwner?.id,wall:f.attack?.wallRebound,grounded:f.grounded,ledge:!!f.ledge}));
+ });},{target,slot});
+ await pages[0].bringToFront();await Promise.all(pages.map(p=>p.waitForFunction(()=>hinakoSnapshots[500],null,{timeout:120000})));const snapshots=await Promise.all(pages.map(p=>p.evaluate(()=>hinakoSnapshots)));
+ for(const[n,s]of Object.entries(snapshots[0]))assert.deepEqual(s,snapshots[1][n],'online frame '+n);const all=Object.values(snapshots[0]);assert.ok(all.some(s=>s[0].mask>0));assert.ok(all.some(s=>s[0].image>=48&&s[0].image<96));assert.ok(all.some(s=>s[0].orbit));assert.ok(all.some(s=>s[0].grabbed===1&&s[1].owner===0));assert.ok(all.some(s=>s[1].damage>5));assert.equal(snapshots[0][480][0].mask,0);assert.deepEqual(errors,[]);
+ fs.writeFileSync('characters/hinako/previews/online-results.json',JSON.stringify({identicalFrames:all.length,errors,snapshots},null,2));console.log(JSON.stringify({identicalFrames:all.length,mask:true,grab:true,orbit:true,errors}));
+ }finally{await b.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

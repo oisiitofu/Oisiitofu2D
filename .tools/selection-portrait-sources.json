@@ -1242,5 +1242,14 @@
       294,
       210
     ]
+  },
+  "hinako": {
+    "source": "characters/hinako/assets/hinako-native.png",
+    "crop": [
+      785,
+      3925,
+      424,
+      424
+    ]
   }
 }

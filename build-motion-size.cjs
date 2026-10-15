@@ -22,7 +22,7 @@ const exclude={piposaru:{0:[[0,0,104,124]],47:[[0,0,503,80],[250,0,253,345]]},ar
     if(count===49)for(let n=40;n<48;n++)used.add(n);
     if(id==='goemon')for(let n=44;n<84;n++)used.add(n);
     if(id==='elma')for(let n=40;n<56;n++)used.add(n);
-    if(id==='zero'){used.add(44);used.add(46);}
+    if(id==='zero'){used.add(44);used.add(46);}if(id==='hinako')for(let n=0;n<96;n++)used.add(n);
     result.push({id,used:[...used],scales:characterArt[id].frames.map((_,n)=>BattleSize.baseNative(id,n))});
    }return result;
   },process.env.MOTION_IDS?.split(',')||null);
@@ -39,8 +39,8 @@ const exclude={piposaru:{0:[[0,0,104,124]],47:[[0,0,503,80],[250,0,253,345]]},ar
   // would otherwise make the actor shrink when holding a large object.
   const weights=histograms[0].map(a=>Math.min(1,a/areas[0]/.005));
   const bodyArea=histograms.map(h=>h.reduce((sum,a,k)=>sum+a*weights[k],0));
-  const scale=areas.map((a,n)=>used.includes(n)?+(Math.sqrt(bodyArea[0]/Math.max(bodyArea[n],a*.25))*scales[0]/scales[n]).toFixed(5):1);
-  characters[id]={atlas:entry.image,poses:used.filter(n=>n<areas.length).sort((a,b)=>a-b),scale,pad:pads,...(exclude[id]?{exclude:exclude[id]}:{})};poses+=used.filter(n=>n<areas.length).length;
+  const scale=areas.map((a,n)=>used.includes(n)?+(Math.sqrt(bodyArea[id==='hinako'&&n>=48&&n<96?48:0]/Math.max(bodyArea[n],a*.25))*scales[id==='hinako'&&n>=48&&n<96?48:0]/scales[n]).toFixed(5):1);
+  characters[id]={...(id==='hinako'?{forms:[{first:48,last:95,reference:48}]}:{}),atlas:entry.image,poses:used.filter(n=>n<areas.length).sort((a,b)=>a-b),scale,pad:pads,...(exclude[id]?{exclude:exclude[id]}:{})};poses+=used.filter(n=>n<areas.length).length;
  }
  fs.writeFileSync(path.join(root,'motion-size.js'),"'use strict';\n// Generated pose scales; shared weapon/ledge anchors follow the displayed art.\nconst MotionSize="+JSON.stringify({characters},null,1)+';\n');
  console.log(JSON.stringify({characters:runtime.length,poses}));
