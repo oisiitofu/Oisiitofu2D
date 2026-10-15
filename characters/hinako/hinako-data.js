@@ -4,12 +4,13 @@ const HinakoMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opt={s
   dragon:m('フォーカスアタック',12,[w(12,16,'front',{pose:9})],12,0,{...opt,hinakoFocus:true,pose:40,damage:11,reach:175,chargeFrame:6,chargeButton:'special',chargeMaxFrames:50}),
   dash:m('鎌・彼岸巡り',12,[w(12,15,'front',{pose:41,damage:5}),w(24,28,'low',{pose:11,damage:8})],11,0,{...opt,hinakoHook:true,pose:41,damage:5,reach:165,gravityMultiplier:.7,airControlMultiplier:0}),
   rise:m('薙刀・飛翔',8,[w(8,16,'up',{pose:43,damage:5}),w(20,25,'up',{pose:44,damage:6})],16,12,{...opt,hinakoVault:true,pose:42,damage:5,helpless:true,gravityMultiplier:0,airControlMultiplier:0,ledgeGrabStart:8}),
-  gale:m('仮面の少女',18,[],12,0,{...opt,hinakoMask:true,pose:45,damage:0}),
+  gale:m('仮面の少女',18,[],12,0,{...opt,hinakoMask:true,pose:0,damage:0}),
   airDrop:m('空中・仮面の少女',18,[],12,10,{...opt,hinakoMask:true,aerial:true,pose:45,damage:0,gravityMultiplier:.6})
- },'staff',140),poses={jab:6,jab2:7,jab3:9,heavy:9,up:8,low:11,dashAttack:12,smash:12,upsmash:13,downsmash:11,air:10,fair:6,bair:14,uair:15,dair:16,grab:17,pummel:18,ledge:6,getupAttack:11,forwardThrow:19,backThrow:14,upThrow:8,downThrow:16};
+ },'staff',140),poses={jab:6,jab2:7,jab3:12,heavy:9,up:8,low:11,dashAttack:12,smash:12,upsmash:13,downsmash:11,air:10,fair:6,bair:14,uair:15,dair:16,grab:17,pummel:18,ledge:6,getupAttack:11,forwardThrow:19,backThrow:14,upThrow:8,downThrow:16};
  for(const[k,n]of Object.entries(poses)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=n;}a.grab.newcomerHit=false;
+ a.jab2.pose=9;for(const v of a.jab2.activeFrames)v.pose=9;a.downsmash.activeFrames[1].pose=7;a.getupAttack.activeFrames[1].pose=7;
  for(const v of Object.values(a)){v.animation={...v.animation,anticipationPose:v.special?v.pose:3,accelerationPose:v.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};}
- return a;
+ a.jab2.animation.anticipationPose=7;return a;
 })();
 const HinakoRules=NewcomerCore.create('hinako',HinakoMoves,{
  reset(){for(const f of fighters)if(f.characterId==='hinako'){f.hinakoMaskTime=0;f.hinakoMaskCooldown=0;}},
