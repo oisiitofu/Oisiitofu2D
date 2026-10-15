@@ -1260,5 +1260,14 @@
       384,
       404
     ]
+  },
+  "megamanexe": {
+    "source": "characters/megamanexe/assets/megamanexe-native.png",
+    "crop": [
+      1307,
+      1641,
+      343,
+      334
+    ]
   }
 }
