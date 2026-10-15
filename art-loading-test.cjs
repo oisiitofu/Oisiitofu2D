@@ -11,18 +11,18 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
   const portraitsMs=Date.now()-began;
   await page.click('#enter-training');await page.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:10000});
   const readyMs=Date.now()-began;
-  const checks=await page.evaluate(async()=>{
+  const checks=await page.evaluate(async(requested)=>{
    const manifest=await(await fetch('assets/ready/manifest.json')).json(),mismatches=[];
    const checksum=c=>{const copy=document.createElement('canvas');copy.width=c.width;copy.height=c.height;const cg=copy.getContext('2d',{willReadFrequently:true});cg.drawImage(c,0,0);const d=cg.getImageData(0,0,c.width,c.height).data;let h=2166136261;for(let p=0;p<d.length;p+=4){h=Math.imul(h^d[p+3],16777619);if(d[p+3]===255)for(let k=0;k<3;k++)h=Math.imul(h^d[p+k],16777619);}return(h>>>0).toString(16);};
    let poses=0,effects=0,costumes=0;
-   for(const {id}of Roster.definitions){
+   for(const {id}of Roster.definitions.filter(d=>!requested||requested.includes(d.id))){
     const art=characterArt[id],expected=manifest.characters[id];
     for(const [kind,items]of [['frames',art.frames],['effects',art.effects]])items.forEach((c,n)=>{if(checksum(c)!==expected.checks[kind][n])mismatches.push(id+':'+kind+':'+n);if(kind==='frames')poses++;else effects++;});
     art.tints.forEach((v,color)=>v.forEach((c,n)=>{if(checksum(c)!==expected.checks.tints[color][n])mismatches.push(id+':color'+color+':'+n);costumes++;}));
    }
-   for(const card of document.querySelectorAll('.fighter-card')){card.click();for(const button of document.querySelectorAll('#swatches button'))button.click();}
+   for(const card of document.querySelectorAll('.fighter-card')){if(requested&&!requested.includes(card.dataset.id))continue;card.click();for(const button of document.querySelectorAll('#swatches button'))button.click();}
    return{poses,effects,costumes,mismatches};
-  });
+  },process.env.ART_IDS?.split(',')||null);
   assert.equal(checks.mismatches.length,0,'Alpha / opaque pixel mismatches: '+checks.mismatches.slice(0,20).join(', '));
   assert.equal(requests.filter(p=>/^\/characters\/[a-z0-9-]+\/assets\//.test(p)).length,0,'Original production sheets must not be requested');
   assert.deepEqual(requests.filter(p=>p.endsWith('.js')),['/game-bundle.js'],'Game scripts must use one ordered bundle');

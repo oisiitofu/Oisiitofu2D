@@ -121,6 +121,7 @@ CharacterData.hinako={...CharacterData.dragoon,weight:87,walkSpeed:3.2,initialDa
 CharacterData.cojicoji={...CharacterData.dragoon,weight:73,walkSpeed:2.9,initialDashSpeed:6.3,runSpeed:6,airSpeed:5.7,airAcceleration:.4,gravity:.47,fullHopVelocity:12.5,ecb:{radius:17,height:61},shieldSize:38,shieldOffset:[0,-30],ledgeGrip:[.16,.95]};
 CharacterData.megamanexe={...CharacterData.dragoon,weight:85,walkSpeed:3.3,initialDashSpeed:7.3,runSpeed:7,airSpeed:6.4,airAcceleration:.36,gravity:.6,fullHopVelocity:14,ecb:{radius:16,height:80},shieldSize:43,shieldOffset:[0,-39],ledgeGrip:[.13,.95]};
 CharacterData.melia={...CharacterData.dragoon,weight:80,walkSpeed:3,initialDashSpeed:6.8,runSpeed:6.4,airSpeed:6.2,airAcceleration:.38,gravity:.51,fullHopVelocity:13.5,ecb:{radius:14,height:84},shieldSize:43,shieldOffset:[0,-40],ledgeGrip:[.08,.95]};
+CharacterData.fiora={...CharacterData.dragoon,weight:91,walkSpeed:3.4,initialDashSpeed:7.4,runSpeed:7.1,airSpeed:6.6,airAcceleration:.4,gravity:.56,fullHopVelocity:13.4,ecb:{radius:14,height:84},shieldSize:43,shieldOffset:[0,-40],ledgeGrip:[.18,.99]};
 const MovementTuning={shortHopReleaseGraceFrames:2,fastFallMultiplier:1.25,fastFallAcceleration:1.1};
 for(const character of Object.values(CharacterData))character.fastFallSpeed=character.fallSpeed*MovementTuning.fastFallMultiplier;
 const StageRules={blast:{left:-780,right:2220,top:-480,bottom:1200},camera:{minX:-560,maxX:2000,minY:-400,maxY:1350,minZoom:.56,maxZoom:1.5},loupe:{radius:39,inset:48,warningDistance:180},ledges:[],oneOnOne:false};

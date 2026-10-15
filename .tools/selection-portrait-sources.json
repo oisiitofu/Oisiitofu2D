@@ -1278,5 +1278,14 @@
       368,
       368
     ]
+  },
+  "fiora": {
+    "source": "characters/fiora/assets/fiora-native.png",
+    "crop": [
+      520,
+      2179,
+      612,
+      354
+    ]
   }
 }
