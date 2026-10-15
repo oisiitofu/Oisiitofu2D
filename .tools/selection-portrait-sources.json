@@ -1314,5 +1314,14 @@
       451,
       262
     ]
+  },
+  "toro": {
+    "source": "characters/toro/assets/toro-native.png",
+    "crop": [
+      1658,
+      3210,
+      306,
+      262
+    ]
   }
 }

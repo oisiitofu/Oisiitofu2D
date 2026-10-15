@@ -125,6 +125,7 @@ CharacterData.fiora={...CharacterData.dragoon,weight:91,walkSpeed:3.4,initialDas
 CharacterData.krystal={...CharacterData.dragoon,weight:86,walkSpeed:3.2,initialDashSpeed:7.2,runSpeed:6.8,airSpeed:6.4,airAcceleration:0.38,gravity:0.56,fullHopVelocity:13.4,ecb:{"radius":14,"height":82},shieldSize:44,shieldOffset:[0,-40],ledgeGrip:[0.08,0.95]};
 CharacterData.yuri={...CharacterData.dragoon,weight:82,walkSpeed:3,initialDashSpeed:6.8,runSpeed:6.4,airSpeed:6,airAcceleration:0.36,gravity:0.54,fullHopVelocity:13.1,ecb:{"radius":14,"height":80},shieldSize:43,shieldOffset:[0,-39],ledgeGrip:[-0.04,0.97]};
 CharacterData.hornet={...CharacterData.dragoon,weight:73,walkSpeed:3.4,initialDashSpeed:7.7,runSpeed:7.4,airSpeed:6.9,airAcceleration:0.43,gravity:0.58,fullHopVelocity:13.6,ecb:{"radius":13,"height":70},shieldSize:39,shieldOffset:[0,-34],ledgeGrip:[0.08,0.99]};
+CharacterData.toro={...CharacterData.dragoon,weight:74,walkSpeed:3.1,initialDashSpeed:7,runSpeed:6.7,airSpeed:6.2,airAcceleration:0.4,gravity:0.55,fullHopVelocity:13.1,ecb:{"radius":14,"height":53},shieldSize:37,shieldOffset:[0,-27],ledgeGrip:[0.15,0.99]};
 const MovementTuning={shortHopReleaseGraceFrames:2,fastFallMultiplier:1.25,fastFallAcceleration:1.1};
 for(const character of Object.values(CharacterData))character.fastFallSpeed=character.fallSpeed*MovementTuning.fastFallMultiplier;
 const StageRules={blast:{left:-780,right:2220,top:-480,bottom:1200},camera:{minX:-560,maxX:2000,minY:-400,maxY:1350,minZoom:.56,maxZoom:1.5},loupe:{radius:39,inset:48,warningDistance:180},ledges:[],oneOnOne:false};

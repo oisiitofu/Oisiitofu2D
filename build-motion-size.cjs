@@ -19,6 +19,7 @@ const exclude={piposaru:{0:[[0,0,104,124]],47:[[0,0,503,80],[250,0,253,345]]},ar
     // Alternate body atlases; prop/projectile images and selection portraits
     // are deliberately excluded even when they share the same frame array.
     const count=characterArt[id].frames.length;
+    if(id==='toro')for(let n=0;n<104;n++)used.add(n);
     if(count===49)for(let n=40;n<48;n++)used.add(n);
     if(id==='goemon')for(let n=44;n<84;n++)used.add(n);
     if(id==='elma')for(let n=40;n<56;n++)used.add(n);
