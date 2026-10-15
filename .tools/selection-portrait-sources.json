@@ -1305,5 +1305,14 @@
       337,
       351
     ]
+  },
+  "hornet": {
+    "source": "characters/hornet/assets/hornet-native.png",
+    "crop": [
+      2,
+      2207,
+      451,
+      262
+    ]
   }
 }
