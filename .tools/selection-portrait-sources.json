@@ -1269,5 +1269,14 @@
       343,
       334
     ]
+  },
+  "melia": {
+    "source": "characters/melia/assets/melia-native.png",
+    "crop": [
+      1228,
+      1696,
+      368,
+      368
+    ]
   }
 }
