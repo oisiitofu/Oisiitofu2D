@@ -1282,8 +1282,8 @@
   "fiora": {
     "source": "characters/fiora/assets/fiora-native.png",
     "crop": [
-      520,
-      2179,
+      2,
+      3645,
       612,
       354
     ]
@@ -1295,6 +1295,15 @@
       2075,
       434,
       262
+    ]
+  },
+  "yuri": {
+    "source": "characters/yuri/assets/yuri-native.png",
+    "crop": [
+      1303,
+      1893,
+      337,
+      351
     ]
   }
 }
