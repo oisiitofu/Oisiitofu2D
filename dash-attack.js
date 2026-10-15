@@ -7,7 +7,7 @@ const DashAttackTuning=(()=>{
   akira:'直立して腕を構えるレギオン突き',morphie:'直立した射撃姿勢',
   saki:'足を据えて構える銃撃姿勢'
  };
- const slides=new Set(['dragoon','isaac','twob','lightning','rean','rex','luke','will','emma','ryza','noah','midna','bomberman','sans','lloyd','shiren','pokoa','adol','valkyrie','haseo','terrarian','human','kitten','elma','goemon','bayleef','metabee','nier','miku','naruhodo','layton','zidane','yuffie','vincent','crash','aruru','tressa','laharl','shizuna','hanajd','kisuke','hinako']);
+ const slides=new Set(['dragoon','isaac','twob','lightning','rean','rex','luke','will','emma','ryza','noah','midna','bomberman','sans','lloyd','shiren','pokoa','adol','valkyrie','haseo','terrarian','human','kitten','elma','goemon','bayleef','metabee','nier','miku','naruhodo','layton','zidane','yuffie','vincent','crash','aruru','tressa','laharl','shizuna','hanajd','kisuke','hinako','cojicoji']);
  const steps=new Set(['chocobo','vivi','colette','naegi','pawapuro','headmaster','chef','arus','frog','deemo','kasane','aerith','rocbouquet']);
  const rushes=new Set(["ulgrim","chiikawa","monokuma","riki","roxas","okami","gundam","zero","rin","nia","estelle","noctis","clive","makoto","neku","narukami","kosmos","fayt","hunter","sakuna","horse","fei","jibanyan","dante","leon","tifa","kiryu","charlotta","ryofu","mametchi","piposaru","twinbee","maruku","dietrich","edf","edelgard","guile","sukapon","pneuma","knight","maelle","sumino","eve","odio","shadow","doshin","moogle","greymon","metalgreymon","wargreymon","omegamon","donchan","hanajs","hanajk","ray","alain"]);
  const profiles={

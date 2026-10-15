@@ -1251,5 +1251,14 @@
       424,
       424
     ]
+  },
+  "cojicoji": {
+    "source": "characters/cojicoji/assets/cojicoji-native.png",
+    "crop": [
+      2,
+      1581,
+      384,
+      404
+    ]
   }
 }
