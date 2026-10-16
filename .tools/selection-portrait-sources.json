@@ -1350,5 +1350,14 @@
       1254,
       1254
     ]
+  },
+  "klonoa": {
+    "source": "characters/klonoa/assets/klonoa-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
   }
 }
