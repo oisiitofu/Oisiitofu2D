@@ -1332,5 +1332,14 @@
       1254,
       1254
     ]
+  },
+  "malenia": {
+    "source": "characters/malenia/assets/malenia-selection.png",
+    "crop": [
+      400,
+      0,
+      800,
+      800
+    ]
   }
 }

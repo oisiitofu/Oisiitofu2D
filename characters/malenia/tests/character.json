@@ -1,0 +1,12 @@
+{
+  "id": "malenia",
+  "name": "マレニア",
+  "style": "ELDEN RING / BLADE OF MIQUELLA",
+  "description": "長い義手刀で戦い、実命中で1技最大1％回復。横必殺は回り込むブレードステップ、上必殺は三段の水鳥の舞。下必殺で12秒間腐敗の女神へ変身し、緋のエオニア・分身・腐敗の花園を使う。",
+  "pose": 102,
+  "number": "127",
+  "height": 110,
+  "cap": "Malenia",
+  "effects": 12,
+  "before": "c4621"
+}
