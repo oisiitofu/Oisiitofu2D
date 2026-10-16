@@ -1,0 +1,11 @@
+{
+  "id": "hayabusa",
+  "name": "リュウ・ハヤブサ",
+  "style": "NINJA GAIDEN / DRAGON NINJA",
+  "description": "龍剣で戦う忍者。通常必殺は手裏剣、長押しで最大3発。横必殺は斬り抜けて背後へ回る飛燕、押し直しで追撃。上必殺は壁沿いに走り、蹴り離して復帰する風の道。下必殺で10秒間の闇強化。",
+  "pose": 48,
+  "number": "128",
+  "height": 108,
+  "cap": "Hayabusa",
+  "effects": 12
+}

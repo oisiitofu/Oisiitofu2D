@@ -1341,5 +1341,14 @@
       800,
       800
     ]
+  },
+  "hayabusa": {
+    "source": "characters/hayabusa/assets/hayabusa-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
   }
 }
