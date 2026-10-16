@@ -1323,5 +1323,14 @@
       306,
       262
     ]
+  },
+  "c4621": {
+    "source": "characters/c4621/assets/c4621-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
   }
 }
