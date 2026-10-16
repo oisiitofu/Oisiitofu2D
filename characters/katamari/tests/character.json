@@ -1,0 +1,11 @@
+{
+  "id": "katamari",
+  "name": "塊魂",
+  "style": "KATAMARI DAMACY / 王子",
+  "description": "移動で塊が育ち、横必殺の転がりタックルでさらに成長。被弾すると縮む。通常必殺はモノの巻き込み、上必殺は溜めと途中の向き直しができる塊ジャンプ、下必殺はアイテム呼び込み。",
+  "pose": 48,
+  "number": "130",
+  "height": 80,
+  "cap": "Katamari",
+  "effects": 12
+}

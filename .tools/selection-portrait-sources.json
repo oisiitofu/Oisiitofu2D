@@ -1359,5 +1359,14 @@
       1254,
       1254
     ]
+  },
+  "katamari": {
+    "source": "characters/katamari/assets/katamari-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
   }
 }
