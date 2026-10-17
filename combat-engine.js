@@ -45,6 +45,7 @@ function attack(f,type){
  if(downSpecialInput){f.attack.downSpecialInput=true;f.fastFall=false;}
  ProjectileCadence.begin(f,f.attack);
  DashAttackTuning.prepare(f);
+ UpAttackTuning.prepare(f);
  const before=f.attack.totalFrames;CombatData.alignRecovery(f.attack);const delta=f.attack.totalFrames-before;f.faf+=delta;f.stateEnd+=delta;f.stateDuration=f.attack.totalFrames;
  return true;
 }
@@ -106,7 +107,7 @@ function attackBoxes(f,a=f.attack,t=f.timer){
  // Keep special-move coverage while moving its center with the resized body.
  // Ordinary weapon segments shrink with the sprite; grab reach has its own tuning.
  const scaled=boxes.map(b=>{const cx=(b.x1+b.x2)/2,cy=(b.y1+b.y2)/2,shape=a?.special?1:body,dx=(b.x2-b.x1)/2*shape*morph,dy=(b.y2-b.y1)/2*shape*morph,x=f.x+(cx-f.x)*body*morph,yy=y+(cy-y)*body*morph;return{...b,x1:x-dx,y1:yy-dy,x2:x+dx,y2:yy+dy,radius:b.radius*shape*morph};});
- return MeleeBalance.boxes(f,a,scaled);
+ return UpAttackTuning.boxes(f,a,MeleeBalance.boxes(f,a,scaled));
 }
 // Extra body coverage follows the swing but must not pull the weapon's visual
 // cutting edge down to the fighter's feet or draw duplicate energy trails.
