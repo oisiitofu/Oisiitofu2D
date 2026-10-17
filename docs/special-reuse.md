@@ -26,3 +26,5 @@
 - `node special-reuse-online-test.cjs`：独立2クライアント241Fでドローン再装填中の斬り/通常と腐敗形態の横B/分身の制限、座標・状態・ポーズ・タイマー・オブジェクトが一致。
 
 実行時の詳細結果はGit管理外の `.tools/special-reuse-*-results.json` と `.tools/special-reuse-report.json`。素材の再生成は不要。
+
+公開版v60（2026-10-17）へ反映後、`node special-reuse-public-test.cjs` の19項目合格。公開範囲とオンラインリンクは維持。
