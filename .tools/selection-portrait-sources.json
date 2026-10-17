@@ -1368,5 +1368,14 @@
       1254,
       1254
     ]
+  },
+  "kingbonby": {
+    "source": "characters/kingbonby/assets/kingbonby-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
   }
 }

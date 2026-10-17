@@ -1,0 +1,11 @@
+{
+  "id": "kingbonby",
+  "name": "キングボンビー",
+  "style": "桃太郎電鉄 / King Bonby",
+  "description": "紫の巨体と悪行ゲージ。デビルカード命中で3体召喚、跳ねるサイコロ10個、デストロイ号でカーブ復帰、カード全散布。悪行MAXの次の横必殺を強化。",
+  "pose": 48,
+  "number": "131",
+  "height": 112,
+  "cap": "Kingbonby",
+  "effects": 12
+}

@@ -65,3 +65,5 @@ const HayabusaRules=NewcomerCore.create('hayabusa',HayabusaMoves,{
  cpu(f,o,i,clear){if(f.attack?.hayabusaWind){i.x=Math.sign(720-f.x);return;}if(f.attack?.hayabusaSwallow){i.special=f.timer===23;return;}if(!f.attack&&f.grounded&&frame%83===f.id&&!f.hayaGleamCooldown){clear();i.x=0;i.y=1;i.special=true;}}
 });
 function hayabusaPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:hayabusaGleam(f)?47:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
+
+function hayabusaFlip(f,n){return n===44||n===6||n===7;}
