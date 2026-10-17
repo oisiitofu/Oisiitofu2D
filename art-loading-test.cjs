@@ -16,6 +16,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
    const checksum=c=>{const copy=document.createElement('canvas');copy.width=c.width;copy.height=c.height;const cg=copy.getContext('2d',{willReadFrequently:true});cg.drawImage(c,0,0);const d=cg.getImageData(0,0,c.width,c.height).data;let h=2166136261;for(let p=0;p<d.length;p+=4){h=Math.imul(h^d[p+3],16777619);if(d[p+3]===255)for(let k=0;k<3;k++)h=Math.imul(h^d[p+k],16777619);}return(h>>>0).toString(16);};
    let poses=0,effects=0,costumes=0;
    for(const {id}of Roster.definitions.filter(d=>!requested||requested.includes(d.id))){
+    await ArtLoader.load(id);
     const art=characterArt[id],expected=manifest.characters[id];
     for(const [kind,items]of [['frames',art.frames],['effects',art.effects]])items.forEach((c,n)=>{if(checksum(c)!==expected.checks[kind][n])mismatches.push(id+':'+kind+':'+n);if(kind==='frames')poses++;else effects++;});
     art.tints.forEach((v,color)=>v.forEach((c,n)=>{if(checksum(c)!==expected.checks.tints[color][n])mismatches.push(id+':color'+color+':'+n);costumes++;}));
@@ -26,7 +27,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
   assert.equal(checks.mismatches.length,0,'Alpha / opaque pixel mismatches: '+checks.mismatches.slice(0,20).join(', '));
   assert.equal(requests.filter(p=>/^\/characters\/[a-z0-9-]+\/assets\//.test(p)).length,0,'Original production sheets must not be requested');
   assert.deepEqual(requests.filter(p=>p.endsWith('.js')),['/game-bundle.js'],'Game scripts must use one ordered bundle');
-  await page.click('#swatches button:first-child');await page.click('[data-id="estelle"]');await page.click('#start');
+  await page.click('#swatches button:first-child');await page.click('[data-id="estelle"]');await page.click('#start');await page.waitForFunction(()=>state==='battle');
   assert.equal(await page.evaluate(()=>fighters[0].characterId),'estelle');
   const hashed=Object.values(JSON.parse(fs.readFileSync('assets/ready/manifest.json','utf8')).characters)[0].image;
   const response=await page.request.get('http://localhost:4173/'+hashed);

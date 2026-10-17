@@ -1,13 +1,11 @@
 'use strict';
 // Detailed, prepacked environment art. Presentation does not alter simulation.
 const StageVisuals=(()=>{
- const images=new Map();let clock=0,loading=null,ready=false;
- async function load(){
-  if(!loading)loading=Promise.all(Object.values(StageArtData).flatMap(d=>[d.background,d.main.image,d.small.image]).map(async url=>{
-   const img=new Image();img.src=url;await img.decode();images.set(url,img);
-  })).then(()=>{ready=true;});
-  return loading;
- }
+ const images=new Map(),loading=new Map();let clock=0;
+ function urls(id=activeStage){const d=StageArtData[StageCatalog.get(id).theme];return d?[d.background,d.main.image,d.small.image]:[];}
+ function prepared(id=activeStage){return urls(id).every(url=>images.has(url));}
+ async function load(id=activeStage){await Promise.all(urls(id).map(url=>{if(images.has(url))return;if(!loading.has(url))loading.set(url,(async()=>{const img=new Image();img.src=url;await img.decode();images.set(url,img);})().finally(()=>loading.delete(url)));return loading.get(url);}));}
+ function retain(id=activeStage){const keep=new Set(urls(id));for(const url of images.keys())if(!keep.has(url))images.delete(url);}
  function background(){
   const stage=StageCatalog.get(activeStage),art=StageArtData[stage.theme];if(!art)return false;
   const img=images.get(art.background);if(!img)return false;
@@ -44,6 +42,6 @@ const StageVisuals=(()=>{
   clock++;for(const p of platforms){if(!p.motion)continue;p.baseX??=p.x;p.baseY??=p.y;const oldX=p.x,oldY=p.y,t=clock*TAU/p.motion.period+(p.motion.phase||0),initial=Math.sin(p.motion.phase||0);p.x=p.baseX+(p.motion.x||0)*(Math.sin(t)-initial);p.y=p.baseY+(p.motion.y||0)*(Math.sin(t)-initial);p.dx=p.x-oldX;p.dy=p.y-oldY;}
   fighters.forEach((f,n)=>{const p=riders[n];if(p?.motion){f.x+=p.dx;f.y+=p.dy;}});
  }
- return{load,background,platform,geometry,reset,tick,get ready(){return ready},get clock(){return clock}};
+ return{load,prepared,retain,background,platform,geometry,reset,tick,get ready(){return prepared()},get clock(){return clock},get diagnostics(){return{images:images.size}}};
 })();
 

@@ -3,7 +3,15 @@
 const ArtLoader=(()=>{
  let manifest=null,initializing=null;
  const raw=new URLSearchParams(location.search).has('rawArt');
- const images=new Map(),decodedImages=new Map(),portraits=new Map(),hudImages=new Map();
+ const images=new Map(),decodedImages=new Map(),portraits=new Map(),hudImages=new Map(),pendingLoads=new Map(),resident=new Map();
+ // Physics needs native pose dimensions before a fighter's textures are resident.
+ // These records are deliberately not drawable and keep hitbox sizing stable.
+ function describe(id){const e=manifest?.characters[id];if(!e)return;const frames=e.frames.map(([, ,width,height])=>({width,height}));characterArt[id]={pending:true,frames,tints:Array(5).fill(frames),effects:e.effects.map(([, ,width,height])=>({width,height}))};}
+ function family(id){return ['agumon','greymon','metalgreymon','wargreymon','omegamon'].includes(id)?['agumon','greymon','metalgreymon','wargreymon','omegamon']:['hanajs','hanajk','hanajd'].includes(id)?['hanajs','hanajk','hanajd']:[id];}
+ function requests(players){const wanted=new Map();for(const p of players)for(const root of[p.character,...(Array.isArray(p.team)?p.team:[])])for(const id of family(root)){if(!manifest?.characters[id])continue;if(!wanted.has(id))wanted.set(id,new Set());wanted.get(id).add(Number(p.color)||0);}return wanted;}
+ function prepared(players){if(!manifest)return true;return [...requests(players)].every(([id,colors])=>resident.has(id)&&[...colors].every(c=>resident.get(id).warmed.has(c)));}
+ async function prepare(players){if(!manifest)return;for(const[id,colors]of requests(players)){await load(id);const r=resident.get(id),a=characterArt[id];for(const color of colors){if(r.warmed.has(color))continue;for(let n=0;n<a.frames.length;n++){void a.tints[color][n];if(n%8===7)await new Promise(resolve=>setTimeout(resolve,0));}for(const im of a.effects)void im;for(const im of r.extra)void im;const e=manifest.characters[id],portrait=e.selectionPortraits?.[color]||e.portraits?.[color];if(portrait)hudImages.set(portrait,await image(portrait));r.warmed.add(color);}}}
+ function retain(players){if(!manifest)return;const keep=requests(players);for(const[id,r]of resident){if(keep.has(id))continue;for(const c of r.surfaces){c.width=c.height=1;}for(const url of r.urls){images.delete(url);decodedImages.delete(url);}resident.delete(id);describe(id);if(id==='dragoon'){spriteFrames=[];tints=[];}if(id==='isaac')IsaacVFX.loadFrames([]);}}
  async function image(url){
   if(!images.has(url))images.set(url,(async()=>{const img=new Image();img.src=url;await img.decode();decodedImages.set(url,img);return img;})().catch(e=>{images.delete(url);throw e;}));
   return images.get(url);
@@ -34,23 +42,32 @@ const ArtLoader=(()=>{
   if(!initializing)initializing=(async()=>{
    try{const res=await fetch('assets/ready/manifest.json');if(!res.ok)return false;manifest=await res.json();if(manifest.version!==1){manifest=null;return false;}}
    catch{manifest=null;return false;}
+   for(const id of Object.keys(manifest.characters))describe(id);
    Roster.artReady();
    // Give small selection portraits priority over full combat textures.
    try{await Promise.all(Roster.definitions.map(d=>thumbnail(d.id)?.src||portrait(d.id,0,d.pose,true)).filter(Boolean).map(url=>image(url)));}
-   catch{manifest=null;return false;}
+   catch{/* A failed thumbnail must not trigger parsing every full source sheet. */}
    return true;
   })();
   return initializing;
  }
- async function load(id){
+ function load(id){
+  if(resident.has(id))return Promise.resolve(true);
+  if(pendingLoads.has(id))return pendingLoads.get(id);
+  const promise=loadCharacter(id).finally(()=>pendingLoads.delete(id));pendingLoads.set(id,promise);return promise;
+ }
+ async function loadCharacter(id){
   const entry=manifest?.characters[id];if(!entry)return false;
   const [sheet,paletteSheet]=await Promise.all([image(entry.image),entry.palette?image(entry.palette):null]);
-  const frames=lazy(entry.frames.length,n=>cropped(sheet,entry.frames[n]));
+  const surfaces=new Set(),track=c=>{surfaces.add(c);return c;};
+  const frames=lazy(entry.frames.length,n=>track(cropped(sheet,entry.frames[n])));
   const palettes=lazy(frames.length,n=>{if(!paletteSheet)return null;const [x,y,w,h]=entry.frames[n],c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d',{willReadFrequently:true});g.drawImage(paletteSheet,x,y,w,h,0,0,w,h);return g.getImageData(0,0,w,h).data;});
-  const variants=Array.from({length:5},(_,ci)=>ci?lazy(frames.length,n=>['goemon','metabee','nier','miku','naruhodo','jibanyan','layton'].includes(id)&&n>=40&&n<43?frames[n]:['headmaster','sakuna','haseo','terrarian','horse','chef','akira','morphie','human','kitten','elma'].includes(id)&&n>=(id==='elma'?56:40)&&!(id==='kitten'&&n===43||id==='elma'&&n===59)?frames[n]:tint(frames[n],id,ci,palettes[n])):frames);
-  characterArt[id]={frames,tints:variants,effects:lazy(entry.effects.length,n=>cropped(sheet,entry.effects[n]))};
+  const variants=Array.from({length:5},(_,ci)=>ci?lazy(frames.length,n=>['goemon','metabee','nier','miku','naruhodo','jibanyan','layton'].includes(id)&&n>=40&&n<43?frames[n]:['headmaster','sakuna','haseo','terrarian','horse','chef','akira','morphie','human','kitten','elma'].includes(id)&&n>=(id==='elma'?56:40)&&!(id==='kitten'&&n===43||id==='elma'&&n===59)?frames[n]:track(tint(frames[n],id,ci,palettes[n]))):frames);
+  characterArt[id]={frames,tints:variants,effects:lazy(entry.effects.length,n=>track(cropped(sheet,entry.effects[n])))};
+  const extra=lazy(entry.isaacVfx?.length||0,n=>track(cropped(sheet,entry.isaacVfx[n])));
+  resident.set(id,{urls:[entry.image,entry.palette].filter(Boolean),surfaces,extra,warmed:new Set()});
   if(id==='dragoon'){spriteFrames=frames;tints=variants;}
-  if(id==='isaac')IsaacVFX.loadFrames(lazy(entry.isaacVfx.length,n=>cropped(sheet,entry.isaacVfx[n])));
+  if(id==='isaac')IsaacVFX.loadFrames(extra);
   return true;
  }
  // Face/upper-body framing is authored per fighter; weapons never decide zoom.
@@ -78,7 +95,7 @@ const ArtLoader=(()=>{
  }
  function portrait(id,color,pose,selection=false){
   const entry=manifest?.characters[id],baked=(selection?entry?.selectionPortraits||entry?.portraits:entry?.portraits)?.[color];if(baked&&(pose===0||pose===(entry.portraitPose??0))){if(selection)hudPortrait(id,color);return baked;}
-  if(!loaded)return null;
+  if(!loaded||characterArt[id]?.pending)return null;
   const key=id+':'+color+':'+pose+':'+selection;
   if(!portraits.has(key)){const img=spriteFor({characterId:id,color},pose);if(img)portraits.set(key,(selection?portraitCanvas(img,id):img).toDataURL());}
   return portraits.get(key);
@@ -90,5 +107,5 @@ const ArtLoader=(()=>{
  }
  async function platform(){return manifest?.platform?image(manifest.platform):null;}
  function thumbnail(id,color=0){const levels=manifest?.characters[id]?.selectionThumbnails;if(!levels?.length)return null;return{src:levels[0].urls[color],srcset:levels.map(level=>level.urls[color]+' '+level.width+'w').join(', '),aspect:levels[0].width/levels[0].height};}
- return{init,load,platform,portrait,hudPortrait,thumbnail,portraitCanvas,selectionCrop,tint,get enabled(){return!!manifest},get raw(){return raw}};
+ return{init,load,prepare,prepared,retain,platform,portrait,hudPortrait,thumbnail,portraitCanvas,selectionCrop,tint,get enabled(){return!!manifest},get raw(){return raw},get diagnostics(){return{resident:[...resident.keys()],warmed:[...resident].map(([id,r])=>({id,colors:[...r.warmed]})),surfaces:[...resident.values()].reduce((n,r)=>n+r.surfaces.size,0)};}};
 })();

@@ -35,6 +35,7 @@ async function save(name,data,webp=false){let bytes=Buffer.from(data.split(',')[
   if(manifest.version!==1)throw Error('Cannot incrementally bake an incompatible manifest');
   for(const id of requested||ids){
    const entry=await page.evaluate(async ({id,portraitsOnly,selectionSource})=>{
+    if(ArtLoader.enabled&&!await ArtLoader.load(id)){if(id==='dragoon')await loadRaw();else await loadIsaacArt(id);}
     const art=characterArt[id],items=[...art.frames,...(art.effects||[])];
     const pose=Roster.definitions.find(d=>d.id===id).pose;
     const portraits=portraitsOnly?null:art.tints.map(v=>v[pose].toDataURL());

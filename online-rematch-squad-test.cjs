@@ -3,8 +3,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
 (async()=>{const browser=await chromium.launch({channel:'msedge',headless:true,args:['--disable-background-timer-throttling','--disable-renderer-backgrounding']});try{
  const pages=[],errors=[],records=[];let checks=0;const eq=(a,b)=>{checks++;assert.deepEqual(a,b);};
  for(let n=0;n<2;n++){
-  const context=await browser.newContext(),p=await context.newPage();pages.push(p);p.on('pageerror',e=>errors.push(e.stack));
-  await p.addInitScript(()=>{window.connections=[];const Base=WebSocket;window.WebSocket=class extends Base{constructor(...args){super(...args);connections.push(this);}};});
+  const context=await browser.newContext({viewport:{width:1440,height:1000}}),p=await context.newPage();pages.push(p);p.on('pageerror',e=>errors.push(e.stack));
+  await p.addInitScript(()=>{navigator.getGamepads=()=>[];window.connections=[];const Base=WebSocket;window.WebSocket=class extends Base{constructor(...args){super(...args);connections.push(this);}};});
   await p.goto(process.env.TEST_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});await p.click('#enter-online');
   await p.evaluate(()=>{
    window.rounds={};addEventListener('online-frame',event=>{
