@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-17",
+  "gameCommit": "42608d3",
+  "version": 67,
+  "source": "f658c9c5bdff7f6becc6efc9a273302a3fc2bea9",
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_2c8f69a5aed88191b21e7881ffeaa5f7",
+  "deployment": "appgdep_6ad365cb3a3c81918b23087a0d56ed65",
+  "environmentRevision": 132,
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "onlineUrl": "https://shadow-finds-costs-influence.trycloudflare.com",
+  "upload": {
+    "uploaded": 1,
+    "bytes": 2488618,
+    "failed": []
+  },
+  "checks": {
+    "anytime": 369,
+    "existingBattlemage": 374,
+    "cpuMatches": 2,
+    "onlineIdenticalFrames": 111,
+    "externalOnlineHttp": 200,
+    "externalRoomCreate": true,
+    "public": 10
+  }
+}
