@@ -9,10 +9,10 @@ const edges=['shareStock','jump','jab','heavy','smash','special','grab','forceTi
 function attachOnline(server){
  const wss=new WebSocketServer({server,path:'/online',maxPayload:4096}),rooms=new Map();
  const send=(ws,data)=>{if(ws?.readyState===WebSocket.OPEN&&ws.bufferedAmount<256000)ws.send(JSON.stringify(data));},all=(room,data)=>room.players.forEach(p=>p&&send(p.ws,data));
- const status=room=>all(room,{type:'room',code:room.code,playing:room.playing,preparing:!!room.preparing,matchId:room.matchId,playerCount:room.players.length,format:room.format,stocks:room.stocks,timeLimit:room.timeLimit,squadSize:room.squadSize,players:room.players.map(p=>p?{color:p.color,character:p.character,ready:p.ready,battleTeam:p.battleTeam,stage:p.settings?.stage??null}:null)});
+ const status=room=>all(room,{type:'room',code:room.code,playing:room.playing,preparing:!!room.preparing,matchId:room.matchId,playerCount:room.players.length,format:room.format,stocks:room.stocks,timeLimit:room.timeLimit,squadSize:room.squadSize,players:room.players.map(p=>p?{color:p.color,character:p.character,ready:p.ready,team:p.team?.slice(0,room.squadSize),battleTeam:p.battleTeam,stage:p.settings?.stage??null}:null)});
  const resetLobby=room=>{room.playing=room.preparing=false;room.pendingConfig=null;room.touched=Date.now();room.players.forEach(p=>{if(p){p.ready=p.artReady=false;p.input=neutral();p.pending={};}});};
  function hostRules(room,m){
-  const stocks=Number.isInteger(m.stocks)&&m.stocks>=1&&m.stocks<=10?m.stocks:3,timeLimit=MatchRules.time(m.timeLimit),squadSize=room.players.length===2&&[3,5].includes(+m.squadSize)?+m.squadSize:1;
+  const stocks=Number.isInteger(m.stocks)&&m.stocks>=1&&m.stocks<=10?m.stocks:3,timeLimit=MatchRules.time(m.timeLimit),squadSize=[3,5].includes(+m.squadSize)?+m.squadSize:1;
   if(room.stocks!==stocks||room.timeLimit!==timeLimit||room.squadSize!==squadSize){Object.assign(room,{stocks,timeLimit,squadSize});room.players.forEach(p=>{if(p)p.ready=false;});}
  }
  function leave(ws){let room=ws.room;if(!room)return;ws.room=null;room.players[ws.slot]=null;resetLobby(room);all(room,{type:'ended',message:'相手がルームを退出しました。'});if(room.players.every(p=>!p))rooms.delete(room.code);else status(room);}
@@ -26,7 +26,7 @@ function attachOnline(server){
    if(m.type==='ping'){send(ws,{type:'pong',time:m.time});return;}if(m.type==='leave'){leave(ws);return;}
    if(m.type==='create'||m.type==='join'){
     if(ws.room)return;let room,slot=0;
-    if(m.type==='create'){if(rooms.size>=40){send(ws,{type:'error',message:'ルームが満員です。'});return;}let code;do{code=crypto.randomBytes(4).toString('hex').slice(0,6).toUpperCase();}while(rooms.has(code));room={code,stocks:Number.isInteger(m.stocks)&&m.stocks>=1&&m.stocks<=10?m.stocks:3,players:Array.from({length:[3,4].includes(+m.playerCount)?+m.playerCount:2},()=>null),format:m.format==='teams'&&+m.playerCount>2?'teams':'free',playing:false,frame:0,matchId:0,timeLimit:MatchRules.time(m.timeLimit),squadSize:+m.playerCount>2?1:[3,5].includes(+m.squadSize)?+m.squadSize:1,created:Date.now(),touched:Date.now()};rooms.set(code,room);}
+    if(m.type==='create'){if(rooms.size>=40){send(ws,{type:'error',message:'ルームが満員です。'});return;}let code;do{code=crypto.randomBytes(4).toString('hex').slice(0,6).toUpperCase();}while(rooms.has(code));room={code,stocks:Number.isInteger(m.stocks)&&m.stocks>=1&&m.stocks<=10?m.stocks:3,players:Array.from({length:[3,4].includes(+m.playerCount)?+m.playerCount:2},()=>null),format:m.format==='teams'&&+m.playerCount>2?'teams':'free',playing:false,frame:0,matchId:0,timeLimit:MatchRules.time(m.timeLimit),squadSize:[3,5].includes(+m.squadSize)?+m.squadSize:1,created:Date.now(),touched:Date.now()};rooms.set(code,room);}
     else{room=rooms.get(String(m.code||'').toUpperCase());if(!room||room.playing||room.preparing||room.players.every(Boolean)){send(ws,{type:'error',message:'ルームが見つからないか、対戦中・満員です。'});return;}slot=room.players.findIndex(p=>!p);}
     ws.room=room;ws.slot=slot;room.players[slot]={ws,color:slot?2:0,character:'dragoon',battleTeam:slot%2,ready:false,input:neutral(),pending:{},lastInput:Date.now(),finished:false};send(ws,{type:'joined',slot,code:room.code});status(room);return;
    }

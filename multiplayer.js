@@ -3,7 +3,7 @@
 const BattlePlayers=(()=>{
  const seats=[{character:'random',color:0,control:'primary',team:0},{character:'random',color:2,control:'cpu',team:1},{character:'random',color:1,control:'cpu',team:0},{character:'random',color:4,control:'cpu',team:1}];
  const seatColors=['#68baff','#ff718d','#ffd269','#8ce6ad'];let selection=0,teams=false,initialized=false,initialStocks=3;
- const count=()=>SquadBattle.size()>1?2:['battle','online'].includes(document.querySelector('#battle-mode')?.value)?Number(document.querySelector('#player-count')?.value||2):2;
+ const count=()=>SquadBattle.size()>1&&document.querySelector('#battle-mode').value!=='online'?2:['battle','online'].includes(document.querySelector('#battle-mode')?.value)?Number(document.querySelector('#player-count')?.value||2):2;
  const sameTeam=(a,b)=>teams&&a.team!==undefined&&a.team===b.team;
  const out=f=>!training&&f.stocks<=0;
  const targets=f=>fighters.filter(o=>o!==f&&!out(o)&&!o.respawn);
@@ -12,9 +12,9 @@ const BattlePlayers=(()=>{
  function color(f){return teams?(f.team===0?'#ff718d':'#68baff'):seatColors[f.id];}
  function refresh(){
   if(!initialized)return;
-  const relay=SquadBattle.size()>1,joined=document.querySelector('#battle-mode').value==='online'&&!!Net.code;document.querySelector('#stock-count').disabled=relay||joined&&Net.slot!==0;document.querySelector('#player-count').disabled=relay||joined;document.querySelector('#battle-format').disabled=relay||joined;
-  document.querySelector('#time-limit').disabled=joined&&Net.slot!==0;document.querySelector('#time-limit-setting').classList.toggle('hidden',document.querySelector('#battle-mode').value==='training');document.querySelector('#squad-size').disabled=joined&&(Net.slot!==0||Number(document.querySelector('#player-count').value)>2);
-  const n=relay?2:count(),online=document.querySelector('#battle-mode').value==='online',allowed=['battle','online'].includes(document.querySelector('#battle-mode').value);
+  const relay=SquadBattle.size()>1,onlineMode=document.querySelector('#battle-mode').value==='online',joined=onlineMode&&!!Net.code;document.querySelector('#stock-count').disabled=relay||joined&&Net.slot!==0;document.querySelector('#player-count').disabled=relay&&!onlineMode||joined;document.querySelector('#battle-format').disabled=relay&&!onlineMode||joined;
+  document.querySelector('#time-limit').disabled=joined&&Net.slot!==0;document.querySelector('#time-limit-setting').classList.toggle('hidden',document.querySelector('#battle-mode').value==='training');document.querySelector('#squad-size').disabled=joined&&Net.slot!==0;document.querySelector('#online-lineup-size').disabled=document.querySelector('#squad-size').disabled;
+  const n=relay&&!onlineMode?2:count(),online=document.querySelector('#battle-mode').value==='online',allowed=['battle','online'].includes(document.querySelector('#battle-mode').value);
   document.querySelector('#multiplayer-settings').classList.toggle('hidden',!allowed);
   document.querySelector('#local-seat-settings').classList.toggle('hidden',online||!allowed);
   document.querySelector('#online-team-setting').classList.toggle('hidden',!online||document.querySelector('#battle-format').value!=='teams');
