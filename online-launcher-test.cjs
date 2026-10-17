@@ -1,0 +1,44 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {TunnelSupervisor,tunnelUrl,quickProcess}=require('./online-launcher.cjs');
+(async()=>{
+ let checks=0;const check=(actual,expected)=>{assert.deepEqual(actual,expected);checks++;};
+ check(tunnelUrl('https://test-one.trycloudflare.com'),'https://test-one.trycloudflare.com');
+ for(const url of ['http://a.trycloudflare.com','https://a.trycloudflare.com.evil.test','https://a.trycloudflare.com/path','https://user@a.trycloudflare.com','https://a.trycloudflare.com:123','https://a.trycloudflare.com/?room=123456','https://example.com'])check(tunnelUrl(url),null);
+ check(!!quickProcess({ExecutablePath:'C:/app/cloudflared.exe',CommandLine:'cloudflared tunnel --url http://localhost:4173 --no-autoupdate'},'C:/app/cloudflared.exe',4173),true);
+ check(!!quickProcess({ExecutablePath:'C:/else/cloudflared.exe',CommandLine:'tunnel --url http://localhost:4173'},'C:/app/cloudflared.exe',4173),false);
+ check(!!quickProcess({ExecutablePath:'C:/app/cloudflared.exe',CommandLine:'tunnel --url http://localhost:41730'},'C:/app/cloudflared.exe',4173),false);
+ let healthy=true,internet=true,running=true,acquired=0,published=0,stopped=0,status;
+ const supervisor=new TunnelSupervisor({ensureServer:async()=>{},alive:()=>running,healthy:async()=>healthy,internet:async()=>internet,acquire:async()=>({pid:++acquired,url:'https://test-'+acquired+'.trycloudflare.com'}),publish:async()=>{published++;},stopTunnel:async()=>{stopped++;},status:s=>status=s});
+ await supervisor.tick(1000);check([acquired,published,status.phase],[1,1,'online']);
+ await supervisor.tick(16000);check([acquired,published],[1,1]);
+ await supervisor.tick(46000);check(published,2);
+ healthy=false;internet=false;for(let n=0;n<4;n++)await supervisor.tick(61000+n*15000);check(stopped,0);
+ internet=true;await supervisor.tick(121000);check([stopped,supervisor.tunnel],[1,null]);
+ healthy=true;await supervisor.tick(136000);check([acquired,published,status.phase],[2,3,'online']);
+ running=false;await supervisor.tick(151000);check([acquired,published],[3,4]);running=true;
+ const {onlineRoute}=await import('./public-worker.mjs');
+ const objects=new Map(),env={ONLINE_ROUTE_TOKEN:'test-private-key',BUCKET:{get:async k=>objects.has(k)?{json:async()=>JSON.parse(objects.get(k))}:null,put:async(k,v)=>objects.set(k,v),delete:async k=>objects.delete(k)}};
+ const originalFetch=global.fetch;let healthOk=true;global.fetch=async()=>Response.json({status:healthOk?'ok':'failed'},{status:healthOk?200:503});
+ const route=(path='/api/online-route',method='GET',body,auth=true)=>onlineRoute(new Request('https://site.test'+path,{method,headers:auth?{Authorization:'Bearer test-private-key'}:{},...(body===undefined?{}:{body:JSON.stringify(body)})}),env);
+ try{
+  check(await onlineRoute(new Request('https://site.test/'),env),null);
+  check(await(await route()).json(),{online:false});check((await route('/online')).status,503);check(await(await route('/online','HEAD')).text(),'');
+  const data={url:'https://test-one.trycloudflare.com',instance:'test-instance-123'};
+  check((await route(undefined,'PUT',data,false)).status,401);
+  check((await route(undefined,'POST',data)).status,405);
+  check((await route(undefined,'PUT',{...data,url:'https://example.com'})).status,400);
+  check((await route(undefined,'PUT',{...data,instance:'bad'})).status,400);
+  check((await route(undefined,'PUT',{...data,unused:'x'.repeat(2050)})).status,400);
+  healthOk=false;check((await route(undefined,'PUT',data)).status,502);healthOk=true;
+  check((await route(undefined,'PUT',data)).status,204);
+  const online=await route();check((await online.json()).online,true);check(online.headers.get('Cache-Control'),'no-store, max-age=0');
+  const entry=await route('/online?room=abcdef');check(entry.status,302);check(entry.headers.get('Location'),'https://test-one.trycloudflare.com/?mode=online&room=ABCDEF');
+  check((await route('/online?room=bad')).status,400);
+  check((await route('/online/')).headers.get('Location'),'https://test-one.trycloudflare.com/?mode=online');
+  await route(undefined,'DELETE',{instance:'other-instance-456'});check((await(await route()).json()).online,true);
+  const key=[...objects.keys()][0],record=JSON.parse(objects.get(key));record.expiresAt=Date.now()-1;objects.set(key,JSON.stringify(record));check((await(await route()).json()).online,false);check((await route('/online')).status,503);
+  await route(undefined,'PUT',data);await route(undefined,'DELETE',{instance:data.instance});check((await(await route()).json()).online,false);
+ }finally{global.fetch=originalFetch;}
+ console.log('Online entry / supervisor: '+checks+' checks passed.');
+})().catch(error=>{console.error(error);process.exitCode=1;});

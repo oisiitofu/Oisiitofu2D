@@ -14,13 +14,30 @@
 
 オンラインでは各端末で同じ操作キーを使用します。上は技の方向、ジャンプはSpace・V。対戦中の一時停止はありません。切断は結果画面で通知します。
 
-## このPCからの試用公開
+## このPCから固定の入口で公開
 
-現在のURLは `.tools/public-url.txt` に保存されています。PowerShellから `./start-online.ps1` で起動・URL表示、`./stop-online.ps1` で公開を停止できます。終了後に再起動した際はURLが変わる場合があります。ゲームサーバーとPCの電源を入れておく必要があります。
+共有するURLは **https://oisiitofu-bros.oisiitofu0141.chatgpt.site/online** です。公開版メニューのオンライン対戦も、この入口を使います。
 
-CloudflareのQuick Tunnelを使用する試用公開です。固定URLや常時稼働を保証する本番ホスティングではありません。[Cloudflare公式説明](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/)
+- 起動：プロジェクト直下の **start-online.bat** をダブルクリック。ローカルサーバーが停止していれば起動し、Cloudflare Quick Tunnelをバックグラウンドで維持します。何度起動しても同じ監視プロセスを再利用します。
+- 停止：**stop-online.bat**。トンネルと監視を止めます。ローカルゲームサーバーは残します。
+- 状態：PowerShellで `node online-launcher.cjs status`。ログは `.tools/online-launcher.log`、新規トンネルは `.tools/online-tunnel.log`。
+- PCの電源と通信が必要です。スリープ・電源断の間は対戦できません。Windows再起動後はbatを起動してください。
 
-`cloudflared` は `.tools/cloudflared.exe` に置きます。別環境への移行時は[公式配布](https://github.com/cloudflare/cloudflared/releases)からWindows amd64版を取得します。
+固定するのは入口です。入口は現在動いているQuick TunnelへHTTPリダイレクトし、移動後のアドレス欄はその時点のtrycloudflare.comになります。対戦のWebSocketは従来と同じCloudflare Tunnel→このPCのサーバーへ直接接続し、Sitesをゲーム通信の中継にしません。入力の送信頻度・同期方式・キャラ素材は変更しません。通信速度そのものを保証するものではありません。
+
+監視は45秒ごとに入口の接続先を更新します。更新が3分途切れた場合、入口は起動待ち画面になり、10秒ごとに起動を確認します。トンネルに繰り返し接続できず、入口側の通信が回復している場合はトンネルを再作成して登録し直します。通信断からの復旧時、進行中の試合の接続は維持できないため、部屋への再参加が必要です。ローカルサーバーの再起動では部屋も終了します。
+
+今の実URLは `.tools/public-url.txt` に記録されます。固定入口に `?room=6桁のコード` を付けても参加画面へ進めます（部屋が存続している間のみ）。
+
+Quick Tunnel自体のホスト名は再作成時に変わります。実ホスト名まで固定する場合はCloudflareアカウントと管理するドメインを使ったNamed Tunnelが必要です。[Cloudflare公式説明](https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/)
+
+### 別のPCへ移す場合
+
+Node.js 18以降、`npm ci`、`.tools/cloudflared.exe` が必要です。cloudflaredは[公式配布](https://github.com/cloudflare/cloudflared/releases)のWindows amd64版を使います。
+
+入口を更新する専用キーは、このPCのGit管理外 `.tools/online-launcher-private.json` に設定済みです。形式は `{"token":"専用キー"}`。公開Siteの秘密環境変数 `ONLINE_ROUTE_TOKEN` と一致させます。キーをGit・公開ソース・ログへ入れないでください。移行時は所有者が安全に移すかキーを再発行し、同じ入口を同時に複数PCから更新しないでください。Sitesのソースリポジトリ用の一時認証情報とは別のキーです。
+
+公開Workerはキー認証、接続先のHTTPS/trycloudflare.com制限、実サーバーのhealth確認、更新期限付き登録を行います。停止時は自分の登録だけを解除します。
 
 ## サーバー起動と常設運用
 
