@@ -174,6 +174,12 @@ const PlayerController=(()=>{
   if(f.mode==='ShieldBreak'){enter(f,'Stunned',180);return;}
   if(f.tumbling){f.attack=null;if(!tech(f,i,'floor')){f.hitstun=0;f.tumbling=false;enter(f,'Knockdown');f.vx*=.4;}return;}
   if(f.hitstun>0){f.vx*=.6;return;}
+  // Neutral-special charging crosses the air/ground boundary without entering
+  // a fresh action: keep its charge, timer, events and projectile commitment.
+  // Include release windup so a release on the landing frame still fires.
+  if(a?.type==='dragon'&&(a.chargeButton==='special'&&a.chargeFrame&&f.timer<a.startupFrames||a.bmShot&&!a.decided)){
+   f.mode='GroundSpecial';f.state=PlayerStates.visual.GroundSpecial;f.gravityOff=false;f.specialLandingLag=f.landingLag=f.lastLandingLag=0;return;
+  }
   if(a?.surf&&a.mounted&&f.timer<=65){a.gravityMultiplier=1;f.vy=0;f.grounded=true;return;}
   if(a?.horse&&a.mounted&&f.timer<=a.rideEnd){a.gravityMultiplier=1;f.vy=0;f.grounded=true;return;}
   if(a?.landingMove&&f.timer>=a.startupFrames){f.gravityOff=false;f.specialLandingLag=0;attack(f,a.landingMove);CombatVFX.landingBurst(f.x,f.y,f.color);shake=12;flash=.14;sound('land-heavy',1,f);return;}
