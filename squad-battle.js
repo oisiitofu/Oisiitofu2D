@@ -28,10 +28,25 @@ const SquadBattle=(()=>{
   const fresh=makeFighter(id,color,squad[index]);for(const key of Object.keys(f))delete f[key];Object.assign(f,fresh,{squad,squadIndex:index,stocks,stats,team,control});return true;
  }
  function hud(f,x,y){if(!f.squad)return;for(let n=0;n<f.squad.length;n++){const px=x+50+n*36,img=ArtLoader.hudPortrait(f.squad[n],f.color);ctx.save();ctx.globalAlpha=n<f.squadIndex?.22:1;ctx.fillStyle=n===f.squadIndex?'#e8f4ff':'#37445b';ctx.fillRect(px-1,y-28,34,24);if(img)ctx.drawImage(img,px,y-27,32,22);ctx.restore();}}
+ // Show every locked lineup during the existing countdown, without extra delay.
+ function drawReveal(){
+  if(!Net.active||countdown<=0||!fighters[0]?.squad)return false;
+  const height=100+fighters.length*76,top=(H-height)/2;
+  ctx.save();path([[130,top],[1310,top],[1310,top+height],[130,top+height]],'#0b1424f2','#76bded88',1);
+  text('出場順決定',720,top+32,24,'#e8f6ff');text(Math.ceil(countdown/60)+' / GET READY',720,top+56,11,'#91cfff');
+  fighters.forEach((f,i)=>{
+   const y=top+72+i*76,step=1040/f.squad.length,col=BattlePlayers.color(f);
+   text(playerLabel(f.id),180,y+37,12,col);
+   f.squad.forEach((id,n)=>{const x=250+n*step,img=ArtLoader.hudPortrait(id,f.color),name=Roster.definitions.find(d=>d.id===id)?.name||id;
+    ctx.fillStyle='#1a2b43';ctx.fillRect(x,y,step-10,68);if(img)ctx.drawImage(img,x+(step-10)/2-26,y+5,52,34);
+    ctx.fillStyle='#e3edf8';ctx.font='900 11px "Noto Sans JP",sans-serif';ctx.textAlign='center';ctx.fillText((n+1)+'. '+name,x+(step-10)/2,y+56,step-22);
+   });
+  });ctx.restore();return true;
+ }
  function init(){
   const select=document.querySelector('#squad-size');select.onchange=()=>{refresh();BattlePlayers.refresh();Roster.summary();Roster.fit();};
   document.querySelector('#online-lineup-size').onchange=event=>{select.value=event.target.value;select.dispatchEvent(new Event('change',{bubbles:true}));};
   document.querySelector('#enter-squad').onclick=()=>Roster.open('squad3');refresh();
  }
- return{init,size,available,valid,choose,refresh,config,start,onKO,respawn,hud,teams};
+ return{init,size,available,valid,choose,refresh,config,start,onKO,respawn,hud,drawReveal,teams};
 })();
