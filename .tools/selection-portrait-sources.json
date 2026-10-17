@@ -1377,5 +1377,14 @@
       1254,
       1254
     ]
+  },
+  "alucard": {
+    "source": "characters/alucard/assets/alucard-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
   }
 }
