@@ -199,6 +199,7 @@ const InputFrames=(()=>{
   if(i.shieldUpSmash&&!i.jumpAerial){i.smash=true;i.jab=i.heavy=false;}
   if(f.grounded&&i.guard&&buttons.attack.press&&!i.jumpAerial&&!i.shieldUpSmash&&(['ShieldStart','ShieldHold'].includes(guardMode)||PlayerStates.defs[guardMode]?.shield)){i.grab=true;i.jab=i.heavy=false;}
   i.mash=Object.values(buttons).filter(b=>b.press).length+(i.flickX||i.flickY?1:0);
+  if(f.characterId==='battlemage')battlemageChaserInput(f,i);
   f.input=i;f.inputHistory??=[];f.inputHistory.push({frame,x:i.x,y:i.y,rx:i.rx||0,ry:i.ry||0,buttons:Object.entries(buttons).filter(([,v])=>v.value).map(([k])=>k),bufferAge:f.lastBufferAge??0});if(f.inputHistory.length>120)f.inputHistory.shift();return i;
  }
  function queue(f,i){let group=f.ledge?'ledge':f.grounded?'ground':'air',key=i.jumpAerial?'jump':priority[group].find(k=>k!=='guard'&&i[k]);if(!f.grounded&&i.guardPressed&&!f.airDodged&&!i.jumpAerial)key='guard';else if(i.dodgePressed&&!key)key='dodge';if(key)f.buffer={key,x:['guard','dodge'].includes(key)?i.x:i.stickAttack?.x??i.x,y:['guard','dodge'].includes(key)?i.y:i.stickAttack?.y??i.y,age:0,smashFlick:i.smashFlick,forceTilt:i.forceTilt,jumpAerial:i.jumpAerial,shortHopAttack:i.shortHopAttack,twoJumps:i.twoJumps,shieldUpSmash:i.shieldUpSmash};else if(f.buffer&&++f.buffer.age>9)f.buffer=null;

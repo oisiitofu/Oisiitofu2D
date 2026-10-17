@@ -12,6 +12,17 @@ const BattlemageMoves=(()=>{
 })();
 function battlemageTeana(f){return(f.bmTeanaTime||0)>0;}
 function battlemageGauge(f){return clamp(f.bmGauge||0,0,100);}
+// Sidecar firing runs at input sampling, before buffering and hitlag returns.
+// It never enters an action or touches attack time, hitstun or launch momentum.
+function battlemageChaserInput(f,i){
+ if(!i.special||f.respawn||['Dead','Respawn'].includes(f.mode)||f.attack?.bmShot)return;
+ const busy=f.attack||f.hitlag>0||hitstop>0||f.hitstun>0||f.pendingLaunch||f.helpless||!PlayerStates.defs[f.frozen?.mode??f.mode]?.attack;
+ if(!busy)return; // Free neutral special keeps its tap/hold charge behavior.
+ i.special=false;if(f.buffer?.key==='special')f.buffer=null;
+ if(f.zidaneSilenced>0||!(f.bmOrbs>0)||!battlemageGate(f,'dragon'))return;
+ f.bmOrbs--;f.bmShotCooldown=42;
+ BattlemageRules.spawn(f,{kind:'chaser',sourceType:'dragon',stale:1,bodyOrigin:true,x:f.x+f.face*30,y:f.y-44,vx:f.face*11,vy:clamp(i.y,-1,1)*1.2,radius:13,damage:7,life:34,charged:false,sidecar:true});
+}
 function battlemageGate(f,type){return !(type==='dragon'&&(f.bmShotCooldown>0||BattlemageRules.objects.some(q=>q.owner===f.id&&q.kind==='chaser'&&!q.dead))||['gale','airDrop'].includes(type)&&(battlemageTeana(f)||battlemageGauge(f)<100));}
 function battlemageDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;f.stateDuration=end;}
 function battlemageApply(f){const c=CharacterData.battlemage,s=battlemageTeana(f)?1.08:1;f.character.walkSpeed=c.walkSpeed*s;f.character.runSpeed=c.runSpeed*s;f.character.initialDashSpeed=c.initialDashSpeed*s;}
@@ -44,7 +55,7 @@ const BattlemageRules=NewcomerCore.create('battlemage',BattlemageMoves,{
  projectile(q,f,o,r){if(f.respawn||q.age>=q.life){q.dead=true;return true;}if(q.kind==='echo'&&q.age<q.delay)return true;q.previousX=q.x;q.previousY=q.y;q.x+=q.vx;q.y+=q.vy;
   const p=platforms.find(p=>p.main);if(q.kind==='chaser'&&(q.x<-900||q.x>2340||q.y>1400||q.x>p.x&&q.x<p.x+p.w&&q.y>p.y&&q.y<p.y+90)){q.dead=true;return true;}for(const target of BattlePlayers.targets(f)){if(q.dead)break;battlemageObjectHit(q,f,target,{x1:q.previousX,y1:q.previousY,x2:q.x,y2:q.y,radius:q.radius});}return true;
  },
- cpu(f,o,i,clear){const a=f.attack;if(a?.bmShot)i.specialHeld=f.timer<28&&Math.abs(o.x-f.x)>250;if(a?.bmTeleport){i.x=Math.sign(720-f.x);i.y=-1;return;}if(!a&&f.grounded&&battlemageGauge(f)>=100&&frame%20===f.id){clear();i.x=0;i.y=1;i.special=true;}}
+ cpu(f,o,i,clear){const a=f.attack;if(a&&!a.special&&f.bmOrbs>0&&battlemageGate(f,'dragon')&&Math.abs(o.x-f.x)<350&&frame%18===f.id){i.special=true;i.specialHeld=false;}if(a?.bmShot)i.specialHeld=f.timer<28&&Math.abs(o.x-f.x)>250;if(a?.bmTeleport){i.x=Math.sign(720-f.x);i.y=-1;return;}if(!a&&f.grounded&&battlemageGauge(f)>=100&&frame%20===f.id){clear();i.x=0;i.y=1;i.special=true;}}
 });
 function battlemageObjectHit(q,f,o,b){if(q.hits.has(o.id)||o.respawn)return false;const protect=CombatSystem.protection(o);if(protect.intangible||protect.invincible)return false;const touch=CombatSystem.contact(b,o),mode=o.mode==='Hitlag'?o.frozen?.mode:o.mode,guard=['ShieldStart','ShieldHold','ShieldDrop'].includes(mode)&&CombatSystem.shieldCovers(o,b);if(!touch&&!guard)return false;q.hits.add(o.id);if(o.attack?.counterWindow&&o.timer>=o.attack.counterWindow[0]&&o.timer<=o.attack.counterWindow[1]){attack(o,o.attack.counterMove);o.inv=o.attack.totalFrames;q.dead=true;return true;}CombatSystem.hit(f,o,{...BattlemageMoves.dragon,type:'battlemage'+q.kind,sourceType:q.sourceType,projectile:true,charge:0,damage:q.damage,staleMultiplier:q.stale,launchDirection:q.face,baseKnockback:q.kind==='echo'?2.8:3.2,knockbackGrowth:q.kind==='echo'?.045:.055,angle:-.35},b,touch);if(q.kind==='chaser')q.dead=true;return true;}
 function battlemagePose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
