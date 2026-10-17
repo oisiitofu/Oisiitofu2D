@@ -1386,5 +1386,14 @@
       1254,
       1254
     ]
+  },
+  "kurabe": {
+    "source": "characters/kurabe/assets/kurabe-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
   }
 }
