@@ -19,10 +19,11 @@ const MaleniaRotMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,op
  airDrop:m('空中・腐敗の花園',20,[],14,12,{...opt,maleniaBloom:true,aerial:true,pose:47,damage:8})
  };for(const a of Object.values(variants))a.animation={...a.animation,anticipationPose:a.pose,accelerationPose:a.pose,recoveryPose:a.pose,lean:0,lunge:0,impactScale:1};for(const k of Object.keys(MaleniaMoves))if(!(k in variants))Object.defineProperty(variants,k,{enumerable:true,get:()=>MaleniaMoves[k]});return variants;})();
 function maleniaRot(f){return(f.maleniaRotTime||0)>0;}
-function maleniaMovesFor(f){return maleniaRot(f)?MaleniaRotMoves:MaleniaMoves;}
+const MaleniaRotMeleeMoves={...MaleniaRotMoves,dash:MaleniaMoves.dash};
+function maleniaMovesFor(f){return maleniaRot(f)?f.maleniaSideCooldown>0?MaleniaRotMeleeMoves:MaleniaRotMoves:MaleniaMoves;}
 function maleniaFlip(f,n){return n===14;}
 function maleniaImagePose(f,n){if(n>=48||!(maleniaRot(f)||f.attack?.maleniaRot))return n;return n>=18&&n<=23?96+n-18:n+48;}
-function maleniaGate(f,type){return !(type==='dragon'&&f.maleniaAeoniaCooldown>0&&maleniaRot(f)||type==='dash'&&(f.maleniaSideCooldown>0||!f.grounded&&f.maleniaSideAirUsed)||['gale','airDrop'].includes(type)&&(maleniaRot(f)?f.maleniaBloomCooldown>0:f.maleniaRotCooldown>0));}
+function maleniaGate(f,type){return !(type==='dragon'&&f.maleniaAeoniaCooldown>0&&maleniaRot(f)||type==='dash'&&!f.grounded&&f.maleniaSideAirUsed||['gale','airDrop'].includes(type)&&(maleniaRot(f)?f.maleniaBloomCooldown>0:f.maleniaRotCooldown>0));}
 function maleniaDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;}
 function maleniaCliffStop(f){if(!f.grounded)return;const p=platforms.find(p=>f.x>=p.x-3&&f.x<=p.x+p.w+3&&Math.abs(f.y-p.y)<3);if(p)f.vx=clamp(f.vx,p.x+2-f.x,p.x+p.w-2-f.x);}
 function maleniaBloom(f,a,r,damage,field=true){if(a.bloomed)return;a.bloomed=true;r.spawn(f,{kind:'bloom',x:f.x,y:f.y-22,vx:0,vy:0,radius:a.maleniaAeoniaImpact?76:65,damage,life:15});if(field)r.spawn(f,{kind:'rotField',x:f.x,y:f.y-15,vx:0,vy:0,radius:70,damage:2,life:90});}
@@ -32,7 +33,7 @@ const MaleniaRules=NewcomerCore.create('malenia',MaleniaMoves,{
  status(f){for(const k of['maleniaRotTime','maleniaRotCooldown','maleniaBloomCooldown','maleniaSideCooldown','maleniaAeoniaCooldown','maleniaHealFlash'])f[k]=f.respawn?0:Math.max(0,(f[k]||0)-1);if(f.grounded||f.ledge||f.respawn)f.maleniaSideAirUsed=false;},
  prepare(f,a,r){a.activeFrames=a.activeFrames.map(w=>({...w}));a.maleniaRot=!!(a.maleniaRot||maleniaRot(f)||a.maleniaAeoniaImpact);a.maleniaHealed=0;
   if(a.maleniaCombo)a.motionLastEvent=30;
-  if(a.maleniaStep||a.maleniaPhantoms){f.maleniaSideCooldown=a.maleniaPhantoms?110:55;if(!f.grounded)f.maleniaSideAirUsed=true;a.motionLastEvent=a.maleniaPhantoms?36:20;}
+  if(a.maleniaStep||a.maleniaPhantoms){if(a.maleniaPhantoms)f.maleniaSideCooldown=110;if(!f.grounded)f.maleniaSideAirUsed=true;a.motionLastEvent=a.maleniaPhantoms?36:20;}
   if(a.maleniaBloom){f.maleniaBloomCooldown=135;a.motionLastEvent=a.maleniaAeoniaImpact?18:20;if(a.maleniaAeoniaImpact)maleniaBloom(f,a,r,11);}
   if(a.maleniaAeonia){f.maleniaAeoniaCooldown=150;a.motionLastEvent=90;}
  },

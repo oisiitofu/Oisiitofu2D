@@ -6,16 +6,16 @@ rise:m('霊の導き',11,[w(11,16,'spin',{pose:42,damage:3})],53,14,{...opt,yuri
 gale:m('霊視モード',20,[w(20,24,'spin',{pose:45,damage:8})],18,0,{...opt,yuriStance:true,pose:45,damage:8,chargeFrame:8,chargeButton:'special',chargeMaxFrames:60,armorFrames:[{start:7,end:19,damageThreshold:8,hitCount:2}]}),
 airDrop:m('空中霊視モード',20,[w(20,24,'spin',{pose:45,damage:8})],18,10,{...opt,yuriStance:true,aerial:true,pose:45,damage:8,chargeFrame:8,chargeButton:'special',chargeMaxFrames:60,armorFrames:[{start:7,end:19,damageThreshold:8,hitCount:2}]})
 },'magic',125),poses={jab:6,jab2:6,jab3:8,heavy:12,up:13,low:11,dashAttack:9,smash:12,upsmash:13,downsmash:11,air:10,fair:12,bair:14,uair:15,dair:16,grab:17,pummel:18,ledge:6,getupAttack:11,forwardThrow:19,backThrow:14,upThrow:13,downThrow:16};for(const[k,n]of Object.entries(poses)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=n;}a.grab.newcomerHit=false;a.downsmash.activeFrames[1].pose=a.getupAttack.activeFrames[1].pose=14;for(const v of Object.values(a))v.animation={...v.animation,anticipationPose:v.special?v.pose:3,accelerationPose:v.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};return a;})();
-function YuriGate(f,type){return !(type==='dragon'&&f.yuriPhotoCooldown>0||type==='dash'&&(f.yuriGhostCooldown>0||YuriRules.objects.some(q=>q.owner===f.id&&!q.dead))||['gale','airDrop'].includes(type)&&f.yuriStanceCooldown>0);}
+function YuriGate(f,type){return !(type==='dash'&&(f.yuriGhostCooldown>0||YuriRules.objects.some(q=>q.owner===f.id&&!q.dead))); }
 function yuriGuarding(f){return f.characterId==='yuri'&&f.attack?.yuriStance&&(f.attack.hold||f.timer>=8&&f.timer<20)&&!f.respawn;}
 function yuriDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;f.stateDuration=end;}
 const YuriRules=NewcomerCore.create('yuri',YuriMoves,{
 reset(){for(const f of fighters)if(f.characterId==='yuri')f.yuriPhotoCooldown=f.yuriGhostCooldown=f.yuriStanceCooldown=0;},
 status(f){for(const k of['yuriPhotoCooldown','yuriGhostCooldown','yuriStanceCooldown'])f[k]=f.respawn?0:Math.max(0,(f[k]||0)-1);},
 prepare(f,a){a.activeFrames=a.activeFrames.map(w=>({...w}));},
-action(f,i,r){const a=f.attack,t=f.timer;if(a.yuriPhoto){f.vx*=.65;if(t===13&&!a.fired){a.fired=true;f.yuriPhotoCooldown=40;ring(f.x+f.face*80,f.y-43,'#e0f1ff',60);}}
+action(f,i,r){const a=f.attack,t=f.timer;if(a.yuriPhoto){f.vx*=.65;if(t===13&&!a.fired){a.fired=true;f.yuriPhotoCooldown=0;ring(f.x+f.face*80,f.y-43,'#e0f1ff',60);}}
 if(a.yuriGhost&&t===18&&!a.fired){a.fired=true;r.spawn(f,{kind:'spirit',x:f.x+f.face*45,y:f.y-44,vx:f.face*4.5,vy:0,damage:7,radius:18,life:90});f.yuriGhostCooldown=125;}
-if(a.yuriStance){f.fastFall=false;f.vx*=.7;if(t===20&&!a.released){a.released=true;f.yuriStanceCooldown=130;ring(f.x,f.y-40,'#b4c9ff',120);}}
+if(a.yuriStance){f.fastFall=false;f.vx*=.7;if(t===20&&!a.released){a.released=true;f.yuriStanceCooldown=0;ring(f.x,f.y-40,'#b4c9ff',120);}}
 if(a.yuriLift){f.fastFall=false;if(t<11){f.vx*=.5;return;}if(!a.liftStarted&&!a.escapeSide){const p=platforms.find(p=>p.main);if(f.x>p.x&&f.x<p.x+p.w&&f.y-f.character.ecb.height>p.y+89)NewcomerCore.escape(f,a);}
 if(a.escapeSide){NewcomerCore.escapeAction(f,a,0);if(a.escapeSide){yuriDuration(f,a,t+53);return;}}
 if(!a.liftStarted){a.liftStarted=true;a.liftAt=t;a.direction=Math.abs(i.x)>.2?Math.sign(i.x):a.originFace;f.recovered=true;f.grounded=false;yuriDuration(f,a,t+50);a.activeFrames=[CombatData.window(t,t+5,'spin',{pose:42,damage:3})];}

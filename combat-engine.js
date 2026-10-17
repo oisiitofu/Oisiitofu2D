@@ -10,7 +10,6 @@ function attack(f,type){
  const downSpecialInput=type==='gale';
  if(NewcomerCore.ids.includes(f.characterId)){if(type==='gale'&&!f.grounded)type='airDrop';if(!NewcomerCore.gate(f,type))return false;}
  if(f.characterId==='headmaster'&&(type==='gale'&&f.headBlockCooldown>0||!f.grounded&&(type==='dash'&&f.headSideUsed||type==='gale'&&f.headBlockUsed)))return false;
- if(f.characterId==='pawapuro'&&type==='gale'&&f.pawaFieldCooldown>0)return false;
  if(f.characterId==='agumon'){if(type==='gale'&&!f.grounded)type='airVolcano';if(!f.grounded&&(type==='dash'&&f.agumonSideUsed||type==='airVolcano'&&f.agumonAirVolcanoUsed))return false;}
  if(f.characterId==='terry'&&type==='dash'&&f.terryScoutCooldown>0)return false;
  if(f.characterId==='valkyrie'){if(type==='gale'&&!f.grounded)type='airScarlet';if(!f.grounded&&type==='dash'&&f.valkSideUsed)return false;}

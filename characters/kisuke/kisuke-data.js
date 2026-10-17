@@ -42,7 +42,7 @@ const KisukeRules=NewcomerCore.create('kisuke',KisukeMoves,{
    if(!a.weak&&a.blade===1&&t===12)r.spawn(f,{kind:'night',x:f.x+f.face*142,y:f.y-45,vx:0,vy:0,damage:6,radius:17,life:16,face:f.face});
    if(!a.weak&&a.blade===2&&[12,20].includes(t))r.spawn(f,{kind:'flame',x:f.x+f.face*65,y:f.y-(t===12?55:30),vx:f.face*9,vy:0,damage:4,radius:14,life:22});
   }
-  if(a.kisukeSwitch){a.pose=47;f.vx*=.7;if(t===8){f.kisukeBlade=(f.kisukeBlade+1)%3;f.kisukeSwitchCooldown=18;r.spawn(f,{kind:'switch',x:f.x,y:f.y-45,vx:0,damage:0,life:12});}}
+  if(a.kisukeSwitch){a.pose=47;f.vx*=.7;if(t===8){f.kisukeBlade=(f.kisukeBlade+1)%3;f.kisukeSwitchCooldown=0;r.spawn(f,{kind:'switch',x:f.x,y:f.y-45,vx:0,damage:0,life:12});}}
   if(a.kisukeSlide){
    if(a.phase==='slide'){a.pose=t<15?42:47;f.vx=t>=7&&t<15?f.face*(a.originGrounded?8.5:6.5):moveToward(f.vx,0,1.2);
     if(t>=14&&t<=a.followUntil&&i.special&&!a.specialWas){const o=BattlePlayers.target(f),near=Math.abs(o.x-f.x)<220&&Math.abs(o.y-f.y)<110;a.phase='cross';a.crossAt=t;a.crossFace=f.face;a.targetX=near?o.x+a.crossFace*55:f.x+a.crossFace*90;f.vx=a.crossFace*11;kisukeDuration(f,a,t+22);}

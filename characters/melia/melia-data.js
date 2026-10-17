@@ -20,7 +20,7 @@ prepare(f,a){a.activeFrames=a.activeFrames.map(w=>({...w}));a.meliaElement=melia
 action(f,i,r){const a=f.attack,t=f.timer;
 if(a.meliaSummon&&t===14&&!a.fired){a.fired=true;const e=a.meliaElement,power=a.charge||0;r.spawn(f,{kind:'summon',element:e,x:f.x+f.face*35,y:f.y-51,vx:0,vy:0,radius:12+power*5,damage:[9,6,6,5][e]+power*3,life:80,power,air:!a.originGrounded});f.meliaSummonCooldown=[60,54,46,60][e];}
 if(a.meliaField&&t===20&&!a.fired){a.fired=true;const x=f.x+f.face*(100+clamp(i.x*f.face,0,1)*100),support=platforms.filter(p=>x>p.x&&x<p.x+p.w&&p.y>=f.y-10&&p.y<f.y+85).sort((a,b)=>a.y-b.y)[0];r.spawn(f,{kind:'field',element:a.meliaElement,x,y:support?support.y-2:f.y-20,vx:0,vy:0,radius:76,damage:3,life:90,pulse:-1});f.meliaFieldCooldown=150;}
-if(a.meliaChange&&t===10&&!a.eventsDone.has('element')){a.eventsDone.add('element');f.meliaElement=(meliaElement(f)+1)%4;f.meliaChangeCooldown=24;f.fastFall=false;ring(f.x,f.y-44,MeliaColors[f.meliaElement],65);}
+if(a.meliaChange&&t===10&&!a.eventsDone.has('element')){a.eventsDone.add('element');f.meliaElement=(meliaElement(f)+1)%4;f.meliaChangeCooldown=0;f.fastFall=false;ring(f.x,f.y-44,MeliaColors[f.meliaElement],65);}
 if(a.meliaFlight){f.fastFall=false;if(a.ending){a.gravityMultiplier=1;return;}if(t<10){f.vx*=.8;return;}if(!a.flightStarted&&!a.escapeSide){const p=platforms.find(p=>p.main);if(f.x>p.x&&f.x<p.x+p.w&&f.y-f.character.ecb.height>p.y+89)NewcomerCore.escape(f,a);}
 if(a.escapeSide){NewcomerCore.escapeAction(f,a,0);if(a.escapeSide){meliaDuration(f,a,t+64);return;}}
 if(!a.flightStarted){a.flightStarted=true;a.flightAt=t;f.recovered=true;f.grounded=false;f.fastFall=false;meliaDuration(f,a,t+60);a.activeFrames=[CombatData.window(t,t+7,'spin',{pose:42,damage:4})];}

@@ -19,7 +19,7 @@ function katamariBall(f){const r=katamariRadius(f),a=f.attack,w=a&&CombatData.ac
  if(shape==='spin')return{x:f.x+Math.cos(f.timer*.35)*(r*.65+20),y:f.y-35-Math.sin(f.timer*.35)*18,r};
  return{x:f.x+(f.kataBallDX??f.face*(r*.75+16))+(a?.type==='smash'?f.face*35:0),y:f.y-r,r};
 }
-function katamariGate(f,type){return !(type==='dragon'&&f.kataSuctionCooldown>0||type==='dash'&&f.kataRollCooldown>0||['gale','airDrop'].includes(type)&&f.kataItemsCooldown>0);}
+function katamariGate(f,type){return true;}
 function katamariDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;f.stateDuration=end;}
 function katamariCliffStop(f){if(!f.grounded)return;const p=platforms.find(p=>Math.abs(f.y-p.y)<3&&f.x>=p.x-3&&f.x<=p.x+p.w+3);if(p)f.vx=clamp(f.vx,p.x+2-f.x,p.x+p.w-2-f.x);}
 function katamariBeginBounce(f,a,i,t){a.bounceAt=t;a.bounceFace=Math.abs(i.x)>.2?Math.sign(i.x):f.face;f.face=a.bounceFace;f.recovered=true;f.grounded=false;f.fastFall=false;f.vx=a.bounceFace*3;f.vy=-14-(a.chargeTicks||0)*.25-katamariGrowth(f)*.02;a.gravityMultiplier=.8;a.pose=45;katamariDuration(f,a,t+55);a.activeFrames=[CombatData.window(t,t+7,'up',{pose:45,damage:a.damage})];}
@@ -37,9 +37,9 @@ const KatamariRules=NewcomerCore.create('katamari',KatamariMoves,{
   f.character.weight=85+g*.2;f.character.runSpeed=6.8-g*.008;f.character.airSpeed=5.8-g*.006;f.character.shieldSize=radius+36;
  },
  prepare(f,a,r){a.activeFrames=a.activeFrames.map(w=>({...w}));const growth=katamariGrowth(f);if(!a.kataSuction&&!a.kataItems){a.damage*=1+growth*.0025;for(const w of a.activeFrames)if(w.damage!=null)w.damage*=1+growth*.0025;}
-  if(a.kataRoll){f.kataRollCooldown=58;a.motionLastEvent=31;}
-  if(a.kataSuction){f.kataSuctionCooldown=100;a.motionLastEvent=26;for(const w of a.activeFrames)w.pull=true;}
-  if(a.kataItems){f.kataItemsCooldown=180;a.motionLastEvent=28;}
+  if(a.kataRoll){f.kataRollCooldown=0;a.motionLastEvent=31;}
+  if(a.kataSuction){f.kataSuctionCooldown=0;a.motionLastEvent=26;for(const w of a.activeFrames)w.pull=true;}
+  if(a.kataItems){f.kataItemsCooldown=0;a.motionLastEvent=28;}
   if(a.kataBounce){a.chargeTicks=0;a.activeFrames=[];}
  },
  action(f,i,r){const a=f.attack,t=f.timer;

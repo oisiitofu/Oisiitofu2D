@@ -7,19 +7,19 @@ const ToroKits=(()=>{const m=CombatData.createMove,w=CombatData.window,o={specia
 ];})();
 const ToroMoves=(()=>{const m=CombatData.createMove,o={special:true,newcomerHit:true,soundFamily:'magic'};const a=NewcomerCore.moves(['ジャブニャ！','回転ニャ！','頭突きニャ！','振るニャ！','おじぎニャ！','おそうじニャ！','ボディチェック','キックニャ！','アッパーニャ！','カワラ割りニャ！','とびしげりニャ！','とびげりニャ！','うしろげりニャ！','せんぷうきゃくニャ！','カカト落とし'],{...ToroKits[0],gale:m('へんしんするニャ！',10,[],12,0,{...o,toroSwitch:true,pose:45,damage:0}),airDrop:m('空中へんしんするニャ！',10,[],12,10,{...o,toroSwitch:true,aerial:true,pose:45,damage:0})},'punch',100),poses={jab:6,jab2:7,jab3:8,heavy:9,up:10,low:11,dashAttack:8,smash:12,upsmash:13,downsmash:11,air:10,fair:12,bair:14,uair:15,dair:16,grab:17,pummel:18,ledge:6,getupAttack:11,forwardThrow:19,backThrow:14,upThrow:13,downThrow:16};for(const[k,n]of Object.entries(poses)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=n;}a.grab.newcomerHit=false;a.downsmash.activeFrames[1].pose=a.getupAttack.activeFrames[1].pose=14;for(const v of Object.values(a))v.animation={...v.animation,anticipationPose:v.special?v.pose:3,accelerationPose:v.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};return a;})();
 function toroForm(f){return f.toroForm??0;}
-function ToroGate(f,type){return !(type==='dragon'&&f.toroNBCooldown>0||type==='dash'&&(f.toroSideCooldown>0||ToroRules.objects.some(q=>q.owner===f.id&&q.kind==='chain'&&!q.dead))||['gale','airDrop'].includes(type)&&f.toroSwitchCooldown>0);}
+function ToroGate(f,type){const form=toroForm(f);return !(type==='dragon'&&form!==0&&f.toroNBCooldown>0||type==='dash'&&form===1&&(f.toroSideCooldown>0||ToroRules.objects.some(q=>q.owner===f.id&&q.kind==='chain'&&!q.dead))); }
 function toroDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;f.stateDuration=end;}
 const ToroRules=NewcomerCore.create('toro',ToroMoves,{
 reset(){for(const f of fighters)if(f.characterId==='toro')f.toroForm=f.toroNBCooldown=f.toroSideCooldown=f.toroSwitchCooldown=0;},
 status(f){for(const k of['toroNBCooldown','toroSideCooldown','toroSwitchCooldown'])f[k]=f.respawn?0:Math.max(0,(f[k]||0)-1);if(f.respawn)f.toroForm=0;const c=CharacterData.toro,m=[1,1.1,.9][toroForm(f)];for(const k of['walkSpeed','runSpeed','initialDashSpeed','airSpeed'])f.character[k]=c[k]*m;f.character.weight=[74,69,82][toroForm(f)];},
 prepare(f,a){a.toroForm=toroForm(f);const kit=ToroKits[a.toroForm][a.type];if(kit){const total=kit.totalFrames,previous=a.totalFrames;Object.assign(a,kit);a.totalFrames=previous;toroDuration(f,a,total);a.animation={...a.animation,anticipationPose:a.pose,accelerationPose:a.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};}a.activeFrames=a.activeFrames.map(w=>({...w}));},
 action(f,i,r){const a=f.attack,t=f.timer,form=a.toroForm;
-if(a.toroSwitch&&t===10&&!a.changed){a.changed=true;f.toroForm=(toroForm(f)+1)%3;f.toroSwitchCooldown=35;f.fastFall=false;ring(f.x,f.y-28,'#ffbbdf',75);}
-if(a.toroNB){if(form===0){a.pose=t<14?6:t<22?7:40;f.vx=t>=8&&t<=24?a.originFace:0;if(t===8&&!a.fired){a.fired=true;f.toroNBCooldown=32;}}
+if(a.toroSwitch&&t===10&&!a.changed){a.changed=true;f.toroForm=(toroForm(f)+1)%3;f.toroSwitchCooldown=0;f.fastFall=false;ring(f.x,f.y-28,'#ffbbdf',75);}
+if(a.toroNB){if(form===0){a.pose=t<14?6:t<22?7:40;f.vx=t>=8&&t<=24?a.originFace:0;if(t===8&&!a.fired){a.fired=true;f.toroNBCooldown=0;}}
 else if(t===a.startupFrames&&!a.fired){a.fired=true;if(form===1){for(const n of[-1,0,1])r.spawn(f,{kind:'shuriken',x:f.x+f.face*29,y:f.y-30,vx:f.face*10,vy:n*1.6,radius:7,damage:3,life:35,group:frame});f.toroNBCooldown=58;}else{for(let n=0;n<3;n++)r.spawn(f,{kind:'mochi',x:f.x+f.face*(25+n*9),y:f.y-28-n*6,vx:f.face*(5+n),vy:-3-n*.5,radius:9+n*3,damage:4+n,life:65,group:frame});f.toroNBCooldown=68;}}}
-if(a.toroSide){if(form===0){if(t===12&&!a.decided){a.decided=true;a.rushing=!!i.specialHeld;f.toroSideCooldown=75;}f.vx=t>=12&&t<25?(a.rushing?11:3)*a.originFace:0;}
+if(a.toroSide){if(form===0){if(t===12&&!a.decided){a.decided=true;a.rushing=!!i.specialHeld;f.toroSideCooldown=0;}f.vx=t>=12&&t<25?(a.rushing?11:3)*a.originFace:0;}
 else if(form===1&&t===18&&!a.fired){a.fired=true;r.spawn(f,{kind:'chain',x:f.x+f.face*30,y:f.y-30,vx:f.face*12,vy:0,radius:10,damage:7,life:38,phase:'out'});f.toroSideCooldown=100;}
-else if(form===2&&t===20&&!a.fired){a.fired=true;f.toroSideCooldown=85;f.vx=0;}}
+else if(form===2&&t===20&&!a.fired){a.fired=true;f.toroSideCooldown=0;f.vx=0;}}
 if(a.toroUp){f.fastFall=false;const start=a.startupFrames;if(t<start){f.vx*=.5;return;}if(!a.upStarted&&!a.escapeSide){const p=platforms.find(p=>p.main);if(f.x>p.x&&f.x<p.x+p.w&&f.y-f.character.ecb.height>p.y+89)NewcomerCore.escape(f,a);}
 if(a.escapeSide){NewcomerCore.escapeAction(f,a,0);if(a.escapeSide){toroDuration(f,a,t+55);return;}}
 if(!a.upStarted){a.upStarted=true;a.upAt=t;a.direction=Math.abs(i.x)>.2?Math.sign(i.x):a.originFace;f.recovered=true;f.grounded=false;toroDuration(f,a,t+(form===1?25:52));

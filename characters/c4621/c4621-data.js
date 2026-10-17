@@ -14,7 +14,7 @@ const C4621Moves=(()=>{
  for(const v of Object.values(a)){v.animation={...v.animation,anticipationPose:v.special?v.pose:3,accelerationPose:v.pose,recoveryPose:v.special?v.pose:0,lean:0,lunge:0,impactScale:1};}
  return a;
 })();
-function c4621Gate(f,type){return !(type==='dragon'&&f.c621RifleCooldown>0||type==='dash'&&f.c621BladeCooldown>0||['gale','airDrop'].includes(type)&&(f.c621MissileCooldown>0||C4621Rules.objects.some(q=>q.owner===f.id&&q.kind==='missile'&&!q.dead)));}
+function c4621Gate(f,type){return !(type==='dragon'&&f.c621RifleCooldown>0||['gale','airDrop'].includes(type)&&(f.c621MissileCooldown>0||C4621Rules.objects.some(q=>q.owner===f.id&&q.kind==='missile'&&!q.dead))); }
 function c4621Muzzle(f){const n=f.attack?.c621Rifle&&f.attack.pose===47?47:40,r=C4621ArtRects.frames[n],s=BattleSize.native('c4621',n)*FIGHTER_SCALE*BattleSize.art('c4621');return{x:f.x+r[2]*.48*s*f.face,y:f.y+(-r[3]*(n===47?.57:.71)+BattleSize.baseline(f,n))*s};}
 function c4621CliffStop(f){if(!f.grounded)return;const p=platforms.find(p=>f.x>=p.x-3&&f.x<=p.x+p.w+3&&Math.abs(f.y-p.y)<3);if(p)f.vx=clamp(f.vx,p.x+2-f.x,p.x+p.w-2-f.x);}
 function c4621Duration(f,a,end){const delta=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=delta;f.stateEnd+=delta;}
@@ -33,7 +33,7 @@ const C4621Rules=NewcomerCore.create('c4621',C4621Moves,{
  prepare(f,a){
   a.activeFrames=a.activeFrames.map(w=>({...w}));a.phase='startup';
   if(a.c621Rifle){a.volleyEnd=22;a.motionLastEvent=22;f.c621RifleCooldown=60;}
-  if(a.c621Blade){a.followUntil=28;a.motionLastEvent=28;f.c621BladeCooldown=52;}
+  if(a.c621Blade){a.followUntil=28;a.motionLastEvent=28;f.c621BladeCooldown=0;}
   if(a.c621Missiles){a.motionLastEvent=25;f.c621MissileCooldown=145;}
  },
  action(f,i,r){const a=f.attack,t=f.timer;

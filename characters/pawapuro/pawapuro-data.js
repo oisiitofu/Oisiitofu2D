@@ -12,7 +12,7 @@ const PawapuroMoves=(()=>{
 const PawapuroRules=(()=>{
  let objects=[],serial=0;
  function reset(){objects=[];serial=0;for(const f of fighters)if(f.characterId==='pawapuro'){f.pawaReserve=0;f.pawaFieldCooldown=0;}}
- function prepare(f){const a=f.attack;a.originFace=f.face;a.aimX=f.face*.65;a.aimY=-.85;a.pitchAim=0;a.fieldUsed=false;if(a.rocketBat){a.fuel=2;a.launched=false;a.lastBoost=-99;a.specialWas=true;a.escapeFrames=0;}if(a.gloveField)f.pawaFieldCooldown=60;}
+ function prepare(f){const a=f.attack;a.originFace=f.face;a.aimX=f.face*.65;a.aimY=-.85;a.pitchAim=0;a.fieldUsed=false;if(a.rocketBat){a.fuel=2;a.launched=false;a.lastBoost=-99;a.specialWas=true;a.escapeFrames=0;}if(a.gloveField)f.pawaFieldCooldown=0;}
  function aim(f,i){const a=f.attack;if(!a)return;if(a.powerPitch||a.powerBat)a.pitchAim=clamp(i.y,-1,1);if(a.rocketBat&&f.timer<12){if(Math.abs(i.x)>.15)a.aimX=clamp(i.x,-1,1);a.aimY=-.85;}}
  function spawn(f,v={}){const q={id:++serial,owner:f.id,kind:'pitch',x:f.x+f.face*52,y:f.y-51,face:f.face,vx:f.face*13,vy:0,radius:12,damage:9,age:0,life:65,hits:new Set(),gravity:0,bounces:0,stale:f.attack?.staleMultiplier||1,...v};q.previousX=q.x;q.previousY=q.y;objects.push(q);return q;}
  function returned(f,a,damage,perfect=false){const vy=(a.pitchAim||0)*(perfect?4:7);spawn(f,{kind:'return',damage:Math.min(25,damage+3+(a.charge||0)*5),vx:a.originFace*(perfect?18:17),vy,life:65});GameAudio.cue('staff-hit',.9,f);}

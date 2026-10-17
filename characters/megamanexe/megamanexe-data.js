@@ -26,7 +26,7 @@ const MegaManExeRules=NewcomerCore.create('megamanexe',MegaManExeMoves,{
  action(f,i,r){const a=f.attack,t=f.timer;
  if(a.exeBuster){a.pose=t<9?40:f.grounded?6:10;if(t===9&&!a.fired){a.fired=true;const power=a.charge||0,big=power>.25;r.spawn(f,{kind:'buster',x:f.x+f.face*39,y:f.y-43,vx:f.face*(big?13:15),vy:0,radius:big?15+power*5:8,damage:(big?8+power*5:3)*(a.exeStyle===1?1.15:1),life:big?44:36,charged:big,style:a.exeStyle});f.exeBusterCooldown=big?46:28;}}
  if(a.exeArea){f.vx*=.5;if(t===8&&!a.marker){const p=platforms.find(p=>p.main),o=BattlePlayers.target(f),distance=clamp((o.x-f.x)*f.face-48,130,210);a.targetX=f.x+f.face*distance;if(a.originGrounded)a.targetX=clamp(a.targetX,p.x+25,p.x+p.w-25);a.marker=r.spawn(f,{kind:'areaMark',x:a.targetX,y:f.y,vx:0,vy:0,damage:0,life:16});}
- if(t===18&&!a.transferred){a.transferred=true;const p=platforms.find(p=>p.main),blocked=a.targetX>p.x&&a.targetX<p.x+p.w&&f.y>p.y+8&&f.y-f.character.ecb.height<p.y+90;if(!blocked)f.x=a.targetX;f.vx=0;f.exeAreaCooldown=100;a.pose=9;}
+ if(t===18&&!a.transferred){a.transferred=true;const p=platforms.find(p=>p.main),blocked=a.targetX>p.x&&a.targetX<p.x+p.w&&f.y>p.y+8&&f.y-f.character.ecb.height<p.y+90;if(!blocked)f.x=a.targetX;f.vx=0;f.exeAreaCooldown=0;a.pose=9;}
  if(t>=18)a.pose=9;
  }
  if(a.exePA&&t===18&&!a.eventsDone.has('pa')){a.eventsDone.add('pa');f.exeStyle=f.exeNextStyle??0;f.exeNextStyle=(f.exeStyle+1)%4;f.exeStyleTime=720;f.fastFall=false;ring(f.x,f.y-40,ExeStyleColors[f.exeStyle],85);}

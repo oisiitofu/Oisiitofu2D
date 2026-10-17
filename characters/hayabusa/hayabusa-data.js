@@ -15,7 +15,7 @@ const HayabusaMoves=(()=>{
 })();
 function hayabusaGleam(f){return(f.hayaGleamTime||0)>0;}
 function hayabusaLand(f){if(!f.attack?.hayabusaSwallow)return false;f.grounded=true;f.vy=0;f.attack.gravityMultiplier=1;f.fastFall=f.shortHop=f.airDodged=f.helpless=f.recovered=false;f.specialLandingLag=0;f.airJumps=f.character.airJumpCount;f.jumps=f.ledgeGrabs=0;return true;}
-function hayabusaGate(f,type){return !(type==='dragon'&&((f.hayaShurikenCooldown||0)>0||HayabusaRules.objects.filter(q=>q.owner===f.id&&!q.dead).length>=3)||type==='dash'&&(f.hayaSwallowCooldown||0)>0||['gale','airDrop'].includes(type)&&(hayabusaGleam(f)||(f.hayaGleamCooldown||0)>0));}
+function hayabusaGate(f,type){return !(type==='dragon'&&((f.hayaShurikenCooldown||0)>0||HayabusaRules.objects.filter(q=>q.owner===f.id&&!q.dead).length>=3)||['gale','airDrop'].includes(type)&&(hayabusaGleam(f)||(f.hayaGleamCooldown||0)>0));}
 function hayabusaDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;f.stateDuration=end;}
 function hayabusaStartWind(f,a,i,t){
  const p=platforms.find(p=>p.main),left=Math.abs(f.x-p.x),right=Math.abs(f.x-p.x-p.w),near=!a.originGrounded&&(f.x<p.x||f.x>p.x+p.w)&&Math.min(left,right)<85&&f.y>p.y+30&&f.y<p.y+260;
@@ -29,7 +29,7 @@ const HayabusaRules=NewcomerCore.create('hayabusa',HayabusaMoves,{
   a.activeFrames=a.activeFrames.map(w=>({...w}));a.empowered=hayabusaGleam(f);
   if(a.empowered&&!a.hayabusaGleam){a.damage*=1.12;for(const w of a.activeFrames)if(w.damage!=null)w.damage*=1.12;}
   if(a.hayabusaShuriken){a.volleyEnd=10;f.hayaShurikenCooldown=40;}
-  if(a.hayabusaSwallow){const o=BattlePlayers.target(f),d=(o.x-f.x)*f.face;a.travel=d>0&&d<240?clamp(d+55,95,240):145;a.followUntil=28;a.motionLastEvent=28;f.hayaSwallowCooldown=65;}
+  if(a.hayabusaSwallow){const o=BattlePlayers.target(f),d=(o.x-f.x)*f.face;a.travel=d>0&&d<240?clamp(d+55,95,240):145;a.followUntil=28;a.motionLastEvent=28;f.hayaSwallowCooldown=0;}
   if(a.hayabusaGleam)f.hayaGleamCooldown=1080;
  },
  action(f,i,r){const a=f.attack,t=f.timer;
