@@ -61,7 +61,7 @@ const BattlePlayers=(()=>{
  function init(){
   initialized=true;try{const saved=+localStorage.getItem('tofu-stock-count');if(saved>=1&&saved<=10)document.querySelector('#stock-count').value=String(saved);}catch{}
   document.querySelector('#stock-count').onchange=()=>{try{localStorage.setItem('tofu-stock-count',String(stockCount()));}catch{}Roster.summary();};
-  try{document.querySelector('#time-limit').value=String(MatchRules.time(localStorage.getItem('tofu-time-limit')??240));}catch{}
+  try{document.querySelector('#time-limit').value=String(MatchRules.time(localStorage.getItem('tofu-time-limit')??0));}catch{}
   document.querySelector('#time-limit').onchange=()=>{try{localStorage.setItem('tofu-time-limit',String(timeLimit()));}catch{}Roster.summary();};
   const targets=document.querySelector('.roster-targets'),swatches=targets.querySelector('.costume-row');
   for(let slot=2;slot<4;slot++){const b=document.createElement('button');b.id='select-seat-'+slot;b.className='roster-target hidden';b.innerHTML=`<span>${slot+1}P</span><img alt=""><b>おまかせ</b>`;b.onclick=()=>setSelection(slot);targets.insertBefore(b,swatches);}

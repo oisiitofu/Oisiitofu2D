@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),http=require('node:http'),{WebSocket}=require('ws'),{chromium}=require('playwright'),MatchRules=require('./match-rules.js');
 (async()=>{
  let checks=0;const eq=(a,b)=>{checks++;assert.deepEqual(a,b);};
- for(const t of MatchRules.times){eq(MatchRules.time(t),t);eq(MatchRules.time(String(t)),t);}for(const t of [-1,22,100000,undefined,'bad'])eq(MatchRules.time(t),240);
+ for(const t of MatchRules.times){eq(MatchRules.time(t),t);eq(MatchRules.time(String(t)),t);}for(const t of [-1,22,100000,undefined,'bad'])eq(MatchRules.time(t),0);
  const server=http.createServer(),online=require('./online-server.cjs').attachOnline(server),clients=[];
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  async function connect(){const ws=new WebSocket(`ws://127.0.0.1:${server.address().port}/online`);clients.push(ws);ws.messages=[];ws.on('message',m=>ws.messages.push(JSON.parse(m)));await new Promise(resolve=>ws.once('open',resolve));return ws;}
@@ -22,7 +22,7 @@ const assert=require('node:assert/strict'),http=require('node:http'),{WebSocket}
   for(const ws of [a,b])send(ws,{type:'finished',matchId:config.matchId});send(a,{type:'input',matchId:config.matchId,input:{x:1,jab:true}});await new Promise(r=>setTimeout(r,40));eq(room.playing,true);eq(room.players[0].input.x,0);
  }finally{for(const ws of clients)ws.close();await new Promise(resolve=>server.close(resolve));}
  const browser=await chromium.launch({channel:'msedge',headless:true});try{
-  const p=await browser.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.stack));await p.goto(process.env.GAME_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});await p.click('#enter-roster');
+  const p=await browser.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.stack));await p.goto(process.env.GAME_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});await p.click('#enter-roster');eq(await p.inputValue('#stock-count'),'3');eq(await p.inputValue('#time-limit'),'0');
   const result=await p.evaluate(()=>{
    const rows=[];simulationSpeed=0;const read=BattlePlayers.localInput;BattlePlayers.localInput=()=>emptyInput();
    try{for(const mode of ['battle','squad3','squad5'])for(const time of MatchRules.times){document.querySelector('#battle-mode').value=mode;document.querySelector('#time-limit').value=String(time);start();const initial=matchTime;countdown=0;hitstop=0;for(let n=0;n<60;n++)update(true);const after=matchTime;let expired=null;if(time){matchTime=1/60;update(true);expired=state==='result';}rows.push({mode,time,initial:time===0?initial===Infinity:initial===time,elapsed:time===0?after===Infinity:Math.abs(after-(time-1))<1e-7,expired:time===0?state==='battle':expired});}
