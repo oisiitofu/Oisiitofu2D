@@ -10,3 +10,5 @@
 専用250項目：15通常/空中の小さい相手への密着と先端・両向き・上下前後・ガード、球サイズ48姿勢、NBタップ/3連投/有限寿命/再装填、横B距離/命中/壁反射/即再使用、ゴールワープと左右/内側下復帰、ボックス破壊/3種/種の再現/KOを確認。実Canvasの方向・先端・色・崖の手26項目。ガラス色は透過往復時のRGB量子化2以内を許容、アルファは完全一致。CPUヴィヴィとフィオルン各2400F、実命中・必殺・有限座標。CPU結果は対人勝率ではない。独立2画面181Fで射撃/反射/設置/抽選/ワープと位置/状態/時間/ポーズ/種/オブジェクト一致。49姿勢/12効果/245カラーのart-loading-test不一致0、例外0。既存共通処理の変更はID登録と専用色マスクのみ。無関係な全キャラの再検証なし。
 
 再生成：サーバー起動後、NODE_PATHにPlaywright/sharpのあるNode環境を指定して `node characters/aiai/tests/assemble-art.cjs` → `node characters/aiai/tests/register-character.cjs` → `ART_IDS=aiai node .tools/build-art.cjs`。検証は同tests/のaiai-test.cjs、aiai-visual-test.cjs、aiai-cpu-test.cjs、aiai-online-test.cjs。公開後はaiai-public-test.cjs。
+
+公開版v66へ反映済み。公開後の16項目・表示92番/アルルの次/4必殺/再使用条件/球サイズ/5カラー/オンラインリンクが合格、例外0。アップロード29件26,127,703バイト、失敗0。一時トークン除去済み、公開範囲とオンラインリンクを保持。詳細はpublication.json。

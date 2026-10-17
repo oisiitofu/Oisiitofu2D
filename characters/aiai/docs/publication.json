@@ -1,0 +1,24 @@
+{
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 66,
+  "source": "3e008b6346a5c573865dba0a2d408e98b47a3103",
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_dd1697f6975c8191bdac7083190416bc",
+  "deployment": "appgdep_6ad3390ad11c819184fdeb4b0e493bce",
+  "environmentRevision": 130,
+  "upload": {
+    "uploaded": 29,
+    "bytes": 26127703,
+    "failed": []
+  },
+  "gameCommit": "baafcb6",
+  "checks": {
+    "public": 16,
+    "mechanics": 250,
+    "visual": 26,
+    "onlineIdenticalFrames": 181,
+    "cpuMatches": 2,
+    "artPoses": 49,
+    "effects": 12,
+    "costumes": 245
+  }
+}
