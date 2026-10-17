@@ -1,0 +1,47 @@
+'use strict';
+const AiaiMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opt={special:true,newcomerHit:true,soundFamily:'punch'},a=NewcomerCore.moves(['軽い転がり','連続体当たり','跳ねぶつかり','スピンアタック','バウンドアッパー','低い突進','高速タックル','フルスピンダッシュ','スピン打ち上げ','その場スピン','回転体当たり','前方スピンキック','後方スピン','上方向バウンド','急降下スパイク'],{
+ dragon:m('バナナショット',12,[],36,0,{...opt,aiaiBanana:true,projectile:true,tether:true,pose:40,damage:3.5,rangedInterval:60,rangedRearm:30}),
+ dash:m('スピンダッシュ',8,[w(8,30,'front',{pose:41,damage:10})],14,0,{...opt,aiaiRoll:true,pose:41,damage:10,airControlMultiplier:0,gravityMultiplier:.7}),
+ rise:m('ゴールジャンプ',8,[],62,18,{...opt,aiaiGoal:true,pose:42,damage:6,helpless:true,gravityMultiplier:0,airControlMultiplier:0,ledgeGrabStart:18}),
+ gale:m('アイテムボックス',14,[],12,0,{...opt,aiaiBox:true,pose:43,damage:0}),
+ airDrop:m('空中アイテムボックス',14,[],12,16,{...opt,aiaiBox:true,aerial:true,pose:43,damage:0})
+ },'punch',103),poses={jab:6,jab2:7,jab3:8,heavy:8,up:10,low:11,dashAttack:9,smash:9,upsmash:10,downsmash:11,air:12,fair:13,bair:14,uair:15,dair:16,grab:17,pummel:18,ledge:6,getupAttack:11,forwardThrow:19,backThrow:14,upThrow:10,downThrow:16};for(const[k,n]of Object.entries(poses)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=n;}a.grab.newcomerHit=false;a.downsmash.activeFrames[1].pose=a.getupAttack.activeFrames[1].pose=14;for(const v of Object.values(a))v.animation={...v.animation,anticipationPose:v.special?v.pose:3,accelerationPose:v.pose,recoveryPose:v.special?v.pose:0,lean:0,lunge:0,impactScale:1};return a;})();
+function aiaiGate(f,type){return !(type==='dragon'&&(f.aiaiBananaCooldown>0||AiaiRules.objects.filter(q=>q.owner===f.id&&q.kind==='banana'&&!q.dead).length>=3)||['gale','airDrop'].includes(type)&&(f.aiaiBoxCooldown>0||AiaiRules.objects.some(q=>q.owner===f.id&&q.kind==='box'&&!q.dead)));}
+function aiaiDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;f.stateDuration=end;}
+function aiaiApply(f){const c=CharacterData.aiai,s=f.aiaiSpeedTime>0?1.18:1;f.character.walkSpeed=c.walkSpeed*s;f.character.runSpeed=c.runSpeed*s;f.character.initialDashSpeed=c.initialDashSpeed*s;}
+function aiaiNextItem(f){f.aiaiItemSeed=(Math.imul(f.aiaiItemSeed||0xA1A1,1664525)+1013904223)>>>0;return Math.floor(f.aiaiItemSeed/4294967296*3);}
+function aiaiRebound(f,a,t){if(a.rebounded)return;a.rebounded=true;a.rollFace=-a.rollFace;a.activeFrames=[];a.pose=5;f.face=a.rollFace;f.vx=a.rollFace*7;f.vy=Math.min(f.vy,-3);f.grounded=false;a.gravityMultiplier=1;aiaiDuration(f,a,t+14);ring(f.x,f.y-36,'#ffe269',60);}
+function aiaiGoalStart(f,a,t,i){a.gateAt=t;a.gateX=f.x;a.gateY=f.y-40;a.exitX=f.x+clamp(i.x,-1,1)*100;a.exitY=f.y-85;a.phase='gate';aiaiDuration(f,a,t+60);}
+function aiaiBreakBox(q,f,r){if(q.dead)return;q.dead=true;r.spawn(f,{kind:['bunch','speed','spring'][q.itemVariant],x:q.x,y:q.y-8,vx:0,vy:-2,radius:20,damage:5,life:180,sourceType:'gale'});ring(q.x,q.y,'#ffdf51',55);}
+const AiaiRules=NewcomerCore.create('aiai',AiaiMoves,{
+ reset(){for(const f of fighters)if(f.characterId==='aiai'){Object.assign(f,{aiaiBananaCooldown:0,aiaiBoxCooldown:0,aiaiSpeedTime:0,aiaiItemSeed:(0xA1A1+f.id*137)>>>0});aiaiApply(f);}},
+ status(f){if(!f.hitlag)for(const k of['aiaiBananaCooldown','aiaiBoxCooldown','aiaiSpeedTime'])f[k]=f.respawn?0:Math.max(0,(f[k]||0)-1);if(f.respawn)f.aiaiBananaCooldown=f.aiaiBoxCooldown=f.aiaiSpeedTime=0;aiaiApply(f);},
+ prepare(f,a){a.activeFrames=a.activeFrames.map(w=>({...w}));if(a.aiaiBanana){a.shots=0;a.motionLastEvent=28;}if(a.aiaiRoll)a.rollFace=a.originFace;if(a.aiaiBox)a.motionLastEvent=14;},
+ action(f,i,r){const a=f.attack,t=f.timer;
+  if(a.aiaiBanana){f.buffer=null;f.fastFall=false;f.vx=moveToward(f.vx,0,.6);if([12,20,28].includes(t)&&!a.finished&&(t===12||i.specialHeld)){a.shots++;if(t===12)f.aiaiBananaCooldown=60;r.spawn(f,{kind:'banana',bodyOrigin:true,x:f.x+a.originFace*32,y:f.y-45,vx:a.originFace*9.5,vy:-4.5,radius:10,damage:3.5,life:55});}if(t>=12&&!a.finished&&(!i.specialHeld||a.shots>=3)){a.finished=true;a.tether=false;a.motionLastEvent=t;aiaiDuration(f,a,t+10);}}
+  if(a.aiaiRoll){f.fastFall=false;if(t>=8&&t<=30&&!a.rebounded){f.face=a.rollFace;f.vx=a.rollFace*(a.originGrounded?10.5:8.5);}else f.vx=moveToward(f.vx,0,.5);}
+  if(a.aiaiBox&&t===14&&!a.placed){a.placed=true;r.spawn(f,{kind:'box',x:f.x+a.originFace*52,y:f.y-24,vx:0,vy:0,radius:21,damage:0,life:240,itemVariant:aiaiNextItem(f)});f.aiaiBoxCooldown=180;}
+  if(a.aiaiGoal){f.buffer=null;f.fastFall=false;if(t<8){f.vx*=.5;f.vy=0;return;}if(a.gateAt==null&&!a.escapeSide){const p=platforms.find(p=>p.main);if(f.x>p.x-20&&f.x<p.x+p.w+20&&f.y>p.y+85){NewcomerCore.escape(f,a);aiaiDuration(f,a,t+110);}else aiaiGoalStart(f,a,t,i);}
+   if(a.escapeSide){NewcomerCore.escapeAction(f,a,0);if(!a.escapeSide)aiaiGoalStart(f,a,t,{x:Math.sign(720-f.x)});return;}
+   const dt=t-a.gateAt;if(dt<6){f.vx=f.vy=0;a.gravityMultiplier=0;}
+   else if(a.launchAt==null){a.launchAt=t;a.phase='jump';f.x=a.exitX;f.y=a.exitY;f.vx=clamp(i.x,-1,1)*6;f.vy=-14;f.grounded=false;f.recovered=true;f.intangible=Math.max(f.intangible,2);a.activeFrames=[CombatData.window(t,t+8,'up',{pose:42,damage:6})];a.activeStart=t;a.activeEnd=t+8;aiaiDuration(f,a,t+48);}
+   else{a.gravityMultiplier=t-a.launchAt<8?0:.75;if(t-a.launchAt<8)f.vy=-12;f.vx=moveToward(f.vx,clamp(i.x,-1,1)*6,.35);}
+  }
+ },
+ collision(f,i,v){const a=f.attack;if(a?.aiaiRoll&&!a.rebounded&&f.timer>=8&&v.oldVx&&f.vx===0)aiaiRebound(f,a,f.timer);if(a?.aiaiGoal&&a.launchAt!=null&&!a.ceilingEscaped&&v.oldVy<-1&&f.vy===0&&!f.grounded){a.ceilingEscaped=true;NewcomerCore.escape(f,a);a.gateAt=a.launchAt=null;a.activeFrames=[];aiaiDuration(f,a,f.timer+110);}},
+ onHit(f,o,hit){const a=f.attack;if(a?.aiaiRoll)aiaiRebound(f,a,f.timer);},
+ boxes(f,a,w){const s=w.shape,h=40,reach=({jab:54,jab2:60,jab3:63,heavy:68,low:62,dashAttack:69,smash:81,fair:72,bair:68,dash:70})[a.type]??65,p=s==='up'?[0,-24,0,-100]:s==='down'?[0,-30,8,20]:s==='back'?[0,-h,-reach,-h]:s==='low'?[0,-16,reach,-16]:s==='spin'?[-37,-h,37,-h]:[0,-h,reach,-h];return[{x1:f.x+p[0]*f.face,y1:f.y+p[1],x2:f.x+p[2]*f.face,y2:f.y+p[3],radius:s==='spin'?28:21,window:w,modifiers:w}];},
+ hurtboxes(f){return[{part:'head',x:f.x,y:f.y-54,r:23},{part:'torso',x:f.x,y:f.y-39,r:33},{part:'legs',x:f.x,y:f.y-17,r:24}];},
+ projectile(q,f,o,r){if(f.respawn||q.age>=q.life){q.dead=true;return true;}q.previousX=q.x;q.previousY=q.y;
+  if(q.kind==='banana'){q.vy+=.25;q.x+=q.vx;q.y+=q.vy;}else{q.vy=Math.min(8,q.vy+.35);q.y+=q.vy;}
+  const floor=platforms.filter(p=>q.x>=p.x&&q.x<=p.x+p.w&&q.previousY+q.radius<=p.y+2&&q.y+q.radius>=p.y).sort((a,b)=>a.y-b.y)[0];if(floor){if(q.kind==='banana'){q.dead=true;return true;}q.y=floor.y-q.radius;q.vy=0;q.resting=true;}
+  if(q.x<-900||q.x>2340||q.y>1500){q.dead=true;return true;}
+  if(q.kind==='box'){if(q.age>=8)for(const attacker of fighters){if(attacker.hitlag||attacker.respawn||!attacker.attack||['grab','pummel'].includes(attacker.attack.type))continue;const touched=attackBoxes(attacker).some(b=>{const dx=b.x2-b.x1,dy=b.y2-b.y1,u=clamp(((q.x-b.x1)*dx+(q.y-b.y1)*dy)/Math.max(1,dx*dx+dy*dy),0,1);return Math.hypot(q.x-b.x1-dx*u,q.y-b.y1-dy*u)<=q.radius+b.radius;});if(touched){aiaiBreakBox(q,f,r);break;}}return true;}
+  if(q.kind==='speed'){if(Math.hypot(q.x-f.x,q.y-(f.y-35))<55&&!f.respawn){f.aiaiSpeedTime=180;q.dead=true;aiaiApply(f);}return true;}
+  if(q.kind==='spring'){if(q.resting&&q.age>10&&f.grounded&&!f.attack&&!f.hitlag&&!f.hitstun&&!f.pendingLaunch&&Math.abs(q.x-f.x)<38){f.grounded=false;f.fastFall=false;f.vy=-20;f.vx=clamp(f.vx,-5,5);PlayerStates.enter(f,'Jump');q.dead=true;}return true;}
+  if(q.kind==='banana'||q.kind==='bunch')for(const target of BattlePlayers.targets(f)){if(q.dead)break;aiaiObjectHit(q,f,target,{x1:q.previousX,y1:q.previousY,x2:q.x,y2:q.y,radius:q.radius});}return true;
+ },
+ cpu(f,o,i,clear){const a=f.attack;if(a?.aiaiBanana)i.specialHeld=f.timer<28&&Math.abs(o.x-f.x)>180;if(a?.aiaiGoal){i.x=Math.sign(720-f.x);i.y=-1;return;}if(!a&&f.grounded&&!(f.aiaiBoxCooldown>0)&&frame%93===f.id&&Math.abs(o.x-f.x)<300){clear();i.x=0;i.y=1;i.special=true;}}
+});
+function aiaiObjectHit(q,f,o,b){if(q.hits.has(o.id)||o.respawn)return false;const p=CombatSystem.protection(o);if(p.intangible||p.invincible)return false;const touch=CombatSystem.contact(b,o),mode=o.mode==='Hitlag'?o.frozen?.mode:o.mode,shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(mode)&&CombatSystem.shieldCovers(o,b);if(!touch&&!shield)return false;q.hits.add(o.id);if(o.attack?.counterWindow&&o.timer>=o.attack.counterWindow[0]&&o.timer<=o.attack.counterWindow[1]){attack(o,o.attack.counterMove);o.inv=o.attack.totalFrames;q.dead=true;return true;}CombatSystem.hit(f,o,{...AiaiMoves.dragon,type:'aiai'+q.kind,sourceType:q.sourceType,projectile:true,charge:0,damage:q.damage,staleMultiplier:q.stale,launchDirection:q.face,baseKnockback:2.4,knockbackGrowth:.04,angle:-.35},b,touch);q.dead=true;return true;}
+function aiaiPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}

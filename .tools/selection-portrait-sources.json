@@ -1413,5 +1413,14 @@
       700,
       750
     ]
+  },
+  "aiai": {
+    "source": "characters/aiai/assets/aiai-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
   }
 }
