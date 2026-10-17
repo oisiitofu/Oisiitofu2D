@@ -37,7 +37,7 @@ Node.js 18以降、`npm ci`、`.tools/cloudflared.exe` が必要です。cloudfl
 
 入口を更新する専用キーは、このPCのGit管理外 `.tools/online-launcher-private.json` に設定済みです。形式は `{"token":"専用キー"}`。公開Siteの秘密環境変数 `ONLINE_ROUTE_TOKEN` と一致させます。キーをGit・公開ソース・ログへ入れないでください。移行時は所有者が安全に移すかキーを再発行し、同じ入口を同時に複数PCから更新しないでください。Sitesのソースリポジトリ用の一時認証情報とは別のキーです。
 
-公開Workerはキー認証、接続先のHTTPS/trycloudflare.com制限、実サーバーのhealth確認、更新期限付き登録を行います。停止時は自分の登録だけを解除します。
+起動側は実サーバーのhealth確認後に登録します。公開Workerはキー認証、接続先のHTTPS/trycloudflare.com制限、更新期限付き登録を行います。停止時は自分の登録だけを解除します。
 
 ## サーバー起動と常設運用
 

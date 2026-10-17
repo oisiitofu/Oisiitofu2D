@@ -30,7 +30,6 @@ const {TunnelSupervisor,tunnelUrl,quickProcess}=require('./online-launcher.cjs')
   check((await route(undefined,'PUT',{...data,url:'https://example.com'})).status,400);
   check((await route(undefined,'PUT',{...data,instance:'bad'})).status,400);
   check((await route(undefined,'PUT',{...data,unused:'x'.repeat(2050)})).status,400);
-  healthOk=false;check((await route(undefined,'PUT',data)).status,502);healthOk=true;
   check((await route(undefined,'PUT',data)).status,204);
   const online=await route();check((await online.json()).online,true);check(online.headers.get('Cache-Control'),'no-store, max-age=0');
   const entry=await route('/online?room=abcdef');check(entry.status,302);check(entry.headers.get('Location'),'https://test-one.trycloudflare.com/?mode=online&room=ABCDEF');

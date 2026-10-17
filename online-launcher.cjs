@@ -8,7 +8,7 @@ function save(file,data){const temp=file+'.tmp';fs.writeFileSync(temp,JSON.strin
 function processes(pid){
  if(process.platform!=='win32')return[];
  const filter=pid?'ProcessId='+Number(pid):"Name='cloudflared.exe'";
- try{const raw=execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',`@(Get-CimInstance Win32_Process -Filter "${filter}" | Select-Object ProcessId,ExecutablePath,CommandLine) | ConvertTo-Json -Compress`],{windowsHide:true,encoding:'utf8',timeout:10000});const p=JSON.parse(raw);return Array.isArray(p)?p:p?[p]:[];}catch{return[];}
+ try{const raw=execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',`[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false); @(Get-CimInstance Win32_Process -Filter "${filter}" | Select-Object ProcessId,ExecutablePath,CommandLine) | ConvertTo-Json -Compress`],{windowsHide:true,encoding:'utf8',timeout:10000});const p=JSON.parse(raw);return Array.isArray(p)?p:p?[p]:[];}catch{return[];}
 }
 const daemonProcess=state=>state&&alive(state.pid)&&processes(state.pid).some(p=>p.CommandLine?.includes(__filename)&&p.CommandLine.includes('--daemon'));
 function quickProcess(p,exe,port){return p.ExecutablePath?.toLowerCase()===exe.toLowerCase()&&p.CommandLine?.includes('tunnel')&&!/--token\b/.test(p.CommandLine)&&new RegExp('--url\\s+["\']?http://(?:localhost|127\\.0\\.0\\.1):'+port+'(?:[\\s/"\']|$)').test(p.CommandLine);}

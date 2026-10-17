@@ -16,7 +16,8 @@ export async function onlineRoute(request,env){
   if(typeof data.instance!=='string'||!/^[a-zA-Z0-9-]{8,80}$/.test(data.instance))return onlineJson({error:'Invalid instance'},400);
   if(request.method==='DELETE'){const saved=await env.BUCKET.get(ONLINE_KEY);if(saved&&(await saved.json()).instance===data.instance)await env.BUCKET.delete(ONLINE_KEY);return new Response(null,{status:204,headers:onlineHeaders});}
   const origin=tunnelOrigin(data.url);if(!origin)return onlineJson({error:'Invalid tunnel URL'},400);
-  try{const health=await fetch(origin+'/health',{redirect:'error',signal:AbortSignal.timeout(6000)});if(!health.ok||(await health.json()).status!=='ok')throw Error();}catch{return onlineJson({error:'Tunnel is not ready'},502);}
+  // The authenticated launcher checks /health before each lease renewal.
+  // Keep the public locator independent of edge-to-tunnel fetch restrictions.
   const now=Date.now();await env.BUCKET.put(ONLINE_KEY,JSON.stringify({url:origin,instance:data.instance,updatedAt:now,expiresAt:now+ONLINE_LEASE_MS}),{httpMetadata:{contentType:'application/json'}});return new Response(null,{status:204,headers:onlineHeaders});
  }
  const saved=await env.BUCKET.get(ONLINE_KEY);let current;try{current=saved?await saved.json():null;}catch{current=null;}
