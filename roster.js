@@ -67,6 +67,8 @@ const Roster=(()=>{
   'agumon', // アグモン
   'mametchi', // まめっち
   'edf', // 地球防衛軍
+  'katamari', // 塊魂
+  'klonoa', // クロノア
   'okami', // 大神
   'megamanexe', // ロックマン.EXE
   'zero', // ゼロ
@@ -80,6 +82,9 @@ const Roster=(()=>{
   'goemon', // ゴエモン
   'twinbee', // ツインビー
   'hinako', // 清水 雛子
+  'hayabusa', // リュウ・ハヤブサ
+  'alucard', // アルカード
+  'kingbonby', // キングボンビー
   'ryza', // ライザ
   'yuri', // 夕莉
   'ryofu', // 呂布
