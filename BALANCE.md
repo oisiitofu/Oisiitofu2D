@@ -768,3 +768,4 @@ squad-rules-test.cjsの423項目合格：3/5キャラ200抽選、乱数が同じ
 参考：[スマブラ公式の基本操作](https://www.smashbros.com/wiiu-3ds/sp/jp/howto/entry3.html)の方向別の使い分けと、[任天堂のVer.2.0.0調整](https://support.nintendo.com/jp/switch/software_support/aaab/detail/200_fighter.html)の技ごとの角度/連続ヒット調整。40度/32度は本作の座標・既存横補正に合わせた設計値で、公式が公表した一律の角度ではない。
 
 launch-angle-test.cjsの12,521項目合格。全135形態の攻撃ウィンドウの角度/初速の大きさ/例外を測定し、代表7キャラの左右×地空の実被弾、速度/ダメージ/硬直/減速、実弾横スマ、DI上下、崖外への上向き飛行を確認。smash-launch-test.cjsの26,557項目、knockback-motion-test.cjsの12,242項目、multihit-balance-test.cjsの802項目も合格。前者のテストでステージ初期化が対戦開始の非同期完了に依存していたため、検証開始時にstage0を明示。launch-angle-online-test.cjsは独立2画面で右横スマ/左弾横スマ/低い下スマの34スナップショットが一致、例外0。左右の実描画も確認。画像・音声の更新/全件照合は行っていない。
+公開版v74へ反映済み（ゲームeab27eb、Sitesソース9194ac9ae25ea6ded3eb89c49c4d41025df2c3de、最終配信appgdep_6ad3ad05ee2881919300d381ef4a8298）。ゲーム本体のみ1パス/1オブジェクト2,500,280バイト更新、失敗0。公開後は左右×横スマ/横強/空前/下スマ/上スマ/空下の12場面で実被弾の速度ベクトルを確認し、横スマ40度・横強/空前32度、下スマ/上スマ/メテオの例外維持、例外0。公開範囲と既存オンラインURL・画像/音声を維持。一時トークン除去済み、環境revision146。
