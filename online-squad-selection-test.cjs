@@ -19,7 +19,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
   await host.click('#open-room');await host.click('#create-room');await host.waitForFunction(()=>Net.code.length===6);const code=await host.evaluate(()=>Net.code);
   for(const p of guests){await p.bringToFront();await p.click('#open-room');await p.fill('#room-code',code);await p.click('#join-room');await p.waitForFunction(()=>Net.code.length===6);await p.click('#edit-online-lineup');eq(await p.locator('#online-lineup-size').inputValue(),'3');eq(await p.locator('#online-lineup-size').isDisabled(),true);}
   await host.click('#edit-online-lineup');
-  const base=['tifa','isaac','chiikawa','chocobo','tifa'];
+  const base=['tifa','isaac','chiikawa','chocobo','ulgrim'];
   for(const size of [3,5]){
    if(size===5){
     await host.selectOption('#online-lineup-size','5');await guests[0].waitForFunction(()=>SquadBattle.size()===5);
@@ -34,7 +34,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    }
    await host.screenshot({path:'.tools/online-squad-'+size+'-roster.png'});
    // Editing one's lineup revokes ready, and only that player's roster changes.
-   await guests[0].click('#open-room');await guests[0].click('#ready-room');await guests[0].click('#edit-online-lineup');await guests[0].click('#squad-lineup [data-slot="0"]');await guests[0].click(`[data-id="${lineups[1][0]}"]`);await host.waitForFunction(()=>document.querySelectorAll('#room-players .room-player')[1].textContent.includes('キャラ選択中'));checks++;
+   await guests[0].click('#open-room');await guests[0].click('#ready-room');await host.waitForFunction(()=>document.querySelectorAll('#room-players .room-player')[1].textContent.includes('準備完了'));eq(await host.locator('#room-players .room-player:nth-child(2) .room-lineup').textContent(),'出場キャラは対戦開始まで非公開');eq(await host.locator('#room-players .room-player:nth-child(2) img').count(),0);eq((await guests[0].locator('#room-players .room-player:nth-child(2) .room-lineup').textContent()).includes('非公開'),false);await guests[0].click('#edit-online-lineup');await guests[0].click('#squad-lineup [data-slot="0"]');await guests[0].click(`[data-id="${lineups[1][0]}"]`);await host.waitForFunction(()=>document.querySelectorAll('#room-players .room-player')[1].textContent.includes('キャラ選択中'));checks++;
    for(const p of pages){await p.bringToFront();await p.click('#open-room');eq((await p.locator('#room-match-rule').textContent()).includes(size+'キャラ団体戦'),true);await p.click('#ready-room');}
    const id=size===3?1:2;
    await Promise.all(pages.map(p=>p.waitForFunction(id=>state==='result'&&squadRounds[id],id,{timeout:45000})));

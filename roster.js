@@ -173,7 +173,7 @@ const Roster=(()=>{
   });
   artReady();summary();SquadBattle.refresh();BattlePlayers.refresh();
  }
- function select(id){if(!definitionFor(id))return;if(BattlePlayers.setCharacter(id))return;SquadBattle.choose(id);if(target==='cpu'){$roster('cpu-character').value=id;$roster('cpu-character').dispatchEvent(new Event('change'));}else{chosen=id;refreshSelection();}}
+ function select(id){if(!definitionFor(id))return;if(BattlePlayers.setCharacter(id))return;if(!SquadBattle.choose(id))return;if(target==='cpu'){$roster('cpu-character').value=id;$roster('cpu-character').dispatchEvent(new Event('change'));}else{chosen=id;refreshSelection();}}
  function setTarget(value,preserveSeat=false){if(!preserveSeat)return BattlePlayers.setSelection(value==='cpu'?1:0);target=value==='cpu'&&$roster('battle-mode').value!=='online'?'cpu':'player';refreshSelection();}
  function setColor(value){if(BattlePlayers.setColor(value))return;if(target==='cpu'){$roster('color2').value=String(value);$roster('color2').dispatchEvent(new Event('change'));}else{selected=value;artReady();}}
  function thumbnailSize(img,aspect){img.sizes=Math.ceil(Math.max(img.clientWidth||140,img.clientHeight*aspect))+'px';}
