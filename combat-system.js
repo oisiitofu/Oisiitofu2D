@@ -5,15 +5,28 @@ const CombatSystem=(()=>{
  // per reference unit). Keep knockback/hitstun, weight and charge relationships.
  const isSmash=a=>/smash/i.test([a.type,a.sourceType].join(' '))||!a.type&&Roster.definitions.some(({id})=>['smash','upsmash','downsmash'].some(key=>movesFor({characterId:id})[key]===a));
  const launchSpeed=(a,raw)=>raw*(isSmash(a)?.12:.24);
+ // Calibrate the resulting trajectory, including the existing horizontal
+ // smash boost. Rotate its velocity without increasing its magnitude.
+ function launchTrajectory(a){
+  const angle=a.angle,smash=isSmash(a),horizontalScale=smash&&Math.abs(Math.cos(angle))>=Math.SQRT1_2?1.5:1;
+  const original={angle,horizontalScale,velocityScale:1};let type=a.sourceType||a.type;
+  if(!type&&smash)for(const{id}of Roster.definitions){type=['smash','upsmash','downsmash'].find(key=>movesFor({characterId:id})[key]===a);if(type)break;}
+  const linking=a.pull||a.fixedKnockback||a.rehitRate||a.rehitFrames||a.cancel?.next||Number.isFinite(a.end)&&a.end<a.activeEnd;
+  if(!Number.isFinite(angle)||angle>0||angle<-Math.PI/2||a.isMeteor||a.damageOnly||linking||['downsmash','low','dair','downThrow','pummel','grab'].includes(type))return original;
+  const actual=Math.atan2(Math.sin(angle),Math.cos(angle)*horizontalScale),minimum=(type==='smash'?40:32)*Math.PI/180;
+  if(actual<=-minimum)return original;
+  const lifted=Math.atan2(-Math.sin(minimum)*horizontalScale,Math.cos(minimum));
+  return{angle:lifted,horizontalScale,velocityScale:Math.hypot(Math.cos(angle)*horizontalScale,Math.sin(angle))/Math.hypot(Math.cos(lifted)*horizontalScale,Math.sin(lifted))};
+ }
  function stale(f,id){let weights=[.09,.085,.075,.065,.055,.045,.035,.025,.015],penalty=f.staleQueue.reduce((n,m,i)=>n+(m===id?weights[i]:0),0);return penalty?Math.max(.55,1-penalty):1.05;}
  function calculateKnockback(a,percent,weight=90,attackerPercent=0,damage=a.damage){let growth=(a.knockbackGrowth??.06)*10,base=(a.baseKnockback??3)*3;let raw=a.fixedKnockback||(((percent/10+percent*damage/20)*200/(weight+100)*1.4+18)*growth+base);let rage=1+Math.max(0,Math.min(1,(attackerPercent-35)/115))*.1;return raw*rage;}
  function freeze(f,frames){if(frames<=0)return;if(!f.frozen)f.frozen={mode:f.mode,state:f.state,stateFrame:f.stateFrame,stateStart:f.stateStart,stateEnd:f.stateEnd,stateDuration:f.stateDuration,faf:f.faf,timer:f.timer};f.hitlag=Math.max(f.hitlag||0,frames);f.mode='Hitlag';}
  function hitlag(f,i){if(f.pendingLaunch&&(i.flickX||i.flickY)){let ox=f.x,oy=f.y,m=f.pendingLaunch.SDIMultiplier??1;f.x+=i.x*3*m;f.y+=i.y*3*m;let main=platforms.find(p=>p.main),ecb=f.character.ecb;if(f.x>main.x-ecb.radius&&f.x<main.x+main.w+ecb.radius&&f.y>main.y&&f.y-ecb.height<main.y+90){f.x=ox;f.y=oy;}}
   if(--f.hitlag>0)return;let frozen=f.frozen;f.frozen=null;if(frozen)Object.assign(f,frozen);
   if(f.pendingLaunch){let p=f.pendingLaunch;f.pendingLaunch=null;let base=p.angle,cross=Math.cos(base)*i.y-Math.sin(base)*i.x,angle=base+(p.raw>=50&&Math.abs(Math.sin(base))>Math.sin(BattleFeel.tuning.diAngle)?clamp(cross,-1,1)*BattleFeel.tuning.diAngle:0),speed=p.speed;if(p.raw>=50&&Math.abs(Math.sin(angle))<=Math.sin(65*Math.PI/180))speed*=i.y<0?1-i.y*.095:1-i.y*.08;
-   // Only the horizontal component was underpowered. Keep vertical KOs,
-   // raw knockback, hitstun and vertical launch relationships intact.
-   f.vx=Math.cos(angle)*speed*(p.smash&&Math.abs(Math.cos(base))>=Math.SQRT1_2?1.5:1);f.vy=Math.sin(angle)*speed;f.launchDecay=p.smash?.204*Math.abs(Math.cos(angle)):.075;f.hitstun=p.hitstun;f.lastLaunchAngle=angle;f.lastLaunchSpeed=speed;f.lastKnockback=p.raw;f.tumbling=p.raw>=50;
+   const horizontal=p.horizontalScale??(p.smash&&Math.abs(Math.cos(base))>=Math.SQRT1_2?1.5:1),scale=p.velocityScale??1;
+   const decayAngle=(p.decayAngle??base)+angle-base;
+   f.vx=Math.cos(angle)*speed*horizontal*scale;f.vy=Math.sin(angle)*speed*scale;f.launchDecay=p.smash?.204*Math.abs(Math.cos(decayAngle)):.075;f.hitstun=p.hitstun;f.lastLaunchAngle=angle;f.lastLaunchSpeed=speed;f.lastKnockback=p.raw;f.tumbling=p.raw>=50;
    // A flat ground hit has not landed from the air. Keep its support until
    // physics actually lifts it or carries it past the lip; otherwise the
    // first gravity step turns it into a knockdown and discards its launch.
@@ -46,8 +59,8 @@ const CombatSystem=(()=>{
   if(armored){GameAudio.cue('shield-hit',.7,o);o.armorHits=(o.armorHits||0)+1;freeze(o,lag);if(!a.projectile)freeze(f,lag);return;}
   if(NewcomerCore.ids.includes(f.characterId)&&NewcomerCore.capture(f,o,a,armored)){freeze(f,6);CombatVFX.impact(o.x,o.y-32,f.color,dmg,f.face,f.characterId);GameAudio.strike(f,a,dmg);return;}
   if(f.characterId==='agumon'&&AgumonRules.capture(f,o,a,armored)){freeze(f,6);CombatVFX.impact(o.x,o.y-32,f.color,dmg,f.face,f.characterId);GameAudio.strike(f,a,dmg);return;}
-  releaseOnHit(o);let direction=a.launchDirection||f.face,angle=direction<0?Math.PI-a.angle:a.angle;
-  o.pendingLaunch={raw,speed:launchSpeed(a,raw),angle,hitstun:Math.max(4,Math.floor(raw*.4)-1),SDIMultiplier:a.SDIMultiplier??1,smash:isSmash(a)};o.meteor=!!a.isMeteor;o.hitstun=0;
+  releaseOnHit(o);let direction=a.launchDirection||f.face,trajectory=launchTrajectory(a),angle=direction<0?Math.PI-trajectory.angle:trajectory.angle;
+  o.pendingLaunch={raw,speed:launchSpeed(a,raw),angle,decayAngle:direction<0?Math.PI-a.angle:a.angle,horizontalScale:trajectory.horizontalScale,velocityScale:trajectory.velocityScale,hitstun:Math.max(4,Math.floor(raw*.4)-1),SDIMultiplier:a.SDIMultiplier??1,smash:isSmash(a)};o.meteor=!!a.isMeteor;o.hitstun=0;
   if(a.bounceOnHit&&!f.grounded){f.vy=a.bounceOnHit;f.fastFall=false;}
   if(a.pull){o.pendingLaunch.speed=clamp((Math.abs(o.x-f.x)-40)/8,2,16);o.pendingLaunch.angle=direction<0?Math.PI+.08:-.08;o.pendingLaunch.hitstun=19;}
   if(!a.projectile)freeze(f,lag);freeze(o,lag);if(a.element)RikiRules.onHit(f,o,a);
@@ -78,5 +91,5 @@ const CombatSystem=(()=>{
  }
  function timeline(f){let a=f.attack;if(!a)return;for(let e of a.timeline){if(e.frame!==f.timer||a.eventsDone.has(e))continue;a.eventsDone.add(e);switch(e.type){case 'SetVelocity':if(e.x!==undefined)f.vx=e.x*f.face;if(e.y!==undefined)f.vy=e.y;break;case 'AddVelocity':f.vx+=(e.x||0)*f.face;f.vy+=e.y||0;break;case 'EnableGravity':f.gravityOff=false;break;case 'DisableGravity':f.gravityOff=true;break;case 'SetIntangible':f.intangible=e.frames;break;case 'ClearIntangible':f.intangible=0;break;case 'EnableHitbox':a.extraHitboxes.push(e.hitbox);break;case 'DisableHitbox':a.extraHitboxes=a.extraHitboxes.filter(h=>h.id!==e.id);break;case 'ChangeHitbox':Object.assign(a.extraHitboxes.find(h=>h.id===e.id)||{},e.values);break;case 'EnableArmor':a.armorFrames=[{start:f.timer,end:e.end||a.totalFrames,...e.armor}];break;case 'DisableArmor':a.armorFrames=[];break;case 'EnableLandingFlag':a.autoCancelWindow=[];break;case 'DisableLandingFlag':a.autoCancelWindow=[[f.timer,Infinity]];break;case 'PlaySFX':sound(e.sound||'swing',1,f);break;case 'SpawnVFX':ring(f.x,f.y-32,colors[f.color],e.size||70);break;case 'CameraShake':shake=e.amount||5;break;}}
  }
- return{stale,calculateKnockback,launchSpeed,freeze,hitlag,protection,contact,shieldCovers,hit,resolve,timeline,inWindow};
+ return{stale,calculateKnockback,launchSpeed,launchTrajectory,freeze,hitlag,protection,contact,shieldCovers,hit,resolve,timeline,inWindow};
 })();

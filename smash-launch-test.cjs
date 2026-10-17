@@ -1,6 +1,6 @@
 const fs=require('fs'),{chromium}=require('playwright');
 (async()=>{const b=await chromium.launch({channel:'msedge',headless:true}),errors=[];try{const p=await b.newPage();p.on('pageerror',e=>errors.push(e.message));await p.goto(process.env.GAME_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded);await p.click('#enter-training');await p.click('#start');const result=await p.evaluate(()=>{
- state='pause';const failed=[],samples=[],trajectories=[];let checks=0;const check=(name,pass,detail)=>{checks++;if(!pass)failed.push({name,detail});};
+ state='pause';setupStage('0');const failed=[],samples=[],trajectories=[];let checks=0;const check=(name,pass,detail)=>{checks++;if(!pass)failed.push({name,detail});};
  const reset=id=>{fighters=[makeFighter(0,0,id),makeFighter(1,0,'dragoon')];for(const f of fighters)Object.assign(f,{x:f.id?720:550,y:560,vx:0,vy:0,inv:0,intangible:0,hitlag:0,hitstun:0,grounded:true});return fighters;};
  StageRules.oneOnOne=true;
  for(const {id}of Roster.definitions){for(const type of ['smash','upsmash','downsmash']){
