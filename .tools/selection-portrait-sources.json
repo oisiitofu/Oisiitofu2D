@@ -1395,5 +1395,14 @@
       1254,
       1254
     ]
+  },
+  "battlemage": {
+    "source": "characters/battlemage/assets/battlemage-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
   }
 }

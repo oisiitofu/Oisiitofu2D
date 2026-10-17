@@ -135,6 +135,7 @@ CharacterData.kingbonby={...CharacterData.dragoon,weight:120,walkSpeed:2.5,initi
 CharacterData.fiora.ledgeGrip=[0.08521579430670345,0.9832214765100671];
 CharacterData.alucard={...CharacterData.dragoon,weight:99,walkSpeed:3.4,initialDashSpeed:7.7,runSpeed:7.1,airSpeed:6.4,airAcceleration:.35,gravity:.62,fullHopVelocity:14.2,ecb:{radius:17,height:94},shieldSize:47,shieldOffset:[0,-44],ledgeGrip:[-0.0373959230548378,0.9896551724137931]};
 CharacterData.kurabe={...CharacterData.dragoon,weight:89,walkSpeed:3.6,initialDashSpeed:7.8,runSpeed:7.2,airSpeed:6.8,airAcceleration:.45,gravity:.6,fullHopVelocity:14.2,ecb:{radius:16,height:86},shieldSize:44,shieldOffset:[0,-40],ledgeGrip:[0.29335071707953064,0.9867549668874173]};
+CharacterData.battlemage={...CharacterData.dragoon,weight:82,walkSpeed:3.8,initialDashSpeed:8,runSpeed:7.5,airSpeed:6.8,airAcceleration:.45,gravity:.59,fullHopVelocity:14.2,ecb:{radius:15,height:80},shieldSize:41,shieldOffset:[0,-38],ledgeGrip:[0.17795893719806766,0.9825174825174825]};
 const MovementTuning={shortHopReleaseGraceFrames:2,fastFallMultiplier:1.25,fastFallAcceleration:1.1};
 for(const character of Object.values(CharacterData))character.fastFallSpeed=character.fallSpeed*MovementTuning.fastFallMultiplier;
 const StageRules={blast:{left:-780,right:2220,top:-480,bottom:1200},camera:{minX:-560,maxX:2000,minY:-400,maxY:1350,minZoom:.56,maxZoom:1.5},loupe:{radius:39,inset:48,warningDistance:180},ledges:[],oneOnOne:false};
