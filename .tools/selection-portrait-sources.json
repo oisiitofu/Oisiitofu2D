@@ -1404,5 +1404,14 @@
       1254,
       1254
     ]
+  },
+  "karateka": {
+    "source": "characters/karateka/assets/karateka-selection.png",
+    "crop": [
+      350,
+      35,
+      700,
+      750
+    ]
   }
 }
