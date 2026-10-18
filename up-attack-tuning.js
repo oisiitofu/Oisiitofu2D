@@ -5,10 +5,10 @@ const UpAttackTuning=(()=>{
  const types=new Set(['up','upsmash','uair']);
  const magic=new Set(['vivi','nia','colette','emma','ryza','sans','aruru','dietrich','rocbouquet','deemo','aerith','melia','yuri']);
  const profiles={
-  brawler:{width:84,growth:.075,base:4.1,smashGrowth:.102,smashBase:6,color:'#fff0c2'},
-  blade:{width:108,growth:.073,base:4,smashGrowth:.098,smashBase:5.8,color:'#d5edff'},
-  polearm:{width:128,growth:.070,base:3.8,smashGrowth:.092,smashBase:5.7,color:'#bde8ff'},
-  magic:{width:118,growth:.071,base:3.8,smashGrowth:.094,smashBase:5.4,color:'#d8ceff'}
+  brawler:{width:84,growth:.075,base:4.1,airGrowth:.096,smashGrowth:.102,smashBase:6,color:'#fff0c2'},
+  blade:{width:108,growth:.073,base:4,airGrowth:.093,smashGrowth:.098,smashBase:5.8,color:'#d5edff'},
+  polearm:{width:128,growth:.070,base:3.8,airGrowth:.091,smashGrowth:.092,smashBase:5.7,color:'#bde8ff'},
+  magic:{width:118,growth:.071,base:3.8,airGrowth:.092,smashGrowth:.094,smashBase:5.4,color:'#d8ceff'}
  };
  function family(f){return magic.has(f.characterId)?'magic':MeleeBalance.profile(f);}
  const typeOf=a=>a.sourceType||a.type||a.upAttackType;
@@ -18,7 +18,7 @@ const UpAttackTuning=(()=>{
   if(!applies(a)||a.damageOnly||linking(a))return a;
   const p=profiles[a.upAttackFamily]||profiles.blade,type=typeOf(a),smash=type==='upsmash';
   // Faster aerials get a smaller base but enough growth to finish a juggle.
-  const growth=smash?p.smashGrowth:p.growth+(type==='uair'?.003:0),base=smash?p.smashBase:p.base-(type==='uair'?.15:0);
+  const growth=smash?p.smashGrowth:type==='uair'?p.airGrowth:p.growth,base=smash?p.smashBase:p.base-(type==='uair'?.15:0);
   return{...a,baseKnockback:Math.max(a.baseKnockback??3,base),knockbackGrowth:Math.max(a.knockbackGrowth??.06,growth)};
  }
  function prepare(f){if(applies(f.attack))f.attack.upAttackFamily=family(f);}

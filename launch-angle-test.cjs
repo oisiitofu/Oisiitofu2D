@@ -13,7 +13,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
    const before=Math.hypot(Math.cos(strike.angle)*boost,Math.sin(strike.angle)),after=Math.hypot(Math.cos(t.angle)*t.horizontalScale,Math.sin(t.angle))*t.velocityScale;
    check(id+'/'+type+' velocity magnitude preserved',close(before,after),{before,after});
    if(t.angle!==strike.angle){adjusted[type]=(adjusted[type]||0)+1;const deg=Math.atan2(-Math.sin(t.angle),Math.abs(Math.cos(t.angle)*t.horizontalScale))*180/Math.PI;check(id+'/'+type+' upward floor',deg>=(type==='smash'?40:32)-1e-8,{deg});}
-   if(['downsmash','low','dair','downThrow','upsmash','uair'].includes(type)||strike.pull||strike.fixedKnockback||strike.cancel?.next||w.end<a.activeEnd)check(id+'/'+type+' authored exception preserved',t.angle===strike.angle);
+   if(['downsmash','low','downThrow','upsmash','uair'].includes(type)||type==='dair'&&AerialLaunchTuning.meteor(strike)||strike.pull||strike.fixedKnockback||strike.cancel?.next||w.end<a.activeEnd)check(id+'/'+type+' authored exception preserved',t.angle===strike.angle);
   }}
   for(const id of ['dragoon','chiikawa','edelgard','fiora','hayabusa','malenia','metabee'])for(const type of ['smash','heavy','fair','bair','dashAttack','forwardThrow','downsmash','low','upsmash','dair'])for(const face of [-1,1])for(const grounded of [false,true]){
    const[f,o]=pair(id,face,grounded),move=movesFor(f)[type],w=move.activeFrames.at(-1),a={...move,...w,type,launchDirection:face},lag=BattleFeel.hitlag(a),beforePercent=o.damage;

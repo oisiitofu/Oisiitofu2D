@@ -9,7 +9,7 @@ const CombatSystem=(()=>{
  // smash boost. Rotate its velocity without increasing its magnitude.
  function launchTrajectory(a){
   const angle=a.angle,smash=isSmash(a),horizontalScale=smash&&Math.abs(Math.cos(angle))>=Math.SQRT1_2?1.5:1;
-  const original={angle,horizontalScale,velocityScale:1};let type=a.sourceType||a.type;
+  const original={angle,horizontalScale,velocityScale:1};const role=AerialLaunchTuning.trajectory(a,original);if(role)return role;let type=a.sourceType||a.type||a.launchRoleType;
   if(!type&&smash)for(const{id}of Roster.definitions){type=['smash','upsmash','downsmash'].find(key=>movesFor({characterId:id})[key]===a);if(type)break;}
   const linking=a.pull||a.fixedKnockback||a.rehitRate||a.rehitFrames||a.cancel?.next||Number.isFinite(a.end)&&a.end<a.activeEnd;
   if(!Number.isFinite(angle)||angle>0||angle<-Math.PI/2||a.isMeteor||a.damageOnly||linking||['downsmash','low','dair','downThrow','pummel','grab'].includes(type))return original;
@@ -19,7 +19,7 @@ const CombatSystem=(()=>{
   return{angle:lifted,horizontalScale,velocityScale:Math.hypot(Math.cos(angle)*horizontalScale,Math.sin(angle))/Math.hypot(Math.cos(lifted)*horizontalScale,Math.sin(lifted))};
  }
  function stale(f,id){let weights=[.09,.085,.075,.065,.055,.045,.035,.025,.015],penalty=f.staleQueue.reduce((n,m,i)=>n+(m===id?weights[i]:0),0);return penalty?Math.max(.55,1-penalty):1.05;}
- function calculateKnockback(a,percent,weight=90,attackerPercent=0,damage=a.damage){a=UpAttackTuning.knockback(a);let growth=(a.knockbackGrowth??.06)*10,base=(a.baseKnockback??3)*3;let raw=a.fixedKnockback||(((percent/10+percent*damage/20)*200/(weight+100)*1.4+18)*growth+base);let rage=1+Math.max(0,Math.min(1,(attackerPercent-35)/115))*.1;return raw*rage;}
+ function calculateKnockback(a,percent,weight=90,attackerPercent=0,damage=a.damage){a=UpAttackTuning.knockback(AerialLaunchTuning.knockback(a));let growth=(a.knockbackGrowth??.06)*10,base=(a.baseKnockback??3)*3;let raw=a.fixedKnockback||(((percent/10+percent*damage/20)*200/(weight+100)*1.4+18)*growth+base);let rage=1+Math.max(0,Math.min(1,(attackerPercent-35)/115))*.1;return raw*rage;}
  function freeze(f,frames){if(frames<=0)return;if(!f.frozen)f.frozen={mode:f.mode,state:f.state,stateFrame:f.stateFrame,stateStart:f.stateStart,stateEnd:f.stateEnd,stateDuration:f.stateDuration,faf:f.faf,timer:f.timer};f.hitlag=Math.max(f.hitlag||0,frames);f.mode='Hitlag';}
  function hitlag(f,i){if(f.pendingLaunch&&(i.flickX||i.flickY)){let ox=f.x,oy=f.y,m=f.pendingLaunch.SDIMultiplier??1;f.x+=i.x*3*m;f.y+=i.y*3*m;let main=platforms.find(p=>p.main),ecb=f.character.ecb;if(f.x>main.x-ecb.radius&&f.x<main.x+main.w+ecb.radius&&f.y>main.y&&f.y-ecb.height<main.y+90){f.x=ox;f.y=oy;}}
   if(--f.hitlag>0)return;let frozen=f.frozen;f.frozen=null;if(frozen)Object.assign(f,frozen);
@@ -45,7 +45,7 @@ const CombatSystem=(()=>{
   if(PawapuroRules.field(f,o,a,box,touch))return;
   if(ChefRules.field(f,o,a,box,touch))return;
   if(alucardField(f,o,a,box))return;
-  a=UpAttackTuning.strike(f,a);let modifier=a.staleMultiplier??stale(f,a.type),charge=1+(a.charge||0)*(f.character.smashMultiplier-1),dmg=(a.damage??a.dmg??0)*(f.characterId==='morphie'&&!a.projectile?clamp(.8+.2*MorphieRules.scale(f),.85,1.2):1)*modifier*charge*(a.shortHopMultiplier||1)*(StageRules.oneOnOne?1.2:1)*(o.characterId==='goemon'&&o.impactTime>0?1.25:1)*(o.characterId==='rean'&&o.reanDemonTime>0?ReanMoves.gale.demonIncomingMultiplier:1)*(f.characterId==='omegamon'&&f.digiMode!==1?1.1:1)*(o.characterId==='omegamon'&&o.digiMode===1?.85:1)*(o.characterId==='megamanexe'&&o.exeStyleTime>0&&o.exeStyle===2?.85:1)*(o.characterId==='alain'&&o.alainOrderTime>0?.88:1)*(o.characterId==='yuri'&&yuriGuarding(o)?.65:1),lag=BattleFeel.hitlag({...a,damage:(a.damage??a.dmg??0)*charge});
+  a=AerialLaunchTuning.strike(f,UpAttackTuning.strike(f,a));let modifier=a.staleMultiplier??stale(f,a.type),charge=1+(a.charge||0)*(f.character.smashMultiplier-1),dmg=(a.damage??a.dmg??0)*(f.characterId==='morphie'&&!a.projectile?clamp(.8+.2*MorphieRules.scale(f),.85,1.2):1)*modifier*charge*(a.shortHopMultiplier||1)*(StageRules.oneOnOne?1.2:1)*(o.characterId==='goemon'&&o.impactTime>0?1.25:1)*(o.characterId==='rean'&&o.reanDemonTime>0?ReanMoves.gale.demonIncomingMultiplier:1)*(f.characterId==='omegamon'&&f.digiMode!==1?1.1:1)*(o.characterId==='omegamon'&&o.digiMode===1?.85:1)*(o.characterId==='megamanexe'&&o.exeStyleTime>0&&o.exeStyle===2?.85:1)*(o.characterId==='alain'&&o.alainOrderTime>0?.88:1)*(o.characterId==='yuri'&&yuriGuarding(o)?.65:1),lag=BattleFeel.hitlag({...a,damage:(a.damage??a.dmg??0)*charge});
   if(f.attack&&f.attack.type===a.type&&!f.attack.staleRecorded){f.staleQueue.unshift(a.type);f.staleQueue.length=Math.min(9,f.staleQueue.length);f.attack.staleRecorded=true;}
   // Closely spaced projectiles can arrive during shield hitlag. The saved
   // shield state still blocks them until its hitlag has finished.
@@ -82,7 +82,7 @@ const CombatSystem=(()=>{
      if(a.groundOnly&&!o.grounded||a.airOnly&&o.grounded)continue;
      const touch=contact(box,o),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(o.mode)&&shieldCovers(o,box);if(!touch&&!shield)continue;
      const key=(box.hitID??box.window.index)+':'+o.id,last=a.hitTimes.get(key),rehit=box.rehitFrames??a.rehitRate;if(last!==undefined&&(!rehit||f.timer-last<rehit))continue;a.hitTimes.set(key,f.timer);
-     const strike={...a,...box.window,...box.modifiers};if(a.meteorFrame){strike.isMeteor=f.timer===a.meteorFrame;strike.angle=strike.isMeteor&&!o.grounded?a.meteorAngle:a.angle;if(strike.isMeteor&&!o.grounded)strike.baseKnockback*=a.meteorMultiplier;}
+     const strike={...a,...box.window,...box.modifiers};if(a.meteorFrame){strike.isMeteor=f.timer===a.meteorFrame;strike.angle=strike.isMeteor&&!o.grounded?a.meteorAngle:a.angle;if(strike.isMeteor&&!o.grounded)strike.baseKnockback*=a.meteorMultiplier??1;}
      strike.launchDirection=strike.pull?(Math.sign(f.x-o.x)||-f.face):box.window.shape==='back'?-f.face:['spin','shockwave'].includes(box.window.shape)?Math.sign(o.x-f.x)||f.face:f.face;contacts.push({f,o,a:strike,box,touch});break;
     }
    }
