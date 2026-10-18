@@ -15,7 +15,7 @@ const TifaMoves=(()=>{
 // Source poses face RIGHT. Pose14/44 already kick LEFT; pose16/45 kicks DOWN.
 // Reflect the measured body segment once, using the same native anchor as art.
 const TifaStrikePoints={6:[.62,.2,.985,.2],7:[.63,.17,.985,.17],8:[.45,.56,.985,.04],9:[.67,.38,.97,.30],10:[.5,.52,.78,.27],11:[.55,.7,.975,.8],12:[.48,.5,.91,.52],13:[.5,.5,.98,.5],14:[.55,.56,.025,.26],15:[.5,.60,.36,.025],16:[.58,.69,.89,.97],41:[.58,.6,.97,.36],42:[.59,.25,.98,.22],43:[.53,.62,.89,.04],44:[.55,.56,.025,.26],45:[.58,.69,.89,.97]};
-function tifaStrike(f,n){const p=TifaStrikePoints[n];if(!p)return null;const r=TifaArtRects.frames[n],s=tifaNativeScale(n)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.tifa[n],point=(x,y)=>({x:f.x+(x-anchor)*r[2]*s*f.face,y:f.y+(y-1)*r[3]*s});return[point(p[0],p[1]),point(p[2],p[3])];}
+function tifaStrike(f,n){const p=TifaStrikePoints[n];if(!p)return null;const r=TifaArtRects.frames[n],s=NativeStrikes.scale(f,n,tifaNativeScale(n),false)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.tifa[n],point=(x,y)=>({x:f.x+(x-anchor)*r[2]*s*f.face,y:f.y+(y-1)*r[3]*s});return[point(p[0],p[1]),point(p[2],p[3])];}
 function tifaDuration(f,a,total){const d=total-a.totalFrames;a.totalFrames=a.motionEndFrames=total;a.FAF=total+1;f.faf+=d;f.stateEnd+=d;}
 function tifaWindow(a,start,end,shape,n,damage,extra={}){return CombatData.window(start,end,shape,{pose:n,damage:damage*(a.powered?1.15:1),...extra});}
 function tifaLaunch(f,a,i,follow=false){

@@ -1,6 +1,6 @@
 'use strict';
 const ZeroVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.zero?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.zero?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function chain(x,y,tx,ty,alpha=1){ctx.save();ctx.globalAlpha*=alpha;ctx.strokeStyle='#273247';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(tx,ty);ctx.stroke();ctx.strokeStyle='#dbeaff';ctx.lineWidth=2;ctx.setLineDash([5,4]);ctx.stroke();ctx.restore();stamp(3,tx,ty,55,24,1,alpha,Math.atan2(ty-y,tx-x));}
  function impact(v){const t=(v.max-v.life)/v.max,r=(80+v.power*32)*(1+t*.4);stamp(4,v.x,v.y,r,r,1,(1-t)**1.5);}
  function draw(f){for(const o of ZeroRules.objects){if(o.owner!==f.id)continue;const size=o.kind==='buster'?44+o.tier*26:66;stamp(o.kind==='buster'?1:2,o.x,o.y,size*1.3,size,o.face,1,o.kind==='shield'?o.age*.3:0);}

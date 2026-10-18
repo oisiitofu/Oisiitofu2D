@@ -1,7 +1,7 @@
 'use strict';
 const MaleniaVFX=(()=>{
  // Native cuts/thrusts travel RIGHT. Reflect local X first, then rotate.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.malenia?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.malenia?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function directed(n,b,alpha=.85){const dx=b.x2-b.x1,dy=b.y2-b.y1,face=dx<0?-1:1;stamp(n,(b.x1+b.x2)/2,(b.y1+b.y2)/2,Math.hypot(dx,dy)+b.radius*2,b.radius*2+12,face,alpha,Math.atan2(dy,dx*face));}
  function draw(f){if(f.respawn)return;const a=f.attack;
   for(const b of attackVisualBoxes(f)){if(a.type==='grab')continue;if(a.maleniaTransform)stamp(4,f.x,f.y-45,140,110,1,.8);else if(b.window?.shape==='spin')stamp(2,(b.x1+b.x2)/2,(b.y1+b.y2)/2,Math.abs(b.x2-b.x1)+b.radius*2,b.radius*2+20,1,.85);else directed(a.type==='smash'?1:0,b);}

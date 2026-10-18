@@ -17,7 +17,7 @@ const KisukeMoves=(()=>{
 function kisukeResource(f){f.kisukeBlade??=0;f.kisukeSpirit??=[100,100,100];return f.kisukeSpirit;}
 function kisukeDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;f.stateDuration=end;}
 function kisukeFlip(f,n){return n===43||n===7&&!(CombatData.activeWindow(f.attack,f.timer)?.shape==='back'||f.attack?.type==='backThrow');}
-function kisukePoint(f,n,x,y){const r=KisukeArtRects.frames[n],s=kisukeNativeScale(n)*FIGHTER_SCALE*BattleSize.art(f.characterId),flip=kisukeFlip(f,n)?-1:1;return{x:f.x+(x-NewcomerArtAnchors.kisuke[n])*r[2]*s*f.face*flip,y:f.y+(y-1)*r[3]*s};}
+function kisukePoint(f,n,x,y){const r=KisukeArtRects.frames[n],s=NativeStrikes.scale(f,n,kisukeNativeScale(n),true)*FIGHTER_SCALE*BattleSize.art(f.characterId),flip=kisukeFlip(f,n)?-1:1;return{x:f.x+(x-NewcomerArtAnchors.kisuke[n])*r[2]*s*f.face*flip,y:f.y+(y-1)*r[3]*s};}
 // Coordinates follow the generated blade from the grip to its tip, before reflection.
 const KisukeStrikes={6:[.55,.61,.99,.59],7:[.46,.58,.02,.90],8:[.65,.46,.92,.02],9:[.62,.52,.99,.68],10:[.65,.42,.8,.05],11:[.56,.72,.99,.8],14:[.44,.25,.02,.48],15:[.6,.07,.08,.42],16:[.5,.62,.98,.98],18:[.45,.4,.92,.45],19:[.45,.4,.97,.35],41:[.55,.6,.99,.56],42:[.62,.75,.99,.9],43:[.4,.3,.02,.2],44:[.6,.4,.98,.02],45:[.7,.25,.75,.02],46:[.6,.05,.99,.19]};
 function kisukeRiseStep(f,a,i){

@@ -2,7 +2,7 @@
 const MetabeeVFX=(()=>{
  // Directional sources 0,1,2,3,5 point RIGHT. Translation, horizontal
  // reflection, then local rotation sends that axis along the actual shot.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0,anchor=.5){const img=characterArt.metabee?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w*anchor,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0,anchor=.5){const img=characterArt.metabee?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w*anchor,-h/2,w,h);ctx.restore();}
  function directed(n,x,y,w,h,angle,alpha=1,anchor=.5){const face=Math.cos(angle)<0?-1:1;stamp(n,x,y,w,h,face,alpha,Math.atan2(Math.sin(angle),Math.cos(angle)*face),anchor);}
  function draw(f){const a=f.attack;if(!a)return;if(a.medaforce&&f.timer<26)stamp(6,f.x,f.y-56,125,125,1,.25+f.timer/60,frame*.04);for(const q of a.flashShots||[]){const dt=f.timer-q.at;if(dt>=0&&dt<4){const p=metabeeMuzzle(f,q.poseIndex,q.index);directed(q.kind,p.x,p.y,q.kind===5?70:58,40,p.angle+q.angleOffset,(4-dt)/4,0);}}
   if(a.ballistic)return;const w=CombatData.activeWindow(a,f.timer);if(!w)return;for(const b of attackVisualBoxes(f)){const d=AdolVFX.direction(b);directed(5,d.x,d.y,d.len+12,28,Math.atan2(b.y2-b.y1,b.x2-b.x1),.65);}}

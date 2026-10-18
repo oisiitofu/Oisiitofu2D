@@ -4,7 +4,7 @@ const NierSpellNames=['黒の弾','黒の槍','黒の手','黒の波動'];
 // This shares drawSprite's reflection, scale and foot anchor, including the
 // diagonal up/down slashes rather than rotating an unrelated vertical trail.
 const NierBladeSegments={6:[.60,.30,.99,.35],7:[.23,.065,.97,.17],8:[.29,.20,.72,.012],9:[.60,.28,.99,.36],11:[.47,.16,.98,.57],15:[.52,.55,.98,.50],17:[.65,.55,.97,.68]};
-function nierBladeBox(f,n,w){const p=NierBladeSegments[n];if(!p)return null;const r=NierArtRects.frames[n],s=nierNativeScale(n)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.nier[n];return{x1:f.x+(p[0]-anchor)*r[2]*s*f.face*(n===7?-1:1),y1:f.y+(p[1]-1)*r[3]*s,x2:f.x+(p[2]-anchor)*r[2]*s*f.face*(n===7?-1:1),y2:f.y+(p[3]-1)*r[3]*s,radius:13,window:w,modifiers:w};}
+function nierBladeBox(f,n,w){const p=NierBladeSegments[n];if(!p)return null;const r=NierArtRects.frames[n],s=NativeStrikes.scale(f,n,nierNativeScale(n),false)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.nier[n];return{x1:f.x+(p[0]-anchor)*r[2]*s*f.face*(n===7?-1:1),y1:f.y+(p[1]-1)*r[3]*s,x2:f.x+(p[2]-anchor)*r[2]*s*f.face*(n===7?-1:1),y2:f.y+(p[3]-1)*r[3]*s,radius:13,window:w,modifiers:w};}
 const NierMoves=(()=>{
  const m=CombatData.createMove,w=CombatData.window,spell={special:true,newcomerHit:true,soundFamily:'sword',airControlMultiplier:.35},change=air=>m('白の書・魔法切替',14,[],16,15,{...spell,magicChange:true,aerial:air,pose:13}),a=NewcomerCore.moves(['横斬り','連続斬り','薙ぎ払い','回転斬り','上方斬り上げ','下段薙ぎ','突き','黒の槍・斬撃','魔法の柱','広域回転斬り','斬り下ろし','突き・斬り払い','後方薙ぎ','上回転斬り','急降下斬り'],{
  dragon:m('白の書・黒の弾',12,[],18,17,{...spell,magicBullet:true,projectile:true,pose:13,spellShots:[12,30,48],animationWindows:[{start:1,end:11,pose:12},{start:12,end:60,pose:13},{start:61,end:78,pose:0}]}),

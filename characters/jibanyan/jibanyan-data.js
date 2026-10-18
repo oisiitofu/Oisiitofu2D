@@ -8,7 +8,7 @@ const JibanyanMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opts
 // Native paws/mouth endpoints. Pose 7 was authored RIGHT and is locally mirrored
 // before the fighter's facing transform; its measured point uses the same flip.
 const JibanyanOrigins={6:[.93,.57],7:[.93,.56],8:[.90,.18],9:[.93,.57],11:[.92,.90],13:[.82,.45],15:[.95,.70],16:[.50,.28],17:[.95,.85]};
-function jibanyanPoint(f,n,point=JibanyanOrigins[n]||[.7,.3]){const r=JibanyanArtRects.frames[n],s=jibanyanNativeScale(n)*FIGHTER_SCALE;return{x:f.x+(point[0]-NewcomerArtAnchors.jibanyan[n])*r[2]*s*f.face*(n===7?-1:1),y:f.y+(point[1]-1)*r[3]*s};}
+function jibanyanPoint(f,n,point=JibanyanOrigins[n]||[.7,.3]){const r=JibanyanArtRects.frames[n],s=NativeStrikes.scale(f,n,jibanyanNativeScale(n),false)*FIGHTER_SCALE;return{x:f.x+(point[0]-NewcomerArtAnchors.jibanyan[n])*r[2]*s*f.face*(n===7?-1:1),y:f.y+(point[1]-1)*r[3]*s};}
 function jibanyanDuration(f,a,total){const delta=total-a.totalFrames;a.totalFrames=total;a.motionEndFrames=total;a.FAF=total+1;f.faf+=delta;f.stateEnd+=delta;}
 function jibanyanBounce(f,a){if(a.rebound)return;a.rebound=true;a.reboundFrame=f.timer;jibanyanDuration(f,a,Math.min(a.totalFrames,f.timer+22));a.gravityMultiplier=.75;f.grounded=false;f.fastFall=false;f.vx=-a.originFace*8;f.vy=-10;}
 function jibanyanLift(f,a){a.launched=true;a.liftAge=0;a.gliding=false;f.grounded=false;f.recovered=true;f.specialLandingLag=24;f.vy=-6.5;}

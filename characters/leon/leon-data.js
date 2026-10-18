@@ -17,7 +17,7 @@ const LeonMoves=(()=>{
 // Endpoints are measured in cropped native poses. Pose14 strikes backwards
 // already; only the final facing reflection applies to both art and boxes.
 const LeonWeaponPoints={6:[.78,.14,.98,.14],7:[.80,.13,.98,.13],8:[.71,.26,.985,.25],10:[.67,.32,.98,.015],11:[.49,.55,.98,.62],12:[.70,.16,.98,.16],13:[.61,.20,.98,.25],14:[.43,.19,.025,.19],15:[.65,.18,.98,.38],16:[.48,.49,.77,.98],40:[.69,.125,.98,.125],41:[.72,.2,.98,.2],42:[.76,.125,.98,.125],43:[.70,.11,.99,.015]};
-function leonWeapon(f,n){const p=LeonWeaponPoints[n];if(!p)return null;const r=LeonArtRects.frames[n],s=leonNativeScale(n)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.leon[n],point=(x,y)=>({x:f.x+(x-anchor)*r[2]*s*f.face,y:f.y+(y-1)*r[3]*s});return[point(p[0],p[1]),point(p[2],p[3])];}
+function leonWeapon(f,n){const p=LeonWeaponPoints[n];if(!p)return null;const r=LeonArtRects.frames[n],s=NativeStrikes.scale(f,n,leonNativeScale(n),false)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.leon[n],point=(x,y)=>({x:f.x+(x-anchor)*r[2]*s*f.face,y:f.y+(y-1)*r[3]*s});return[point(p[0],p[1]),point(p[2],p[3])];}
 function leonDuration(f,a,total){const d=total-a.totalFrames;a.totalFrames=a.motionEndFrames=total;a.FAF=total+1;f.faf+=d;f.stateEnd+=d;}
 function leonDetach(f,a,success,i){a.phase='release';a.tether=false;a.gravityMultiplier=1;a.released=true;f.vx=success?clamp(i.x,-1,1)*6:f.vx*.5;f.vy=success?-9:Math.max(0,f.vy);leonDuration(f,a,f.timer+(success?18:24));}
 function leonHook(f,a,i){

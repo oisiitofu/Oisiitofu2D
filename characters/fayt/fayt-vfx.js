@@ -1,6 +1,6 @@
 'use strict';
 const FaytVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.fayt?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.fayt?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function impact(v){const u=(v.max-v.life)/v.max;stamp(7,v.x,v.y,95+v.power*13,95+v.power*13,1,(1-u)**1.7);}
  function drawObjects(){for(const q of FaytRules.objects){const alpha=Math.min(1,(q.life-q.age+1)/5);if(q.kind==='portal'){const pulse=Math.sin(Math.PI*Math.min(1,(q.age+1)/q.life));stamp(4,q.x,q.y,130*pulse,150*pulse,1,alpha*.9,q.age*.1);}else if(q.kind==='pellet'){stamp(1,q.x,q.y,q.radius*6,q.radius*4,q.face,alpha,Math.atan2(q.vy,Math.abs(q.vx)));}else if(q.kind==='rain')stamp(5,q.x,q.y,q.radius*4.5,q.radius*8,1,alpha,Math.atan2(q.vx,q.vy));else stamp(7,q.x,q.y,75,75,1,alpha);}
   for(const f of fighters){if(f.characterId!=='fayt')continue;const a=f.attack;if(a?.dimensionDoor&&f.timer>=a.aimFrames[0]&&f.timer<a.warpFrame&&!a.portalFeint){const q=a.portalTarget;stamp(4,q.x,q.y-42,70,85,1,.45,f.timer*.12);ctx.save();ctx.globalAlpha=.4;ctx.strokeStyle=q.blocked?'#ffc47a':'#bdaaff';ctx.lineWidth=1.5;ctx.setLineDash([4,7]);ctx.beginPath();ctx.moveTo(f.x,f.y-42);ctx.lineTo(q.x,q.y-42);ctx.stroke();ctx.restore();}}

@@ -9,7 +9,7 @@ const LaytonMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opts={
 // Source pose 7 swings LEFT already. Draw and measured endpoints use only the
 // final fighter-facing reflection; no second local reflection is applied.
 const LaytonOrigins={6:[.98,.32],7:[.07,.66],8:[.50,.07],9:[.95,.32],10:[.90,.37],11:[.92,.86],13:[.92,.40],15:[.92,.67],16:[.50,.18],17:[.93,.63]};
-function laytonPoint(f,n,point=LaytonOrigins[n]||[.7,.3]){const r=LaytonArtRects.frames[n],s=laytonNativeScale(n)*FIGHTER_SCALE;return{x:f.x+(point[0]-NewcomerArtAnchors.layton[n])*r[2]*s*f.face,y:f.y+(point[1]-1)*r[3]*s};}
+function laytonPoint(f,n,point=LaytonOrigins[n]||[.7,.3]){const r=LaytonArtRects.frames[n],s=NativeStrikes.scale(f,n,laytonNativeScale(n),false)*FIGHTER_SCALE;return{x:f.x+(point[0]-NewcomerArtAnchors.layton[n])*r[2]*s*f.face,y:f.y+(point[1]-1)*r[3]*s};}
 function laytonDuration(f,a,total){const d=total-a.totalFrames;a.totalFrames=a.motionEndFrames=total;a.FAF=total+1;f.faf+=d;f.stateEnd+=d;}
 function laytonHop(f,a,i,r){a.launched=true;a.stepCount++;a.stepAge=0;a.stepRest=0;a.requestNext=false;a.hopX=clamp(i.x,-1,1)*5.8;a.gravityMultiplier=1;f.face=Math.sign(a.hopX)||f.face;f.grounded=false;f.vx=a.hopX;f.vy=-11.8;f.fastFall=false;r.spawn(f,{kind:'step',x:f.x,y:f.y+5,vx:0,vy:0,life:50});}
 function laytonFinish(f,a){if(a.finished)return;a.finished=true;a.stepRest=0;a.gravityMultiplier=1;f.vx=a.hopX*.6;f.vy=0;laytonDuration(f,a,f.timer+18);}

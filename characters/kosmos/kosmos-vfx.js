@@ -1,7 +1,7 @@
 'use strict';
 const KosmosVFX=(()=>{
  function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.kosmos?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;SlashVFX.image('kosmos',n,img,-w/2,-h/2,w,h);ctx.restore();}
- function weapon(n,x,y,height,face=1,alpha=1,rot=0){const img=characterArt.kosmos?.frames[n];if(!img||alpha<=0)return;const width=height*img.width/img.height;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-width/2,-height/2,width,height);ctx.restore();}
+ function weapon(n,x,y,height,face=1,alpha=1,rot=0){const img=characterArt.kosmos?.frames[n];if(!img||alpha<=0)return;const width=height*img.width/img.height;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-width/2,-height/2,width,height);ctx.restore();}
  function beam(box,n=1,alpha=1){const dx=box.x2-box.x1,dy=box.y2-box.y1;stamp(n,(box.x1+box.x2)/2,(box.y1+box.y2)/2,Math.hypot(dx,dy)+box.radius*2,box.radius*2.8,1,alpha,Math.atan2(dy,dx));}
  function impact(v){const u=(v.max-v.life)/v.max;stamp(7,v.x,v.y,100+v.power*13,100+v.power*13,1,(1-u)**1.7);}
  function drawObjects(){for(const q of KosmosRules.objects){const alpha=Math.min(1,(q.life-q.age+1)/5);if(q.kind==='beam'){beam(KosmosRules.beamBox(q),1,alpha);stamp(2,q.x,q.y,q.radius*3,q.radius*3,1,alpha*.5);}else stamp(5,q.x,q.y,120,165,1,alpha);}

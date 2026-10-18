@@ -2,7 +2,7 @@
 const LeonVFX=(()=>{
  // Assets0..3 point RIGHT, slash3 convex RIGHT/open LEFT.
  // Transform order: translate, final facing reflection, then local rotation.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.leon?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.leon?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function directed(n,x,y,w,h,angle,alpha=1){const face=Math.cos(angle)<0?-1:1,rot=Math.atan2(Math.sin(angle),Math.cos(angle)*face);stamp(n,x,y,w,h,face,alpha,rot);}
  function draw(f){if(f.respawn)return;const a=f.attack;if(f.leonMarked>0)stamp(7,f.x,f.y-48,125,125,1,.3);if(!a)return;
   if(a.leonGrapple&&a.tip&&a.phase!=='release'){const rr=LeonArtRects.frames[38],ss=leonNativeScale(38)*FIGHTER_SCALE,p=a.phase==='pull'?{x:f.x+LeonArtRects.grip[0]*rr[2]*ss*f.face,y:f.y-LeonArtRects.grip[1]*rr[3]*ss}:leonWeapon(f,43)[1],tip=a.tip;ctx.save();ctx.strokeStyle='#cedbec';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(p.x,p.y);if(a.route||a.tipRoute){const route=a.anchor.route;ctx.lineTo(route.x,route.y);}ctx.lineTo(tip.x,tip.y);ctx.stroke();ctx.fillStyle='#d6e5f7';ctx.beginPath();ctx.arc(tip.x,tip.y,5,0,TAU);ctx.fill();ctx.restore();}

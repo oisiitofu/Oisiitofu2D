@@ -1,6 +1,6 @@
 'use strict';
 const ChiikawaVFX=(()=>{
- function stamp(n,x,y,width,height,face=1,alpha=1){const img=characterArt.chiikawa?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-width/2,-height,width,height);ctx.restore();}
+ function stamp(n,x,y,width,height,face=1,alpha=1){const img=characterArt.chiikawa?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-width/2,-height,width,height);ctx.restore();}
  function star(x,y,r,t){ctx.save();ctx.translate(x,y);ctx.rotate(t);const points=[];for(let j=0;j<10;j++){let a=-Math.PI/2+j*Math.PI/5,rr=j%2?r*.45:r;points.push([Math.cos(a)*rr,Math.sin(a)*rr]);}path(points,'#fff5a5','#efb949',1);ctx.restore();}
  function guard(f){stamp(7,f.x,f.y+8,87,87,1,.65);}
  function draw(f){let a=f.attack;if(!a)return;const t=f.timer;

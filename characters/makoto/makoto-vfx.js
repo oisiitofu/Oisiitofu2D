@@ -1,7 +1,7 @@
 'use strict';
 const MakotoVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.makoto?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
- function persona(n,x,y,height,face=1,alpha=.75){const img=characterArt.makoto?.frames[40+n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;const width=height*img.width/img.height;ctx.drawImage(img,-width/2,-height,width,height);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.makoto?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
+ function persona(n,x,y,height,face=1,alpha=.75){const img=characterArt.makoto?.frames[40+n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;const width=height*img.width/img.height;AttackEffects.image(img,-width/2,-height,width,height);ctx.restore();}
  function impact(v){const u=(v.max-v.life)/v.max;stamp(7,v.x,v.y,75+v.power*30,75+v.power*30,1,(1-u)**1.5);}
  function drawObjects(){for(const o of MakotoRules.objects){const alpha=Math.min(1,(o.life-o.age)/8);
   if(o.kind==='fire'){if(o.burst)stamp(2,o.x,o.y,90+o.charge*65,90+o.charge*65,1,alpha*(1-o.burst/11));else stamp(1,o.x-o.face*14,o.y,75+o.charge*50,40+o.charge*35,o.face,alpha);}

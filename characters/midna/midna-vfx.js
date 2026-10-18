@@ -1,7 +1,7 @@
 'use strict';
 const MidnaVFX=(()=>{
  // Sprites are authored RIGHT: translate, reflect by facing, then rotate locally.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0,prop=false){const a=characterArt.midna,img=prop?a?.frames[40+n]:a?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0,prop=false){const a=characterArt.midna,img=prop?a?.frames[40+n]:a?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function direction(b){const dx=b.x2-b.x1,dy=b.y2-b.y1,face=dx<0?-1:1;return{face,rotation:Math.atan2(dy,dx*face),x:(b.x1+b.x2)/2,y:(b.y1+b.y2)/2,length:Math.hypot(dx,dy)};}
  function hair(f,p,fist=false,prop=0){const start={x:f.x+f.face*7,y:f.y-64},d=direction({x1:start.x,y1:start.y,x2:p.x,y2:p.y});ctx.save();ctx.strokeStyle='#ff9b25';ctx.lineWidth=7;ctx.beginPath();ctx.moveTo(start.x,start.y);ctx.quadraticCurveTo(d.x,d.y-20,p.x,p.y);ctx.stroke();ctx.strokeStyle='#ffd265';ctx.lineWidth=2;ctx.stroke();ctx.restore();stamp(fist?1:prop,p.x,p.y,fist?80:54,fist?74:50,d.face,1,d.rotation,true);}
  function draw(f){if(f.grabbed){hair(f,{x:f.grabbed.x,y:f.grabbed.y-35},false,2);return;}const a=f.attack;if(!a)return;const t=f.timer,w=CombatData.activeWindow(a,t);

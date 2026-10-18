@@ -1,6 +1,6 @@
 'use strict';
 const ChocoboVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.chocobo?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.chocobo?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h,w,h);ctx.restore();}
  function feather(x,y,size,angle,alpha=1){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha*=alpha;ctx.beginPath();ctx.moveTo(-size,0);ctx.quadraticCurveTo(0,-size*.65,size,0);ctx.quadraticCurveTo(0,size*.35,-size,0);ctx.fillStyle='#ffdd7b';ctx.fill();ctx.strokeStyle='#fff2bd';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(-size,0);ctx.lineTo(size,0);ctx.stroke();ctx.restore();}
  function guard(f){stamp(7,f.x,f.y+9,103,103,1,.7);}
  function impact(v){const t=(v.max-v.life)/v.max,size=(68+v.power*36)*(1+t*.3);ctx.save();ctx.globalCompositeOperation='source-over';stamp(4,v.x,v.y+size/2,size,size,1,(1-t)**1.5);ctx.restore();}

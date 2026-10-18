@@ -1,7 +1,7 @@
 'use strict';
 const NarukamiVFX=(()=>{
  function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.narukami?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;SlashVFX.image('narukami',n,img,-w/2,-h/2,w,h);ctx.restore();}
- function persona(n,x,y,height,face=1,alpha=.65){const img=characterArt.narukami?.frames[40+n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;const w=height*img.width/img.height;ctx.drawImage(img,-w/2,-height,w,height);ctx.restore();}
+ function persona(n,x,y,height,face=1,alpha=.65){const img=characterArt.narukami?.frames[40+n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;const w=height*img.width/img.height;AttackEffects.image(img,-w/2,-height,w,height);ctx.restore();}
  function impact(v){const u=(v.max-v.life)/v.max;stamp(7,v.x,v.y,80+v.power*30,80+v.power*30,1,(1-u)**1.5);}
  function drawObjects(){for(const o of NarukamiRules.objects){const alpha=Math.min(1,(o.life-o.age)/8);
   if(o.kind==='spell')stamp(o.effect,o.x-o.face*10,o.y,o.charged?125:95,o.charged?85:60,o.face,alpha);

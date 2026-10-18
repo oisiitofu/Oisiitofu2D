@@ -1,6 +1,6 @@
 'use strict';
 const NekuVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.neku?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.neku?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function impact(v){const u=(v.max-v.life)/v.max;stamp(7,v.x,v.y,85+v.power*28,85+v.power*28,1,(1-u)**1.5);}
  function drawObjects(){for(const o of NekuRules.objects){const alpha=Math.min(1,(o.life-o.age)/8);
   if(o.kind==='warpFlash')stamp(5,o.x,o.y,120,155,1,alpha);

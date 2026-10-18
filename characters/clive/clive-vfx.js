@@ -1,6 +1,6 @@
 'use strict';
 const CliveVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.clive?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.clive?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function impact(v){const t=(v.max-v.life)/v.max;stamp(2,v.x,v.y,(85+v.power*33)*(1+t*.4),(85+v.power*33)*(1+t*.4),1,(1-t)**1.5);}
  function drawObjects(){for(const o of CliveRules.objects)stamp(1,o.x-o.face*15,o.y,o.charged?95:72,o.charged?55:40,o.face);}
  function draw(f){const a=f.attack;if(!a)return;const t=f.timer;

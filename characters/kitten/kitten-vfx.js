@@ -1,8 +1,8 @@
 'use strict';
 const KittenVFX=(()=>{
  // Native directional textures 0/1/4/6 lead RIGHT. Translate -> reflect -> local rotation.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.kitten?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
- function prop(n,x,y,w,h,face=1,alpha=1){const img=characterArt.kitten?.frames[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.kitten?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,w,h,face=1,alpha=1){const img=characterArt.kitten?.frames[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function draw(f){const a=f.attack,style=f.gravityStyle||0;prop(f.grounded?40:41,f.x-f.face*60,f.y-(f.grounded?13:65),44,35,f.face,.92);if(style)stamp(style===1?6:1,f.x,f.y-57,85,80,1,.2);if(!a)return;const t=f.timer;
   if(a.stasisField&&(a.hold||t<16)){stamp(2,f.x+f.face*55,f.y-65,65+a.charge*45,65+a.charge*45,1,.7);for(let n=0;n<a.collected;n++){const angle=frame*.05+n*2.1;prop(42,f.x+f.face*55+Math.cos(angle)*37,f.y-65+Math.sin(angle)*37,30,26,1);}}
   if(a.styleSwitch&&t>=12&&t<=25)stamp(style===1?6:style===2?7:0,f.x,f.y-50,110,100,1,.5);

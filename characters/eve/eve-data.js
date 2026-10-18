@@ -19,7 +19,7 @@ function eveVisiblePose(f,n){
  // for drawing and collisions, with the mode's existing aura and bonuses.
  return EveArtRects.frames[powered]?powered:n;
 }
-function eveStrike(f,n){n=eveVisiblePose(f,n);const p=EveStrikePoints[n];if(!p)return null;const r=EveArtRects.frames[n],s=eveNativeScale(n)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.eve[n],boost=f.eveTachyTime>0?1.12:1;return[0,2].map(j=>({x:f.x+(p[j]-anchor)*r[2]*s*f.face*boost,y:f.y+(p[j+1]-1)*r[3]*s}));}
+function eveStrike(f,n){n=eveVisiblePose(f,n);const p=EveStrikePoints[n];if(!p)return null;const r=EveArtRects.frames[n],s=NativeStrikes.scale(f,n,eveNativeScale(n),false)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.eve[n],boost=f.eveTachyTime>0?1.12:1;return[0,2].map(j=>({x:f.x+(p[j]-anchor)*r[2]*s*f.face*boost,y:f.y+(p[j+1]-1)*r[3]*s}));}
 function eveDuration(f,a,total){const d=total-a.totalFrames;a.totalFrames=a.motionEndFrames=total;a.FAF=total+1;f.faf+=d;f.stateEnd+=d;}
 function eveBlinkAim(f,a,i){a.aimX=a.clearedUnderStage?0:Math.abs(i.x)>.2?clamp(i.x,-1,1):a.launchFace*.35;a.aimY=-Math.max(.55,Math.abs(i.y));const d=Math.hypot(a.aimX,a.aimY);a.aimX/=d;a.aimY/=d;}
 function eveBlinkStart(f,a){a.phase='aim';a.aimAt=f.timer;f.vx=f.vy=0;eveDuration(f,a,f.timer+44);}

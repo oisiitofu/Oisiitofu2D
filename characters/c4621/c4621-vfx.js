@@ -1,7 +1,7 @@
 'use strict';
 const C4621VFX=(()=>{
  // Rifle, blade and boost textures lead RIGHT: local X reflection, then rotation.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.c4621?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.c4621?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function directed(n,x,y,vx,vy,w,h,alpha=1){const face=vx<0?-1:1;stamp(n,x,y,w,h,face,alpha,Math.atan2(vy,vx*face));}
  function draw(f){if(f.respawn)return;const a=f.attack;
   for(const b of attackVisualBoxes(f)){if(a.type==='grab'||a.type==='pummel')continue;if(a.type==='downsmash')stamp(3,b.x2,b.y2,b.radius*2.2,b.radius*2.2,1,.85);else{const punch=a.c621Boost||['jab','jab2','jab3','up','dashAttack','upsmash'].includes(a.type);if(punch)stamp(8,b.x2,b.y2,b.radius*2.3,b.radius*2.3,1,.8);else directed(a.type==='smash'?5:4,(b.x1+b.x2)/2,(b.y1+b.y2)/2,b.x2-b.x1,b.y2-b.y1,Math.hypot(b.x2-b.x1,b.y2-b.y1)+b.radius*2,b.radius*2+14,.85);}}

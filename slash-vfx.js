@@ -8,12 +8,12 @@ const SlashVFX=(()=>{
   kisuke:{0:'left',1:'left'},odio:{0:'left'},shizuna:{0:'left'},
   wargreymon:{4:'left'},omegamon:{0:'left'},karateka:{6:'left'}};
  function image(id,n,img,x,y,w,h){
-  const source=sources[id]?.[n];if(!source){ctx.drawImage(img,x,y,w,h);return;}
+  const source=sources[id]?.[n];if(!source){AttackEffects.image(img,x,y,w,h);return;}
   // Normalize the source around the destination center, keeping anchors intact.
   // This is inside the caller's translate -> world-facing mirror -> local turn.
   ctx.save();ctx.translate(x+w/2,y+h/2);
-  if(source==='left'){ctx.scale(-1,1);ctx.drawImage(img,-w/2,-h/2,w,h);}
-  else{ctx.rotate(-Math.PI/2);ctx.drawImage(img,-h/2,-w/2,h,w);}
+  if(source==='left'){ctx.scale(-1,1);AttackEffects.image(img,-w/2,-h/2,w,h);}
+  else{ctx.rotate(-Math.PI/2);AttackEffects.image(img,-h/2,-w/2,h,w);}
   ctx.restore();
  }
  function direction(b){const dx=b.x2-b.x1,dy=b.y2-b.y1,face=dx<0?-1:1;

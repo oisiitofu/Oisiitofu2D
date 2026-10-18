@@ -1,7 +1,7 @@
 'use strict';
 const NaegiVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.naegi?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
- function prop(n,x,y,height,face=1,alpha=1,rot=0){const img=characterArt.naegi?.frames[40+n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;const w=height*img.width/img.height;ctx.drawImage(img,-w/2,-height/2,w,height);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.naegi?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,height,face=1,alpha=1,rot=0){const img=characterArt.naegi?.frames[40+n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(face,1);ctx.globalAlpha*=alpha;const w=height*img.width/img.height;AttackEffects.image(img,-w/2,-height/2,w,height);ctx.restore();}
  function impact(v){const u=(v.max-v.life)/v.max;stamp(1,v.x,v.y,85+v.power*24,85+v.power*24,1,(1-u)**1.5);}
  // Rotate the bullet's positive-X axis into its actual velocity. Text is drawn
  // outside that transform so it stays readable when facing left or aiming up.

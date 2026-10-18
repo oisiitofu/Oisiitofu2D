@@ -1,6 +1,6 @@
 'use strict';
 const TwoBVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.twob?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.twob?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h,w,h);ctx.restore();}
  function guard(f){stamp(7,f.x,f.y+8,112,112,1,.7);}
  function impact(v){const t=(v.max-v.life)/v.max,r=(80+v.power*35)*(1+t*.3);stamp(3,v.x,v.y+r*.5,r,r,1,(1-t)**1.5);}
  function draw(f){const a=f.attack,p=TwoBRules.pod(f),firing=a?.podShots?.some(t=>f.timer>=t&&f.timer<t+2);stamp(firing?1:0,p.x,p.y+12+Math.sin(frame*.08)*2,48,55,f.face);

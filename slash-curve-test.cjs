@@ -23,10 +23,10 @@ for(const[id,v]of Object.entries(audit))assert.equal(manifest.characters[id].ima
       fighters=[f,makeFighter(1,0,'dragoon')];fighters[1].x=1400;
       if(!attack(f,type)){skips.push(id+':'+type);continue;}
       f.timer=time;const active=CombatData.activeWindow(f.attack,time);if(!active)continue;
-      let boxes;try{boxes=id==='tifa'?TifaVFX.segments(f).map(v=>({x1:v.from.x,y1:v.from.y,x2:v.to.x,y2:v.to.y})):attackVisualBoxes(f);}catch(e){skips.push(id+':'+type+' (requires preceding move state)');continue;}
+      let boxes;try{boxes=attackVisualBoxes(f);const cap=attackBoxes(f).find(b=>b.upAttackExtra);if(cap)boxes.push({x1:f.x,y1:cap.y1+cap.radius,x2:f.x,y2:cap.y1-cap.radius});}catch(e){skips.push(id+':'+type+' (requires preceding move state)');continue;}
       const seen=[],saved=ctx.drawImage;ctx.setTransform(1,0,0,1,0,0);
       ctx.drawImage=function(img,x,y,w,h){
-       const n=images.get(img),native=audit[id]?.effects[n];
+       const origin=AttackEffects.sourceFor(img),n=images.get(origin?.source||img),audited=audit[id]?.effects[n],native=origin&&audited?[1,0]:audited;
        if(native){
         const m=ctx.getTransform(),sx=native[0]*w/img.width,sy=native[1]*h/img.height;
         const ax=m.a*sx+m.c*sy,ay=m.b*sx+m.d*sy,len=Math.hypot(ax,ay);

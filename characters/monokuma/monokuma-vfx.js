@@ -1,6 +1,6 @@
 'use strict';
 const MonokumaVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.monokuma?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.monokuma?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h,w,h);ctx.restore();}
  function vehicle(f,alpha=1){const a=f.attack;if(a?.carMove&&f.timer>=6&&f.timer<=29){stamp(1,f.x,f.y+5,143,104,f.face,alpha);return true;}if(a?.type==='rise'&&f.timer>=7&&f.timer<=16){stamp(2,f.x,f.y+40,104,171,f.face,alpha);return true;}return false;}
  function guard(f){stamp(7,f.x,f.y+9,112,112,1,.7);}
  function impact(v){const t=(v.max-v.life)/v.max,r=(85+v.power*35)*(1+t*.3);stamp(4,v.x,v.y+r*.5,r,r,1,(1-t)**1.5);}

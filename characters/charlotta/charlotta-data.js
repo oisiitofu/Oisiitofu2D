@@ -11,7 +11,7 @@ const CharlottaMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opt
 
 // Native sword and shield coordinates. Forward is RIGHT; rear shield bash is LEFT.
 const CharlottaStrikePoints={6:[.69,.61,.98,.59],7:[.60,.52,.985,.21],8:[.6,.61,.99,.50],9:[.63,.69,.98,.64],10:[.38,.38,.14,.015],11:[.6,.74,.98,.89],14:[.35,.62,.015,.6],15:[.42,.36,.3,.015],16:[.6,.60,.64,.985],42:[.58,.64,.99,.75],44:[.62,.35,.94,.015],45:[.56,.38,.90,.015],46:[.65,.60,.99,.57]};
-function charlottaStrike(f,n){const p=CharlottaStrikePoints[n];if(!p)return null;const r=CharlottaArtRects.frames[n],s=charlottaNativeScale(n)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.charlotta[n],point=(x,y)=>({x:f.x+(x-anchor)*r[2]*s*f.face,y:f.y+(y-1)*r[3]*s});return[point(p[0],p[1]),point(p[2],p[3])];}
+function charlottaStrike(f,n){const p=CharlottaStrikePoints[n];if(!p)return null;const r=CharlottaArtRects.frames[n],s=NativeStrikes.scale(f,n,charlottaNativeScale(n),false)*FIGHTER_SCALE,anchor=NewcomerArtAnchors.charlotta[n],point=(x,y)=>({x:f.x+(x-anchor)*r[2]*s*f.face,y:f.y+(y-1)*r[3]*s});return[point(p[0],p[1]),point(p[2],p[3])];}
 function charlottaDuration(f,a,total){const d=total-a.totalFrames;a.totalFrames=a.motionEndFrames=total;a.FAF=total+1;f.faf+=d;f.stateEnd+=d;}
 function charlottaRebound(f,a,face){if(a.charlottaRebounded)return;a.charlottaRebounded=true;f.face=face;f.vx=face*8;f.vy=-21;a.reboundAt=f.timer;a.pose=45;a.activeFrames.push(CombatData.window(f.timer+5,f.timer+10,'up',{pose:45}));a.activeEnd=f.timer+10;charlottaDuration(f,a,Math.max(a.totalFrames,f.timer+42));}
 const CharlottaRules=NewcomerCore.create('charlotta',CharlottaMoves,{

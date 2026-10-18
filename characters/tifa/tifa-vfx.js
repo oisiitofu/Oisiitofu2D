@@ -3,7 +3,7 @@ const TifaVFX=(()=>{
  // FX0 impact is radial; FX1 punch trail and FX2 kick crescent point RIGHT.
  // FX2 has its convex edge RIGHT, opening LEFT. Translate, reflect facing,
  // then rotate the local RIGHT axis onto the measured strike segment.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.tifa?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.tifa?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function directed(n,x,y,w,h,angle,alpha=1){const face=Math.cos(angle)<0?-1:1,rot=Math.atan2(Math.sin(angle),Math.cos(angle)*face);stamp(n,x,y,w,h,face,alpha,rot);}
  function draw(f){if(f.respawn)return;const a=f.attack;if(f.tifaKiTime>0)stamp(3,f.x,f.y-43,116,127,1,.27);if(a?.tifaKi&&f.timer>8)stamp(3,f.x,f.y-40,130,145,1,Math.min(.65,f.timer/50));if(!a)return;
   for(const v of segments(f)){const dx=v.to.x-v.from.x,dy=v.to.y-v.from.y,len=Math.hypot(dx,dy);

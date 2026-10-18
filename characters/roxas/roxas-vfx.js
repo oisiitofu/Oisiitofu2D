@@ -1,6 +1,6 @@
 'use strict';
 const RoxasVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.roxas?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.globalCompositeOperation='lighter';ctx.drawImage(img,-w/2,-h,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.roxas?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.globalCompositeOperation='lighter';AttackEffects.image(img,-w/2,-h,w,h);ctx.restore();}
  function guard(f){stamp(7,f.x,f.y+8,112,112,1,.8);}
  function impact(v){const t=(v.max-v.life)/v.max,r=(85+v.power*40)*(1+t*.3);stamp(5,v.x,v.y+r*.5,r,r,1,(1-t)**1.5);}
  function draw(f){for(const o of RoxasRules.objects){if(o.owner!==f.id||o.age<0)continue;if(o.kind==='orbs'){if(!o.hit)stamp(3,o.x,o.y+22,44,44,o.face);else if(o.age<70)stamp(5,o.x,o.y+20,40,40,1,.35);}else{stamp(6,o.x,o.y+10,145,65,1,o.age<45?.4+.25*Math.sin(o.age*.2):.8);if(o.age>=45)stamp(2,o.x,o.y+8,160,182,1,Math.max(0,1-(o.age-52)/10));}}

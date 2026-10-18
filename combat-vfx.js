@@ -1,14 +1,14 @@
 'use strict';
-function drawUlgrimGuard(f){const img=characterArt.ulgrim?.effects[7];if(!img)return;ctx.save();ctx.globalAlpha*=.55;ctx.globalCompositeOperation='lighter';ctx.drawImage(img,f.x-57,f.y-110,114,114);ctx.restore();}
+function drawUlgrimGuard(f){const img=characterArt.ulgrim?.effects[7];if(!img)return;ctx.save();ctx.globalAlpha*=.55;ctx.globalCompositeOperation='lighter';AttackEffects.image(img,f.x-57,f.y-110,114,114);ctx.restore();}
 function drawUlgrimSlash(f,w,fade,progress){
  const a=f.attack,r=(w.reach??a.reach)*FIGHTER_SCALE,index=a.type==='counter'?6:a.type==='rise'?5:a.type==='dash'||a.type==='jab3'?2:w.shape==='up'?1:w.shape==='low'?4:w.shape==='back'?3:0,img=characterArt.ulgrim?.effects[index];if(!img)return;
  if([0,1,2,3,4].includes(index)&&w.shape!=='spin'){SlashVFX.melee(f,w,index,fade);return;}
  const back=w.shape==='back',up=w.shape==='up',size=1+(a.charge||0)*.18;
  ctx.save();ctx.translate(f.x,f.y-42);ctx.scale(f.face*(back?-1:1),1);ctx.globalAlpha*=fade;ctx.globalCompositeOperation='source-over';ctx.shadowBlur=7;ctx.shadowColor='#6b9fff';
  const width=r*(index===2?1.85:1.65)*size,height=r*(index===2?.7:index===4?.78:1.65)*size,x=up?-width*.5:-width*.19,y=up?-height*.76:-height*.5;
- ctx.rotate(w.shape==='down'?1.3:(progress-.5)*.16);ctx.drawImage(img,x,y,width,height);
+ ctx.rotate(w.shape==='down'?1.3:(progress-.5)*.16);AttackEffects.image(img,x,y,width,height);
  // Faint delayed layers articulate the swing instead of adding a long-lived hitbox.
- ctx.globalAlpha*=.23;ctx.rotate(-.1);ctx.drawImage(img,x-6,y+4,width*.95,height*.95);ctx.restore();
+ ctx.globalAlpha*=.23;ctx.rotate(-.1);AttackEffects.image(img,x-6,y+4,width*.95,height*.95);ctx.restore();
 }
 // Decorative trails have no collision. The white cutting edge is active only
 // inside CombatData's exact hit windows; the blue wake dissolves afterwards.
@@ -26,7 +26,7 @@ const CombatVFX=(()=>{
   for(let j=0;j<=36;j++){let t=j/36,a=lerp(begin,end,t),taper=Math.pow(Math.sin(Math.PI*t),.7),rr=r*(.88+.12*Math.sin(Math.PI*t));outer.push([Math.cos(a)*(rr+thickness*taper*.4),Math.sin(a)*(rr+thickness*taper*.4)]);inner.unshift([Math.cos(a)*(rr-thickness*taper),Math.sin(a)*(rr-thickness*taper)]);}
   let grad=ctx.createLinearGradient(-r,-r,r,r);grad.addColorStop(0,colors[0]+'00');grad.addColorStop(.25,colors[0]+'b0');grad.addColorStop(.63,colors[1]+'df');grad.addColorStop(1,colors[2]+'e8');ctx.globalCompositeOperation='source-over';path([...outer,...inner],grad);ctx.globalCompositeOperation='lighter';stroke(outer,colors[2],1.4);ctx.restore();
  }
- function slash(f){UpAttackTuning.draw(f);
+ function legacySlash(f){
   if(f.characterId==='lloyd'){LloydVFX.draw(f);return;}if(NewcomerCore.ids.includes(f.characterId)){NewcomerVisuals.draw(f);return;}if(f.characterId==='headmaster'){HeadmasterVFX.draw(f);return;}if(f.characterId==='pawapuro'){PawapuroVFX.draw(f);return;}if(f.characterId==='agumon'){AgumonVFX.draw(f);return;}if(f.characterId==='terry'){TerryVFX.draw(f);return;}if(f.characterId==='valkyrie'){ValkyrieVFX.draw(f);return;}if(f.characterId==='adol'){AdolVFX.draw(f);return;}if(f.characterId==='hunter'){HunterVFX.draw(f);return;}if(f.characterId==='pokoa'){PokoaVFX.draw(f);return;}if(f.characterId==='shiren'){ShirenVFX.draw(f);return;}if(f.characterId==='sans'){SansVFX.draw(f);return;}if(f.characterId==='bomberman'){BombermanVFX.draw(f);return;}if(f.characterId==='midna'){MidnaVFX.draw(f);return;}if(f.characterId==='noah'){NoahVFX.draw(f);return;}if(f.characterId==='ryza'){RyzaVFX.draw(f);return;}if(f.characterId==='emma'){EmmaVFX.draw(f);return;}if(f.characterId==='fayt'){FaytVFX.draw(f);return;}if(f.characterId==='kosmos'){KosmosVFX.draw(f);return;}if(f.characterId==='will'){WillVFX.draw(f);return;}if(f.characterId==='luke'){LukeVFX.draw(f);return;}if(f.characterId==='rex'){RexVFX.draw(f);return;}if(f.characterId==='naegi'){NaegiVFX.draw(f);return;}if(f.characterId==='narukami'){NarukamiVFX.draw(f);return;}if(f.characterId==='neku'){NekuVFX.draw(f);return;}if(f.characterId==='makoto'){MakotoVFX.draw(f);return;}if(f.characterId==='clive'){CliveVFX.draw(f);return;}if(f.characterId==='noctis'){NoctisVFX.draw(f);return;}if(f.characterId==='estelle'){EstelleVFX.draw(f);return;}if(f.characterId==='rean'){ReanVFX.draw(f);return;}if(f.characterId==='colette'){ColetteVFX.draw(f);return;}if(f.characterId==='lightning'){LightningVFX.draw(f);return;}if(f.characterId==='nia'){NiaVFX.draw(f);return;}if(f.characterId==='rin'){RinVFX.draw(f);return;}if(f.characterId==='zero'){ZeroVFX.draw(f);return;}if(f.characterId==='vivi'){ViviVFX.draw(f);return;}if(f.characterId==='gundam'){GundamVFX.draw(f);return;}if(f.characterId==='okami'){OkamiVFX.draw(f);return;}if(f.characterId==='twob'){TwoBVFX.draw(f);return;}if(f.characterId==='roxas'){RoxasVFX.draw(f);return;}if(f.characterId==='riki'){RikiVFX.draw(f);return;}if(f.characterId==='monokuma'){MonokumaVFX.draw(f);return;}if(f.characterId==='chocobo'){ChocoboVFX.draw(f);return;}if(f.characterId==='chiikawa'){ChiikawaVFX.draw(f);return;}if(f.characterId==='isaac'){IsaacVFX.draw(f);return;}if(f.characterId==='ulgrim'&&f.attack?.counterWindow&&f.timer>=f.attack.counterWindow[0]&&f.timer<=f.attack.counterWindow[1])drawUlgrimGuard(f);
   const a=f.attack;if(!a||a.type==='grab'||a.type==='diveLanding'||a.type.endsWith('Throw'))return;
   let w=CombatData.activeWindow(a,f.timer),live=!!w;
@@ -67,5 +67,6 @@ const CombatVFX=(()=>{
   ctx.shadowColor=col[1];ctx.shadowBlur=10;ctx.strokeStyle=col[2];ctx.lineWidth=2*(1-t);ctx.beginPath();ctx.ellipse(0,0,r*.72,r*.36,-.6,0,TAU);ctx.stroke();ctx.shadowBlur=0;
   for(let j=0;j<3;j++){let a=j*TAU/3+.4;bolt(Math.cos(a)*12,Math.sin(a)*12,Math.cos(a)*r,Math.sin(a)*r,age*.35+j,col[1],.7);}
   if(t<.4){let z=(1-t/.4)*24;path([[-z,0],[-4,-4],[0,-z],[4,-4],[z,0],[4,4],[0,z],[-4,4]],'#f0ffff');}ctx.restore();}finally{ctx.restore();}}ctx.restore();}
+ function slash(f){AttackEffects.draw(f,()=>legacySlash(f));}
  return{reset,impact,landingBurst,update,slash,drawImpacts,get diagnostics(){return impacts.map(v=>({life:v.life,hold:v.hold,power:v.power}));}};
 })();

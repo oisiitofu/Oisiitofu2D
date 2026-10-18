@@ -1,5 +1,5 @@
 'use strict';
-const GundamVFX=(()=>{function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.gundam?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h,w,h);ctx.restore();}
+const GundamVFX=(()=>{function stamp(n,x,y,w,h,face=1,alpha=1){const img=characterArt.gundam?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h,w,h);ctx.restore();}
 function impact(v){const t=(v.max-v.life)/v.max,r=(70+v.power*30)*(1+t*.3);stamp(5,v.x,v.y+r*.5,r,r,1,(1-t)**1.5);}
 function draw(f){for(const o of GundamRules.objects){if(o.owner!==f.id)continue;if(o.burst)stamp(5,o.x,o.y+65,155,145,1,Math.max(0,1-(o.burst-6)/16));else{ctx.save();ctx.translate(o.x,o.y);ctx.rotate(Math.atan2(o.vy,Math.abs(o.vx))*o.face);stamp(o.kind==='beam'?4:7,0,16,o.kind==='beam'?100+o.charge*45:58,32,o.face);ctx.restore();}}
 const a=f.attack;if(!a)return;if(a.gun){ctx.save();ctx.translate(f.x+f.face*32,f.y-33);if(a.gun==='rocket'&&!f.grounded)ctx.rotate(f.face*.7);stamp(a.gun==='beam'?0:1,0,12,84,46,f.face);ctx.restore();return;}if(a.type==='rise'&&f.timer>=7&&f.timer<20)stamp(6,f.x-f.face*10,f.y+77,60,100,1,.8);

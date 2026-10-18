@@ -77,7 +77,7 @@ const MeleeBalance=(()=>{
    // bridges are only for a nearby direct strike, never a remote field/helper.
    if(connected||b.window?.shape==='shockwave')return[outer];
    const dx=b.x2-b.x1,dy=b.y2-b.y1,t=clamp(((f.x-b.x1)*dx+(rootY-b.y1)*dy)/Math.max(1,dx*dx+dy*dy),0,1),x=b.x1+dx*t,y=b.y1+dy*t;
-   if(Math.hypot(x-f.x,y-rootY)>Math.min(110,Math.max(70,height*.85))*scale)return[outer];
+   if(!b.nativeWorld&&Math.hypot(x-f.x,y-rootY)>Math.min(110,Math.max(70,height*.85))*scale)return[outer];
    const sign=Math.sign(x-f.x)||f.face,rootX=f.x+sign*Math.min(18,body*.7)*scale;
    return[outer,{...outer,x1:rootX,y1:rootY,x2:x,y2:y,radius:Math.min(outer.radius,18*scale),meleeInner:true,coverageBridge:true}];
   });

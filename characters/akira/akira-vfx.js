@@ -2,7 +2,7 @@
 const AkiraVFX=(()=>{
  // Slash 1 leads LEFT and is normalized by SlashVFX. Other directional sprites lead RIGHT: translate -> horizontal reflection -> local rotation.
  function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.akira?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;SlashVFX.image('akira',n,img,-w/2,-h/2,w,h);ctx.restore();}
- function prop(n,x,y,w,h,face=1,rot=0){const img=characterArt.akira?.frames[40+n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,w,h,face=1,rot=0){const img=characterArt.akira?.frames[40+n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function legion(n,x,y,size=85,face=1,rot=0){const img=characterArt.akira?.frames[40+n];if(!img)return;const s=size/Math.max(img.width,img.height);prop(n,x,y,img.width*s,img.height*s,face,rot);}
  function chain(f,p){const dx=p.x-f.x,dy=p.y-(f.y-62),len=Math.hypot(dx,dy),face=dx<0?-1:1;prop(6,(f.x+p.x)/2,(f.y-62+p.y)/2,len,12,face,Math.atan2(dy,dx*face));}
  function draw(f){const a=f.attack;if(!a)return;const t=f.timer;if(a.legionChange){const n=t<12?a.selection:a.legion;legion(n,f.x+f.face*65,f.y-85,90,f.face);stamp(6,f.x+f.face*65,f.y-20,65,90,1,.45);}if(a.legionLift&&a.launched){const p=a.anchor&&!a.released?a.anchor:{x:f.x,y:f.y-100};if(!a.released)chain(f,p);legion(a.legion,p.x,p.y,95,f.face);if(a.released&&t-a.releaseFrame<8)stamp(8,f.x-f.vx*2,f.y-55,100,45,Math.sign(f.vx)||f.face,.6,-.6);}

@@ -1,7 +1,7 @@
 'use strict';
 const FeiVFX=(()=>{
  // Textures 0/2/3/4/6 lead RIGHT. Translate -> reflect -> rotate locally.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.fei?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.fei?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function draw(f){const a=f.attack;if(!a)return;const t=f.timer;
   if(a.guidedShot&&a.hold)stamp(3,f.x+f.face*32,f.y-63,28+a.charge*45,28+a.charge*45,f.face,.8);
   if(a.fukei&&a.launched){const face=f.vx<0?-1:1;stamp(4,f.x-f.vx*2,f.y-30,90,35,face,.45,Math.atan2(f.vy,f.vx*face||.01));}

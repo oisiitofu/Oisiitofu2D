@@ -9,7 +9,7 @@ const NaruhodoMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opts
 // Authored right-facing poses; pose 7 already attacks left. Points are native
 // finger, document and shoe endpoints, shared by hitboxes and visual effects.
 const NaruhodoOrigins={6:[.87,.25],7:[.10,.34],8:[.30,.04],9:[.96,.21],11:[.95,.10],13:[.87,.25],15:[.92,.72],16:[.50,.03],17:[.95,.87],44:[.95,.91]};
-function naruhodoPoint(f,n,point=NaruhodoOrigins[n]||[.7,.3]){const r=NaruhodoArtRects.frames[n],s=naruhodoNativeScale(n)*FIGHTER_SCALE;return{x:f.x+(point[0]-NewcomerArtAnchors.naruhodo[n])*r[2]*s*f.face,y:f.y+(point[1]-1)*r[3]*s};}
+function naruhodoPoint(f,n,point=NaruhodoOrigins[n]||[.7,.3]){const r=NaruhodoArtRects.frames[n],s=NativeStrikes.scale(f,n,naruhodoNativeScale(n),false)*FIGHTER_SCALE;return{x:f.x+(point[0]-NewcomerArtAnchors.naruhodo[n])*r[2]*s*f.face,y:f.y+(point[1]-1)*r[3]*s};}
 function naruhodoAnchor(f,a){a.anchor={x:f.x,y:f.y-340};a.liftAge=0;a.swing=0;a.swingVelocity=0;a.launched=true;}
 function naruhodoRelease(f,a,ix=0){if(a.released)return;const o=f.grabbed;if(o){f.grabbed=null;o.grabOwner=null;o.grabImmunity=60;o.hitlag=0;PlayerStates.enter(o,o.grounded?'Idle':'Fall');CombatSystem.hit(f,o,{...NaruhodoMoves.upThrow,type:'psyRelease',damage:8,charge:0,launchDirection:Math.sign(ix)||a.originFace,soundFamily:'punch'});}a.released=true;a.releaseFrame=f.timer;a.tether=a.raimentGrab=false;a.gravityMultiplier=.7;a.totalFrames=f.timer+25;a.motionEndFrames=a.totalFrames;a.FAF=a.totalFrames+1;f.vx=clamp(ix,-1,1)*10;f.vy=-12;f.specialLandingLag=25;}
 const NaruhodoRules=NewcomerCore.create('naruhodo',NaruhodoMoves,{

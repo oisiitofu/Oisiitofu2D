@@ -1,8 +1,8 @@
 'use strict';
 const HunterVFX=(()=>{
  // All directional sprites are authored to the RIGHT. World reflection precedes local rotation.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.hunter?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
- function prop(n,x,y,w,h,face=1){const img=characterArt.hunter?.frames[40+n];if(!img)return;const s=Math.min(w/img.width,h/img.height);ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.drawImage(img,-img.width*s/2,-img.height*s/2,img.width*s,img.height*s);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.hunter?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,w,h,face=1){const img=characterArt.hunter?.frames[40+n];if(!img)return;const s=Math.min(w/img.width,h/img.height);ctx.save();ctx.translate(x,y);ctx.scale(face,1);AttackEffects.image(img,-img.width*s/2,-img.height*s/2,img.width*s,img.height*s);ctx.restore();}
  function direction(b){const dx=b.x2-b.x1,dy=b.y2-b.y1,face=dx<0?-1:1;return{face,rot:Math.atan2(dy,dx*face),x:(b.x1+b.x2)/2,y:(b.y1+b.y2)/2,len:Math.hypot(dx,dy)};}
  function draw(f){const a=f.attack;if(!a)return;if(a.hunterCharge&&a.hold)stamp(1,f.x+f.face*25,f.y-48,80,48,f.face,.3+.5*a.charge);if(a.tackle&&f.timer>=5&&f.timer<=17&&!a.blocked)stamp(6,f.x+f.face*27,f.y-43,48,74,f.face,.6);if(a.tackle&&a.confirmed)stamp(7,f.x+f.face*30,f.y-47,45,45,f.face,.6);
   if(a.wirebug&&a.tether&&a.node){const x=f.x,y=f.y-48,dx=a.node.x-x,dy=a.node.y-y,d=direction({x1:x,y1:y,x2:a.node.x,y2:a.node.y});stamp(3,d.x,d.y,d.len,18,d.face,.85,d.rot);prop(5,a.node.x,a.node.y,28,28);}

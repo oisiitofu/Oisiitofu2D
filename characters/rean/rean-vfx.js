@@ -1,6 +1,6 @@
 'use strict';
 const ReanVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.rean?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.rean?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function impact(v){const t=(v.max-v.life)/v.max,size=(75+v.power*38)*(1+t*.4);stamp(5,v.x,v.y,size,size,1,(1-t)**1.5);}
  function draw(f){
   for(const o of ReanRules.objects)if(o.owner===f.id){const s=1+o.tier*.3;for(let j=3;j>0;j--)stamp(1,o.x-o.vx*j*.65,o.y,83*s,86*s,o.face,.12/j);stamp(1,o.x,o.y,83*s,86*s,o.face,1);}

@@ -2,7 +2,7 @@
 const AlucardVFX=(()=>{
  // Native crescent's convex leading edge, waves and animals face RIGHT.
  // Apply local orientation correction, rotation, then fighter reflection.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.alucard?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.alucard?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function directed(n,x,y,vx,vy,w,h,alpha=1){const face=vx<0?-1:1;stamp(n,x,y,w,h,face,alpha,Math.atan2(vy,vx*face));}
  function body(f,alpha=1,scale=1){if(f.respawn)return false;const a=f.attack;
   if(a?.alucardFlight&&f.timer>=8&&a.phase!=='fall'){if(a.phase==='bat')stamp(5,f.x,f.y-32,105*scale,65*scale,f.face,alpha);else stamp(3,f.x,f.y-40,102*scale,76*scale,f.face,alpha*.8);return true;}

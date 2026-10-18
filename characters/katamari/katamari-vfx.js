@@ -1,6 +1,6 @@
 'use strict';
 const KatamariVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.katamari?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.katamari?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function drawBall(f){if(f.respawn)return;const p=katamariBall(f),g=katamariGrowth(f),a=f.attack,alpha=f.inv>0?.65:1,compress=a?.kataBounce&&a.bounceAt==null?.84:1;const stage=g<40?0:g<75?1:2;stamp(stage,p.x,p.y,p.r*2,p.r*2*compress,1,alpha,f.kataSpin||0);}
  function draw(f){if(f.respawn)return;const p=katamariBall(f),a=f.attack;
   for(const b of attackVisualBoxes(f)){if(['grab','pummel'].includes(a.type))continue;stamp(4,b.x2,b.y2,b.radius*2.1,b.radius*2.1,1,.6,f.kataSpin||0);}

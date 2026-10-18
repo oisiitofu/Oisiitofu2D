@@ -2,8 +2,8 @@
 const RyzaVFX=(()=>{
  // FX0 is authored pointing RIGHT. Reflect in local fighter space BEFORE
  // rotating, so its nose tracks the capsule for either facing direction.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.ryza?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
- function prop(n,x,y,h,face=1,alpha=1,rot=0){const img=characterArt.ryza?.frames[40+n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-h*img.width/img.height/2,-h/2,h*img.width/img.height,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.ryza?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,h,face=1,alpha=1,rot=0){const img=characterArt.ryza?.frames[40+n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-h*img.width/img.height/2,-h/2,h*img.width/img.height,h);ctx.restore();}
  function direction(box){const dx=box.x2-box.x1,dy=box.y2-box.y1,face=dx<0?-1:1;return{face,rotation:Math.atan2(dy,dx*face),x:(box.x1+box.x2)/2,y:(box.y1+box.y2)/2,length:Math.hypot(dx,dy)};}
  function impact(v){const u=(v.max-v.life)/v.max;stamp(7,v.x,v.y,90+v.power*13,90+v.power*13,1,(1-u)**1.7);}
  function drawObjects(){for(const q of RyzaRules.objects){const d=RyzaRules.items[q.index],alpha=Math.min(1,(q.life-q.age+1)/8);if(q.kind==='item'){prop(q.charged&&q.index<3?5+q.index:q.index,q.x,q.y,q.charged?40:30,q.face,alpha,q.age*.09);continue;}const n=[2,3,4,5][q.index],height=q.index===0?q.radius*1.6:q.index===3?62:84;stamp(n,q.x,q.y-height*.4,q.radius*2,height,1,alpha);if(q.index===3)stamp(1,q.x,q.y-8,q.radius*1.7,24,1,.35*alpha);}

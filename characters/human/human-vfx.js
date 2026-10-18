@@ -2,8 +2,8 @@
 const HumanVFX=(()=>{
  // FX 0/1/2/4 lead RIGHT. Catapult prop 41 launches LEFT in its source.
  // World translation -> horizontal reflection -> rotation in local coordinates.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.human?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
- function prop(n,x,y,w,h,face=1,rot=0){const img=characterArt.human?.frames[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.human?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,w,h,face=1,rot=0){const img=characterArt.human?.frames[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function draw(f){const a=f.attack;if(!a)return;const t=f.timer;if(a.ropeSwing&&!a.released&&t>=9){ctx.save();ctx.strokeStyle='#a97742';ctx.lineWidth=5;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(a.anchor.x,a.anchor.y);ctx.lineTo(f.x+f.face*9,f.y-101);ctx.stroke();ctx.strokeStyle='#e8c897';ctx.lineWidth=1.5;ctx.stroke();ctx.restore();prop(42,a.anchor.x,a.anchor.y,20,23);}
   if(a.catapult&&!a.launched)prop(41,f.x,f.y-19,130,80,-(Math.sign(a.aim)||f.face));if(a.catapult&&a.launched&&t<35){const d={x1:f.x-f.vx*4,y1:f.y-f.vy*4,x2:f.x,y2:f.y},v=AdolVFX.direction(d);stamp(2,v.x,v.y,100,42,v.face,.75,v.rot);}
   if(a.crateSmash&&t>=24&&t<33)prop(40,f.x+f.face*30,f.y-20,45,45,f.face);if(a.type==='downsmash'&&t>=16&&t<=30)prop(43,f.x+f.face*26,f.y-(t<22?65:22),70,35,f.face,t<22?-.8:.75);

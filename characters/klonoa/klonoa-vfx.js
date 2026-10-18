@@ -1,7 +1,7 @@
 'use strict';
 const KlonoaVFX=(()=>{
  // Wind textures lead RIGHT. Reflect local X, then rotate in that space.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.klonoa?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.klonoa?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function directed(n,x,y,vx,vy,w,h,alpha=1){const face=vx<0?-1:1;stamp(n,x,y,w,h,face,alpha,Math.atan2(vy,vx*face));}
  function draw(f){if(f.respawn)return;const a=f.attack;
   for(const b of attackVisualBoxes(f)){if(['grab','pummel'].includes(a.type))continue;directed(6,(b.x1+b.x2)/2,(b.y1+b.y2)/2,b.x2-b.x1,b.y2-b.y1,Math.hypot(b.x2-b.x1,b.y2-b.y1)+b.radius*2,b.radius*2+15,.82);}

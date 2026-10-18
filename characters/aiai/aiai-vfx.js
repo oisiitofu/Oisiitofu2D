@@ -2,7 +2,7 @@
 const AiaiVFX=(()=>{
  // Trail0 and crescent1 lead RIGHT. Rotate source locally, reflect for facing,
  // then translate to world space, matching the actual attack capsule.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const im=characterArt.aiai?.effects[n];if(!im)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(im,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const im=characterArt.aiai?.effects[n];if(!im)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(im,-w/2,-h/2,w,h);ctx.restore();}
  function directed(n,x,y,vx,vy,w,h,alpha=1){const face=vx<0?-1:1;stamp(n,x,y,w,h,face,alpha,Math.atan2(vy,vx*face));}
  function draw(f){if(f.respawn)return;const a=f.attack;for(const b of attackVisualBoxes(f)){if(['grab','pummel'].includes(a.type))continue;directed(1,(b.x1+b.x2)/2,(b.y1+b.y2)/2,b.x2-b.x1,b.y2-b.y1,Math.hypot(b.x2-b.x1,b.y2-b.y1)+b.radius,42,.62);stamp(8,b.x2,b.y2,32,32,1,.85);}
   if(a?.aiaiRoll&&f.timer>=8&&f.timer<=30&&!a.rebounded)stamp(0,f.x-a.rollFace*40,f.y-43,115,60,a.rollFace,.65);

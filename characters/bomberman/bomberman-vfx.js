@@ -1,8 +1,8 @@
 'use strict';
 const BombermanVFX=(()=>{
  // Trails lead RIGHT. Reflect first, then rotate in local space.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.bomberman?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
- function prop(n,x,y,h,face=1,alpha=1,rot=0){const img=characterArt.bomberman?.frames[40+n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-h*img.width/img.height/2,-h/2,h*img.width/img.height,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.bomberman?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,h,face=1,alpha=1,rot=0){const img=characterArt.bomberman?.frames[40+n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-h*img.width/img.height/2,-h/2,h*img.width/img.height,h);ctx.restore();}
  function direction(b){const dx=b.x2-b.x1,dy=b.y2-b.y1,face=dx<0?-1:1;return{face,rotation:Math.atan2(dy,dx*face),x:(b.x1+b.x2)/2,y:(b.y1+b.y2)/2,length:Math.hypot(dx,dy)};}
  function drawObjects(){for(const q of BombermanRules.objects){if(q.kind==='bomb'){prop(q.power?1:0,q.x,q.y,q.power?34:27,q.face,1,q.kicked?q.age*.16:0);if(q.kicked)stamp(0,q.x-q.vx,q.y,55,30,q.face,.7);if(q.life-q.age<30)stamp(7,q.x,q.y-17,22,22,1,.5+Math.sin(frame*.8)*.4);continue;}const alpha=Math.min(1,(q.life-q.age)/5);for(const b of BombermanRules.blastBoxes(q)){const d=direction(b);if(d.length>0)stamp(2,d.x,d.y,d.length+28,36,d.face,alpha,d.rotation);}stamp(3,q.x,q.y,70,70,1,alpha);}
  }

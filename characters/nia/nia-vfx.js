@@ -1,7 +1,7 @@
 'use strict';
 const NiaVFX=(()=>{
  // Local rotation follows the horizontal mirror, so down remains down on either side.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.nia?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.nia?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function impact(v){const t=(v.max-v.life)/v.max,r=(70+v.power*30)*(1+t*.4);stamp(6,v.x,v.y,r,r,1,(1-t)**1.5);}
  function draw(f){for(const o of NiaRules.objects){if(o.owner!==f.id)continue;const size=60+o.tier*30;stamp(2,o.x,o.y,size,size,o.face);}
  if(f.niaHealUntil>frame)stamp(7,f.x,f.y-40,115,130,1,(f.niaHealUntil-frame)/24);

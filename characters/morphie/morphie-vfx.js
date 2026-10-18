@@ -1,8 +1,8 @@
 'use strict';
 const MorphieVFX=(()=>{
  // Directional textures lead RIGHT. Translate -> reflect -> rotate in local coordinates.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.morphie?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
- function prop(n,x,y,w,h,face=1,rot=0){const img=characterArt.morphie?.frames[40+n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.morphie?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
+ function prop(n,x,y,w,h,face=1,rot=0){const img=characterArt.morphie?.frames[40+n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function draw(f){const a=f.attack,s=MorphieRules.scale(f);if(f.morphTime>0)stamp(s<1?7:6,f.x,f.y-42*s,85*s,95*s,1,.18);if(!a)return;const t=f.timer;if(a.inkShot)prop(2,f.x+f.face*30*s,f.y-55*s,65*s,26*s,f.face,Math.atan2(a.aimY||0,1));if(a.sizeShift&&t>=16&&t<24)stamp(a.sizeChoice<1?7:6,f.x,f.y-45*s,120*s,120*s,1,.7);
  if(a.buttRocket&&a.launched&&a.thrusting){const dx=-(a.thrustX||0),dy=-a.thrustY,face=dx<0?-1:1;stamp(4,f.x+dx*2,f.y+dy*2,75,38,face,.9,Math.atan2(dy,dx*face));}
  if(a.buttRocket)return;const w=CombatData.activeWindow(a,t);if(!w)return;for(const b of attackVisualBoxes(f)){const d=AdolVFX.direction(b);stamp(w.shape==='spin'?12:a.hammer?8:a.type==='downsmash'?9:3,d.x,d.y,d.len+25,48*s,d.face,.85,d.rot);if(a.hammer||a.pipe)prop(a.hammer?0:6,d.x,d.y,d.len+35,40*s,d.face,d.rot);}}

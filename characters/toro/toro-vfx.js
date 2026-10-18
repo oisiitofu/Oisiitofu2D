@@ -1,6 +1,6 @@
 'use strict';
 const ToroVFX=(()=>{
-function stamp(n,x,y,w,h,face=1,alpha=1,angle=0){const im=characterArt.toro?.effects[n];if(!im)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(angle);ctx.globalAlpha*=alpha;ctx.drawImage(im,-w/2,-h/2,w,h);ctx.restore();}
+function stamp(n,x,y,w,h,face=1,alpha=1,angle=0){const im=characterArt.toro?.effects[n];if(!im)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(angle);ctx.globalAlpha*=alpha;AttackEffects.image(im,-w/2,-h/2,w,h);ctx.restore();}
 function draw(f){if(f.respawn)return;const a=f.attack;if(a?.toroSwitch&&f.timer>=6)stamp(9,f.x,f.y-28,90,75,1,.7);if(a?.toroUp&&a.upStarted){const dt=f.timer-a.upAt;if(a.toroForm===1&&dt<8)stamp(8,f.x,f.y-28,100,75,1,.8);else if(a.toroForm===2&&dt<42)stamp(4+Math.min(2,Math.floor(dt/14)),f.x,f.y+2,40,23,1,.9);}
 // The spark is on the trailing LEFT end; the crescent's convex edge leads RIGHT.
 // Align the curve with the hit segment, not the spark at the hand.

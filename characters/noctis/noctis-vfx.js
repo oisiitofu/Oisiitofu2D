@@ -1,6 +1,6 @@
 'use strict';
 const NoctisVFX=(()=>{
- function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.noctis?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,face=1,alpha=1,rotation=0){const img=characterArt.noctis?.effects[n];if(!img||alpha<=0)return;ctx.save();ctx.translate(x,y);ctx.rotate(rotation);ctx.scale(face,1);ctx.globalAlpha*=alpha;AttackEffects.image(img,-w/2,-h/2,w,h);ctx.restore();}
  function impact(v){const t=(v.max-v.life)/v.max;stamp(2,v.x,v.y,(90+v.power*34)*(1+t*.35),(90+v.power*34)*(1+t*.35),1,(1-t)**1.5);}
  function draw(f){const a=f.attack;if(!a)return;const t=f.timer;
   if(a.hold)stamp(a.type==='gale'?5+a.elementIndex:3,f.x+f.face*35,f.y-38,65+a.charge*50,65+a.charge*50,1,.5);
