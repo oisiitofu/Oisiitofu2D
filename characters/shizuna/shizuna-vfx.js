@@ -1,7 +1,7 @@
 'use strict';
 const ShizunaVFX=(()=>{
- // Native slash sprites point RIGHT. Reflect first, then rotate in local space.
- function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.shizuna?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+ // Crescent0's convex edge leads LEFT; normalize before local rotation/reflection.
+ function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt.shizuna?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;SlashVFX.image('shizuna',n,img,-w/2,-h/2,w,h);ctx.restore();}
  function geometry(b){const angle=Math.atan2(b.y2-b.y1,b.x2-b.x1),face=Math.cos(angle)<0?-1:1,r=b.radius??18;return{x:(b.x1+b.x2)/2,y:(b.y1+b.y2)/2,w:Math.hypot(b.x2-b.x1,b.y2-b.y1)+r*2,h:r*2+10,face,rot:Math.atan2(Math.sin(angle),Math.cos(angle)*face)};}
  function directed(n,b,alpha=.85){const g=geometry(b);stamp(n,g.x,g.y,g.w,g.h,g.face,alpha,g.rot);}
  function draw(f){if(f.respawn)return;for(const b of attackVisualBoxes(f))directed(b.window?.shape==='spin'?2:f.attack?.shizunaMoon?5:0,b);if(f.attack?.hold)stamp(6,f.x,f.y-58,60,85,1,.5);}

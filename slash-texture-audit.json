@@ -1,0 +1,1384 @@
+{
+  "ulgrim": {
+    "image": "assets/ready/ulgrim-atlas-30a438e7147cb453.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ],
+      "4": [
+        -1,
+        0
+      ]
+    }
+  },
+  "chiikawa": {
+    "image": "assets/ready/chiikawa-atlas-dd72357b38a3c32c.webp",
+    "effects": {
+      "3": [
+        1,
+        0
+      ]
+    }
+  },
+  "riki": {
+    "image": "assets/ready/riki-atlas-f791b7000e01e05b.webp",
+    "effects": {
+      "6": [
+        1,
+        0
+      ]
+    }
+  },
+  "okami": {
+    "image": "assets/ready/okami-atlas-64797aa11f287e50.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "gundam": {
+    "image": "assets/ready/gundam-atlas-2b5172e26b1b01af.webp",
+    "effects": {
+      "3": [
+        1,
+        0
+      ]
+    }
+  },
+  "zero": {
+    "image": "assets/ready/zero-atlas-88246c96f539159c.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "rin": {
+    "image": "assets/ready/rin-atlas-e830aaa3e2800211.webp",
+    "effects": {
+      "0": [
+        0,
+        1
+      ],
+      "1": [
+        -1,
+        0
+      ]
+    }
+  },
+  "lightning": {
+    "image": "assets/ready/lightning-atlas-798edf79b2235b38.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ]
+    }
+  },
+  "colette": {
+    "image": "assets/ready/colette-atlas-f2d99a0a9300d4a1.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ]
+    }
+  },
+  "rean": {
+    "image": "assets/ready/rean-atlas-151d0100077f53a4.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "estelle": {
+    "image": "assets/ready/estelle-atlas-2bf2fd1368a51a07.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "noctis": {
+    "image": "assets/ready/noctis-atlas-5a37f62cb9927dbc.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "clive": {
+    "image": "assets/ready/clive-atlas-44a06d007177632c.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "makoto": {
+    "image": "assets/ready/makoto-atlas-020f255847200018.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "neku": {
+    "image": "assets/ready/neku-atlas-022c644f13758242.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "narukami": {
+    "image": "assets/ready/narukami-atlas-c6a7c7a4f33f72c8.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ]
+    }
+  },
+  "naegi": {
+    "image": "assets/ready/naegi-atlas-ba9b25f3e21f0bae.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "rex": {
+    "image": "assets/ready/rex-atlas-724363d219ddada1.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "luke": {
+    "image": "assets/ready/luke-atlas-6a91410e5eb5920e.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ]
+    }
+  },
+  "will": {
+    "image": "assets/ready/will-atlas-25331d4315c7dcc8.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ]
+    }
+  },
+  "kosmos": {
+    "image": "assets/ready/kosmos-atlas-d8a9b2819f65a2f7.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ]
+    }
+  },
+  "fayt": {
+    "image": "assets/ready/fayt-atlas-b881813902011a5b.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "emma": {
+    "image": "assets/ready/emma-atlas-da700573ef539986.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "ryza": {
+    "image": "assets/ready/ryza-atlas-b4a874fd9a33ae31.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "noah": {
+    "image": "assets/ready/noah-atlas-9decefb06b275ce9.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "lloyd": {
+    "image": "assets/ready/lloyd-atlas-47b59442ccf8bcdf.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "shiren": {
+    "image": "assets/ready/shiren-atlas-dbc586ffe1a2abc5.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "hunter": {
+    "image": "assets/ready/hunter-atlas-88a202490593b095.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "adol": {
+    "image": "assets/ready/adol-atlas-4ecc269e68346349.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "valkyrie": {
+    "image": "assets/ready/valkyrie-atlas-6ccefc30f96fea67.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "pawapuro": {
+    "image": "assets/ready/pawapuro-atlas-d675d96fdf50ad3d.webp",
+    "effects": {
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "headmaster": {
+    "image": "assets/ready/headmaster-atlas-ef674dc6d671c008.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "sakuna": {
+    "image": "assets/ready/sakuna-atlas-d743225497ecf05a.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "haseo": {
+    "image": "assets/ready/haseo-atlas-3257f436121de4ad.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "terrarian": {
+    "image": "assets/ready/terrarian-atlas-1358cdf7679dc3a1.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "horse": {
+    "image": "assets/ready/horse-atlas-105f78d559e6d577.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "chef": {
+    "image": "assets/ready/chef-atlas-89c22f20068251f2.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "akira": {
+    "image": "assets/ready/akira-atlas-31084aea3daad73b.webp",
+    "effects": {
+      "1": [
+        -1,
+        0
+      ]
+    }
+  },
+  "fei": {
+    "image": "assets/ready/fei-atlas-e83c7dfdb5830a75.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "6": [
+        1,
+        0
+      ]
+    }
+  },
+  "human": {
+    "image": "assets/ready/human-atlas-93ca5bcbe2f4d093.webp",
+    "effects": {
+      "1": [
+        1,
+        0
+      ],
+      "4": [
+        1,
+        0
+      ]
+    }
+  },
+  "kitten": {
+    "image": "assets/ready/kitten-atlas-1415a9362e559abd.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "elma": {
+    "image": "assets/ready/elma-atlas-7d69f2bb3bcb57ee.webp",
+    "effects": {
+      "4": [
+        1,
+        0
+      ]
+    }
+  },
+  "dante": {
+    "image": "assets/ready/dante-atlas-8069b15d844d43e3.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ]
+    }
+  },
+  "leon": {
+    "image": "assets/ready/leon-atlas-883bb4bf6a04af1e.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ]
+    }
+  },
+  "tifa": {
+    "image": "assets/ready/tifa-atlas-7c138e1198bf51ca.webp",
+    "effects": {
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "zidane": {
+    "image": "assets/ready/zidane-atlas-e3c014287bf58478.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "4": [
+        1,
+        0
+      ]
+    }
+  },
+  "yuffie": {
+    "image": "assets/ready/yuffie-atlas-884c9a004ba8d91d.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ],
+      "4": [
+        1,
+        0
+      ]
+    }
+  },
+  "vincent": {
+    "image": "assets/ready/vincent-atlas-7df77e87721539bb.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "kiryu": {
+    "image": "assets/ready/kiryu-atlas-6bfe1843a33b4f5f.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "crash": {
+    "image": "assets/ready/crash-atlas-5b38d9a888663dbe.webp",
+    "effects": {
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "charlotta": {
+    "image": "assets/ready/charlotta-atlas-bb3fcebd8ab3c295.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "6": [
+        1,
+        0
+      ]
+    }
+  },
+  "ryofu": {
+    "image": "assets/ready/ryofu-atlas-9f86ec77ccb18fc1.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "mametchi": {
+    "image": "assets/ready/mametchi-atlas-20a6c0284984d199.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "piposaru": {
+    "image": "assets/ready/piposaru-atlas-1e1bf0dbac01544d.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "6": [
+        1,
+        0
+      ]
+    }
+  },
+  "aruru": {
+    "image": "assets/ready/aruru-atlas-7ef850659d11f425.webp",
+    "effects": {
+      "7": [
+        1,
+        0
+      ]
+    }
+  },
+  "maruku": {
+    "image": "assets/ready/maruku-atlas-3e7927acf8b7fe7d.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "dietrich": {
+    "image": "assets/ready/dietrich-atlas-279426c1ee8a24a6.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "twinbee": {
+    "image": "assets/ready/twinbee-atlas-b41263e67ff60289.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ],
+      "4": [
+        1,
+        0
+      ]
+    }
+  },
+  "goemon": {
+    "image": "assets/ready/goemon-atlas-8004d341cd4ea099.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        -1,
+        0
+      ]
+    }
+  },
+  "bayleef": {
+    "image": "assets/ready/bayleef-atlas-4af2137fcce6fc26.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "nier": {
+    "image": "assets/ready/nier-atlas-f994bbc639884d0a.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "miku": {
+    "image": "assets/ready/miku-atlas-58f7b6ee99f2913f.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "6": [
+        1,
+        0
+      ]
+    }
+  },
+  "jibanyan": {
+    "image": "assets/ready/jibanyan-atlas-ae191235336ac2b1.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ]
+    }
+  },
+  "pokoa": {
+    "image": "assets/ready/pokoa-atlas-6be09f3ced492946.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "terry": {
+    "image": "assets/ready/terry-atlas-f65cadeb356f3d25.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "maelle": {
+    "image": "assets/ready/maelle-atlas-fca009f25e52dcdc.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "sumino": {
+    "image": "assets/ready/sumino-atlas-49203fdd7159c441.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        -1,
+        0
+      ]
+    }
+  },
+  "rocbouquet": {
+    "image": "assets/ready/rocbouquet-atlas-676ab8cf5fccbbcb.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        -1,
+        0
+      ]
+    }
+  },
+  "frog": {
+    "image": "assets/ready/frog-atlas-0ae5e88434ce53de.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "eve": {
+    "image": "assets/ready/eve-atlas-b6ca720b34ac5b0a.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "odio": {
+    "image": "assets/ready/odio-atlas-043674c84c1fb645.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "laharl": {
+    "image": "assets/ready/laharl-atlas-358181d37ac3509b.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "kasane": {
+    "image": "assets/ready/kasane-atlas-bbfa3602aba2d450.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "shadow": {
+    "image": "assets/ready/shadow-atlas-58496151af0d9e39.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "saki": {
+    "image": "assets/ready/saki-atlas-83f41675fc5609fa.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ],
+      "4": [
+        1,
+        0
+      ]
+    }
+  },
+  "aerith": {
+    "image": "assets/ready/aerith-atlas-f00d965d55bffcab.webp",
+    "effects": {
+      "1": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "moogle": {
+    "image": "assets/ready/moogle-atlas-b5c179a2509d9242.webp",
+    "effects": {
+      "6": [
+        1,
+        0
+      ]
+    }
+  },
+  "greymon": {
+    "image": "assets/ready/greymon-atlas-1b1773ad2b5a76bf.webp",
+    "effects": {
+      "2": [
+        0.9004471023526769,
+        -0.43496553411123023
+      ]
+    }
+  },
+  "metalgreymon": {
+    "image": "assets/ready/metalgreymon-atlas-8c3e84d535c70a4c.webp",
+    "effects": {
+      "3": [
+        1,
+        0
+      ]
+    }
+  },
+  "wargreymon": {
+    "image": "assets/ready/wargreymon-atlas-4bad9b8b2a1c94bb.webp",
+    "effects": {
+      "4": [
+        -1,
+        0
+      ]
+    }
+  },
+  "omegamon": {
+    "image": "assets/ready/omegamon-atlas-b83b9192ebbd0f94.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "donchan": {
+    "image": "assets/ready/donchan-atlas-c36adaa4b4c7da6a.webp",
+    "effects": {
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "shizuna": {
+    "image": "assets/ready/shizuna-atlas-bd6d69c2fdc150e1.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "hanajs": {
+    "image": "assets/ready/hanajs-atlas-69f20308100884ea.webp",
+    "effects": {
+      "2": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "hanajk": {
+    "image": "assets/ready/hanajk-atlas-9f81653a5cbd7fcd.webp",
+    "effects": {
+      "2": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "hanajd": {
+    "image": "assets/ready/hanajd-atlas-02b27903266f0d4f.webp",
+    "effects": {
+      "2": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ]
+    }
+  },
+  "kisuke": {
+    "image": "assets/ready/kisuke-atlas-a5682af8dd386f95.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ],
+      "1": [
+        -1,
+        0
+      ]
+    }
+  },
+  "ray": {
+    "image": "assets/ready/ray-atlas-5bffe8ad33484b04.webp",
+    "effects": {
+      "6": [
+        1,
+        0
+      ]
+    }
+  },
+  "alain": {
+    "image": "assets/ready/alain-atlas-89913d24d087df10.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "hinako": {
+    "image": "assets/ready/hinako-atlas-157fcb6bfdc59464.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ]
+    }
+  },
+  "megamanexe": {
+    "image": "assets/ready/megamanexe-atlas-d11bcbd6befd9ab0.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ],
+      "9": [
+        1,
+        0
+      ]
+    }
+  },
+  "melia": {
+    "image": "assets/ready/melia-atlas-b427eece323cadf4.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "fiora": {
+    "image": "assets/ready/fiora-atlas-bb7d0f0ebd82833f.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "krystal": {
+    "image": "assets/ready/krystal-atlas-965d68e5e731983d.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ],
+      "6": [
+        -1,
+        0
+      ]
+    }
+  },
+  "yuri": {
+    "image": "assets/ready/yuri-atlas-34653627c480f541.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ]
+    }
+  },
+  "hornet": {
+    "image": "assets/ready/hornet-atlas-7fe65df244235eeb.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "toro": {
+    "image": "assets/ready/toro-atlas-a3c638f369bfed12.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  },
+  "c4621": {
+    "image": "assets/ready/c4621-atlas-208c4a87b07c4400.webp",
+    "effects": {
+      "4": [
+        1,
+        0
+      ],
+      "5": [
+        1,
+        0
+      ],
+      "7": [
+        1,
+        0
+      ]
+    }
+  },
+  "malenia": {
+    "image": "assets/ready/malenia-atlas-a09598d8cec2ff43.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ]
+    }
+  },
+  "hayabusa": {
+    "image": "assets/ready/hayabusa-atlas-85125dce25202dee.webp",
+    "effects": {
+      "0": [
+        -1,
+        0
+      ],
+      "3": [
+        -1,
+        0
+      ],
+      "4": [
+        1,
+        0
+      ],
+      "10": [
+        -1,
+        0
+      ]
+    }
+  },
+  "klonoa": {
+    "image": "assets/ready/klonoa-atlas-e62881b7f5b01eeb.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "6": [
+        1,
+        0
+      ],
+      "7": [
+        1,
+        0
+      ]
+    }
+  },
+  "alucard": {
+    "image": "assets/ready/alucard-atlas-92ade24c48c35371.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ],
+      "6": [
+        1,
+        0
+      ]
+    }
+  },
+  "kurabe": {
+    "image": "assets/ready/kurabe-atlas-80225013a30ee98b.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "2": [
+        1,
+        0
+      ]
+    }
+  },
+  "battlemage": {
+    "image": "assets/ready/battlemage-atlas-5355a1e627dff5bf.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "3": [
+        1,
+        0
+      ]
+    }
+  },
+  "karateka": {
+    "image": "assets/ready/karateka-atlas-794dab890bb1275f.webp",
+    "effects": {
+      "6": [
+        -1,
+        0
+      ],
+      "7": [
+        1,
+        0
+      ]
+    }
+  },
+  "aiai": {
+    "image": "assets/ready/aiai-atlas-80b2043975a170f5.webp",
+    "effects": {
+      "0": [
+        1,
+        0
+      ],
+      "1": [
+        1,
+        0
+      ]
+    }
+  }
+}

@@ -1,9 +1,10 @@
 'use strict';
 const DigimonVFX=(()=>{
- // Native axes: flame/missile/wire/claw/beam point RIGHT; evolution, tornado,
+ // Wargreymon4/Omegamon0 crescents lead LEFT and are normalized by SlashVFX.
+ // Native axes: flame/missile/wire/beam point RIGHT; evolution, tornado,
  // shield and rise point UP. Translate -> reflect X -> rotate in local space.
  function create(id){const index=DigimonKit.ids.indexOf(id),Rules=NewcomerCore.registry[id];
-  function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt[id]?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore();}
+  function stamp(n,x,y,w,h,face=1,alpha=1,rot=0){const img=characterArt[id]?.effects[n];if(!img)return;ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.rotate(rot);ctx.globalAlpha*=alpha;SlashVFX.image(id,n,img,-w/2,-h/2,w,h);ctx.restore();}
   function directed(n,x,y,w,h,angle,alpha=1,sourceAngle=0){const face=Math.cos(angle)<0?-1:1,img=characterArt[id]?.effects[n],source=sourceAngle&&img?Math.atan2(Math.sin(sourceAngle)*h/img.height,Math.cos(sourceAngle)*w/img.width):0;stamp(n,x,y,w,h,face,alpha,Math.atan2(Math.sin(angle),Math.cos(angle)*face)-source);}
   function draw(f){const a=f.attack;if(!a||f.respawn)return;for(const b of attackVisualBoxes(f)){const angle=Math.atan2(b.y2-b.y1,b.x2-b.x1),w=Math.hypot(b.x2-b.x1,b.y2-b.y1)+30,n=index===3&&a.type==='bair'?1:[2,3,4,0][index];if(index===2&&a.digiRise)directed(2,f.x,f.y-55,95,145,Math.atan2(f.vy,f.vx),.85,-Math.PI/2);else if(index===0&&a.digiDown)stamp(3,f.x,f.y-23,215,65,f.face);else directed(n,(b.x1+b.x2)/2,(b.y1+b.y2)/2,w,55,angle,.9,index===0?-.45:0);}
    if(a.hold)stamp(index===2?0:0,f.x+f.face*35,f.y-65,35+a.charge*30,35+a.charge*30,f.face,.55);
