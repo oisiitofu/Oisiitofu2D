@@ -38,3 +38,6 @@ function shadowPose(f){const a=f.attack;if(a?.shadowSpear||a?.shadowBoost||a?.sh
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(ShadowMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('shadow',{"upsmash":{"strike":[15,10],"windup":3},"jab2":{"strike":[6,7],"windup":3},"jab3":{"strike":[7,9],"windup":3}});

@@ -37,3 +37,6 @@ function dietrichPose(f){const a=f.attack;if(a?.dietrichSwordWave||a?.dietrichRu
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(DietrichMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('dietrich',{"smash":{"strike":[13,9],"windup":3},"jab3":{"strike":[6,7],"windup":3},"upsmash":{"strike":[15,10],"windup":3}});

@@ -39,3 +39,6 @@ function odioPose(f){const a=f.attack;if(a?.odioDragon||a?.odioRazor||a?.odioVau
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(OdioMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('odio',{"upsmash":{"strike":[15,10],"windup":3},"uair":{"strike":[15],"windup":3},"dashAttack":{"strike":[2,9],"windup":3},"smash":{"strike":[13,9],"windup":3}});

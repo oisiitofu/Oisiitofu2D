@@ -1,5 +1,5 @@
 'use strict';
-const ViviMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,moves={};for(const[id,a]of Object.entries(UlgrimMoves))moves[id]={...a,animation:{...a.animation},timeline:a.timeline.map(e=>({...e})),activeFrames:a.activeFrames.map(v=>({...v}))};const names={jab:'杖たたき',jab2:'杖突き',jab3:'ファイアフィニッシュ',heavy:'ファイアスイング',up:'サンダーポップ',low:'杖払い',dashAttack:'転び込み突き',smash:'ブリザドインパクト',upsmash:'サンダーピラー',downsmash:'クエイクリング',air:'マジックスピン',fair:'ファイアショット',bair:'ブリザドリバース',uair:'サンダーポップ',dair:'メテオブリザド'};for(const[id,name]of Object.entries(names))moves[id].name=name;moves.dair={...moves.dair,timeline:[],bounceOnHit:-8};moves.smash.element='ice';moves.bair.element='ice';
+const ViviMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,moves={};for(const[id,a]of Object.entries(UlgrimMoves))moves[id]={...a,animation:{...a.animation},timeline:a.timeline.map(e=>({...e})),activeFrames:a.activeFrames.map(v=>({...v}))};const names={jab:'杖たたき',jab2:'杖突き',jab3:'ファイアフィニッシュ',heavy:'ファイアスイング',up:'サンダーポップ',low:'杖払い',dashAttack:'転び込み突き',smash:'ブリザドインパクト',upsmash:'サンダーピラー',downsmash:'クエイクリング',air:'マジックスピン',fair:'ファイアショット',bair:'ブリザドリバース',uair:'サンダーポップ',dair:'メテオブリザド'};for(const[id,name]of Object.entries(names))moves[id].name=name;moves.dair={...moves.dair,timeline:[],bounceOnHit:-8,element:'ice'};moves.uair.name='エーテルリング';moves.smash.element='ice';moves.bair.element='ice';
 moves.dragon=m('ファイア → ファイラ → ファイガ',15,[],15,12,{pose:9,spellShots:[15],chargeFrame:5,chargeButton:'special',chargeMaxFrames:60,projectile:true});
 moves.dash=m('ダブルキャスト',10,[],24,12,{pose:9,spellShots:[10,20],doubleCast:true,projectile:true});
 moves.rise=m('エアロライズ',7,[w(7,12,'up')],30,16,{damage:7,reach:140,pose:16,verticalImpulse:-18,aerial:true,angle:-1.4,airControlMultiplier:1.3,actionCancelFrame:15,ledgeGrabStart:7});
@@ -12,3 +12,6 @@ return{reset,action,tick,box,get objects(){return objects}};})();
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(ViviMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('vivi',{"fair":{"strike":[13],"windup":14},"upsmash":{"strike":[14,8],"windup":14},"uair":{"strike":[16],"windup":14},"smash":{"strike":[13,9],"windup":14},"bair":{"strike":[7,10],"windup":14},"jab3":{"strike":[6,7],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

@@ -34,3 +34,6 @@ const ChefRules=(()=>{
  function field(source,f,hit,box,touch){const a=f.attack;if(f.characterId!=='chef'||!a?.extinguisher||f.timer<10||f.timer>30||!hit.projectile||f.respawn||f.hitlag)return false;const x=touch?.x??source.x,y=touch?.y??source.y-45;if((source.x-f.x)*a.originFace<=0||(x-f.x)*a.originFace< -8||Math.abs(y-(f.y-49))>60)return false;ring(f.x+a.originFace*35,f.y-48,'#bfefff',45);GameAudio.cue('shield-hit',.5,f);return true;}
  return Object.assign(rules,{food,field});
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('chef',{"smash":{"strike":[13,9],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"fair":{"strike":[13],"windup":14},"jab3":{"strike":[7,9],"windup":14}});

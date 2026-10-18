@@ -29,3 +29,6 @@ const UlgrimMoves=(()=>{
  for(const a of Object.values(moves)){a.animation={...a.animation,anticipationPose:14};a.motionEndFrames=a.totalFrames;}
  return moves;
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('ulgrim',{"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"fair":{"strike":[13],"windup":14},"smash":{"strike":[13,9],"windup":14},"bair":{"strike":[7,10],"windup":14},"jab3":{"strike":[6,7],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

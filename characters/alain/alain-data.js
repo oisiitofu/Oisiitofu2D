@@ -29,3 +29,6 @@ const AlainRules=NewcomerCore.create('alain',AlainMoves,{
 });
 function alainMeleeBox(f,a,w,reach){const shape=w.shape,h=45,r=a.type.includes('smash')?17:13;let p=shape==='up'?[0,-32,0,-105]:shape==='down'?[0,-30,10,45]:shape==='back'?[0,-h,-reach,-h]:shape==='low'?[0,-12,reach,-12]:shape==='spin'?[-32,-h,32,-h]:[0,-h,reach,-h];return[{x1:f.x+p[0]*f.face,y1:f.y+p[1],x2:f.x+p[2]*f.face,y2:f.y+p[3],radius:shape==='spin'?25:r,window:w,modifiers:w}];}
 function alainPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('alain',{"jab3":{"strike":[7,6],"windup":3},"fair":{"strike":[6,12],"windup":3},"downsmash":{"strike":[11,14],"windup":3}});

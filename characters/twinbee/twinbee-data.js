@@ -43,3 +43,6 @@ function twinbeePose(f){const a=f.attack;if(a?.twinbeeShot||a?.twinbeeBomber||a?
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(TwinbeeMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('twinbee',{"upsmash":{"strike":[15,10],"windup":3},"smash":{"strike":[13,9],"windup":3}});

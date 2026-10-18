@@ -17,3 +17,6 @@ const TerrarianRules=NewcomerCore.create('terrarian',TerrarianMoves,{
  boxes(f,a,w,t){if(a.hookSwing){if(a.hooked)return[];const length=60+220*Math.sin(Math.PI*(t-w.start)/(w.end-w.start));return[{x1:f.x+f.face*12,y1:f.y-45,x2:f.x+f.face*length,y2:f.y-45+(a.aimY||0)*length,radius:12,window:w}];}if(a.mountDrop)return[{x1:f.x-18,y1:f.y-8,x2:f.x+18,y2:f.y+8,radius:23,window:w}];},
  cpu(f,o,i,clear){if(f.attack?.hookSwing){clear();i.x=f.attack.originFace;i.y=0;}if(f.attack?.megashark){i.specialHeld=f.attack.chargeFrames<30&&Math.abs(o.x-f.x)>170;i.y=clamp((o.y-f.y)/160,-1,1);}}
 });
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('terrarian',{"heavy":{"strike":[7,9],"windup":14},"fair":{"strike":[13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"jab3":{"strike":[6,9],"windup":14}});

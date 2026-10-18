@@ -36,3 +36,6 @@ function piposaruPose(f){const a=f.attack;if(a?.piposaruNet||a?.piposaruGadget||
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(PiposaruMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('piposaru',{"heavy":{"strike":[7,9],"windup":3},"uair":{"strike":[10,15],"windup":3}});

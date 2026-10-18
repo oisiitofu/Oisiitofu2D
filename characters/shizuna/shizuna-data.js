@@ -58,3 +58,6 @@ const ShizunaRules=NewcomerCore.create('shizuna',ShizunaMoves,{
  cpu(f,o,i,clear){const a=f.attack;if(a?.shizunaGale){clear();i.x=Math.sign(platforms.find(p=>p.main).x+platforms.find(p=>p.main).w/2-f.x)*.8;i.y=-1;i.special=a.step<3&&f.timer-a.stepAt===10;}else if(!a&&f.grounded&&(f.shizunaCP||0)>=65&&Math.abs(o.x-f.x)<210&&frame%90===f.id){clear();i.x=0;i.y=1;i.special=true;}}
 });
 function shizunaPose(f){const a=f.attack;if(a?.special)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('shizuna',{"upsmash":{"strike":[15,10],"windup":3},"smash":{"strike":[13,9],"windup":3},"jab3":{"strike":[6,7],"windup":3}});

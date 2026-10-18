@@ -74,3 +74,6 @@ const MaleniaRules=NewcomerCore.create('malenia',MaleniaMoves,{
 });
 function maleniaObjectHit(q,f,o,b){if(q.hits.has(o.id)||o.respawn||CombatSystem.protection(o).intangible)return false;const touch=CombatSystem.contact(b,o),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(o.mode)&&CombatSystem.shieldCovers(o,b);if(!touch&&!shield)return false;q.hits.add(o.id);CombatSystem.hit(f,o,{...MaleniaMoves.dragon,type:'malenia'+q.kind,sourceType:q.sourceType,projectile:true,maleniaNoHeal:true,charge:0,damage:q.damage,staleMultiplier:q.stale,launchDirection:q.face,baseKnockback:q.kind==='rotField'?3:18,knockbackGrowth:.04},b,touch);return true;}
 function maleniaPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('malenia',{"jab3":{"strike":[7,6],"windup":3},"fair":{"strike":[12,13],"windup":3}});

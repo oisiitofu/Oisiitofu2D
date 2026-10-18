@@ -54,3 +54,6 @@ Object.assign(EveMoves.dragon,{rangedInterval:48,rangedRearm:24});
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(EveMoves.dash,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('eve',{"dashAttack":{"strike":[2,9],"windup":3},"smash":{"strike":[13,9],"windup":3},"uair":{"strike":[10,15],"windup":3}});

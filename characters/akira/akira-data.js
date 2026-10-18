@@ -28,3 +28,6 @@ const AkiraRules=(()=>{
  function rObjects(f){return rules.objects.filter(q=>q.owner===f.id&&q.kind==='remote');}
  return Object.assign(rules,{legions});
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('akira',{"heavy":{"strike":[7,9],"windup":14},"fair":{"strike":[13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"jab3":{"strike":[6,9],"windup":14}});

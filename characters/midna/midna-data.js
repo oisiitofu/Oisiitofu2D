@@ -65,3 +65,6 @@ const MidnaRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main);if(f.attack?.midnaWarp){const a=f.attack,target={x:clamp(f.x,p.x+30,p.x+p.w-30),y:p.y-65},dx=target.x-a.origin.x,dy=target.y-a.origin.y,len=Math.hypot(dx,dy);i.x=dx/(len||1);i.y=dy/(len||1);i.jump=i.guard=i.special=i.jab=i.heavy=i.smash=false;}else if(f.attack?.hairGrapple){i.x=Math.sign(720-f.x);i.y=0;i.jump=!!f.attack.hook&&f.timer>=30;i.special=i.jab=i.heavy=i.smash=i.guard=false;}else if(!f.attack&&!f.grounded&&!f.recovered&&(f.y>p.y-100&&(f.x<p.x||f.x>p.x+p.w)||f.y>p.y+30)){i.x=Math.sign(720-f.x)*.4;i.y=-1;i.special=true;i.jump=i.guard=i.jab=i.heavy=i.smash=false;}if(f.attack?.midnaField)i.specialHeld=Math.abs(o.x-f.x)>130&&f.attack.chargeFrames<40;return i;}
  return{reset,prepare,solid,destination,anchor,release,action,onHit,geometry,handPoint,boxes,tick,cpu};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('midna',{"heavy":{"strike":[7,9],"windup":14},"fair":{"strike":[13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"jab3":{"strike":[6,9],"windup":14},"downsmash":{"strike":[17,7],"windup":14},"dashAttack":{"strike":[2,9],"windup":14}});

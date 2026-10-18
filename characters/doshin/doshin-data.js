@@ -34,3 +34,6 @@ function doshinPose(f){const a=f.attack;if(a?.doshinThrow||a?.doshinTerrain||a?.
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(DoshinMoves.dragon,{rangedInterval:48,rangedRearm:24});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('doshin',{"jab3":{"strike":[6,7],"windup":3},"upsmash":{"strike":[15,10],"windup":3},"smash":{"strike":[13,9],"windup":3},"jab2":{"strike":[7,6],"windup":3},"fair":{"strike":[12,13],"windup":3}});

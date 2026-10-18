@@ -34,3 +34,6 @@ const CharlottaRules=NewcomerCore.create('charlotta',CharlottaMoves,{
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.charlottaLadder){clear();i.x=a.escapeSide||Math.sign(p.x+p.w/2-f.x);i.y=-1;i.specialHeld=false;}if(a?.charlottaSpin){clear();i.specialHeld=f.timer<35;i.x=Math.sign(o.x-f.x);}}
 });
 function charlottaPose(f){const a=f.attack;if(a?.charlottaSpin&&f.timer<=a.activeEnd)return[47,12,47,12][Math.floor(f.timer/3)%4];if(a?.charlottaHop||a?.charlottaLadder||a?.charlottaBrace||a?.charlottaThrust)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,ledge:38,grab:17,caught:21,throw:6})[f.state]??0;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('charlotta',{"smash":{"strike":[13,9],"windup":3},"jab3":{"strike":[6,7],"windup":3},"upsmash":{"strike":[15,10],"windup":3},"jab2":{"strike":[7],"windup":3}});

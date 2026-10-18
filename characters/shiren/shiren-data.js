@@ -47,3 +47,6 @@ const ShirenRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main);if(f.attack?.blastPot){i.x=f.attack.escapeSide&&f.y>p.y?f.attack.escapeSide:Math.sign(720-f.x);i.y=0;i.special=i.jump=i.guard=i.jab=i.heavy=i.smash=i.grab=false;}else if(f.attack?.selfPull||f.attack?.pounceStaff){i.x=i.y=0;i.special=i.jump=i.guard=i.jab=i.heavy=i.smash=i.grab=false;}else if(!f.attack&&!f.grounded&&!f.recovered&&(f.y>p.y-90&&(f.x<p.x||f.x>p.x+p.w)||f.y>p.y+35)){i.x=f.y>p.y+35&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;i.special=true;i.specialHeld=false;i.jump=i.guard=i.jab=i.heavy=i.smash=i.grab=false;}if(f.attack?.dragonHerb)i.specialHeld=Math.abs(o.x-f.x)>220&&f.attack.chargeFrames<30;return i;}
  return{reset,prepare,action,onHit,spawn,solid,safePoint,geometry,boxes,box,tick,cpu,get objects(){return objects;}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('shiren',{"heavy":{"strike":[7,9],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"smash":{"strike":[13,9],"windup":14},"jab3":{"strike":[6,9],"windup":14}});

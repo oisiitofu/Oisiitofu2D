@@ -46,3 +46,6 @@ function aruruPose(f){const a=f.attack;if(a?.aruruShot||a?.aruruChain||a?.aruruR
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(AruruMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('aruru',{"uair":{"strike":[10,15],"windup":3}});

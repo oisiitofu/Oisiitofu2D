@@ -58,7 +58,7 @@ const CombatData=(()=>{
   }
   a.motionEndFrames=a.totalFrames;
  }
- function activeWindow(a,frame){let index=a.activeFrames.findIndex(w=>frame>=w.start&&frame<=w.end);return index<0?null:{...a.activeFrames[index],index};}
+ function activeWindow(a,frame){let index=a.activeFrames.findIndex(w=>frame>=w.start&&frame<=w.end);if(index<0)return null;const w=a.activeFrames[index];return{...w,index,...(w.motionPoseFrames?{pose:w.motionPoseFrames[frame-w.start]}:{})};}
  const ordinaryAttacks=new Set(['jab','jab2','jab3','heavy','up','low','dashAttack','smash','upsmash','downsmash','air','fair','bair','uair','dair','grab','ledge','getupAttack']);
  function alignRecovery(a){
   if(a.ledgeStrike)return;
@@ -91,7 +91,7 @@ const CombatData=(()=>{
   if(a.counterWindow&&frame<=a.counterWindow[1])return{phase:'counter',pose:a.pose,progress:0};
   // Casting poses follow spawn events without adding a melee hitbox.
   if(a.spellShots&&frame<=a.spellShots.at(-1))return{phase:'attack',pose:a.pose,progress:(frame-a.startupFrames)/Math.max(1,a.spellShots.at(-1)-a.startupFrames)};
-  let prior=a.activeFrames.filter(w=>w.end<frame).at(-1),end=Math.max(prior?.end??a.spellShots?.at(-1)??a.counterWindow?.[1]??a.startupFrames,a.motionCommitEnd||0),elapsed=frame-end,follow=elapsed<=ani.followThroughFrames;
+  let prior=a.activeFrames.filter(w=>w.end<frame).at(-1);if(prior?.motionPoseFrames)prior=activeWindow(a,prior.end);let end=Math.max(prior?.end??a.spellShots?.at(-1)??a.counterWindow?.[1]??a.startupFrames,a.motionCommitEnd||0),elapsed=frame-end,follow=elapsed<=ani.followThroughFrames;
   if(a.motionCommitEnd&&frame<=a.motionCommitEnd&&!a.activeFrames.some(w=>w.start>frame))return{phase:'attack',pose:a.pose,progress:0};
   let next=a.activeFrames.find(w=>w.start>frame);
   if(next&&!follow){let begin=end+ani.followThroughFrames+1,span=next.start-begin,t=frame-begin+1,anticipation=Math.min(ani.anticipationEnd,Math.max(1,Math.floor(span*.4)));return t<=anticipation?{phase:'anticipation',pose:ani.anticipationPose,progress:t/anticipation}:{phase:'acceleration',pose:ani.accelerationPose,progress:(t-anticipation)/Math.max(1,span-anticipation)};}

@@ -104,3 +104,6 @@ const ReanRules=(()=>{
  }
  return{reset,prepare,action,tick,box,cpu,get objects(){return objects}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('rean',{"uair":{"strike":[16],"windup":14},"smash":{"strike":[13,9],"windup":14},"jab3":{"strike":[6,7],"windup":14},"bair":{"strike":[7,10],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

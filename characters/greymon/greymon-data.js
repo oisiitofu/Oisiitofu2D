@@ -79,3 +79,6 @@ function greymonPose(f){return DigimonKit.pose(f);}
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(GreymonMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('greymon',{"upsmash":{"strike":[15,10],"windup":3},"smash":{"strike":[13,9],"windup":3},"jab2":{"strike":[7],"windup":3},"jab3":{"strike":[6,7],"windup":3}});

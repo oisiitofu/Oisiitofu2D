@@ -61,3 +61,6 @@ const HunterRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main),a=f.attack,clear=()=>{i.jump=i.guard=i.jab=i.heavy=i.smash=i.grab=i.special=false;};if(a?.wirebug){clear();i.specialHeld=false;i.x=f.y>p.y+90&&f.x>p.x&&f.x<p.x+p.w?(f.x<p.x+p.w/2?-1:1):Math.sign(720-f.x);i.y=-1;}else if(!a&&!f.grounded&&!f.recovered&&(f.y>p.y-90&&(f.x<p.x||f.x>p.x+p.w)||f.y>p.y+35)){clear();i.x=f.y>p.y+90&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;i.special=true;i.specialHeld=false;}else if(a?.tackle){clear();i.specialHeld=false;if(a.confirmed&&f.timer>=19)i.special=true;}if(a?.hunterCharge)i.specialHeld=Math.abs(o.x-f.x)<190&&a.chargeFrames<35;if(a?.slinger){clear();i.x=0;i.y=0;i.specialHeld=a.chargeFrames<18;}return i;}
  return{pods,reset,prepare,aim,spawn,guard,onHit,node,release,action,collision,geometry,boxes,box,pulse,tick,cpu,get objects(){return objects;}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('hunter',{"heavy":{"strike":[7,9],"windup":14},"fair":{"strike":[13],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"jab2":{"strike":[6,7],"windup":14},"jab3":{"strike":[6,7,6],"windup":14},"smash":{"strike":[14,6],"windup":14}});

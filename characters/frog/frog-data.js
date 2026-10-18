@@ -35,3 +35,6 @@ function frogPose(f){const a=f.attack;if(a?.frogCut||a?.frogWater||a?.frogJump||
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(FrogMoves.dash,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('frog',{"jab2":{"strike":[7],"windup":3},"jab3":{"strike":[6,7],"windup":3},"upsmash":{"strike":[15,10],"windup":3},"uair":{"strike":[10,15],"windup":3},"smash":{"strike":[13,9],"windup":3}});

@@ -66,3 +66,6 @@ const KisukeRules=NewcomerCore.create('kisuke',KisukeMoves,{
  cpu(f,o,i,clear){const a=f.attack,p=platforms.find(p=>p.main);if(a?.kisukeRise){clear();i.x=Math.sign(p.x+p.w/2-f.x)*.9;i.y=-1;i.special=a.step<3&&f.timer-a.stepAt===9;}else if(a?.kisukeSlide&&a.phase==='slide'&&f.timer===17&&Math.abs(o.x-f.x)<210){clear();i.special=true;}else if(!a&&f.grounded&&kisukeResource(f)[f.kisukeBlade]<25&&frame%60===f.id){clear();i.y=1;i.special=true;}}
 });
 function kisukePose(f){const a=f.attack;if(a?.special)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:5,fly:21,down:22,getup:37,ledge:38,grab:17,caught:5,throw:19})[f.state]??0;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('kisuke',{"upsmash":{"strike":[15,10],"windup":3},"fair":{"strike":[13],"windup":3},"smash":{"strike":[13,9],"windup":3},"jab3":{"strike":[6,7],"windup":3}});

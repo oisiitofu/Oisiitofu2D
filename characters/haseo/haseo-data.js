@@ -18,3 +18,6 @@ const HaseoRules=(()=>{function rebound(f,i,kind){const a=f.attack;if(!a?.flight
  onHit(f,o,a){if(a.flight)rebound(f,{x:f.face},'enemy');if(a.fateDrop&&!f.attack.bounced){f.attack.bounced=true;f.timer=65;f.vy=-10;f.fastFall=false;f.attack.gravityMultiplier=.8;}},
  cpu(f,o,i,clear){if(f.attack?.fatedOrbit){clear();i.y=o.y<f.y-40?-1:0;}if(f.attack?.judgment)i.specialHeld=f.attack.chargeFrames<40&&Math.abs(o.x-f.x)>200;}
  });})();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('haseo',{"heavy":{"strike":[7,9],"windup":14},"fair":{"strike":[13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"jab3":{"strike":[6,9],"windup":14}});

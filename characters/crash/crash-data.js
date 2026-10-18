@@ -34,3 +34,6 @@ const CrashRules=NewcomerCore.create('crash',CrashMoves,{
 });
 (()=>{const reset=CrashRules.reset,tick=CrashRules.tick;CrashRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='crash'){f.crashFuel=60;f.crashCrateCooldown=f.crashFruitCount=0;}};CrashRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='crash'){if(f.grounded||f.ledge||f.respawn)f.crashFuel=60;if(f.respawn)f.crashCrateCooldown=0;else if(f.crashCrateCooldown>0)f.crashCrateCooldown--;}};})();
 function crashPose(f){const a=f.attack;if(a?.crashSpin&&f.timer<=a.activeEnd)return[41,12,41,14][Math.floor(f.timer/3)%4];if(a?.crashRocket||a?.crashCrate)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,ledge:38,grab:17,caught:21,throw:6})[f.state]??0;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('crash',{"heavy":{"strike":[7,9],"windup":3},"smash":{"strike":[13,9],"windup":3},"upsmash":{"strike":[15,10],"windup":3}});

@@ -87,3 +87,6 @@ const CliveRules=(()=>{
  }
  return{reset,prepare,action,onHit,tick,cpu,claw,pathClear,box,get objects(){return objects;}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('clive',{"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"fair":{"strike":[13],"windup":14},"smash":{"strike":[13,9],"windup":14},"jab3":{"strike":[7,9],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

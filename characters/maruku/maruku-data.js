@@ -39,3 +39,6 @@ function marukuPose(f){const a=f.attack;if(a?.marukuCannon||a?.marukuCutter||a?.
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(MarukuMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('maruku',{"jab2":{"strike":[6,7],"windup":3}});

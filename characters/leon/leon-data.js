@@ -57,3 +57,6 @@ function leonPose(f){const a=f.attack;if(a?.leonGun)return[6,40,41,42][a.weapon]
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(LeonMoves.dragon,{rangedInterval:32,rangedRearm:16});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('leon',{"uair":{"strike":[15],"windup":3},"jab3":{"strike":[6,7],"windup":3}});

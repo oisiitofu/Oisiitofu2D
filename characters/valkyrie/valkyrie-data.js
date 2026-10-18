@@ -36,3 +36,6 @@ const ValkyrieRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main),a=f.attack,clear=()=>{i.jump=i.guard=i.jab=i.heavy=i.smash=i.grab=i.special=false;};if(a?.featherSail){clear();i.x=f.y>p.y+90&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;i.specialHeld=false;}else if(!a&&!f.grounded&&!f.recovered&&(f.y>p.y-100&&(f.x<p.x||f.x>p.x+p.w)||f.y>p.y+35)){clear();i.x=f.y>p.y+90&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;i.special=true;}else if(a?.trick){clear();if(a.confirmed&&f.timer>=19)i.special=true;}if(a?.holyBow)i.specialHeld=Math.abs(o.x-f.x)>180&&a.chargeFrames<42;return i;}
  return{reset,prepare,spawn,kick,action,collision,onHit,boxes,tick,cpu,get objects(){return objects;}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('valkyrie',{"heavy":{"strike":[7,9],"windup":14},"fair":{"strike":[12,13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"jab3":{"strike":[6,9],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

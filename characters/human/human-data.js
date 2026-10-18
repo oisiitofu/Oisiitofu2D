@@ -40,3 +40,6 @@ const HumanRules=NewcomerCore.create('human',HumanMoves,{
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(HumanMoves.dragon,{rangedInterval:48,rangedRearm:24});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('human',{"heavy":{"strike":[7,9],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[12,8],"windup":14},"uair":{"strike":[12],"windup":14},"jab3":{"strike":[6,9],"windup":14}});

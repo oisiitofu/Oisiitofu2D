@@ -60,3 +60,6 @@ Object.assign(EdfMoves.dragon,{rangedInterval:0,rangedRearm:0}); // Rifle repeat
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(EdfMoves.dash,{rangedInterval:48,rangedRearm:24});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('edf',{"jab3":{"strike":[6,7],"windup":3},"upsmash":{"strike":[15,10],"windup":3}});

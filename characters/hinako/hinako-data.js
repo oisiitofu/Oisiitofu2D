@@ -51,3 +51,6 @@ const HinakoRules=NewcomerCore.create('hinako',HinakoMoves,{
 });
 function hinakoBeast(f){return !!(f.hinakoMaskTime>0||f.attack?.hinakoBeast);}
 function hinakoPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('hinako',{"heavy":{"strike":[7,9],"windup":3},"jab3":{"strike":[8,6],"windup":3},"smash":{"strike":[13,9],"windup":3},"fair":{"strike":[12,13],"windup":3}});

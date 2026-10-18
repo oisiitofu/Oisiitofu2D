@@ -79,3 +79,6 @@ Object.assign(MakotoMoves.dragon,{rangedInterval:40,rangedRearm:20});
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(MakotoMoves.dash,{rangedInterval:48,rangedRearm:24});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('makoto',{"jab2":{"strike":[6,7],"windup":14},"uair":{"strike":[16],"windup":14},"fair":{"strike":[12,13],"windup":14},"smash":{"strike":[13,9],"windup":14},"jab3":{"strike":[7,9],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

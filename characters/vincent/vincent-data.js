@@ -36,3 +36,6 @@ function vincentPose(f){const a=f.attack;if(a?.vincentFlight||a?.vincentGun||a?.
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(VincentMoves.dragon,{rangedInterval:32,rangedRearm:16});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('vincent',{"heavy":{"strike":[7,9],"windup":3},"smash":{"strike":[13,9],"windup":3},"upsmash":{"strike":[15,10],"windup":3}});

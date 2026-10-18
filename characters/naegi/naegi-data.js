@@ -86,3 +86,6 @@ const NaegiRules=(()=>{
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(NaegiMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('naegi',{"bair":{"strike":[7,10],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"jab3":{"strike":[7,9],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

@@ -34,3 +34,6 @@ function sakiPose(f){const a=f.attack;if(a?.sakiCannon||a?.sakiVault||a?.sakiRec
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(SakiMoves.dragon,{rangedInterval:48,rangedRearm:24});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('saki',{"upsmash":{"strike":[15,10],"windup":3},"jab2":{"strike":[7],"windup":3},"smash":{"strike":[13,9],"windup":3},"jab3":{"strike":[6,7],"windup":3}});

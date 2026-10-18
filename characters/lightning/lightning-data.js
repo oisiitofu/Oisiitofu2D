@@ -18,3 +18,6 @@ return{reset,prepare,action,tick,box,roles,get objects(){return objects}};})();
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(LightningMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('lightning',{"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"fair":{"strike":[12,13],"windup":14},"smash":{"strike":[13,9],"windup":14},"bair":{"strike":[7,10],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

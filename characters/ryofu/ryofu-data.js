@@ -39,3 +39,6 @@ const RyofuRules=NewcomerCore.create('ryofu',RyofuMoves,{
 });
 (()=>{const reset=RyofuRules.reset,tick=RyofuRules.tick;RyofuRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='ryofu')f.ryofuMusou=0;};RyofuRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='ryofu'){if(f.respawn)f.ryofuMusou=0;else if(f.ryofuMusou>0)f.ryofuMusou--;}};})();
 function ryofuPose(f){const a=f.attack;if(a?.ryofuCombo){const w=CombatData.activeWindow(a,f.timer);return w?.pose??6;}if(a?.ryofuRide||a?.ryofuLeap||a?.ryofuStance||a?.ryofuCounter)return a.pose;if(a)return CombatData.sample(a,f.timer).pose;if(['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,ledge:38,grab:17,caught:21,throw:6})[f.state]??0;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('ryofu',{"smash":{"strike":[13,9],"windup":3},"jab3":{"strike":[6,7],"windup":3},"upsmash":{"strike":[15,10],"windup":3}});

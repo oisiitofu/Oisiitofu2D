@@ -90,3 +90,6 @@ const KosmosRules=(()=>{
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(KosmosMoves.dragon,{rangedInterval:48,rangedRearm:24});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('kosmos',{"heavy":{"strike":[7,9],"windup":14},"fair":{"strike":[12,13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

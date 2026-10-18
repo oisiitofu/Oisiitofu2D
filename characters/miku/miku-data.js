@@ -28,3 +28,6 @@ const MikuRules=NewcomerCore.create('miku',MikuMoves,{
  cpu(f,o,i,clear){const a=f.attack,dx=o.x-f.x;if(a?.melody){clear();i.x=0;i.y=clamp((o.y-f.y)/180,-1,1);i.specialHeld=Math.abs(dx)>240&&a.chargeFrames<28;}if(a?.musicSlide){clear();i.x=a.turned?a.slideFace:Math.sign(dx);i.specialHeld=false;}if(a?.vocalLift){clear();i.x=a.clearing?0:Math.sign(720-f.x);i.y=-1;i.specialHeld=a.launched&&!a.escapeSide&&a.pulses<3&&f.timer-a.pulseFrame>=14;}if(!a&&f.grounded&&!f.mikuStageCooldown&&!f.mikuStageActive&&Math.abs(dx)>220&&frame%180===f.id){clear();i.y=1;i.x=0;i.special=true;}}
 });
 (()=>{const reset=MikuRules.reset,tick=MikuRules.tick;MikuRules.reset=()=>{reset();for(const f of fighters)if(f.characterId==='miku'){f.mikuStageCooldown=0;mikuStageBuff(f,[]);}};MikuRules.tick=()=>{tick();for(const f of fighters)if(f.characterId==='miku'){f.mikuStageCooldown??=0;if(f.respawn)f.mikuStageCooldown=0;else if(f.mikuStageCooldown>0)f.mikuStageCooldown--;mikuStageBuff(f,MikuRules.objects);}};})();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('miku',{"heavy":{"strike":[9],"windup":14},"smash":{"strike":[13,9],"windup":14},"jab2":{"strike":[6,7],"windup":14},"jab3":{"strike":[7,9],"windup":14},"upsmash":{"strike":[14,8],"windup":14},"uair":{"strike":[14],"windup":14}});

@@ -37,3 +37,6 @@ Object.assign(LaharlMoves.dragon,{rangedInterval:40,rangedRearm:20});
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(LaharlMoves.gale,{rangedInterval:60,rangedRearm:30});
 if(LaharlMoves.airDrop)Object.assign(LaharlMoves.airDrop,{rangedInterval:60,rangedRearm:30});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('laharl',{"upsmash":{"strike":[15,10],"windup":3},"dashAttack":{"strike":[2,9],"windup":3},"smash":{"strike":[13,9],"windup":3}});

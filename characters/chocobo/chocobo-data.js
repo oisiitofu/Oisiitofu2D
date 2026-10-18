@@ -33,3 +33,6 @@ const ChocoboRules={
  meteor(f,t=f.timer){const a=f.attack,target=a.meteorTarget||this.target(f),p=clamp((t-a.meteorFallStart)/(a.meteorImpactStart-a.meteorFallStart),0,1);return{x:target.x,y:target.y-230*(1-p*p)-18,radius:21+(a.charge||0)*13,target};},
  tick(f,i){const a=f.attack;if(!a)return;if(a.targetedMeteor&&f.timer<a.targetLockFrame){a.targetOffset=clamp((a.targetOffset??145)+i.x*f.face*3,55,300);a.meteorTarget=this.target(f,a.targetOffset);}if(a.chocoDash&&f.timer>=9&&f.timer<=24){f.vx=f.face*(f.timer<14?13:f.timer<19?10:12);if(f.timer===14)f.grounded=false;}if(a.glideStart&&f.timer>=a.glideStart&&f.timer<=a.glideEnd){f.fastFall=false;f.vy=Math.min(f.vy,a.glideFallSpeed);a.gravityMultiplier=a.glideGravity;f.state='fall';}else if(a.glideStart)a.gravityMultiplier=1;}
 };
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('chocobo',{"jab3":{"strike":[6,7],"windup":14},"jab2":{"strike":[7,6],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"smash":{"strike":[13,9],"windup":14},"bair":{"strike":[7,10],"windup":14}});

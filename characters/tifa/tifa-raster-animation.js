@@ -71,8 +71,9 @@ const TifaRasterAnimation=(()=>{
   const a=f.attack,t=f.timer;
   if(a){
    const dedicated=special(f);if(dedicated)return dedicated;
-   const windows=a.activeFrames||[],active=windows.find(w=>t>=w.start&&t<=w.end);
-   const next=windows.find(w=>w.start>t),prior=windows.filter(w=>w.end<t).at(-1);
+   const windows=a.activeFrames||[],active=CombatData.activeWindow(a,t);
+   const nextWindow=windows.find(w=>w.start>t),priorWindow=windows.filter(w=>w.end<t).at(-1);
+   const next=nextWindow&&CombatData.activeWindow(a,nextWindow.start),prior=priorWindow&&CombatData.activeWindow(a,priorWindow.end);
    let track=family(active?.pose??next?.pose??prior?.pose??a.pose);
    if(!track)return null;
    let p;

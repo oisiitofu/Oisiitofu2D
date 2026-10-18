@@ -90,3 +90,6 @@ const LukeRules=(()=>{
  }
  return{reset,prepare,action,tick,box,cpu,slideStep,get objects(){return objects}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('luke',{"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"jab3":{"strike":[6,9],"windup":14},"fair":{"strike":[13],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

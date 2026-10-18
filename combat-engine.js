@@ -46,6 +46,7 @@ function attack(f,type){
  ProjectileCadence.begin(f,f.attack);
  DashAttackTuning.prepare(f);
  UpAttackTuning.prepare(f);
+ MoveMotion.prepare(f);
  const before=f.attack.totalFrames;CombatData.alignRecovery(f.attack);const delta=f.attack.totalFrames-before;f.faf+=delta;f.stateEnd+=delta;f.stateDuration=f.attack.totalFrames;
  return true;
 }

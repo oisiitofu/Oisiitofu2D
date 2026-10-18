@@ -47,3 +47,6 @@ function tressaPose(f){const a=f.attack;if(a?.tressaWind||a?.tressaHire||a?.tres
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(TressaMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('tressa',{"heavy":{"strike":[7,9],"windup":3},"smash":{"strike":[13,9],"windup":3},"jab3":{"strike":[6,7],"windup":3},"uair":{"strike":[10,15],"windup":3}});

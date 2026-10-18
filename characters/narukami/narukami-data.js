@@ -68,3 +68,6 @@ const NarukamiRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main),under=f.y>p.y+25&&f.x>p.x-20&&f.x<p.x+p.w+20;if(f.attack?.type==='rise'){i.x=f.x<p.x?1:f.x>p.x+p.w?-1:0;i.y=-1;i.special=i.guard=i.guardPressed=i.jab=i.heavy=i.smash=false;}else if(!f.attack&&under&&!f.recovered){const dir=f.x<p.x+p.w/2?-1:1,dist=dir<0?f.x-p.x:p.x+p.w-f.x;i.x=dir;i.y=dist<55?-1:0;i.special=dist<55;i.jump=dist>=55&&f.airJumps>0&&f.vy>0;i.jab=i.heavy=i.smash=i.guard=false;}else if(f.attack?.spectralChain&&f.attack.chainConfirmed&&f.timer>=f.attack.branchStart){i.jab=true;i.special=i.guard=false;}else if(!f.attack&&f.grounded&&Math.abs(o.x-f.x)>240&&frame%180===0&&f.narukamiFormTime<60){i.x=0;i.y=1;i.special=true;i.jab=i.heavy=i.smash=i.guard=false;}if(f.attack?.type==='dragon')i.specialHeld=Math.abs(o.x-f.x)>220&&f.attack.chargeFrames<45;return i;}
  return{forms,form,reset,prepare,action,onHit,tick,cpu,chain,chainBox,safeWarp,terrain,box,get objects(){return objects;}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('narukami',{"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"fair":{"strike":[13],"windup":14},"smash":{"strike":[13,9],"windup":14},"jab3":{"strike":[7,9],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

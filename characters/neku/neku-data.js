@@ -70,3 +70,6 @@ const NekuRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main),under=f.y>p.y+25&&f.x>p.x-20&&f.x<p.x+p.w+20;if(f.attack?.type==='rise'){const a=f.attack;i.x=f.x<p.x?1:f.x>p.x+p.w?-1:0;i.y=f.y>p.y-80?-1:0;if(a.warpTarget.y<p.y-130)i.y=0;i.special=i.guard=i.guardPressed=i.jab=i.heavy=i.smash=false;}else if(!f.attack&&under&&!f.recovered){const dir=f.x<p.x+p.w/2?-1:1,dist=dir<0?f.x-p.x:p.x+p.w-f.x;i.x=dir;i.y=dist<50?-1:0;i.special=dist<50;i.jump=dist>=50&&f.airJumps>0&&f.vy>0;i.jab=i.heavy=i.smash=i.guard=false;}if(f.attack?.type==='dash'&&f.timer>=f.attack.branchStart){i.special=f.attack.lockedTarget!==undefined||Math.abs(o.x-f.x)>120;i.jab=!i.special;i.y=0;}if(f.attack?.type==='dragon')i.specialHeld=Math.abs(o.x-f.x)>170&&f.attack.chargeFrames<45;if(f.attack?.type==='gale')i.specialHeld=Math.abs(o.x-f.x)>170&&f.attack.chargeFrames<55;return i;}
  return{reset,prepare,action,onHit,tick,cpu,lockBox,safeWarp,terrain,surface,box,active,get objects(){return objects;}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('neku',{"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"fair":{"strike":[13],"windup":14},"smash":{"strike":[13,9],"windup":14},"jab3":{"strike":[6,7],"windup":14},"bair":{"strike":[7,10],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

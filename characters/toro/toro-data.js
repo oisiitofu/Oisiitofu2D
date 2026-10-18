@@ -39,3 +39,6 @@ function toroObjectHit(q,f,o,b){if(q.hits.has(o.id)||o.respawn||CombatSystem.pro
 function toroBasePose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
 function toroPose(f){return toroMappedPose(f,toroBasePose(f));}
 function toroMappedPose(f,n){const form=toroForm(f);if(form===0)return n;const extra=96+(form-1)*4,offset=form===1?48:72;if(n===38)return extra+2;if(n===39)return extra+3;if(n>=24&&n<28)return Math.floor(frame/6)%2?extra:offset+1;if(n>=28&&n<32)return Math.floor(frame/3)%2?extra+1:offset+2;const mapped=({32:3,33:4,34:4,35:5,36:3,37:0,40:6,41:9,42:4,43:10,44:5,45:23,46:0,47:23})[n]??n;return offset+mapped;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('toro',{"jab3":{"strike":[6,7],"windup":3},"air":{"strike":[10,7],"windup":3},"smash":{"strike":[13,9],"windup":3}});

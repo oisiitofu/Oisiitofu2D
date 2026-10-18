@@ -46,3 +46,6 @@ const KaratekaRules=NewcomerCore.create('karateka',KaratekaMoves,{
  cpu(f,o,i,clear){const a=f.attack;if(a?.karateRush){i.special=f.timer===15||f.timer===27;i.specialHeld=i.special;}if(a?.karateStep){i.special=f.timer===14;i.specialHeld=i.special;}if(a?.karateLeap){i.x=Math.sign(720-f.x);i.y=-1;return;}if(!a&&f.grounded&&Math.abs(o.x-f.x)<180&&!(f.karateKiCooldown>0)&&frame%71===f.id){clear();i.x=0;i.y=1;i.special=true;}}
 });
 function karatekaPose(f){if(f.attack){const a=f.attack;if(a.special)return a.pose;return CombatData.sample(a,f.timer).pose;}if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return 24+Math.floor(frame/6)%4;if(f.state==='run')return 28+Math.floor(frame/3)%4;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('karateka',{"heavy":{"strike":[8,13],"windup":3},"smash":{"strike":[13,8],"windup":3},"upsmash":{"strike":[10,15],"windup":3}});

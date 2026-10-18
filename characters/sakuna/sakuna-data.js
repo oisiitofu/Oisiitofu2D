@@ -17,3 +17,6 @@ const SakunaRules=NewcomerCore.create('sakuna',SakunaMoves,{
  boxes(f,a,w,t){if(!a.raimentGrab)return;if(a.victimId!==null)return[];const u=(t-w.start)/(w.end-w.start),length=50+190*Math.sin(Math.PI*u);return[{x1:f.x+f.face*15,y1:f.y-48,x2:f.x+f.face*length,y2:f.y-48+(a.aimY||0)*length,radius:15,window:w,modifiers:w}];},
  cpu(f,o,i,clear){if(f.attack?.raimentGrab){clear();i.y=clamp((o.y-f.y)/100,-1,1);}if(f.attack?.swallow)i.specialHeld=f.attack.chargeFrames<32&&Math.abs(o.x-f.x)>190;}
 });
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('sakuna',{"heavy":{"strike":[7,9],"windup":14},"fair":{"strike":[13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"jab3":{"strike":[6,9],"windup":14}});

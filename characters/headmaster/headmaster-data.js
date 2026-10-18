@@ -33,3 +33,6 @@ const HeadmasterRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main),a=f.attack,clear=()=>{i.jump=i.guard=i.jab=i.heavy=i.smash=i.grab=i.special=false;};if(a?.balloons||!a&&!f.grounded&&!f.recovered&&(f.y>p.y-100&&(f.x<p.x||f.x>p.x+p.w)||f.y>p.y+30)){clear();i.x=f.y>p.y+90&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;i.special=!a;i.specialHeld=false;}if(a?.maze){clear();i.x=a.originFace;i.y=o.y<f.y-35?-1:o.y>f.y+35?1:0;}if(a?.quiz)i.specialHeld=a.chargeFrames<28&&Math.abs(o.x-f.x)>180;return i;}
  return{reset,prepare,spawn,bounce,action,collision,geometry,boxes,hurtboxes,tick,cpu,get objects(){return objects;}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('headmaster',{"heavy":{"strike":[7,9],"windup":14},"fair":{"strike":[13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[15,8],"windup":14},"uair":{"strike":[15],"windup":14},"jab3":{"strike":[6,7,6],"windup":14},"smash":{"strike":[12,9],"windup":14}});

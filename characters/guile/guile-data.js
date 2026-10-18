@@ -35,3 +35,6 @@ Object.assign(GuileMoves.dragon,{rangedInterval:40,rangedRearm:20});
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(GuileMoves.dash,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('guile',{"upsmash":{"strike":[15,10],"windup":3}});

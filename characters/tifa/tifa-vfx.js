@@ -17,7 +17,10 @@ const TifaVFX=(()=>{
   const raster=TifaRasterAnimation.strike(f);if(!raster)return[];
   const age=f.timer-active.start,span=active.end-active.start+1;
   const fist=[42,107,108,113,114,115,120].includes(raster.pose),family=a.tifaRush?'rush':a.tifaBeat?'beat':a.tifaAerial?'aerial':'normal';
-  return[{...raster,family,effect:fist?1:2,height:family==='rush'?18:family==='beat'?22:family==='aerial'?28:fist?16:24,alpha:.70*(1-.4*age/Math.max(1,span-1))}];
+  // A supporting punch inside an upward combo must not add a body-length
+  // punch trail below the single overhead crescent.
+  const upper=family==='normal'&&['up','upsmash','uair'].includes(a.type);
+  return[{...raster,family,effect:upper?2:fist?1:2,height:family==='rush'?18:family==='beat'?22:family==='aerial'?28:fist?16:24,alpha:.70*(1-.4*age/Math.max(1,span-1))}];
  }
  function drawObjects(){}
  function impact(v){stamp(v.power>14?4:0,v.x,v.y,35+v.power*2,35+v.power*2,1,(v.life/v.max)**1.5);}

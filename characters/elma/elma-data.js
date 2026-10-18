@@ -61,3 +61,6 @@ Object.assign(ElmaMoves.dragon,{rangedInterval:48,rangedRearm:24});
 Object.assign(ElmaOCGMoves.dragon,{rangedInterval:54,rangedRearm:24});
 Object.assign(ElmaOCGMoves.gale,{rangedInterval:54,rangedRearm:24});
 Object.assign(ElmaOCGMoves.airDrop,{rangedInterval:54,rangedRearm:24});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('elma',{"bair":{"strike":[7,10],"windup":14},"smash":{"strike":[13,9],"windup":14},"fair":{"strike":[12,13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14}});

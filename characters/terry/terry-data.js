@@ -27,3 +27,6 @@ const TerryRules=(()=>{
  function cpu(f,o,i){const p=platforms.find(p=>p.main),a=f.attack,clear=()=>{i.jump=i.guard=i.jab=i.heavy=i.smash=i.grab=i.special=false;};if(a?.ride){clear();i.x=f.y>p.y+90&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;i.specialHeld=false;if(f.y<p.y-85&&f.x>p.x+20&&f.x<p.x+p.w-20)i.jump=true;}else if(!a&&!f.grounded&&!f.recovered&&(f.y>p.y-100&&(f.x<p.x||f.x>p.x+p.w)||f.y>p.y+35)){clear();i.x=f.y>p.y+90&&f.x>p.x&&f.x<p.x+p.w?(f.x<720?-1:1):Math.sign(720-f.x);i.y=-1;i.special=true;}if(a?.change){clear();i.specialHeld=false;}return i;}
  return{names,reset,prepare,spawn,dismount,action,collision,boxes,tick,cpu,get objects(){return objects;}};
 })();
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('terry',{"fair":{"strike":[12,13],"windup":14},"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"smash":{"strike":[13,9],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});

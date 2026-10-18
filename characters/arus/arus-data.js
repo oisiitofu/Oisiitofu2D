@@ -43,3 +43,6 @@ Object.assign(ArusMoves.dragon,{rangedInterval:40,rangedRearm:20});
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(ArusMoves.gale,{rangedInterval:60,rangedRearm:30});
 if(ArusMoves.airDrop)Object.assign(ArusMoves.airDrop,{rangedInterval:60,rangedRearm:30});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('arus',{"jab3":{"strike":[6,7],"windup":3},"uair":{"strike":[10,15],"windup":3},"smash":{"strike":[13,9],"windup":3}});

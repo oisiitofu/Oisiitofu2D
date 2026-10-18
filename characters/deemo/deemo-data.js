@@ -38,3 +38,6 @@ Object.assign(DeemoMoves.dash,{rangedInterval:60,rangedRearm:30});
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(DeemoMoves.gale,{rangedInterval:60,rangedRearm:30});
 if(DeemoMoves.airDrop)Object.assign(DeemoMoves.airDrop,{rangedInterval:60,rangedRearm:30});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('deemo',{"upsmash":{"strike":[15,10],"windup":3},"dashAttack":{"strike":[2,9],"windup":3},"smash":{"strike":[13,9],"windup":3},"jab3":{"strike":[6,7],"windup":3}});

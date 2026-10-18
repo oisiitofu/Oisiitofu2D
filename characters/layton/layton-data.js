@@ -45,3 +45,6 @@ const LaytonRules=NewcomerCore.create('layton',LaytonMoves,{
 
 // Measured fast projectile repeat: preserve motion recovery, rearm only ranged casts.
 Object.assign(LaytonMoves.dragon,{rangedInterval:40,rangedRearm:20});
+
+// Reviewed whole-body attack sequences; timings and hit identities stay shared.
+MoveMotion.define('layton',{"fair":{"strike":[13],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"smash":{"strike":[13,9],"windup":14},"jab3":{"strike":[6,7],"windup":14},"jab2":{"strike":[7,6],"windup":14}});
