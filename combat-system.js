@@ -82,7 +82,7 @@ const CombatSystem=(()=>{
      if(a.groundOnly&&!o.grounded||a.airOnly&&o.grounded)continue;
      const touch=contact(box,o),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(o.mode)&&shieldCovers(o,box);if(!touch&&!shield)continue;
      const key=(box.hitID??box.window.index)+':'+o.id,last=a.hitTimes.get(key),rehit=box.rehitFrames??a.rehitRate;if(last!==undefined&&(!rehit||f.timer-last<rehit))continue;a.hitTimes.set(key,f.timer);
-     const strike={...a,...box.window,...box.modifiers};if(a.meteorFrame){strike.isMeteor=f.timer===a.meteorFrame;strike.angle=strike.isMeteor&&!o.grounded?a.meteorAngle:a.angle;if(strike.isMeteor&&!o.grounded)strike.baseKnockback*=a.meteorMultiplier??1;}
+     const strike={...a,...box.window,...box.modifiers};if(a.meteorFrame){strike.isMeteor=f.timer===a.meteorFrame&&!o.grounded;strike.angle=strike.isMeteor?a.meteorAngle:a.angle;if(strike.isMeteor)strike.baseKnockback*=a.meteorMultiplier??1;}
      strike.launchDirection=strike.pull?(Math.sign(f.x-o.x)||-f.face):box.window.shape==='back'?-f.face:['spin','shockwave'].includes(box.window.shape)?Math.sign(o.x-f.x)||f.face:f.face;contacts.push({f,o,a:strike,box,touch});break;
     }
    }
