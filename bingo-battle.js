@@ -10,19 +10,31 @@ const BingoBattle=(()=>{
  function close(){if($('bingo-select').open)$('bingo-select').close();}
  function message(value){if($('bingo-select').open)$('bingo-help').textContent=value;if(state==='result'&&enabled())$('resultdetail').textContent=value;}
  function progress(s,container){container.replaceChildren();for(const b of s.boards){const chip=document.createElement('span');chip.className='bingo-score';chip.textContent=ownerName(b.key)+' · '+b.lines+' / 2 BINGO'+(s.champion===b.key?' · 優勝！':'');container.append(chip);}}
+ function renderBoards(s,container,selecting){
+  container.replaceChildren();container.dataset.count=String(s.boards.length);
+  const n=seat(),myKey=BingoRules.key(s,n),allowed=new Set(selecting?BingoRules.available(s,n):[]);
+  for(const b of s.boards){
+   const mine=b.key===myKey,panel=document.createElement('section');panel.className='bingo-board'+(mine?' mine':'');panel.dataset.board=b.key;
+   const head=document.createElement('header'),title=document.createElement('h3'),score=document.createElement('span');title.textContent=ownerName(b.key)+(mine?' · あなた':'');
+   const members=s.picks.flatMap((_,k)=>BingoRules.key(s,k)===b.key?[(k+1)+'P']:[]);if(s.format==='teams')title.textContent+=' ('+members.join(' / ')+')';
+   score.className='bingo-board-score';score.textContent=b.lines+' / 2 BINGO · '+b.open.filter(Boolean).length+' / 25 OPEN';head.append(title,score);panel.append(head);
+   const grid=document.createElement('div');grid.className='bingo-grid';if(selecting&&mine)grid.id='bingo-grid';grid.setAttribute('aria-label',ownerName(b.key)+'のビンゴカード');
+   const completed=new Set(BingoRules.complete(b).flat()),chosen=new Set(s.picks.flatMap((p,k)=>p?.character&&BingoRules.key(s,k)===b.key?[p.cell]:[]));
+   b.cells.forEach((id,index)=>{
+    const button=document.createElement('button');button.className='bingo-cell'+(!selecting||!mine?' bingo-watch':'');button.dataset.cell=index;button.disabled=!selecting||!mine||!allowed.has(index);button.classList.toggle('opened',b.open[index]);button.classList.toggle('bingo-line',completed.has(index));button.classList.toggle('chosen',chosen.has(index));
+    const coordinate=String.fromCharCode(65+index%5)+(Math.floor(index/5)+1),badge=document.createElement('small');badge.className='bingo-cell-badge';badge.textContent=b.open[index]?'✓ OPEN':chosen.has(index)?'使用決定':b.previous.includes(id)?'前の試合':coordinate;
+    if(id){button.append(picture(id));const label=document.createElement('span');label.textContent=name(id);button.append(label);button.setAttribute('aria-label',coordinate+' '+name(id)+(b.open[index]?' 開放済み':b.previous.includes(id)?' 連続使用不可':chosen.has(index)?' 選択確定':mine&&selecting?' 使用を確定':''));}else{button.classList.add('free');button.textContent='★';const label=document.createElement('span');label.textContent='FREE';button.append(label);button.setAttribute('aria-label','中央 FREE 開放済み');}
+    button.title=button.getAttribute('aria-label');button.append(badge);if(selecting&&mine)button.onclick=()=>choose(index);grid.append(button);
+   });panel.append(grid);container.append(panel);
+  }
+ }
  function render(){
   const s=current();if(!s||!$('bingo-select').open)return;
   const n=seat(),b=BingoRules.board(s,n);if(!b)return;
-  $('bingo-round').textContent='ROUND '+s.round;$('bingo-owner').textContent=ownerName(b.key)+'のビンゴカード';
+  $('bingo-round').textContent='ROUND '+s.round;$('bingo-owner').textContent='全員のビンゴカード';
   $('bingo-help').textContent=s.champion?ownerName(s.champion)+'が2ビンゴで優勝！':s.result?'勝った側の使用マスが開きました。次の試合へ進めます。':s.picks[n]?'選択確定 · 変更できません。全員の選択を待っています。':'マスを押すと使用キャラを確定します。全員が選ぶまで、味方にも相手にも秘密です。';
   progress(s,$('bingo-progress'));const list=$('bingo-picks');list.replaceChildren();s.picks.forEach((p,k)=>{const chip=document.createElement('div');chip.className='bingo-player-pick';const who=(k+1)+'P';chip.textContent=who+' · '+(p?.locked||p?.character?'確定済み':'選択中');if(s.revealed&&p?.character){chip.textContent='';chip.append(picture(p.character),document.createTextNode(who+' · '+name(p.character)+' / '+String.fromCharCode(65+p.cell%5)+(Math.floor(p.cell/5)+1)));}list.append(chip);});
-  const cards=$('bingo-grid');cards.replaceChildren();const allowed=new Set(BingoRules.available(s,n)),completed=new Set(BingoRules.complete(b).flat());
-  b.cells.forEach((id,index)=>{
-   const button=document.createElement('button');button.className='bingo-cell';button.dataset.cell=index;button.disabled=!allowed.has(index);button.classList.toggle('opened',b.open[index]);button.classList.toggle('bingo-line',completed.has(index));button.classList.toggle('chosen',s.picks[n]?.cell===index);
-   const coordinate=String.fromCharCode(65+index%5)+(Math.floor(index/5)+1),badge=document.createElement('small');badge.className='bingo-cell-badge';badge.textContent=b.open[index]?'✓ OPEN':s.picks[n]?.cell===index?'使用決定':b.previous.includes(id)?'前の試合':coordinate;
-   if(id){button.append(picture(id));const label=document.createElement('span');label.textContent=name(id);button.append(label);button.setAttribute('aria-label',coordinate+' '+name(id)+(b.open[index]?' 開放済み':b.previous.includes(id)?' 連続使用不可':s.picks[n]?.cell===index?' 選択確定':' 使用を確定'));}else{button.classList.add('free');button.textContent='★';const label=document.createElement('span');label.textContent='FREE';button.append(label);button.setAttribute('aria-label','中央 FREE 開放済み');}
-   button.append(badge);button.onclick=()=>choose(index);cards.append(button);
-  });
+  renderBoards(s,$('bingo-boards'),true);
   $('bingo-stage').value=$('stage').value;$('bingo-stage').disabled=!!s.picks[n]||!!s.result||!!s.champion;
   $('bingo-reset').classList.toggle('hidden',Net.slot!==0);$('bingo-reset').disabled=!!Net.active;
   $('bingo-next').classList.toggle('hidden',!s.result||!!s.champion);$('bingo-next').textContent='次の試合のマスを選ぶ →';
@@ -37,13 +49,13 @@ const BingoBattle=(()=>{
  function accept(s){
   const previous=online;online=s;const locked=!!(isOnline()&&s?.picks[Net.slot]&&!s.result);for(const field of document.querySelectorAll('#stage,.stage-card,#swatches button'))field.disabled=locked;if(!s){$('result').querySelector('.back').disabled=false;waitingResult=false;if(isOnline())close();$('bingo-result-summary').classList.add('hidden');return;}
   if(s.result||!s.revealed)waitingResult=false;
-  if(state==='menu'&&(!previous||s.generation!==previous.generation))show();else render();
+  if((state==='menu'||state==='result')&&(!previous||s.generation!==previous.generation))show();else render();
   decorateResult();
  }
  function finished(){if(!enabled()){$('bingo-result-summary').classList.add('hidden');$('result').querySelector('.back').disabled=false;$('result').querySelector('.back').textContent='キャラクター選択へ';for(const b of document.querySelectorAll('#result .restart')){b.disabled=false;b.textContent='再戦する →';}return;}waitingResult=true;decorateResult();}
  function decorateResult(){
   if(typeof state==='undefined'||state!=='result')return;const s=current(),summary=$('bingo-result-summary');summary.classList.toggle('hidden',!enabled()||!s);if(!enabled()||!s)return;
-  progress(s,summary);const pending=isOnline()&&(waitingResult||!s.result&&!s.champion&&s.revealed);
+  progress(s,summary);const boards=document.createElement('div');boards.className='bingo-boards bingo-result-boards';renderBoards(s,boards,false);summary.append(boards);const pending=isOnline()&&(waitingResult||!s.result&&!s.champion&&s.revealed);
   if(s.champion){$('winner').textContent=ownerName(s.champion)+' · 2 BINGO!';$('resultdetail').textContent=ownerName(s.champion)+'のビンゴ対戦優勝！';}
   else if(s.result)$('resultdetail').textContent=(s.result.winner<0?'引き分け。マスは開きません。':'1位の使用マスを開きました。')+' 2ビンゴで優勝。前の試合に自分・相方が使ったキャラは次の試合に使えません。';
   else if(pending)$('resultdetail').textContent='全員の対戦結果を集計しています…';
