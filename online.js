@@ -55,7 +55,7 @@ const Net=(()=>{
   }else if(!roomState?.bingo)send({type:'unready',matchId});
  }
  function showBrowser(){
-  $('home-screen').classList.remove('hidden');$('character-screen').classList.add('hidden');browse();
+  state='menu';$('menu').classList.remove('hidden');$('result').classList.add('hidden');$('pause').classList.add('hidden');$('home-screen').classList.remove('hidden');$('character-screen').classList.add('hidden');browse();
  }
  function ruleLabel(m){return(m.ruleSet==='bingo'?'ビンゴ対戦 · 2ビンゴ優勝 · '+m.stocks+'ストック':m.squadSize>1?m.squadSize+'キャラ団体戦 · 各1ストック':'通常対戦 · '+m.stocks+'ストック')+' / '+m.playerCount+'人 / '+(m.format==='teams'?'チーム戦 · チームアタック'+(MatchRules.teamAttack(m.teamAttack)?'あり':'なし'):'個人戦')+' / '+MatchRules.timeLabel(m.timeLimit);}
  function renderRooms(rooms){
