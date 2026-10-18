@@ -234,7 +234,6 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 .online-lineup-controls select{width:auto;max-width:190px;margin:0;padding:6px 9px;font-size:12px;background:#16283e;border:1px solid #5f8bae;border-radius:4px}
 .online-lineup-controls small{max-width:185px;font-size:10px;line-height:1.5;color:#aabed4}
 .room-match-rule{font-size:12px;color:#9edaff;line-height:1.7}
-#edit-online-lineup{width:100%;margin:8px 0}
 .room-player .room-lineup{display:block;font-size:10px;line-height:1.7;color:#b7cce0;overflow-wrap:anywhere}
 .fighter-card.squad-taken{opacity:.38;filter:grayscale(.7);cursor:not-allowed}
 .fighter-card.squad-taken:after{content:'編成済み';position:absolute;inset:30% 0 auto;text-align:center;background:#091321e8;color:#d6e3ef;font-size:9px;padding:3px 0;pointer-events:none}
@@ -265,3 +264,14 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 @media(max-width:480px){.room-rule-grid{gap:6px 9px}#online-room{padding:20px 15px}.online-flow{font-size:10px}.room-create-actions{gap:6px}.room-list-row{gap:8px}}
 
 #online-room #online-status{color:#bfd7ef}#online-room #network-ping{color:#a2bbd6}
+
+/* Ready is the primary room action; editing and leaving stay secondary. */
+#online-room #online-panel{position:relative}
+.room-primary-actions{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:18px 0 22px}
+#online-room #ready-room{align-self:stretch;width:100%;min-height:60px;margin:0;padding:16px 24px;background:#ffcc66;color:#111d30;border:1px solid #ffe1a3;border-radius:4px;font-size:clamp(16px,2vw,20px);font-weight:900;box-shadow:0 4px 16px #ffcc661a}
+#online-room #ready-room:hover:not(:disabled){background:#ffdb91;border-color:#fff0ce}
+#online-room #edit-online-lineup{width:auto;margin:0;padding:9px 13px;background:transparent;color:#bdcde0;border:1px solid #41556e;border-radius:3px;font-size:12px;font-weight:500}
+#online-room #leave-room{position:absolute;right:0;bottom:0;margin:0;padding:8px 10px;background:transparent;color:#9eafc4;border:1px solid #34465e;border-radius:3px;font-size:11px;font-weight:500}
+#online-room #leave-room:hover{color:#ffbcc2;border-color:#9d626d;background:#ff68700d}
+#online-room:has(#room-lobby:not(.hidden)) #online-status{margin-right:100px}
+#online-room #network-ping{display:block;min-height:14px}
