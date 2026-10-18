@@ -135,11 +135,32 @@ const BattleSize=(()=>{
   ...['dragoon','zidane','terry','tressa','midna','agumon','pokoa'].map(id=>[id,.74]),
   ['yuffie',.80],['estelle',.92]
  ]);
- const heights=Object.fromEntries(Object.entries(calibration).map(([id,c])=>[id,c.height*(displayScale[id]??1)]));
+ // Five shared standing-height targets for humanoids. Explicit membership keeps
+ // small races, mascots, giant robots and intentional transformation sizes safe.
+ const tierHeights=Object.freeze({1:78,2:94,3:108,4:124,5:144});
+ const tierGroups={
+  1:['terry','laharl','sakuna','megamanexe','saki'],
+  2:['isaac','edelgard','sumino','goemon','krystal','arus','roxas','twob','rin','nia','lightning','colette','estelle','makoto','neku','naegi','rex','will','kosmos','emma','ryza','zidane','valkyrie','elma','miku','tifa','yuffie','aruru','pneuma','maelle','rocbouquet','tressa','eve','kasane','aerith','shizuna','kisuke','hinako','melia','fiora','yuri','kurabe','battlemage','kitten'],
+  3:['dietrich','rean','noctis','clive','narukami','luke','fayt','noah','lloyd','shiren','hunter','adol','haseo','akira','fei','nier','naruhodo','layton','dante','leon','vincent','edf','alain','hayabusa','alucard','karateka'],
+  4:['ulgrim','ryofu','guile','kiryu'],
+  5:['odio','malenia']
+ };
+ const tiers=Object.freeze(Object.fromEntries(Object.entries(tierGroups).flatMap(([tier,ids])=>ids.map(id=>[id,+tier]))));
+ const legacyHeights=Object.freeze(Object.fromEntries(Object.entries(calibration).map(([id,c])=>[id,c.height*(displayScale[id]??1)])));
+ const heights=Object.fromEntries(Object.entries(legacyHeights).map(([id,height])=>[id,tierHeights[tiers[id]]??height]));
+ // Opaque standing-body rows measured from the existing baked sprites. These
+ // older entries included empty rows, so equal nominal heights looked unequal.
+ const standingBodies={alain:221,hinako:253,megamanexe:227,melia:167,fiora:233,krystal:236,yuri:287};
  function baseNative(id,n){return sourceNative(id,n)*(n===0?calibration[id]?.neutral||1:1);}
- function native(id,n){return baseNative(id,n)*(MotionSize.characters[id]?.scale[n]??1)*(id==='yuffie'&&n>=28&&n<=31?.88:1);}
+ function native(id,n){
+  // The pilot/normal body follows its tier; its independently sized machine
+  // keeps its old world dimensions, including on attacks and return blends.
+  const preserve=id==='kurabe'&&n>=48&&n<96||id==='elma'&&n>=40&&n<56||id==='goemon'&&n>=44&&n<84;
+  const formScale=preserve?legacyHeights[id]/heights[id]*(standingBodies[id]??calibration[id].body)/calibration[id].body:1;
+  return baseNative(id,n)*(MotionSize.characters[id]?.scale[n]??1)*(id==='yuffie'&&n>=28&&n<=31?.88:1)*formScale;
+ }
  function imagePose(f,n){if(f.characterId==='kurabe')return kurabeImagePose(f,n);if(f.characterId==='malenia')return maleniaImagePose(f,n);if(f.characterId==='hinako'&&n<48&&hinakoBeast(f))return n+48;if(f.characterId==='zero')return n===18?44:n===0&&f.zeroCatchUntil>frame?46:n;if(f.characterId==='vivi')return n===22?21:n===21?20:n;return n;}
- function art(id){const c=calibration[id];return c?heights[id]/(c.body*native(id,0)*FIGHTER_SCALE):1;}
+ function art(id){const c=calibration[id];return c?heights[id]/((standingBodies[id]??c.body)*native(id,0)*FIGHTER_SCALE):1;}
  function baseline(f,n){
   // Ledge art is positioned by its hand anchor, not by its lowest opaque pixel.
   if(['LedgeCatch','LedgeHang'].includes(f.mode))return 0;
@@ -150,6 +171,6 @@ const BattleSize=(()=>{
  function geometry(f){const id=f.characterId,img=characterArt[id]?.frames[0];return geometryIds.has(id)&&img?physicsHeights[id]/(img.height*sourceNative(id,0)*FIGHTER_SCALE):1;}
  function originY(f){return f.characterId==='kitten'?kittenDrawOriginY(f):f.y;}
  function point(f,p){const s=geometry(f),y=originY(f);return{x:f.x+(p.x-f.x)*s,y:y+(p.y-y)*s};}
- function prepare(f){const s=geometry(f),c=f.character;c.ecb={radius:c.ecb.radius*s,height:Math.min(c.ecb.height*s,physicsHeights[f.characterId]||Infinity,displayScale[f.characterId]?heights[f.characterId]:Infinity)};c.shieldSize*=s;c.shieldOffset=c.shieldOffset.map(v=>v*s);}
- return{heights,native,baseNative,imagePose,art,baseline,geometry,originY,point,prepare};
+ function prepare(f){const s=geometry(f),c=f.character;c.ecb={radius:c.ecb.radius*s,height:Math.min(c.ecb.height*s,physicsHeights[f.characterId]||Infinity,displayScale[f.characterId]||tiers[f.characterId]?heights[f.characterId]:Infinity)};c.shieldSize*=s;c.shieldOffset=c.shieldOffset.map(v=>v*s);}
+ return{heights,tiers,tierHeights,legacyHeights,native,baseNative,imagePose,art,baseline,geometry,originY,point,prepare};
 })();
