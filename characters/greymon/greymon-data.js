@@ -19,7 +19,15 @@ const DigimonKit=(()=>{
  }
  function duration(f,a,total){const d=total-a.totalFrames;a.totalFrames=a.motionEndFrames=total;a.FAF=total+1;f.faf+=d;f.stateEnd+=d;}
  function point(f,n,x,y){const cap=f.characterId[0].toUpperCase()+f.characterId.slice(1),r=eval(cap+'ArtRects').frames[n],s=BattleSize.native(f.characterId,n)*FIGHTER_SCALE;return{x:f.x+(x-NewcomerArtAnchors[f.characterId][n])*r[2]*s*f.face,y:f.y+(y-1)*r[3]*s};}
- function strike(f,n){const weapon=f.characterId==='omegamon'?({8:[.5,.65,.2,.02],14:[.54,.35,.02,.25],15:[.55,.66,.75,.02],16:[.5,.48,.48,.98],44:[.5,.6,.65,.03]})[n]:null,p=weapon||({6:[.55,.57,.98,.57],7:[.65,.58,.04,.65],8:[.55,.65,.62,.03],9:[.55,.56,.99,.50],11:[.55,.65,.99,.88],12:[.55,.60,.97,.60],13:[.55,.6,.99,.55],14:[.65,.6,.02,.65],15:[.55,.66,.60,.02],16:[.56,.48,.62,.98],18:[.55,.6,.99,.57],19:[.55,.6,.97,.50],42:[.5,.6,.99,.52],43:[.5,.7,.65,.05],44:[.55,.6,.95,.25],45:[.5,.65,.90,.08],47:[.55,.65,.96,.55]})[n];return p?[point(f,n,p[0],p[1]),point(f,n,p[2],p[3])]:null;}
+ // Pose-specific tips measured from the shipped atlas. A shared claw template
+ // had put WarGreymon's raised claws and Omegamon's thrust BELOW the weapon.
+ const weaponPoints={
+  greymon:{14:[.65,.74,.02,.27]},
+  metalgreymon:{13:[.60,.55,.99,.81],14:[.65,.67,.02,.34]},
+  wargreymon:{6:[.65,.28,.99,.24],9:[.58,.48,.99,.39],12:[.65,.40,.99,.30],13:[.60,.38,.99,.28],14:[.50,.55,.02,.25]},
+  omegamon:{6:[.64,.55,.99,.74],8:[.5,.65,.2,.02],13:[.65,.25,.99,.20],14:[.54,.35,.02,.25],15:[.55,.66,.75,.02],16:[.5,.48,.48,.98],44:[.5,.6,.65,.03]}
+ };
+ function strike(f,n){const p=weaponPoints[f.characterId]?.[n]||({6:[.55,.57,.98,.57],7:[.65,.58,.04,.65],8:[.55,.65,.62,.03],9:[.55,.56,.99,.50],11:[.55,.65,.99,.88],12:[.55,.60,.97,.60],13:[.55,.6,.99,.55],14:[.65,.6,.02,.65],15:[.55,.66,.60,.02],16:[.56,.48,.62,.98],18:[.55,.6,.99,.57],19:[.55,.6,.97,.50],42:[.5,.6,.99,.52],43:[.5,.7,.65,.05],44:[.55,.6,.95,.25],45:[.5,.65,.90,.08],47:[.55,.65,.96,.55]})[n];return p?[point(f,n,p[0],p[1]),point(f,n,p[2],p[3])]:null;}
  function segment(f,x1,y1,x2,y2,radius,extra={}){return{x1:f.x+x1*f.face,y1:f.y+y1,x2:f.x+x2*f.face,y2:f.y+y2,radius,...extra};}
  function hit(q,f,o,b,extra={}){if(q.hits.has(o.id)||o.respawn||CombatSystem.protection(o).intangible)return false;const touch=CombatSystem.contact(b,o),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(o.mode==='Hitlag'?o.frozen?.mode:o.mode)&&CombatSystem.shieldCovers(o,b);if(!touch&&!shield)return false;q.hits.add(o.id);if(o.attack?.counterWindow&&o.timer>=o.attack.counterWindow[0]&&o.timer<=o.attack.counterWindow[1]){attack(o,o.attack.counterMove);o.inv=o.attack.totalFrames;return true;}const before=o.pendingLaunch;CombatSystem.hit(f,o,{...movesFor(f).dragon,type:'digimonObject',sourceType:q.sourceType,projectile:true,charge:0,damage:q.damage,baseKnockback:2.8,knockbackGrowth:.04,staleMultiplier:q.stale,launchDirection:q.face,angle:q.angle??-.55,...extra},b,touch);q.confirmed=!!(o.pendingLaunch&&o.pendingLaunch!==before);return true;}
  function startRise(f,a,i){a.phase='rise';a.launchAt=f.timer;f.grounded=false;f.recovered=true;f.specialLandingLag=16;f.fastFall=false;f.vx=i.x*7;f.vy=-21;duration(f,a,f.timer+76);}
