@@ -5,15 +5,16 @@ const Net=(()=>{
   const url=new URL(PublicOnlineConfig.onlineUrl);url.searchParams.set('mode','online');
   if(room)url.searchParams.set('room',room.toUpperCase());return url.href;
  }
+ const browse=()=>location.assign(onlineUrl());
  function init(){
   const button=document.querySelector('#enter-online');
-  button.onclick=()=>location.assign(onlineUrl());
-  button.title='オンライン対戦のキャラ選択画面を開く';
+  button.onclick=browse;
+  button.title='オンラインの部屋一覧を開く';
   const room=new URLSearchParams(location.search).get('room');
-  if(room&&/^[A-Fa-f0-9]{6}$/.test(room)){
+  if(new URLSearchParams(location.search).get('mode')==='online'||room&&/^[A-Fa-f0-9]{6}$/.test(room)){
    location.replace(onlineUrl(room));
   }
  }
  const noop=()=>{};
- return{init,returnToSelection:noop,leave:noop,capture:noop,finished:noop,ready:noop,status:noop,active:false,applying:false,code:'',slot:0,config:null,inputs:null,starting:false};
+ return{init,browse,returnToSelection:noop,leave:noop,capture:noop,finished:noop,ready:noop,status:noop,active:false,applying:false,code:'',slot:0,config:null,inputs:null,starting:false};
 })();

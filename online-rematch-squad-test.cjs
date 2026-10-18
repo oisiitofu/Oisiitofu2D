@@ -16,8 +16,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    });
   });
  }
- const [host,guest]=pages;await host.click('#open-room');await host.click('#create-room');await host.waitForFunction(()=>Net.code.length===6);const code=await host.evaluate(()=>Net.code);
- await guest.click('#open-room');await guest.fill('#room-code',code);await guest.click('#join-room');await guest.waitForFunction(()=>Net.code.length===6);
+ const [host,guest]=pages;await host.click('#open-room-create');await host.click('#create-room');await host.waitForFunction(()=>Net.code.length===6);const code=await host.evaluate(()=>Net.code);
+ await guest.click('.room-code-entry summary');await guest.fill('#room-code',code);await guest.click('#join-room');await guest.waitForFunction(()=>Net.code.length===6);
  async function ready(){for(const p of pages){await p.evaluate(()=>{if(!document.querySelector('#online-room').open)document.querySelector('#online-room').showModal();});await p.click('#ready-room');}}
  async function results(id){await Promise.all(pages.map(p=>p.waitForFunction(id=>state==='result'&&rounds[id],id,{timeout:35000})));const all=await Promise.all(pages.map(p=>p.evaluate(id=>rounds[id],id)));eq(all[0],all[1]);records.push(all[0]);for(const p of pages)eq(await p.evaluate(()=>Net.code),code);}
  async function select(){for(const p of pages){await p.click('#result .back');eq(await p.evaluate(()=>state),'menu');eq(await p.evaluate(()=>connections.length),1);}}

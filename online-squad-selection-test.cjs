@@ -15,11 +15,9 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    });});
   }
   const [host,...guests]=pages;
-  eq(await host.locator('#online-lineup-size').isVisible(),true);await host.selectOption('#online-lineup-size','3');eq(await host.locator('#squad-lineup .squad-slot').count(),3);
-  await host.click('#open-match-settings');await host.selectOption('#player-count','4');await host.selectOption('#battle-format','teams');await host.click('#close-match-settings');eq(await host.evaluate(()=>BattlePlayers.count()),4);
-  await host.click('#open-room');await host.click('#create-room');await host.waitForFunction(()=>Net.code.length===6);const code=await host.evaluate(()=>Net.code);
-  for(const p of guests){await p.bringToFront();await p.click('#open-room');await p.fill('#room-code',code);await p.click('#join-room');await p.waitForFunction(()=>Net.code.length===6);await p.click('#edit-online-lineup');eq(await p.locator('#online-lineup-size').inputValue(),'3');eq(await p.locator('#online-lineup-size').isDisabled(),true);}
-  await host.click('#edit-online-lineup');
+  await host.click('#open-room-create');await host.selectOption('#create-squad-size','3');await host.selectOption('#create-battle-format','teams');await host.click('#create-room');await host.waitForFunction(()=>Net.code.length===6);const code=await host.evaluate(()=>Net.code);
+  eq(await host.evaluate(()=>BattlePlayers.count()),4);eq(await host.locator('#squad-lineup .squad-slot').count(),3);
+  for(const p of guests){await p.bringToFront();await p.click('.room-code-entry summary');await p.fill('#room-code',code);await p.click('#join-room');await p.waitForFunction(()=>Net.code.length===6);eq(await p.locator('#online-lineup-size').inputValue(),'3');eq(await p.locator('#online-lineup-controls').isVisible(),false);eq(await p.locator('#open-match-settings').isVisible(),false);}
   const base=['tifa','isaac','chiikawa','chocobo','ulgrim'];
   for(const size of [3,5]){
    if(size===5){

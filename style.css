@@ -249,3 +249,19 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 /* Physical controller focus remains visible without changing card dimensions. */
 .pad-focused{outline:3px solid #ffe18a!important;outline-offset:-3px;box-shadow:0 0 15px #ffd25c60!important}.pad-editing{outline-color:#79f4d5!important}.pad-menu-hint{position:fixed;top:25px;bottom:auto;left:50%;transform:translateX(-50%);z-index:2000;padding:5px 12px;border:1px solid #6a809c;background:#091423ef;color:#e2ebfa;border-radius:5px;font-size:11px;white-space:nowrap;pointer-events:none;max-width:calc(100vw - 720px);overflow:hidden;text-overflow:ellipsis}dialog .pad-menu-hint{position:sticky;left:auto;top:auto;bottom:0;max-width:100%;transform:none;text-align:center;margin-top:12px;white-space:normal}
 @media(max-width:900px){.pad-menu-hint{top:auto;bottom:6px;max-width:95vw;font-size:10px}}
+/* Online: rules before creation, then personal character/stage selection. */
+#online-room{width:min(720px,94vw);max-width:min(720px,94vw);max-height:90dvh;overflow:auto}
+.online-flow,#room-role{font-size:11px;line-height:1.8;color:#b5cbe3}
+.room-directory-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.room-directory h3,#room-create h3{font-size:15px;margin:12px 0}
+#room-list{max-height:280px;overflow:auto;margin:8px 0 18px;border-top:1px solid #405773}
+#room-list>p,#room-create>p{font-size:11px;line-height:1.8}
+.room-list-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid #405773}
+.room-list-row>div{min-width:0}.room-list-row b{display:block;font-size:13px;letter-spacing:1px}.room-list-row small{display:block;font-size:10px;line-height:1.8;margin-top:4px;color:#b5cbe3}.room-list-row button{flex:none}
+#room-create{margin:12px 0;padding:15px;background:#142238;border:1px solid #405773}
+.room-rule-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 15px}.room-rule-grid label{font-size:11px}.room-rule-grid select{width:100%;margin:5px 0;padding:8px;background:#0b1728;border:1px solid #405773;color:#e1edff}.room-rule-grid .check-row{grid-column:1/-1}
+.room-create-actions{display:flex;gap:12px;align-items:center;justify-content:flex-end}.room-code-entry{margin-top:18px;font-size:11px}.room-code-entry summary{cursor:pointer;padding:8px 0}
+.room-player .room-team{width:auto;margin:0 0 0 12px;padding:4px;font-size:10px}.room-list-row button:disabled{opacity:.5}
+@media(max-width:480px){.room-rule-grid{gap:6px 9px}#online-room{padding:20px 15px}.online-flow{font-size:10px}.room-create-actions{gap:6px}.room-list-row{gap:8px}}
+
+#online-room #online-status{color:#bfd7ef}#online-room #network-ping{color:#a2bbd6}

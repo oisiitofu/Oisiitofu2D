@@ -38,7 +38,7 @@ for(const file of scripts){
  }
  if(file==='art-loader.js')code=replace(code,"const raw=new URLSearchParams(location.search).has('rawArt');",'const raw=false;');
  if(file==='game.js')code=replace(code,'if(!await ArtLoader.init()){await loadRaw();return;}',"if(!await ArtLoader.init()){$('#loading').textContent='キャラ画像を読み込めませんでした。ページを再読み込みしてください。';return;}");
- if(file==='roster.js')code=replace(code,"if(room&&/^[A-Fa-f0-9]{6}$/.test(room)){open('online');document.querySelector('#room-code').value=room.toUpperCase();}else if(entry.get('mode')==='online'){open('online');}",'');
+ if(file==='roster.js')code=replace(code,"if(room&&/^[A-Fa-f0-9]{6}$/.test(room)){document.querySelector('#room-code').value=room.toUpperCase();}",'');
  bundle+='\n/* '+file+' */\n'+code+'\n';
 }
 new vm.Script(bundle);

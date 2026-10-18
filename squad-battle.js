@@ -46,7 +46,7 @@ const SquadBattle=(()=>{
  function init(){
   const select=document.querySelector('#squad-size');select.onchange=()=>{refresh();BattlePlayers.refresh();Roster.summary();Roster.fit();};
   document.querySelector('#online-lineup-size').onchange=event=>{select.value=event.target.value;select.dispatchEvent(new Event('change',{bubbles:true}));};
-  document.querySelector('#enter-squad').onclick=()=>Roster.open('squad3');refresh();
+  refresh();
  }
  return{init,size,available,valid,choose,refresh,config,start,onKO,respawn,hud,drawReveal,teams};
 })();
