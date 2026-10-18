@@ -60,7 +60,7 @@ const CombatSystem=(()=>{
   if(NewcomerCore.ids.includes(f.characterId)&&NewcomerCore.capture(f,o,a,armored)){freeze(f,6);CombatVFX.impact(o.x,o.y-32,f.color,dmg,f.face,f.characterId);GameAudio.strike(f,a,dmg);return;}
   if(f.characterId==='agumon'&&AgumonRules.capture(f,o,a,armored)){freeze(f,6);CombatVFX.impact(o.x,o.y-32,f.color,dmg,f.face,f.characterId);GameAudio.strike(f,a,dmg);return;}
   releaseOnHit(o);let direction=a.launchDirection||f.face,trajectory=launchTrajectory(a),angle=direction<0?Math.PI-trajectory.angle:trajectory.angle;
-  o.pendingLaunch={raw,speed:launchSpeed(a,raw),angle,decayAngle:direction<0?Math.PI-a.angle:a.angle,horizontalScale:trajectory.horizontalScale,velocityScale:trajectory.velocityScale,hitstun:Math.max(4,Math.floor(raw*.4)-1),SDIMultiplier:a.SDIMultiplier??1,smash:isSmash(a)};o.meteor=!!a.isMeteor;o.hitstun=0;
+  o.pendingLaunch={raw,speed:launchSpeed(a,raw),angle,decayAngle:direction<0?Math.PI-a.angle:a.angle,horizontalScale:trajectory.horizontalScale,velocityScale:trajectory.velocityScale,hitstun:Math.max(4,a.throwHitstun||0,Math.floor(raw*.4)-1),SDIMultiplier:a.SDIMultiplier??1,smash:isSmash(a)};o.meteor=!!a.isMeteor;o.hitstun=0;
   if(a.bounceOnHit&&!f.grounded){f.vy=a.bounceOnHit;f.fastFall=false;}
   if(a.pull){o.pendingLaunch.speed=clamp((Math.abs(o.x-f.x)-40)/8,2,16);o.pendingLaunch.angle=direction<0?Math.PI+.08:-.08;o.pendingLaunch.hitstun=19;}
   if(!a.projectile)freeze(f,lag);freeze(o,lag);if(a.element)RikiRules.onHit(f,o,a);

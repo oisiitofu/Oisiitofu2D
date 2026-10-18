@@ -1,0 +1,18 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true,args:['--disable-background-timer-throttling','--disable-renderer-backgrounding']});try{
+ const pages=[],errors=[];for(let n=0;n<2;n++){const p=await(await b.newContext()).newPage();pages.push(p);p.on('pageerror',e=>errors.push(e.stack));await p.addInitScript(()=>navigator.getGamepads=()=>[]);await p.goto(process.env.GAME_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded);await p.click('#enter-online');await p.click('[data-id="'+(n?'zidane':'tifa')+'"]');await p.selectOption('#stage','0',{force:true});await p.click('#open-room');}
+ await pages[0].click('#create-room');await pages[0].waitForFunction(()=>Net.code.length===6);const code=await pages[0].evaluate(()=>Net.code);await pages[1].fill('#room-code',code);await pages[1].click('#join-room');await pages[1].waitForFunction(()=>Net.code.length===6);for(const p of pages)await p.click('#ready-room');await Promise.all(pages.map(p=>p.waitForFunction(()=>Net.active&&countdown===0)));
+ for(const p of pages)await p.evaluate(async()=>{for(const id of['dragoon','vivi'])await ArtLoader.load(id);});
+ const target=Math.max(...await Promise.all(pages.map(p=>p.evaluate(()=>frame))))+60;
+ for(const p of pages)await p.evaluate(target=>{window.throwFrames={};window.throwScenes=[];Controls.read=()=>emptyInput();addEventListener('online-frame',e=>{const n=e.detail-target;
+  if([0,60,120,180,240,300].includes(n)){setupStage('0');hitstop=0;for(const r of Object.values(NewcomerCore.registry))r.reset();const[id,type,face]=[['tifa','forwardThrow',1],['dragoon','upThrow',-1],['zidane','downThrow',1],['vivi','backThrow',-1],['zidane','ledge',1],['tifa','ledge',-1]][n/60];
+   fighters=[makeFighter(0,0,id),makeFighter(1,0,'tifa')];for(const f of fighters)Object.assign(f,{x:720,y:560,grounded:true,inv:0,intangible:0,stocks:99,control:'online'});const[f,o]=fighters;f.face=face;o.x=f.x+face*40;o.damage=100;
+   if(type==='ledge'){const l=StageRules.ledges.find(v=>v.face===face);Object.assign(f,{x:l.x-face*20,y:l.y+60,grounded:false});PlayerController.catchLedge(f,l);f.stateFrame=f.stateDuration+1;PlayerController.tick(f,emptyInput());PlayerController.tick(f,{...emptyInput(),jab:true});o.x=f.x+face*45;o.y=f.y;f.intangible=0;f.timer=8;resolveCombat();}
+   else{f.grabbed=o;o.grabOwner=f;PlayerStates.enter(f,'GrabHold');PlayerStates.enter(o,'Grabbed');f.stateFrame=5;updateFighter(f,{...emptyInput(),...(type==='upThrow'?{y:-1}:type==='downThrow'?{y:1}:{x:type==='backThrow'?-face:face})});}
+   throwScenes.push({id,type,damage:o.damage,launch:o.pendingLaunch,role:type==='ledge'?'ledge':ThrowTuning.move(f,type).throwRole,total:f.attack?.totalFrames||f.stateDuration});
+  }
+  if(n>=0&&n<=355&&n%5===0)throwFrames[n]=fighters.map(f=>({character:f.characterId,x:f.x,y:f.y,vx:f.vx,vy:f.vy,damage:f.damage,mode:f.mode,timer:f.timer,attack:f.attack?.type,hitstun:f.hitstun,stocks:f.stocks}));
+ });},target);
+ await Promise.all(pages.map(p=>p.waitForFunction(()=>throwFrames[355],null,{timeout:30000})));const all=await Promise.all(pages.map(p=>p.evaluate(()=>({snapshots:throwFrames,scenes:throwScenes}))));assert.deepEqual(all[0],all[1]);for(const s of all[0].scenes){assert.ok(s.damage>100,s.id);assert.ok(Number.isFinite(s.launch?.speed),s.id);}assert.deepEqual(errors,[]);const result={matchingSnapshots:Object.keys(all[0].snapshots).length,scenes:all[0].scenes,errors};fs.writeFileSync('.tools/throw-ledge-online-results.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));
+ }finally{await b.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

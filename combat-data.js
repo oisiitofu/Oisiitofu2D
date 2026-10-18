@@ -61,6 +61,7 @@ const CombatData=(()=>{
  function activeWindow(a,frame){let index=a.activeFrames.findIndex(w=>frame>=w.start&&frame<=w.end);return index<0?null:{...a.activeFrames[index],index};}
  const ordinaryAttacks=new Set(['jab','jab2','jab3','heavy','up','low','dashAttack','smash','upsmash','downsmash','air','fair','bair','uair','dair','grab','ledge','getupAttack']);
  function alignRecovery(a){
+  if(a.ledgeStrike)return;
   if(!ordinaryAttacks.has(a.type)||a.special||a.helpless||a.tether||a.diveSpeed||a.landingMove)return;
   // The last return frame is actionable. Do not stretch a short return to fit
   // a copied recovery duration, or shorten an authored hit/event/animation.
@@ -75,6 +76,7 @@ const CombatData=(()=>{
  }
  function finishedMotion(f){
   const a=f.attack;if(!a||a.hold||a.helpless||a.tether||a.escapeSide||f.grabbed)return false;
+  if(a.ledgeStrike&&f.timer<=a.totalFrames)return false;
   // Older authored sequences explicitly switched to idle but kept locking the
   // owner. Object lifetime is independent; a later hit or input phase is not.
   const t=f.timer,windows=a.animationWindows||[];

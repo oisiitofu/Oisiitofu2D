@@ -3,7 +3,8 @@ const {chromium}=require('playwright');
  const browser=await chromium.launch({headless:true,channel:'msedge'}),errors=[];
  try{
   const page=await browser.newPage();page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(process.env.GAME_URL||'http://localhost:4173');await page.click('#enter-training');await page.waitForFunction(()=>AstralEdge.assetsLoaded);await page.click('#start');
+  await page.addInitScript(()=>navigator.getGamepads=()=>[]);
+  await page.goto(process.env.GAME_URL||'http://localhost:4173');await page.click('#enter-training');await page.waitForFunction(()=>AstralEdge.assetsLoaded);await page.click('#start');await page.waitForFunction(()=>state==='battle');
   const result=await page.evaluate(()=>{
    state='pause';countdown=0;const failed=[];let checks=0;
    const check=(name,pass,detail)=>{checks++;if(!pass)failed.push({name,detail});};
