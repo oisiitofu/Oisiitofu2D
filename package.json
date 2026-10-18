@@ -9,7 +9,7 @@
     "test": "node test-all.cjs",
     "test:multiplayer": "node multiplayer-test.cjs && node multiplayer-online-test.cjs",
     "test:balance": "node melee-balance-test.cjs && node multihit-balance-test.cjs && node aerial-fastfall-test.cjs && node balance-sparring-test.cjs",
-    "test:bingo": "node bingo-rules-test.cjs && node bingo-online-test.cjs && node bingo-local-test.cjs && node bingo-flow-test.cjs"
+    "test:bingo": "node bingo-rules-test.cjs && node bingo-online-test.cjs && node bingo-entry-test.cjs && node bingo-flow-test.cjs"
   },
   "dependencies": {
     "ws": "^8.18.3"
