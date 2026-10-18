@@ -60,13 +60,13 @@ const PlayerController=(()=>{
   }return false;
  }
  function catchLedge(f,anchor){if(f.ledgeGrabs>=f.character.ledgeRegrabLimit)return;let other=fighters.find(o=>o!==f&&o.ledge===anchor&&is(o,'LedgeCatch','LedgeHang'));
-  if(other){other.ledge=null;other.ledgeCooldown=45;other.vx=-anchor.face*3;other.vy=-2;other.intangible=0;enter(other,'LedgeTrump',16);}
-  f.ledgeGrabs++;f.ledge=anchor;f.snapFrom=[f.x,f.y];f.face=anchor.face;f.vx=f.vy=0;f.attack=null;f.helpless=false;f.recovered=false;f.airDodged=false;f.airJumps=f.character.airJumpCount;f.jumps=0;f.fastFall=false;f.specialLandingLag=0;f.intangible=f.ledgeGrabs===1?Math.max(20,55-Math.floor(f.damage/10)):0;enter(f,'LedgeCatch',f.character.ledgeCatchFrames);
+  if(other){other.ledge=null;other.ledgeCooldown=45;other.vx=-anchor.face*3;other.vy=-2;other.intangible=other.inv=other.ledgeInvOnCatch=0;enter(other,'LedgeTrump',16);}
+  f.ledgeGrabs++;f.ledge=anchor;f.snapFrom=[f.x,f.y];f.face=anchor.face;f.vx=f.vy=0;f.attack=null;f.helpless=false;f.recovered=false;f.airDodged=false;f.airJumps=f.character.airJumpCount;f.jumps=0;f.fastFall=false;f.specialLandingLag=0;f.grounded=false;f.inv=f.intangible=0;f.ledgeInvOnCatch=f.ledgeGrabs===1?Math.max(20,55-Math.floor(f.damage/10)):0;enter(f,'LedgeCatch',f.character.ledgeCatchFrames);
  }
  function ledgeAction(f,i){const l=f.ledge;if(!l)return;f.vx=f.vy=0;
-  if(f.mode==='LedgeCatch'){let t=Math.min(1,f.stateFrame/4);let grip=ledgeHangPosition(f,l);f.x=lerp(f.snapFrom[0],grip.x,t);f.y=lerp(f.snapFrom[1],grip.y,t);if(f.stateFrame>f.stateDuration)enter(f,'LedgeHang');return;}
+  if(f.mode==='LedgeCatch'){let t=Math.min(1,f.stateFrame/Math.min(4,f.stateDuration));let grip=ledgeHangPosition(f,l);f.x=lerp(f.snapFrom[0],grip.x,t);f.y=lerp(f.snapFrom[1],grip.y,t);if(t===1&&f.ledgeInvOnCatch){f.intangible=f.ledgeInvOnCatch;f.ledgeInvOnCatch=0;}if(f.stateFrame>f.stateDuration)enter(f,'LedgeHang');return;}
   i=InputFrames.consume(f,i);let name=i.guard?'LedgeRoll':i.jab||i.heavy||i.smash?'LedgeAttack':i.jump?'LedgeJump':i.y>.5||i.x*l.face<-.5?'LedgeDrop':i.y<-.5||i.x*l.face>.5||f.stateFrame>300?'LedgeGetup':null;if(!name)return;
-  f.ledgeCooldown=45;f.ledge=null;f.intangible=f.ledgeGrabs===1?({LedgeGetup:15,LedgeRoll:20,LedgeAttack:10,LedgeJump:8}[name]||0):0;
+  f.ledgeCooldown=45;f.ledge=null;f.ledgeInvOnCatch=0;f.intangible=name==='LedgeRoll'?ledgeRoll.duration:f.ledgeGrabs===1?({LedgeGetup:15,LedgeAttack:10,LedgeJump:8}[name]||0):0;
   if(name==='LedgeDrop'){enter(f,name,1);f.x=l.x-l.face*(f.character.ecb.radius+3);f.vy=1;return;}
   if(name==='LedgeJump'){f.x=l.x-l.face*(f.character.ecb.radius+3);launchJump(f,false,true);return;}
   f.x=l.x+l.face*25;f.y=l.y;f.grounded=true;
@@ -128,7 +128,7 @@ const PlayerController=(()=>{
   else if(f.mode==='Knockdown'){f.vx=moveToward(f.vx,0,c.traction);if(f.stateFrame>10){if(i.jab||i.heavy){attack(f,'getupAttack');f.mode='GetupAttack';}else if(Math.abs(i.x)>.5){enter(f,'GetupRoll',30);f.vx=Math.sign(i.x)*5;f.intangible=16;}else if(i.jump||i.y<-.5||f.stateFrame>120){enter(f,'Getup',24);f.intangible=12;}}}
   else if(dodgeData[f.mode]){const d=f.dodge;if(f.stateFrame>=d.inv[0]&&f.stateFrame<=d.inv[1])f.intangible=Math.max(f.intangible,1);if(f.mode==='SpotDodge'&&f.stateFrame>=d.attackCancel+Math.min(6,d.stale*2)&&spotDodgeAttack(f,i)){}else if(f.stateFrame>f.stateDuration){if(f.mode==='ForwardRoll')f.face=-d.direction;let next=InputFrames.consume(f,f.committedDrop||i);f.committedDrop=null;if(next.jump||next.grab||next.jab||next.heavy||next.smash||next.special)next={...next,guard:false};enter(f,f.grounded?'Idle':'Fall');ready(f,next);}else if(f.grounded)f.vx*=.97;}
   else if(f.mode==='Helpless'){airControl(f,i);}
-  else if(f.mode==='LedgeRoll'){if(f.stateFrame>f.stateDuration){f.vx=0;enter(f,'Idle');ready(f,InputFrames.consume(f,i));}else f.vx=f.face*ledgeRollSpeed;}
+  else if(f.mode==='LedgeRoll'){if(f.stateFrame>f.stateDuration){f.vx=0;enter(f,'Idle');ready(f,InputFrames.consume(f,i));}else{f.intangible=Math.max(f.intangible,1);f.vx=f.face*ledgeRollSpeed;}}
   else if(['NormalLanding','HardLanding','AerialLanding','SpecialLanding','ShieldDrop','Tech','TechRoll','WallTech','CeilingTech','Getup','GetupRoll','LedgeGetup','LedgeRoll','LedgeTrump','Clank','Throw'].includes(f.mode)){if(f.stateFrame>f.stateDuration){let next=f.committedDrop||i;f.committedDrop=null;enter(f,f.grounded?'Idle':'Fall');ready(f,next);}else if(f.grounded)f.vx=moveToward(f.vx,0,c.groundFriction);}
   else ready(f,i);
   if(f.grounded&&!is(f,'LedgeGetup','LedgeRoll','LedgeAttack'))f.ledgeGrabs=0;
