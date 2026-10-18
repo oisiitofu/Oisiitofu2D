@@ -17,3 +17,5 @@ Thumbs.db
 !.tools/*-test.cjs
 !.tools/run-native-online.cjs
 !.tools/run-native-test.cjs
+
+/previews/
