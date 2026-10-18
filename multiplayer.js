@@ -2,11 +2,12 @@
 // Fighter IDs are seats (0..3), independent of teams, colors and character IDs.
 const BattlePlayers=(()=>{
  const seats=[{character:'random',color:0,control:'primary',team:0},{character:'random',color:2,control:'cpu',team:1},{character:'random',color:1,control:'cpu',team:0},{character:'random',color:4,control:'cpu',team:1}];
- const seatColors=['#68baff','#ff718d','#ffd269','#8ce6ad'];let selection=0,teams=false,initialized=false,initialStocks=3;
+ const seatColors=['#68baff','#ff718d','#ffd269','#8ce6ad'];let selection=0,teams=false,initialized=false,initialStocks=3,friendlyFire=true;
  const count=()=>SquadBattle.size()>1&&document.querySelector('#battle-mode').value!=='online'?2:['battle','online'].includes(document.querySelector('#battle-mode')?.value)?Number(document.querySelector('#player-count')?.value||2):2;
  const sameTeam=(a,b)=>teams&&a.team!==undefined&&a.team===b.team;
  const out=f=>!training&&f.stocks<=0;
- const targets=f=>fighters.filter(o=>o!==f&&!out(o)&&!o.respawn);
+ const canHit=(f,o)=>!!f&&!!o&&o!==f&&(!sameTeam(f,o)||friendlyFire);
+ const targets=f=>fighters.filter(o=>canHit(f,o)&&!out(o)&&!o.respawn);
  function target(f){const live=targets(f),enemies=live.filter(o=>!sameTeam(f,o));return (enemies.length?enemies:live).sort((a,b)=>Math.hypot(a.x-f.x,a.y-f.y)-Math.hypot(b.x-f.x,b.y-f.y)||a.id-b.id)[0]||fighters.find(o=>o!==f)||f;}
  function projectileTarget(q){const f=fighters[q.owner],live=targets(f),eligible=live.filter(o=>!q.hits?.has?.(o.id)&&!q.kickHits?.has?.(o.id));return (eligible.length?eligible:live).sort((a,b)=>Math.hypot(a.x-(q.x+(q.vx||0)),a.y-35-(q.y+(q.vy||0)))-Math.hypot(b.x-(q.x+(q.vx||0)),b.y-35-(q.y+(q.vy||0)))||a.id-b.id)[0]||target(f);}
  function color(f){return teams?(f.team===0?'#ff718d':'#68baff'):seatColors[f.id];}
@@ -18,6 +19,8 @@ const BattlePlayers=(()=>{
   document.querySelector('#multiplayer-settings').classList.toggle('hidden',!allowed);
   document.querySelector('#local-seat-settings').classList.toggle('hidden',online||!allowed);
   document.querySelector('#online-team-setting').classList.toggle('hidden',!online||document.querySelector('#battle-format').value!=='teams');
+  document.querySelector('#team-attack-setting').classList.toggle('hidden',!allowed||document.querySelector('#battle-format').value!=='teams');
+  document.querySelector('#team-attack').disabled=joined&&Net.slot!==0;
   document.querySelector('#character-screen').classList.toggle('four-player-roster',!online&&n>2);
   for(let slot=0;slot<4;slot++){
    const button=document.querySelector(slot===0?'#select-player':slot===1?'#select-cpu':'#select-seat-'+slot);
@@ -35,9 +38,10 @@ const BattlePlayers=(()=>{
  function setColor(value){if(selection<2)return false;seats[selection].color=value;refresh();Roster.artReady();return true;}
  const stockCount=()=>clamp(Number(document.querySelector('#stock-count').value)||3,1,10);
  const timeLimit=()=>MatchRules.time(document.querySelector('#time-limit').value);
- function config(){return{timeLimit:timeLimit(),stocks:stockCount(),playerCount:SquadBattle.size()>1?2:count(),format:document.querySelector('#battle-format').value,players:seats.slice(0,SquadBattle.size()>1?2:count()).map((s,n)=>({...s,character:Roster.resolve(n===0?Roster.selected:n===1?document.querySelector('#cpu-character').value:s.character),color:n===0?selected:n===1?+document.querySelector('#color2').value:s.color}))};}
+ const teamAttack=()=>MatchRules.teamAttack(document.querySelector('#team-attack').value);
+ function config(){return{timeLimit:timeLimit(),teamAttack:teamAttack(),stocks:stockCount(),playerCount:SquadBattle.size()>1?2:count(),format:document.querySelector('#battle-format').value,players:seats.slice(0,SquadBattle.size()>1?2:count()).map((s,n)=>({...s,character:Roster.resolve(n===0?Roster.selected:n===1?document.querySelector('#cpu-character').value:s.character),color:n===0?selected:n===1?+document.querySelector('#color2').value:s.color}))};}
  function start(config){
-  teams=config.format==='teams'&&config.players.length>2;initialStocks=clamp(config.stocks||3,1,10);
+  teams=config.format==='teams'&&config.players.length>2;friendlyFire=MatchRules.teamAttack(config.teamAttack);initialStocks=clamp(config.stocks||3,1,10);
   if(teams&&new Set(config.players.map(s=>s.battleTeam??s.team)).size<2)return false;
   const main=platforms.find(p=>p.main),n=config.players.length;
   fighters=config.players.map((s,id)=>Object.assign(makeFighter(id,s.color,s.character),{stocks:initialStocks,team:teams?(s.battleTeam??s.team):id,control:Net.active?'online':s.control,x:n===2?(id?940:500):main.x+main.w*(id+1)/(n+1),y:main.y,face:id<n/2?1:-1}));
@@ -63,6 +67,8 @@ const BattlePlayers=(()=>{
   document.querySelector('#stock-count').onchange=()=>{try{localStorage.setItem('tofu-stock-count',String(stockCount()));}catch{}Roster.summary();};
   try{document.querySelector('#time-limit').value=String(MatchRules.time(localStorage.getItem('tofu-time-limit')??0));}catch{}
   document.querySelector('#time-limit').onchange=()=>{try{localStorage.setItem('tofu-time-limit',String(timeLimit()));}catch{}Roster.summary();};
+  try{document.querySelector('#team-attack').value=localStorage.getItem('tofu-team-attack')==='off'?'off':'on';}catch{}
+  document.querySelector('#team-attack').onchange=()=>{try{localStorage.setItem('tofu-team-attack',teamAttack()?'on':'off');}catch{}Roster.summary();};
   const targets=document.querySelector('.roster-targets'),swatches=targets.querySelector('.costume-row');
   for(let slot=2;slot<4;slot++){const b=document.createElement('button');b.id='select-seat-'+slot;b.className='roster-target hidden';b.innerHTML=`<span>${slot+1}P</span><img alt=""><b>おまかせ</b>`;b.onclick=()=>setSelection(slot);targets.insertBefore(b,swatches);}
   const container=document.querySelector('#local-seat-settings');
@@ -71,5 +77,5 @@ const BattlePlayers=(()=>{
   document.querySelector('#battle-format').onchange=()=>{if(document.querySelector('#battle-format').value==='teams')document.querySelector('#player-count').value='4';refresh();Roster.refreshSelection();Roster.fit();};
   refresh();
  }
- return{seats,count,stockCount,timeLimit,refresh,init,start,config,target,targets,projectileTarget,sameTeam,out,color,spawnX,localInput,eliminatedInput,canShare,share,ended,winner,winnerLabel,setSelection,setCharacter,setColor,get initialStocks(){return initialStocks},get selection(){return selection},get teamBattle(){return teams}};
+ return{seats,count,stockCount,timeLimit,teamAttack,refresh,init,start,config,target,targets,projectileTarget,sameTeam,canHit,out,color,spawnX,localInput,eliminatedInput,canShare,share,ended,winner,winnerLabel,setSelection,setCharacter,setColor,get initialStocks(){return initialStocks},get selection(){return selection},get teamBattle(){return teams},get teamAttackEnabled(){return friendlyFire}};
 })();

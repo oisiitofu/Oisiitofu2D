@@ -36,7 +36,7 @@ const CombatSystem=(()=>{
  function contact(box,f){let best=null;const dx=box.x2-box.x1,dy=box.y2-box.y1,ll=dx*dx+dy*dy;for(let h of hurtboxes(f)){let t=clamp(((h.x-box.x1)*dx+(h.y-box.y1)*dy)/Math.max(1,ll),0,1),x=box.x1+dx*t,y=box.y1+dy*t;if(Math.hypot(h.x-x,h.y-y)<=h.r+box.radius)best={part:h.part,x,y};}return best;}
  function shieldCovers(o,box){let c=o.character,ratio=Math.max(.15,o.shield/c.shieldHP),r=c.shieldSize*(.3+.7*ratio),x=o.x+c.shieldOffset[0]+o.shieldOffset[0],y=o.y+c.shieldOffset[1]+o.shieldOffset[1],dx=box.x2-box.x1,dy=box.y2-box.y1,t=clamp(((x-box.x1)*dx+(y-box.y1)*dy)/Math.max(1,dx*dx+dy*dy),0,1);return Math.hypot(x-box.x1-t*dx,y-box.y1-t*dy)<=r+box.radius;}
  function releaseOnHit(o){if(o.grabbed)PlayerController.releaseGrab(o);o.attack=null;o.buffer=null;o.landingLag=0;o.recovered=false;o.helpless=false;o.specialLandingLag=0;o.ledge=null;o.ledgeExitSide=0;o.ledgeInvOnCatch=0;o.ledgeGrabs=0;o.fastFall=false;o.airDodged=false;o.gravityOff=false;o.committedDrop=null;}
- function hit(f,o,a,box=null,touch=null){if(f===o||o.respawn||BattlePlayers.out(o))return;if(!o.mode)prepareFighter(o);if(!f.mode)prepareFighter(f);
+ function hit(f,o,a,box=null,touch=null){if(!BattlePlayers.canHit(f,o)||o.respawn||BattlePlayers.out(o))return;if(!o.mode)prepareFighter(o);if(!f.mode)prepareFighter(f);
   if(a.type==='grab'){if(f.grabbed||o.grabImmunity||o.mode==='Grabbed')return;f.attack=null;f.grabbed=o;o.grabOwner=f;o.grabEscape=65+o.damage*.7;o.attack=null;o.hitstun=0;o.buffer=null;PlayerStates.enter(f,'GrabHold');PlayerStates.enter(o,'Grabbed');return;}
   let protect=protection(o,touch?.part);if(protect.intangible)return;if(protect.invincible){ring(o.x,o.y-35,'#fff4ba',35);return;}
   if(o.mode==='ShieldDrop'&&o.parryEligible&&o.stateFrame<=5){PlayerStates.enter(o,'Idle');o.buffer=null;freeze(f,Math.min(30,Math.floor(a.damage*.65+12)));ring(o.x,o.y-36,'#fff1a1',95);CombatVFX.impact(o.x,o.y-36,4,12,1);label(o.x,o.y-100,'PARRY');sound('parry',1,o);return;}
@@ -71,6 +71,7 @@ const CombatSystem=(()=>{
   const sets=fighters.map(f=>f.hitlag||f.respawn||BattlePlayers.out(f)?[]:attackBoxes(f));
   for(let i=0;i<fighters.length;i++)for(let j=i+1;j<fighters.length;j++){
    const a=fighters[i],b=fighters[j],aa=a.attack,bb=b.attack;
+   if(!BattlePlayers.canHit(a,b))continue;
    if(!aa||!bb||!sets[i].some(x=>sets[j].some(y=>overlap(x,y))))continue;
    if(aa.type==='grab'&&bb.type==='grab'){a.attack=b.attack=null;sets[i]=[];sets[j]=[];for(const f of [a,b]){f.grabImmunity=60;PlayerStates.enter(f,'Clank',12);}ring((a.x+b.x)/2,(a.y+b.y)/2-35,'#ffe0aa',60);continue;}
    if(aa.type!=='grab'&&bb.type!=='grab'&&aa.canClank&&bb.canClank&&!aa.transcendent&&!bb.transcendent&&aa.clangMode!=='none'&&bb.clangMode!=='none'&&a.grounded&&b.grounded){const difference=aa.damage-bb.damage,losers=Math.abs(difference)<=9?[a,b]:difference>0?[b]:[a];for(const f of losers){if(f.attack.reboundOnClank){f.attack=null;PlayerStates.enter(f,'Clank',12);freeze(f,5);}sets[f.id]=[];}ring((a.x+b.x)/2,a.y-35,'#fff2af',55);sound('parry',.7,a);}
