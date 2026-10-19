@@ -1,2 +1,2 @@
-require('node:fs').mkdirSync(require('node:path').resolve(__dirname,'../previews'),{recursive:true});
-require('../../../.tools/run-native-online.cjs')('pneuma');
+// Current room flow and the revised ascent/glide/cancel inputs, two clients.
+require('./pneuma-flight-online-test.cjs');

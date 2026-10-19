@@ -11,6 +11,6 @@ const PneumaVFX=(()=>{
  }
  function drawObjects(){for(const q of PneumaRules.objects)directed(0,q.x+q.face*q.length/2,q.y,q.length,q.radius*3,q.face>0?0:Math.PI,Math.min(1,(q.life-q.age)/3));}
  function impact(v){stamp(3,v.x,v.y,30+v.power*2,30+v.power*2,1,(v.life/v.max)**1.5);}
- function hud(f,x,y){if(f.characterId==='pneuma')text('→必殺 ↑↓で3地点指定 / ↑必殺 滑空・↓で解除',x+52,y+54,9,'#9df5e1','left');}
+ function hud(f,x,y){if(f.characterId==='pneuma')text('↑必殺 上下左右で滑空 / 回避で解除・攻撃へ移行可',x+52,y+54,9,'#9df5e1','left');}
  return{stamp,directed,draw,drawObjects,impact,hud};
 })();
