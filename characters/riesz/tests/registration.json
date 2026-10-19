@@ -285,13 +285,15 @@
     ]
   },
   "selection": {
-    "source": "characters/riesz/assets/riesz-selection.png",
+    "source": "characters/riesz/assets/riesz-selection-closeup.png",
     "crop": [
-      300,
-      15,
-      420,
-      300
-    ]
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high resolution head and upper chest; match established roster portraits"
   },
   "paletteMask": "green>60&&green>r*1.15&&green>b*1.15",
   "effectTypes": {

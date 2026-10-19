@@ -1282,11 +1282,12 @@
   "fiora": {
     "source": "characters/fiora/assets/fiora-selection-complete.png",
     "crop": [
+      140,
       0,
-      0,
-      637,
-      455
-    ]
+      448,
+      320
+    ],
+    "framing": "upper body close-up; matched to established roster portraits; retain head and ornaments"
   },
   "krystal": {
     "source": "characters/krystal/assets/krystal-native.png",
@@ -1426,46 +1427,53 @@
   "chibirobo": {
     "source": "characters/chibirobo/assets/chibirobo-selection.png",
     "crop": [
+      30,
       0,
-      0,
-      201,
-      198
-    ]
+      154,
+      110
+    ],
+    "framing": "upper body close-up; matched to established roster portraits; retain head and ornaments"
   },
   "octoling": {
     "source": "characters/octoling/assets/octoling-selection.png",
     "crop": [
-      0,
-      0,
-      168,
-      207
-    ]
+      38,
+      18,
+      119,
+      85
+    ],
+    "framing": "upper body close-up; matched to established roster portraits; retain head and ornaments"
   },
   "viridi": {
     "source": "characters/viridi/assets/viridi-selection.png",
     "crop": [
-      0,
-      0,
-      158,
-      205
-    ]
+      46,
+      42,
+      98,
+      70
+    ],
+    "framing": "upper body close-up; matched to established roster portraits; retain head and ornaments"
   },
   "riesz": {
-    "source": "characters/riesz/assets/riesz-selection.png",
+    "source": "characters/riesz/assets/riesz-selection-closeup.png",
     "crop": [
-      300,
-      15,
-      420,
-      300
-    ]
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high resolution head and upper chest; match established roster portraits"
   },
   "edea": {
-    "source": "characters/edea/assets/edea-selection.png",
+    "source": "characters/edea/assets/edea-selection-closeup.png",
     "crop": [
-      170,
-      60,
-      420,
-      300
-    ]
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high resolution head and upper chest; match established roster portraits"
   }
 }

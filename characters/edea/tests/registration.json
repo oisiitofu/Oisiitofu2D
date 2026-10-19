@@ -285,13 +285,15 @@
     ]
   },
   "selection": {
-    "source": "characters/edea/assets/edea-selection.png",
+    "source": "characters/edea/assets/edea-selection-closeup.png",
     "crop": [
-      170,
-      60,
-      420,
-      300
-    ]
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high resolution head and upper chest; match established roster portraits"
   },
   "paletteMask": "r>70&&r>green*1.6&&r>b*1.35",
   "effectTypes": {
