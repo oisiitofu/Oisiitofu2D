@@ -133,15 +133,15 @@ const BattleSize=(()=>{
  const displayScale=Object.fromEntries([
   ...['pneuma','rex','maruku','isaac','kasane','maelle','edf','naruhodo','leon','guile','shiren','metabee','horse','sakuna'].map(id=>[id,.84]),
   ...['dragoon','zidane','terry','tressa','midna','agumon','pokoa'].map(id=>[id,.74]),
-  ['yuffie',.80],['estelle',.92]
+  ['yuffie',.80],['estelle',.92],['ray',94/84],['donchan',78/86],['klonoa',78/90]
  ]);
  // Five shared standing-height targets for humanoids. Explicit membership keeps
  // small races, mascots, giant robots and intentional transformation sizes safe.
- const tierHeights=Object.freeze({1:78,2:94,3:98,4:124,5:144});
+ const tierHeights=Object.freeze({1:78,2:94,3:98,4:116,5:144});
  const tierGroups={
-  1:['terry','laharl','sakuna','megamanexe','saki','zidane','arus','rex'],
-  2:['isaac','edelgard','sumino','goemon','krystal','roxas','twob','rin','nia','lightning','colette','estelle','makoto','neku','naegi','will','kosmos','emma','ryza','valkyrie','elma','miku','tifa','yuffie','aruru','pneuma','maelle','rocbouquet','tressa','eve','kasane','aerith','shizuna','kisuke','hinako','melia','fiora','yuri','kurabe','battlemage','kitten','alain','shiren','adol'],
-  3:['dietrich','rean','noctis','clive','narukami','luke','fayt','noah','lloyd','haseo','akira','fei','nier','naruhodo','layton','leon','vincent','edf','hayabusa','alucard','karateka','zero','kiryu','guile'],
+  1:['terry','laharl','sakuna','megamanexe','zidane','arus'],
+  2:['isaac','edelgard','sumino','goemon','krystal','roxas','twob','rin','nia','lightning','colette','estelle','makoto','neku','naegi','rex','saki','kosmos','emma','ryza','valkyrie','elma','miku','tifa','yuffie','aruru','pneuma','maelle','rocbouquet','tressa','eve','kasane','aerith','shizuna','kisuke','hinako','melia','fiora','yuri','kurabe','battlemage','kitten','alain','shiren','adol'],
+  3:['dietrich','rean','noctis','clive','narukami','luke','fayt','noah','lloyd','haseo','akira','fei','nier','naruhodo','layton','leon','vincent','edf','hayabusa','alucard','karateka','zero','kiryu','guile','will'],
   4:['ulgrim','ryofu','odio','malenia','dante','hunter'],
   5:[]
  };
