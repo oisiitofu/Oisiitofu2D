@@ -96,6 +96,8 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 @media(max-width:600px),(max-height:480px){.fighter-grid{--roster-name-size:10px}}
 /* Roster tiles show a close-up of the face and shoulders. */
 .fighter-card img{left:0;top:0;width:100%;height:calc(100% - var(--roster-label-height,21px));object-fit:cover;object-position:50% 20%;filter:none;image-rendering:auto}
+/* Complete hair/long horns belong inside the tile at every roster aspect ratio. */
+.fighter-card[data-id="fiora"] img,.fighter-card[data-id="hornet"] img{object-fit:contain;object-position:50% 0%}
 .fighter-card .fighter-number{background:#080f1ad9;padding:2px 4px;border-radius:2px;text-shadow:0 1px 2px #000}
 .fighter-card>b{z-index:2}
 .random-fighter .random-symbol{position:absolute;inset:0 0 var(--roster-label-height,21px);display:flex;align-items:center;justify-content:center;color:#d9f2ff;font:900 clamp(42px,5vw,76px)/1 Arial,sans-serif;text-shadow:0 0 24px #68baff66}

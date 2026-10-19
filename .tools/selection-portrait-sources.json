@@ -1280,12 +1280,12 @@
     ]
   },
   "fiora": {
-    "source": "characters/fiora/assets/fiora-native.png",
+    "source": "characters/fiora/assets/fiora-selection-complete.png",
     "crop": [
-      2,
-      3645,
-      612,
-      354
+      0,
+      0,
+      637,
+      455
     ]
   },
   "krystal": {
@@ -1307,12 +1307,12 @@
     ]
   },
   "hornet": {
-    "source": "characters/hornet/assets/hornet-native.png",
+    "source": "characters/hornet/assets/hornet-selection-complete.png",
     "crop": [
-      2,
-      2207,
-      451,
-      262
+      0,
+      0,
+      407,
+      291
     ]
   },
   "toro": {

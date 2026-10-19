@@ -1,0 +1,6 @@
+'use strict';
+// Recover the complete existing portraits from their effect sheets. The old
+// grid split crossed the hair/horn tips; do not repaint or replace character art.
+const fs=require('node:fs'),sharp=require('sharp'),isolate=require('./characters/fiora/tests/remove-loose-parts.cjs');
+const sources={fiora:[464,982,652,466],hornet:[1150,686,392,280]};
+(async()=>{for(const[id,[left,top,w,h]]of Object.entries(sources)){const source=`characters/${id}/assets/${id}-effects.png`,raw=await sharp(source).ensureAlpha().raw().toBuffer({resolveWithObject:true}),pixels=Buffer.alloc(w*h*4);for(let y=0;y<h&&top+y<raw.info.height;y++){const count=Math.min(w,raw.info.width-left);raw.data.copy(pixels,y*w*4,((top+y)*raw.info.width+left)*4,((top+y)*raw.info.width+left+count)*4);}const clean=isolate({pixels,w,h}),height=Math.max(clean.h+24,Math.ceil((clean.w+24)/1.4)),width=Math.round(height*1.4),dest=`characters/${id}/assets/${id}-selection-complete.png`;await sharp({create:{width,height,channels:4,background:'#00000000'}}).composite([{input:clean.pixels,raw:{width:clean.w,height:clean.h,channels:4},left:Math.floor((width-clean.w)/2),top:12}]).png().toFile(dest);console.log(JSON.stringify({id,source,crop:[left,top,w,h],dest,width,height}));}})().catch(e=>{console.error(e);process.exitCode=1;});
