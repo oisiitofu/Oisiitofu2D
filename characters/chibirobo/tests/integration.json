@@ -1,0 +1,7 @@
+{
+  "id":"chibirobo","cap":"Chibirobo","name":"ちびロボ","style":"ちびロボ！ / CHIBI-ROBO!","pose":48,"height":72,"effects":12,
+  "description":"プラグや掃除道具で戦う小さなロボ。NBはプラグの往復打ち、横Bは長押しで飛距離を伸ばすプラグ投げ（床で一度バウンド）。上Bはチビコプターで上昇したあと左右に滑空し、回避で中断。下Bはマグカップで守りながらゆっくり移動する。",
+  "physics":{"weight":78,"walkSpeed":3.1,"initialDashSpeed":6.8,"runSpeed":6.6,"airSpeed":5.7,"airAcceleration":0.4,"gravity":0.53,"fullHopVelocity":13.7,"ecb":{"radius":14,"height":65},"shieldSize":37,"shieldOffset":[0,-30]},
+  "family":"staff","after":"doshin","nativeScale":"chibiroboNativeScale","moves":"ChibiroboMoves","poseFunction":"chibiroboPose","gate":"chibiroboGate","vfx":"ChibiroboVFX",
+  "extraIntegration":["combat-system.js: append *(chibiroboGuarding(o)?.6:1) to incoming damage multiplier expression, adjacent to yuriGuarding. Mug uses normal attack armor <=15dmg, not invulnerability.","newcomer-system gate: chibirobo returns chibiroboGate directly after general rule? Allow ground dash repeat after its ending, only one plug alive; keep shared aerial side-once gate.","No f-state fields beyond attack or Rules.objects: regular Newcomer serialization already captures them. Ensure server allowlist adds chibirobo.","art-loader tint/build-art mask: recolor only metal pixels with saturation<.16 and mean>70, preserve black eyes/cable and gold plug prongs. User colors should be subtle metal hues.","MoveMotion.define uses authored wholebody pose sequences, no synthetic bone transform."]
+}

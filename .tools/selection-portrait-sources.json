@@ -1422,5 +1422,50 @@
       1254,
       1254
     ]
+  },
+  "chibirobo": {
+    "source": "characters/chibirobo/assets/chibirobo-selection.png",
+    "crop": [
+      0,
+      0,
+      201,
+      198
+    ]
+  },
+  "octoling": {
+    "source": "characters/octoling/assets/octoling-selection.png",
+    "crop": [
+      0,
+      0,
+      168,
+      207
+    ]
+  },
+  "viridi": {
+    "source": "characters/viridi/assets/viridi-selection.png",
+    "crop": [
+      0,
+      0,
+      158,
+      205
+    ]
+  },
+  "riesz": {
+    "source": "characters/riesz/assets/riesz-selection.png",
+    "crop": [
+      300,
+      15,
+      420,
+      300
+    ]
+  },
+  "edea": {
+    "source": "characters/edea/assets/edea-selection.png",
+    "crop": [
+      170,
+      60,
+      420,
+      300
+    ]
   }
 }
