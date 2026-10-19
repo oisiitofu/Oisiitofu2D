@@ -4,7 +4,7 @@ const server=http.createServer((req,res)=>{let pathname;try{pathname=decodeURICo
  if(require('./script-bundle.cjs').serve(req,res,pathname,root))return;
  if(require('./audio-server.cjs').handle(req,res,pathname,root))return;
  if(pathname==='/health'){res.writeHead(200,{'Content-Type':'application/json'}).end('{"status":"ok"}');return;}
- const publicFiles=new Set(["/","/index.html","/style.css",...require("./script-bundle.cjs").files(root).map(file=>"/"+file)]);
+ const publicFiles=new Set(["/","/index.html","/character-sizes.html","/style.css",...require("./script-bundle.cjs").files(root).map(file=>"/"+file)]);
  const readyAsset=/^\/assets\/ready\/[a-z0-9_-]+-[a-f0-9]{16}\.(png|webp)$/.test(pathname);
  const characterAsset=/^\/characters\/[a-z0-9-]+\/assets\/[a-zA-Z0-9_-]+\.(png|svg|webp)$/.test(pathname);
  if(pathname!=="/assets/ready/manifest.json"&&!readyAsset&&!characterAsset&&!publicFiles.has(pathname)&&!/^\/assets\/[a-zA-Z0-9_-]+\.(png|svg)$/.test(pathname)){res.writeHead(404).end();return;}

@@ -141,9 +141,9 @@ const BattleSize=(()=>{
  const tierGroups={
   1:['terry','laharl','sakuna','megamanexe','saki','zidane','arus','rex'],
   2:['isaac','edelgard','sumino','goemon','krystal','roxas','twob','rin','nia','lightning','colette','estelle','makoto','neku','naegi','will','kosmos','emma','ryza','valkyrie','elma','miku','tifa','yuffie','aruru','pneuma','maelle','rocbouquet','tressa','eve','kasane','aerith','shizuna','kisuke','hinako','melia','fiora','yuri','kurabe','battlemage','kitten','alain','shiren','adol'],
-  3:['dietrich','rean','noctis','clive','narukami','luke','fayt','noah','lloyd','hunter','haseo','akira','fei','nier','naruhodo','layton','dante','leon','vincent','edf','hayabusa','alucard','karateka'],
-  4:['ulgrim','ryofu','guile','kiryu','odio'],
-  5:['malenia']
+  3:['dietrich','rean','noctis','clive','narukami','luke','fayt','noah','lloyd','haseo','akira','fei','nier','naruhodo','layton','leon','vincent','edf','hayabusa','alucard','karateka','zero','kiryu','guile'],
+  4:['ulgrim','ryofu','odio','malenia','dante','hunter'],
+  5:[]
  };
  const tiers=Object.freeze(Object.fromEntries(Object.entries(tierGroups).flatMap(([tier,ids])=>ids.map(id=>[id,+tier]))));
  const legacyHeights=Object.freeze(Object.fromEntries(Object.entries(calibration).map(([id,c])=>[id,c.height*(displayScale[id]??1)])));
