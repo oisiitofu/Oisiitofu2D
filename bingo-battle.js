@@ -23,8 +23,8 @@ const BingoBattle=(()=>{
    const completed=new Set(BingoRules.complete(b).flat()),chosen=new Set(s.picks.flatMap((p,k)=>p?.character&&BingoRules.key(s,k)===b.key?[p.cell]:[]));
    b.cells.forEach((id,index)=>{
     const button=document.createElement('button');button.className='bingo-cell'+(!selecting||!mine?' bingo-watch':'');button.dataset.cell=index;button.disabled=!selecting||!mine||!allowed.has(index);button.classList.toggle('opened',b.open[index]);button.classList.toggle('bingo-line',completed.has(index));button.classList.toggle('chosen',chosen.has(index));
-    const badge=document.createElement('small');badge.className='bingo-cell-badge';badge.textContent=b.open[index]?'✓ OPEN':chosen.has(index)?'使用決定':b.previous.includes(id)?'前の試合':'';
-    if(id){button.append(picture(id));const label=document.createElement('span');label.textContent=name(id);button.append(label);button.setAttribute('aria-label',name(id)+(b.open[index]?' 開放済み':b.previous.includes(id)?' 連続使用不可':chosen.has(index)?' 選択確定':mine&&selecting?' 使用を確定':''));}else{button.classList.add('free');button.textContent='★';const label=document.createElement('span');label.textContent='FREE';button.append(label);button.setAttribute('aria-label','中央 FREE 開放済み');}
+    const badge=document.createElement('small');badge.className='bingo-cell-badge';badge.textContent=b.open[index]?'✓ OPEN':chosen.has(index)?s.revealed?'使用決定':'選択中':b.previous.includes(id)?'前の試合':'';
+    if(id){button.append(picture(id));const label=document.createElement('span');label.textContent=name(id);button.append(label);button.setAttribute('aria-label',name(id)+(b.open[index]?' 開放済み':b.previous.includes(id)?' 連続使用不可':chosen.has(index)?s.revealed?' 選択確定':' 選択中・全員が選ぶまで変更可能':mine&&selecting?' このキャラを選ぶ':''));}else{button.classList.add('free');button.textContent='★';const label=document.createElement('span');label.textContent='FREE';button.append(label);button.setAttribute('aria-label','中央 FREE 開放済み');}
     button.title=button.getAttribute('aria-label');button.append(badge);if(selecting&&mine)button.onclick=()=>choose(index);grid.append(button);
    });panel.append(grid);container.append(panel);
   }
@@ -33,8 +33,8 @@ const BingoBattle=(()=>{
   const s=current();if(!s||!isOpen())return;
   const n=seat(),b=BingoRules.board(s,n);if(!b)return;
   $('bingo-round').textContent='ROUND '+s.round;$('bingo-owner').textContent='全員のビンゴカード';
-  $('bingo-help').textContent=s.champion?ownerName(s.champion)+'が2ビンゴで優勝！':s.result?'勝った側の使用マスが開きました。次の試合へ進めます。':s.picks[n]?'選択確定 · 変更できません。全員の選択を待っています。':'マスを押すと使用キャラを確定します。全員が選ぶまで、味方にも相手にも秘密です。';
-  progress(s,$('bingo-progress'));const list=$('bingo-picks');list.replaceChildren();s.picks.forEach((p,k)=>{const chip=document.createElement('div');chip.className='bingo-player-pick';const who=(k+1)+'P';chip.textContent=who+' · '+(p?.locked||p?.character?'確定済み':'選択中');if(s.revealed&&p?.character){chip.textContent='';chip.append(picture(p.character),document.createTextNode(who+' · '+name(p.character)));}list.append(chip);});
+  $('bingo-help').textContent=s.champion?ownerName(s.champion)+'が2ビンゴで優勝！':s.result?'勝った側の使用マスが開きました。次の試合へ進めます。':s.revealed?'全員の選択が確定しました。対戦を準備しています。':s.picks[n]?'選択済み · 全員が選ぶまでは、別のマスを押して変更できます。':'マスを押してキャラを選んでください。全員が選ぶまで変更でき、味方にも相手にも秘密です。';
+  progress(s,$('bingo-progress'));const list=$('bingo-picks');list.replaceChildren();s.picks.forEach((p,k)=>{const chip=document.createElement('div');chip.className='bingo-player-pick';const who=(k+1)+'P';chip.textContent=who+' · '+(p?.selected||p?.character?s.revealed?'確定済み':'選択済み':'選択中');if(s.revealed&&p?.character){chip.textContent='';chip.append(picture(p.character),document.createTextNode(who+' · '+name(p.character)));}list.append(chip);});
   renderBoards(s,$('bingo-boards'),true);
   $('bingo-stage').value=$('stage').value;$('bingo-stage').disabled=!!s.picks[n]||!!s.result||!!s.champion;
   $('bingo-reset').classList.toggle('hidden',Net.slot!==0);$('bingo-reset').disabled=!!Net.active;
@@ -46,7 +46,7 @@ const BingoBattle=(()=>{
   if(next&&online.champion){if(Net.slot===0)Net.bingo('bingo-reset');}else if(next&&online.result)Net.bingo('bingo-next');
   show();
  }
- function choose(cell){if(enabled())Net.bingo('bingo-pick',{generation:online.generation,bingoRound:online.round,cell,color:selected,stage:$('stage').value});}
+ function choose(cell){if(enabled()&&!online.revealed&&!online.result&&!online.champion)Net.bingo('bingo-pick',{generation:online.generation,bingoRound:online.round,cell,color:selected,stage:$('stage').value});}
  function accept(s){
   const previous=online;online=s;const locked=!!(isOnline()&&s?.picks[Net.slot]&&!s.result);for(const field of document.querySelectorAll('#stage,.stage-card,#swatches button'))field.disabled=locked;if(!s){$('result').querySelector('.back').disabled=false;waitingResult=false;if(isOnline())close();$('bingo-result-summary').classList.add('hidden');return;}
   if(s.result||!s.revealed)waitingResult=false;

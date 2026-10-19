@@ -15,10 +15,10 @@ const BingoRules=(()=>{
    const cells=shuffled.slice(0,24);cells.splice(center,0,null);s.boards.push({key:id,cells,open:cells.map((_,n)=>n===center),previous:[],lines:0});
   });return s;
  }
- function available(s,seat){const b=board(s,seat);if(!b||s.champion||s.result||s.picks[seat])return[];return b.cells.flatMap((id,n)=>id&&!b.open[n]&&!b.previous.includes(id)?[n]:[]);}
+ function available(s,seat){const b=board(s,seat);if(!b||s.champion||s.result||s.revealed)return[];return b.cells.flatMap((id,n)=>id&&!b.open[n]&&!b.previous.includes(id)?[n]:[]);}
  function pick(s,seat,cell){
   if(!Number.isInteger(seat)||seat<0||seat>=s.picks.length)return{ok:false,message:'参加者が見つかりません。'};
-  if(s.picks[seat])return{ok:false,message:'選択は確定済みです。全員の確定まで変更できません。'};
+  if(s.revealed)return{ok:false,message:'全員の選択が確定したため、変更できません。'};
   if(!Number.isInteger(cell)||!available(s,seat).includes(cell))return{ok:false,message:'そのマスは選べません。開いたマスと前の試合の使用キャラは選択できません。'};
   s.picks[seat]={cell,character:board(s,seat).cells[cell]};s.revealed=s.picks.every(Boolean);return{ok:true};
  }
@@ -38,7 +38,7 @@ const BingoRules=(()=>{
  function cancel(s){s.picks=s.picks.map(()=>null);s.revealed=false;s.result=null;}
  function view(s,seat){
   if(!s)return null;
-  return{generation:s.generation,round:s.round,format:s.format,teams:s.teams.slice(),boards:s.boards.map(b=>({...b,cells:b.cells.slice(),open:b.open.slice(),previous:b.previous.slice()})),picks:s.picks.map((p,n)=>p?s.revealed||n===seat?{...p,locked:true}:{locked:true}:null),revealed:s.revealed,result:s.result?JSON.parse(JSON.stringify(s.result)):null,champion:s.champion};
+  return{generation:s.generation,round:s.round,format:s.format,teams:s.teams.slice(),boards:s.boards.map(b=>({...b,cells:b.cells.slice(),open:b.open.slice(),previous:b.previous.slice()})),picks:s.picks.map((p,n)=>p?s.revealed||n===seat?{...p,selected:true,locked:s.revealed}:{selected:true,locked:false}:null),revealed:s.revealed,result:s.result?JSON.parse(JSON.stringify(s.result)):null,champion:s.champion};
  }
  return{center,lines,key,board,complete,create,available,pick,settle,next,cancel,view};
 })();
