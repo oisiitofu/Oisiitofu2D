@@ -22,7 +22,7 @@ const NoctisMoves=(()=>{
   dragon:m('ファントムソード',12,[],16,12,{pose:13,spellShots:[12],projectile:true,chargeFrame:4,chargeButton:'special',chargeMaxFrames:60,swordSpeed:10,swordLife:50,swordSteering:.018}),
   dash:m('ワープストライク・剣設置',8,[],16,14,{pose:13,spellShots:[8],projectile:true,airControlMultiplier:.5,markerSpeed:11,markerFlight:26,markerLife:100}),
   warpStrike:m('ワープストライク・転移斬り',7,[w(7,9)],16,14,{damage:11,reach:165,pose:15,special:true,warpFrame:4,intangibleFrames:[[4,5]],airControlMultiplier:0,ledgeGrabStart:6,baseKnockback:4.7,knockbackGrowth:.078}),
-  rise:m('エアステップ',19,[w(19,22,'up')],12,18,{damage:8,reach:160,pose:16,angle:-1.4,aerial:true,selectionStart:5,selectionEnd:15,warpFrame:16,anchors:[[-180,-90],[0,-210],[180,-90]],airControlMultiplier:0,actionCancelFrame:25,ledgeGrabStart:16,autoCancelWindow:[],landingFlag:[1,Infinity]}),
+  rise:m('エアステップ',19,[w(19,22,'up')],12,18,{damage:8,reach:160,pose:16,angle:-1.4,aerial:true,selectionStart:5,selectionEnd:15,warpFrame:16,warpDistance:210,airControlMultiplier:0,actionCancelFrame:25,ledgeGrabStart:16,autoCancelWindow:[],landingFlag:[1,Infinity]}),
   gale:m('エレメントフラスク',16,[],18,14,{pose:13,spellShots:[16],projectile:true,chargeFrame:4,chargeButton:'special',chargeMaxFrames:60,flaskFuse:24,burstFrames:3,burstLife:14,burstRadius:[65,58,55],flaskDamage:[14,11,12],flaskGravity:.25})
  };
  for(const id of ['grab','ledge','getupAttack','pummel','forwardThrow','backThrow','upThrow','downThrow']){const a=CombatData.moves[id];moves[id]={...a,animation:{...a.animation},timeline:a.timeline.map(e=>({...e})),activeFrames:a.activeFrames.map(e=>({...e}))};}
@@ -51,9 +51,9 @@ const NoctisRules=(()=>{
   if(a.type==='warpStrike'&&t===a.warpFrame&&!a.warped){a.warped=true;if(a.warpTarget){const distance=Math.hypot(a.warpTarget.x-f.x,a.warpTarget.y-f.y),q=teleport(f,a.warpTarget);a.warpBlocked=q.blocked;a.damage+=Math.min(5,distance/100);a.gravityMultiplier=.4;f.specialLandingLag=a.landingLagFrames;}}
   if(a.type==='warpStrike'&&t>a.activeEnd)a.gravityMultiplier=1;
   if(a.type==='rise'){
-   if(t===a.selectionStart&&!a.anchorOrigin){a.anchorOrigin={x:f.x,y:f.y};a.anchorPoints=a.anchors.map(([x,y])=>({x:f.x+x,y:f.y+y}));a.anchorIndex=1;f.recovered=true;if(f.grounded)f.y-=2;f.grounded=false;f.specialLandingLag=a.landingLagFrames;}
-   if(t>=a.selectionStart&&t<=a.selectionEnd){a.anchorIndex=i.x<-.2?0:i.x>.2?2:1;a.gravityMultiplier=0;f.vx=f.vy=0;f.fastFall=false;}
-   if(t===a.warpFrame&&!a.warped){a.warped=true;const q=teleport(f,a.anchorPoints[a.anchorIndex]);a.warpBlocked=q.blocked;a.gravityMultiplier=1;f.vx=(a.anchorIndex-1)*1.5;}
+   if(t===a.selectionStart&&!a.anchorOrigin){if(f.grounded)f.y-=2;a.anchorOrigin={x:f.x,y:f.y};a.warpDirection={x:0,y:-1};a.warpTarget={x:f.x,y:f.y-a.warpDistance};f.recovered=true;f.grounded=false;f.specialLandingLag=a.landingLagFrames;}
+   if(t>=a.selectionStart&&t<=a.selectionEnd){const len=Math.hypot(i.x,i.y);if(len>.25){a.warpDirection={x:i.x/len,y:i.y/len};a.warpTarget={x:a.anchorOrigin.x+a.warpDirection.x*a.warpDistance,y:a.anchorOrigin.y+a.warpDirection.y*a.warpDistance};}a.gravityMultiplier=0;f.vx=f.vy=0;f.fastFall=false;}
+   if(t===a.warpFrame&&!a.warped){a.warped=true;const q=teleport(f,a.warpTarget);a.warpBlocked=q.blocked;a.gravityMultiplier=1;f.vx=a.warpDirection.x*1.5;f.face=Math.sign(a.warpDirection.x)||f.face;}
   }
   if(a.type==='gale'&&t===a.startupFrames&&!a.objectSpawned){a.objectSpawned=true;spawn(f,'flask',{vx:f.face*5.5,vy:f.grounded?-3.2:1,elementIndex:a.elementIndex,charge:a.charge,life:80,fuse:a.flaskFuse,gravity:a.flaskGravity,burstFrames:a.burstFrames,burstLife:a.burstLife,radius:a.burstRadius[a.elementIndex]+a.charge*25,damage:a.flaskDamage[a.elementIndex]+a.charge*6,element:a.element});}
  }
@@ -86,7 +86,7 @@ const NoctisRules=(()=>{
   objects=objects.filter(o=>!o.dead);
  }
  function cpu(f,o,i){const p=platforms.find(p=>p.main),center=p.x+p.w/2,under=f.y>p.y+25&&f.x>p.x-20&&f.x<p.x+p.w+20;
-  if(f.attack?.type==='rise'){i.x=under?(f.x<center?-1:1):f.x<p.x?1:f.x>p.x+p.w?-1:0;i.special=i.guard=i.guardPressed=i.jab=i.heavy=i.smash=false;}
+  if(f.attack?.type==='rise'){const a=f.attack,origin=a.anchorOrigin||f,dx=under?(origin.x<center?-210:210):clamp(origin.x,p.x+45,p.x+p.w-45)-origin.x,dy=p.y-90-origin.y,len=Math.hypot(dx,dy)||1;i.x=dx/len;i.y=dy/len;i.special=i.guard=i.guardPressed=i.jab=i.heavy=i.smash=false;}
   else if(!f.attack&&under&&!f.recovered){const direction=f.x<center?-1:1,distance=direction<0?f.x-p.x:p.x+p.w-f.x;i.x=direction;i.y=distance<=90?-1:0;i.special=distance<=90;i.jump=distance>90&&f.airJumps>0&&f.vy>0;i.jab=i.heavy=i.smash=i.guard=false;}
   else if(!f.attack&&marker(f)&&!f.noctisSideUsed){i.x=marker(f).face;i.y=0;i.special=true;i.jab=i.heavy=i.smash=i.guard=false;}
   return i;
