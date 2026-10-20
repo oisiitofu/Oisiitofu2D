@@ -1,0 +1,55 @@
+{
+  "definition": {
+    "id": "dana",
+    "name": "ダーナ",
+    "style": "イース / DANA",
+    "description": "双月刃と古代の月の力で戦う巫女。通常必殺は双月連舞。横必殺は近くの相手の背後へ回り込む星渡り、上必殺は蝶を伴い左右に軌道を調整する蒼月旋昇。下必殺の古代の祈りで8秒間、攻撃力と刃の間合いが強化される。",
+    "pose": 48,
+    "number": "141"
+  },
+  "after": "adol",
+  "height": 94,
+  "tier": 2,
+  "physics": {
+    "weight": 90,
+    "walkSpeed": 3.45,
+    "initialDashSpeed": 7.6,
+    "runSpeed": 7,
+    "airSpeed": 6.8,
+    "airAcceleration": 0.46,
+    "gravity": 0.54,
+    "fullHopVelocity": 14.4,
+    "ecb": {
+      "radius": 15,
+      "height": 81
+    },
+    "shieldSize": 43,
+    "shieldOffset": [
+      0,
+      -41
+    ],
+    "ledgeGrip": [
+      0.157535146498489,
+      0.9430927095935834
+    ]
+  },
+  "artLayout": "characters/dana/tests/art-layout.json",
+  "measurements": "characters/dana/tests/body-measurements.json",
+  "paletteMask": "(b>65&&b>r*1.2&&b>green*.95)",
+  "selection": {
+    "source": "characters/dana/assets/dana-selection.png",
+    "crop": [
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "frames": 49,
+  "effects": 12,
+  "onlineFighterFields": [
+    "danaMoonTime"
+  ]
+}

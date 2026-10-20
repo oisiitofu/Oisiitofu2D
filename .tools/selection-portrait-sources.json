@@ -1482,5 +1482,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high resolution head and upper chest; match established roster portraits"
+  },
+  "dana": {
+    "source": "characters/dana/assets/dana-selection.png",
+    "crop": [
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
