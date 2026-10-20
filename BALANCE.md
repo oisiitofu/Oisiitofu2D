@@ -1157,3 +1157,5 @@ character-sizes.htmlを実描画135形態から更新。size-catalog-test.cjsは
 リース/イデアは低解像度の全身sprite拡大で粗くなるため、builtin image_genで専用1536×1024の透過上半身画像を新規制作。元の髪/顔/衣装を参照し、選択カードで顔と肩が大きく見えるよう指定。保存先はcharacters/riesz/assets/riesz-selection-closeup.png、characters/edea/assets/edea-selection-closeup.png。元の全身画像は保持。正確な制作プロンプトを両docs/selection-closeup-prompts.jsonへ保存。ナチュレ/タコガール/ちびロボも同じ1536×1024の専用上半身画像を新規制作し、各characters/<id>/assets/<id>-selection-closeup.pngへ保存。全身spriteの拡大は使用しない。正確なプロンプトは各docs/selection-closeup-prompts.jsonに保存。フィオルンは既存の高解像度ポートレートを使用。
 
 ART_IDSを6体に限定しART_PORTRAITS_ONLY=1で選択絵/サムネイルのみ更新。UIを4画面サイズ×6体×5カラーで確認（メタデータ比較込み428項目、例外0）。戦闘アトラス/色マスク/姿勢/ゲーム用ポートレートは不変、他134形態のmanifestも完全一致。art-loading-testをART_IDS同6体へ限定し310姿勢/79FX/1550カラーのchecksum差0、元画像の起動時読込0。既存の頭見切れ回帰230項目も成功。対戦のサイズ/技/判定/オンライン処理は変更しないためCPU戦やオンライン対戦の再検証は不要。選択専用の変更なのでサイズ一覧の再生成も不要。
+
+公開版v109へ反映（実装b50ed63/3225fce、Sitesソース27e94980ff870acd7a678ebe6835d2195628f3ca、最終配信appgdep_6ad756f8ca4c8191ad6a7017cb7b3a4a）。157パス/137固有オブジェクト44,877,828バイトの送信失敗0。公開版の6体×5色×4画面サイズを含む428項目成功、style/manifest/6体の専用画像8ファイルのSHA-256一致。一時アップロードキーを除去し環境revision213で再配信。画像保存先と正確なプロンプト一覧はdocs/selection-portraits-2026-10-20.md。既存ランチャー/トンネルを維持。
