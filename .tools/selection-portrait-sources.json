@@ -1425,34 +1425,37 @@
     ]
   },
   "chibirobo": {
-    "source": "characters/chibirobo/assets/chibirobo-selection.png",
+    "source": "characters/chibirobo/assets/chibirobo-selection-closeup.png",
     "crop": [
-      30,
+      51,
       0,
-      154,
-      110
+      1434,
+      1024
     ],
-    "framing": "upper body close-up; matched to established roster portraits; retain head and ornaments"
+    "mode": "built-in imagegen",
+    "framing": "dedicated high resolution head and upper chest; match established roster portraits"
   },
   "octoling": {
-    "source": "characters/octoling/assets/octoling-selection.png",
+    "source": "characters/octoling/assets/octoling-selection-closeup.png",
     "crop": [
-      38,
-      18,
-      119,
-      85
+      51,
+      0,
+      1434,
+      1024
     ],
-    "framing": "upper body close-up; matched to established roster portraits; retain head and ornaments"
+    "mode": "built-in imagegen",
+    "framing": "dedicated high resolution head and upper chest; match established roster portraits"
   },
   "viridi": {
-    "source": "characters/viridi/assets/viridi-selection.png",
+    "source": "characters/viridi/assets/viridi-selection-closeup.png",
     "crop": [
-      46,
-      42,
-      98,
-      70
+      51,
+      0,
+      1434,
+      1024
     ],
-    "framing": "upper body close-up; matched to established roster portraits; retain head and ornaments"
+    "mode": "built-in imagegen",
+    "framing": "dedicated high resolution head and upper chest; match established roster portraits"
   },
   "riesz": {
     "source": "characters/riesz/assets/riesz-selection-closeup.png",

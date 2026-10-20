@@ -13,3 +13,6 @@ NBは25インクを使う時限ボムで一個まで。横Bは地上を押し進
 生成済みファイル: assets/octoling-poses.png、octoling-effects.png、octoling-native.png、octoling-selection.png。再現用の切り出しは tests/assemble-art.cjs。統合用 metadata は tests/registration.json。
 
 検証（2026-10-20）: focused 142件、実描画36件（15通常技×左右、上攻撃3種×左右の単一曲線）、CPU対ビビ1800Fの1戦を通過。通常技は全て別の全身ポーズ。密着・先端・ガード・ボム個数/寿命・インク消費/自然回復・インク0での復帰・ローラー有限移動・チャクチ着地・左右復帰・崖の手位置を確認。画像と音声の既存データは変更していない。
+
+
+2026-10-20: 選択画面専用の高解像度1536×1024透過上半身画像をbuiltin image_genで制作。assets/octoling-selection-closeup.pngを使用し、全身ゲーム画像は保持。正確なプロンプトはselection-closeup-prompts.json。ティファ/コレット等と顔の寄りを比較する。

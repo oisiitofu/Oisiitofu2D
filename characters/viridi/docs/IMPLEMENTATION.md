@@ -13,3 +13,6 @@ effects0は凸側が左、effects1は上。AttackEffectDataへ原画像の軸を
 素材: assets/viridi-poses.png、viridi-effects.png、viridi-native.png、viridi-selection.png。切り出し: tests/assemble-art.cjs。人物の列ではなく明示した実行高 [0,188,375,551,708,865,1024] で48体の核を割り当て、寝た姿勢が次の行へ混入しないようにしている。統合metadata: tests/registration.json。
 
 検証（2026-10-20）: focused 136件、実描画36件（15通常技×左右、上攻撃3種×左右の単一曲線）、CPU対ビビ1800Fの1戦を通過。クラガランの個数・移動・寿命、種の着地後の時間差、通常必殺の再使用、左右の場外復帰、始動中の落下抑制、崖の手位置を確認。待機の杖を含む高さ171pxと身体145pxを区別し、standingBodiesの145pxで身体がサイズ1の78pxになるよう補正。全ポーズ同じ倍率なので頭身・衣装・足元を保つ。
+
+
+2026-10-20: 選択画面専用の高解像度1536×1024透過上半身画像をbuiltin image_genで制作。assets/viridi-selection-closeup.pngを使用し、全身ゲーム画像は保持。正確なプロンプトはselection-closeup-prompts.json。ティファ/コレット等と顔の寄りを比較する。
