@@ -1282,12 +1282,12 @@
   "fiora": {
     "source": "characters/fiora/assets/fiora-selection-complete.png",
     "crop": [
-      140,
+      110,
       0,
       448,
       320
     ],
-    "framing": "upper body close-up; matched to established roster portraits; retain head and ornaments"
+    "framing": "face centered in selection card, existing dedicated artwork"
   },
   "krystal": {
     "source": "characters/krystal/assets/krystal-native.png",
@@ -1308,13 +1308,15 @@
     ]
   },
   "hornet": {
-    "source": "characters/hornet/assets/hornet-selection-complete.png",
+    "source": "characters/hornet/assets/hornet-selection-closeup.png",
     "crop": [
-      0,
-      0,
-      407,
-      291
-    ]
+      51,
+      -20,
+      1434,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated close head and cloak, complete horns and cloak extending through bottom edge"
   },
   "toro": {
     "source": "characters/toro/assets/toro-native.png",
@@ -1328,11 +1330,12 @@
   "c4621": {
     "source": "characters/c4621/assets/c4621-selection.png",
     "crop": [
-      0,
-      0,
-      1254,
-      1254
-    ]
+      265,
+      5,
+      650,
+      465
+    ],
+    "framing": "close head and upper core, existing dedicated artwork"
   },
   "malenia": {
     "source": "characters/malenia/assets/malenia-selection.png",
@@ -1400,11 +1403,12 @@
   "battlemage": {
     "source": "characters/battlemage/assets/battlemage-selection.png",
     "crop": [
+      350,
       0,
-      0,
-      1254,
-      1254
-    ]
+      770,
+      550
+    ],
+    "framing": "close face and shoulders, existing dedicated artwork"
   },
   "karateka": {
     "source": "characters/karateka/assets/karateka-selection.png",

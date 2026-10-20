@@ -10,6 +10,8 @@
 | タコガール | [octoling-selection-closeup.png](../characters/octoling/assets/octoling-selection-closeup.png) | [JSON](../characters/octoling/docs/selection-closeup-prompts.json) |
 | ちびロボ | [chibirobo-selection-closeup.png](../characters/chibirobo/assets/chibirobo-selection-closeup.png) | [JSON](../characters/chibirobo/docs/selection-closeup-prompts.json) |
 
-フィオルンは既存の専用画像 `characters/fiora/assets/fiora-selection-complete.png` を使用。切出し `[140,0,448,320]` とcover表示で寄りをそろえ、追加指定の右への位置調整を反映。
+フィオルンは既存の専用画像 `characters/fiora/assets/fiora-selection-complete.png` を使用。切出し `[110,0,448,320]` とcover表示で寄りをそろえ、中央へ位置調整（追加指定で140→110）。
+
+追加修正：ホーネットの専用画像は `characters/hornet/assets/hornet-selection-closeup.png`、builtin image_genの正確なプロンプトは `characters/hornet/docs/selection-closeup-prompt.json`。角を残し、マントがカード下端まで伸びる構図。個別のcontain縮小を廃止。バトルメイジは既存専用画像の `[350,0,770,550]`、C4-621は `[265,5,650,465]` へ寄せ、頭と上半身を大きく表示。
 
 元の全身素材・戦闘用アトラス・姿勢・判定は維持。設定は `.tools/selection-portrait-sources.json`、配信用は `assets/ready/manifest.json` とハッシュ付き画像。
