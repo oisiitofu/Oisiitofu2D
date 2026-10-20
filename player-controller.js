@@ -99,7 +99,7 @@ const PlayerController=(()=>{
  }
  function tick(f,raw){if(!f.mode)prepareFighter(f);const c=f.character,i=InputFrames.sample(f,raw);for(let key of ['inv','intangible','grabImmunity','techBuffer','techLock','drop','ledgeCooldown'])f[key]=Math.max(0,(f[key]||0)-1);if(i.guardPressed)f.techBuffer=11;if(++f.dodgeRest>=180){f.dodgeStale=Math.max(0,f.dodgeStale-1);f.dodgeRest=0;}InputFrames.queue(f,i);
   stopLaunchOnPress(f,i);
-  f.shadowTimeSlowed=ShadowRules.slowSkip(f,i);if(f.shadowTimeSlowed){f.stateEnd++;f.faf++;return;}
+  f.shadowTimeSlowed=ShadowRules.slowSkip(f,i);if(f.shadowTimeSlowed||SolRules.slowSkip(f,i)){f.stateEnd++;f.faf++;return;}
   if(f.hitlag>0){CombatSystem.hitlag(f,i);return;}if(f.attack?.hauntDelay>0&&!f.hitstun&&!f.tumbling&&!f.respawn){f.attack.hauntDelay--;f.stateEnd++;f.faf++;physics(f,i);return;}if(f.laytonThink>0&&!f.hitstun&&!f.tumbling&&!f.respawn){f.laytonThink=Math.max(0,f.laytonThink-i.mash*2);f.buffer=null;f.vx*=.75;physics(f,i);return;}f.timer++;f.stateFrame++;f.landingLag=['NormalLanding','HardLanding','AerialLanding','SpecialLanding'].includes(f.mode)?Math.max(0,f.stateDuration-f.stateFrame+1):0;
   if(f.respawn>0){enterIf(f,'Dead');if(f.squad&&f.stocks<=0)return;if(--f.respawn===0){let oldStocks=f.stocks,stats=f.stats,color=f.color,id=f.id,team=f.team,control=f.control,evolution=AgumonEvolution.preserve(f);if(!SquadBattle.respawn(f))Object.assign(f,prepareFighter(makeFighterBase(id,color,f.characterId)),evolution);f.stocks=oldStocks;f.stats=stats;f.team=team;f.control=control;f.x=BattlePlayers.spawnX(f);f.y=120;f.grounded=false;f.intangible=150;enter(f,'Respawn',1);}return;}
   if(f.mode==='Respawn')enter(f,'Fall');

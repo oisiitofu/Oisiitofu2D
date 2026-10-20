@@ -146,6 +146,7 @@ CharacterData.edea={...CharacterData.dragoon,...{"weight":97,"walkSpeed":3.2,"in
 CharacterData.dana={...CharacterData.dragoon,...{"weight":90,"walkSpeed":3.45,"initialDashSpeed":7.6,"runSpeed":7,"airSpeed":6.8,"airAcceleration":0.46,"gravity":0.54,"fullHopVelocity":14.4,"ecb":{"radius":15,"height":81},"shieldSize":43,"shieldOffset":[0,-41],"ledgeGrip":[0.157535146498489,0.9430927095935834]}};
 CharacterData.zero3={...CharacterData.dragoon,...{"weight":90,"walkSpeed":3.45,"initialDashSpeed":7.6,"runSpeed":7,"airSpeed":6.8,"airAcceleration":0.46,"gravity":0.54,"fullHopVelocity":14.4,"ecb":{"radius":15,"height":81},"shieldSize":43,"shieldOffset":[0,-41],"ledgeGrip":[-0.32915887850467285,0.9531606217616581]}};
 CharacterData.miyabi={...CharacterData.dragoon,...{"weight":88,"walkSpeed":3.7,"initialDashSpeed":7.9,"runSpeed":7.5,"airSpeed":7,"airAcceleration":0.48,"gravity":0.53,"fullHopVelocity":14.7,"ecb":{"radius":15,"height":81},"shieldSize":43,"shieldOffset":[0,-41],"ledgeGrip":[0.2240095939128277,0.962787610619469]}};
+CharacterData.sol={...CharacterData.dragoon,...{"weight":112,"walkSpeed":3.25,"initialDashSpeed":7.4,"runSpeed":7,"airSpeed":6.2,"airAcceleration":0.42,"gravity":0.65,"fullHopVelocity":15.8,"ecb":{"radius":20,"height":101},"shieldSize":52,"shieldOffset":[0,-49],"ledgeGrip":[0.38912855910267474,0.9587913854066217]}};
 const MovementTuning={shortHopReleaseGraceFrames:2,fastFallMultiplier:1.25,fastFallAcceleration:1.1};
 for(const character of Object.values(CharacterData))character.fastFallSpeed=character.fallSpeed*MovementTuning.fastFallMultiplier;
 const StageRules={blast:{left:-780,right:2220,top:-480,bottom:1200},camera:{minX:-560,maxX:2000,minY:-400,maxY:1350,minZoom:.56,maxZoom:1.5},loupe:{radius:39,inset:48,warningDistance:180},ledges:[],oneOnOne:false};
@@ -207,6 +208,7 @@ const InputFrames=(()=>{
   if(i.shieldUpSmash&&!i.jumpAerial){i.smash=true;i.jab=i.heavy=false;}
   if(f.grounded&&i.guard&&buttons.attack.press&&!i.jumpAerial&&!i.shieldUpSmash&&(['ShieldStart','ShieldHold'].includes(guardMode)||PlayerStates.defs[guardMode]?.shield)){i.grab=true;i.jab=i.heavy=false;}
   i.mash=Object.values(buttons).filter(b=>b.press).length+(i.flickX||i.flickY?1:0);
+  if(f.characterId==='sol')solCancelInput(f,i);
   if(f.characterId==='battlemage')battlemageChaserInput(f,i);
   f.input=i;f.inputHistory??=[];f.inputHistory.push({frame,x:i.x,y:i.y,rx:i.rx||0,ry:i.ry||0,buttons:Object.entries(buttons).filter(([,v])=>v.value).map(([k])=>k),bufferAge:f.lastBufferAge??0});if(f.inputHistory.length>120)f.inputHistory.shift();return i;
  }

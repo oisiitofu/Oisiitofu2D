@@ -1,0 +1,45 @@
+{
+  "definition": {
+    "id": "sol",
+    "name": "ソル",
+    "style": "GUILTY GEAR / SOL BADGUY",
+    "description": "炎を操る剛腕の賞金稼ぎ。NBは地を進むガンフレイム、長押しでフェイント。横Bは二段蹴り、長押しで跳び込み拳へ派生。上Bはヴォルカニックヴァイパーから再入力でサイドワインダー。下Bはテンション50%で技の硬直を切り、近くの相手を短時間遅くするロマンキャンセル。",
+    "pose": 50,
+    "number": "144"
+  },
+  "after": "guile",
+  "height": 116,
+  "tier": 4,
+  "physics": {
+    "weight": 112,
+    "walkSpeed": 3.25,
+    "initialDashSpeed": 7.4,
+    "runSpeed": 7,
+    "airSpeed": 6.2,
+    "airAcceleration": 0.42,
+    "gravity": 0.65,
+    "fullHopVelocity": 15.8,
+    "ecb": {
+      "radius": 20,
+      "height": 101
+    },
+    "shieldSize": 52,
+    "shieldOffset": [
+      0,
+      -49
+    ],
+    "ledgeGrip": [
+      0.38912855910267474,
+      0.9587913854066217
+    ]
+  },
+  "paletteMask": "(r>65&&r>green*1.6&&r>b*1.35)",
+  "frames": 51,
+  "effects": 16,
+  "onlineFighterFields": [
+    "solTension",
+    "solSeenDamage",
+    "solLastX",
+    "solSlowUntil"
+  ]
+}
