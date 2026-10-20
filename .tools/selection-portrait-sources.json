@@ -1493,5 +1493,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "zero3": {
+    "source": "characters/zero3/assets/zero3-selection.png",
+    "crop": [
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

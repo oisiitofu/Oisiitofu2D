@@ -1,0 +1,59 @@
+{
+  "definition": {
+    "id": "zero3",
+    "name": "ゼロ（DOD3）",
+    "style": "ドラッグオンドラグーン3 / ZERO",
+    "description": "剣・槍・輪刃を使うウタウタイ。通常必殺は往復するチャクラム、横必殺は槍を軸に回る連撃。上必殺はミハイルに乗って飛び、追加入力で飛び降り斬り。与ダメージと被ダメージで血を貯め、満タンの下必殺で8秒間インテナーモードになる。",
+    "pose": 48,
+    "number": "142"
+  },
+  "after": "twob",
+  "height": 94,
+  "tier": 2,
+  "physics": {
+    "weight": 90,
+    "walkSpeed": 3.45,
+    "initialDashSpeed": 7.6,
+    "runSpeed": 7,
+    "airSpeed": 6.8,
+    "airAcceleration": 0.46,
+    "gravity": 0.54,
+    "fullHopVelocity": 14.4,
+    "ecb": {
+      "radius": 15,
+      "height": 81
+    },
+    "shieldSize": 43,
+    "shieldOffset": [
+      0,
+      -41
+    ],
+    "ledgeGrip": [
+      -0.32915887850467285,
+      0.9531606217616581
+    ]
+  },
+  "artLayout": "characters/zero3/tests/art-layout.json",
+  "measurements": "characters/zero3/tests/body-measurements.json",
+  "paletteMask": "(r<85&&green<85&&b<85&&Math.max(r,green,b)-Math.min(r,green,b)<18)",
+  "selection": {
+    "source": "characters/zero3/assets/zero3-selection.png",
+    "crop": [
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "frames": 49,
+  "effects": 16,
+  "onlineFighterFields": [
+    "zero3Blood",
+    "zero3IntonerTime",
+    "zero3LastDealt",
+    "zero3LastDamage",
+    "zero3SpeedMode"
+  ]
+}
