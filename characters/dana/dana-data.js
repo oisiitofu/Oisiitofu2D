@@ -27,7 +27,7 @@ const DanaRules=NewcomerCore.create('dana',DanaMoves,{
    else{f.vx*=.45;f.vy=0;if(!a.turned){a.turned=true;f.face=a.flanked?-a.originFace:a.originFace;a.launchDirection=f.face;}a.pose=a.flanked?7:44;a.gravityMultiplier=1;}
   }
   if(a.danaRise){f.fastFall=false;if(t<8){f.vx*=.65;f.vy=0;return;}
-   if(a.launchAt===undefined&&!a.escapeSide){const p=platforms.find(p=>p.main);if(f.x>p.x&&f.x<p.x+p.w&&f.y-f.character.ecb.height>p.y+89){NewcomerCore.escape(f,a);a.activeFrames=[];danaDuration(f,a,t+110);}else{a.launchAt=t;f.grounded=false;f.recovered=true;f.vy=-14.5;f.vx=clamp(i.x,-1,1)*4.5;a.activeFrames=[CombatData.window(t+2,t+4,'up',{pose:42,damage:3,fixedKnockback:10}),CombatData.window(t+10,t+12,'up',{pose:33,damage:3,fixedKnockback:10}),CombatData.window(t+21,t+25,'up',{pose:45,damage:7})];danaDuration(f,a,t+51);}}
+   if(a.launchAt===undefined&&!a.escapeSide){const p=platforms.find(p=>p.main);if(f.x>p.x&&f.x<p.x+p.w&&f.y-f.character.ecb.height>p.y+89){NewcomerCore.escape(f,a);a.activeFrames=[];danaDuration(f,a,t+110);}else{a.launchAt=t;f.grounded=false;f.recovered=true;f.vy=-14.5;f.vx=clamp(i.x,-1,1)*4.5;a.activeFrames=[CombatData.window(t+2,t+4,'up',{pose:42,damage:3*(a.danaPowered?1.12:1),fixedKnockback:10}),CombatData.window(t+10,t+12,'up',{pose:33,damage:3*(a.danaPowered?1.12:1),fixedKnockback:10}),CombatData.window(t+21,t+25,'up',{pose:45,damage:7*(a.danaPowered?1.12:1)})];danaDuration(f,a,t+51);}}
    if(a.escapeSide){NewcomerCore.escapeAction(f,a,0);return;}const dt=t-a.launchAt;if(dt<28){a.gravityMultiplier=0;f.vy=-13.3+dt*.22;f.vx=moveToward(f.vx,clamp(i.x,-1,1)*4.7+Math.sin(dt*.5)*1.2,.7);a.pose=[42,33,45][Math.floor(dt/4)%3];}else{a.gravityMultiplier=.85;f.vx=moveToward(f.vx,clamp(i.x,-1,1)*3.5,.2);a.pose=35;}
   }
  },

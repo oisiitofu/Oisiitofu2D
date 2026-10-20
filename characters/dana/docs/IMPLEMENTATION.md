@@ -2,6 +2,8 @@
 
 添付 `assets/dana-reference.png` を基準にbuiltin image_genで48全身ポーズ・12エフェクト・高解像度専用上半身画像を制作。元絵の青い髪、冠、白/水色/金の衣装、双月刃を維持。正確なプロンプトは `image-prompts.json`。全身を切り替えて描画し、関節リグは使わない。
 
+保存画像は `characters/dana/assets/dana-poses.png`（全身）、`characters/dana/assets/dana-effects.png`（効果）、`characters/dana/assets/dana-selection.png`（専用選択絵）。組立済みは `characters/dana/assets/dana-native.png`。正確な生成プロンプトは `characters/dana/docs/image-prompts.json`。
+
 ゲーム用アトラスは48全身ポーズとポートレート1枚の49フレーム。通常技15種類は別の全身絵。透過を保持し、標準サイズ2の94px、全動作に同じ身体倍率を使う。髪/青布を5カラーへ変更。キャラ選択は別制作1536×1024の専用画像。登録順はアドル→ダーナ。おまかせ最後、隠し形態は維持。
 
 - 通常必殺「双月連舞」：9/18/29Fの3段近接攻撃。締めで前へ斜め上に飛ばす。別の攻撃窓を持つ意図した3ヒットで、終了後に再使用可能。
