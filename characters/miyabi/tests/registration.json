@@ -1,0 +1,56 @@
+{
+  "definition": {
+    "id": "miyabi",
+    "name": "星見雅",
+    "style": "ゼンレスゾーンゼロ / HOSHIMI MIYABI",
+    "description": "霜の刀を操る第六課の剣士。NB長押しで別モーションの5連撃、4段目はX字、5段目は全方位斬り。落霜は10秒ごとと5連撃の全段命中で獲得。横Bの再入力と上Bの空中再入力で1個、下Bの居合で2・4・6個を消費して強化する。",
+    "pose": 56,
+    "number": "143"
+  },
+  "after": "battlemage",
+  "height": 94,
+  "tier": 2,
+  "physics": {
+    "weight": 88,
+    "walkSpeed": 3.7,
+    "initialDashSpeed": 7.9,
+    "runSpeed": 7.5,
+    "airSpeed": 7,
+    "airAcceleration": 0.48,
+    "gravity": 0.53,
+    "fullHopVelocity": 14.7,
+    "ecb": {
+      "radius": 15,
+      "height": 81
+    },
+    "shieldSize": 43,
+    "shieldOffset": [
+      0,
+      -41
+    ],
+    "ledgeGrip": [
+      0.2240095939128277,
+      0.962787610619469
+    ]
+  },
+  "artLayout": "characters/miyabi/tests/art-layout.json",
+  "measurements": "characters/miyabi/tests/body-measurements.json",
+  "paletteMask": "(b>45&&green>r*1.2&&b>r*1.15&&r<115)",
+  "selection": {
+    "source": "characters/miyabi/assets/miyabi-selection.png",
+    "crop": [
+      50,
+      0,
+      1436,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "frames": 57,
+  "effects": 16,
+  "onlineFighterFields": [
+    "miyabiFrost",
+    "miyabiClock"
+  ]
+}

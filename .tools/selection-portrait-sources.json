@@ -1504,5 +1504,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "miyabi": {
+    "source": "characters/miyabi/assets/miyabi-selection.png",
+    "crop": [
+      50,
+      0,
+      1436,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
