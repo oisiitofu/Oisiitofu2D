@@ -1,0 +1,24 @@
+{
+  "definition": {
+    "id": "alphen",
+    "name": "アルフェン",
+    "style": "TALES OF ARISE / ALPHEN",
+    "number": "148",
+    "description": "鉄仮面と青いマントの剣士。NBデモンファングは長押しで二連波。横Bドラゴンスウォームはその場の四連撃。上Bは風を操って曲がりながら上昇し、向きを変えて斜めに斬る。下Bは自分のダメージを増やして溜め、炎の剣を三段階で強化する。",
+    "pose": 53
+  },
+  "before": "kasane",
+  "anchorName": "カサネ",
+  "weight": 98,
+  "mask": "(b>50&&b>r*1.2&&b>green*1.1)",
+  "crop": [
+    80,
+    40,
+    1200,
+    800
+  ],
+  "height": 98,
+  "tier": 3,
+  "frames": 54,
+  "effects": 16
+}

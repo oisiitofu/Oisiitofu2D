@@ -7,7 +7,7 @@ const JudasMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opt={sp
   gale:m('ネガティブゲイト → イビルスフィア',34,[],22,0,{...opt,judasGate:true,pose:43,damage:0,gravityMultiplier:.6}),
   airDrop:m('空中ネガティブゲイト',34,[],22,8,{...opt,judasGate:true,pose:43,damage:0,aerial:true,gravityMultiplier:.6})
  },'sword',135),p={jab:6,jab2:7,jab3:9,heavy:41,up:8,low:11,dashAttack:15,smash:12,upsmash:13,downsmash:46,air:10,fair:44,bair:14,uair:45,dair:16,grab:17,pummel:18,ledge:37,getupAttack:37,forwardThrow:19,backThrow:14,upThrow:8,downThrow:11};
- for(const[k,n]of Object.entries(p)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=n;}a.grab.newcomerHit=false;a.downsmash.activeFrames[1].pose=14;
+ for(const[k,n]of Object.entries(p)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=n;}a.grab.newcomerHit=false;a.downsmash.activeFrames[1].pose=46;a.downsmash.activeFrames[1].shape='front';
  for(const v of Object.values(a))v.animation={...v.animation,anticipationPose:v.special?v.pose:3,accelerationPose:v.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};return a;
 })();
 const judasCosts={dragon:12,dash:16,rise:18,gale:30,airDrop:30};
@@ -24,7 +24,7 @@ const JudasRules=NewcomerCore.create('judas',JudasMoves,{
   if(a.judasAscent)a.motionLastEvent=41;
   if(a.judasGate)a.motionLastEvent=a.motionCommitEnd=34;
  },
- action(f,i,r){const a=f.attack,t=f.timer,held=!!(i.special||i.specialHeld),pressed=held&&!a.specialWas;a.specialWas=held;
+ action(f,i,r){const a=f.attack,t=f.timer,held=!!(i.special||i.specialHeld),pressed=held&&!a.specialWas;a.specialWas=held;if(a.type==='downsmash')f.face=t>=a.activeFrames[1].start&&t<=a.activeEnd?-a.originFace:a.originFace;
   if(a.judasMoon){f.vx*=.75;if(t>=21&&t<=29)a.pose=52;if(!a.shot&&t>=25){a.shot=true;r.spawn(f,{kind:'moon',x:f.x+f.face*58,y:f.y-40,vx:f.face*7.5,vy:-2.9,radius:23,damage:9,life:45,sourceType:'dragon'});}}
   if(a.judasReturn){f.fastFall=false;f.vx=0;const forward=t>=8&&t<=13,returning=t>=22&&t<=27;a.pose=t>=28?51:t>=22?49:48;f.face=t>=22?-a.originFace:a.originFace;
    if(t<8){f.vy*=.4;}else if(forward){const nx=f.x+a.originFace*20,p=platforms.find(p=>p.main);if(!a.originGrounded||nx>p.x+12&&nx<p.x+p.w-12)f.x=nx;f.vy=Math.min(f.vy,0);}else if(returning){const d=28-t;f.x+=(a.startX-f.x)/d;if(!a.originGrounded)f.y+=(a.startY-f.y)/d;f.vy=0;}else if(t===28){f.face=a.originFace;}
@@ -51,4 +51,4 @@ const JudasRules=NewcomerCore.create('judas',JudasMoves,{
  cpu(f,o,i,clear){if(f.attack?.judasAscent&&f.timer-f.attack.launchAt>=24&&!f.attack.finishAt){i.special=true;i.specialHeld=true;i.x=Math.sign(720-f.x);return;}if(!f.attack&&f.grounded&&judasSP(f)>=30&&!JudasRules.objects.some(q=>q.owner===f.id&&q.kind==='gate'&&!q.dead)&&Math.abs(o.x-f.x)>150&&Math.abs(o.x-f.x)<280&&frame%113===f.id){clear();i.x=0;i.y=1;i.special=true;}}
 });
 function judasPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return[1,24,25,26][Math.floor(frame/6)%4];if(f.state==='run')return[2,28,29,27][Math.floor(frame/3)%4];if(f.recovered&&!f.grounded)return 35;return({idle:0,crouch:3,jump:33,double:34,fall:5,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
-MoveMotion.define('judas',{jab:{windup:0,strike:[6],recovery:0},jab2:{windup:6,strike:[7],recovery:0},jab3:{windup:7,strike:[9],recovery:0},heavy:{windup:3,strike:[41],recovery:0},up:{windup:3,strike:[8],recovery:0},low:{windup:3,strike:[11],recovery:3},dashAttack:{windup:27,strike:[15],recovery:31},smash:{windup:3,strike:[12],recovery:0},upsmash:{windup:32,strike:[13],recovery:36},downsmash:{windup:3,strike:[46,14],recovery:3},air:{windup:34,strike:[10],recovery:5},fair:{windup:34,strike:[44],recovery:5},bair:{windup:5,strike:[14],recovery:5},uair:{windup:34,strike:[45],recovery:5},dair:{windup:5,strike:[16],recovery:5}});
+MoveMotion.define('judas',{jab:{windup:0,strike:[6],recovery:0},jab2:{windup:6,strike:[7],recovery:0},jab3:{windup:7,strike:[9],recovery:0},heavy:{windup:3,strike:[41],recovery:0},up:{windup:3,strike:[8],recovery:0},low:{windup:3,strike:[11],recovery:3},dashAttack:{windup:27,strike:[15],recovery:31},smash:{windup:3,strike:[12],recovery:0},upsmash:{windup:32,strike:[13],recovery:36},downsmash:{windup:3,strike:[46],recovery:3},air:{windup:34,strike:[10],recovery:5},fair:{windup:34,strike:[44],recovery:5},bair:{windup:5,strike:[14],recovery:5},uair:{windup:34,strike:[45],recovery:5},dair:{windup:5,strike:[16],recovery:5}});

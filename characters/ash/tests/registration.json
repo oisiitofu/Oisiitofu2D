@@ -1,0 +1,24 @@
+{
+  "definition": {
+    "id": "ash",
+    "name": "アッシュ",
+    "style": "TALES OF THE ABYSS / ASCH",
+    "number": "147",
+    "description": "赤髪の剣士。NB魔神剣は長押しで強化二連弾。横Bは初段命中時に長押しで飛燕瞬連斬の追撃へ。上Bは上昇斬りから溜めた光を真上に放つ。下B閃空裂破は出が遅い前方の地面衝撃。",
+    "pose": 53
+  },
+  "after": "luke",
+  "anchorName": "ルーク",
+  "weight": 94,
+  "mask": "(r>55&&r>green*1.5&&r>b*1.2)",
+  "crop": [
+    170,
+    40,
+    1200,
+    800
+  ],
+  "height": 98,
+  "tier": 3,
+  "frames": 54,
+  "effects": 16
+}

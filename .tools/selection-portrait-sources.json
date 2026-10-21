@@ -1548,5 +1548,27 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "ash": {
+    "source": "characters/ash/assets/ash-selection.png",
+    "crop": [
+      170,
+      40,
+      1200,
+      800
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "alphen": {
+    "source": "characters/alphen/assets/alphen-selection.png",
+    "crop": [
+      80,
+      40,
+      1200,
+      800
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
