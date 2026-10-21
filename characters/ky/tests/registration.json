@@ -1,0 +1,24 @@
+{
+  "definition": {
+    "id": "ky",
+    "name": "カイ",
+    "style": "GUILTY GEAR -STRIVE- / KY KISKE",
+    "number": "149",
+    "description": "雷と剣の騎士。NBスタンエッジは長押しで強化。横Bは自分の弾へ雷と共に移動し、弾がなければ前方へ落雷。上Bは最初の左右入力で弧を描くライド・ザ・ライトニング。雷でショックを付け、次の雷攻撃で追加硬直。テンション50%で下Bドラゴンインストール。",
+    "pose": 53
+  },
+  "after": "sol",
+  "anchorName": "ソル",
+  "weight": 94,
+  "mask": "(b>45&&b>r*1.25&&b>green*1.1)",
+  "crop": [
+    170,
+    30,
+    1200,
+    800
+  ],
+  "height": 98,
+  "tier": 3,
+  "frames": 54,
+  "effects": 16
+}
