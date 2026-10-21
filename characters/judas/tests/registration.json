@@ -1,0 +1,18 @@
+{
+  "definition": {
+    "id": "judas",
+    "name": "ジューダス",
+    "style": "TALES OF DESTINY 2 / JUDAS",
+    "description": "仮面と双剣の剣士。NB月閃光は斬撃から月閃光法へ。横B幻影刃は斬り抜けて元の位置へ回帰。上B飛連衝は空中回転斬りから再入力でさらに跳び上がる。下Bは闇の渦を開き、引き寄せと連続ヒットからイビルスフィアへ。SPは時間と通常攻撃の命中で回復する。",
+    "pose": 53,
+    "number": "146"
+  },
+  "before": "lloyd",
+  "height": 94,
+  "tier": 2,
+  "frames": 54,
+  "effects": 16,
+  "onlineFighterFields": [
+    "judasSP"
+  ]
+}

@@ -1537,5 +1537,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "judas": {
+    "source": "characters/judas/assets/judas-selection.png",
+    "crop": [
+      290,
+      0,
+      1240,
+      827
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
