@@ -1,0 +1,127 @@
+{
+  "definition": {
+    "id": "rena",
+    "name": "レナ",
+    "style": "STAR OCEAN 2 / RENA LANFORD",
+    "number": "152",
+    "description": "拳とシンボルの少女。MPは時間と通常攻撃命中で回復。NBライトクロスは長押しで近・中・遠の3つに。横Bは前方の重力シンボルで引き寄せて打ち上げる。上Bは足元のトラクタービームで上昇し左右操作できる復帰技。下Bは短い詠唱で6%回復、拳を一時強化。",
+    "pose": 55
+  },
+  "before": "fayt",
+  "anchorName": "フェイト",
+  "weight": 83,
+  "mask": "(b>45&&b>r*1.25&&b>green*1.08)",
+  "crop": [
+    0,
+    0,
+    1536,
+    1024
+  ],
+  "height": 94,
+  "tier": 2,
+  "frames": 56,
+  "effects": 16,
+  "family": "brawler",
+  "physics": {
+    "weight": 83,
+    "walkSpeed": 3.3,
+    "initialDashSpeed": 7,
+    "runSpeed": 6.4,
+    "airSpeed": 6.5,
+    "airAcceleration": 0.38,
+    "gravity": 0.6,
+    "fullHopVelocity": 14.5,
+    "ecb": {
+      "radius": 15,
+      "height": 81
+    },
+    "shieldSize": 43,
+    "shieldOffset": [
+      0,
+      -41
+    ]
+  },
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      1
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "3": [
+      1,
+      0
+    ],
+    "4": [
+      0,
+      -1
+    ],
+    "5": [
+      1,
+      0
+    ],
+    "6": [
+      0,
+      -1
+    ],
+    "7": [
+      0,
+      -1
+    ],
+    "8": [
+      1,
+      0
+    ],
+    "9": [
+      0,
+      -1
+    ],
+    "10": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ],
+    "12": [
+      1,
+      0
+    ],
+    "13": [
+      0.7071067811865476,
+      0.7071067811865476
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 12,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 2,
+    "upsmash": 6,
+    "downsmash": 7,
+    "air": 3,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 13,
+    "dragon": 4,
+    "dash": 9,
+    "rise": 10,
+    "gale": 11,
+    "airDrop": 11
+  },
+  "upperCurves": [
+    1
+  ]
+}

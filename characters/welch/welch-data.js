@@ -1,0 +1,41 @@
+'use strict';
+const WelchMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opt={special:true,newcomerHit:true,soundFamily:'staff',tether:true};
+ const a=NewcomerCore.moves(['指し棒ぺしっ','裏ぺしっ','でこぴん','ビンタ','指し棒ね上げ','足元つんつん','スライディング・ビンタ','怒りの鉄拳','びびびびびん','大地の怒り','ぐるぐる空中版','空中ビンタ','逆手でこぴん','びんびん対空','左手の法則・反転'],{
+ dragon:m('ビンタ→連続ビンタ',10,[w(10,14,'front',{pose:6,damage:5,index:0,angle:-.6,baseKnockback:2,knockbackGrowth:.025})],90,0,{...opt,welchSlap:true,pose:40,damage:5}),
+ dash:m('左手の法則',13,[w(13,17,'up',{pose:49,damage:5,index:0,angle:-1.45,baseKnockback:3,knockbackGrowth:.025})],35,7,{...opt,welchLaw:true,pose:49,damage:5,gravityMultiplier:.55,airControlMultiplier:0}),
+ rise:m('にーべるんなんとかー！',9,[],91,14,{...opt,tether:false,welchSwing:true,pose:32,damage:8,helpless:true,gravityMultiplier:0,airControlMultiplier:0,ledgeGrabStart:17}),
+ gale:m('ぐるぐる',7,[],100,0,{...opt,welchSpin:true,pose:52,damage:8,gravityMultiplier:.65}),
+ airDrop:m('空中ぐるぐる',7,[],100,8,{...opt,welchSpin:true,pose:52,damage:8,aerial:true,gravityMultiplier:.65})
+ },'staff',130),p={jab:6,jab2:7,jab3:9,heavy:41,up:8,low:11,dashAttack:15,smash:12,upsmash:13,downsmash:46,air:10,fair:44,bair:14,uair:45,dair:16,grab:17,pummel:18,ledge:37,getupAttack:37,forwardThrow:19,backThrow:14,upThrow:8,downThrow:11};
+ for(const[k,n]of Object.entries(p)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=n;}a.grab.newcomerHit=false;a.downsmash.activeFrames[1].pose=46;a.downsmash.activeFrames[1].shape='front';
+ for(const v of Object.values(a))v.animation={...v.animation,anticipationPose:v.special?v.pose:3,accelerationPose:v.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};return a;
+})();
+function welchGate(){return true;}
+function welchDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;f.stateDuration=end;}
+function welchLand(f){const a=f.attack;if(!(a?.welchSlap||a?.welchSpin&&!a.dizzy||a?.welchLaw&&!a.follow))return false;Object.assign(f,{mode:'GroundSpecial',state:PlayerStates.visual.GroundSpecial,airJumps:f.character.airJumpCount,jumps:0,airDodged:false,ledgeGrabs:0,recovered:false,helpless:false,fastFall:false,gravityOff:false,specialLandingLag:0,landingLag:0});return true;}
+function welchSwingStart(f,a,t,i){a.launchAt=t;a.swingFace=Math.abs(i.x)>.2?Math.sign(i.x):a.originFace;f.face=a.swingFace;f.grounded=false;f.recovered=true;a.activeFrames=[CombatData.window(t+2,t+12,'up',{pose:51,damage:7,index:0}),CombatData.window(t+20,t+32,'front',{pose:51,damage:9,index:1,angle:-1.05,baseKnockback:4,knockbackGrowth:.065})];a.activeStart=t+2;a.activeEnd=t+32;a.motionLastEvent=a.activeEnd;welchDuration(f,a,t+76);}
+const WelchRules=NewcomerCore.create('welch',WelchMoves,{
+ prepare(f,a){a.activeFrames=a.activeFrames.map(v=>({...v}));if(a.welchSlap){a.stage=0;a.next=22;a.motionLastEvent=a.motionCommitEnd=58;}if(a.welchLaw)a.motionLastEvent=a.motionCommitEnd=19;if(a.welchSwing)a.motionLastEvent=43;if(a.welchSpin){a.motionLastEvent=a.motionCommitEnd=74;a.activeFrames=[CombatData.window(7,17,'spin',{pose:52,index:0,damage:8,angle:-.9})];a.activeStart=7;a.activeEnd=17;}},
+ action(f,i){const a=f.attack,t=f.timer,held=!!(i.special||i.specialHeld);
+  if(a.type==='downsmash')f.face=t>=a.activeFrames[1].start&&t<=a.activeEnd?-a.originFace:a.originFace;
+  if(a.welchSlap){f.vx*=.65;if(!a.done&&t>=a.next-3&&!held){a.done=true;a.motionLastEvent=a.motionCommitEnd=a.activeEnd;welchDuration(f,a,Math.max(t+9,a.activeEnd+12));}
+   if(!a.done&&t===a.next){a.stage++;const n=[6,7,42,54,48][a.stage],last=a.stage===4;a.pose=n;a.activeFrames.push(CombatData.window(t,t+4,'front',{pose:n,index:a.stage,damage:last?10:3.5,angle:last?-.85:-.5,baseKnockback:last?4:1.5,knockbackGrowth:last?.065:.015}));a.activeEnd=t+4;a.next+=12;if(last){a.done=true;a.motionLastEvent=a.motionCommitEnd=a.activeEnd;welchDuration(f,a,a.activeEnd+19);}}
+   const current=[...a.activeFrames].reverse().find(v=>t>=v.start);if(current)a.pose=current.pose;
+  }
+  if(a.welchLaw){f.fastFall=false;f.vx*=.6;if(t===19){if(a.target!=null&&held){a.follow=true;f.grounded=false;f.vy=-7;const o=fighters.find(v=>v.id===a.target);a.targetX=o?.x??f.x+a.originFace*50;a.activeFrames.push(CombatData.window(25,29,'front',{pose:51,index:1,damage:4,angle:-1.1,baseKnockback:2,knockbackGrowth:.02}),CombatData.window(39,44,'down',{pose:50,index:2,damage:11,angle:1.35,baseKnockback:4,knockbackGrowth:.06}));a.activeEnd=44;a.motionLastEvent=a.motionCommitEnd=44;welchDuration(f,a,63);}else{a.motionLastEvent=a.motionCommitEnd=17;welchDuration(f,a,33);}}
+   if(a.follow){if(t<32){a.pose=51;f.vx=clamp((a.targetX-f.x)*.12,-5,5);f.vy=-6+(t-19)*.3;}else if(t<45){a.pose=50;f.vx*=.7;f.vy=3.8;}else a.pose=f.grounded?36:5;}
+  }
+  if(a.welchSwing){f.fastFall=false;if(t<9){f.vx*=.45;f.vy=0;return;}if(a.launchAt==null&&!a.escapeSide){const p=platforms.find(p=>p.main);if(f.x>p.x&&f.x<p.x+p.w&&f.y-f.character.ecb.height>p.y+89){NewcomerCore.escape(f,a);welchDuration(f,a,t+120);}else welchSwingStart(f,a,t,i);}if(a.escapeSide){NewcomerCore.escapeAction(f,a,0);if(!a.escapeSide)welchSwingStart(f,a,t,i);return;}const dt=t-a.launchAt;
+   if(dt<14){a.pose=33;f.vx=a.swingFace*4.8;f.vy=-13.8+dt*.35;}else if(dt<20){a.pose=51;f.vx*=.7;f.vy=-1.5;}else if(dt<34){if(a.exitFace==null){a.exitFace=Math.abs(i.x)>.2?Math.sign(i.x):a.swingFace;f.face=a.exitFace;}a.pose=51;f.vx=a.exitFace*(8-(dt-20)*.15);f.vy=-10+(dt-20)*.55;}else{a.pose=35;a.gravityMultiplier=1;}}
+  if(a.welchSpin){f.fastFall=false;f.vx*=.8;if(!a.releaseAt&&t>=14&&(!held||t>=74)){a.releaseAt=t;a.dizzy=t>=74;a.motionLastEvent=a.motionCommitEnd=t;a.pose=a.dizzy?53:52;welchDuration(f,a,t+(a.dizzy?48:16));}if(!a.releaseAt&&t>=18){a.activeFrames[0].end=t+1;a.activeEnd=t+1;a.activeFrames[0].damage=8;}
+   a.armorFrames=!a.releaseAt&&t>=18?[{start:18,end:74,damageThreshold:6}]:[];if(a.releaseAt&&a.dizzy)a.pose=53;
+  }
+ },
+ onHit(f,o,a){if(f.attack?.welchLaw&&a.type==='dash')f.attack.target=o.id;},
+ boxes(f,a,w){const shape=w.shape;if(a.welchLaw&&w.index===0)return[{x1:f.x,y1:f.y-25,x2:f.x+a.originFace*105,y2:f.y-75,radius:24,window:w,modifiers:w}];if(a.welchSwing&&w.index===1)return[{x1:f.x,y1:f.y-45,x2:f.x+(a.exitFace??a.swingFace??f.face)*115,y2:f.y-100,radius:23,window:w,modifiers:w}];const reach=({jab:105,jab2:108,jab3:97,heavy:132,low:110,dashAttack:125,smash:160,fair:128,bair:118,dragon:a.stage===4?158:118,dash:105})[a.type]||120,p=shape==='up'?[0,-35,0,a.type==='up'?-115:-140]:shape==='down'?[0,-40,25,38]:shape==='back'?[0,-43,-reach,-43]:shape==='low'?[0,-15,reach,-15]:shape==='spin'?[-78,-44,78,-44]:[0,-44,reach,-44];return[{x1:f.x+p[0]*f.face,y1:f.y+p[1],x2:f.x+p[2]*f.face,y2:f.y+p[3],radius:shape==='up'?29:shape==='spin'?24:18,window:w,modifiers:w}];},
+ hurtboxes(f){const low=[3,11,15,22,32,36,46].includes(welchPose(f));return[{part:'head',x:f.x,y:f.y-(low?38:80),r:13},{part:'torso',x:f.x,y:f.y-(low?22:49),r:17},{part:'legs',x:f.x,y:f.y-12,r:13}];},
+ cpu(f,o,i){if(f.attack?.welchSlap)i.specialHeld=f.timer<60;if(f.attack?.welchLaw)i.specialHeld=true;if(f.attack?.welchSpin)i.specialHeld=f.timer<38;if(f.attack?.welchSwing)i.x=Math.sign(720-f.x);}
+});
+function welchPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return[1,24,25,26][Math.floor(frame/6)%4];if(f.state==='run')return[2,28,29,27][Math.floor(frame/3)%4];if(f.recovered&&!f.grounded)return 35;return({idle:0,crouch:3,jump:33,double:34,fall:5,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
+MoveMotion.define('welch',{jab:{windup:0,strike:[6],recovery:0},jab2:{windup:6,strike:[7],recovery:0},jab3:{windup:7,strike:[9],recovery:0},heavy:{windup:3,strike:[41],recovery:0},up:{windup:3,strike:[8],recovery:0},low:{windup:3,strike:[11],recovery:3},dashAttack:{windup:27,strike:[15],recovery:31},smash:{windup:3,strike:[12],recovery:0},upsmash:{windup:32,strike:[13],recovery:36},downsmash:{windup:3,strike:[46],recovery:3},air:{windup:34,strike:[10],recovery:5},fair:{windup:34,strike:[44],recovery:5},bair:{windup:5,strike:[14],recovery:5},uair:{windup:34,strike:[45],recovery:5},dair:{windup:5,strike:[16],recovery:5}});
+
