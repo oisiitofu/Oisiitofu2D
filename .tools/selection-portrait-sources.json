@@ -1581,5 +1581,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "zoe": {
+    "source": "characters/zoe/assets/zoe-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

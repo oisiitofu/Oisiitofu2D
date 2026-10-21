@@ -1,0 +1,12 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: precise-object-edit / faithful high-definition restoration. Edit target: first image, a transparent4columns x3rows game sprite atlas of Sol Badguy. Second image is high-resolution FACE/COSTUME detail reference only. Restore the FIRST image's low-resolution pixelated outlines and muddy tinyfaces into beautiful razor-sharp detailed anime cel artwork. Keep the EXACT12 whole-body poses, joint positions, proportions, head sizes, expressions, clothing, swords, silhouette placement, cell order and each character's facing UNCHANGED. Do NOT invent new animation poses. In particular keep the first standing pose exactly as supplied, not a new fighting stance. Fine clean linework, readable brown eyes, coherent hair strands, red jacket/headband, white trousers, gold belt clasps, red black boots, correct hand anatomy. Restore existing colors and silhouette; no extra effect, no glow, no flame, no ghosting or other images intruding.\nOutput 1536x1024 or HIGHER same3:2 ratio, true transparent RGBA4columns x3rows. Each fullbody stays complete in the exact corresponding cell with clean transparent gutters, intact weapon tips/head/hands/boots. No labels/grid/background/shadow. This is resolution/clarity repair of existing game poses, not character redesign or replacement animation.",
+  "group4Append": "IMPORTANT: This target has ONLY TWO existing sprites in the first two cells of the top row. Restore ONLY these TWO existing poses and leave allother10cells fully transparent. Do not add any others.",
+  "assets": [
+    "sol-hd-0.png",
+    "sol-hd-1.png",
+    "sol-hd-2.png",
+    "sol-hd-3.png",
+    "sol-hd-4.png"
+  ]
+}

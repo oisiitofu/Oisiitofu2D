@@ -24,6 +24,10 @@ const PlayerController=(()=>{
  }
  function beginJump(f,i){if(!f.grounded){if(launchJump(f)&&i.jumpAerial)selectAttack(f,i.jumpAerial);return;}f.jumpShort=!!(i.twoJumps||i.shortHopAttack);f.jumpAerial=i.jumpAerial||null;enter(f,'JumpSquat',f.character.jumpSquatFrames);f.buffer=null;}
  function airControl(f,i,mult=1){let c=f.character;if(Math.abs(i.x)>.1){let accel=f.vx*i.x<0?c.airBrake:c.airAcceleration;if(f.vx*i.x>0&&Math.abs(f.vx)>Math.abs(i.x*c.airSpeed))f.vx=moveToward(f.vx,i.x*c.airSpeed,c.airFriction);else f.vx=moveToward(f.vx,i.x*c.airSpeed,accel*mult);}else f.vx=moveToward(f.vx,0,c.airFriction);}
+ // Some up specials keep their attack object through the falling recovery.
+ // Once every committed event is over, that tail gets ordinary air drift;
+ // launch/steering phases, follow-up input windows and hitstun keep their rules.
+ function helplessDrift(f){const a=f.attack;return !!a?.helpless&&!f.grounded&&f.vy>=0&&!f.hitlag&&!f.hitstun&&!f.pendingLaunch&&!a.escapeSide&&f.timer>Math.max(a.activeEnd||0,a.motionLastEvent||0,a.motionCommitEnd||0,...a.activeFrames.map(w=>w.end));}
  function groundMove(f,i){let c=f.character,x=i.x,dir=Math.sign(x),mode=f.mode;
   // Use held stick strength for locomotion. A gradual push can miss the
   // one-frame smash flick, but must still start running. Hysteresis avoids
@@ -121,7 +125,7 @@ const PlayerController=(()=>{
   if(!f.grounded&&(f.vy>=0||reachesApex)&&i.downFlick&&!downSpecial&&!f.fastFall&&!f.hitstun&&!f.tumbling){f.fastFall=true;ring(f.x,f.y,colors[f.color],26);}
   if(f.hitstun>0){f.hitstun--;f.vx=moveToward(f.vx,0,f.launchDecay??.075);if(!f.hitstun)enter(f,f.grounded?'Idle':f.tumbling?'Tumble':'Fall');}
   else if(f.mode==='JumpSquat'){f.jumpShort ||= i.jumpReleased||i.twoJumps;if(f.buffer?.key==='jump'&&f.buffer.shortHopAttack){f.jumpAerial=InputFrames.consume(f,i).jumpAerial;f.jumpShort=true;}else if(!f.jumpAerial&&['jab','heavy','smash'].includes(f.buffer?.key))f.jumpAerial=InputFrames.jumpAttack(InputFrames.consume(f,i));if(f.stateFrame>c.jumpSquatFrames){let aerial=f.jumpAerial;f.jumpAerial=null;launchJump(f,f.jumpShort);if(aerial)selectAttack(f,aerial);}}
-  else if(f.attack){if(f.grounded){if(!f.attack.horse)f.vx=moveToward(f.vx,0,c.groundFriction*DashAttackTuning.friction(f));}else airControl(f,i,f.attack.airControlMultiplier);const pending=f.buffer;advanceAttack(f,i);DashAttackTuning.motion(f);if(CombatData.finishedMotion(f)){finishNormalAttack(f);f.attack=null;f.gravityOff=false;f.buffer??=pending;enter(f,f.grounded?'Idle':'Fall');ready(f,i);}}
+  else if(f.attack){const driftVx=f.vx;if(f.grounded){if(!f.attack.horse)f.vx=moveToward(f.vx,0,c.groundFriction*DashAttackTuning.friction(f));}else if(!helplessDrift(f))airControl(f,i,f.attack.airControlMultiplier);const pending=f.buffer;advanceAttack(f,i);DashAttackTuning.motion(f);if(helplessDrift(f)){f.vx=driftVx;airControl(f,i);}if(CombatData.finishedMotion(f)){finishNormalAttack(f);f.attack=null;f.gravityOff=false;f.buffer??=pending;enter(f,f.grounded?'Idle':'Fall');ready(f,i);}}
   else if(shield(f,i)){}
   else if(f.mode==='ShieldBreak'){}
   else if(f.mode==='Stunned'){f.stateDuration-=i.mash*4;if(f.stateFrame>f.stateDuration){f.shield=c.shieldHP;enter(f,'Idle');}}
