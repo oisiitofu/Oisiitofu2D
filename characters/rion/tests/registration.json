@@ -1,0 +1,46 @@
+{
+  "definition": {
+    "id": "rion",
+    "name": "リオン",
+    "style": "TALES OF DESTINY / LEON MAGNUS",
+    "description": "シャルティエと逆手ダガーを操る剣士。NB魔神剣は長押しで双牙。横B幻影刃は背後へ回り込み、再入力で月閃光。上B空襲剣は二段上昇から方向入力と再入力で飛燕連刃へ。CCは時間と魔神剣の命中で回復し、下B獣哮雷で攻撃中の軽い耐えを得る。",
+    "pose": 53,
+    "number": "145"
+  },
+  "after": "emma",
+  "height": 94,
+  "tier": 2,
+  "physics": {
+    "weight": 89,
+    "walkSpeed": 3.6,
+    "initialDashSpeed": 7.9,
+    "runSpeed": 7.5,
+    "airSpeed": 7.1,
+    "airAcceleration": 0.49,
+    "gravity": 0.54,
+    "fullHopVelocity": 14.7,
+    "ecb": {
+      "radius": 15,
+      "height": 81
+    },
+    "shieldSize": 43,
+    "shieldOffset": [
+      0,
+      -41
+    ],
+    "ledgeGrip": [
+      0.39261795188386284,
+      0.9673194785490408
+    ]
+  },
+  "paletteMask": "(r>60&&r>green*1.3&&b>green*1.15)",
+  "frames": 54,
+  "effects": 16,
+  "onlineFighterFields": [
+    "rionCC",
+    "rionCCClock",
+    "rionCast",
+    "rionRewarded",
+    "rionGuardTime"
+  ]
+}

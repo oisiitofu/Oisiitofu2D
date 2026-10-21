@@ -1,0 +1,6 @@
+'use strict';
+const fs=require('fs'),sharp=require('sharp');
+(async()=>{const root='characters/rion',meta=JSON.parse(fs.readFileSync(root+'/tests/art-layout.json')),s=await sharp(root+'/assets/rion-native.png').raw().toBuffer({resolveWithObject:true}),out=[];
+for(let n=0;n<53;n++){const[x,y,w,h]=meta.frames[n],mask=new Uint8Array(w*h),d=s.data,sw=s.info.width;for(let yy=0;yy<h;yy++)for(let xx=0;xx<w;xx++){const p=((y+yy)*sw+x+xx)*4,r=d[p],g=d[p+1],b=d[p+2];mask[yy*w+xx]=d[p+3]>180&&r>95&&g>65&&b>60&&r>g*1.06&&g>b*.99&&b>g*.65&&r>b*1.02&&r<g*1.65?1:0;}
+const seen=new Uint8Array(w*h),parts=[];for(let k=0;k<mask.length;k++)if(mask[k]&&!seen[k]){let x1=w,x2=0,y1=h,y2=0;const queue=[k];seen[k]=1;for(let j=0;j<queue.length;j++){const v=queue[j],xx=v%w,yy=v/w|0;x1=Math.min(x1,xx);x2=Math.max(x2,xx);y1=Math.min(y1,yy);y2=Math.max(y2,yy);for(const q of[xx?v-1:-1,xx<w-1?v+1:-1,yy?v-w:-1,yy<h-1?v+w:-1])if(q>=0&&!seen[q]&&mask[q]){seen[q]=1;queue.push(q);}}if(queue.length>12)parts.push({area:queue.length,x:x1,y:y1,w:x2-x1+1,h:y2-y1+1});}parts.sort((a,b)=>b.area-a.area);out.push({n,parts:parts.slice(0,3)});}
+fs.writeFileSync(root+'/previews/face-candidates.json',JSON.stringify(out,null,2));console.log(JSON.stringify(out.map(v=>({n:v.n,p:v.parts[0]}))));})();

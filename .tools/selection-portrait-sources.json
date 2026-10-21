@@ -1526,5 +1526,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "rion": {
+    "source": "characters/rion/assets/rion-selection.png",
+    "crop": [
+      180,
+      55,
+      1175,
+      783
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
