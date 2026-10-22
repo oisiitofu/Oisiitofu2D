@@ -1,0 +1,40 @@
+'use strict';
+const EllenMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opt={special:true,newcomerHit:true,soundFamily:'sword',tether:true},a=NewcomerCore.moves(['鋏の横斬り','返し斬り','下段からの切り上げ','踏み込み斬り','見上げ斬り','テールスイープ','低姿勢の疾走斬り','氷刃の薙ぎ払い','回転斬り・氷礫','テールスマッシュ','回転斬り','鋏の下斬り','後方薙ぎ','上向き斬り','急降下斬り'],{
+ dragon:m('ドリフト',7,[],60,0,{...opt,ellenDrift:true,pose:31,damage:8,gravityMultiplier:.75}),
+ dash:m('ローミングハント → アークティックアンブッシュ',5,[],95,0,{...opt,ellenHunt:true,pose:33,damage:10,gravityMultiplier:.4,airControlMultiplier:0}),
+ rise:m('ボルテックス → アバランチ',7,[],140,14,{...opt,ellenVortex:true,pose:36,damage:7,helpless:true,gravityMultiplier:0,airControlMultiplier:0,ledgeGrabStart:8}),
+ gale:m('フラッシュフリーズトリミング',10,[],90,0,{...opt,ellenTrim:true,pose:41,damage:9,gravityMultiplier:.7}),
+ airDrop:m('空中フラッシュフリーズトリミング',10,[],90,12,{...opt,ellenTrim:true,pose:41,damage:9,aerial:true,gravityMultiplier:.7})
+ },'sword',158),p={jab:16,jab2:17,jab3:18,heavy:19,up:20,low:21,dashAttack:22,smash:23,upsmash:24,downsmash:25,air:26,fair:27,bair:28,uair:29,dair:30,grab:46,pummel:47,ledge:57,getupAttack:57,forwardThrow:48,backThrow:49,upThrow:50,downThrow:51};
+ for(const[k,n]of Object.entries(p)){a[k].pose=n;for(const e of a[k].activeFrames)e.pose=n;}a.grab.newcomerHit=false;a.downsmash.activeFrames[1].pose=25;a.downsmash.activeFrames[1].shape='low';
+ for(const v of Object.values(a))v.animation={...v.animation,anticipationPose:v.special?v.pose:0,accelerationPose:v.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};return a;
+})();
+function ellenCharge(f){return clamp(f.ellenCharge||0,0,6);}
+function ellenGate(f,type){return !(type==='dash'&&!f.grounded&&f.newSideUsed);}
+function ellenDuration(f,a,end){const d=end-a.totalFrames;a.totalFrames=a.motionEndFrames=end;a.FAF=end+1;f.faf+=d;f.stateEnd+=d;f.stateDuration=end;}
+function ellenWindow(f,a,start,end,shape,pose,mods={}){a.activeFrames.push(CombatData.window(start,end,shape,{pose,index:a.activeFrames.length,meleeCoverage:true,...mods}));a.activeStart=a.activeFrames[0].start;a.activeEnd=end;}
+function ellenLand(f){const a=f.attack;if(!a?.ellenVortex||a.phase!=='dive')return false;a.activeFrames.at(-1).end=f.timer;a.activeEnd=f.timer;a.phase='rebound';a.reboundAt=f.timer;a.pose=38;a.motionLastEvent=a.motionCommitEnd=f.timer+8;ellenWindow(f,a,f.timer+1,f.timer+5,'shockwave',38,{damage:12,angle:-1.15,baseKnockback:4.5,knockbackGrowth:.07});ellenDuration(f,a,f.timer+32);f.specialLandingLag=0;f.fastFall=false;f.recovered=true;f.grounded=false;f.vx=a.originFace*6;f.vy=-12;a.gravityMultiplier=1;return true;}
+const EllenRules=NewcomerCore.create('ellen',EllenMoves,{
+ reset(){for(const f of fighters)if(f.characterId==='ellen')f.ellenCharge=0;},status(f){if(f.respawn)f.ellenCharge=0;},
+ prepare(f,a){a.activeFrames=a.activeFrames.map(w=>({...w}));if(a.special){a.motionLastEvent=a.motionCommitEnd=a.totalFrames-10;a.animationWindows=[{start:1,end:a.totalFrames,pose:a.pose}];}if(a.ellenHunt)a.phase='hunt';if(a.ellenVortex)a.phase='start';if(a.ellenTrim){a.trimStarted=false;a.nextTrim=10;a.trimStage=0;}},
+ action(f,i,r){const a=f.attack,t=f.timer,held=!!(i.special||i.specialHeld);if(a.type==='downsmash')f.face=t>=a.activeFrames[1].start&&t<=a.activeEnd?-a.originFace:a.originFace;
+  if(a.ellenDrift){f.vx*=.8;if(!a.released&&t>=7&&(!held||t>=40)){a.released=t;a.strong=t>=22;a.pose=a.strong?32:31;ellenWindow(f,a,t,t+4,a.strong?'spin':'low',a.pose,{damage:a.strong?13:8,angle:-.85,baseKnockback:a.strong?4.6:3.4,knockbackGrowth:.065});a.motionLastEvent=a.motionCommitEnd=t+5;ellenDuration(f,a,t+22);}}
+  if(a.ellenHunt){f.fastFall=false;if(a.phase==='hunt'){a.pose=33;if(t<5){f.vx*=.5;f.vy*=.3;}else{if(Math.abs(i.x)>.3)f.face=Math.sign(i.x);f.vx=f.face*9.5;f.vy=f.grounded?0:1;}
+    if(t>=9&&(!held||t>=52)){a.phase='ambush';a.ambushAt=t;a.heavy=t>=30;a.pose=a.heavy?35:34;f.grounded=false;f.vx=f.face*(a.heavy?8:6);f.vy=a.heavy?-8:-5;ellenWindow(f,a,t+3,t+8,'front',a.pose,{damage:a.heavy?17:10,angle:-.9,baseKnockback:a.heavy?5:3.6,knockbackGrowth:a.heavy?.082:.06});a.motionLastEvent=a.motionCommitEnd=t+9;ellenDuration(f,a,t+30);}}
+   else{a.gravityMultiplier=1;if(t>a.ambushAt+9)f.vx*=.91;}}
+  if(a.ellenVortex){f.fastFall=false;if(a.phase==='start'){f.vx*=.4;f.vy=0;if(t>=7){const p=platforms.find(p=>p.main);if(f.x>p.x&&f.x<p.x+p.w&&f.y-f.character.ecb.height>p.y+89){NewcomerCore.escape(f,a);a.phase='escape';ellenDuration(f,a,t+150);}else{a.phase='rise';a.launchAt=t;ellenWindow(f,a,t,t+9,'spin',36,{damage:7,angle:-1.25});f.grounded=false;f.recovered=true;}}}
+   if(a.phase==='escape'){NewcomerCore.escapeAction(f,a,0);if(!a.escapeSide){a.phase='start';}return;}
+   if(a.phase==='rise'){const d=t-a.launchAt;a.pose=d<10?35:36;f.vx=a.originFace*4.5+clamp(i.x||0,-1,1)*2;f.vy=-17+d*.35;if(d>=22){a.phase='dive';a.diveAt=t;a.pose=37;ellenWindow(f,a,t,t+35,'down',37,{damage:10,angle:1.48,isMeteor:true});}}
+   if(a.phase==='dive'){a.pose=37;f.vx=clamp(i.x||0,-1,1)*5;f.vy=9;if(t-a.diveAt>=14){a.activeFrames.at(-1).end=t;a.activeEnd=t;a.phase='rebound';a.reboundAt=t;a.pose=39;a.gravityMultiplier=1;f.vx=a.originFace*5;f.vy=-11;a.motionLastEvent=a.motionCommitEnd=t;ellenDuration(f,a,t+22);}}
+   if(a.phase==='rebound'){a.pose=t-a.reboundAt<6?39:60;a.gravityMultiplier=1;}}
+  if(a.ellenTrim){f.vx*=.8;if(t>=a.nextTrim&&a.trimStage<3&&(a.trimStage===0||held)){const n=++a.trimStage,cost=n,charge=ellenCharge(f),empowered=charge>=cost;if(empowered)f.ellenCharge=charge-cost;a.pose=39+n;a.trimPowered=empowered;const final=n===3;ellenWindow(f,a,t,t+4,final?'spin':'front',a.pose,{damage:(final?13:6)+(empowered?(final?10:4):0),angle:final?-.9:-.5,baseKnockback:final?(empowered?6:4):1.5,knockbackGrowth:final?(empowered?.09:.065):.02,fixedKnockback:final?0:24});a.nextTrim=t+15;a.motionLastEvent=a.motionCommitEnd=t+5;ellenDuration(f,a,t+(final?30:20));}}
+  if(a.special)a.animationWindows=[{start:1,end:a.totalFrames,pose:a.pose}];
+ },
+ onHit(f,o,a){const actual=f.attack;if(!actual||actual.chargeAwarded)return;if(actual.ellenDrift||actual.ellenHunt){actual.chargeAwarded=true;f.ellenCharge=clamp(ellenCharge(f)+(actual.ellenHunt&&actual.heavy?3:1),0,6);}},
+ boxes(f,a,w){const s=w.shape,r=a.ellenTrim&&a.trimStage===3?178:({jab:116,jab2:124,jab3:135,heavy:150,low:138,dashAttack:151,smash:184,fair:158,bair:164})[a.type]||140;
+  const p=s==='up'?[0,-37,0,-143]:s==='down'?[0,-28,15,55]:s==='back'?[0,-43,-r,-48]:s==='low'?[0,-16,r,-18]:s==='spin'?[-r*.65,-44,r*.65,-44]:s==='shockwave'?[-95,-10,95,-10]:[0,-44,r,-48];return[{x1:f.x+p[0]*f.face,y1:f.y+p[1],x2:f.x+p[2]*f.face,y2:f.y+p[3],radius:s==='up'?30:s==='spin'?33:21,window:w,modifiers:w}];},
+ hurtboxes(f){const low=[11,21,22,25,31,32,33,39,51,52,53,56,57].includes(ellenPose(f));return[{part:'head',x:f.x,y:f.y-(low?37:80),r:14},{part:'torso',x:f.x,y:f.y-(low?23:46),r:18},{part:'legs',x:f.x,y:f.y-12,r:14}];},
+ cpu(f,o,i){if(f.attack?.ellenHunt)i.specialHeld=f.timer<35;if(f.attack?.ellenTrim)i.specialHeld=true;if(f.attack?.ellenVortex)i.x=Math.sign(720-f.x);}
+});
+function ellenPose(f){if(f.mode==='Pummel')return 47;if(f.mode==='SpotDodge')return 11;if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 58;if(f.mode==='LedgeGetup')return 59;if(f.mode==='JumpSquat')return 13;if(f.mode==='ForwardRoll')return 53;if(f.mode==='BackwardRoll')return 53;if(f.mode==='Helpless'||f.recovered&&!f.grounded)return 60;if(f.state==='walk')return[1,2,3,4][Math.floor(frame/6)%4];if(f.state==='run')return[5,6,7,8][Math.floor(frame/3)%4];return({idle:0,crouch:11,jump:14,double:15,fall:43,land:39,guard:52,dodge:53,hit:54,fly:55,down:56,getup:57,grab:46,caught:54,throw:48})[f.state]??0;}
+MoveMotion.define('ellen',Object.fromEntries(Object.entries({jab:16,jab2:17,jab3:18,heavy:19,up:20,low:21,dashAttack:22,smash:23,upsmash:24,downsmash:25,air:26,fair:27,bair:28,uair:29,dair:30}).map(([k,n])=>[k,{windup:0,strike:[n],recovery:['air','fair','bair','uair','dair'].includes(k)?43:0}])));

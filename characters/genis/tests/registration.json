@@ -1,0 +1,103 @@
+{
+  "definition": {
+    "id": "genis",
+    "name": "ジーニアス",
+    "style": "テイルズ オブ シンフォニア / GENIS SAGE",
+    "number": "158",
+    "description": "けん玉と多彩な属性魔法を使う小さな天才。NBは火球、溜めで火柱から爆発。横Bは指定位置の氷柱から左右へ分裂、溜めで水のレーザー。上Bは風で上昇し、サイクロン中に位置を調整して飛び出す。下Bは重力で引き寄せ、最後に落とす。攻撃/時間でTPが増え、100で上スマがインディグネイションへ変化。",
+    "pose": 61
+  },
+  "after": "colette",
+  "anchorName": "コレット",
+  "height": 78,
+  "tier": 1,
+  "weight": 75,
+  "mask": "(b>80&&b>r*1.2&&b>green*1.08)",
+  "crop": [
+    150,
+    0,
+    1280,
+    1024
+  ],
+  "frames": 62,
+  "effects": 16,
+  "upperCurves": [
+    0,
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "3": [
+      0,
+      -1
+    ],
+    "6": [
+      0,
+      -1
+    ],
+    "7": [
+      1,
+      0
+    ],
+    "9": [
+      0,
+      -1
+    ],
+    "10": [
+      0,
+      1
+    ],
+    "13": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 10,
+    "upsmash": 9,
+    "downsmash": 3,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 9,
+    "dash": 6,
+    "rise": 8
+  },
+  "physics": {
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 7.4,
+    "runSpeed": 6.2,
+    "airSpeed": 6.8,
+    "airAcceleration": 0.44,
+    "gravity": 0.58,
+    "fullHopVelocity": 14.2,
+    "ecb": {
+      "radius": 13,
+      "height": 68
+    },
+    "shieldSize": 36,
+    "shieldOffset": [
+      0,
+      -34
+    ]
+  }
+}

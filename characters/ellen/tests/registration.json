@@ -1,0 +1,108 @@
+{
+  "definition": {
+    "id": "ellen",
+    "name": "エレン",
+    "style": "ゼンレスゾーンゼロ / ELLEN JOE",
+    "number": "157",
+    "description": "大鋏とサメの尾、氷で戦うヴィクトリア家政のメイド。NBは尾の一撃/長押し回転。横Bは低姿勢の移動から軽/重追撃。上Bは上昇から氷の急降下、着地で跳ね上がる。下Bはチャージを使う三段の氷撃。",
+    "pose": 61
+  },
+  "after": "miyabi",
+  "anchorName": "星見雅",
+  "height": 94,
+  "tier": 2,
+  "weight": 91,
+  "mask": "(r>90&&r>green*1.45&&r>b*1.25&&green<140)",
+  "crop": [
+    165,
+    0,
+    1210,
+    1024
+  ],
+  "frames": 62,
+  "effects": 16,
+  "upperCurves": [
+    0,
+    1,
+    2,
+    3,
+    12
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "4": [
+      1,
+      0
+    ],
+    "6": [
+      1,
+      0
+    ],
+    "7": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ],
+    "12": [
+      1,
+      0
+    ],
+    "15": [
+      0,
+      1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 12,
+    "dashAttack": 4,
+    "smash": 11,
+    "upsmash": 1,
+    "downsmash": 3,
+    "air": 3,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 2,
+    "dash": 0,
+    "rise": 3,
+    "gale": 11,
+    "airDrop": 11
+  },
+  "physics": {
+    "walkSpeed": 3.7,
+    "initialDashSpeed": 7.4,
+    "runSpeed": 8,
+    "airSpeed": 6.8,
+    "airAcceleration": 0.44,
+    "gravity": 0.58,
+    "fullHopVelocity": 14.7,
+    "ecb": {
+      "radius": 16,
+      "height": 82
+    },
+    "shieldSize": 43,
+    "shieldOffset": [
+      0,
+      -42
+    ]
+  }
+}

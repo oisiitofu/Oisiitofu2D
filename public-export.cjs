@@ -55,6 +55,7 @@ function images(value){if(typeof value==='string'&&/^assets\/ready\/.*\.(png|web
 images(manifest);
 for(const match of read('stage-art-data.js').matchAll(/"(assets\/ready\/[^"\n]+)"/g))input(match[1]);
 input('assets/astral-sanctum.png');
+input('assets/presentation/cinematic-atlas.png');
 const se=JSON.parse(read('assets/audio/se/manifest.json'));write('assets/audio/se/manifest.json',JSON.stringify(se));
 for(const url of Object.values(se.sounds).flat())input(decodeURIComponent(url.replace(/^\//,'')));
 const audio=require('./audio-server.cjs'),chunkSize=16*1024*1024;

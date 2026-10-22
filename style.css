@@ -305,3 +305,14 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 #result:has(.bingo-result-boards) #stats{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 15px;margin:6px 0;font-size:10px}#result:has(.bingo-result-boards) #bingo-result-summary{margin:6px 0}#result:has(.bingo-result-boards) .restart,#result:has(.bingo-result-boards) .back{margin-top:6px;padding:8px}
 @media(max-width:600px){.bingo-screen{padding:7px;gap:6px}.bingo-toolbar{grid-template-columns:minmax(0,1fr) auto;gap:4px 5px}.bingo-toolbar h2{font-size:18px}.bingo-toolbar>.eyebrow{font-size:0;letter-spacing:0}.bingo-toolbar>.eyebrow span{font-size:10px;margin:0}#bingo-help{grid-column:1 / -1;font-size:10px}.bingo-stage-label{grid-row:3;grid-column:1 / -1}.bingo-picks{grid-row:4;grid-column:1 / -1}.bingo-player-pick{font-size:9px;padding:2px 5px}.bingo-board{padding:4px;gap:4px}.bingo-boards{gap:6px}.bingo-board h3{font-size:10px}.bingo-board-score{font-size:7px}.bingo-grid{gap:2px}.bingo-cell>span{display:none}.bingo-cell img{padding:0}.bingo-cell.free>span{display:block;font-size:7px}.bingo-cell-badge{font-size:6px;left:1px;top:1px;padding:1px}.bingo-rule-note{font-size:8px}.bingo-utilities button{font-size:10px;padding:5px 8px}.bingo-result-boards{height:max(260px,calc(100dvh - 275px))}}
 @media(max-width:600px){.bingo-boards[data-count="3"]{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr))}}
+
+/* The cinematic stays on the game canvas; controls appear after the winner reveal. */
+#result.presentation-pending{visibility:hidden;pointer-events:none}
+#result.presentation-result{background:none;backdrop-filter:none;place-items:center end;padding:30px 4%}
+#result.presentation-result .result{width:min(440px,36vw);max-height:82dvh;overflow:auto;background:#0b1628ed;text-align:left;border-top-color:#e2bd73}
+#result.presentation-result .eyebrow{color:#e2bd73;font-size:8px}
+#result.presentation-result h2{font-size:clamp(23px,3vw,36px);margin:14px 0}
+#result.presentation-result #stats{margin:15px 0;font-size:11px}
+#result.presentation-result:has(.bingo-result-boards){padding:12px;background:#050c1caa}
+#result.presentation-result:has(.bingo-result-boards) .result{width:calc(100vw - 24px);max-height:calc(100dvh - 24px)}
+@media(max-width:700px){#result.presentation-result{place-items:end center;padding:8px}#result.presentation-result .result{width:100%;max-height:39dvh;padding:15px}#result.presentation-result .eyebrow,#result.presentation-result #stats{display:none}#result.presentation-result h2{margin:0;font-size:23px}#result.presentation-result p{font-size:10px;margin:3px 0}#result.presentation-result .modal button{width:auto;margin:5px 5px 0 0}#result.presentation-result:has(.bingo-result-boards) .result{max-height:calc(100dvh - 16px)}}

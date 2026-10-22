@@ -1658,5 +1658,27 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "ellen": {
+    "source": "characters/ellen/assets/ellen-selection.png",
+    "crop": [
+      165,
+      0,
+      1210,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "genis": {
+    "source": "characters/genis/assets/genis-selection.png",
+    "crop": [
+      150,
+      0,
+      1280,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
