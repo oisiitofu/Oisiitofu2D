@@ -4,11 +4,11 @@
 const ThrowTuning=(()=>{
  const directions=['forwardThrow','backThrow','upThrow','downThrow'];
  const groups={
-  balanced:'billy riesz edea narmaya wonder rena gran welch zoe ky alphen ash judas rion sol miyabi zero3 dana isaac ulgrim monokuma roxas twob zero lightning rean estelle noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian chef morphie human kitten elma goemon metabee nier dante leon charlotta twinbee edf arus maelle sumino frog tressa eve saki hanajk hanajd kisuke ray alain hinako megamanexe fiora krystal malenia alucard kurabe shizuna',
+  balanced:'arthur sakura billy riesz edea narmaya wonder rena gran welch zoe ky alphen ash judas rion sol miyabi zero3 dana isaac ulgrim monokuma roxas twob zero lightning rean estelle noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian chef morphie human kitten elma goemon metabee nier dante leon charlotta twinbee edf arus maelle sumino frog tressa eve saki hanajk hanajd kisuke ray alain hinako megamanexe fiora krystal malenia alucard kurabe shizuna',
   rising:'dragoon gundam kosmos pawapuro horse bayleef piposaru pneuma odio laharl kasane greymon metalgreymon wargreymon omegamon hanajs c4621',
-  agile:'ellen chibirobo octoling chiikawa chocobo riki rin makoto neku pokoa jibanyan zidane yuffie crash knight shadow moogle cojicoji hornet klonoa karateka aiai hayabusa',
+  agile:'viewtifuljoe ellen chibirobo octoling chiikawa chocobo riki rin makoto neku pokoa jibanyan zidane yuffie crash knight shadow moogle cojicoji hornet klonoa karateka aiai hayabusa',
   grappler:'agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby',
-  caster:'genis viridi vivi nia colette will emma ryza midna bomberman sans headmaster sakuna miku naruhodo layton vincent mametchi aruru maruku dietrich rocbouquet deemo aerith donchan melia yuri toro katamari okami battlemage naegi'
+  caster:'shionne genis viridi vivi nia colette will emma ryza midna bomberman sans headmaster sakuna miku naruhodo layton vincent mametchi aruru maruku dietrich rocbouquet deemo aerith donchan melia yuri toro katamari okami battlemage naegi'
  };
  // Per-character selections, rather than roster-number/modulo assignments.
  const assignments=Object.fromEntries(Object.entries(groups).flatMap(([group,ids])=>ids.split(' ').map(id=>[id,group])));

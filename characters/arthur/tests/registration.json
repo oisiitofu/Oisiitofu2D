@@ -1,0 +1,98 @@
+{
+  "definition": {
+    "id": "arthur",
+    "name": "アーサー",
+    "style": "魔界村 / ARTHUR",
+    "number": "162",
+    "description": "銀の鎧から黄金の鎧へ修復できる魔界村の騎士。NBは単発の槍／長押しで短剣3連射、横Bは転がって一度跳ね返る鉄球。上Bは上昇中の再入力で向きを変えて2段ジャンプ、黄金の鎧ではさらにサンダーストーム。下Bは隙をさらして鎧を1段階修復。空Nは盾をひねりながら前方を払う。",
+    "pose": 61
+  },
+  "after": "naruhodo",
+  "anchorName": "成歩堂龍一",
+  "height": 94,
+  "tier": 2,
+  "weight": 94,
+  "mask": "(r>45&&r<210&&green>50&&b>=r*.97&&b>=green*.98&&Math.max(r,green,b)-Math.min(r,green,b)<45)",
+  "crop": [
+    150,
+    0,
+    1280,
+    1024
+  ],
+  "frames": 125,
+  "effects": 16,
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      1,
+      0
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "3": [
+      1,
+      0
+    ],
+    "7": [
+      0,
+      -1
+    ],
+    "9": [
+      0,
+      -1
+    ],
+    "10": [
+      1,
+      0
+    ],
+    "14": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 1,
+    "jab2": 14,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 14,
+    "low": 1,
+    "dashAttack": 1,
+    "smash": 8,
+    "upsmash": 7,
+    "downsmash": 6,
+    "air": 1,
+    "fair": 0,
+    "bair": 3,
+    "uair": 7,
+    "dair": 8,
+    "dash": 4,
+    "rise": 9,
+    "gale": 12,
+    "airDrop": 12
+  },
+  "physics": {
+    "walkSpeed": 2.8,
+    "initialDashSpeed": 5.5,
+    "runSpeed": 6.2,
+    "airSpeed": 6,
+    "airAcceleration": 0.38,
+    "gravity": 0.61,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 18,
+      "height": 80
+    },
+    "shieldSize": 45,
+    "shieldOffset": [
+      0,
+      -40
+    ]
+  }
+}

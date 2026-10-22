@@ -1680,5 +1680,49 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "shionne": {
+    "source": "characters/shionne/assets/shionne-selection.png",
+    "crop": [
+      270,
+      0,
+      1266,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "viewtifuljoe": {
+    "source": "characters/viewtifuljoe/assets/viewtifuljoe-selection.png",
+    "crop": [
+      160,
+      0,
+      1214,
+      1146
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "sakura": {
+    "source": "characters/sakura/assets/sakura-selection.png",
+    "crop": [
+      150,
+      0,
+      1168,
+      1193
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "arthur": {
+    "source": "characters/arthur/assets/arthur-selection.png",
+    "crop": [
+      150,
+      0,
+      1280,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

@@ -1,0 +1,1 @@
+const fs=require('fs');let s=fs.readFileSync('characters/genis/tests/inspect-components.cjs','utf8').replaceAll('genis','arthur').replace("['basic','attacks','specials','defense','aerial-fix']","['specials','underwear-specials']");eval(s);

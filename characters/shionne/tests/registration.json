@@ -1,0 +1,89 @@
+{
+  "definition": {
+    "id": "shionne",
+    "name": "シオン",
+    "style": "テイルズ オブ アライズ / SHIONNE",
+    "number": "159",
+    "description": "銃撃と星霊術を扱う少女。NBは貫通する3連射。横Bは爆弾投げ/再入力で遠隔起爆、長押しでブラスト1を使う強い狙撃。上Bは下方射撃の反動で上昇し、再入力で一度だけ軌道変更。下Bはブラスト1で回復陣、1ストック中の総回復15まで。空Nは銃回し。",
+    "pose": 61
+  },
+  "after": "alphen",
+  "anchorName": "アルフェン",
+  "height": 94,
+  "tier": 2,
+  "weight": 88,
+  "mask": "(r>90&&r>green*1.35&&r>b*1.08&&green<140)",
+  "crop": [
+    270,
+    0,
+    1266,
+    1024
+  ],
+  "frames": 62,
+  "effects": 16,
+  "upperCurves": [
+    0
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "3": [
+      1,
+      0
+    ],
+    "6": [
+      1,
+      0
+    ],
+    "8": [
+      0,
+      1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 2,
+    "heavy": 0,
+    "up": 0,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 3,
+    "upsmash": 1,
+    "downsmash": 7,
+    "air": 13,
+    "fair": 0,
+    "bair": 2,
+    "uair": 1,
+    "dair": 8,
+    "rise": 8
+  },
+  "physics": {
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.1,
+    "runSpeed": 6.8,
+    "airSpeed": 6.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14.4,
+    "ecb": {
+      "radius": 16,
+      "height": 82
+    },
+    "shieldSize": 43,
+    "shieldOffset": [
+      0,
+      -42
+    ]
+  }
+}

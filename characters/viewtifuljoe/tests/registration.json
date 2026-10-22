@@ -1,0 +1,90 @@
+{
+  "definition": {
+    "id": "viewtifuljoe",
+    "name": "ビューティフルジョー",
+    "style": "VIEWTIFUL JOE",
+    "number": "160",
+    "description": "拳とキックで魅せるヒーロー。NBは往復するVブーメラン、長押しで高い軌道。横Bは命中から再入力で最大4段のマックスピード。上Bはシックスマシンで螺旋上昇し飛び降りる。下Bタップは周囲の移動を鈍らせるSLOW、長押しは強い専用姿勢のZOOM。フィルム切れは短時間通常ジョーへ戻る。",
+    "pose": 61
+  },
+  "after": "naruhodo",
+  "anchorName": "成歩堂龍一",
+  "height": 94,
+  "tier": 2,
+  "weight": 91,
+  "mask": "(r>100&&r>green*1.5&&r>b*1.35&&green<140)",
+  "crop": [
+    160,
+    0,
+    1214,
+    1146
+  ],
+  "frames": 79,
+  "effects": 16,
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0.7071,
+      -0.7071
+    ],
+    "5": [
+      1,
+      0
+    ],
+    "9": [
+      0,
+      1
+    ],
+    "14": [
+      0.7071,
+      0.7071
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 2,
+    "heavy": 0,
+    "up": 0,
+    "low": 2,
+    "dashAttack": 2,
+    "smash": 0,
+    "upsmash": 0,
+    "downsmash": 3,
+    "air": 2,
+    "fair": 2,
+    "bair": 2,
+    "uair": 1,
+    "dair": 14,
+    "dash": 5,
+    "rise": 6,
+    "gale": 7,
+    "airDrop": 7
+  },
+  "physics": {
+    "walkSpeed": 3.5,
+    "initialDashSpeed": 7.4,
+    "runSpeed": 8.2,
+    "airSpeed": 7.2,
+    "airAcceleration": 0.46,
+    "gravity": 0.6,
+    "fullHopVelocity": 15,
+    "ecb": {
+      "radius": 17,
+      "height": 77
+    },
+    "shieldSize": 43,
+    "shieldOffset": [
+      0,
+      -39
+    ]
+  }
+}

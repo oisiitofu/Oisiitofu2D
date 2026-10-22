@@ -4,8 +4,8 @@
 // and direct special strikes. Remote projectiles and grabs stay separate.
 const MeleeBalance=(()=>{
  const types=new Set(['jab','jab2','jab3','heavy','up','low','dashAttack','air','fair','bair','uair','dair']);
- const brawlers=new Set(['genis','billy','rena','zoe','chiikawa','monokuma','riki','okami','pokoa','agumon','pawapuro','headmaster','horse','chef','akira','morphie','fei','human','kitten','metabee','jibanyan','tifa','kiryu','crash','mametchi','piposaru','twinbee','maruku','guile','sukapon','shadow','doshin','moogle','greymon','metalgreymon','wargreymon','donchan','hanajs','hanajk']);
- const polearms=new Set(['welch','dragoon','ulgrim','estelle','ryza','haseo','ryofu','tressa','deemo','krystal','aerith','melia']);
+ const brawlers=new Set(['viewtifuljoe','shionne','genis','billy','rena','zoe','chiikawa','monokuma','riki','okami','pokoa','agumon','pawapuro','headmaster','horse','chef','akira','morphie','fei','human','kitten','metabee','jibanyan','tifa','kiryu','crash','mametchi','piposaru','twinbee','maruku','guile','sukapon','shadow','doshin','moogle','greymon','metalgreymon','wargreymon','donchan','hanajs','hanajk']);
+ const polearms=new Set(['arthur','welch','dragoon','ulgrim','estelle','ryza','haseo','ryofu','tressa','deemo','krystal','aerith','melia']);
  function applies(a){return !!a&&types.has(a.type)&&!a.special&&!a.projectile;}
  function profile(f){if(f.characterId==='cojicoji')return 'brawler';if(f.characterId==='hinako')return hinakoBeast(f)?'brawler':'polearm';return polearms.has(f.characterId)?'polearm':brawlers.has(f.characterId)?'brawler':'blade';}
  function flipPose(f,n){return n===7&&f.attack?.type==='jab2'&&['odio','midna'].includes(f.characterId);}
