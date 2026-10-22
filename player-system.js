@@ -209,6 +209,9 @@ const InputFrames=(()=>{
   f.smashFlickAge=smashFlick?0:(f.smashFlickAge??99)+1;i.smashFlick=f.smashFlickAge<=6&&strength>=.62;
   const rightStrength=Math.hypot(i.rx||0,i.ry||0);if(rightStrength<=.35)f.rightStickReady=true;
   if(rightStrength>=.65&&(f.rightStickReady??true)){f.rightStickReady=false;i.stickAttack={x:i.rx,y:i.ry};if(!f.grounded&&!f.ledge){i.heavy=true;i.forceTilt=true;}else if(raw.rightStickMode==='smash')i.smash=true;else{i.heavy=true;i.forceTilt=true;}}
+  // Right-stick smash mode starts once per tilt, but holding it away from
+  // center keeps the accepted smash charging. Returning to center releases.
+  if(raw.rightStickMode==='smash'&&rightStrength>.35&&!f.rightStickReady&&(!f.attack&&i.smash||['smash','upsmash','downsmash'].includes(f.attack?.type))){i.smashHeld=true;i.charge=true;}
   // Record shield + normal-attack as a grab before buffering. This preserves
   // the command through shield stun without repeating it while buttons are held.
   const guardMode=f.frozen?.mode??f.mode;

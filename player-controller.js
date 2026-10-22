@@ -1,13 +1,14 @@
 'use strict';
 const PlayerController=(()=>{
  const enter=(f,n,d)=>PlayerStates.enter(f,n,d),is=(f,...n)=>n.includes(f.mode);
- const dodgeData={SpotDodge:{duration:25,inv:[3,17],speed:0,attackCancel:21},ForwardRoll:{duration:29,inv:[4,15],speed:11},BackwardRoll:{duration:34,inv:[5,16],speed:10.5},NeutralAirDodge:{duration:36,inv:[3,25],speed:0,landing:10},DirectionalAirDodge:{duration:45,inv:[3,21],speed:14,landing:19,earlyLanding:11}};
+ const dodgeData={SpotDodge:{duration:25,inv:[3,19],speed:0,attackCancel:21},ForwardRoll:{duration:29,inv:[4,18],speed:11},BackwardRoll:{duration:34,inv:[5,19],speed:10.5},NeutralAirDodge:{duration:36,inv:[3,25],speed:0,landing:10},DirectionalAirDodge:{duration:45,inv:[3,21],speed:14,landing:19,earlyLanding:11}};
  // The entry frame places the fighter at the lip without running physics.
  // Preserve the former 29 moving frames * 4 units while shortening recovery.
  const ledgeRoll={duration:26,distance:116};
  const ledgeRollSpeed=ledgeRoll.distance/(ledgeRoll.duration-1);
  function beginDodge(f,i){let air=!f.grounded;if(air&&f.airDodged)return;let groundDirection=i.dodgeDirection||InputFrames.dodgeDirection(i),dir=air?Math.sign(i.x):groundDirection?.x||0,name=air?(Math.hypot(i.x,i.y)>.3?'DirectionalAirDodge':'NeutralAirDodge'):groundDirection?.y?'SpotDodge':dir===f.face?'ForwardRoll':'BackwardRoll';let d=dodgeData[name],stale=f.dodgeStale;
-  f.dodge={...d,inv:[d.inv[0]+stale,Math.max(d.inv[0]+stale+1,d.inv[1]-stale)],direction:dir,stale};f.dodgeStale=Math.min(5,stale+1);f.dodgeRest=0;f.airDodged ||= air;f.tumbling=false;f.fastFall=false;enter(f,name,d.duration+(air?0:Math.min(6,stale*2)));
+  const delay=air?stale:Math.floor(stale*.6),shrink=air?stale:Math.floor(stale*.4);
+  f.dodge={...d,inv:[d.inv[0]+delay,Math.max(d.inv[0]+delay+1,d.inv[1]-shrink)],direction:dir,stale};f.dodgeStale=Math.min(5,stale+1);f.dodgeRest=0;f.airDodged ||= air;f.tumbling=false;f.fastFall=false;enter(f,name,d.duration+(air?0:Math.min(6,stale*2)));
   if(air&&name==='DirectionalAirDodge'){let length=Math.max(.01,Math.hypot(i.x,i.y)),speed=d.speed*(1-stale*.08);f.vx=i.x/length*speed;f.vy=i.y/length*speed;f.fastFall=false;}else if(!air)f.vx=dir*d.speed*(1-stale*.05);
  }
  // Spot-dodge attack cancellation consumes a still-valid 9F buffer. Guard
@@ -20,7 +21,7 @@ const PlayerController=(()=>{
   advanceAttack(f,next);return true;
  }
  function launchJump(f,short=false,ledge=false){const c=f.character;if(!f.grounded&&!ledge&&f.airJumps<=0)return false;
-  let air=!f.grounded&&!ledge;f.vy=air?-c.doubleJumpVelocity:short?-c.shortHopVelocity:-c.fullHopVelocity;if(air)f.airJumps--;f.jumps=air?2:1;f.grounded=false;f.fastFall=false;f.tumbling=false;f.shortHop=short;f.shortHopGrace=air||ledge||short?0:MovementTuning.shortHopReleaseGraceFrames;f.attack=null;enter(f,ledge?'LedgeJump':'Jump');if(air)ring(f.x,f.y-16,colors[f.color],34);else emit(f.x,f.y,'#e0dcd4',5,1.5);sound(air?'double-jump':'jump',.65,f);return true;
+  let air=!f.grounded&&!ledge;f.vy=air?-c.doubleJumpVelocity:short?-c.shortHopVelocity:-c.fullHopVelocity;if(air)f.airJumps--;f.jumps=air?2:1;f.grounded=false;f.gravityOff=false;f.fastFall=false;f.tumbling=false;f.shortHop=short;f.shortHopGrace=air||ledge||short?0:MovementTuning.shortHopReleaseGraceFrames;f.attack=null;enter(f,ledge?'LedgeJump':'Jump');if(air)ring(f.x,f.y-16,colors[f.color],34);else emit(f.x,f.y,'#e0dcd4',5,1.5);sound(air?'double-jump':'jump',.65,f);return true;
  }
  function beginJump(f,i){if(!f.grounded){if(launchJump(f)&&i.jumpAerial)selectAttack(f,i.jumpAerial);return;}f.jumpShort=!!(i.twoJumps||i.shortHopAttack);f.jumpAerial=i.jumpAerial||null;enter(f,'JumpSquat',f.character.jumpSquatFrames);f.buffer=null;}
  function airControl(f,i,mult=1){let c=f.character;if(Math.abs(i.x)>.1){let accel=f.vx*i.x<0?c.airBrake:c.airAcceleration;if(f.vx*i.x>0&&Math.abs(f.vx)>Math.abs(i.x*c.airSpeed))f.vx=moveToward(f.vx,i.x*c.airSpeed,c.airFriction);else f.vx=moveToward(f.vx,i.x*c.airSpeed,accel*mult);}else f.vx=moveToward(f.vx,0,c.airFriction);}
@@ -56,7 +57,10 @@ const PlayerController=(()=>{
   if(f.pendingLaunch||f.hitlag>0||f.hitstun>0||hitstop>0||!f.tumbling||!['jump','jab','heavy','smash','special'].some(key=>i[key]))return;
   f.vx=f.vy=0;f.tumbling=false;
  }
- function releaseGrab(f){let o=f.grabbed;if(o){o.grabImmunity=60;o.grabOwner=null;enter(o,o.grounded?'Idle':'Fall');}f.grabbed=null;enter(f,f.grounded?'Idle':'Fall');}
+ // A projectile may interrupt either half of a grab, including during pummel
+ // hitlag. Detach both references and replace any frozen grab snapshot too.
+ function leaveGrab(f){const held=new Set(['GrabHold','Grabbed','Pummel','Throw']);if(!held.has(f.mode)&&!held.has(f.frozen?.mode))return;const lag=f.hitlag||0;f.frozen=null;f.attack=null;f.gravityOff=false;f.buffer=null;enter(f,f.hitstun>0?(f.tumbling?'Tumble':'Hitstun'):f.grounded?'Idle':'Fall');if(lag>0)CombatSystem.freeze(f,lag);}
+ function releaseGrab(f){const o=f.grabbed;f.grabbed=null;if(o&&o.grabOwner===f){o.grabOwner=null;o.grabImmunity=60;leaveGrab(o);}leaveGrab(f);}
  function tech(f,i,surface){if(!f.tumbling)return false;if(f.techBuffer>0&&f.techLock<=0){f.techBuffer=0;f.techLock=40;f.hitstun=0;f.tumbling=false;f.intangible=20;f.attack=null;
    if(surface==='floor'){let roll=Math.abs(i.x)>.4;enter(f,roll?'TechRoll':'Tech',roll?26:20);f.vx=roll?Math.sign(i.x)*6:0;f.vy=0;}
    else{enter(f,surface==='wall'?'WallTech':'CeilingTech',16);f.vx=surface==='wall'?-f.vx*.4:0;f.vy=surface==='wall'&&(i.jump||i.jumpHeld)?-f.character.doubleJumpVelocity:0;}
@@ -65,7 +69,7 @@ const PlayerController=(()=>{
  }
  function catchLedge(f,anchor){if(f.ledgeGrabs>=f.character.ledgeRegrabLimit)return;let other=fighters.find(o=>o!==f&&o.ledge===anchor&&is(o,'LedgeCatch','LedgeHang'));
   if(other){other.ledge=null;other.ledgeCooldown=45;other.vx=-anchor.face*3;other.vy=-2;other.intangible=other.inv=other.ledgeInvOnCatch=0;enter(other,'LedgeTrump',16);}
-  f.ledgeGrabs++;f.ledge=anchor;f.snapFrom=[f.x,f.y];f.face=anchor.face;f.vx=f.vy=0;f.attack=null;f.helpless=false;f.recovered=false;f.airDodged=false;f.airJumps=f.character.airJumpCount;f.jumps=0;f.fastFall=false;f.specialLandingLag=0;f.grounded=false;f.inv=f.intangible=0;f.ledgeInvOnCatch=f.ledgeGrabs===1?Math.max(20,55-Math.floor(f.damage/10)):0;enter(f,'LedgeCatch',f.character.ledgeCatchFrames);
+  f.ledgeGrabs++;f.ledge=anchor;f.snapFrom=[f.x,f.y];f.face=anchor.face;f.vx=f.vy=0;f.attack=null;f.gravityOff=false;f.helpless=false;f.recovered=false;f.airDodged=false;f.airJumps=f.character.airJumpCount;f.jumps=0;f.fastFall=false;f.specialLandingLag=0;f.grounded=false;f.inv=f.intangible=0;f.ledgeInvOnCatch=f.ledgeGrabs===1?Math.max(20,55-Math.floor(f.damage/10)):0;enter(f,'LedgeCatch',f.character.ledgeCatchFrames);
  }
  function ledgeAction(f,i){const l=f.ledge;if(!l)return;f.vx=f.vy=0;
   if(f.mode==='LedgeCatch'){let t=Math.min(1,f.stateFrame/Math.min(4,f.stateDuration));let grip=ledgeHangPosition(f,l);f.x=lerp(f.snapFrom[0],grip.x,t);f.y=lerp(f.snapFrom[1],grip.y,t);if(t===1&&f.ledgeInvOnCatch){f.intangible=f.ledgeInvOnCatch;f.ledgeInvOnCatch=0;}if(f.stateFrame>f.stateDuration)enter(f,'LedgeHang');return;}
@@ -110,7 +114,7 @@ const PlayerController=(()=>{
   if(f.mode==='Grabbed'){f.vx=f.vy=0;f.grabEscape-=1+i.mash*7;if(f.grabEscape<=0&&f.grabOwner)releaseGrab(f.grabOwner);return;}
   if(is(f,'GrabHold','Pummel')){let o=f.grabbed;if(!o){enter(f,'Idle');return;}o.x=f.x+f.face*35;o.y=f.y-8;if(f.mode==='Pummel'){if(f.stateFrame===2){o.damage+=movesFor(f).pummel.damage;f.stats.damage+=movesFor(f).pummel.damage;CombatVFX.impact(o.x,o.y-35,f.color,2,f.face);}if(f.stateFrame>movesFor(f).pummel.totalFrames)enter(f,'GrabHold');return;}if(i.jab||i.heavy){enter(f,'Pummel',movesFor(f).pummel.totalFrames);return;}if(f.stateFrame>=5&&(Math.abs(i.x)>.4||Math.abs(i.y)>.4||i.grab)){throwTarget(f,i);o.grabImmunity=60;o.grabOwner=null;return;}return;}
   if(is(f,'LedgeCatch','LedgeHang')){ledgeAction(f,i);return;}
-  if(f.attack&&f.timer>f.attack.totalFrames){let helpless=f.attack.helpless;finishNormalAttack(f);f.attack=null;f.gravityOff=false;f.helpless=!!helpless;enter(f,helpless?'Helpless':f.grounded?'Idle':'Fall');}
+  if(f.attack&&f.timer>f.attack.totalFrames){let helpless=f.attack.helpless&&!f.grounded;finishNormalAttack(f);f.attack=null;f.gravityOff=false;f.helpless=!!helpless;enter(f,helpless?'Helpless':f.grounded?'Idle':'Fall');}
   // Accept a brief release just after takeoff without delaying full hops.
   // Subtract only the full/short launch difference, preserving elapsed gravity.
   if(f.shortHopGrace>0){
@@ -160,7 +164,8 @@ const PlayerController=(()=>{
     }
    }
   }
-  if(f.vy>=0)for(let floor of platforms){if(!floor.main&&f.drop)continue;if(f.x>floor.x-9&&f.x<floor.x+floor.w+9&&oldY<=floor.y+6&&f.y>=floor.y){f.y=floor.y;f.vy=0;f.grounded=true;if(wasAir)land(f,i,oldVy);break;}}
+  const downSpecial=!!(f.attack?.downSpecialInput||['gale','airDrop'].includes(f.attack?.type)||i.special&&InputFrames.attackDirection(i).y>.5),passThrough=wasAir&&i.y>.65&&!downSpecial&&!f.hitstun&&!f.tumbling;
+  if(f.vy>=0)for(let floor of platforms){if(!floor.main&&!downSpecial&&(f.drop||passThrough))continue;if(f.x>floor.x-9&&f.x<floor.x+floor.w+9&&oldY<=floor.y+6&&f.y>=floor.y){f.y=floor.y;f.vy=0;f.grounded=true;if(wasAir)land(f,i,oldVy);break;}}
   if(f.characterId==='hunter')HunterRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='adol')AdolRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='valkyrie')ValkyrieRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='terry')TerryRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='agumon')AgumonRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='pawapuro')PawapuroRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='headmaster')HeadmasterRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(NewcomerCore.ids.includes(f.characterId))NewcomerCore.registry[f.characterId].collision(f,i,{oldX,oldY,oldVx,oldVy});
   AruruRules.platform(f,i,{oldX,oldY,oldVx,oldVy,wasAir});
   // Leaving the top lip is an outbound movement, not a recovery attempt.
@@ -187,6 +192,10 @@ const PlayerController=(()=>{
   if(a?.surf&&a.mounted&&f.timer<=65){a.gravityMultiplier=1;f.vy=0;f.grounded=true;return;}
   if(a?.horse&&a.mounted&&f.timer<=a.rideEnd){a.gravityMultiplier=1;f.vy=0;f.grounded=true;return;}
   if(a?.landingMove&&f.timer>=a.startupFrames){f.gravityOff=false;f.specialLandingLag=0;attack(f,a.landingMove);CombatVFX.landingBurst(f.x,f.y,f.color);shake=12;flash=.14;sound('land-heavy',1,f);return;}
+  // Landing is not an attack cancel. Keep the same action timer, hit IDs,
+  // charge, hold input and pending events; authored ground impacts above
+  // still transition to their landing move. Finish the original recovery.
+  if(a){f.mode=a.special?'GroundSpecial':'GroundAttack';f.state=PlayerStates.visual[f.mode];f.gravityOff=false;f.specialLandingLag=f.landingLag=f.lastLandingLag=0;return;}
   let lag=wasFast?c.hardLandingFrames:c.normalLandingFrames,name=wasFast?'HardLanding':'NormalLanding';
   if(f.dodge?.landing&&['NeutralAirDodge','DirectionalAirDodge'].includes(f.mode)){lag=f.dodge.earlyLanding&&f.stateFrame<=BattleFeel.tuning.directionalDodgeFloat?f.dodge.earlyLanding:f.dodge.landing;name='AerialLanding';}
   else if(f.specialLandingLag){lag=f.specialLandingLag;name='SpecialLanding';}

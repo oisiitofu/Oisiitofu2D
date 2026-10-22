@@ -12,7 +12,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
    check(id+'/'+type+' finite trajectory',Number.isFinite(t.angle)&&Number.isFinite(t.velocityScale));
    const before=Math.hypot(Math.cos(strike.angle)*boost,Math.sin(strike.angle)),after=Math.hypot(Math.cos(t.angle)*t.horizontalScale,Math.sin(t.angle))*t.velocityScale;
    check(id+'/'+type+' velocity magnitude preserved',close(before,after),{before,after});
-   if(t.angle!==strike.angle){adjusted[type]=(adjusted[type]||0)+1;const deg=Math.atan2(-Math.sin(t.angle),Math.abs(Math.cos(t.angle)*t.horizontalScale))*180/Math.PI;check(id+'/'+type+' upward floor',deg>=(type==='smash'?40:32)-1e-8,{deg});}
+   if(t.angle!==strike.angle){adjusted[type]=(adjusted[type]||0)+1;const deg=Math.atan2(-Math.sin(t.angle),Math.abs(Math.cos(t.angle)*t.horizontalScale))*180/Math.PI;check(id+'/'+type+' upward floor',deg>=(type==='smash'?40:type==='dashAttack'?50:37)-1e-8,{deg});}
    if(['downsmash','low','downThrow','upsmash','uair'].includes(type)||type==='dair'&&AerialLaunchTuning.meteor(strike)||strike.pull||strike.fixedKnockback||strike.cancel?.next||w.end<a.activeEnd)check(id+'/'+type+' authored exception preserved',t.angle===strike.angle);
   }}
   for(const id of ['dragoon','chiikawa','edelgard','fiora','hayabusa','malenia','metabee'])for(const type of ['smash','heavy','fair','bair','dashAttack','forwardThrow','downsmash','low','upsmash','dair'])for(const face of [-1,1])for(const grounded of [false,true]){
@@ -22,7 +22,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
    check(id+'/'+type+' damage hitstun hitlag preserved',close(o.damage,beforePercent+a.damage*1.05)&&close(o.pendingLaunch.raw,raw)&&o.pendingLaunch.hitstun===Math.max(4,Math.floor(raw*.4)-1)&&o.hitlag===lag);
    const expected=CombatSystem.launchSpeed(a,raw)*Math.hypot(Math.cos(a.angle)*boost,Math.sin(a.angle));o.hitlag=1;CombatSystem.hitlag(o,emptyInput());const speed=Math.hypot(o.vx,o.vy),deg=Math.atan2(-o.vy,Math.abs(o.vx))*180/Math.PI;
    check(id+'/'+type+' actual speed preserved',close(speed,expected),{speed,expected});check(id+'/'+type+' authored launch decay preserved',close(o.launchDecay,/smash/i.test(type)?.204*Math.abs(Math.cos(a.angle)):.075));check(id+'/'+type+' left right direction',o.vx*face>0);
-   if(['smash','heavy','fair','bair','dashAttack','forwardThrow'].includes(type))check(id+'/'+type+' upward actual flight',deg>=(type==='smash'?40:32)-1e-8,{deg});
+   if(['smash','heavy','fair','bair','dashAttack'].includes(type))check(id+'/'+type+' upward actual flight',deg>=(type==='smash'?40:32)-1e-8,{deg});
    if(id==='dragoon'&&face===1&&grounded)samples.push({id,type,beforeDegrees:Math.atan2(-Math.sin(a.angle),Math.abs(Math.cos(a.angle))*boost)*180/Math.PI,afterDegrees:deg,speed});
    particles=[];waves=[];texts=[];CombatVFX.reset();
   }

@@ -23,7 +23,7 @@ const AerialLaunchTuning=(()=>{
  function trajectory(a,original){
   if(!eligible(a)||meteor(a)||!Number.isFinite(a.angle))return null;
   const type=typeOf(a);
-  const minimum=(type==='dair'?72:type==='dashAttack'?50:32)*Math.PI/180,h=original.horizontalScale;
+  const minimum=(type==='dair'?72:type==='dashAttack'?50:37)*Math.PI/180,h=original.horizontalScale;
   const actual=Math.atan2(-Math.sin(a.angle),Math.abs(Math.cos(a.angle)*h));
   if(actual>=minimum)return original;
   let angle=Math.atan2(-Math.sin(minimum)*h,Math.cos(minimum));if(Math.cos(a.angle)<0)angle=-Math.PI-angle;
