@@ -1647,5 +1647,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "billy": {
+    "source": "characters/billy/assets/billy-selection.png",
+    "crop": [
+      260,
+      0,
+      1276,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

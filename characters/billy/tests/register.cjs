@@ -1,0 +1,21 @@
+'use strict';
+const fs=require('fs'),id='billy',Cap=id[0].toUpperCase()+id.slice(1),root='characters/'+id,cfg=JSON.parse(fs.readFileSync(root+'/tests/registration.json')),meta=JSON.parse(fs.readFileSync(root+'/tests/art-layout.json')),measure=JSON.parse(fs.readFileSync(root+'/tests/body-measurements.json')),pending=new Map();
+function edit(file,old,value){const s=pending.get(file)??fs.readFileSync(file,'utf8');if(!s.includes(old))throw Error(file+' missing '+old.slice(0,70));pending.set(file,s.replace(old,value));}
+if(fs.readFileSync('roster.js','utf8').includes('"id":"'+id+'"'))throw Error('Already registered');
+edit('roster.js','const definitions=[','const definitions=['+JSON.stringify(cfg.definition)+',');
+const anchor="'"+(cfg.before||cfg.after)+"', // "+cfg.anchorName,line="'"+id+"', // "+cfg.definition.name;edit('roster.js',anchor,cfg.before?line+'\n  '+anchor:anchor+'\n  '+line);
+edit('newcomer-system.js','],registry={};',",'"+id+"'],registry={};");edit('newcomer-system.js','function gate(f,type){',`function gate(f,type){if(f.characterId==='${id}')return ${id}Gate(f,type);`);edit('newcomer-system.js','function land(f,i){',`function land(f,i){if(f.characterId==='${id}'&&${id}Land(f))return true;`);
+edit('characters/isaac/isaac-data.js','function movesFor(f){return ',`function movesFor(f){return f?.characterId==='${id}'?${Cap}Moves: `);
+const physics={weight:cfg.weight,...cfg.physics,ledgeGrip:meta.grip};
+edit('player-system.js','const MovementTuning=',`CharacterData.${id}={...CharacterData.dragoon,...${JSON.stringify(physics)}};\nconst MovementTuning=`);
+edit('game.js','function pose(f){',`function pose(f){if(f.characterId==='${id}')return ${id}Pose(f);`);edit('game.js',"if(['narmaya'",`if(['${id}','narmaya'`);edit('game.js',"f.characterId==='sol'?50:",`f.characterId==='${id}'?${cfg.definition.pose}:f.characterId==='sol'?50:`);edit('game.js',"if(characterId==='sol')return loadSolArt();",`if(characterId==='${id}')return load${Cap}Art();if(characterId==='sol')return loadSolArt();`);
+edit('newcomer-vfx.js','const vfx={',`const vfx={${id}:${Cap}VFX,`);edit('newcomer-art.js','const NewcomerArtAnchors={',`const NewcomerArtAnchors={${id}:`+JSON.stringify(meta.anchors)+',');
+edit('battle-size.js','function sourceNative(id,n){return ',`function sourceNative(id,n){return id==='${id}'?${id}NativeScale(n): `);edit('battle-size.js','const calibration={',`const calibration={${id}:`+JSON.stringify({height:98,body:measure[0].body,neutral:1,pads:meta.pads})+',');edit('battle-size.js',"3:['",`3:['${id}','`);edit('motion-size.js','"characters": {','"characters": {\n  "'+id+'":'+JSON.stringify({scale:meta.frames.map(()=>1),pad:meta.pads})+',');
+edit('stage-system.js','const LedgeArtData={',`const LedgeArtData={${id}:`+JSON.stringify(meta.grip)+',');edit('audio.js',"sol:'fire'",`${id}:'punch',sol:'fire'`);edit('online-server.cjs','const characters=[',`const characters=['${id}',`);edit('throw-tuning.js',"balanced:'",`balanced:'${id} `);
+for(const file of['art-loader.js','.tools/build-art.cjs'])edit(file,"id==='sol'?",`id==='${id}'?${cfg.mask}:id==='sol'?`);
+edit('attack-effect-fit.js','const upperCurves={',`const upperCurves={${id}:[],`);
+const file='attack-effect-data.js',s=fs.readFileSync(file,'utf8'),data=JSON.parse(s.slice(s.indexOf('={')+1,s.lastIndexOf('};')+1));data.axes[id]=cfg.axes;data.types[id]=cfg.types;pending.set(file,s.slice(0,s.indexOf('const AttackEffectData='))+'const AttackEffectData='+JSON.stringify(data)+';\n');
+edit('melee-balance.js','const brawlers=new Set([',"const brawlers=new Set(['"+id+"',");
+edit('index.html','<script src="newcomer-vfx.js">',`<script src="characters/${id}/${id}-data.js"></script><script src="characters/${id}/${id}-vfx.js"></script><script src="newcomer-vfx.js">`);edit('index.html','<script src="characters/sol/sol-art.js">',`<script src="characters/${id}/${id}-art.js"></script><script src="characters/sol/sol-art.js">`);
+const sf='.tools/selection-portrait-sources.json',selection=JSON.parse(fs.readFileSync(sf));selection[id]={source:root+'/assets/'+id+'-selection.png',crop:cfg.crop,mode:'built-in imagegen',framing:'dedicated high-resolution close head and shoulders'};pending.set(sf,JSON.stringify(selection,null,2)+'\n');
+for(const[file,s]of pending)fs.writeFileSync(file,s);console.log(JSON.stringify({id,files:pending.size,physics}));

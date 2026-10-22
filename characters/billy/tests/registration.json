@@ -1,0 +1,108 @@
+{
+  "definition": {
+    "id": "billy",
+    "name": "ビリー",
+    "style": "ゼンレスゾーンゼロ / BILLY KID",
+    "number": "156",
+    "description": "二丁リボルバーで戦う邪兎屋のロボット。NBは立ち射撃、長押しで低姿勢連射からフィニッシュ。横Bは低いロールから旋回して終端射撃。上Bは上昇中の左右入力で進路を折り返し、最後に空中射撃。下Bは三方向の連射、長押しで強力な一撃。命中で増えるスターライトが連射と回避を強化する。",
+    "pose": 61
+  },
+  "after": "miyabi",
+  "anchorName": "星見雅",
+  "height": 98,
+  "tier": 3,
+  "weight": 92,
+  "mask": "(r>110&&r>green*1.5&&r>b*1.45&&green<150&&b<155)",
+  "crop": [
+    260,
+    0,
+    1276,
+    1024
+  ],
+  "frames": 62,
+  "effects": 16,
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "3": [
+      1,
+      0
+    ],
+    "5": [
+      1,
+      0
+    ],
+    "6": [
+      0.7071067811865476,
+      -0.7071067811865476
+    ],
+    "7": [
+      1,
+      0
+    ],
+    "12": [
+      1,
+      0
+    ],
+    "13": [
+      0,
+      1
+    ],
+    "14": [
+      0,
+      -1
+    ],
+    "15": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 12,
+    "jab2": 12,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 12,
+    "low": 12,
+    "dashAttack": 2,
+    "smash": 7,
+    "upsmash": 1,
+    "downsmash": 3,
+    "air": 3,
+    "fair": 2,
+    "bair": 2,
+    "uair": 14,
+    "dair": 13,
+    "dash": 3,
+    "rise": 3
+  },
+  "physics": {
+    "walkSpeed": 3.5,
+    "initialDashSpeed": 7.4,
+    "runSpeed": 7.1,
+    "airSpeed": 6.8,
+    "airAcceleration": 0.44,
+    "gravity": 0.58,
+    "fullHopVelocity": 14.6,
+    "ecb": {
+      "radius": 16,
+      "height": 85
+    },
+    "shieldSize": 44,
+    "shieldOffset": [
+      0,
+      -43
+    ]
+  }
+}
