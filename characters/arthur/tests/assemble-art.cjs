@@ -24,7 +24,9 @@ const scale=async(g,k)=>{const p=await sharp(g.pixels,{raw:{width:g.w,height:g.h
  if(poses.length!==125)throw Error('Expected 61 silver and 61 underwear full-body poses, two shield turns and portrait');
  const crops=JSON.parse(fs.readFileSync(root+'/tests/effect-crops.json'));const fm=await sharp(root+'/assets/arthur-effects.png').metadata(),effects=[];
  for(let n=0;n<16;n++){const[left,top,width,height]=crops[n];
-  let cell=await sharp(root+'/assets/arthur-effects.png').extract({left,top,width,height}).png().toBuffer();cell=await sharp(cell).trim({threshold:12}).png().toBuffer();
+  // The lance-only edit omitted its neighbouring dagger. Keep the approved
+  // original dagger, isolated from the upward arrow in the following row.
+  let cell=await sharp(root+'/assets/arthur-effects'+(n===3?'-first':'')+'.png').extract({left,top,width,height}).png().toBuffer();cell=await sharp(cell).trim({threshold:12}).png().toBuffer();
   // Actual source axes are recorded per image; no blanket flip.
   const g=await sharp(cell).ensureAlpha().raw().toBuffer({resolveWithObject:true});effects.push({pixels:g.data,w:g.info.width,h:g.info.height});}
  let x=2,y=2,rh=0;const frames=[],fx=[],packed=[];for(const[g,n]of [...poses,...effects].map((g,n)=>[g,n])){if(x+g.w+2>2048){x=2;y+=rh+4;rh=0;}packed.push({input:g.pixels,raw:{width:g.w,height:g.h,channels:4},left:x,top:y});(n<poses.length?frames:fx).push([x,y,g.w,g.h]);x+=g.w+4;rh=Math.max(rh,g.h);}
