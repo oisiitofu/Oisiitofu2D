@@ -1,0 +1,9 @@
+{
+ "definition":{"id":"onionknight","name":"オニオンナイト","style":"FINAL FANTASY III / ONION KNIGHT","number":"163","description":"下Bでたまねぎ剣士→忍者→賢者へジョブチェンジ。基本は剣とファイア、追加入力の三連斬り。忍者は二刀と戻る手裏剣、弧を描く往復斬り。賢者はホーリーと再操作できる竜巻、ボタンを押して風に乗る上B。ジョブごとに通常技・速度・復帰が変わる。","pose":61},
+ "after":"moogle","anchorName":"モーグリ","height":78,"tier":1,"weight":86,
+ "mask":"((r>90&&r>green*1.45&&r>b*1.25)||(b>35&&b>r*1.5&&b>green*1.15))",
+ "crop":[300,0,1236,1024],"frames":184,"effects":32,"upperCurves":[1,4],
+ "axes":{"0":[1,0],"1":[0,-1],"2":[1,0],"3":[1,0],"4":[0,-1],"5":[1,0],"6":[1,0],"12":[1,0],"13":[0.707,-0.707],"16":[0,-1],"21":[0.707,-0.707],"30":[0,1],"31":[1,0]},
+ "types":{"jab":0,"jab2":5,"jab3":2,"heavy":0,"up":1,"low":5,"dashAttack":2,"smash":0,"upsmash":1,"downsmash":5,"air":0,"fair":0,"bair":5,"uair":1,"dair":0,"dash":0,"rise":1,"gale":23,"airDrop":23},
+ "physics":{"walkSpeed":3.2,"initialDashSpeed":6.4,"runSpeed":7,"airSpeed":6.1,"airAcceleration":0.4,"gravity":0.58,"fullHopVelocity":13.8,"ecb":{"radius":15,"height":64},"shieldSize":38,"shieldOffset":[0,-32]}
+}

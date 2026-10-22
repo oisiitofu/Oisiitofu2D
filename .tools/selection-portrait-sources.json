@@ -1724,5 +1724,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "onionknight": {
+    "source": "characters/onionknight/assets/onionknight-selection.png",
+    "crop": [
+      300,
+      0,
+      1236,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

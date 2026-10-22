@@ -6,7 +6,7 @@ const ProjectileCadence={
  begin(f,a){if(a.rangedInterval)f.rangedReadyFrame=Math.max(f.rangedReadyFrame||0,frame+a.rangedInterval);},
  advance(f,a){if(a.rangedInterval)f.rangedReadyFrame=Math.max(f.rangedReadyFrame||0,frame+(a.rangedRearm||0));}
 };
-function attack(f,type){
+function attack(f,type,activationInput=null){
  const downSpecialInput=type==='gale';
  if(NewcomerCore.ids.includes(f.characterId)){if(type==='gale'&&!f.grounded)type='airDrop';if(!NewcomerCore.gate(f,type))return false;}
  if(f.characterId==='headmaster'&&(type==='gale'&&f.headBlockCooldown>0||!f.grounded&&(type==='dash'&&f.headSideUsed||type==='gale'&&f.headBlockUsed)))return false;
@@ -39,6 +39,9 @@ function attack(f,type){
  if(f.characterId==='estelle'&&!f.grounded&&(type==='dash'&&f.estelleSideUsed||type==='gale'&&f.estelleWheelUsed))return false;
  const data=type==='ledge'?LedgeAttackTuning.move(f):movesFor(f)[type];if(f.zidaneSilenced>0&&data?.special&&type!=='rise'&&!data.tether&&(data.projectile||['dragon','gale','airDrop'].includes(type)))return false;if(!data||type==='rise'&&f.recovered)return false;
  if(!ProjectileCadence.ready(f,data))return false;
+ // Keep the unsnapped horizontal stick for a turnaround up special. Apply it
+ // only after the action is accepted, before character-specific launch setup.
+ if(type==='rise'&&activationInput&&Math.abs(activationInput.x)>=.2)f.face=Math.sign(activationInput.x);
  // A recovery windup must not carry a full fast-fall into its charge/aim.
  // Only brake accepted actions; hitstun/hitstop inputs still cannot stop launch.
  if(type==='rise'&&!f.grounded){f.fastFall=false;f.vx*=.35;if(f.vy>0)f.vy=Math.min(2,f.vy*.15);}
@@ -92,16 +95,17 @@ function advanceAttack(f,i){
  if(a.diveSpeed&&CombatData.activeWindow(a,f.timer)){f.fastFall=false;f.vy=a.diveSpeed;}
  const cancel=a.cancel,b=f.buffer;if(cancel&&b&&f.timer>=cancel.start&&f.timer<=cancel.end&&(b.key===cancel.input||cancel.input==='jab'&&b.key==='heavy')){let next=cancel.next||cancel.branch+(b.y<0?'Up':b.y>0?'Down':'');attack(f,next);a=f.attack;}
  GameAudio.attackTick(f);if(f.timer===a.startupFrames){if(a.verticalImpulse){f.grounded=false;f.recovered=true;f.specialLandingLag=a.landingLagFrames;ring(f.x,f.y,colors[f.color],90);}}
- if(CombatData.activeWindow(a,f.timer)&&frame%2===0&&!(f.characterId==='pokoa'&&PokoaRules.form(f))){ghosts.push({x:f.x,y:f.y,face:f.face,pose:CombatData.sample(a,f.timer).pose,characterId:f.characterId,color:f.color,morphSize:f.morphSize,...(f.characterId==='tifa'?{rasterPose:TifaRasterAnimation.sample(f)?.pose}:{}),life:14});}
+ if(CombatData.activeWindow(a,f.timer)&&frame%2===0&&!(f.characterId==='pokoa'&&PokoaRules.form(f))){ghosts.push({x:f.x,y:f.y,face:f.face,pose:CombatData.sample(a,f.timer).pose,characterId:f.characterId,color:f.color,morphSize:f.morphSize,...(f.characterId==='onionknight'?{onionJob:onionknightJob(f)}:{}),...(f.characterId==='tifa'?{rasterPose:TifaRasterAnimation.sample(f)?.pose}:{}),life:14});}
 }
 function resolveCombat(){CombatSystem.resolve();}
 function hit(f,o,a){CombatSystem.hit(f,o,a);}
 function selectAttack(f,i){
+ const specialTurnX=i.x;
  i=InputFrames.attackDirection(i);
  const aerial=()=>i.y<0?'uair':i.y>0?'dair':i.x?(i.x*f.face<0?'bair':'fair'):'air';
  if(i.grab)return attack(f,'grab');
  if(f.grounded&&i.x&&(i.smash||i.jab||i.heavy))f.face=Math.sign(i.x);
- if(i.special){if(i.x&&Math.abs(i.y)<.5)f.face=Math.sign(i.x);return attack(f,i.y<0?'rise':i.y>0?'gale':i.x?'dash':'dragon');}
+ if(i.special){if(i.x&&Math.abs(i.y)<.5)f.face=Math.sign(i.x);return attack(f,i.y<0?'rise':i.y>0?'gale':i.x?'dash':'dragon',{x:specialTurnX});}
  if((i.smash||(i.jab||i.heavy)&&i.smashFlick&&!i.forceTilt)&&f.grounded)return attack(f,i.y<0?'upsmash':i.y>0?'downsmash':'smash');
  if(i.jab||i.heavy){if(!f.grounded)return attack(f,aerial());if(['Run','InitialDash'].includes(f.mode)&&(!f.dashAttackResumeUntil||frame>f.dashAttackResumeUntil)&&!i.forceTilt&&Math.abs(i.y)<.2)return attack(f,'dashAttack');return attack(f,i.heavy?(i.y<0?'up':i.y>0?'low':'heavy'):'jab');}
  return false;

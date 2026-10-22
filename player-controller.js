@@ -90,7 +90,7 @@ const PlayerController=(()=>{
    if(i.jump){beginJump(f,i);return true;}
    if(InputFrames.attackDirection(i).y<-.5&&i.smash){attack(f,'upsmash');return true;}
    if(i.grab){attack(f,'grab');return true;}
-   if(InputFrames.attackDirection(i).y<-.5&&i.special){attack(f,'rise');return true;}
+   if(InputFrames.attackDirection(i).y<-.5&&i.special){attack(f,'rise',i);return true;}
    if(i.dodgePressed&&i.guard){beginDodge(f,i);return true;}
    if(i.jab||i.heavy||i.special||i.smash){f.committedDrop={...i,guard:false};f.parryEligible=false;enter(f,'ShieldDrop',11);return true;}
    if(!i.guard){f.parryEligible=f.shieldHeldFrames>=3;enter(f,'ShieldDrop',11);return true;}
