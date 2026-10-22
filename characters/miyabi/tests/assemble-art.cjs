@@ -11,6 +11,16 @@ const fs=require('fs'),sharp=require('sharp'),extract=require('../../karateka/te
  if(fs.existsSync(root+'/assets/miyabi-ledge.png')){const raw=await sharp(root+'/assets/miyabi-ledge.png').ensureAlpha().raw().toBuffer({resolveWithObject:true}),repair=extract(raw.data,raw.info.width,raw.info.height,2,2).map(loose),k=(poses[0].h-6)/(repair[3].h-6);for(let n=0;n<3;n++){const g=repair[n],im=await sharp(g.pixels,{raw:{width:g.w,height:g.h,channels:4}}).resize({width:Math.round(g.w*k)}).ensureAlpha().raw().toBuffer({resolveWithObject:true});poses[37+n]={pixels:im.data,w:im.info.width,h:im.info.height};}}
  const scale=(poses[0].h-6)/(extra[3].h-6);
  for(const g of extra){const im=await sharp(g.pixels,{raw:{width:g.w,height:g.h,channels:4}}).resize({width:Math.round(g.w*scale)}).ensureAlpha().raw().toBuffer({resolveWithObject:true});poses.push({pixels:im.data,w:im.info.width,h:im.info.height});}
+ // Replace only idle, after the original calibration of all other full bodies.
+ // Match its existing 182px body and 5px sole pad; never resize other poses.
+ if(fs.existsSync(root+'/assets/miyabi-idle-side.png')){
+  const rows=g=>{let top=g.info.height,bottom=0;for(let y=0;y<g.info.height;y++){let n=0;for(let x=0;x<g.info.width;x++)if(g.data[(y*g.info.width+x)*4+3]>150)n++;if(n>=Math.max(3,g.info.width*.012)){top=Math.min(top,y);bottom=y+1;}}return{top,bottom,body:bottom-top};};
+  const source=await sharp(root+'/assets/miyabi-idle-side.png').trim({threshold:1}).ensureAlpha().raw().toBuffer({resolveWithObject:true}),box=rows(source);
+  let resized=await sharp(source.data,{raw:{width:source.info.width,height:source.info.height,channels:4}}).resize({width:Math.round(source.info.width*182/box.body)}).raw().toBuffer({resolveWithObject:true}),b=rows(resized);
+  for(let n=0;n<3&&b.body!==182;n++){resized=await sharp(source.data,{raw:{width:source.info.width,height:source.info.height,channels:4}}).resize({height:resized.info.height+182-b.body}).raw().toBuffer({resolveWithObject:true});b=rows(resized);}
+  if(b.body!==182)throw Error('Idle body calibration must stay 182px');
+  const pixels=await sharp({create:{width:resized.info.width+10,height:192,channels:4,background:'#00000000'}}).composite([{input:resized.data,raw:{width:resized.info.width,height:resized.info.height,channels:4},left:5,top:187-b.bottom}]).raw().toBuffer();poses[0]={pixels,w:resized.info.width+10,h:192};
+ }
  const tiles=await Promise.all(poses.map(async(g,n)=>({input:await sharp(g.pixels,{raw:{width:g.w,height:g.h,channels:4}}).resize(215,220,{fit:'inside'}).png().toBuffer(),left:n%8*240+10,top:Math.floor(n/8)*245+10})));
  await sharp({create:{width:1920,height:1715,channels:4,background:'#24324a'}}).composite(tiles).png().toFile(root+'/previews/all-poses.png');
  if(!fs.existsSync(root+'/assets/miyabi-selection.png')||!fs.existsSync(root+'/assets/miyabi-effects.png')){console.log(JSON.stringify({poseReview:poses.length,base:[poses[0].w,poses[0].h],extraScale:scale}));return;}
