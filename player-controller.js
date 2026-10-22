@@ -1,14 +1,17 @@
 'use strict';
 const PlayerController=(()=>{
  const enter=(f,n,d)=>PlayerStates.enter(f,n,d),is=(f,...n)=>n.includes(f.mode);
- const dodgeData={SpotDodge:{duration:25,inv:[3,19],speed:0,attackCancel:21},ForwardRoll:{duration:29,inv:[4,18],speed:11},BackwardRoll:{duration:34,inv:[5,19],speed:10.5},NeutralAirDodge:{duration:36,inv:[3,25],speed:0,landing:10},DirectionalAirDodge:{duration:45,inv:[3,21],speed:14,landing:19,earlyLanding:11}};
+ const dodgeData={SpotDodge:{duration:25,inv:[3,23],speed:0,attackCancel:21},ForwardRoll:{duration:29,inv:[4,27],speed:11},BackwardRoll:{duration:34,inv:[5,32],speed:10.5},NeutralAirDodge:{duration:36,inv:[3,25],speed:0,landing:10},DirectionalAirDodge:{duration:45,inv:[3,21],speed:14,landing:19,earlyLanding:11}};
  // The entry frame places the fighter at the lip without running physics.
  // Preserve the former 29 moving frames * 4 units while shortening recovery.
  const ledgeRoll={duration:26,distance:116};
  const ledgeRollSpeed=ledgeRoll.distance/(ledgeRoll.duration-1);
  function beginDodge(f,i){let air=!f.grounded;if(air&&f.airDodged)return;let groundDirection=i.dodgeDirection||InputFrames.dodgeDirection(i),dir=air?Math.sign(i.x):groundDirection?.x||0,name=air?(Math.hypot(i.x,i.y)>.3?'DirectionalAirDodge':'NeutralAirDodge'):groundDirection?.y?'SpotDodge':dir===f.face?'ForwardRoll':'BackwardRoll';let d=dodgeData[name],stale=f.dodgeStale;
   const delay=air?stale:Math.floor(stale*.6),shrink=air?stale:Math.floor(stale*.4);
-  f.dodge={...d,inv:[d.inv[0]+delay,Math.max(d.inv[0]+delay+1,d.inv[1]-shrink)],direction:dir,stale};f.dodgeStale=Math.min(5,stale+1);f.dodgeRest=0;f.airDodged ||= air;f.tumbling=false;f.fastFall=false;enter(f,name,d.duration+(air?0:Math.min(6,stale*2)));
+  const duration=d.duration+(air?0:Math.min(6,stale*2));
+  // Ground dodges remain protected until two frames before their actual end,
+  // including a longer repeated dodge. Air-dodge timing is unchanged.
+  f.dodge={...d,inv:[d.inv[0]+delay,air?Math.max(d.inv[0]+delay+1,d.inv[1]-shrink):duration-2],direction:dir,stale};f.dodgeStale=Math.min(5,stale+1);f.dodgeRest=0;f.airDodged ||= air;f.tumbling=false;f.fastFall=false;enter(f,name,duration);
   if(air&&name==='DirectionalAirDodge'){let length=Math.max(.01,Math.hypot(i.x,i.y)),speed=d.speed*(1-stale*.08);f.vx=i.x/length*speed;f.vy=i.y/length*speed;f.fastFall=false;}else if(!air)f.vx=dir*d.speed*(1-stale*.05);
  }
  // Spot-dodge attack cancellation consumes a still-valid 9F buffer. Guard
@@ -18,6 +21,7 @@ const PlayerController=(()=>{
   if(!queued&&!attacks.some(key=>i[key]))return false;
   const next={...(queued?InputFrames.consume(f,i):i),guard:false,grab:false};
   if(!selectAttack(f,next))return false;
+  if(f.intangible===1)f.intangible=0; // The dodge's one-frame marker cannot cover the attack.
   advanceAttack(f,next);return true;
  }
  function launchJump(f,short=false,ledge=false){const c=f.character;if(!f.grounded&&!ledge&&f.airJumps<=0)return false;
