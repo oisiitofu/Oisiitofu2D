@@ -1,0 +1,8 @@
+'use strict';
+const assert=require('assert/strict'),fs=require('fs'),sharp=require('sharp');
+function strayParts(p,w,h){const seen=new Uint8Array(w*h),parts=[];for(let i=0;i<w*h;i++){if(seen[i]||p[i*4+3]<150)continue;const q=[i];seen[i]=1;let red=0,wood=0;for(let j=0;j<q.length;j++){const n=q[j],x=n%w,y=n/w|0;if(p[n*4]>120&&p[n*4]>p[n*4+1]*1.8&&p[n*4]>p[n*4+2]*1.4)red++;if(p[n*4]>75&&p[n*4]>p[n*4+2]*1.4&&p[n*4+1]>p[n*4+2]*1.25)wood++;for(const a of[x?n-1:-1,x<w-1?n+1:-1,y?n-w:-1,y<h-1?n+w:-1])if(a>=0&&!seen[a]&&p[a*4+3]>=150){seen[a]=1;q.push(a);}}if(q.length>120)parts.push({pixels:q.length,red:red/q.length,wood:wood/q.length});}parts.sort((a,b)=>b.pixels-a.pixels);return parts.slice(1).filter(g=>g.red<.35&&g.wood<.35);}
+(async()=>{const root='characters/genis',m=JSON.parse(fs.readFileSync(process.env.GENIS_LAYOUT||root+'/tests/art-layout.json')),native=process.env.GENIS_ATLAS||root+'/assets/genis-native.png',bad=[];for(let n=0;n<61;n++){const [left,top,width,height]=m.frames[n],{data}=await sharp(native).extract({left,top,width,height}).ensureAlpha().raw().toBuffer({resolveWithObject:true});const stray=strayParts(data,width,height);if(stray.length)bad.push({n,stray});}
+ assert.deepEqual(bad,[],'Each pose must contain one complete body and its own kendama, without neighbour hair/feet.');
+ const [left,top,width,height]=m.frames[0],a=await sharp(native).extract({left,top,width,height}).raw().toBuffer(),b=await sharp(root+'/assets/genis-neutral-locked.png').raw().toBuffer();assert.deepEqual(a,b,'First approved neutral must remain byte-identical.');
+ console.log(JSON.stringify({isolatedWholeBodyPoses:61,neutralIdentical:true}));
+})().catch(e=>{console.error(e);process.exitCode=1;});
