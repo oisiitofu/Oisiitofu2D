@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-23",
+  "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "implementationCommits": [
+    "911a6ad",
+    "ea0f6dd",
+    "8041981"
+  ],
+  "sourceCommit": "258e8ae9dc4b1ade3b51daad2c4a6302d8a82093",
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_861bd0912ac8819198a632952fad2b58",
+  "version": 132,
+  "deployment": {
+    "id": "appgdep_6adb4ff064c08191b614823cc657a57c",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_861bd0912ac8819198a632952fad2b58",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 259,
+    "updated_at": "2026-10-23T12:15:58.193946+00:00"
+  },
+  "uploads": {
+    "objects": 84,
+    "bytes": 51567718,
+    "failed": 0,
+    "temporaryKeyRemoved": true
+  },
+  "qa": {
+    "functional": {
+      "hachiware": 98,
+      "presea": 98,
+      "zack": 120
+    },
+    "meleeSpecials": 104,
+    "publicFilesSHA256": 83,
+    "catalogMatches": true,
+    "onlineHTTP": 200,
+    "publicOnline": {
+      "hachiware": {
+        "scenes": 6,
+        "identicalFrames": 240
+      },
+      "presea": {
+        "scenes": 6,
+        "identicalFrames": 240
+      },
+      "zack": {
+        "scenes": 6,
+        "identicalFrames": 240
+      }
+    },
+    "publicVisual": {
+      "normalScenes": {
+        "hachiware": 30,
+        "presea": 30,
+        "zack": 32
+      },
+      "specialScenesEach": 28,
+      "idleColorsEach": 10,
+      "additionalVariantScenes": 18
+    }
+  },
+  "imageGeneration": {
+    "mode": "built-in imagegen",
+    "records": [
+      "characters/hachiware/docs/image-prompts.json",
+      "characters/presea/docs/image-prompts.json",
+      "characters/zack/docs/image-prompts.json"
+    ],
+    "assetFolders": [
+      "characters/hachiware/assets",
+      "characters/presea/assets",
+      "characters/zack/assets"
+    ],
+    "promptCounts": {
+      "hachiware": 8,
+      "presea": 7,
+      "zack": 9
+    }
+  },
+  "runtime": {
+    "gameServerPID": 23316,
+    "launcherPID": 28272,
+    "tunnelPID": 3084,
+    "publicTunnelPreserved": true
+  }
+}
