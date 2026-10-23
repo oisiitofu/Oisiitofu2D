@@ -1,0 +1,122 @@
+{
+  "definition": {
+    "id": "tidus",
+    "name": "ティーダ",
+    "style": "FINAL FANTASY X / TIDUS",
+    "number": "165",
+    "description": "剣とブリッツボールで連携。NBはタップで直球、長押しで曲がるジェクトシュート。横Bは先に投げたボールを追い、上下入力や再入力で斬り上げへ。上Bは跳躍・空中斬り・回転から入力方向へ離脱。下B4連撃を同じ相手へ完走するとヘイスト。ゲージ最大で次のスマッシュ強化。",
+    "pose": 76
+  },
+  "after": "tifa",
+  "anchorName": "ティファ",
+  "height": 98,
+  "tier": 3,
+  "weight": 94,
+  "mask": "(r>90&&green>75&&green>r*.66&&b<green*.3)",
+  "crop": [
+    0,
+    0,
+    1374,
+    1181
+  ],
+  "selectionSource": "characters/tidus/assets/tidus-selection-final.png",
+  "frames": 77,
+  "effects": 16,
+  "upperCurves": [
+    1,
+    9
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0.707,
+      -0.707
+    ],
+    "3": [
+      1,
+      0
+    ],
+    "4": [
+      0,
+      -1
+    ],
+    "6": [
+      1,
+      0
+    ],
+    "8": [
+      1,
+      0
+    ],
+    "9": [
+      0,
+      -1
+    ],
+    "10": [
+      0.707,
+      -0.707
+    ],
+    "11": [
+      1,
+      0
+    ],
+    "12": [
+      0.707,
+      0.707
+    ],
+    "13": [
+      0,
+      -1
+    ],
+    "15": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 3,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 2,
+    "fair": 0,
+    "bair": 3,
+    "uair": 3,
+    "dair": 12,
+    "dash": 0,
+    "rise": 1,
+    "gale": 0,
+    "airDrop": 0
+  },
+  "physics": {
+    "walkSpeed": 3.4,
+    "initialDashSpeed": 7.1,
+    "runSpeed": 7.5,
+    "airSpeed": 6.4,
+    "airAcceleration": 0.42,
+    "gravity": 0.59,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 18,
+      "height": 84
+    },
+    "shieldSize": 45,
+    "shieldOffset": [
+      0,
+      -42
+    ]
+  }
+}

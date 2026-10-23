@@ -1746,5 +1746,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "tidus": {
+    "source": "characters/tidus/assets/tidus-selection-final.png",
+    "crop": [
+      0,
+      0,
+      1374,
+      1181
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
