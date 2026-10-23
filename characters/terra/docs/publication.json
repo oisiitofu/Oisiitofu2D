@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-23",
+  "character": "terra",
+  "implementationCommits": [
+    "6c1b33d",
+    "845c5a4"
+  ],
+  "mode": "built-in imagegen",
+  "assets": "characters/terra/assets/",
+  "prompts": "characters/terra/docs/image-prompts.json",
+  "package": {
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "commit_sha": "ed8e7190a72274cbe72fb9241497a2762c8862ba",
+    "archive": "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/.tools/terra-site.tar.gz"
+  },
+  "version": {
+    "id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_ce6d25cbdfd88191aab27fbcb8aeb4a3",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "version_number": 130,
+    "source": {
+      "commit_sha": "ed8e7190a72274cbe72fb9241497a2762c8862ba"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000001c3c81f8a768fd649a545641",
+      "content_hash": "sha256:31f63c92eb51cb9acb7549d4d43cabe06d372041335d12e8c4c32d081b39f5b7",
+      "size_bytes": 655360,
+      "file_count": 2
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6adaaa91dc308191b22f35e21dd22293",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_ce6d25cbdfd88191aab27fbcb8aeb4a3",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 255,
+    "updated_at": "2026-10-23T00:30:24.545693+00:00"
+  },
+  "upload": {
+    "objects": 30,
+    "bytes": 35995160,
+    "failed": []
+  },
+  "verification": {
+    "functional": 186,
+    "normalScenes": 60,
+    "specialScenes": 40,
+    "idleColorScenes": 20,
+    "continuousSamples": 120,
+    "cpuMatches": 1,
+    "poses": 123,
+    "effects": 32,
+    "costumeFrames": 615,
+    "artMismatches": 0,
+    "onlineScenes": 6,
+    "identicalOnlineFrames": 240,
+    "publicShaFiles": 29,
+    "catalogMatches": true,
+    "onlineHttp": 200
+  },
+  "server": {
+    "game": 26056,
+    "launcher": 28272,
+    "tunnel": 3084
+  }
+}
