@@ -1,0 +1,8 @@
+{
+ "definition":{"id":"terra","name":"ティナ","style":"FINAL FANTASY VI / TERRA BRANFORD","number":"164","description":"剣と幻獣の魔導。NBメルトンは溜めと飛行時間で成長。横Bフラッドは方向入力で水柱を近・中・遠に配置。上Bは3つの竜巻から合体して抜けるトルネド・スパイラル。ゲージ100で下Bトランス、9秒間強化。変身中の下Bでアルテマを放ち解除。","pose":61},
+ "before":"tifa","anchorName":"ティファ","height":94,"tier":2,"weight":88,
+ "mask":"(r>70&&green<r*.65&&b<r*.78)","crop":[560,0,960,1024],"frames":123,"effects":32,"upperCurves":[3],
+ "axes":{"0":[1,0],"1":[1,0],"2":[1,0],"3":[0,-1],"4":[1,0],"5":[1,0],"6":[0,-1],"7":[0.707,0.707],"8":[1,0],"9":[1,0],"10":[1,0],"11":[0,-1],"12":[0.707,-0.707],"13":[0.707,-0.707],"16":[1,0],"17":[1,0],"18":[1,0],"19":[0,-1],"20":[0.707,-0.707],"21":[0.707,-0.707],"25":[1,0],"29":[0,-1],"30":[1,0],"31":[0,-1]},
+ "types":{"jab":0,"jab2":1,"jab3":2,"heavy":1,"up":3,"low":0,"dashAttack":1,"smash":30,"upsmash":29,"downsmash":14,"air":4,"fair":5,"bair":0,"uair":6,"dair":7,"rise":12},
+ "physics":{"walkSpeed":3,"initialDashSpeed":6.4,"runSpeed":6.8,"airSpeed":6,"airAcceleration":0.4,"gravity":0.59,"fullHopVelocity":13.8,"ecb":{"radius":18,"height":80},"shieldSize":44,"shieldOffset":[0,-40]}
+}

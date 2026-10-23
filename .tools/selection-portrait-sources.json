@@ -1735,5 +1735,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "terra": {
+    "source": "characters/terra/assets/terra-selection.png",
+    "crop": [
+      560,
+      0,
+      960,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
