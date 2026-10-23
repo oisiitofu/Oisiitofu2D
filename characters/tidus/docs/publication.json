@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-23",
+  "character": "tidus",
+  "implementationCommits": [
+    "119d521",
+    "3fcc5f3"
+  ],
+  "mode": "built-in imagegen",
+  "assets": "characters/tidus/assets/",
+  "prompts": "characters/tidus/docs/image-prompts.json",
+  "package": {
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "commit_sha": "329a94b65b40e9010681e0efa2458d8a904a9bb8",
+    "archive": "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/.tools/tidus-site.tar.gz"
+  },
+  "version": {
+    "id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_eae9220102ec8191ba2201f57720857c",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "version_number": 131,
+    "source": {
+      "commit_sha": "329a94b65b40e9010681e0efa2458d8a904a9bb8"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_000000008d38823085249926ad4c056c",
+      "content_hash": "sha256:c2b289c70db02fcb8e29a63ded53fb5a2674ae9e22c4d3fd7ab4b137722c23ad",
+      "size_bytes": 655360,
+      "file_count": 2
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "deployment": {
+    "id": "appgdep_6adb35dd946c8191bca7557fc2bac3b9",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_eae9220102ec8191ba2201f57720857c",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 257,
+    "updated_at": "2026-10-23T10:24:44.473963+00:00"
+  },
+  "upload": {
+    "objects": 30,
+    "bytes": 25114584,
+    "failed": []
+  },
+  "verification": {
+    "functional": 112,
+    "normalScenes": 30,
+    "specialScenes": 28,
+    "idleColorScenes": 10,
+    "continuousSamples": 60,
+    "cpuMatches": 1,
+    "poses": 77,
+    "effects": 16,
+    "costumeFrames": 385,
+    "artMismatches": 0,
+    "onlineScenes": 6,
+    "identicalOnlineFrames": 240,
+    "presentationIntroScenes": 8,
+    "presentationEndScenes": 6,
+    "presentationMobile": true
+  },
+  "server": {
+    "game": 26592,
+    "launcher": 28272,
+    "tunnel": 3084
+  }
+}
