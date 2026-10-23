@@ -1,0 +1,12 @@
+{
+  "fighters": 162,
+  "adjacent": [
+    "vivi",
+    "tidus",
+    "lightning"
+  ],
+  "otherOrderPreserved": true,
+  "sequentialNumbers": true,
+  "randomLast": true,
+  "errors": []
+}

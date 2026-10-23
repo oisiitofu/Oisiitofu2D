@@ -13,12 +13,12 @@ const Roster=(()=>{
   'terra', // ティナ
   'tifa', // ティファ
   'zack', // ザックス
-  'tidus', // ティーダ
   'aerith', // エアリス
   'yuffie', // ユフィ
   'vincent', // ヴィンセント
   'zidane', // ジタン
   'vivi', // ビビ
+  'tidus', // ティーダ
   'lightning', // ライトニング
   'dragoon', // ララフェル
   'noctis', // ノクティス

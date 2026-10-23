@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-23",
+  "change": "ティーダをビビの直後へ移動",
+  "sourceCommit": "77f4c8b076016cb1909d547dda0b5ddcdad48d34",
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_c488b45a2d948191a43445c42f522aa6",
+  "version": 133,
+  "deployment": {
+    "id": "appgdep_6adb53fa0e8c81919d568b9eec7a41a2",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_c488b45a2d948191a43445c42f522aa6",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 261,
+    "updated_at": "2026-10-23T12:33:15.461230+00:00"
+  },
+  "uploads": {
+    "objects": 1,
+    "bytes": 3237455,
+    "failed": 0,
+    "temporaryKeyRemoved": true
+  }
+}
