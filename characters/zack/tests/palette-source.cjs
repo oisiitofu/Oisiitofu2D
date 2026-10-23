@@ -1,0 +1,3 @@
+// Only substantial connected navy cloth regions change color. Small isolated
+// blue irises retain their original color, including in the large portrait.
+function zackPaletteMask(d,w,h){const mask=new Uint8Array(w*h),seen=new Uint8Array(w*h),out=new Uint8Array(w*h),minimum=Math.max(35,w*h*.004);for(let n=0;n<w*h;n++){const i=n*4,r=d[i],g=d[i+1],b=d[i+2];if(d[i+3]>30&&r<100&&b>r*1.3&&b>g*1.2&&b-g>18&&g<125)mask[n]=1;}for(let n=0;n<mask.length;n++){if(!mask[n]||seen[n])continue;const group=[n];seen[n]=1;for(let j=0;j<group.length;j++){const a=group[j],x=a%w,y=a/w|0;for(const v of[x?a-1:-1,x<w-1?a+1:-1,y?a-w:-1,y<h-1?a+w:-1])if(v>=0&&mask[v]&&!seen[v]){seen[v]=1;group.push(v);}}if(group.length>=minimum)for(const a of group)out[a]=1;}return out;}

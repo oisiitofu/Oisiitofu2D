@@ -1,0 +1,80 @@
+[
+  {
+    "name": "basic",
+    "prompt": "Create a transparent game sprite atlas of ZACK FAIR from Final Fantasy VII Crisis Core, using attached reference for exact character identity and costume. EXACTLY SIXTEEN full-body sprites, FOUR columns by FOUR rows, generous gutters and all hair, boots and entire Buster Sword fully inside each cell. No text, labels, effects, panels, shadows, ground or other characters. High-detail clean anime rendering equal or better than reference. Young adult man with spiky BLACK hair, blue eyes, navy sleeveless SOLDIER uniform, ribbed dark waist guard and brown belts, dark shoulder pauldrons, black gloves and boots. Huge broad grey Buster Sword, squared blade and two materia holes. Preserve face, muscles and costume proportions across poses. Facing opponent RIGHT three-quarter, not frontal. Row 1: battle ready neutral with feet apart and sword diagonally behind right shoulder; walk right left foot forward sword low; walk right opposite step; walk right recovering step. Row 2: upright walk recovery; running right sword behind; running right opposite stride; low dash startup right. Row 3: dash loop sprint right; dash stop braced feet; turning body away looking right; deep crouch holding sword across body. Row 4: jump squat sword behind; jumping rise knee lifted; airborne falling upright boots down and sword close; double jump twist airborne sword across body. Exactly sixteen separate complete figures. Keep his design from the reference, not Cloud's blond hair or alternate clothing. Leave ample empty space between all figures.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-reference.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "selection",
+    "prompt": "Dedicated HIGH RESOLUTION character-selection portrait illustration of ZACK FAIR, Final Fantasy VII Crisis Core. Image 1 exact design, image 2 approved gameplay identity. Face and shoulders close-up only, head centered, entire spiky black hair and comfortable transparent margin above, sharp blue eyes and confident warm smile, three-quarter looking slightly RIGHT. Dark shoulder pauldrons, navy sleeveless SOLDIER uniform, athletic shoulders. Preserve black hair, face, costume and two small facial scars from reference where visible. Crisp detailed beautiful anime rendering at least as good as reference. Portrait face must occupy much of canvas, not fullbody. Transparent cutout background, no text/logo/frame/scenery/shadow. Buster sword may rest behind shoulder but may not cover face. Both shoulders visible and head completely in frame. No Cloud or blond hair. Clean high-resolution linework suitable for face/shoulders selection cards.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "attacks",
+    "prompt": "Create a NEW transparent FULL-BODY battle attack sprite atlas of ZACK FAIR. Image 1 exact identity, outfit and broad grey Buster Sword; image 2 approved body proportions and style only. EXACTLY SIXTEEN figures in FOUR columns and FOUR rows. All entire swords and spiky hair stay inside each cell with generous gutters; no text, labels, effects, scenery, target dummies, shadows or ground. Adult athletic man, black spiky hair, blue eyes, navy sleeveless SOLDIER uniform, brown belts, dark shoulder guards, gloves and boots. Faces opponent RIGHT. Precise two arms and two legs; different whole-body attack poses, never simply rotate same image. Row 1: calibration approved neutral; jab horizontal sword slash RIGHT with left foot forward; jab2 reverse rising slash sword blade clearly UPPER-RIGHT and torso twisting, right foot forward; jab3 thrusting sword upwards RIGHT from crouch. Row 2: strong tilt broad horizontal sweep RIGHT with deep wide stance; up tilt both hands raising sword ABOVE HEAD, blade high; low tilt crouched low sweeping sword RIGHT at boot height; dash attack shoulder ram with sword diagonal forward RIGHT. Row 3: forward smash long lunge broad sword RIGHT held fully extended; up smash airborne rising blade ABOVE-RIGHT with both knees bent; down smash deep squat sword horizontal RIGHT near ground; neutral air airborne sideways horizontal cut RIGHT, legs split with one knee tucked, blade across chest level. Row 4: forward air overhead downward chop RIGHT while feet trail LEFT; back air face RIGHT while sword stabs LEFT behind back, long blade clearly LEFT; up air kicking feet behind while sword swings OVERHEAD; down air head above blade, plunge sword DOWN-RIGHT with both knees folded. Distinct body and weapon angles for each. No Cloud. Transparent outside all sixteen complete figures.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "specials",
+    "prompt": "NEW transparent full-body game special-move sprite atlas for Zack Fair, image1 exact design and image2 approved proportions. EXACTLY SIXTEEN complete figures, FOUR columns and FOUR rows, no fifth row. Navy sleeveless SOLDIER outfit, spiky black hair, blue eyes, athletic adult proportions, dark shoulder guards gloves boots, broad GREY Buster Sword with squared blade and two holes. Entire sword and character in every cell, generous transparent gaps, no text, labels, effects, fire, panels, ground, shadows or target dummies. Faces RIGHT. Row 1: approved neutral calibration; fire spell windup open LEFT hand held forward RIGHT and sword in other hand behind; charged fire casting with open hand near chest and braced stance; fire release arm fully extended RIGHT open palm, sword low behind. Row 2: assault twister beginning low rotational sword sweep RIGHT; assault twister leaping upward sword across chest knees folded; assault twister descending diagonal sword slash RIGHT. Row 3: high jump takeoff crouched sword tilted UP-RIGHT; high jump midair twisting body ready to steer sword beside; high jump finishing downward slash RIGHT with legs behind; heavy stance preparation sword drawn behind shoulder. Row 4: heavy attack release forceful sword sweep RIGHT deep lunge; normal falling upright boots below body sword down beside; landing deeply bent knees sword diagonally above; forward evasive roll body compact sword close; backward evasive roll body tucked sword close. Distinct full-body pictures. Do NOT copy locomotion poses from the reference atlas. No extra figures or extra arms. Keep consistent face and body dimensions.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "specials-final",
+    "prompt": "Create exactly 16 complete full-body Zack Fair sprites on transparent background. Strict FOUR columns and FOUR rows, exactly FOUR poses per row as specified below. No extra poses, no fifth column or row. Image 1 exact character design, image 2 approved proportions only. Spiky BLACK hair, blue eyes, navy sleeveless SOLDIER outfit, dark shoulder guards, gloves boots, broad grey Buster Sword. Entire bodies and swords within own cells, wide empty gutters. No text, labels, effect trails, fire, ground or shadows. All face RIGHT. ROW ONE (four cells): 1 approved neutral standing; 2 fire-spell windup left palm aimed right and sword held behind in other hand; 3 charged fire-spell braced pose open palm near chest; 4 fire spell release palm stretched right, sword held low behind. ROW TWO (four cells): 1 low rotational sword slash right; 2 jumping upward spinning sword across chest; 3 descending spinning sword slash down-right; 4 high-jump takeoff crouched with sword diagonal UP-RIGHT. ROW THREE (four cells): 1 airborne body twisting to steer, sword held beside body; 2 airborne finishing slash DOWN-RIGHT legs trailing behind; 3 planted heavy attack stance with sword over right shoulder; 4 grounded powerful sword slash RIGHT with deep lunge. ROW FOUR (four cells): 1 ordinary fall upright boots down, sword down beside; 2 landing with knees deeply bent sword above back; 3 compact forward evasive roll sword close; 4 compact backward evasive roll sword close. Exact sixteen sprites, four in each row. Do not repeat a fifth takeoff pose. Keep precise adult proportions and same character face throughout.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "defense",
+    "prompt": "Create exactly SIXTEEN full-body ZACK FAIR defense and throw sprites in FOUR columns by FOUR rows, four poses per row. Image 1 exact identity/costume, image 2 approved adult proportions and rendering style. Spiky black hair, blue eyes, navy sleeveless SOLDIER uniform, dark shoulder guards, gloves/boots, enormous broad grey Buster Sword. All bodies and complete swords fit each cell with wide transparent gutters. No labels, text, effects, shadows, ground, ledges or other characters. Normally face RIGHT. ROW ONE: 1 approved standing neutral for calibration; 2 grab forward with left hand sword held behind in right; 3 pummel with forehead, sword tucked behind; 4 forward throw both arms pushing right. ROW TWO: 1 backward throw twist left; 2 up throw lifting arm upward while sword down behind; 3 low foot sweep throw right; 4 guard with broad sword across torso. ROW THREE: 1 compact air dodge; 2 flinch from light damage; 3 airborne heavy launch backward; 4 knocked down lying on side sword beside. ROW FOUR: 1 low getup kick right sword behind; 2 hang by one FREE hand raised to highest point, sword held down by other hand; 3 climbing over a ledge facing right, no actual ledge; 4 dedicated helpless fall upright with both boots hanging low, sword held close beside. Exactly sixteen complete illustrations, same face and body dimensions. Entire image outside paint genuinely transparent.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "extra",
+    "prompt": "Create exactly sixteen additional FULL-BODY Zack Fair game sprites, arranged FOUR columns by FOUR rows with FOUR figures in each row. Input 1 exact character design and Input 2 approved adult body proportions and anime style. Entire sword, hair and boots inside each cell, generous transparent gutters. Spiky black hair, blue eyes, navy sleeveless SOLDIER outfit, dark pauldrons, gloves and boots, broad grey Buster Sword. Normally faces RIGHT. No text, effects, shadows, floor, panels, other characters or extra limbs. ROW ONE: 1 approved neutral standing; 2 heavy attack ready stance with both hands holding sword behind right shoulder; 3 deeper charged stance twisting torso and sword pulled back; 4 heavy attack release powerful broad sword sweep RIGHT waist height, deeply planted feet. ROW TWO: 1 high-jump airborne turning in place with sword held across chest, both knees tucked; 2 high-jump finishing forward-right slash with blade downward and legs stretched behind; 3 unique FOURTH JAB, strong stepping lunge RIGHT with sword tip driven diagonally forward-right at waist, both hands at hilt, back foot raised; 4 octaslash rising diagonal cut upper-right, body twisting and one knee bent. ROW THREE: 1 Hard Rush shoulder tackle forward RIGHT, sword held back, body nearly horizontal; 2 whole-body attack anticipation drawing sword behind LEFT shoulder; 3 whole-body recovery drawing broad sword back across waist; 4 neutral-air windup airborne curled knees and sword low behind LEFT. ROW FOUR: 1 neutral-air follow-through airborne horizontal sword RIGHT, body rotated away, legs trailing differently from ordinary air strike; 2 costly punch: bare LEFT fist fully extended RIGHT, sword in right hand held behind leftwards, deep low lunge, no glow; 3 healing wave: standing calm with one open hand over chest and sword planted tip down beside, no aura; 4 helpless fall upright with both boots low and sword held down close beside, face worried. Exactly sixteen complete distinct poses. Preserve character proportions and face.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "effects",
+    "prompt": "Create a transparent 2D battle visual-effects atlas for Zack Fair's Buster Sword, fire magic, D.M.W. and heavy punches. Exactly sixteen effects in FOUR columns and FOUR rows, four effects per row with wide transparent gutters. No characters, actual swords, text, numbers, logos, scenery, ground plane, labels or opaque rectangular backgrounds. Beautiful sharp anime effects equal or better than reference, broad physical silver-blue sword trails, orange fire, yellow lightning, purple punch, green healing. ROW ONE: 1 broad silver-blue horizontal crescent with CONVEX bright cutting surface RIGHT and open tails LEFT; 2 ONE wide overhead silver-blue canopy with convex surface UP, open side DOWN; 3 one broad asymmetrical blue-white hooked blade swish going RIGHT, no full ring; 4 red-white heavy sword crescent convex RIGHT. ROW TWO: 1 sharp golden lightning pillar aimed UP; 2 small orange fireball flying RIGHT with flames trailing LEFT; 3 large intense orange fireball flying RIGHT, flames trailing LEFT; 4 gold-white impact starburst with pointed impact nose RIGHT and trails LEFT. ROW THREE: 1 blue-white curved ascending sword slash from lower LEFT to upper RIGHT; 2 beige landing dust; 3 blue-white spinning wind twister with open curved trails and convex cutting edge RIGHT; 4 green healing rays and small green sparkles, no cross symbol or character. ROW FOUR: 1 silver-blue diagonal blade trail going DOWN-RIGHT; 2 purple-white explosive punch impact nose RIGHT and trails LEFT; 3 single gold four-point limit star emblem; 4 long blue-white finishing sword crescent convex RIGHT. Every whole effect inside own cell. Genuinely transparent alpha outside paint, no solid background.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-reference.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "selection-final",
+    "prompt": "Edit this selection portrait ONLY for framing. Keep Zack's face, eyes, smile, black hair shapes, costume, sword and shoulder illustration exactly matching the input. Zoom OUT enough to restore ALL cut-off hair spikes at the TOP, and leave at least 100 pixels of EMPTY TRANSPARENT SPACE above the highest hair point. All hair tips must be completely inside the canvas. Keep the face centered horizontally and show face plus shoulders, no legs. Expand the canvas vertically if necessary. Do not change character design or expression and do not repaint a different face. Actual transparent background everywhere outside character. Remove any colored glow outside the silhouette. No text, logos or scenery. TOP HAIR MUST NOT TOUCH THE TOP EDGE: a visible transparent margin above the entire head is essential.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/zack/assets/zack-selection-draft.png"
+    ],
+    "transparent_background": true
+  }
+]

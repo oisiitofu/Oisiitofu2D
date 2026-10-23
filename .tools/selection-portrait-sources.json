@@ -1779,5 +1779,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "zack": {
+    "source": "characters/zack/assets/zack-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

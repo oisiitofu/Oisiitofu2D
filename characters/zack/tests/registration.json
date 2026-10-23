@@ -1,0 +1,121 @@
+{
+  "definition": {
+    "id": "zack",
+    "name": "ザックス",
+    "style": "FINAL FANTASY VII / ZACK FAIR",
+    "number": "168",
+    "description": "バスターソードとMP魔法を操る。弱攻撃は4段。NBは溜めで3段階の炎弾。横Bは回転しながら跳んで斬り下ろす。上Bは跳躍中の方向入力で一度だけ進路を変える。下Bは溜める強撃、溜め中に攻撃でHPを使うパンチ。D.M.W.の777で一時強化と次のNB/横B/下Bのリミット技。666はMP、555は回復。",
+    "pose": 76
+  },
+  "after": "tifa",
+  "anchorName": "ティファ",
+  "height": 98,
+  "tier": 3,
+  "weight": 103,
+  "mask": "(r<100&&b>r*1.3&&b>green*1.04&&green<125)",
+  "crop": [
+    0,
+    0,
+    1536,
+    1024
+  ],
+  "frames": 77,
+  "effects": 16,
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "3": [
+      1,
+      0
+    ],
+    "4": [
+      0,
+      -1
+    ],
+    "5": [
+      1,
+      0
+    ],
+    "6": [
+      1,
+      0
+    ],
+    "7": [
+      1,
+      0
+    ],
+    "8": [
+      0.707,
+      -0.707
+    ],
+    "10": [
+      0,
+      -1
+    ],
+    "12": [
+      0.707,
+      0.707
+    ],
+    "13": [
+      1,
+      0
+    ],
+    "15": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 8,
+    "jab3": 1,
+    "jab4": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 15,
+    "upsmash": 4,
+    "downsmash": 0,
+    "air": 2,
+    "fair": 12,
+    "bair": 0,
+    "uair": 1,
+    "dair": 12,
+    "dash": 10,
+    "rise": 8,
+    "gale": 3,
+    "airDrop": 3
+  },
+  "physics": {
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.6,
+    "runSpeed": 7,
+    "airSpeed": 5.9,
+    "airAcceleration": 0.37,
+    "gravity": 0.62,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 20,
+      "height": 86
+    },
+    "shieldSize": 46,
+    "shieldOffset": [
+      0,
+      -43
+    ]
+  }
+}
