@@ -1,0 +1,12 @@
+const fs=require('fs'),root='characters/hachiware/tests/';
+let s=fs.readFileSync('characters/tidus/tests/assemble-art.cjs','utf8').replaceAll('tidus','hachiware').replaceAll('Tidus','Hachiware');
+let a=s.indexOf(' // The painted heel'),b=s.indexOf(" for(const p of['basic'",a);s=s.slice(0,a)+s.slice(b);
+a=s.indexOf(' // The unapproved source');b=s.indexOf(" const r=await raw('selection-final')",a);s=s.slice(0,a)+s.slice(b).replace("raw('selection-final')","raw('selection')");
+s=s.replace('referenceHeight=base.h-6','referenceHeight=bodyMeasure(base).body').replace('(sheets[p][0].h-6)','bodyMeasure(sheets[p][0]).body');
+a=s.indexOf(' const measures=poses.map(');b=s.indexOf(' const hand=',a);s=s.slice(0,a)+' const measures=poses.map(bodyMeasure);\n'+s.slice(b);
+s=s.replace('anchors:poses.map(()=>.5)','anchors:measures.map(v=>v.anchor)').replace('98/(Hachiware','76/(Hachiware');
+a=s.indexOf(' const crops=');b=s.indexOf(' for(const [x,y,w,h]of crops)',a);s=s.slice(0,a)+' const crops=Array.from({length:16},(_,n)=>[n%4*384,Math.floor(n/4)*256,384,256]),effects=[];\n'+s.slice(b);
+a=s.indexOf('(async()=>');s=s.slice(0,a)+fs.readFileSync(root+'body-measure.cjs','utf8')+'\n'+s.slice(a);fs.writeFileSync(root+'assemble-art.cjs',s);
+let reg=fs.readFileSync('characters/tidus/tests/register.cjs','utf8').replaceAll('tidus','hachiware').replaceAll('Tidus','Hachiware');
+reg=reg.replace("if(['terra','onionknight'","if(['tidus','terra','onionknight'").replace("if(['${id}','terra','onionknight'","if(['${id}','tidus','terra','onionknight'");
+reg=reg.replace("edit('battle-size.js',`${cfg.tier}:['`,`${cfg.tier}:['${id}','`);","if(cfg.tier)edit('battle-size.js',`${cfg.tier}:['`,`${cfg.tier}:['${id}','`);");fs.writeFileSync(root+'register.cjs',reg);

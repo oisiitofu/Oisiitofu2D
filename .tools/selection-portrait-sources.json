@@ -1757,5 +1757,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "hachiware": {
+    "source": "characters/hachiware/assets/hachiware-selection.png",
+    "crop": [
+      0,
+      0,
+      1312,
+      1199
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

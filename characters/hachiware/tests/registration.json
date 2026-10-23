@@ -1,0 +1,106 @@
+{
+  "definition": {
+    "id": "hachiware",
+    "name": "ハチワレ",
+    "style": "ちいかわ / HACHIWARE",
+    "number": "166",
+    "description": "さすまたとカメラで戦う。NBは短い突き、長押しで全力突き。横Bは跳び込みから急降下し、地面で跳ねて突進。上Bはさすまたを軸に棒高跳びして前へ飛び出す。下Bはカメラのフラッシュ、長押しで範囲と威力が上がる。",
+    "pose": 76
+  },
+  "after": "chiikawa",
+  "anchorName": "ちいかわ",
+  "height": 76,
+  "weight": 90,
+  "mask": "(r<170&&b>r*1.2&&b>green*1.05&&b>60)",
+  "crop": [
+    0,
+    0,
+    1312,
+    1199
+  ],
+  "frames": 77,
+  "effects": 16,
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "3": [
+      -1,
+      0
+    ],
+    "4": [
+      0,
+      -1
+    ],
+    "5": [
+      1,
+      0
+    ],
+    "8": [
+      0.707,
+      -0.707
+    ],
+    "12": [
+      0.707,
+      0.707
+    ],
+    "13": [
+      0,
+      -1
+    ],
+    "15": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 5,
+    "jab2": 0,
+    "jab3": 1,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 3,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 2,
+    "fair": 5,
+    "bair": 5,
+    "uair": 1,
+    "dair": 12,
+    "dragon": 5,
+    "dash": 12,
+    "rise": 1
+  },
+  "physics": {
+    "walkSpeed": 2.7,
+    "initialDashSpeed": 6.1,
+    "runSpeed": 6.5,
+    "airSpeed": 5.8,
+    "airAcceleration": 0.38,
+    "gravity": 0.55,
+    "fullHopVelocity": 13.5,
+    "ecb": {
+      "radius": 22,
+      "height": 60
+    },
+    "shieldSize": 43,
+    "shieldOffset": [
+      0,
+      -34
+    ]
+  }
+}
