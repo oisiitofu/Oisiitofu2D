@@ -1,0 +1,63 @@
+[
+  {
+    "name": "basic",
+    "prompt": "Use case stylized-concept. Production game fullbody 16pose atlas of PRESEA COMBATIR from Tales of Symphonia. Use attached sheet as exact character/outfit/axe reference. Small young girl with short pink twin pigtails and greeneyes, purple sleeveless outfit, goldbelt, darkshortskirt/shorts as reference, fingerless brown gloves and thick brown boots. Huge silver double edged battleaxe on long brown gold shaft. Preserve original child proportions and specific outfit, highdetail clean colored anime linework equalorbetter than sheet. 4columns4rows, each fullbody and ENTIRE axe in owncell, generous transparentgutter, genuinelytransparentbackground. NO labels, text, borders, ground, shadow, effects or targetdummy. Rowmajor:0 RIGHT-facing threequarter battle ready standing feet apart holding huge axe diagonallydownright;1slowwalkright leftfootforward;2walkright rightfootforward;3walking stepping forward with axe angledback;4walkrecover upright;5running right leaningforward axe behind;6running second stride legs reversed;7dash start crouched accelerating right;8dash run low forward legs extended;9dashstopbraced feet;10turnbodybacklookingright;11deepcrouchaxe acrossbody;12jump squat withaxe back;13jump rise leftkneeupraised;14airbornefall feet down axe diagonalbehind;15doublejump airborne twist axearoundbody. Eachposefullbodyisolated. Neutral0must face opponent RIGHT, not frontal. No adult body proportions or long legs. No alternate costumes. Same characterheadscale acrossposes.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-reference.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "selection",
+    "prompt": "Use case stylized-concept. Dedicated HIGH RESOLUTION character-selection illustration of Presea Combatir, not a sprite crop. Input1 exact design, input2 approved game appearance. Tight FACE AND SHOULDERS bust, full pink pigtails and entire top of head visible with comfortable topmargin, face centered, greeneyes seriousgentle expression, threequarter looking slightlyRIGHT towardopponent. Preserve child's roundface and pinktwinpigtails, blackhairties, purple sleevelessclothing goldtrim and glove glimpse. Beautiful sharp anime lineart/rendering equalorbetterthansheet, face large readable at smallcard scale. Transparentbackground. NO fullbody/feet, NO weapon crossingface, NO texts/logos/frame/shadows/background. Complete upperbody cutout, naturallywide shouldercomposition. Hairmayflowlaterally but topnotcropped.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "attacks",
+    "prompt": "Use case stylized-concept. New FULLBODY gameplay attack sprite atlas for Presea Combatir. Reference1 exact identity outfit/hugeaxe, reference2 approved body proportions and linework. 4columns4rows16separatedposes on genuinelytransparent background. Each entire girl and wholebattleaxe fitswithin owncell with20pxgutter; no labels, text, targetdummy, effects, shadows/ground. SMALL GIRL proportions, pinktwinpigtails greeneyes purplegold sleevelessoutfit brownglovesboots. FacesRIGHT opponent (backairlooksrightwhileattacksleft). Rowmajor0 calibration approvedneutral;1 jab horizontal axe swatRIGHT chestheight;2jab2 reverse diagonal upswing axeUPRIGHT headheight;3jab3 shoving axe outwardRIGHT withwideplanted stance;4heavy massive horizontalaxe sweepRIGHTlowstance;5upattack liftingaxe directly OVERHEADaboveears twoarmsup;6lowattack deepcrouch sweepingaxebladeRIGHTnearboots;7dashattack shouldersforward axebladeDOWNRIGHT scooping;8forwardSMASH big lunge entireaxe extendedRIGHT atwaist bothhands;9upSMASH leaping twirlingaxe OVERHEAD, bladeABOVEHEAD, bothkneesbent;10downSMASH deepwide squat axe extendedRIGHTnearGROUND notabove;11neutralAIR airborne broad axe rotation, bodytwisted axeaboveleftshoulder, bothlegs tucked;12forwardAIR airborne axe downward chopRIGHT, legs trailingLEFT;13BACKAIR airborne facingRIGHT but bothhands drive axeblade toLEFT behindback, bladeLEFTnotright;14upAIR feet hanging and botharms liftaxe vertically abovehead;15downAIR downward axe plunge, fullbody aboveaxe, bladeatbottomDOWNRIGHT, kneesfolded. Every attack hasdistinctbodypose anddifferentweaponangle. No reuse of sameposewithminorrotation. Preciselytwoarms/twolegs. Maintainhead/body/limbdimensions acrossposes.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "specials",
+    "prompt": "Use case stylized-concept. Presea Combatir dedicated special-move fullbody sprites, 4columns4rows16separated illustrations transparentbackground. Reference1 exactdesign and abilities, reference2 approved neutralproportions. Preserve smallgirl pinktwinpigtails greeneyes purplegoldoutfit gloves boots huge silvergold battleaxe. Fullgirl and axe entirelyinsideowncell, at least16pxtransparentgutter. NO effects/text/panels/shadows/ground/othercharacters. All faceRIGHT. Rowmajor0 approvedneutral calibration;1NB raising axe behind head windingup groundslam;2NB charged windup deepstance axe highbehind;3NB downward strike axe bladeRIGHT againstground;4SB spinning axe across chest body twisting low;5SB diagonal ascent leap axe leadingUPRIGHT;6SB downhill diving body facingDOWNRIGHT axe choppingahead;7UB lunar leap windup crouched axe uprightRIGHT;8UB rising in curvedtwist axeblade aboveheadUPRIGHT;9UB finishing airborne axe circular chop forwardRIGHT, kneesfolded;10DB plantingaxe onground beforebody and bothhands rest onhandle braced;11DB breaking brace and raisingaxefromground withfeetplanted;12ordinary fall legsbelowbody axeheldacrossbody;13softlanding kneesbent axe upright;14forwardroll compactbody holdingaxe close;15backwardroll compactbody headback carryingaxe. Wholebody proportions neverchange, exacttwoarms/twolegs. Eachpose visiblydistinct. Do not show an axe-effect instead of weapon. Leave transparentspacebetweenfigures, nevercrosscellborder.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "defense",
+    "prompt": "Create a NEW transparent 2D game sprite atlas of Presea Combatir, using image 1 ONLY for character design and image 2 ONLY for body proportions and drawing style. EXACTLY SIXTEEN full-body sprites in a regular FOUR COLUMNS by FOUR ROWS grid. No extra fifth row. No text, cell outlines, effects, shadows, scenery, or other characters. All complete axes and hair must stay inside the cells with generous space between sprites. Pink twin pigtails, green eyes, small child proportions, purple outfit with gold edging, brown gloves and boots, enormous silver and gold battleaxe. Keep the same head and limb dimensions. Normally face RIGHT. Row 1, from left: approved neutral standing for scale; grabbing forward with one hand, axe behind; pummel using forehead while holding axe behind; pushing a forward throw right. Row 2: twist backward throwing left; throw upward with both arms lifted; crouched low throw with axe near feet; defensive guard holding axe across body. Row 3: compact airborne dodge; flinch from a light hit; airborne backward launch in pain; lying down on side with axe beside body. Row 4: low getup kick aimed right with axe back; hang by ONE free raised hand, that hand must be highest part, axe held low by other hand; climbing forward over a ledge; helpless fall with limbs down and axe held close. No ledge itself. Do not repeat running or walking sprites. These are defense and throw poses, not locomotion. Render all sixteen entire figures with crisp detailed anime linework. Transparent background outside all painted figures.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "extra",
+    "prompt": "Create a NEW transparent game sprite atlas of Presea Combatir. Image 1 is exact character design; image 2 fixes approved body dimensions and art style, not poses. EXACTLY 16 full-body sprites, FOUR columns by FOUR rows. No fifth row. Every figure, all hair, and entire huge axe must fit in its own cell with ample transparent gutters. No text, borders, effects, shadows or ground. Small girl with pink twin pigtails, green eyes, purple sleeveless gold-trim outfit, brown gloves and boots, massive silver battleaxe with gold fittings. Normally face RIGHT. Keep two arms and two legs and same child proportions. Row 1: approved standing neutral for scale; begin side special spinning low with axe extended LEFT behind while looking RIGHT; side special ascending leap with axe high RIGHT and one knee bent; side special diving DOWN-RIGHT with axe in front below body. Row 2: side special landing full horizontal finishing swing RIGHT with both feet very wide; up special second rising slash with axe raised ABOVE-RIGHT and legs kicked behind; normal second jab a CLEAR REVERSE SWING striking RIGHT at head height, both hands near LEFT shoulder and axe blade extended RIGHT, torso twisted; strong neutral ground slam axe blade DOWN-RIGHT touching foot level with crouched body. Row 3: planted-axe brace pose standing with both hands at top of vertical handle, blade near ground; whole-body anticipation lifting axe behind LEFT shoulder; whole-body recovery drawing axe toward chest, blade held RIGHT; neutral-air anticipation body curled airborne with axe below LEFT. Row 4: neutral-air follow-through body rotated three-quarter away and axe sweeping RIGHT chest height, knees bent; victory holding axe over shoulder calmly; victory turning away looking back RIGHT; dedicated helpless FALL upright, both boots hanging below body, worried expression, holding axe down close to side. Sixteen distinct complete body illustrations, no extra characters. Very crisp detailed anime rendering.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-reference.png",
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-basic.png"
+    ],
+    "transparent_background": true
+  },
+  {
+    "name": "effects",
+    "prompt": "Create a transparent 2D fighting-game visual effects atlas for Presea Combatir's enormous battleaxe and earth powers. Exactly SIXTEEN effects arranged in FOUR columns and FOUR rows. Leave generous transparent gutters between effects, no text, labels, panels, characters, actual weapons, scenery or opaque rectangles. Crisp powerful anime impact rendering with silver-white axe edges, warm orange sparks, pink rotation trails, brown earth. Each entire effect fits within its own cell. Row 1: silver-orange heavy crescent with bright CONVEX edge facing RIGHT, open tails LEFT; ONE wide overhead silver-gold canopy with bright convex edge UP, open side DOWN; asymmetrical hot-pink double-comma spinning axe trails with broad crescent at RIGHT, not a complete ring; orange heavy physical hit sparks shooting RIGHT. Row 2: brown earth spikes and debris rising UP from ground impact; small upward earth eruption; medium upward earth eruption; large upward earth eruption with glowing orange fissure at base. Row 3: silver-white curved rising axe trail from lower LEFT to upper RIGHT; beige heavy landing dust; pink-orange spiral slash with blade-like outer rim convex RIGHT; gold luminous lunar rising arc convex UP. Row 4: diagonal white-pink downward axe slash heading DOWN-RIGHT; earth impact burst aimed UP; warm golden aura flecks surrounding empty space, no person; sharp orange-white final axe sweep convex RIGHT. Genuine alpha transparency everywhere outside effect paint. Match attached reference's physical heavy axe and earth visual language.",
+    "referenced_image_paths": [
+      "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/presea/assets/presea-reference.png"
+    ],
+    "transparent_background": true
+  }
+]

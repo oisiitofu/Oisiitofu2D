@@ -1768,5 +1768,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "presea": {
+    "source": "characters/presea/assets/presea-selection.png",
+    "crop": [
+      450,
+      0,
+      1000,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
