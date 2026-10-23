@@ -1790,5 +1790,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "reimu": {
+    "source": "characters/reimu/assets/reimu-selection.png",
+    "crop": [
+      350,
+      0,
+      960,
+      1199
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

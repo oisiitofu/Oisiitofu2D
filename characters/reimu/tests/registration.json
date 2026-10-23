@@ -1,0 +1,95 @@
+{
+  "definition": {
+    "id": "reimu",
+    "name": "博麗霊夢",
+    "style": "東方Project / REIMU HAKUREI",
+    "number": "169",
+    "description": "地上NBは追尾する霊符2枚、長押しで6枚。空中NBは速い針。横Bは隙間で相手の背後へ現れて蹴り、再入力で戻る。上Bは斜め蹴りから入力方向へ空中連続蹴り。下Bは小結界、長押しで反射する大結界。命中・弾のかすり・反射でドリーム最大6、下Bで夢想封印。",
+    "pose": 76
+  },
+  "after": "hornet",
+  "anchorName": "ホーネット",
+  "height": 94,
+  "tier": 2,
+  "weight": 88,
+  "mask": "(r>green*1.45&&r>b*1.3&&r>80&&(p/4/img.width)>img.height*.34)",
+  "crop": [
+    350,
+    0,
+    960,
+    1199
+  ],
+  "frames": 77,
+  "effects": 16,
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "3": [
+      1,
+      0
+    ],
+    "5": [
+      1,
+      0
+    ],
+    "9": [
+      0.707,
+      -0.707
+    ],
+    "12": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 12,
+    "jab3": 9,
+    "heavy": 0,
+    "up": 6,
+    "low": 5,
+    "dashAttack": 9,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 11,
+    "air": 2,
+    "fair": 12,
+    "bair": 0,
+    "uair": 5,
+    "dair": 13,
+    "dragon": 4,
+    "dash": 9,
+    "rise": 9
+  },
+  "physics": {
+    "walkSpeed": 3,
+    "initialDashSpeed": 6.4,
+    "runSpeed": 6.9,
+    "airSpeed": 6.2,
+    "airAcceleration": 0.4,
+    "gravity": 0.48,
+    "fullHopVelocity": 13.4,
+    "ecb": {
+      "radius": 17,
+      "height": 84
+    },
+    "shieldSize": 45,
+    "shieldOffset": [
+      0,
+      -42
+    ]
+  }
+}
