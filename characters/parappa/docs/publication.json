@@ -1,0 +1,42 @@
+{
+  "character": "parappa",
+  "version": 141,
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "implementationCommit": "364f968",
+  "sourceCommit": "a245271881cdc52b7c36bf380a4d4e3ce7be9d1d",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_218360cba9a48191bffe63ed30a5c120",
+  "deploymentId": "appgdep_6adc5145199881918974a904b23cbb62",
+  "deploymentStatus": "succeeded",
+  "environmentRevision": 277,
+  "assets": {
+    "objects": 30,
+    "bytes": 15739134,
+    "sha256Files": 29,
+    "catalogMatches": true,
+    "uploadKeyRemoved": true
+  },
+  "verification": {
+    "functionalChecks": 153,
+    "failed": 0,
+    "frames": 77,
+    "effects": 16,
+    "costumes": 385,
+    "normalScenes": 30,
+    "specialScenes": 28,
+    "idleScenes": 10,
+    "motionSamples": 60,
+    "cpuMatches": 1,
+    "localOnline": {
+      "scenes": 6,
+      "identicalFrames": 240,
+      "port": 4174
+    }
+  },
+  "online": {
+    "status": "waiting-for-empty-room",
+    "reason": "User requested the game server restart only after all rooms are empty.",
+    "launcherPid": 3876,
+    "tunnelPid": 12588
+  },
+  "serverSourceHash": "8388a3e310536b225c85f09c5f27b77a1be5590750b40ec3f36d95a3ddc5651e"
+}
