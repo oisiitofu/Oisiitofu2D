@@ -1,0 +1,68 @@
+{
+  "publishedAt": "2026-10-24T15:36:30.539709+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 145,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_f51607a82b548191b748deac927b3de1",
+  "deploymentId": "appgdep_6adcd070141081919d500458eecbf822",
+  "environmentRevision": 285,
+  "status": "succeeded",
+  "siteSourceCommit": "a816d5093f17f88dcde958c2a085e68419e6da55",
+  "implementationCommit": "d1dc5ca",
+  "characters": [
+    {
+      "id": "enoch",
+      "after": "metabee"
+    },
+    {
+      "id": "astro",
+      "after": "toro"
+    },
+    {
+      "id": "ratchet",
+      "after": "crash"
+    },
+    {
+      "id": "django",
+      "after": "goemon"
+    }
+  ],
+  "assets": {
+    "uploaded": 111,
+    "bytes": 80612596,
+    "failed": [],
+    "sha256Files": 110,
+    "htmlFiles": 1
+  },
+  "validation": {
+    "functionalChecks": 440,
+    "gimmickChecks": 17,
+    "counterChecks": 4,
+    "onlineIdenticalFrames": 960,
+    "onlineScenes": 24,
+    "weaponKits": 6,
+    "publicPortraits": 4,
+    "publicIdleColors": 40,
+    "artPoses": 370,
+    "artEffects": 64,
+    "artCostumes": 1850,
+    "errors": []
+  },
+  "uploadKeyRemoved": true,
+  "server": {
+    "status": "restarted",
+    "at": "2026-10-24T15:29:46.068Z",
+    "previousPid": 28668,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "hashes": {
+      "online-server.cjs": "5c93afbb94e314cf20acecc4db220338f715bbfcf2f26d251cfb02bc992e70fd",
+      "bingo-rules.js": "055fb7ee1a3fc48e0726f2f8a19f6e9a2d80eb370c9d4a4dcc11a9331640af65",
+      "input-codec.js": "a6924cce4f979ae4eb41e674060a406c377a9b9d455d1f3cd77a3df4d7199918"
+    },
+    "currentPid": 38880,
+    "launcherPid": 3876,
+    "tunnelPid": 12588
+  }
+}
