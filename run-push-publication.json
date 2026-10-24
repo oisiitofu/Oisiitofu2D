@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-24",
+  "implementationCommit": "d3e89d9",
+  "publicUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "sourceCommit": "61be734ab30add7461ad30fd4c9316ceb22210ff",
+  "version": 138,
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_53a0b7812a1c8191b6ff13a04102a7b5",
+  "deploymentId": "appgdep_6adc1fd7407881918574168462ed19ff",
+  "status": "succeeded",
+  "environmentRevision": 271,
+  "upload": {
+    "uploaded": 1,
+    "bytes": 3277740,
+    "failed": []
+  },
+  "temporaryUploadKeyRemoved": true,
+  "validation": {
+    "bodyChecks": 396,
+    "movementForms": 169,
+    "movementChecks": 2223,
+    "throwRegressionChecks": 23425,
+    "onlineIdenticalFrames": 600,
+    "onlineScenes": 6,
+    "cpuMatches": 1,
+    "visualFrames": [
+      0,
+      15,
+      30,
+      45,
+      60
+    ],
+    "publicBundleSha256": "a3dbaf67c12e55070eff9fbc0c34f88c04b0d69211b19ab8cf3508ae1ca489f6",
+    "errors": []
+  },
+  "behavior": {
+    "runningContactSpeedRetained": 0.8,
+    "standingOpponentSeparationShare": 0.8,
+    "walkUnchanged": true,
+    "airDodgeGrabHitstunPassThroughUnchanged": true,
+    "noTargetSlidingVelocity": true,
+    "multiBodyPositionPasses": 3
+  },
+  "sample": {
+    "fighters": [
+      "dragoon",
+      "dragoon"
+    ],
+    "frames": 60,
+    "oldDistance": 15.38,
+    "newDistance": 118.88,
+    "walkDistance": 10.9
+  },
+  "processesPreserved": {
+    "launcher": 3876,
+    "game": 1384,
+    "tunnel": 12588
+  }
+}
