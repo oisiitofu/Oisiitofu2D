@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24",
+  "implementationCommit": "b5b61d1",
+  "publicUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "sourceCommit": "27ee2aa06ff5b74caf75325bd984a65193e46707",
+  "version": 137,
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_152c059e36d48191b3aecd45ec2411bf",
+  "deploymentId": "appgdep_6adc1b26fd5481918211916d0251efba",
+  "status": "succeeded",
+  "environmentRevision": 269,
+  "upload": {
+    "uploaded": 1,
+    "bytes": 3276756,
+    "failed": []
+  },
+  "temporaryUploadKeyRemoved": true,
+  "validation": {
+    "forms": 169,
+    "throwChecks": 23425,
+    "baseChecks": 676,
+    "configuredFinishers": 184,
+    "onlineIdenticalFrames": 600,
+    "onlineScenes": 6,
+    "onlineActualKOs": 6,
+    "visualPanels": 16,
+    "cpuMatches": 1,
+    "publicBundleSha256": "ce46c12ae744462bca3b258474746863a1f90a05b9c0e1cf046bdb2ae2286794",
+    "errors": []
+  },
+  "benchmark": {
+    "stage": "0",
+    "victim": "tifa physics, weight 90",
+    "attackerPercent": 0,
+    "di": "none",
+    "stale": "fresh",
+    "oneOnOneBonus": false,
+    "position": "up: center; others: 65 px inside ledge",
+    "koCriterion": "direct blast boundary during hitlag/hitstun, excludes later drift and bottom falls"
+  },
+  "swordPolicy": "forward/back positioning; up or down KO around 180%; Ulgrim up throw confirmed at center 180%",
+  "downThrowPolicy": "uncapped growth; selected down throws designated as finishers",
+  "processesPreserved": {
+    "launcher": 3876,
+    "game": 1384,
+    "tunnel": 12588
+  }
+}
