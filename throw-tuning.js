@@ -6,7 +6,7 @@ const ThrowTuning=(()=>{
  const groups={
   balanced:'reimu zack presea hachiware tidus terra onionknight arthur sakura billy riesz edea narmaya wonder rena gran welch zoe ky alphen ash judas rion sol miyabi zero3 dana isaac ulgrim monokuma roxas twob zero lightning rean estelle noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian chef morphie human kitten elma goemon metabee nier dante leon charlotta twinbee edf arus maelle sumino frog tressa eve saki hanajk hanajd kisuke ray alain hinako megamanexe fiora krystal malenia alucard kurabe shizuna',
   rising:'dragoon gundam kosmos pawapuro horse bayleef piposaru pneuma odio laharl kasane greymon metalgreymon wargreymon omegamon hanajs c4621',
-  agile:'jett viewtifuljoe ellen chibirobo octoling chiikawa chocobo riki rin makoto neku pokoa jibanyan zidane yuffie crash knight shadow moogle cojicoji hornet klonoa karateka aiai hayabusa',
+  agile:'octane jett viewtifuljoe ellen chibirobo octoling chiikawa chocobo riki rin makoto neku pokoa jibanyan zidane yuffie crash knight shadow moogle cojicoji hornet klonoa karateka aiai hayabusa',
   grappler:'agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby',
   caster:'shionne genis viridi vivi nia colette will emma ryza midna bomberman sans headmaster sakuna miku naruhodo layton vincent mametchi aruru maruku dietrich rocbouquet deemo aerith donchan melia yuri toro katamari okami battlemage naegi'
  };
@@ -218,7 +218,8 @@ const ThrowTuning=(()=>{
   "viridi":{"upThrow":{"growth":0.061138,"percent":170}},
   "riesz":{"backThrow":{"growth":0.051591,"percent":160}},
   "edea":{"upThrow":{"growth":0.060238,"percent":180}},
-  "jett":{"backThrow":{"growth":0.047831,"percent":175}}
+  "jett":{"backThrow":{"growth":0.047831,"percent":175}},
+  "octane":{"backThrow":{"growth":0.047831,"percent":175}}
  };
  function koTarget(id,type,group){if(group==='blade')return 180;if(type==='upThrow')return group==='caster'?170:group==='agile'?180:160;if(type==='downThrow')return group==='power'||group==='grappler'?155:group==='psion'?165:175;return group==='blade'?175:group==='agile'?175:group==='balanced'||group==='rising'||group==='caster'?160:150;}
  // Named identities, independent of roster/display numbers.
