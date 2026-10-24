@@ -9,7 +9,7 @@ const MiyabiVFX=(()=>{
   if(a.miyabiChain&&n===3){stamp(3,f.x+f.face*72,f.y-44,190,145,f.face,.95);return;}
   if(boxes.some(b=>b.window?.shape==='up')){stamp(1,f.x,f.y-110,155,93,f.face,.95);return;}
   if(boxes.some(b=>b.window?.shape==='spin')){stamp(4,f.x,f.y-44,190,90,1,.9);return;}
-  for(const b of boxes.flatMap(b=>SlashVFX.outward(f,b))){const dx=b.x2-b.x1,dy=b.y2-b.y1,face=dx<0?-1:1,index=a.miyabiIaido?4+a.level:a.ex?2:0;stamp(index,(b.x1+b.x2)/2,(b.y1+b.y2)/2,Math.hypot(dx,dy)+28,Math.max(44,b.radius*2),face,.95,Math.atan2(dy,dx*face));}
+  for(const b of boxes.flatMap(b=>SlashVFX.outward(f,b))){const dx=b.x2-b.x1,dy=b.y2-b.y1,face=dx<0?-1:1,index=a.miyabiIaido?4+a.visualLevel:a.ex?2:0;stamp(index,(b.x1+b.x2)/2,(b.y1+b.y2)/2,Math.hypot(dx,dy)+28,Math.max(44,b.radius*2),face,.95,Math.atan2(dy,dx*face));}
  }
  function drawObjects(){}
  function impact(v){stamp(9,v.x,v.y,35+v.power*2,35+v.power*2,v.face||1,v.life/v.max);}

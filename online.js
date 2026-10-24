@@ -110,7 +110,7 @@ const Net=(()=>{
    const teams=MatchRules.randomTeams(members.length),battleTeams=m.players.map((p,n)=>p?.battleTeam??n%2);
    members.forEach((n,k)=>battleTeams[n]=teams[k]);send({type:'settings',matchId,battleTeams});
   };
-  document.addEventListener('change',event=>{if(event.target.closest('#match-settings')||event.target.id==='stage')selectionChanged(event);});document.addEventListener('click',event=>{if(event.target.closest('.fighter-card,.squad-slot,.stage-card,#swatches button'))selectionChanged(event);});
+  document.addEventListener('change',event=>{if(event.target.closest('#match-settings')||['stage','squad-lineup'].includes(event.target.id))selectionChanged(event);});document.addEventListener('click',event=>{if(event.target.closest('.fighter-card,.squad-slot,.stage-card,#swatches button'))selectionChanged(event);});
   $('online-exit').onclick=()=>$('pause').querySelector('.back').click();$('create-room').onclick=()=>connect('create');$('join-room').onclick=()=>connect('join');$('ready-room').onclick=ready;
   $('open-bingo-card').onclick=()=>BingoBattle.openOnline(false);
   $('edit-online-lineup').onclick=()=>{if(BingoBattle.online){BingoBattle.openOnline(false);return;}$('online-room').close();(document.querySelector('#squad-lineup .squad-slot.active')||document.querySelector('.fighter-card.selected'))?.focus();};
@@ -118,5 +118,5 @@ const Net=(()=>{
   $('copy-room').onclick=async()=>{const inviteCode=code;if(!inviteCode)return;const url=new URL(location.href);url.searchParams.delete('room');url.searchParams.set('room',inviteCode);try{await navigator.clipboard.writeText(url.href);if(code===inviteCode)status('招待リンクをコピーしました');}catch{if(code===inviteCode)status('ルームコード '+inviteCode+' を相手に伝えてください');}};
   const entry=new URLSearchParams(location.search);if(entry.get('mode')==='online'||/^[A-Fa-f0-9]{6}$/.test(entry.get('room')||'')){browse();if(entry.get('room')){$('room-code').value=entry.get('room').toUpperCase();$('room-code').closest('details').open=true;}}
  }
- return{init,browse,ready,pump,get quality(){return {...pacing.metrics,inputFormat:compactInput?InputCodec.format:'legacy'};},bingo(type,data={}){if(roomPlaying){status('対戦の準備中・対戦中はカードを変更できません。');return;}send({type,matchId,...data});},returnToSelection,leave,capture,finished,status,get active(){return active},get starting(){return starting},get applying(){return applying},get inputs(){return inputs},get slot(){return slot},get code(){return code},get config(){return config}};
+ return{init,browse,ready,pump,get lineupLocked(){return roomPlaying||active;},get quality(){return {...pacing.metrics,inputFormat:compactInput?InputCodec.format:'legacy'};},bingo(type,data={}){if(roomPlaying){status('対戦の準備中・対戦中はカードを変更できません。');return;}send({type,matchId,...data});},returnToSelection,leave,capture,finished,status,get active(){return active},get starting(){return starting},get applying(){return applying},get inputs(){return inputs},get slot(){return slot},get code(){return code},get config(){return config}};
 })();

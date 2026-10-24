@@ -2,7 +2,7 @@
 // Give aerials distinct launch roles without changing their authored damage,
 // active windows, linking hits, meteor strikes or animation timing.
 const AerialLaunchTuning=(()=>{
- const types=new Set(['fair','bair','dair','dashAttack']);
+ const types=new Set(['fair','bair','uair','dair','dashAttack']);
  const profiles={
   brawler:{fairBase:4.05,fairGrowth:.075,bairBase:4.7,bairGrowth:.095},
   blade:{fairBase:3.9,fairGrowth:.074,bairBase:4.5,bairGrowth:.092},
@@ -16,10 +16,13 @@ const AerialLaunchTuning=(()=>{
  function knockback(a){
   if(!eligible(a))return a;
   const type=typeOf(a),p=profiles[a.launchRoleFamily]||profiles.blade;
+  // Subtract ten percentage points from launch scaling, once in the formula.
+  // Damage, the 0% launch and authored linking hits retain their existing values.
+  if(type==='uair')return{...a,launchPercentOffset:10};
   if(type==='dair'&&!meteor(a))return{...a,baseKnockback:(a.baseKnockback??3.2)*.85,knockbackGrowth:(a.knockbackGrowth??.065)*.8};
   if(type!=='fair'&&type!=='bair')return a;
   const scale=type==='bair'?.9:1;
-  return{...a,baseKnockback:Math.max(a.baseKnockback??3.2,p[type+'Base'])*scale,knockbackGrowth:Math.max(a.knockbackGrowth??.065,p[type+'Growth'])*scale};
+  return{...a,baseKnockback:Math.max(a.baseKnockback??3.2,p[type+'Base'])*scale,knockbackGrowth:Math.max(a.knockbackGrowth??.065,p[type+'Growth'])*scale,...(type==='bair'?{launchPercentOffset:10}:{})};
  }
  function trajectory(a,original){
   if(!eligible(a)||meteor(a)||!Number.isFinite(a.angle))return null;

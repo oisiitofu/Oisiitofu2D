@@ -34,12 +34,13 @@ const BingoRules=(()=>{
   }
   s.result={round:s.round,winner,opened,champion:s.champion};return true;
  }
- function next(s){if(!s.result||s.champion)return false;s.round++;s.result=null;s.picks=s.picks.map(()=>null);s.revealed=false;return true;}
+ function unpick(s,seat){if(s.revealed||s.result||s.champion||!Number.isInteger(seat)||seat<0||seat>=s.picks.length)return false;s.picks[seat]=null;return true;}
+ function next(s){if(!s.result||s.champion)return false;s.lastResult=s.result;s.round++;s.result=null;s.picks=s.picks.map(()=>null);s.revealed=false;return true;}
  function cancel(s){s.picks=s.picks.map(()=>null);s.revealed=false;s.result=null;}
  function view(s,seat){
   if(!s)return null;
-  return{generation:s.generation,round:s.round,format:s.format,teams:s.teams.slice(),boards:s.boards.map(b=>({...b,cells:b.cells.slice(),open:b.open.slice(),previous:b.previous.slice()})),picks:s.picks.map((p,n)=>p?s.revealed||n===seat?{...p,selected:true,locked:s.revealed}:{selected:true,locked:false}:null),revealed:s.revealed,result:s.result?JSON.parse(JSON.stringify(s.result)):null,champion:s.champion};
+  return{generation:s.generation,round:s.round,format:s.format,teams:s.teams.slice(),boards:s.boards.map(b=>({...b,cells:b.cells.slice(),open:b.open.slice(),previous:b.previous.slice()})),picks:s.picks.map((p,n)=>p?s.revealed||n===seat?{...p,selected:true,locked:s.revealed}:{selected:true,locked:false}:null),revealed:s.revealed,result:s.result?JSON.parse(JSON.stringify(s.result)):null,lastResult:s.lastResult?JSON.parse(JSON.stringify(s.lastResult)):null,champion:s.champion};
  }
- return{center,lines,key,board,complete,create,available,pick,settle,next,cancel,view};
+ return{center,lines,key,board,complete,create,available,pick,unpick,settle,next,cancel,view};
 })();
 if(typeof module!=='undefined')module.exports=BingoRules;

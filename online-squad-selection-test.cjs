@@ -9,9 +9,11 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    await p.addInitScript(()=>{navigator.getGamepads=()=>[];window.socketCount=0;window.lineupReveals=[];const Base=WebSocket;window.WebSocket=class extends Base{constructor(...args){super(...args);socketCount++;this.addEventListener('message',e=>{const m=JSON.parse(e.data);if(m.type==='room'&&m.revealed)lineupReveals.push(m.players.map(p=>p.team));});}};});
    await p.goto(process.env.TEST_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded);await p.click('#enter-online');
    await p.evaluate(()=>{window.squadRounds={};addEventListener('online-frame',e=>{const c=Net.config,r=squadRounds[c.matchId]??={config:c,snapshots:{}};
-    if(e.detail===1){const names=[],fill=ctx.fillText;ctx.fillText=function(t,...args){if(/^\d+\. /.test(String(t)))names.push(t);return fill.call(this,t,...args);};try{r.revealVisible=SquadBattle.drawReveal();}finally{ctx.fillText=fill;}r.revealNames=names;const t=countdown;countdown=0;r.revealEndsAtZero=!SquadBattle.drawReveal();countdown=t;}
-    if([1,195,345,505,665,825].includes(e.detail))r.snapshots[e.detail]=fighters.map(f=>({character:f.characterId,squad:f.squad,index:f.squadIndex,x:f.x,y:f.y,face:f.face,team:f.team,control:f.control,stocks:f.stocks}));
-    if([200,360,520,680,840].slice(0,c.squadSize).includes(e.detail))for(const f of fighters.filter(f=>f.team===1)){f.respawn=0;f.x=StageRules.blast.right+20;ko(f);}
+    const total=BattlePresentation.introFrames;
+    if(e.detail===1){r.introFrames=total;r.revealVisible=true;r.revealNames=BattlePresentation.diagnostics.introduced;}
+    if([1,total-5,...Array.from({length:c.squadSize},(_,n)=>total+165+n*160)].includes(e.detail))r.snapshots[e.detail]=fighters.map(f=>({character:f.characterId,squad:f.squad,index:f.squadIndex,x:f.x,y:f.y,face:f.face,team:f.team,control:f.control,stocks:f.stocks}));
+    if(Array.from({length:c.squadSize},(_,n)=>total+20+n*160).includes(e.detail))for(const f of fighters.filter(f=>f.team===1)){f.respawn=0;f.x=StageRules.blast.right+20;ko(f);}
+
    });});
   }
   const [host,...guests]=pages;
@@ -39,8 +41,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    const id=size===3?1:2;
    await Promise.all(pages.map(p=>p.waitForFunction(id=>state==='result'&&squadRounds[id],id,{timeout:45000})));
    const all=await Promise.all(pages.map(p=>p.evaluate(id=>squadRounds[id],id)));for(let n=1;n<4;n++)eq(all[n],all[0]);const r=all[0];records.push(r);
-   eq(r.revealVisible,true);eq(r.revealEndsAtZero,true);eq(r.revealNames,lineups.flatMap(team=>team.map((id,n)=>(n+1)+'. '+({'tifa':'ティファ','isaac':'ロビン','chiikawa':'ちいかわ','chocobo':'チョコボ','ulgrim':'ウルグリム'}[id]))));eq(r.config.squadSize,size);eq(r.config.players.map(p=>p.team),lineups);eq(r.snapshots[1].map(f=>f.stocks),[size,size,size,size]);eq(r.snapshots[1].map(f=>f.team),[0,1,0,1]);eq(new Set(r.snapshots[1].map(f=>f.x)).size,4);
-   for(let member=1;member<size;member++){const snap=r.snapshots[185+member*160];for(let n=0;n<4;n++){eq(snap[n].character,lineups[n][n%2?member:0]);eq(snap[n].index,n%2?member:0);eq(snap[n].team,n%2);eq(snap[n].control,'online');eq(snap[n].stocks,n%2?size-member:size);}}
+   eq(r.revealVisible,true);eq(r.revealNames,[lineups[0][0]]);eq(r.introFrames,4*size*60+180);eq(r.config.squadSize,size);eq(r.config.players.map(p=>p.team),lineups);eq(r.snapshots[1].map(f=>f.stocks),[size,size,size,size]);eq(r.snapshots[1].map(f=>f.team),[0,1,0,1]);eq(new Set(r.snapshots[1].map(f=>f.x)).size,4);
+   for(let member=1;member<size;member++){const snap=r.snapshots[r.introFrames+5+member*160];for(let n=0;n<4;n++){eq(snap[n].character,lineups[n][n%2?member:0]);eq(snap[n].index,n%2?member:0);eq(snap[n].team,n%2);eq(snap[n].control,'online');eq(snap[n].stocks,n%2?size-member:size);}}
    for(const p of pages){eq(await p.locator('#winner').textContent(),'RED TEAM VICTORY');await p.bringToFront();await p.click('#result .back');eq(await p.evaluate(()=>Net.code),code);eq(await p.evaluate(()=>socketCount),1);}
   }
   // The quick selector remains reachable without the settings dialog on mobile.

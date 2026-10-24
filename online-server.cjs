@@ -78,6 +78,7 @@ function attachOnline(server){
    }
    if(m.type==='bingo-next'&&room.bingo&&!room.playing&&!room.preparing){if(BingoRules.next(room.bingo)){resetLobby(room);status(room);}return;}
    if(m.type==='bingo-reset'&&ws.slot===0&&!room.playing&&!room.preparing){resetBingo(room,'新しいビンゴカードを配りました。');status(room);return;}
+   if(m.type==='bingo-cancel'&&room.bingo&&!room.playing&&!room.preparing){if(m.generation!==room.bingo.generation||m.bingoRound!==room.bingo.round)return;if(BingoRules.unpick(room.bingo,ws.slot)){p.ready=false;status(room);}return;}
    if(m.type==='bingo-pick'&&room.bingo&&!room.playing&&!room.preparing){
     if(m.generation!==room.bingo.generation||m.bingoRound!==room.bingo.round){send(ws,{type:'error',message:'カードが更新されています。現在のカードから選び直してください。'});return;}
     const choice=BingoRules.pick(room.bingo,ws.slot,m.cell);if(!choice.ok){send(ws,{type:'error',message:choice.message});return;}
@@ -90,6 +91,7 @@ function attachOnline(server){
     p.finished=true;p.reportedWinner=m.winner;
     if(room.players.every(q=>q?.finished)){
      if(room.bingo){if(new Set(room.players.map(q=>q.reportedWinner)).size===1)BingoRules.settle(room.bingo,m.winner);else{BingoRules.cancel(room.bingo);all(room,{type:'error',message:'対戦結果が一致しなかったため、マスを開かず同じ試合をやり直します。'});}}
+     if(room.bingo?.result&&!room.bingo.champion)BingoRules.next(room.bingo);
      resetLobby(room);status(room);
     }return;
    }
