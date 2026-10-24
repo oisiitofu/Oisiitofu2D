@@ -8,7 +8,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
   await p.goto(process.env.TEST_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});await p.click('#enter-online');
   await p.evaluate(()=>{
    window.rounds={};addEventListener('online-frame',event=>{
-    const t=event.detail,c=Net.config,id=c.matchId,record=rounds[id]??=( {size:c.squadSize,time:c.timeLimit,characters:c.players.map(p=>p.character),snapshots:{}} );
+    const t=event.detail-Math.max(0,PresentationTiming.introFrames-180),c=Net.config,id=c.matchId,record=rounds[id]??=( {size:c.squadSize,time:c.timeLimit,characters:c.players.map(p=>p.character),snapshots:{}} );
     if([185,345,505,665,825].includes(t)){
      const f=fighters[1];f.inv=f.intangible=f.hitlag=0;f.respawn=0;if(c.squadSize===1)f.stocks=1;f.x=StageRules.blast.right+20;ko(f);
     }
