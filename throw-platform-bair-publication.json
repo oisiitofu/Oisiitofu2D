@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-24",
+  "implementationCommit": "8bd7881",
+  "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "sourceCommit": "d501d557ab47875eb3bd872be56ebf8c76b0d9e5",
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_f77d404753088191b2c4b1f6c17fa514",
+  "version": 135,
+  "deployment": {
+    "id": "appgdep_6adbfb01211c81919184ce581ab5728c",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_f77d404753088191b2c4b1f6c17fa514",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 265,
+    "updated_at": "2026-10-24T00:25:51.616444+00:00"
+  },
+  "uploads": {
+    "objects": 1,
+    "bytes": 3263191,
+    "failed": 0,
+    "temporaryKeyRemoved": true
+  },
+  "qa": {
+    "throwChecks": 18222,
+    "platformChecks": 706,
+    "bairChecks": 1199,
+    "failures": 0,
+    "bouncePanels": 16,
+    "cpuMatches": 1,
+    "publicOnline": {
+      "scenes": 6,
+      "identicalFrames": 240,
+      "errors": []
+    },
+    "bundleSHA256Matches": true
+  },
+  "interpretation": {
+    "bair": "飛びすぎるという指摘を優先し、吹っ飛びを10%低下。撃墜必要%を下げる強化ではない。確認質問は未回答。",
+    "throwKOTargets": "ステージ0・被投げ側重量90・投げ手0%・新鮮な技・DIなし。横投げは崖端150%、上投げは160%を目安。落下死と直接撃墜を分離。"
+  }
+}
