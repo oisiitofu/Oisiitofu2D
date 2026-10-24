@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-24",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 144,
+  "implementationCommit": "5bb0521",
+  "sourceCommit": "b3e4dbafae16c26819d5d4edd26b1f28b4988003",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_77360abeb0c481919e897f0ead88b658",
+  "deploymentId": "appgdep_6adc97afe97881919011548f42783d52",
+  "deploymentStatus": "succeeded",
+  "environmentRevision": 283,
+  "assets": {
+    "objects": 3,
+    "bytes": 3482114,
+    "sha256Files": 2,
+    "htmlVerifiedAfterCloudflare": 1,
+    "uploadKeyRemoved": true
+  },
+  "online": {
+    "status": "verified",
+    "previousPid": 30988,
+    "gameServerPid": 28668,
+    "emptyRoomChecks": 2,
+    "launcherPidPreserved": 3876,
+    "tunnelPidPreserved": 12588,
+    "miyabiIdenticalFrames": 900,
+    "squadSequentialIntroChecks": 12,
+    "bingoTwoRoundFlowChecks": 40
+  },
+  "verification": {
+    "aerialOffsetChecks": 4850,
+    "existingAerialChecks": 19906,
+    "raySpecialChecks": 346,
+    "rayBombChecks": 251,
+    "rayCPU": 1,
+    "miyabiBalanceChecks": 115,
+    "miyabiRegressionChecks": 180,
+    "miyabiVFXChecks": 12,
+    "bingoServerChecks": 54,
+    "existingMenuPadChecks": 54,
+    "errors": []
+  },
+  "miyabi": {
+    "frost": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "koReference": [
+      130,
+      120,
+      110,
+      100,
+      90,
+      70
+    ],
+    "nbActionFrames": 57,
+    "referenceConditions": "重量90、中央から60px、DI/怒り/1対1補正なし、鮮度1。被弾硬直中の境界到達。"
+  }
+}
