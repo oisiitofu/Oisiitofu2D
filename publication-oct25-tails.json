@@ -1,0 +1,66 @@
+{
+  "publishedAt": "2026-10-24T17:44:48.688585+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 148,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_3711422b17f0819197c73a9184ccd6b8",
+  "deploymentId": "appgdep_6adcee838000819192ff80b1e7a05403",
+  "environmentRevision": 291,
+  "status": "succeeded",
+  "siteSourceCommit": "8fb92fef6b989f66ca30a5f987d4f678d97bcf90",
+  "implementationCommit": "ffa5588fc59c66484a539b2256fd3443c05ffa5d",
+  "character": {
+    "id": "tails",
+    "name": "テイルス",
+    "after": "shadow",
+    "displayNumber": 114,
+    "fullBodyPoses": 76,
+    "selectionPortraits": 5,
+    "effects": 16,
+    "sizeTier": null,
+    "height": 80,
+    "weight": 76
+  },
+  "assets": {
+    "uploaded": 30,
+    "bytes": 25742646,
+    "failed": [],
+    "sha256Files": 29,
+    "normalizedHtmlFiles": 1
+  },
+  "validation": {
+    "functionalChecks": 97,
+    "publicFunctionalChecks": 97,
+    "visualScenes": 75,
+    "specialVisualScenes": 14,
+    "publicVisualScenes": 75,
+    "publicSpecialVisualScenes": 14,
+    "cpuMatches": 2,
+    "onlineIdenticalFrames": 331,
+    "publicOnlineIdenticalFrames": 331,
+    "onlineScenes": [
+      "Dummy Ring Bomb",
+      "Cyclone",
+      "Support Gadget",
+      "Twin Tail Flight"
+    ],
+    "artPoses": 77,
+    "artEffects": 16,
+    "artCostumes": 385,
+    "errors": []
+  },
+  "uploadKeyRemoved": true,
+  "server": {
+    "previousPid": 32784,
+    "currentPid": 37156,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "launcherPid": 3876,
+    "tunnelPid": 12588,
+    "preserved": true
+  },
+  "artPromptSet": "characters/tails/docs/art-prompts.json",
+  "artCorrectionPrompts": "characters/tails/docs/art-correction.json",
+  "previews": "characters/tails/previews"
+}
