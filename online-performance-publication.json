@@ -1,0 +1,96 @@
+{
+  "version": 142,
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "onlineUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site/online",
+  "implementationCommit": "abcef61",
+  "sourceCommit": "351f84b5d4983eb89599ea61e6a8924625db3855",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_ccb79f7566a08191b9990d34c3e4ecd7",
+  "deploymentId": "appgdep_6adc59cad438819184142032ea365d40",
+  "deploymentStatus": "succeeded",
+  "environmentRevision": 279,
+  "assets": {
+    "objects": 1,
+    "bytes": 3350739,
+    "sha256Files": 1,
+    "uploadKeyRemoved": true
+  },
+  "clientPacing": "published on the online game endpoint; refresh between matches",
+  "verification": {
+    "fourClients": true,
+    "frames": 360,
+    "sameSnapshots": 4,
+    "artificialHoldMs": 50,
+    "baselineClustered": 262,
+    "smoothedClusteredMean": 11.333333333333334,
+    "baselineOver35ms": 96,
+    "smoothedOver35msMean": 2.3333333333333335,
+    "queuedAtEnd": [
+      6,
+      5,
+      5
+    ],
+    "codecRoundTrips": 190,
+    "representativeFrameBytes": [
+      1502,
+      136
+    ],
+    "mixedLegacyCompact": {
+      "legacyClients": 2,
+      "compactClients": 2,
+      "identicalFrames": 45
+    },
+    "twoClientScenes": 6,
+    "twoClientIdenticalFrames": 240,
+    "roomChecks": 21,
+    "rematchChecks": 58,
+    "rematchRounds": 5,
+    "publicTwoClient": {
+      "fourClients": false,
+      "clients": 2,
+      "artificialJitter": "four-frame bursts / 50ms hold",
+      "sameSnapshots": 4,
+      "baselineClustered": 263,
+      "smoothedClusteredMean": 26,
+      "reports": [
+        {
+          "frames": 360,
+          "nearZeroGaps": 263,
+          "over35ms": 96,
+          "gapP95": 67.80000000074506,
+          "updateP95": 0.8999999985098839,
+          "renderP95": 2.800000000745058,
+          "quality": {
+            "legacy": true,
+            "inputFormat": "legacy"
+          }
+        },
+        {
+          "frames": 360,
+          "nearZeroGaps": 26,
+          "over35ms": 5,
+          "gapP95": 22.300000000745058,
+          "updateP95": 1,
+          "renderP95": 2.800000000745058,
+          "quality": {
+            "receivedFrames": 655,
+            "appliedFrames": 651,
+            "queuedFrames": 4,
+            "bufferFrames": 5,
+            "underruns": 0,
+            "peakQueuedFrames": 25,
+            "arrivalJitterMs": 29.397465665942377,
+            "inputFormat": "legacy"
+          }
+        }
+      ],
+      "errors": []
+    }
+  },
+  "online": {
+    "status": "waiting-for-empty-room",
+    "reason": "User requested restarting only once every room is empty.",
+    "currentGameServerPid": 29780,
+    "launcherPid": 3876,
+    "tunnelPid": 12588
+  }
+}

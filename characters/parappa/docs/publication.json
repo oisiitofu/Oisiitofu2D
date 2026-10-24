@@ -38,5 +38,11 @@
     "launcherPid": 3876,
     "tunnelPid": 12588
   },
-  "serverSourceHash": "8388a3e310536b225c85f09c5f27b77a1be5590750b40ec3f36d95a3ddc5651e"
+  "serverSourceHash": "dfe7fb734dccdae84fc0192626b3a8e14823583914309947eaeb1f43eaedb3cf",
+  "serverSourceFiles": {
+    "online-server.cjs": "dfe7fb734dccdae84fc0192626b3a8e14823583914309947eaeb1f43eaedb3cf",
+    "input-codec.js": "a6924cce4f979ae4eb41e674060a406c377a9b9d455d1f3cd77a3df4d7199918"
+  },
+  "onlinePerformancePending": true,
+  "onlinePerformanceVersion": 142
 }
