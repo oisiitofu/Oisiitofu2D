@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-24",
+  "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "implementationCommit": "be50d2b",
+  "sourceCommit": "f67b07916156f6a511903aca5efe10c563ba2c98",
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_8098a674641481918e76aa9687baf1cf",
+  "version": 140,
+  "deployment": {
+    "id": "appgdep_6adc47c6f7dc8191b7676ff4fa0818a9",
+    "status": "succeeded",
+    "env_set_revision": 275,
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site"
+  },
+  "uploads": {
+    "objects": 30,
+    "bytes": 22463342,
+    "failed": 0,
+    "temporaryKeyRemoved": true
+  },
+  "qa": {
+    "functional": 114,
+    "normalScenes": 30,
+    "specialScenes": 28,
+    "idleColors": 10,
+    "motionSamples": 60,
+    "cpuMatches": 1,
+    "art": {
+      "poses": 77,
+      "effects": 16,
+      "costumes": 385,
+      "mismatches": 0
+    },
+    "sharedPad": {
+      "owner": true,
+      "opponent": true
+    },
+    "publicAssets": {
+      "sha256Files": 29,
+      "catalogMatches": true,
+      "onlineStatus": 200
+    },
+    "publicOnline": {
+      "identicalFrames": 240,
+      "scenes": 6,
+      "errors": []
+    }
+  },
+  "online": {
+    "gamePid": 29780,
+    "launcherPid": 3876,
+    "tunnelPid": 12588
+  }
+}
