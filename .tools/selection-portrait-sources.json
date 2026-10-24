@@ -1825,15 +1825,15 @@
     "framing": "dedicated high-resolution close head and shoulders"
   },
   "parappa": {
-    "source": "characters/parappa/assets/parappa-selection.png",
+    "source": "characters/parappa/assets/parappa-selection-v2.png",
     "crop": [
       0,
       0,
-      1536,
-      1024
+      1374,
+      1145
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "dedicated expressive rapper face and shoulders with microphone"
   },
   "sam": {
     "source": "characters/sam/assets/sam-selection.png",

@@ -13,13 +13,15 @@ const StageVisuals=(()=>{
   // Keep atmosphere and texture, with enough contrast behind tiny fighters.
   const shade=ctx.createLinearGradient(0,0,0,H);shade.addColorStop(0,'#0610260c');shade.addColorStop(.5,'#06102625');shade.addColorStop(1,'#0309136b');ctx.fillStyle=shade;ctx.fillRect(0,0,W,H);
   ctx.save();
-  const color={sky:'#e4faff',adventure:'#ffdf9c',waltz:'#e6d6ff',jazz:'#eecb95',japan:'#ffb68d',cyber:'#6ce7ff',fire:'#ffad53',festival:'#ffe1b2',beauty:'#ffe0ed'}[stage.theme];
+  const color={sky:'#e4faff',adventure:'#ffdf9c',waltz:'#e6d6ff',jazz:'#eecb95',japan:'#ffb68d',cyber:'#6ce7ff',fire:'#ffad53',festival:'#ffe1b2',beauty:'#ffe0ed',factory:'#ffc775',sports:'#e6fff4'}[stage.theme];
   for(let n=0;n<26;n++){
    const x=(n*173.81+clock*(stage.theme==='beauty'?.23:.10))%W,y=(n*71.35-clock*(stage.theme==='fire'?.38:.12)+H*100)%H;
    ctx.globalAlpha=.12+(Math.sin(clock*.018+n)+1)*.08;
    if(stage.theme==='japan'||stage.theme==='beauty'){ctx.save();ctx.translate(x,y);ctx.rotate(n+clock*.008);ellipse(0,0,2.7,1.3,color);ctx.restore();}
    else ellipse(x,y,1+n%3*.35,1+n%3*.35,color);
   }
+  if(stage.theme==='factory'){for(let n=0;n<9;n++){const x=110+n*160,y=H-80-((clock*.65+n*47)%190);ctx.globalAlpha=.12;line([[x,y],[x-2,y+5]],'#ffbc5f',1.3);}}
+  if(stage.theme==='sports'){for(let n=0;n<7;n++){const x=80+n*207,y=H*.3+(n%2)*45;ctx.globalAlpha=Math.max(0,Math.sin(clock*.035+n*2.1)-.94)*5;line([[x-3,y],[x+3,y]],'#fff',1);line([[x,y-3],[x,y+3]],'#fff',1);}}
   ctx.restore();return true;
  }
  function geometry(p){

@@ -1,6 +1,6 @@
 'use strict';
 const Controls=(()=>{
- const defaults={keyboard:{left:'ArrowLeft',right:'ArrowRight',up:'ArrowUp',down:'ArrowDown',jump:'Space',jumpAlt:'KeyV',walk:'ShiftLeft',attack:'KeyZ',special:'KeyX',grab:'KeyC',guard:'KeyA',heavy:'KeyD',smash:'KeyS'},pad:{attack:1,special:0,grab:4,grabAlt:6,guard:5,guardAlt:7,jump:3,jumpAlt:2,heavy:-1,smash:-1,pause:9},padLayoutVersion:2,deadzone:.25,rightStickMode:"tilt",tapJump:false,holdBuffer:false};
+ const defaults={keyboard:{left:'ArrowLeft',right:'ArrowRight',up:'ArrowUp',down:'ArrowDown',jump:'Space',jumpAlt:'KeyV',walk:'ShiftLeft',attack:'KeyZ',special:'KeyX',grab:'KeyC',guard:'KeyA',heavy:'KeyD',smash:'KeyS'},pad:{attack:1,special:0,grab:4,grabAlt:6,guard:5,guardAlt:7,jump:3,jumpAlt:2,heavy:-1,smash:-1,pause:9},padLayoutVersion:2,deadzone:.25,rightStickMode:"smash",tapJump:false,holdBuffer:false};
  const keyboard2={left:'KeyJ',right:'KeyL',up:'KeyI',down:'KeyK',jump:'KeyN',jumpAlt:'KeyB',walk:'ShiftRight',attack:'KeyU',special:'KeyO',grab:'KeyH',guard:'KeyY',heavy:'KeyT',smash:'KeyG'},allPads=new Map();
  const legacyPad={attack:0,special:1,grab:2,guard:4,jump:3,jumpAlt:6,heavy:5,smash:7,pause:9};
  const labels={walk:'歩行修飾',jumpAlt:'ジャンプ2',left:'左',right:'右',up:'上（技の方向）',down:'下 / 急降下',jump:'ジャンプ（別ボタン）',attack:'攻撃',special:'必殺技',grab:'つかみ',grabAlt:'つかみ2',guard:'ガード',guardAlt:'ガード2',heavy:'強攻撃（補助）',smash:'スマッシュ（長押し）',pause:'ポーズ / 決定'};

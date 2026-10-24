@@ -324,5 +324,77 @@ const StageArtData={
     "height": 206
    }
   }
+ },
+ "factory": {
+  "backgroundSource": "assets/stage-v3-factory-background.png",
+  "background": "assets/ready/stage-v3-factory-background-736c2400493b4d1c.webp",
+  "main": {
+   "image": "assets/ready/stage-v3-factory-main-69397946e98f0b32.webp",
+   "nativeImage": "assets/stage-v3-factory-main.png",
+   "width": 1517,
+   "height": 266,
+   "walkY": 33,
+   "surfaceLeft": 6,
+   "surfaceRight": 1511,
+   "source": "assets/stage-v3-factory-platforms.png",
+   "rect": {
+    "left": 10,
+    "top": 186,
+    "width": 1517,
+    "height": 266
+   }
+  },
+  "small": {
+   "image": "assets/ready/stage-v3-factory-small-b36540434446f476.webp",
+   "nativeImage": "assets/stage-v3-factory-small.png",
+   "width": 704,
+   "height": 306,
+   "walkY": 36,
+   "surfaceLeft": 8,
+   "surfaceRight": 694,
+   "source": "assets/stage-v3-factory-platforms.png",
+   "rect": {
+    "left": 417,
+    "top": 624,
+    "width": 704,
+    "height": 306
+   }
+  }
+ },
+ "sports": {
+  "backgroundSource": "assets/stage-v3-sports-background.png",
+  "background": "assets/ready/stage-v3-sports-background-79f3328c29d2b813.webp",
+  "main": {
+   "image": "assets/ready/stage-v3-sports-main-71740a1ef48980d8.webp",
+   "nativeImage": "assets/stage-v3-sports-main.png",
+   "width": 1754,
+   "height": 216,
+   "walkY": 66,
+   "surfaceLeft": 6,
+   "surfaceRight": 1745,
+   "source": "assets/stage-v3-sports-platforms.png",
+   "rect": {
+    "left": 10,
+    "top": 185,
+    "width": 1754,
+    "height": 216
+   }
+  },
+  "small": {
+   "image": "assets/ready/stage-v3-sports-small-20950ae3b007b5b0.webp",
+   "nativeImage": "assets/stage-v3-sports-small.png",
+   "width": 802,
+   "height": 164,
+   "walkY": 43,
+   "surfaceLeft": 5,
+   "surfaceRight": 792,
+   "source": "assets/stage-v3-sports-platforms.png",
+   "rect": {
+    "left": 486,
+    "top": 588,
+    "width": 802,
+    "height": 164
+   }
+  }
  }
 };

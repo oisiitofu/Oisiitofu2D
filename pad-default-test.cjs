@@ -15,7 +15,7 @@ const {chromium}=require('playwright');
     check(name+' new standard mapping',Object.entries(expected).every(([k,v])=>config.pad[k]===v));
     if(saved)check('keyboard and deadzone retained',config.keyboard.attack==='KeyB'&&config.deadzone===.4);
     const inputs=await page.evaluate(()=>{
-     const pad={index:0,connected:true,mapping:'standard',id:'DualSense test',axes:[0,0,0,0],buttons:Array.from({length:17},()=>({pressed:false,value:0}))};
+     document.querySelectorAll('#menu,#pause,#result,#bingo-select').forEach(e=>e.classList.add('hidden'));const pad={index:0,connected:true,mapping:'standard',id:'DualSense test',axes:[0,0,0,0],buttons:Array.from({length:17},()=>({pressed:false,value:0}))};
      Object.defineProperty(navigator,'getGamepads',{configurable:true,value:()=>[pad]});Controls.poll();Controls.consume();
      const samples=[];
      for(const n of [0,1,2,3,4,5,6,7]){
