@@ -101,7 +101,11 @@ const PlayerController=(()=>{
  function ready(f,i){i=InputFrames.consume(f,i);stopLaunchOnPress(f,i);const order=InputFrames.priority[f.grounded?'ground':'air'];
   if(i.jump&&i.jumpAerial){beginJump(f,i);return;}
   if(f.grounded&&i.shieldUpSmash&&i.smash&&InputFrames.attackDirection(i).y<-.5){attack(f,'upsmash');return;}
-  if(f.grounded&&!i.guard&&i.y>.65&&Math.abs(i.y)>Math.abs(i.x)&&!['jump','jab','heavy','smash','special'].some(key=>i[key])&&platforms.some(p=>!p.main&&Math.abs(p.y-f.y)<2&&f.x>p.x&&f.x<p.x+p.w)){f.drop=18;f.y+=8;f.vy=2;f.grounded=false;enter(f,'Fall');}
+  // A held down-special remains a special command even when its first press
+  // was gated (empty meter/cooldown). It must not turn into a platform drop
+  // on the next frame while B is still held.
+  const downSpecialHeld=!!(i.special||i.specialHeld||i.buttons?.special?.value)&&InputFrames.attackDirection(i).y>.5;
+  if(f.grounded&&!i.guard&&!downSpecialHeld&&i.y>.65&&Math.abs(i.y)>Math.abs(i.x)&&!['jump','jab','heavy','smash','special'].some(key=>i[key])&&platforms.some(p=>!p.main&&Math.abs(p.y-f.y)<2&&f.x>p.x&&f.x<p.x+p.w)){f.drop=18;f.y+=8;f.vy=2;f.grounded=false;enter(f,'Fall');}
   for(let cmd of order){if(!i[cmd])continue;
    if(cmd==='guard'){if(f.grounded){if(i.grab){attack(f,'grab');return;}f.shieldHeldFrames=0;enter(f,'ShieldStart',1);if(i.dodgePressed)beginDodge(f,i);return;}if(i.guardPressed&&!f.airDodged){beginDodge(f,i);return;}continue;}
    if(cmd==='jump'){beginJump(f,i);return;}

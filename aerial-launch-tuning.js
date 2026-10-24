@@ -18,7 +18,8 @@ const AerialLaunchTuning=(()=>{
   const type=typeOf(a),p=profiles[a.launchRoleFamily]||profiles.blade;
   if(type==='dair'&&!meteor(a))return{...a,baseKnockback:(a.baseKnockback??3.2)*.85,knockbackGrowth:(a.knockbackGrowth??.065)*.8};
   if(type!=='fair'&&type!=='bair')return a;
-  return{...a,baseKnockback:Math.max(a.baseKnockback??3.2,p[type+'Base']),knockbackGrowth:Math.max(a.knockbackGrowth??.065,p[type+'Growth'])};
+  const scale=type==='bair'?.9:1;
+  return{...a,baseKnockback:Math.max(a.baseKnockback??3.2,p[type+'Base'])*scale,knockbackGrowth:Math.max(a.knockbackGrowth??.065,p[type+'Growth'])*scale};
  }
  function trajectory(a,original){
   if(!eligible(a)||meteor(a)||!Number.isFinite(a.angle))return null;

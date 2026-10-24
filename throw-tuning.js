@@ -10,6 +10,11 @@ const ThrowTuning=(()=>{
   grappler:'agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby',
   caster:'shionne genis viridi vivi nia colette will emma ryza midna bomberman sans headmaster sakuna miku naruhodo layton vincent mametchi aruru maruku dietrich rocbouquet deemo aerith donchan melia yuri toro katamari okami battlemage naegi'
  };
+ // Weapon specialists keep useful positioning throws; supernatural and
+ // power identities get the designated KO directions below.
+ groups.blade='zack tidus arthur sakura riesz edea narmaya gran ky alphen ash judas rion sol miyabi zero3 dana ulgrim roxas twob zero lightning rean estelle noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian nier dante charlotta arus maelle frog eve saki hanajk hanajd kisuke ray alain hinako fiora krystal malenia alucard shizuna knight hornet hayabusa';
+ groups.psion='kasane neku midna emma pneuma laharl odio will melia battlemage reimu rocbouquet deemo';
+ groups.power='agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby presea zoe greymon metalgreymon wargreymon omegamon';
  // Per-character selections, rather than roster-number/modulo assignments.
  const assignments=Object.fromEntries(Object.entries(groups).flatMap(([group,ids])=>ids.split(' ').map(id=>[id,group])));
  const roles={
@@ -17,16 +22,22 @@ const ThrowTuning=(()=>{
   rising:['position','position','ko','combo'],
   agile:['combo','position','juggle','combo'],
   grappler:['ko','position','juggle','combo'],
-  caster:['position','position','juggle','combo']
+  caster:['position','position','juggle','combo'],
+  blade:['position','position','juggle','combo'],
+  psion:['position','position','ko','combo'],
+  power:['ko','position','juggle','combo']
  };
  // [angle in degrees, growth]. Each direction has a different job; up
  // throws keep meaningful percent scaling even when their job is juggling.
  const profiles={
-  balanced:[[43,.033],[42,.047],[82,.066],[68,.023]],
-  rising:[[36,.029],[48,.031],[85,.096],[74,.021]],
-  agile:[[54,.024],[40,.032],[78,.058],[64,.020]],
-  grappler:[[37,.054],[46,.034],[84,.069],[72,.025]],
-  caster:[[50,.029],[46,.030],[88,.064],[76,.022]]
+  balanced:[[43,.031],[40,.048],[82,.057],[59,.022]],
+  rising:[[36,.030],[48,.032],[85,.0758],[62,.021]],
+  agile:[[54,.025],[40,.031],[78,.052],[55,.020]],
+  grappler:[[37,.050],[46,.036],[84,.064],[61,.025]],
+  caster:[[50,.031],[46,.034],[86,.057],[63,.022]],
+  blade:[[45,.024],[43,.027],[80,.043],[58,.019]],
+  psion:[[43,.035],[46,.037],[86,.075],[62,.024]],
+  power:[[37,.047],[46,.036],[84,.064],[60,.025]]
  };
  // Named identities, independent of roster/display numbers.
  const identities={
@@ -44,11 +55,16 @@ const ThrowTuning=(()=>{
  function move(f,type){
   const original=movesFor(f)[type],group=assignments[f.characterId]||'balanced',role=roles[group][directions.indexOf(type)];
   if(!original||!role)return original;
-  const up=type==='upThrow',down=type==='downThrow',[angle,growth]=identities[f.characterId]?.[type]||profiles[group][directions.indexOf(type)];
+  const up=type==='upThrow',down=type==='downThrow',profile=profiles[group][directions.indexOf(type)],identity=identities[f.characterId]?.[type];
+  const angle=down?profile[0]:identity?.[0]??profile[0];
+  // Preserve named angular identities, but calibrate KO growth against the
+  // new base launch. Adding base on top of old KO growth would over-buff it.
+  const growth=role==='ko'||group==='blade'||down?profile[1]:identity?.[1]??profile[1];
   // Base knockback adds a percent-independent launch while retaining growth.
   // fixedKnockback would replace growth entirely, so normal throws never use it.
-  const p=role==='ko'?{base:6.4,recovery:24}:role==='combo'?{base:6,recovery:12}:role==='juggle'?{base:6.2,recovery:17}:{base:6.6,recovery:20};
-  return{...original,throwRole:role,throwGroup:group,baseKnockback:p.base,knockbackGrowth:growth,throwKnockbackCap:down?82:undefined,
+  const base=group==='blade'?10.1:group==='psion'||group==='power'?11:10.4;
+  const p=role==='ko'?{base,recovery:24}:role==='combo'?{base:base-.35,recovery:13}:role==='juggle'?{base:base-.1,recovery:17}:{base,recovery:20};
+  return{...original,throwRole:role,throwGroup:group,baseKnockback:p.base,knockbackGrowth:growth,throwKnockbackCap:down?82:undefined,throwBounce:down,
    damage:Math.min(original.damage,role==='combo'?6:role==='juggle'?7:9),angle:-angle*Math.PI/180,
    throwHitstun:role==='combo'?22:0,totalFrames:p.recovery,recoveryFrames:p.recovery-1,motionEndFrames:p.recovery,FAF:p.recovery+1};
  }

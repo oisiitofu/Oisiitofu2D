@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-23",
+  "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "implementationCommit": "01f0a61",
+  "sourceCommit": "a706b1d7fbe66649cc54aa6c9070f5e516ae2c34",
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_96811fc8a830819191728dd104035b08",
+  "version": 134,
+  "deployment": {
+    "id": "appgdep_6adb5ee405208191822f70b13e50b7fb",
+    "status": "succeeded",
+    "env_set_revision": 263,
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site"
+  },
+  "uploads": {
+    "objects": 30,
+    "bytes": 28272822,
+    "failed": 0,
+    "temporaryKeyRemoved": true
+  },
+  "qa": {
+    "functional": 113,
+    "normalScenes": 30,
+    "specialScenes": 28,
+    "idleColors": 10,
+    "variants": 12,
+    "motionSamples": 60,
+    "cpuMatches": 1,
+    "art": {
+      "poses": 77,
+      "effects": 16,
+      "costumes": 385,
+      "mismatches": 0
+    },
+    "publicAssets": {
+      "sha256Files": 29,
+      "catalogMatches": true,
+      "onlineStatus": 200
+    },
+    "publicOnline": {
+      "identicalFrames": 240,
+      "scenes": 6,
+      "errors": []
+    }
+  }
+}
