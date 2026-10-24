@@ -7,7 +7,7 @@ const scale=async(g,k)=>{if(Math.abs(k-1)<.0001)return g;const p=await sharp(g.p
  const base=sheets.basic[0],referenceHeight=base.h-6,poses=[base],scales={};
  const lock=root+'/assets/jett-neutral-locked.png';if(!fs.existsSync(lock))await sharp(base.pixels,{raw:{width:base.w,height:base.h,channels:4}}).png().toFile(lock);
  for(const p of['basic','attacks','specials','defense','extra']){const k=referenceHeight/(sheets[p][0].h-6);scales[p]=k;for(const g of sheets[p].slice(1))poses.push(await scale(g,k));}
- 
+
  const r=await raw('selection'),portrait=await sharp(r.data,{raw:{width:r.info.width,height:r.info.height,channels:4}}).resize({width:420}).raw().toBuffer({resolveWithObject:true});poses.push({pixels:portrait.data,w:portrait.info.width,h:portrait.info.height});
  const effects=require('./extract-effects.cjs')(await raw('effects'));
  let x=2,y=2,rh=0;const frames=[],fx=[],packed=[];
