@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-24",
+  "implementationCommit": "1ceda0e",
+  "publicUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "version": 136,
+  "sourceCommit": "1c87fe0882b71eaaf332011a195433e9b1f7d6ac",
+  "savedVersion": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_6e59cb607e688191aaa09e91bb3b35af",
+  "deploymentId": "appgdep_6adc1236b4d48191b3da6b6063f87728",
+  "status": "succeeded",
+  "environmentRevision": 267,
+  "upload": {
+    "uploaded": 98,
+    "bytes": 8868449,
+    "failed": []
+  },
+  "temporaryUploadKeyRemoved": true,
+  "validation": {
+    "contactAssets": 96,
+    "contactFamilies": 16,
+    "weights": 2,
+    "variants": 3,
+    "actualContacts": 32,
+    "authoredMappings": 11,
+    "bankDecoded": 228,
+    "changedFilesSha256": 98,
+    "audioRegression": 93,
+    "menuRegression": 7,
+    "onlineIdenticalFrames": 120,
+    "onlineScenes": 3,
+    "mutedClientSounds": 0,
+    "cpuMatches": 1,
+    "errors": []
+  },
+  "futureCharacters": "Original abilities, inputs, special move interactions, tactical differences and counterplay are designed and documented before implementation.",
+  "preservedProcesses": {
+    "launcher": 3876,
+    "game": 1384,
+    "tunnel": 12588
+  }
+}
