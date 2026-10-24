@@ -1,0 +1,4 @@
+'use strict';
+const fs=require('fs'),p='characters/jett/tests/';
+for(const file of ['assemble-art.cjs','register.cjs']){let s=fs.readFileSync(p+file,'utf8').replaceAll('reimu','jett').replaceAll('Reimu','Jett');if(file==='assemble-art.cjs'){s=s.replace('poses[60]=poses[75];','');s=s.replace('r>g*1.45&&r>b*1.3&&r>80','b>r*1.2&&g>r*1.15&&b>55&&y>im.h*.25&&y<im.h*.8');s=s.replace('poses[58]','poses[60]').replace('anchors[58]','anchors[60]');}else s=s.replace("${id}:'staff'","${id}:'sword'").replace("balanced:'${id} ","agile:'${id} ");fs.writeFileSync(p+file,s);}
+let fx=fs.readFileSync('characters/reimu/tests/extract-effects.cjs','utf8');fx=fx.replace(/const centers=\[.*?\],seen=/,'const centers=[[192,128],[576,128],[960,128],[1344,128],[192,384],[576,384],[960,384],[1344,384],[192,640],[576,640],[960,640],[1344,640],[245,900],[650,900],[1010,900],[1380,900]],seen=');fs.writeFileSync(p+'extract-effects.cjs',fx);

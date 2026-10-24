@@ -1801,5 +1801,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "jett": {
+    "source": "characters/jett/assets/jett-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
