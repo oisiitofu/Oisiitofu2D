@@ -1889,5 +1889,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "etna": {
+    "source": "characters/etna/assets/etna-selection.png",
+    "crop": [
+      0,
+      0,
+      1223,
+      1286
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

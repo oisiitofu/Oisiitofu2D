@@ -1,0 +1,77 @@
+{
+  "definition": {
+    "id": "etna",
+    "name": "エトナ",
+    "style": "DISGAEA / 魔界戦記ディスガイア",
+    "number": "178",
+    "description": "長い魔槍とプリニーで間合いを支配。NBのプリニーを横Bのハート弾や下Bのカオスインパクトで起爆。上Bは槍を支点に方向を選ぶ弧状の跳躍。",
+    "pose": 74
+  },
+  "after": "laharl",
+  "anchorName": "ラハール",
+  "height": 94,
+  "tier": 2,
+  "weight": 84,
+  "physics": {
+    "weight": 84,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.9,
+    "airSpeed": 5.9,
+    "airAcceleration": 0.4,
+    "gravity": 0.55,
+    "fullHopVelocity": 14.1,
+    "ecb": {
+      "radius": 16.30612244897959,
+      "height": 87
+    },
+    "shieldSize": 45.12,
+    "shieldOffset": [
+      0,
+      -43.24
+    ],
+    "ledgeGrip": [
+      0.0521569764476586,
+      0.9574539588654389
+    ]
+  },
+  "mask": "(r>green*1.45&&r>b*1.2&&r>65)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 2,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 2,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 2
+  }
+}
