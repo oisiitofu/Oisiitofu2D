@@ -11,6 +11,7 @@ const ShionneMoves=(()=>{
  const poses={jab:16,jab2:17,jab3:18,heavy:19,up:20,low:21,dashAttack:22,smash:23,upsmash:24,downsmash:25,air:26,fair:27,bair:28,uair:29,dair:30,grab:46,pummel:47,ledge:57,getupAttack:57,forwardThrow:48,backThrow:49,upThrow:50,downThrow:51};
  for(const[k,n]of Object.entries(poses)){a[k].pose=n;for(const v of a[k].activeFrames)v.pose=n;}
  a.grab.newcomerHit=false;a.downsmash.activeFrames[1].pose=25;
+ for(const[type,family]of Object.entries({jab:'staff',jab2:'staff',jab3:'gun',heavy:'staff',up:'staff',smash:'beam',upsmash:'light',downsmash:'dark',air:'staff',fair:'staff',bair:'gun',uair:'gun',dair:'fire',dragon:'beam',dash:'fire',rise:'gun',gale:'light',airDrop:'light'}))a[type].soundFamily=family;
  for(const key of['smash','upsmash','downsmash','air','uair','dair'])a[key].authoredEffectCoverage=true;
  for(const v of Object.values(a))v.animation={...v.animation,anticipationPose:v.special?v.pose:0,accelerationPose:v.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};
  return a;
@@ -57,7 +58,7 @@ const ShionneRules=NewcomerCore.create('shionne',ShionneMoves,{
   if(q.kind==='bomb'){q.vy+=.3;q.x+=q.vx;q.y+=q.vy;const floor=platforms.find(p=>q.x>p.x&&q.x<p.x+p.w&&q.previousY<=p.y&&q.y>=p.y);if(floor){q.y=floor.y-3;q.vx*=.5;q.vy=-Math.abs(q.vy)*.36;}if(q.age>=140)shionneExplode(q);else return true;}
   if(q.kind!=='explosion'){q.x+=q.vx;q.y+=q.vy;const p=platforms.find(p=>p.main);if(StageGeometry.overlaps(p,q.x,q.y,q.radius,q.radius*2)){q.dead=true;return true;}}
   const box={x1:q.previousX,y1:q.previousY,x2:q.x,y2:q.y,radius:q.radius};
-  for(const target of BattlePlayers.targets(f)){if(q.hits.has(target.id)||CombatSystem.protection(target).intangible)continue;const touch=CombatSystem.contact(box,target),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(target.mode)&&CombatSystem.shieldCovers(target,box);if(!touch&&!shield)continue;q.hits.add(target.id);CombatSystem.hit(f,target,{...ShionneMoves.dragon,type:'dragon',sourceType:q.sourceType,projectile:true,charge:0,damage:q.damage,staleMultiplier:q.stale,launchDirection:q.face,angle:q.kind==='recoil'?1.3:-.8,baseKnockback:q.base,knockbackGrowth:q.growth},box,touch);}
+  for(const target of BattlePlayers.targets(f)){if(q.hits.has(target.id)||CombatSystem.protection(target).intangible)continue;const touch=CombatSystem.contact(box,target),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(target.mode)&&CombatSystem.shieldCovers(target,box);if(!touch&&!shield)continue;q.hits.add(target.id);CombatSystem.hit(f,target,{...ShionneMoves.dragon,soundFamily:q.kind==='explosion'?'fire':q.kind==='recoil'||q.kind==='snipe'?'gun':'beam',type:'dragon',sourceType:q.sourceType,projectile:true,charge:0,damage:q.damage,staleMultiplier:q.stale,launchDirection:q.face,angle:q.kind==='recoil'?1.3:-.8,baseKnockback:q.base,knockbackGrowth:q.growth},box,touch);}
   return true;
  },
  boxes(f,a,w){if(a.shionneRay||a.shionneBomb||a.shionneHeal)return[];

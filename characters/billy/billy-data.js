@@ -8,6 +8,7 @@ const BillyMoves=(()=>{const m=CombatData.createMove,w=CombatData.window,opt={sp
  },'punch',112),p={jab:16,jab2:17,jab3:18,heavy:19,up:20,low:21,dashAttack:22,smash:23,upsmash:24,downsmash:25,air:26,fair:27,bair:28,uair:29,dair:30,grab:46,pummel:47,ledge:57,getupAttack:57,forwardThrow:48,backThrow:49,upThrow:50,downThrow:51};
  for(const[k,n]of Object.entries(p)){a[k].pose=n;for(const e of a[k].activeFrames)e.pose=n;}a.grab.newcomerHit=false;
  a.downsmash.activeFrames[1].pose=25;a.downsmash.activeFrames[1].shape='front';
+ for(const type of['jab3','heavy','smash','upsmash','downsmash','air','fair','bair','uair','dair','dragon','dash','rise','gale','airDrop'])a[type].soundFamily='gun';
  a.upsmash.authoredEffectCoverage=true;a.uair.authoredEffectCoverage=true;
  for(const v of Object.values(a))v.animation={...v.animation,anticipationPose:v.special?v.pose:11,accelerationPose:v.pose,recoveryPose:0,lean:0,lunge:0,impactScale:1};return a;
 })();

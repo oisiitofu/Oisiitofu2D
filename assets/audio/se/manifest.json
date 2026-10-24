@@ -301,6 +301,110 @@
       "/assets/audio/se/respawn-1.wav",
       "/assets/audio/se/respawn-2.wav",
       "/assets/audio/se/respawn-3.wav"
+    ],
+    "sword-hit-heavy": [
+      "/assets/audio/se/sword-hit-heavy-1.wav",
+      "/assets/audio/se/sword-hit-heavy-2.wav",
+      "/assets/audio/se/sword-hit-heavy-3.wav"
+    ],
+    "spear-hit": [
+      "/assets/audio/se/spear-hit-1.wav",
+      "/assets/audio/se/spear-hit-2.wav",
+      "/assets/audio/se/spear-hit-3.wav"
+    ],
+    "spear-hit-heavy": [
+      "/assets/audio/se/spear-hit-heavy-1.wav",
+      "/assets/audio/se/spear-hit-heavy-2.wav",
+      "/assets/audio/se/spear-hit-heavy-3.wav"
+    ],
+    "staff-hit-heavy": [
+      "/assets/audio/se/staff-hit-heavy-1.wav",
+      "/assets/audio/se/staff-hit-heavy-2.wav",
+      "/assets/audio/se/staff-hit-heavy-3.wav"
+    ],
+    "hammer-hit-heavy": [
+      "/assets/audio/se/hammer-hit-heavy-1.wav",
+      "/assets/audio/se/hammer-hit-heavy-2.wav",
+      "/assets/audio/se/hammer-hit-heavy-3.wav"
+    ],
+    "claw-hit-heavy": [
+      "/assets/audio/se/claw-hit-heavy-1.wav",
+      "/assets/audio/se/claw-hit-heavy-2.wav",
+      "/assets/audio/se/claw-hit-heavy-3.wav"
+    ],
+    "bullet-hit-heavy": [
+      "/assets/audio/se/bullet-hit-heavy-1.wav",
+      "/assets/audio/se/bullet-hit-heavy-2.wav",
+      "/assets/audio/se/bullet-hit-heavy-3.wav"
+    ],
+    "beam-hit-heavy": [
+      "/assets/audio/se/beam-hit-heavy-1.wav",
+      "/assets/audio/se/beam-hit-heavy-2.wav",
+      "/assets/audio/se/beam-hit-heavy-3.wav"
+    ],
+    "fire-hit-heavy": [
+      "/assets/audio/se/fire-hit-heavy-1.wav",
+      "/assets/audio/se/fire-hit-heavy-2.wav",
+      "/assets/audio/se/fire-hit-heavy-3.wav"
+    ],
+    "ice-hit-heavy": [
+      "/assets/audio/se/ice-hit-heavy-1.wav",
+      "/assets/audio/se/ice-hit-heavy-2.wav",
+      "/assets/audio/se/ice-hit-heavy-3.wav"
+    ],
+    "thunder-hit-heavy": [
+      "/assets/audio/se/thunder-hit-heavy-1.wav",
+      "/assets/audio/se/thunder-hit-heavy-2.wav",
+      "/assets/audio/se/thunder-hit-heavy-3.wav"
+    ],
+    "wind-hit-heavy": [
+      "/assets/audio/se/wind-hit-heavy-1.wav",
+      "/assets/audio/se/wind-hit-heavy-2.wav",
+      "/assets/audio/se/wind-hit-heavy-3.wav"
+    ],
+    "water-hit-heavy": [
+      "/assets/audio/se/water-hit-heavy-1.wav",
+      "/assets/audio/se/water-hit-heavy-2.wav",
+      "/assets/audio/se/water-hit-heavy-3.wav"
+    ],
+    "earth-hit-heavy": [
+      "/assets/audio/se/earth-hit-heavy-1.wav",
+      "/assets/audio/se/earth-hit-heavy-2.wav",
+      "/assets/audio/se/earth-hit-heavy-3.wav"
+    ],
+    "light-hit-heavy": [
+      "/assets/audio/se/light-hit-heavy-1.wav",
+      "/assets/audio/se/light-hit-heavy-2.wav",
+      "/assets/audio/se/light-hit-heavy-3.wav"
+    ],
+    "dark-hit-heavy": [
+      "/assets/audio/se/dark-hit-heavy-1.wav",
+      "/assets/audio/se/dark-hit-heavy-2.wav",
+      "/assets/audio/se/dark-hit-heavy-3.wav"
     ]
+  },
+  "impactDesign": {
+    "version": 2,
+    "families": [
+      "punch",
+      "sword",
+      "spear",
+      "staff",
+      "hammer",
+      "claw",
+      "bullet",
+      "beam",
+      "fire",
+      "ice",
+      "thunder",
+      "wind",
+      "water",
+      "earth",
+      "light",
+      "dark"
+    ],
+    "variants": 3,
+    "weight": "light/heavy",
+    "generator": "build-hit-audio.cjs"
   }
 }
