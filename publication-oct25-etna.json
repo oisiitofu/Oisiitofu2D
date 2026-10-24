@@ -1,0 +1,66 @@
+{
+  "publishedAt": "2026-10-24T17:07:08.104594+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 147,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_d5113634dba8819180662bea16687c05",
+  "deploymentId": "appgdep_6adce5ae9ea88191b9b42b02315e196b",
+  "environmentRevision": 289,
+  "status": "succeeded",
+  "siteSourceCommit": "aa3897f4bb2eef2765a685f357e89bf1eb5ab5be",
+  "implementationCommit": "5c11330669f071c04f56ed65d02fa0fea29b41dd",
+  "character": {
+    "id": "etna",
+    "name": "エトナ",
+    "after": "laharl",
+    "displayNumber": 141,
+    "fullBodyPoses": 74,
+    "selectionPortraits": 5,
+    "effects": 16,
+    "sizeTier": 2,
+    "height": 94
+  },
+  "assets": {
+    "uploaded": 38,
+    "bytes": 97218421,
+    "failed": [],
+    "sha256Files": 37,
+    "normalizedHtmlFiles": 1
+  },
+  "validation": {
+    "functionalChecks": 84,
+    "publicFunctionalChecks": 84,
+    "visualScenes": 75,
+    "publicVisualScenes": 75,
+    "cpuMatches": 2,
+    "onlineIdenticalFrames": 331,
+    "publicOnlineIdenticalFrames": 331,
+    "onlineScenes": [
+      "Prinny throw",
+      "remote heart detonation",
+      "Chaos Impact",
+      "Spear Vault recovery"
+    ],
+    "artPoses": 75,
+    "artEffects": 16,
+    "artCostumes": 375,
+    "errors": []
+  },
+  "uploadKeyRemoved": true,
+  "server": {
+    "previousPid": 27224,
+    "currentPid": 32784,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "launcherPid": 3876,
+    "tunnelPid": 12588,
+    "preserved": true
+  },
+  "existingWorkspaceBgmIncluded": [
+    "assets/audio/bgm/champions-stadium/Champions’ Grandstand.wav",
+    "assets/audio/bgm/gearwork-factory/Forged Rampage.wav"
+  ],
+  "artPromptSet": "characters/etna/docs/art-prompts.json",
+  "previews": "characters/etna/previews"
+}
