@@ -1,0 +1,59 @@
+{
+  "publishedAt": "2026-10-24T16:15:17.504285+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 146,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_30a97e1c33b88191bd1d1da55658d6f1",
+  "deploymentId": "appgdep_6adcd987ccd881918347d4bd69eb3f8a",
+  "environmentRevision": 287,
+  "status": "succeeded",
+  "siteSourceCommit": "e833162b59c014576b56ea118d9b1c1f9bcafa70",
+  "implementationCommit": "77deead",
+  "changes": [
+    "Right-stick defaults and reset use smash; saved explicit tilt retained",
+    "Dedicated expressive PaRappa head-and-shoulders selection portrait",
+    "Fighter numbers at image top-left including compact layout",
+    "Factory stage 11 with alternating lifts; sports stadium stage 12"
+  ],
+  "assets": {
+    "uploaded": 34,
+    "bytes": 47768373,
+    "failed": [],
+    "sha256Files": 34
+  },
+  "validation": {
+    "localFunctionalChecks": 52,
+    "publicFunctionalChecks": 52,
+    "controllerChecks": 31,
+    "cpuMatches": 2,
+    "onlineFramesPerStage": 241,
+    "onlineStages": [
+      "11",
+      "12"
+    ],
+    "publicOnlineIdenticalFrames": 482,
+    "parappaPoses": 77,
+    "parappaEffects": 16,
+    "parappaCostumes": 385,
+    "errors": []
+  },
+  "uploadKeyRemoved": true,
+  "server": {
+    "previousPid": 38880,
+    "currentPid": 27224,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "launcherPid": 3876,
+    "tunnelPid": 12588,
+    "preserved": true
+  },
+  "testServerCleanup": {
+    "closedPort": 4175,
+    "remainingPort": 4174,
+    "remainingPid": 12868,
+    "reason": "Earlier stop action rejected by automatic approval review: blocked by policy"
+  },
+  "artPromptSet": "docs/stages/oct25-art-prompts.json",
+  "previews": "previews/stage-menu-oct25"
+}
