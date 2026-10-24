@@ -1,0 +1,10 @@
+'use strict';
+const TailsVFX=(()=>{const k=CharacterVFXKit.create('tails'),{stamp}=k;
+ // Source 0 has its convex edge RIGHT; 1 arches UP; 2 and 7 point RIGHT.
+ // Normalize source, rotate locally, then reflect facing and translate.
+ function draw(f){if(f.respawn)return;const a=f.attack;if(!a)return;const e=k.envelope(f);if(e&&!a.tailsFlight){if(a.type==='upsmash')stamp(7,e.x,e.y,e.h,32,f.face,.8,-Math.PI/2);else if(e.upper){const h=Math.min(40,e.w*.55);stamp(1,e.x,e.t+h/2,e.w,h,1,.82);}else if(['jab','jab2','jab3','fair','heavy'].includes(a.type)){const tip=f.face>0?e.r:e.l;stamp(13,tip-f.face*13,e.y,28,28,f.face,.85,0,true);}else if(a.type==='smash'||a.type==='dair')stamp(2,e.x,e.y,Math.hypot(e.w,e.h),Math.min(e.h,48),f.face,.7,a.type==='dair'?.7:0);else if(a.type==='downsmash'){stamp(0,e.l+e.w*.25,e.y,e.w*.5,34,-1,.75);stamp(0,e.r-e.w*.25,e.y,e.w*.5,34,1,.75);}else if(a.type==='air'){stamp(0,e.x-e.w*.22,e.y,e.w*.56,32,-1,.65);stamp(0,e.x+e.w*.22,e.y,e.w*.56,32,1,.65);}else stamp(0,e.x,e.y,e.w,Math.min(e.h,36),e.back?-f.face:f.face,.75);}if(a.tailsFlight&&a.phase==='flight')stamp(10,f.x,f.y-75,66,16,1,.45,0,true);if(a.tailsRush&&a.boosted)stamp(7,f.x+f.face*25,f.y-25,60,28,f.face,.8);}
+ function drawObjects(){for(const q of TailsRules.objects){if(q.dead)continue;const fade=Math.min(1,(q.life-q.age)/8);if(q.kind==='bomb'){stamp(3,q.x,q.y-12,29,29,q.face,fade,0,true);if(q.life-q.age<45&&Math.floor(q.age/4)%2)stamp(13,q.x,q.y-18,15,15,1,.65,0,true);}if(q.kind==='gadget'){stamp(q.pulseAt?6:5,q.x,q.y-18,35,37,q.face,fade,0,true);if(q.shield>0)stamp(12,q.x,q.y-36,205,155,1,Math.min(.42,q.shield/60),0,true);}if(q.kind==='blast')stamp(4,q.x,q.y-18,q.radius*2.2,q.radius*1.8,1,fade,0,true);if(q.kind==='pulse')stamp(7,q.x,q.y,130,85,1,fade,0,true);}}
+ function impact(v){stamp(13,v.x,v.y,35+v.power*3,35+v.power*3,1,v.life/v.max,0,true);}
+ function hud(f,x,y){k.bar(tailsFuel(f)/120*100,'FLIGHT',x,y,'#ffc552');const n=TailsRules.objects.filter(q=>q.owner===f.id&&q.kind==='bomb'&&!q.dead).length;text('BOMB '+n+'/2'+(tailsGadget(f)?'  ⚙':''),x+148,y+43,8,'#b5eaff','left');}
+ return{draw,drawObjects,impact,hud};})();
+
