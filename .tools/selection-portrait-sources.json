@@ -1845,5 +1845,49 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "enoch": {
+    "source": "characters/enoch/assets/enoch-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "astro": {
+    "source": "characters/astro/assets/astro-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "ratchet": {
+    "source": "characters/ratchet/assets/ratchet-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "django": {
+    "source": "characters/django/assets/django-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

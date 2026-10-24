@@ -1,0 +1,77 @@
+{
+  "definition": {
+    "id": "django",
+    "name": "ジャンゴ",
+    "style": "BOKTAI / 僕らの太陽",
+    "number": "177",
+    "description": "太陽エネルギーを銃と炎の復帰へ配分する太陽少年。横Bは長いスピアを突き出して相手を引き寄せる。上Bはエネルギーを使うテンペストフレーム、下Bで無防備に日光を吸収。",
+    "pose": 76
+  },
+  "after": "goemon",
+  "anchorName": "ゴエモン",
+  "height": 78,
+  "tier": 1,
+  "weight": 80,
+  "physics": {
+    "weight": 80,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.8,
+    "airSpeed": 5.6,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 13.53061224489796,
+      "height": 71
+    },
+    "shieldSize": 37.44,
+    "shieldOffset": [
+      0,
+      -35.88
+    ],
+    "ledgeGrip": [
+      -0.012093495934959453,
+      0.9590339847497854
+    ]
+  },
+  "mask": "(r>green*1.6&&r>b*1.4&&r>75)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 2,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 2,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 2
+  }
+}

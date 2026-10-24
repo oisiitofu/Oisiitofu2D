@@ -1,0 +1,77 @@
+{
+  "definition": {
+    "id": "ratchet",
+    "name": "ラチェット",
+    "style": "RATCHET & CLANK",
+    "number": "176",
+    "description": "下Bでバーストピストル／エンフォーサー／リコシェを選択。横Bはホバーブーツで加速して離すとレンチ制動。上Bは地形へフックを掛け、振り子を操作してジャンプで離脱。空振り時はクランクのヘリパック。",
+    "pose": 76
+  },
+  "after": "crash",
+  "anchorName": "クラッシュ",
+  "height": 86,
+  "tier": null,
+  "weight": 86,
+  "physics": {
+    "weight": 86,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 7.1,
+    "airSpeed": 5.8,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 14.918367346938775,
+      "height": 79
+    },
+    "shieldSize": 41.28,
+    "shieldOffset": [
+      0,
+      -39.56
+    ],
+    "ledgeGrip": [
+      0.03251393417801762,
+      0.9540636280372825
+    ]
+  },
+  "mask": "(b>r*1.1&&b>green*.95&&b>35)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 2,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 2,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 2
+  }
+}

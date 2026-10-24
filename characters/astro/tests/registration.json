@@ -1,0 +1,75 @@
+{
+  "definition": {
+    "id": "astro",
+    "name": "アストロ",
+    "style": "ASTRO BOT",
+    "number": "175",
+    "description": "ツインフロッグを伸ばし、ホールドで相手や地形へ掛ける。バクスターは曲がるブーストと着地反動、チキンロケットはタコルーンへ切替。下Bは周辺の行動・弾を遅くする時間フィールド。",
+    "pose": 76
+  },
+  "after": "toro",
+  "anchorName": "トロ",
+  "height": 70,
+  "tier": null,
+  "weight": 76,
+  "physics": {
+    "weight": 76,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.8,
+    "airSpeed": 6.2,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 13.5,
+    "ecb": {
+      "radius": 12.142857142857142,
+      "height": 63
+    },
+    "shieldSize": 33.6,
+    "shieldOffset": [
+      0,
+      -32.2
+    ],
+    "ledgeGrip": [
+      -0.376813392142083,
+      0.9594353881032063
+    ]
+  },
+  "mask": "(b>r*1.3&&b>green*1.15&&b>80)",
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 2,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 2,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 2
+  }
+}

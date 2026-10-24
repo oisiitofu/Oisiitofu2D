@@ -1,0 +1,77 @@
+{
+  "definition": {
+    "id": "enoch",
+    "name": "イーノック",
+    "style": "EL SHADDAI",
+    "number": "174",
+    "description": "アーチ／ゲイル／ヴェイルを下Bで浄化・切替。アーチは投刃の往復と滑空、ゲイルは誘導刃と遠隔六刃の再指令、ヴェイルは盾打ちと壁反動の復帰。武器の純度が落ちると威力低下。",
+    "pose": 138
+  },
+  "after": "metabee",
+  "anchorName": "メタビー",
+  "height": 98,
+  "tier": 3,
+  "weight": 98,
+  "physics": {
+    "weight": 98,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.7,
+    "airSpeed": 5.8,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 17,
+      "height": 91
+    },
+    "shieldSize": 47.04,
+    "shieldOffset": [
+      0,
+      -45.080000000000005
+    ],
+    "ledgeGrip": [
+      -0.14877500032014424,
+      0.961911185261439
+    ]
+  },
+  "mask": "(b>r*1.1&&b>green*1.03&&b>35)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 2,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 2,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 2
+  }
+}

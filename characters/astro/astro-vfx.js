@@ -1,0 +1,7 @@
+'use strict';
+const AstroVFX=(()=>{const k=CharacterVFXKit.create('astro'),{stamp}=k;
+ function draw(f){if(f.respawn)return;const a=f.attack;if(!a)return;const e=k.envelope(f);if(e){if(a.type==='upsmash'||a.type==='uair')stamp(1,e.x,e.t+20,e.w,40,f.face);else if(a.type==='dair')stamp(10,e.x,e.y,e.w,e.h,1);else if(a.type==='air'){stamp(12,e.l+e.w*.25,e.y,e.w*.5,30,-1);stamp(12,e.r-e.w*.25,e.y,e.w*.5,30,1);}else if(a.type==='smash'||a.type==='fair')stamp(11,e.x,e.y,e.w,Math.min(e.h,40),f.face);else{const x=e.back?e.l+15:e.upper?e.x:f.face>0?e.r-15:e.l+15;stamp(e.back?2:0,x,e.upper?e.t+15:e.y,30,30,e.back?-f.face:f.face,1,e.upper?-Math.PI/2:0);}}}
+ function drawObjects(){for(const q of AstroRules.objects){if(q.dead)continue;const f=fighters[q.owner],fade=Math.min(1,(q.life-q.age)/10);if(q.kind==='clock'){stamp(8,q.x,q.y,q.radius*2,q.radius*2,1,.28*fade,0,true);stamp(9,q.x,q.y,70,70,1,.8*fade,0,true);}else if(q.kind==='frog'){const hand={x:f.x+f.face*15,y:f.y-35},dx=q.x-hand.x,dy=q.y-hand.y,d=Math.hypot(dx,dy),rot=Math.atan2(dy,dx);for(let t=8;t<d-15;t+=19)stamp(4,hand.x+dx*t/d,hand.y+dy*t/d,23,7,1,fade,rot,true);stamp(3,q.x,q.y,39,25,1,fade,rot,true);}}}
+ function impact(v){stamp(14,v.x,v.y,36+v.power*3,36+v.power*3,1,v.life/v.max,0,true);}
+ function hud(f,x,y){k.bar(f.astroClockEnergy??100,'TIME STOPPER',x,y,'#8ee8ff');if(f.astroRocketUsed)text('BALLOON USED',x+149,y+44,8,'#ffa6dd');}
+ return{stamp,draw,drawObjects,impact,hud};})();

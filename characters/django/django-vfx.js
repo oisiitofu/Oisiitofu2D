@@ -1,0 +1,8 @@
+'use strict';
+const DjangoVFX=(()=>{const k=CharacterVFXKit.create('django'),{stamp}=k;
+ // Gold blade convex RIGHT, canopy convex UP. Solar spear light leads RIGHT.
+ function draw(f){if(f.respawn)return;stamp(10,f.x-f.face*30,f.y-69+Math.sin(frame*.06)*3,24,26,1,1,0,true);const a=f.attack;if(!a)return;const e=k.envelope(f);if(e){if(a.djangoSpear)stamp(6,e.x,e.y,e.w,35,f.face);else if(a.djangoTempest)stamp(7,e.x,e.y,e.w,e.h,f.face);else if(a.type==='uair')stamp(5,e.x,e.t+14,30,30,1,1,-Math.PI/2);else if(a.type==='upsmash'||a.type==='downsmash'||a.type==='dair')stamp(2,e.x,a.type==='upsmash'?e.t+25:e.d-23,e.w,46,f.face);else if(a.type==='bair'||a.type==='dashAttack')stamp(13,e.back?e.l+15:f.face>0?e.r-15:e.l+15,e.y,32,32,e.back?-f.face:f.face);else if(e.upper)stamp(1,e.x,e.t+22,e.w,44,f.face);else if(a.type==='air'){stamp(0,e.l+e.w*.25,e.y,e.w*.5,45,-1);stamp(0,e.r-e.w*.25,e.y,e.w*.5,45,1);}else stamp(0,e.x,e.y,e.w,Math.min(e.h,55),e.back?-f.face:f.face);}if(a.djangoGun&&a.hold)stamp(4,f.x+f.face*36,f.y-39,20+(a.charge||0)*28,20+(a.charge||0)*28,1,.8,0,true);if(a.djangoSolar&&!a.ended)stamp(9,f.x,f.y-36,65,125,1,.35,0,true);}
+ function drawObjects(){for(const q of DjangoRules.objects){if(q.dead)continue;const fade=Math.min(1,(q.life-q.age)/10);stamp(q.kind==='charge'?8:q.charged?4:3,q.x,q.y,q.kind==='charge'?75:q.radius*3,q.kind==='charge'?50:q.radius*2,q.face,fade,Math.atan2(q.vy,Math.abs(q.vx)||1),q.kind==='charge');}}
+ function impact(v){stamp(13,v.x,v.y,40+v.power*3,40+v.power*3,1,v.life/v.max,0,true);}
+ function hud(f,x,y){k.bar(f.djangoSolar??100,'SOLAR ENERGY',x,y,'#ffcf62');stamp(12,x+135,y+25,18,18,1,1,0,true);}
+ return{stamp,draw,drawObjects,impact,hud};})();
