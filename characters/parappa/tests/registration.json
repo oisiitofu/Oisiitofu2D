@@ -1,0 +1,90 @@
+{
+  "definition": {
+    "id": "parappa",
+    "name": "パラッパ",
+    "style": "PaRappa the Rapper",
+    "number": "172",
+    "description": "リズムに合わせた攻撃でGOOD／COOLへ。NBはマイクで引き寄せ、ホールドでパンチ・COOLならチョップ追撃。横Bはスケボー、ジャンプでオーリー、上下でフリップ／踏み込み。上Bはジャンプ→アッパー→空中ターン→キック。下Bはタップで4拍のボクシーを設置、長押しで担いで前方へ音圧。",
+    "pose": 76
+  },
+  "after": "toro",
+  "anchorName": "トロ",
+  "height": 78,
+  "tier": null,
+  "weight": 80,
+  "mask": "(b>r*1.3&&b>green*1.1&&b>45)",
+  "crop": [
+    0,
+    0,
+    1536,
+    1024
+  ],
+  "frames": 77,
+  "effects": 16,
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      -1,
+      0
+    ],
+    "4": [
+      1,
+      0
+    ],
+    "5": [
+      0.65,
+      -0.76
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 3,
+    "uair": 1,
+    "dair": 2,
+    "dash": 0,
+    "rise": 5
+  },
+  "physics": {
+    "walkSpeed": 2.9,
+    "initialDashSpeed": 6.2,
+    "runSpeed": 6.4,
+    "airSpeed": 5.3,
+    "airAcceleration": 0.36,
+    "gravity": 0.55,
+    "fullHopVelocity": 13.1,
+    "ecb": {
+      "radius": 15,
+      "height": 70
+    },
+    "shieldSize": 38,
+    "shieldOffset": [
+      0,
+      -35
+    ]
+  }
+}
