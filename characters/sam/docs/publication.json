@@ -1,0 +1,63 @@
+{
+  "character": "sam",
+  "version": 143,
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "implementationCommit": "e5bc23c",
+  "sourceCommit": "2f925307992932b5e9f4171c126d78e3a8a03cf4",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_c89515c74c1081919b310647193049ee",
+  "deploymentId": "appgdep_6adc8c9e9a9481918c9820d4c7b03268",
+  "deploymentStatus": "succeeded",
+  "environmentRevision": 281,
+  "assets": {
+    "objects": 31,
+    "bytes": 29352685,
+    "sha256Files": 29,
+    "htmlVerifiedAfterCloudflare": 2,
+    "uploadKeyRemoved": true
+  },
+  "verification": {
+    "functionalChecks": 90,
+    "failed": 0,
+    "frames": 77,
+    "effects": 16,
+    "costumes": 385,
+    "normalScenes": 30,
+    "specialScenes": 28,
+    "idleScenes": 10,
+    "motionSamples": 60,
+    "cpuMatches": 1,
+    "platformRegressionChecks": 20,
+    "localOnline": {
+      "scenes": 6,
+      "identicalFrames": 240,
+      "port": 4175
+    },
+    "publicFunctionalChecks": 90,
+    "sansSmash": {
+      "upwardDegrees": 46.98,
+      "totalFrames": 49,
+      "addedRecoveryFrames": 16,
+      "bothFacings": true
+    },
+    "teamShuffle": {
+      "localCounts": [
+        3,
+        4
+      ],
+      "balancedFourPlayerLayouts": 6,
+      "publicClients": 4,
+      "hostOnly": true,
+      "lockedInMatch": true
+    }
+  },
+  "online": {
+    "status": "verified",
+    "scenes": 6,
+    "identicalFrames": 240,
+    "charactersAccepted": true,
+    "compactProtocol": true,
+    "gameServerPid": 30988,
+    "launcherAndTunnelPreserved": true
+  },
+  "finishedAt": "2026-10-24T10:51:40.763Z"
+}
