@@ -85,16 +85,25 @@ function ledgeHangPosition(f,ledge){
 }
 function ledgeSpriteOffset(f,n,img){if(!['LedgeCatch','LedgeHang'].includes(f.mode))return 0;const{grip,flip}=ledgeArt(f),width=img.width*BattleSize.native(f.characterId,BattleSize.imagePose(f,n))*FIGHTER_SCALE*BattleSize.art(f.characterId);return f.face*width*(Math.abs(grip[0])-grip[0]*(flip?-1:1));}
 function resolveFighterBodies(previous){
- 
  const skip=f=>f.attack?.bodyPassFrames&&CombatSystem.inWindow(f.attack.bodyPassFrames,f.timer)||!f.grounded||f.respawn||f.hitlag||f.hitstun||f.grabbed||['SpotDodge','ForwardRoll','BackwardRoll','TechRoll','GetupRoll','LedgeRoll','Grabbed','Pummel','GrabHold','LedgeCatch','LedgeHang'].includes(f.mode);
- for(let i=0;i<fighters.length;i++)for(let j=i+1;j<fighters.length;j++){const a=fighters[i],b=fighters[j];if(skip(a)||skip(b)||Math.abs(a.y-b.y)>12)continue;
+ // Only voluntary running/stepping receives extra pushing force. Capture the
+ // actual movement before separation so a body correction cannot become a run.
+ const motion=fighters.map((f,n)=>({dx:f.x-(previous[n]?.x??f.x),vx:f.vx}));
+ const driving=(f,n,direction)=>!f.attack&&!f.tumbling&&['Run','InitialDash'].includes(f.mode)&&motion[n].dx*direction>0&&motion[n].vx*direction>.1;
+ const running=fighters.some((f,n)=>!skip(f)&&driving(f,n,Math.sign(motion[n].vx))),resolved=new Set();
+ // Extra position-only passes settle a line of 3–4 bodies. Velocity is resolved
+ // once per pair, so a crowded frame cannot multiply the contact braking.
+ for(let pass=0;pass<(running?3:1);pass++)for(let i=0;i<fighters.length;i++)for(let j=i+1;j<fighters.length;j++){const a=fighters[i],b=fighters[j];if(skip(a)||skip(b)||Math.abs(a.y-b.y)>12)continue;
  const direction=Math.sign(previous[j].x-previous[i].x)||Math.sign(b.x-a.x)||1;
  const gap=(b.x-a.x)*direction,spacing=a.character.ecb.radius+b.character.ecb.radius;
  if(gap>=spacing)continue;
- const center=(a.x+b.x)/2;
- a.x=center-direction*spacing/2;b.x=center+direction*spacing/2;
- // Remove velocity into the opponent. Momentum cannot tunnel through a body.
- if(a.vx*direction>0)a.vx=0;if(b.vx*direction<0)b.vx=0;}
+ const aRuns=driving(a,i,direction),bRuns=driving(b,j,-direction),share=aRuns&&!bRuns?.8:bRuns&&!aRuns?.2:.5,overlap=spacing-gap;
+ a.x-=direction*overlap*(1-share);b.x+=direction*overlap*share;
+ const pair=i+':'+j;if(resolved.has(pair))continue;resolved.add(pair);
+ // Retain 80% of a runner's incoming speed instead of restarting acceleration
+ // from zero every frame. Do not give the standing target a lingering slide.
+ if(a.vx*direction>0)a.vx=aRuns&&!bRuns?a.vx*.8:0;
+ if(b.vx*direction<0)b.vx=bRuns&&!aRuns?b.vx*.8:0;}
  // Only grounded fighters can lose support after being pushed. Airborne
  // velocity belongs to physics, including jumps, falling and knockback.
  for(const f of fighters){if(!f.grounded)continue;const floor=platforms.find(p=>Math.abs(p.y-f.y)<2&&f.x>p.x-9&&f.x<p.x+p.w+9);if(!floor){f.grounded=false;f.vy=0;}}

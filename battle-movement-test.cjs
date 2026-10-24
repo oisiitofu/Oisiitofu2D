@@ -12,10 +12,13 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
   const result=await page.evaluate(()=>{
    // Exercise the entire battle frame, including stage/body resolution after
    // updateFighter. Controller-only tests cannot catch velocity erased here.
-   state='pause';countdown=hitstop=0;
+   state='pause';training=true;matchTime=Infinity;countdown=hitstop=0;
    const checks=[],check=(name,pass,detail)=>checks.push({name,pass:!!pass,...(!pass?{detail}:{})});
-   const originalRead=Controls.read;let input={};
+   const originalRead=Controls.read,originalLocalInput=BattlePlayers.localInput;let input={};
    Controls.read=device=>({...emptyInput(),...(device==='keyboard'?input:{})});
+   // These are locomotion probes. An autonomous CPU hit must not turn an
+   // apex/fast-fall check into an unrelated randomized combat test.
+   BattlePlayers.localInput=f=>f.control==='cpu'?emptyInput():originalLocalInput(f);
    function reset(id='dragoon',count=2,stage='0'){
     setupStage(stage);
     const main=platforms.find(p=>p.main);
@@ -78,7 +81,7 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
      tick({jump:true,jumpHeld:true});tick({jumpHeld:true},f.character.jumpSquatFrames+3);
      check(`${stage.id} jump leaves moving platform`,!f.grounded&&f.vy<0,{y:f.y,vy:f.vy});
     }
-   }finally{Controls.read=originalRead;}
+   }finally{Controls.read=originalRead;BattlePlayers.localInput=originalLocalInput;}
    return{characters:Object.keys(CharacterData).length,checks};
   });
   const failed=result.checks.filter(c=>!c.pass);
