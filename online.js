@@ -79,6 +79,8 @@ const Net=(()=>{
   SquadBattle.refresh();BattlePlayers.refresh();
   $('open-match-settings').classList.toggle('hidden',slot!==0);$('online-lineup-controls').classList.toggle('hidden',slot!==0||!!m.bingo);
   const bingoLocked=!!(m.bingo&&!m.bingo.result&&m.bingo.picks.some(Boolean));
+  $('random-room-teams').classList.toggle('hidden',slot!==0||m.format!=='teams');
+  $('random-room-teams').disabled=roomPlaying||bingoLocked||m.players.filter(Boolean).length<2;
   for(const id of [...ruleIds,'online-lineup-size'])if(roomPlaying||bingoLocked)$(id).disabled=true;
   $('ready-room').disabled=roomPlaying;$('edit-online-lineup').disabled=roomPlaying;
   $('edit-room-rules').classList.toggle('hidden',slot!==0);$('edit-room-rules').disabled=roomPlaying||bingoLocked;$('open-bingo-card').classList.toggle('hidden',!m.bingo);$('open-bingo-card').disabled=roomPlaying;
@@ -102,6 +104,12 @@ const Net=(()=>{
   $('open-room-create').onclick=()=>{$('room-create').classList.remove('hidden');$('create-player-count').focus();};$('cancel-room-create').onclick=()=>$('room-create').classList.add('hidden');
   $('refresh-rooms').onclick=()=>openConnection({type:'list'});
   $('edit-room-rules').onclick=()=>{$('online-room').close();$('match-settings').showModal();};
+  $('random-room-teams').onclick=()=>{
+   const m=roomState;if(!m||slot!==0||roomPlaying||m.format!=='teams'||m.bingo&&!m.bingo.result&&m.bingo.picks.some(Boolean))return;
+   const members=m.players.flatMap((p,n)=>p?[n]:[]);if(members.length<2)return;
+   const teams=MatchRules.randomTeams(members.length),battleTeams=m.players.map((p,n)=>p?.battleTeam??n%2);
+   members.forEach((n,k)=>battleTeams[n]=teams[k]);send({type:'settings',matchId,battleTeams});
+  };
   document.addEventListener('change',event=>{if(event.target.closest('#match-settings')||event.target.id==='stage')selectionChanged(event);});document.addEventListener('click',event=>{if(event.target.closest('.fighter-card,.squad-slot,.stage-card,#swatches button'))selectionChanged(event);});
   $('online-exit').onclick=()=>$('pause').querySelector('.back').click();$('create-room').onclick=()=>connect('create');$('join-room').onclick=()=>connect('join');$('ready-room').onclick=ready;
   $('open-bingo-card').onclick=()=>BingoBattle.openOnline(false);

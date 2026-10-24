@@ -176,6 +176,7 @@ const PlayerController=(()=>{
   if(f.vy>=0)for(let floor of platforms){if(!floor.main&&!downSpecial&&(f.drop||passThrough))continue;if(f.x>floor.x-9&&f.x<floor.x+floor.w+9&&oldY<=floor.y+6&&f.y>=floor.y){f.y=floor.y;f.vy=0;f.grounded=true;if(wasAir)land(f,i,oldVy);break;}}
   if(f.characterId==='hunter')HunterRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='adol')AdolRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='valkyrie')ValkyrieRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='terry')TerryRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='agumon')AgumonRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='pawapuro')PawapuroRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(f.characterId==='headmaster')HeadmasterRules.collision(f,i,{oldX,oldY,oldVx,oldVy});if(NewcomerCore.ids.includes(f.characterId))NewcomerCore.registry[f.characterId].collision(f,i,{oldX,oldY,oldVx,oldVy});
   AruruRules.platform(f,i,{oldX,oldY,oldVx,oldVy,wasAir});
+  SamRules.platform(f,i,{oldX,oldY,oldVx,oldVy,wasAir});
   // Leaving the top lip is an outbound movement, not a recovery attempt.
   // Re-enable grabs after clearing that ledge's grab region. Recovery moves
   // approaching from below can still grab while rising.

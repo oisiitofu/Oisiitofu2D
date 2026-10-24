@@ -33,16 +33,25 @@
     }
   },
   "online": {
-    "status": "waiting-for-empty-room",
-    "reason": "User requested the game server restart only after all rooms are empty.",
-    "launcherPid": 3876,
-    "tunnelPid": 12588
+    "status": "verified",
+    "previousPid": 29780,
+    "verifiedAt": "2026-10-24T10:38:19.294Z",
+    "identicalFrames": 240,
+    "scenes": 6,
+    "errors": [],
+    "performanceCheck": {
+      "clients": 4,
+      "sameSnapshots": 4,
+      "compact": true
+    }
   },
-  "serverSourceHash": "dfe7fb734dccdae84fc0192626b3a8e14823583914309947eaeb1f43eaedb3cf",
+  "serverSourceHash": "b91489c5300a52ea5e0ac7e16c1edf1cd6449b8c46379f7bd6449ae44f274539",
   "serverSourceFiles": {
-    "online-server.cjs": "dfe7fb734dccdae84fc0192626b3a8e14823583914309947eaeb1f43eaedb3cf",
-    "input-codec.js": "a6924cce4f979ae4eb41e674060a406c377a9b9d455d1f3cd77a3df4d7199918"
+    "online-server.cjs": "b91489c5300a52ea5e0ac7e16c1edf1cd6449b8c46379f7bd6449ae44f274539",
+    "input-codec.js": "a6924cce4f979ae4eb41e674060a406c377a9b9d455d1f3cd77a3df4d7199918",
+    "match-rules.js": "5987e66c3683d55ca2a5c578e3bf8830edc0b016b0849c7770b76389c2e5e0fd"
   },
   "onlinePerformancePending": true,
-  "onlinePerformanceVersion": 142
+  "onlinePerformanceVersion": 142,
+  "onlineIncludes": "Sam registration and lobby team shuffle; tested 240 synchronized Sam frames on port 4175."
 }

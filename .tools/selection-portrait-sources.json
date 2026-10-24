@@ -1834,5 +1834,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "sam": {
+    "source": "characters/sam/assets/sam-selection.png",
+    "crop": [
+      0,
+      0,
+      1374,
+      1145
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

@@ -1,0 +1,86 @@
+{
+  "definition": {
+    "id": "sam",
+    "name": "サム",
+    "style": "DEATH STRANDING / SAM PORTER BRIDGES",
+    "number": "173",
+    "description": "荷物と配送装備で戦う配達人。NBは拘束するボーラガン、ホールドで3連射。横Bはキャリア投擲、もう一度で呼び戻し、乗れば横入力で運搬。上Bは地形へアンカーを掛けてロープを巻き取る復帰、ジャンプで離脱。下Bは荷物を置く／近くで回収、長押しで積載を増やす。荷物が多いほど重い打撃と引き換えに移動が遅くなる。",
+    "pose": 76
+  },
+  "after": "piposaru",
+  "anchorName": "ピポサル",
+  "height": 98,
+  "tier": 3,
+  "weight": 102,
+  "mask": "(b>r*1.15&&b>green*1.05&&b>30)",
+  "crop": [
+    0,
+    0,
+    1374,
+    1145
+  ],
+  "frames": 77,
+  "effects": 16,
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      -1,
+      0
+    ],
+    "10": [
+      0,
+      -1
+    ],
+    "15": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 15,
+    "jab3": 15,
+    "heavy": 0,
+    "up": 15,
+    "low": 10,
+    "dashAttack": 15,
+    "smash": 0,
+    "upsmash": 15,
+    "downsmash": 10,
+    "air": 0,
+    "fair": 0,
+    "bair": 15,
+    "uair": 15,
+    "dair": 10
+  },
+  "physics": {
+    "walkSpeed": 2.7,
+    "initialDashSpeed": 5.5,
+    "runSpeed": 5.9,
+    "airSpeed": 4.6,
+    "airAcceleration": 0.28,
+    "gravity": 0.57,
+    "fullHopVelocity": 13.2,
+    "ecb": {
+      "radius": 18,
+      "height": 91
+    },
+    "shieldSize": 46,
+    "shieldOffset": [
+      0,
+      -45
+    ]
+  }
+}

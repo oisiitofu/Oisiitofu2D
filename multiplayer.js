@@ -21,6 +21,7 @@ const BattlePlayers=(()=>{
   document.querySelector('#online-team-setting').classList.toggle('hidden',!online||document.querySelector('#battle-format').value!=='teams');
   document.querySelector('#team-attack-setting').classList.toggle('hidden',!allowed||document.querySelector('#battle-format').value!=='teams');
   document.querySelector('#team-attack').disabled=joined&&Net.slot!==0;
+  document.querySelector('#random-local-teams').classList.toggle('hidden',online||!allowed||document.querySelector('#battle-format').value!=='teams'||n<3);
   document.querySelector('#character-screen').classList.toggle('four-player-roster',!online&&n>2);
   for(let slot=0;slot<4;slot++){
    const button=document.querySelector(slot===0?'#select-player':slot===1?'#select-cpu':'#select-seat-'+slot);
@@ -34,6 +35,11 @@ const BattlePlayers=(()=>{
   if(selection>=n||online)selection=0;
  }
  function setSelection(slot){selection=slot;Roster.setTarget(slot===1?'cpu':'player',true);refresh();Roster.refreshSelection();}
+ function randomTeams(){
+  if(document.querySelector('#battle-mode').value!=='battle'||document.querySelector('#battle-format').value!=='teams'||count()<3)return;
+  MatchRules.randomTeams(count()).forEach((team,n)=>{seats[n].team=team;document.querySelector('#seat-team-'+n).value=String(team);});
+  refresh();Roster.refreshSelection();
+ }
  function setCharacter(id){if(selection<2)return false;seats[selection].character=id;refresh();Roster.refreshSelection();return true;}
  function setColor(value){if(selection<2)return false;seats[selection].color=value;refresh();Roster.artReady();return true;}
  const stockCount=()=>clamp(Number(document.querySelector('#stock-count').value)||3,1,10);
@@ -74,6 +80,7 @@ const BattlePlayers=(()=>{
   const container=document.querySelector('#local-seat-settings');
   for(let slot=0;slot<4;slot++){const row=document.createElement('div');row.id='seat-settings-'+slot;row.className='seat-settings';row.innerHTML=`<b>${slot+1}P</b><label>操作<select id="seat-control-${slot}"><option value="primary">キーボード1 / パッド1</option><option value="keyboard">キーボード1</option><option value="keyboard2">キーボード2</option>${[1,2,3,4].map(n=>`<option value="pad${n}">パッド${n}</option>`).join('')}<option value="cpu">CPU</option></select></label><label>チーム<select id="seat-team-${slot}"><option value="0">赤</option><option value="1">青</option></select></label>`;container.append(row);const control=row.querySelector('#seat-control-'+slot),team=row.querySelector('#seat-team-'+slot);control.value=seats[slot].control;team.value=String(seats[slot].team);control.onchange=()=>{seats[slot].control=control.value;refresh();};team.onchange=()=>{seats[slot].team=+team.value;refresh();};}
   document.querySelector('#player-count').onchange=()=>{refresh();Roster.refreshSelection();Roster.fit();};
+  document.querySelector('#random-local-teams').onclick=randomTeams;
   document.querySelector('#battle-format').onchange=()=>{if(document.querySelector('#battle-format').value==='teams')document.querySelector('#player-count').value='4';refresh();Roster.refreshSelection();Roster.fit();};
   refresh();
  }

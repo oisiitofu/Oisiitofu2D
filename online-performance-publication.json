@@ -87,10 +87,83 @@
     }
   },
   "online": {
-    "status": "waiting-for-empty-room",
-    "reason": "User requested restarting only once every room is empty.",
-    "currentGameServerPid": 29780,
-    "launcherPid": 3876,
-    "tunnelPid": 12588
+    "status": "verified",
+    "previousPid": 29780,
+    "verifiedAt": "2026-10-24T10:38:19.293Z",
+    "fourClients": true,
+    "clients": 4,
+    "artificialJitter": "four-frame bursts / 50ms hold",
+    "sameSnapshots": 4,
+    "baselineClustered": 263,
+    "smoothedClusteredMean": 0,
+    "reports": [
+      {
+        "frames": 360,
+        "nearZeroGaps": 263,
+        "over35ms": 96,
+        "gapP95": 68.89999999850988,
+        "updateP95": 0.4000000059604645,
+        "renderP95": 1.3999999985098839,
+        "quality": {
+          "legacy": true,
+          "inputFormat": "compact-v1"
+        }
+      },
+      {
+        "frames": 360,
+        "nearZeroGaps": 0,
+        "over35ms": 0,
+        "gapP95": 21.200000002980232,
+        "updateP95": 0.5,
+        "renderP95": 1.3999999985098839,
+        "quality": {
+          "receivedFrames": 656,
+          "appliedFrames": 652,
+          "queuedFrames": 4,
+          "bufferFrames": 4,
+          "underruns": 0,
+          "peakQueuedFrames": 12,
+          "arrivalJitterMs": 29.263392108329796,
+          "inputFormat": "compact-v1"
+        }
+      },
+      {
+        "frames": 360,
+        "nearZeroGaps": 0,
+        "over35ms": 0,
+        "gapP95": 21.200000002980232,
+        "updateP95": 0.5,
+        "renderP95": 1.3999999985098839,
+        "quality": {
+          "receivedFrames": 657,
+          "appliedFrames": 652,
+          "queuedFrames": 5,
+          "bufferFrames": 4,
+          "underruns": 0,
+          "peakQueuedFrames": 13,
+          "arrivalJitterMs": 29.83995604904584,
+          "inputFormat": "compact-v1"
+        }
+      },
+      {
+        "frames": 360,
+        "nearZeroGaps": 0,
+        "over35ms": 0,
+        "gapP95": 21.100000001490116,
+        "updateP95": 0.5,
+        "renderP95": 1.3999999985098839,
+        "quality": {
+          "receivedFrames": 656,
+          "appliedFrames": 652,
+          "queuedFrames": 4,
+          "bufferFrames": 4,
+          "underruns": 1,
+          "peakQueuedFrames": 11,
+          "arrivalJitterMs": 29.28242914413556,
+          "inputFormat": "compact-v1"
+        }
+      }
+    ],
+    "errors": []
   }
 }
