@@ -1,0 +1,8 @@
+{
+  "mode": "reuse existing approved high-resolution portrait",
+  "source": "characters/alain/assets/alain-selection.png",
+  "crop": [0, 0, 1536, 1024],
+  "previousSource": "characters/alain/assets/alain-native.png",
+  "previousCrop": [84, 2095, 294, 210],
+  "reason": "Use the original dedicated illustration for victory and introduction instead of the reduced atlas copy."
+}

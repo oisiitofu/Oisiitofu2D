@@ -1,0 +1,88 @@
+{
+  "publishedAt": "2026-10-25T14:04:17.722Z",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 159,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_c38c8e6a0788819195ba53aa7d07683e",
+  "deploymentId": "appgdep_6ade0c0fcccc8191b9c732839437bfca",
+  "environmentRevision": 313,
+  "status": "succeeded",
+  "siteSourceCommit": "44239977bb14fad0084f4584930ccd2d02c83a75",
+  "implementationCommit": "777cb7bd757d1ee529073ee2f2ed7b4a7b938668",
+  "characters": [
+    "ray",
+    "metabee",
+    "jibanyan",
+    "megamanexe",
+    "toro",
+    "cojicoji",
+    "hinako",
+    "melia",
+    "krystal",
+    "yuri",
+    "fiora",
+    "kitten",
+    "elma",
+    "goemon",
+    "nier",
+    "miku",
+    "naruhodo",
+    "alain"
+  ],
+  "change": {
+    "generatedPortraits": 17,
+    "reusedOriginal": "characters/alain/assets/alain-selection.png",
+    "resolution": [
+      1536,
+      1024
+    ],
+    "rayPreviousResolution": [
+      280,
+      200
+    ],
+    "contexts": [
+      "victory",
+      "introduction",
+      "selection"
+    ],
+    "resampling": "high quality within saved canvas state",
+    "combatArtAndChecksUnchanged": true
+  },
+  "imageGeneration": {
+    "mode": "built-in imagegen",
+    "assets": "characters/<id>/assets/<id>-presentation-portrait.png",
+    "prompts": "characters/<id>/docs/presentation-portrait.json"
+  },
+  "validation": {
+    "localVictoryScenes": 19,
+    "publicVictoryScenes": 19,
+    "individualCharacters": 18,
+    "teamWinners": 2,
+    "sourceColorFiles": 90,
+    "sourceTransparencyAndResolution": true,
+    "originalResolutionUsedByVictory": true,
+    "publicSha256Files": 362,
+    "unchangedCombatLoading": {
+      "characters": [
+        "ray",
+        "alain"
+      ],
+      "poses": 98,
+      "effects": 16,
+      "costumes": 490,
+      "mismatches": []
+    },
+    "errors": [],
+    "pcOnly": true
+  },
+  "upload": {
+    "files": 362,
+    "bytes": 130182039,
+    "retriedFiles": 1,
+    "failedAfterRetry": []
+  },
+  "server": {
+    "restartRequired": false,
+    "activeMatchesPreserved": true
+  },
+  "comparison": "previews/victory-quality/ray-comparison.png"
+}
