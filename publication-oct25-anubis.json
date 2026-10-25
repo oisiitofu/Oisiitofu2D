@@ -1,0 +1,69 @@
+{
+  "publishedAt": "2026-10-25T13:23:14.441Z",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 158,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_f2d495f3ea8c8191a9046e528b6d2871",
+  "deploymentId": "appgdep_6ade023e2f188191881058c40788a8bd",
+  "environmentRevision": 311,
+  "status": "succeeded",
+  "siteSourceCommit": "0b31218b989f8136b0d7f5d912de3ea4d9da3bb0",
+  "implementationCommit": "1a310a3604bb581188993e615cb5a4887b93709c",
+  "character": {
+    "id": "anubis",
+    "name": "アヌビス",
+    "after": "jehuty",
+    "height": 136,
+    "hoverFrames": 90,
+    "bodyFrames": 92,
+    "portrait": 92,
+    "wingTailAnimation": "Whole-body idle loop [0,77..83] and air loop [84..87], 56 rendered frames verified in both facings; no part rigs",
+    "neutral": "Three spread lasers with finite initial homing",
+    "side": "Warned destination locks before teleport; arrival spear; B reinput repierce with increased recovery and cooldown",
+    "up": "Steerable curved vector-wing flight, finite hold and single final sweep, under-stage escape",
+    "down": "Charged finite-fuse orb, contact/terrain detonation, one hit per opponent"
+  },
+  "imageGeneration": {
+    "mode": "built-in imagegen",
+    "prompts": "characters/anubis/docs/art-prompts.json",
+    "assets": "characters/anubis/assets/",
+    "sheets": 6,
+    "dedicatedPortrait": true,
+    "effects": 16
+  },
+  "validation": {
+    "localMechanics": 109,
+    "publicMechanics": 109,
+    "normalAndColorScenes": 75,
+    "specialScenes": 20,
+    "wingTailRenderedFrames": 56,
+    "cpuMatches": 2,
+    "localOnlineIdenticalFrames": 331,
+    "publicOnlineIdenticalFrames": 331,
+    "publicBReinputFollowup": true,
+    "bakedPoses": 93,
+    "bakedEffects": 16,
+    "bakedCostumes": 465,
+    "atlasChecksumMismatches": [],
+    "publicSha256Files": 29,
+    "publicNormalizedHtmlFiles": 1,
+    "sizeCatalogCharacters": 192,
+    "zeroPercentDirectBurstKO": false,
+    "pcOnly": true,
+    "errors": []
+  },
+  "upload": {
+    "files": 30,
+    "bytes": 30531577,
+    "failed": []
+  },
+  "server": {
+    "previousPid": 42232,
+    "pid": 2088,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "launcherPidPreserved": 3876,
+    "tunnelPidPreserved": 12588
+  }
+}
