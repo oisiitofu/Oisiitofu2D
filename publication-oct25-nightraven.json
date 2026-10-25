@@ -1,0 +1,73 @@
+{
+  "publishedAt": "2026-10-25T11:52:13.045221+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 156,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_1f6e49065ff08191b05a5aaa46973fe9",
+  "deploymentId": "appgdep_6added5c610c819194b640ba80ede175",
+  "environmentRevision": 307,
+  "status": "succeeded",
+  "siteSourceCommit": "d4fc9e3e67c1250da015a32f88b55add493df4f4",
+  "implementationCommit": "d2ed22df6a8271d8a73ddeb04b25f31e49422844",
+  "character": {
+    "id": "nightraven",
+    "name": "ナイトレーベン",
+    "after": "edf",
+    "source": "First attached night raven2.png; NB only uses second night raven.png blue laser",
+    "selection": "Dedicated high-resolution cockpit and inner-wing artwork",
+    "height": 68,
+    "initialDashSpeed": 14.4,
+    "runSpeed": 12.8,
+    "airSpeed": 12.4,
+    "hoverFrames": 90
+  },
+  "changes": [
+    "Added Night Raven after EDF, with the first reference's machine design, bombing pass, vertical escape/glide and satellite TLS",
+    "Used only the second reference's blue laser for neutral special",
+    "Removed adjacent blue atlas-cell bleed from the left of the victory background"
+  ],
+  "imageGeneration": {
+    "mode": "built-in image_gen",
+    "prompts": "characters/nightraven/docs/art-prompts.json",
+    "assets": "characters/nightraven/assets/",
+    "poses": 77,
+    "effects": 16
+  },
+  "validation": {
+    "localMechanics": 97,
+    "publicMechanics": 97,
+    "normalAndColorScenes": 75,
+    "specialScenes": 16,
+    "cpuMatches": 2,
+    "localOnlineIdenticalFrames": 331,
+    "publicOnlineIdenticalFrames": 331,
+    "bakedPoses": 77,
+    "bakedEffects": 16,
+    "bakedCostumes": 385,
+    "atlasChecksumMismatches": [],
+    "victoryLeftMargin": {
+      "unfixedBluePixels": 6,
+      "fixedBluePixels": 0
+    },
+    "pcOnly": true,
+    "errors": []
+  },
+  "assets": {
+    "uploaded": 30,
+    "bytes": 24454887,
+    "failed": [],
+    "sha256Files": 29,
+    "normalizedHtmlFiles": 1
+  },
+  "server": {
+    "previousPid": 33744,
+    "currentPid": 39216,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "launcherPid": 3876,
+    "tunnelPid": 12588,
+    "preserved": true
+  },
+  "uploadKeyRemoved": true
+}

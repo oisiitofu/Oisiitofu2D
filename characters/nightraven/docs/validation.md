@@ -10,3 +10,5 @@
 - `node victory-texture-test.cjs`：勝利画面の左余白に青い隣接セルの画素がないことを確認。金色セルの共通境界12%を読み取り対象から外し、元の拡大率と位置を保つ。
 
 検証画像と実行結果JSONはGit管理外の `characters/nightraven/previews/`、勝利画面は `previews/presentation/`。
+
+公開v156でも97項目と選択画像を確認。公開オンラインも331F一致。勝利余白の青い混入は修正前の対照描画6画素、修正後0画素。配信29ファイルのSHA256とサイズ一覧HTML正規化が一致。
