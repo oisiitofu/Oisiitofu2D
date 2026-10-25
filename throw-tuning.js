@@ -4,15 +4,15 @@
 const ThrowTuning=(()=>{
  const directions=['forwardThrow','backThrow','upThrow','downThrow'];
  const groups={
-  balanced:'tails etna ratchet astro sam reimu zack presea hachiware tidus terra onionknight arthur sakura billy riesz edea narmaya wonder rena gran welch zoe ky alphen ash judas rion sol miyabi zero3 dana isaac ulgrim monokuma roxas twob zero lightning rean estelle noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian chef morphie human kitten elma goemon metabee nier dante leon charlotta twinbee edf arus maelle sumino frog tressa eve saki hanajk hanajd kisuke ray alain hinako megamanexe fiora krystal malenia alucard kurabe shizuna',
+  balanced:'ryoku tails etna ratchet astro sam reimu zack presea hachiware tidus terra onionknight arthur sakura billy riesz edea narmaya wonder rena gran welch zoe ky alphen ash judas rion sol miyabi zero3 dana isaac ulgrim monokuma roxas twob zero lightning rean estelle noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian chef morphie human kitten elma goemon metabee nier dante leon charlotta twinbee edf arus maelle sumino frog tressa eve saki hanajk hanajd kisuke ray alain hinako megamanexe fiora krystal malenia alucard kurabe shizuna',
   rising:'dragoon gundam kosmos pawapuro horse bayleef piposaru pneuma odio laharl kasane greymon metalgreymon wargreymon omegamon hanajs c4621',
   agile:'parappa octane jett viewtifuljoe ellen chibirobo octoling chiikawa chocobo riki rin makoto neku pokoa jibanyan zidane yuffie crash knight shadow moogle cojicoji hornet klonoa karateka aiai hayabusa',
   grappler:'agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby',
-  caster:'shionne genis viridi vivi nia colette will emma ryza midna bomberman sans headmaster sakuna miku naruhodo layton vincent mametchi aruru maruku dietrich rocbouquet deemo aerith donchan melia yuri toro katamari okami battlemage naegi'
+  caster:'lip shionne genis viridi vivi nia colette will emma ryza midna bomberman sans headmaster sakuna miku naruhodo layton vincent mametchi aruru maruku dietrich rocbouquet deemo aerith donchan melia yuri toro katamari okami battlemage naegi'
  };
  // Weapon specialists keep useful positioning throws; supernatural and
  // power identities get the designated KO directions below.
- groups.blade='django enoch zack tidus arthur sakura edea narmaya gran ky alphen ash judas rion sol miyabi zero3 dana ulgrim roxas twob zero lightning rean noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian nier dante charlotta arus maelle frog eve saki hanajk hanajd kisuke ray alain hinako fiora malenia alucard shizuna knight hornet hayabusa';
+ groups.blade='nahobino django enoch zack tidus arthur sakura edea narmaya gran ky alphen ash judas rion sol miyabi zero3 dana ulgrim roxas twob zero lightning rean noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian nier dante charlotta arus maelle frog eve saki hanajk hanajd kisuke ray alain hinako fiora malenia alucard shizuna knight hornet hayabusa';
  groups.psion='kasane neku midna emma pneuma laharl odio will melia battlemage reimu rocbouquet deemo';
  groups.power='agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby presea zoe greymon metalgreymon wargreymon omegamon';
  // Per-character selections, rather than roster-number/modulo assignments.

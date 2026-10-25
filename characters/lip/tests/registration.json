@@ -1,0 +1,69 @@
+{
+  "definition": {
+    "id": "lip",
+    "name": "リップ",
+    "style": "PANEL DE PON / パネルでポン",
+    "number": "182",
+    "description": "花のステッキと5種類のパネルで戦う妖精。同色パネルを並べて時間差のチェインポップを起こし、花のリフトの曲線で復帰する。",
+    "pose": 76
+  },
+  "after": "sukapon",
+  "anchorName": "スカポン",
+  "height": 78,
+  "tier": 1,
+  "weight": 72,
+  "physics": {
+    "weight": 72,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.4,
+    "airSpeed": 5.8,
+    "airAcceleration": 0.4,
+    "gravity": 0.48,
+    "fullHopVelocity": 14.4,
+    "ecb": {
+      "radius": 13.53061224489796,
+      "height": 71
+    },
+    "shieldSize": 37.44,
+    "shieldOffset": [
+      0,
+      -35.88
+    ],
+    "ledgeGrip": [
+      0.15424452091374574,
+      0.9443152943720603
+    ]
+  },
+  "mask": "(r>green*1.6&&r>b*.95&&r>90)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 0,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 0
+  }
+}

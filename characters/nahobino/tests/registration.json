@@ -1,0 +1,81 @@
+{
+  "definition": {
+    "id": "nahobino",
+    "name": "ナホビノ",
+    "style": "SHIN MEGAMI TENSEI V",
+    "number": "180",
+    "description": "属性を選ぶスキル、呼び戻せる仲魔、出現先を予告する悪魔儀還のワープ。MPとマガツヒを配分して魔剣と属性魔法を使い分ける。",
+    "pose": 76
+  },
+  "after": "wonder",
+  "anchorName": "ワンダー",
+  "height": 98,
+  "tier": 3,
+  "weight": 88,
+  "physics": {
+    "weight": 88,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.8,
+    "airSpeed": 5.8,
+    "airAcceleration": 0.4,
+    "gravity": 0.55,
+    "fullHopVelocity": 14.2,
+    "ecb": {
+      "radius": 17,
+      "height": 91
+    },
+    "shieldSize": 47.04,
+    "shieldOffset": [
+      0,
+      -45.080000000000005
+    ],
+    "ledgeGrip": [
+      -0.06726027524787248,
+      0.9582850241545894
+    ]
+  },
+  "mask": "(b>r*1.6&&b>green*1.15&&b>50)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "2": [
+      1,
+      0
+    ],
+    "7": [
+      1,
+      0
+    ],
+    "13": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 13,
+    "jab2": 13,
+    "jab3": 13,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 2,
+    "smash": 2,
+    "upsmash": 7,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 13,
+    "bair": 0,
+    "uair": 1,
+    "dair": 2
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "definition": {
+    "id": "ryoku",
+    "name": "リョク",
+    "style": "OCHA-KEN / お茶犬",
+    "number": "181",
+    "description": "葉の耳と四本足で戦うお茶犬。お茶しぶき、遠隔操作する茶筒、茶葉の上昇風を組み合わせ、座布団でひと息ついてお茶パワーを溜める。",
+    "pose": 76
+  },
+  "after": "hachiware",
+  "anchorName": "ハチワレ",
+  "height": 64,
+  "tier": null,
+  "weight": 82,
+  "physics": {
+    "weight": 82,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.3,
+    "airSpeed": 5.2,
+    "airAcceleration": 0.4,
+    "gravity": 0.48,
+    "fullHopVelocity": 13.8,
+    "ecb": {
+      "radius": 19,
+      "height": 56
+    },
+    "shieldSize": 30.72,
+    "shieldOffset": [
+      0,
+      -29.44
+    ],
+    "ledgeGrip": [
+      0.14288907218064717,
+      0.9385810074220091
+    ]
+  },
+  "mask": "(green>r*.8&&green>b*1.45&&green>70)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "4": [
+      1,
+      0
+    ],
+    "7": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 0,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 0
+  }
+}

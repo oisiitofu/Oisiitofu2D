@@ -1911,5 +1911,38 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "nahobino": {
+    "source": "characters/nahobino/assets/nahobino-selection.png",
+    "crop": [
+      420,
+      0,
+      1116,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "ryoku": {
+    "source": "characters/ryoku/assets/ryoku-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "lip": {
+    "source": "characters/lip/assets/lip-selection.png",
+    "crop": [
+      0,
+      0,
+      1312,
+      1199
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
