@@ -2045,5 +2045,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution robotic head and shoulder close-up"
+  },
+  "anubis": {
+    "source": "characters/anubis/assets/anubis-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution robotic head and shoulder close-up"
   }
 }

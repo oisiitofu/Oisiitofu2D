@@ -2,6 +2,7 @@
 // Add completed releases here with their actual date/time; newest is rendered first.
 const HomeUpdates=(()=>{
  const entries=[
+ {"at": "2026-10-25T22:13:43+09:00", "items": ["新キャラ「アヌビス」を追加しました。"]},
  {"at": "2026-10-25T21:26:19+09:00", "items": ["新キャラ「ジェフティ」を追加しました。"]},
  {"at": "2026-10-25T20:43:37+09:00", "items": ["新キャラ「ナイトレーベン」を追加しました。", "勝利画面の表示の不具合を修正しました。"]},
  {

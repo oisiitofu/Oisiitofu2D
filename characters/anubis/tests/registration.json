@@ -1,0 +1,89 @@
+{
+  "definition": {
+    "id": "anubis",
+    "name": "アヌビス",
+    "style": "ANUBIS / ZONE OF THE ENDERS",
+    "number": "192",
+    "description": "6枚の翼と長い尾が動く大型フレーム。ゼロシフト槍撃、旋回飛行、時限バーストで間合いを制する。",
+    "pose": 92
+  },
+  "after": "jehuty",
+  "anchorName": "ジェフティ",
+  "height": 136,
+  "tier": null,
+  "weight": 120,
+  "physics": {
+    "weight": 120,
+    "walkSpeed": 3.8,
+    "initialDashSpeed": 8.8,
+    "runSpeed": 8.2,
+    "airSpeed": 7.7,
+    "airAcceleration": 0.5,
+    "gravity": 0.44,
+    "fullHopVelocity": 14.2,
+    "ecb": {
+      "radius": 22,
+      "height": 116
+    },
+    "shieldSize": 58,
+    "shieldOffset": [
+      0,
+      -58
+    ],
+    "walkAcceleration": 0.45,
+    "runAcceleration": 0.45,
+    "airBrake": 0.3,
+    "groundFriction": 0.19,
+    "traction": 0.35,
+    "fallSpeed": 11,
+    "doubleJumpVelocity": 12.6,
+    "airMobility": {
+      "frames": 90,
+      "fallSpeed": 0.65,
+      "reason": "6枚のベクターウイング"
+    },
+    "ledgeGrip": [
+      0.26,
+      0.88
+    ]
+  },
+  "mask": "(r>95&&green>55&&b<green*.82)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "4": [
+      1,
+      0
+    ],
+    "10": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 4,
+    "jab2": 0,
+    "jab3": 4,
+    "heavy": 0,
+    "up": 1,
+    "low": 10,
+    "dashAttack": 4,
+    "smash": 4,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 4,
+    "bair": 0,
+    "uair": 1,
+    "dair": 4
+  }
+}
