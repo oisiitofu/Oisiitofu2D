@@ -6,7 +6,11 @@ const BattlePresentation=(()=>{
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const ease=v=>1-Math.pow(1-clamp(v,0,1),3);
  function load(){return pending??=new Promise(resolve=>{const im=new Image();im.onload=()=>{atlas=im;resolve();};im.onerror=()=>resolve();im.src='assets/presentation/cinematic-atlas.png';});}
- function stamp(n,x,y,w,h,alpha=1){if(!atlas)return;ctx.save();ctx.globalAlpha*=clamp(alpha,0,1);const sw=atlas.width/2,sh=atlas.height/2;ctx.drawImage(atlas,n%2*sw,(n/2|0)*sh,sw,sh,x-w/2,y-h/2,w,h);ctx.restore();}
+ function stamp(n,x,y,w,h,alpha=1){if(!atlas)return;ctx.save();ctx.globalAlpha*=clamp(alpha,0,1);const sw=atlas.width/2,sh=atlas.height/2;
+  // The blue artwork crosses the atlas midpoint into the gold cells. Exclude
+  // that shared gutter while preserving the gold artwork's scale and position.
+  const inset=n===1||n===3?Math.ceil(sw*.12):0,dx=w*inset/sw;
+  ctx.drawImage(atlas,n%2*sw+inset,(n/2|0)*sh,sw-inset,sh,x-w/2+dx,y-h/2,w-dx,h);ctx.restore();}
  const name=f=>Roster.definitions.find(d=>d.id===f.characterId)?.name||f.characterId;
  function portrait(f,x,y,w,h){const im=ArtLoader.hudPortrait(f.characterId,f.color);if(!im)return;const k=Math.max(w/im.width,h/im.height);ctx.save();ctx.beginPath();ctx.rect(x,y,w,h);ctx.clip();ctx.drawImage(im,x+(w-im.width*k)/2,y+h-im.height*k,im.width*k,im.height*k);ctx.restore();}
  function begin(){introQueue=[];if(fighters.some(f=>f.squad))for(let member=0;member<Math.max(...fighters.map(f=>f.squad?.length||1));member++)for(const f of fighters){const id=f.squad?.[member];if(id)introQueue.push({...f,characterId:id,introMember:member});}introStep=introQueue.length<=6?90:60;introTotal=introQueue.length?introQueue.length*introStep+PresentationTiming.introCountFrames:PresentationTiming.introFrames;if(!training)GameAudio.cinematic('intro');ending=null;$('#result').classList.remove('presentation-pending','presentation-result');}

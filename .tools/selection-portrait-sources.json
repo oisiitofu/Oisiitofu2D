@@ -2023,5 +2023,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "nightraven": {
+    "source": "characters/nightraven/assets/nightraven-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close cockpit and inner wing shoulders, nonhuman aircraft"
   }
 }

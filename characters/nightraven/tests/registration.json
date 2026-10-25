@@ -1,0 +1,79 @@
+{
+  "definition": {
+    "id": "nightraven",
+    "name": "ナイトレーベン",
+    "style": "ACE COMBAT 3 / X-49 NIGHT RAVEN",
+    "number": "190",
+    "description": "高速の横移動と慣性で飛ぶステルス機。NBは青いレーザー、横Bは爆弾を落とす航過、上Bは垂直離脱から滑空、下Bはロック予告からの衛星TLS。",
+    "pose": 76
+  },
+  "after": "edf",
+  "anchorName": "地球防衛軍",
+  "height": 68,
+  "tier": null,
+  "weight": 108,
+  "physics": {
+    "weight": 108,
+    "walkSpeed": 5.2,
+    "initialDashSpeed": 14.4,
+    "runSpeed": 12.8,
+    "airSpeed": 12.4,
+    "airAcceleration": 0.45,
+    "gravity": 0.38,
+    "fullHopVelocity": 13.4,
+    "ecb": {
+      "radius": 31,
+      "height": 46
+    },
+    "shieldSize": 58,
+    "shieldOffset": [
+      0,
+      -30
+    ],
+    "walkAcceleration": 0.5,
+    "runAcceleration": 0.52,
+    "airBrake": 0.28,
+    "groundFriction": 0.13,
+    "traction": 0.22,
+    "fallSpeed": 10,
+    "doubleJumpVelocity": 10.6,
+    "airMobility": {
+      "frames": 90,
+      "fallSpeed": 0.55,
+      "reason": "ナイトレーベンの飛行機構"
+    },
+    "ledgeGrip": [
+      0.45,
+      0.72
+    ]
+  },
+  "mask": "(b>r*1.12&&b>green*1.05&&Math.max(r,green,b)>24)",
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 11,
+    "up": 12,
+    "low": 0,
+    "dashAttack": 11,
+    "smash": 1,
+    "upsmash": 7,
+    "downsmash": 7,
+    "air": 0,
+    "fair": 1,
+    "bair": 11,
+    "uair": 12,
+    "dair": 7
+  }
+}
