@@ -1,7 +1,7 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path');
 const stages=require('./stage-data.js').stages.map(({id,name,folder})=>({id,name,folder}));
-const locations=[...stages,{id:'menu',name:'タイトル・キャラ選択',folder:'menu'}];
+const locations=[...stages,{id:'menu',name:'タイトル・キャラ選択',folder:'menu'},{id:'victory',name:'勝利画面',folder:'victory'}];
 const mime={'.wav':'audio/wav','.mp3':'audio/mpeg','.ogg':'audio/ogg','.m4a':'audio/mp4','.aac':'audio/aac','.flac':'audio/flac'};
 function manifest(root,id){const stage=locations.find(s=>s.id===id);if(!stage)return null;const dir=path.join(root,'assets/audio/bgm',stage.folder);let files=[];try{files=fs.readdirSync(dir,{withFileTypes:true}).filter(f=>f.isFile()&&mime[path.extname(f.name).toLowerCase()]).map(f=>f.name).sort((a,b)=>a.localeCompare(b,'ja'));}catch{}
  const custom=files.filter(f=>f.toLowerCase()!=='_default.wav');if(custom.length)files=custom;

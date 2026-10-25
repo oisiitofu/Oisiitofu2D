@@ -59,7 +59,7 @@ input('assets/presentation/cinematic-atlas.png');
 const se=JSON.parse(read('assets/audio/se/manifest.json'));write('assets/audio/se/manifest.json',JSON.stringify(se));
 for(const url of Object.values(se.sounds).flat())input(decodeURIComponent(url.replace(/^\//,'')));
 const audio=require('./audio-server.cjs'),chunkSize=16*1024*1024;
-for(const id of [...audio.stages.map(s=>s.id),'menu']){
+for(const id of [...audio.stages.map(s=>s.id),'menu','victory']){
  const data=audio.manifest(root,id);
  for(const track of data.tracks){
   const source=decodeURIComponent(track.url.slice(1)),size=fs.statSync(path.join(root,source)).size;
