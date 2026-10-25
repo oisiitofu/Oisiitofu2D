@@ -1,0 +1,11 @@
+'use strict';
+const EstarkVFX=(()=>{const k=CharacterVFXKit.create('estark'),{stamp}=k;
+ // 0 four-claw crescent convex RIGHT; 1 single upper canopy convex UP.
+ // Rotate in local space, then mirror by facing. Fields/roar/seal are not curves.
+ function draw(f){if(f.respawn)return;const a=f.attack;if(a){const e=k.envelope(f);if(e){if(['up','upsmash','uair','rise'].includes(a.type))stamp(1,e.x,e.t+24,e.w,48,1,.9);else if(a.type==='downsmash'){stamp(15,e.l+e.w*.25,e.y-15,e.w*.5,65,1,.9);stamp(15,e.r-e.w*.25,e.y-15,e.w*.5,65,1,.9);}else if(a.type==='dair')stamp(0,e.x,e.y,e.w,58,f.face,.9,1.05);else if(a.type==='air'){stamp(0,e.l+e.w*.25,e.y,e.w*.5,45,-f.face,.85);stamp(0,e.r-e.w*.25,e.y,e.w*.5,45,f.face,.85);}else stamp(0,e.x,e.y,e.w,Math.min(58,e.h),a.type==='bair'?-f.face:f.face,.9);}
+ if(a.estarkFire&&!a.fired)stamp(2,f.x+f.face*55,f.y-80,25+Math.min(f.timer,40),24+Math.min(f.timer,40),f.face,.7,0,true);if(a.estarkRoar&&f.timer<18)stamp(9,f.x,f.y-63,111,122,1,.4,0,true);if(a.estarkLeap){if(a.phase==='charge')stamp(9,f.x,f.y-51,98,110,1,.55,0,true);if(a.phase==='reel'){line([[f.x,f.y-65],[a.reelX,a.reelY]],'#df93ff',3);stamp(4,a.reelX,a.reelY+25,90,32,1,.65,0,true);}}}
+ }
+ function drawObjects(){for(const q of EstarkRules.objects){if(q.dead)continue;const fade=Math.min(1,(q.life-q.age)/9);if(q.kind==='seal')stamp(4,q.x,q.y-2,91,32,1,.8*fade,0,true);if(q.kind==='clawaim')stamp(5,q.x,q.y,73,70,1,.32*fade,0,true);if(q.kind==='clawcross')stamp(3,q.x,q.y,112,102,q.face,fade,0,true);if(q.kind==='fire')stamp(2,q.x,q.y,q.radius*3,q.radius*2,q.face,fade,0,true);if(q.kind==='fireburst')stamp(6,q.x,q.y,q.radius*2.1,q.radius*2,1,fade,0,true);if(q.kind==='detonation'){if(q.age<q.delay)stamp(5,q.x,q.y,110,97,1,.4,0,true);else stamp(6,q.x,q.y,160,148,1,fade,0,true);}if(q.kind==='roar')stamp(7,q.x,q.y,q.radius*2.5,q.radius*1.9,1,fade,0,true);}}
+ function impact(v){stamp(14,v.x,v.y,35+v.power*4,35+v.power*4,1,v.life/v.max,0,true);}
+ function hud(f,x,y){text(estarkSeal(f)?'DEMON SEAL / SET':'DEMON SEAL / —',x+149,y+24,8,'#edb9ff','left');const cd=Math.max(f.estarkFireCooldown||0,f.estarkClawCooldown||0,f.estarkRoarCooldown||0);text(cd?'MAGIC '+Math.ceil(cd/6)/10+'s':'FOUR CLAWS',x+149,y+41,8,'#efcc92','left');}
+ return{draw,drawObjects,impact,hud};})();

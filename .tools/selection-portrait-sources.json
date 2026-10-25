@@ -1979,5 +1979,16 @@
     "framing": "face and shoulders cropped from approved basic pose",
     "cropSource": "characters/mallow/assets/mallow-basic.png",
     "cropCell": 0
+  },
+  "estark": {
+    "source": "characters/estark/assets/estark-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
