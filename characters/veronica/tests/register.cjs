@@ -20,4 +20,3 @@ for(const [id,Cap,after,anchorName,name,height,tier,weight,physics,description]o
  const sf='.tools/selection-portrait-sources.json',selection=JSON.parse(fs.readFileSync(sf));selection[id]={source:root+'/assets/'+id+'-selection.png',crop:[0,0,1254,1254],mode:'built-in imagegen',framing:'dedicated high-resolution close head and shoulders'};pending.set(sf,JSON.stringify(selection,null,2)+'\n');
  for(const[file,s]of pending)fs.writeFileSync(file,s);fs.writeFileSync(root+'/tests/registration.json',JSON.stringify({definition,after,anchorName,height,tier,weight,physics:phys,mask,upperCurves:curves,axes,types},null,2));console.log(JSON.stringify({id,files:pending.size}));
 }
-

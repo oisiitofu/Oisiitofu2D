@@ -21,5 +21,3 @@ const fs=require('fs'),assert=require('node:assert/strict'),{chromium}=require('
 
  return{checks,failed:checks.filter(c=>!c.pass)};});fs.writeFileSync('characters/mallow/previews/mechanics-results.json',JSON.stringify({...result,errors},null,2));console.log(JSON.stringify({checks:result.checks.length,failed:result.failed,errors},null,2));assert.deepEqual(errors,[]);assert.deepEqual(result.failed,[]);
  }finally{await b.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
-
-

@@ -12,4 +12,3 @@ let[f,o]=fresh();attack(f,'dragon');tick(13);let q=MallowRules.objects.find(q=>q
  [f,o]=fresh();o.x=800;Object.assign(o,{attack:{...movesFor(o).heavy,counterWindow:[1,20],counterMove:'heavy'},timer:5});q=MallowRules.spawn(f,{kind:'thunder',x:800,y:560,vx:0,vy:0,life:29,delay:0,radius:22,damage:12,base:3.6,growth:.058,sourceType:'dragon'});MallowRules.tick();check('counter handles lightning',o.damage===0&&q.dead);
  [f,o]=fresh();o.x=800;f.grabbed=o;o.grabOwner=f;PlayerStates.enter(f,'GrabHold');PlayerStates.enter(o,'Grabbed');MallowRules.spawn(f,{kind:'thunder',x:800,y:560,vx:0,vy:0,life:29,delay:0,radius:22,damage:12,base:3.6,growth:.058,sourceType:'dragon'});MallowRules.tick();check('lightning releases grab pair normally',o.damage>0&&!o.grabOwner&&!f.grabbed);
  [f,o]=fresh();MallowRules.spawn(f,{kind:'snow',x:800,y:500,vx:5,vy:0,life:54,radius:19,damage:0});f.respawn=10;MallowRules.tick();check('KO removes weather objects',MallowRules.objects.length===0);
-

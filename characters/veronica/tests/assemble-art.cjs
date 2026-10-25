@@ -14,4 +14,3 @@ const fs=require('fs'),sharp=require('sharp'),extract=require('./extract-poses.c
  fs.mkdirSync(root+'/previews',{recursive:true});for(const[kind,list,cols]of[['poses',poses.slice(0,portraitIndex),8],['effects',effects,4]]){const tiles=await Promise.all(list.map(async(g,n)=>({input:await sharp(g.pixels,{raw:{width:g.w,height:g.h,channels:4}}).resize(210,240,{fit:'inside'}).png().toBuffer(),left:n%cols*240+15,top:Math.floor(n/cols)*270+15})));await sharp({create:{width:cols*240,height:Math.ceil(list.length/cols)*270,channels:4,background:'#24324a'}}).composite(tiles).png().toFile(root+'/previews/'+kind+'.png');}console.log({frames:frames.length,effects:fx.length,portraitIndex,ledge,sourcePoses});
 })().catch(e=>{console.error(e);process.exitCode=1;});
 function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
-

@@ -11,4 +11,3 @@ let[f,o]=fresh();attack(f,'dragon');tick(13);let q=VeronicaRules.objects.find(q=
  for(const kind of['fire','wind','confuse']){[f,o]=fresh();o.x=800;Object.assign(o,{attack:{...movesFor(o).heavy,counterWindow:[1,20],counterMove:'heavy'},timer:5});q=VeronicaRules.spawn(f,{kind,level:0,x:800,y:520,vx:0,vy:0,life:50,radius:24,damage:7,base:3,growth:.05});VeronicaRules.tick();check('counter handles '+kind,o.damage===0&&q.dead);}
  [f,o]=fresh();o.x=800;f.grabbed=o;o.grabOwner=f;PlayerStates.enter(f,'GrabHold');PlayerStates.enter(o,'Grabbed');VeronicaRules.spawn(f,{kind:'wind',x:800,y:520,vx:0,vy:0,life:50,radius:25,damage:9,base:3.2,growth:.052});VeronicaRules.tick();check('weather hit releases grabbed pair normally',o.damage>0&&!o.grabOwner&&!f.grabbed);
  [f,o]=fresh();VeronicaRules.spawn(f,{kind:'windseed',x:800,y:520,vx:0,vy:0,life:180,radius:23,damage:0});f.respawn=10;VeronicaRules.tick();check('KO clears owned magic',VeronicaRules.objects.length===0);
-
