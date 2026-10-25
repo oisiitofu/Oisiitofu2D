@@ -1,0 +1,60 @@
+{
+  "publishedAt": "2026-10-25T09:02:39.575310+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 155,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_24942d9cc0e88191b1ea62ea0163292b",
+  "deploymentId": "appgdep_6addc5a0ba188191be1a84ade75fa343",
+  "environmentRevision": 305,
+  "status": "succeeded",
+  "siteSourceCommit": "71259924c00671a73c5464230e8adb668e88b372",
+  "implementationCommit": "e102f260f984c574252d4fca0bb46c44dd15a1e2",
+  "changes": [
+    "Removed the STOCK BATTLE / 4 MINUTES / NO LIMITS home slogan",
+    "Replaced victory music with the provided Battleforge Triumph.wav recording",
+    "Kept rules and detailed settings equal-sized side by side; moved list below detailed settings",
+    "Replaced the six online-name preset options with one-click horizontal buttons"
+  ],
+  "audio": {
+    "asset": "assets/audio/bgm/victory/Battleforge Triumph.wav",
+    "bytes": 2496044,
+    "durationSeconds": 13,
+    "sampleRate": 48000,
+    "channels": 2,
+    "sha256": "7d4ed14a31cafcb05b10693d6c3685e657decbaa92a55c444ddb1c14fcb357af",
+    "sourceUnchanged": true,
+    "loop": true,
+    "sharedBgmVolume": true
+  },
+  "validation": {
+    "localAudioAndLayoutChecks": 14,
+    "publicAudioAndLayoutChecks": 12,
+    "localAndPublicNameChecks": 13,
+    "menuAudioScenarios": 7,
+    "localOnlineIdenticalFrames": 181,
+    "onlineNames": [
+      "Lickey",
+      "えだ"
+    ],
+    "pcOnly": true,
+    "errors": []
+  },
+  "assets": {
+    "uploaded": 5,
+    "bytes": 6384534,
+    "failed": [],
+    "sha256Files": 4,
+    "normalizedHtmlFiles": 1
+  },
+  "server": {
+    "previousPid": 31956,
+    "currentPid": 33744,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "launcherPid": 3876,
+    "tunnelPid": 12588,
+    "preserved": true
+  },
+  "uploadKeyRemoved": true
+}
