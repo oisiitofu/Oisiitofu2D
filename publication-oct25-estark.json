@@ -1,0 +1,80 @@
+{
+  "publishedAt": "2026-10-25T05:59:20.065758+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 152,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_fdd625cd990081919d273f2fddb33870",
+  "deploymentId": "appgdep_6add9aab5a348191bad17ed7e99c7396",
+  "environmentRevision": 299,
+  "status": "succeeded",
+  "siteSourceCommit": "9da7023b67c8ff6d8a9736809a9e6ebafcfffeef",
+  "implementationCommit": "760ccdfa4f7693a6fa0e6fc6774a21d44e056bf7",
+  "character": {
+    "id": "estark",
+    "name": "エスターク",
+    "after": "veronica",
+    "displayNumber": 20,
+    "sizeTier": 5,
+    "height": 144,
+    "weight": 138,
+    "throwGroup": "power",
+    "fullBodyPoses": 76,
+    "selectionPortraits": 5,
+    "effects": 16
+  },
+  "assets": {
+    "uploaded": 30,
+    "bytes": 32497757,
+    "failed": [],
+    "sha256Files": 29,
+    "htmlFiles": 1,
+    "catalogMatches": true,
+    "onlineStatus": 200
+  },
+  "validation": {
+    "functionalChecks": 113,
+    "publicFunctionalChecks": 113,
+    "visualScenes": 75,
+    "specialVisualScenes": 14,
+    "publicVisualScenes": 75,
+    "publicSpecialVisualScenes": 14,
+    "cpuMatches": 2,
+    "onlineIdenticalFrames": 331,
+    "publicOnlineIdenticalFrames": 331,
+    "onlineScenes": [
+      "Kafrizz and cooldown",
+      "remote four-claw control",
+      "Hell Roar and seal",
+      "finite Nether leap"
+    ],
+    "artPoses": 77,
+    "artEffects": 16,
+    "artCostumes": 385,
+    "sizeCatalogForms": 186,
+    "errors": []
+  },
+  "commonCombatEngineBehaviorChanged": false,
+  "uploadKeyRemoved": true,
+  "server": {
+    "status": "restarted",
+    "at": "2026-10-25T05:57:41.559Z",
+    "previousPid": 12676,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "hashes": {
+      "online-server.cjs": "c71a29fbb100fd165fdeb2403b75b85d1ae144ef05f549ad4f19b4e31efc965d",
+      "input-codec.js": "a6924cce4f979ae4eb41e674060a406c377a9b9d455d1f3cd77a3df4d7199918",
+      "characters/estark/estark-data.js": "d692dc1c53866246e8a165f448b7069d5c3a2a13de6830d9ac5e4c5664ff64d2",
+      "characters/mallow/mallow-data.js": "30c90fc27d4b4c629f8e95f634fb39fd80e5480c5016f1aefde54a25bb8db556"
+    },
+    "currentPid": 35340,
+    "launcherPid": 3876,
+    "tunnelPid": 12588,
+    "preserved": true
+  },
+  "imageGenerationMode": "builtin image_gen",
+  "artAssets": "characters/estark/assets",
+  "artPromptSet": "characters/estark/docs/art-prompts.json",
+  "previews": "characters/estark/previews"
+}
