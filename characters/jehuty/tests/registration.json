@@ -1,0 +1,81 @@
+{
+  "definition": {
+    "id": "jehuty",
+    "name": "ジェフティ",
+    "style": "ANUBIS / ZONE OF THE ENDERS",
+    "number": "191",
+    "description": "ENを配分してロックオンとゼロシフトを連携。下Bは形を保つベクターキャノンのライフリングを回転させ、青い貫通ビームを放つ。",
+    "pose": 76
+  },
+  "after": "kingbonby",
+  "anchorName": "キングボンビー",
+  "height": 128,
+  "tier": null,
+  "weight": 116,
+  "physics": {
+    "weight": 116,
+    "walkSpeed": 3.8,
+    "initialDashSpeed": 8.8,
+    "runSpeed": 8.2,
+    "airSpeed": 7.7,
+    "airAcceleration": 0.5,
+    "gravity": 0.44,
+    "fullHopVelocity": 14.2,
+    "ecb": {
+      "radius": 21,
+      "height": 110
+    },
+    "shieldSize": 58,
+    "shieldOffset": [
+      0,
+      -58
+    ],
+    "walkAcceleration": 0.45,
+    "runAcceleration": 0.45,
+    "airBrake": 0.3,
+    "groundFriction": 0.19,
+    "traction": 0.35,
+    "fallSpeed": 11,
+    "doubleJumpVelocity": 12.6,
+    "airMobility": {
+      "frames": 90,
+      "fallSpeed": 0.65,
+      "reason": "オービタルフレームの推進機構"
+    },
+    "ledgeGrip": [
+      0.26,
+      0.88
+    ]
+  },
+  "mask": "(b>r*1.12&&green>r*1.1&&b>35)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 0
+  }
+}

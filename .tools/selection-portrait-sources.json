@@ -2034,5 +2034,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close cockpit and inner wing shoulders, nonhuman aircraft"
+  },
+  "jehuty": {
+    "source": "characters/jehuty/assets/jehuty-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution robotic head and shoulder close-up"
   }
 }
