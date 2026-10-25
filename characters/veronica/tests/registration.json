@@ -1,0 +1,69 @@
+{
+  "definition": {
+    "id": "veronica",
+    "name": "ベロニカ",
+    "style": "DRAGON QUEST XI / ドラゴンクエストXI",
+    "number": "184",
+    "description": "メラの三段階詠唱と、設置点から放つバギの連携。メダパニで次の魔法を強め、ルーラは設置した渦を転移先にも使う。",
+    "pose": 76
+  },
+  "after": "arus",
+  "anchorName": "アルス",
+  "height": 78,
+  "tier": 1,
+  "weight": 70,
+  "physics": {
+    "weight": 70,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.1,
+    "airSpeed": 5.1,
+    "airAcceleration": 0.4,
+    "gravity": 0.5,
+    "fullHopVelocity": 14.1,
+    "ecb": {
+      "radius": 13.53061224489796,
+      "height": 71
+    },
+    "shieldSize": 37.44,
+    "shieldOffset": [
+      0,
+      -35.88
+    ],
+    "ledgeGrip": [
+      -0.3899947297269858,
+      0.9470152454761576
+    ]
+  },
+  "mask": "(r>green*1.6&&r>b*.95&&r>90)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 0,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 0
+  }
+}

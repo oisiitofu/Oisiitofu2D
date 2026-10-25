@@ -1955,5 +1955,29 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "veronica": {
+    "source": "characters/veronica/assets/veronica-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "mallow": {
+    "source": "characters/mallow/assets/mallow-selection.png",
+    "crop": [
+      0,
+      0,
+      600,
+      600
+    ],
+    "mode": "user-authorized game sprite crop",
+    "framing": "face and shoulders cropped from approved basic pose",
+    "cropSource": "characters/mallow/assets/mallow-basic.png",
+    "cropCell": 0
   }
 }

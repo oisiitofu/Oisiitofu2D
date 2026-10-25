@@ -1,0 +1,12 @@
+{
+  "authorization": "2026-10-25 user explicitly allows game sprite crop instead of dedicated generated portrait",
+  "source": "characters/mallow/assets/mallow-basic.png",
+  "cell": 0,
+  "crop": {
+    "left": 29,
+    "top": 0,
+    "width": 250,
+    "height": 194
+  },
+  "output": "characters/mallow/assets/mallow-selection.png"
+}

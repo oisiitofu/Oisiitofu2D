@@ -1,0 +1,67 @@
+{
+  "definition": {
+    "id": "mallow",
+    "name": "マロ",
+    "style": "SUPER MARIO RPG / スーパーマリオRPG",
+    "number": "185",
+    "description": "天気魔法を使う雲の王子。狙って落とす雷、広がる雪、雲に乗るHPレインと、相手を読むサイコパスを使い分ける。",
+    "pose": 76
+  },
+  "before": "midna",
+  "anchorName": "ミドナ",
+  "height": 74,
+  "tier": null,
+  "weight": 78,
+  "physics": {
+    "weight": 78,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 5.6,
+    "airSpeed": 4.8,
+    "airAcceleration": 0.4,
+    "gravity": 0.43,
+    "fullHopVelocity": 14.2,
+    "ecb": {
+      "radius": 22,
+      "height": 66
+    },
+    "shieldSize": 35.519999999999996,
+    "shieldOffset": [
+      0,
+      -34.04
+    ],
+    "ledgeGrip": [
+      0.23393143565387664,
+      0.9500342331768388
+    ]
+  },
+  "mask": "(green>r*1.4&&b>r*1.4&&green>50)",
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 0,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 0
+  }
+}
