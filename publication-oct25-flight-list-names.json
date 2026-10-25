@@ -1,0 +1,69 @@
+{
+  "publishedAt": "2026-10-25T08:42:41.703510+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 154,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_7454f2090a508191a9c3fb95814f8c97",
+  "deploymentId": "appgdep_6addc0f3f59c8191b8533cb7e2e17a7d",
+  "environmentRevision": 303,
+  "status": "succeeded",
+  "siteSourceCommit": "af6a26df17410e6a471f397c28d9fccb646d3768",
+  "implementationCommit": "e45b0aa46457fd3642be39e2346db9a6b456381a",
+  "changes": [
+    "Character-specific additional aerial jumps or jump-held hover for 41 of 189 reviewed forms",
+    "Dated home updates, latest first, including today's character and stage additions",
+    "Searchable name and number list, Japanese reading sort, persistent favorite stars; image-card numbers removed",
+    "Six preset online names plus custom names, browser persistence, lobby and match synchronization",
+    "Future changes documented in AGENTS.md; PC-only UI verification"
+  ],
+  "validation": {
+    "reviewedForms": 189,
+    "flightProfiles": 41,
+    "localMobilityChecks": 327,
+    "publicMobilityChecks": 327,
+    "shortHopAndFastFallChecks": 2272,
+    "combatInterruptionChecks": 122,
+    "menuControllerChecks": 54,
+    "localListAndHistoryChecks": 18,
+    "publicListAndHistoryChecks": 18,
+    "localNameChecks": 13,
+    "publicNameChecks": 13,
+    "localRenderedScenes": 18,
+    "cpuMatches": 2,
+    "cpuRecoveryScenes": 2,
+    "localOnlineIdenticalFrames": 181,
+    "publicOnlineIdenticalFrames": 181,
+    "onlineNames": [
+      "Lickey",
+      "えだ"
+    ],
+    "marukuMinRemainingAerialJumps": 0,
+    "reimuHoverFrames": 90,
+    "errors": [],
+    "publicNameHarnessCorrection": "Reloading the online route already opens its lobby; wait for that dialog's preset options instead of clicking the obscured home button."
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 3886808,
+    "failed": [],
+    "sha256Files": 2,
+    "normalizedHtmlFiles": 1,
+    "changedPaths": [
+      "game-bundle.js",
+      "index.html",
+      "style.css"
+    ],
+    "artUnchanged": true
+  },
+  "uploadKeyRemoved": true,
+  "server": {
+    "previousPid": 30088,
+    "currentPid": 31956,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "launcherPid": 3876,
+    "tunnelPid": 12588,
+    "preserved": true
+  }
+}
