@@ -73,7 +73,7 @@ const PlayerController=(()=>{
  }
  function catchLedge(f,anchor){if(f.ledgeGrabs>=f.character.ledgeRegrabLimit)return;let other=fighters.find(o=>o!==f&&o.ledge===anchor&&is(o,'LedgeCatch','LedgeHang'));
   if(other){other.ledge=null;other.ledgeCooldown=45;other.vx=-anchor.face*3;other.vy=-2;other.intangible=other.inv=other.ledgeInvOnCatch=0;enter(other,'LedgeTrump',16);}
-  f.ledgeGrabs++;f.ledge=anchor;f.snapFrom=[f.x,f.y];f.face=anchor.face;f.vx=f.vy=0;f.attack=null;f.gravityOff=false;f.helpless=false;f.recovered=false;f.airDodged=false;f.airJumps=f.character.airJumpCount;f.jumps=0;f.fastFall=false;f.specialLandingLag=0;f.grounded=false;f.inv=f.intangible=0;f.ledgeInvOnCatch=f.ledgeGrabs===1?Math.max(20,55-Math.floor(f.damage/10)):0;enter(f,'LedgeCatch',f.character.ledgeCatchFrames);
+  AirMobility.reset(f);f.ledgeGrabs++;f.ledge=anchor;f.snapFrom=[f.x,f.y];f.face=anchor.face;f.vx=f.vy=0;f.attack=null;f.gravityOff=false;f.helpless=false;f.recovered=false;f.airDodged=false;f.airJumps=f.character.airJumpCount;f.jumps=0;f.fastFall=false;f.specialLandingLag=0;f.grounded=false;f.inv=f.intangible=0;f.ledgeInvOnCatch=f.ledgeGrabs===1?Math.max(20,55-Math.floor(f.damage/10)):0;enter(f,'LedgeCatch',f.character.ledgeCatchFrames);
  }
  function ledgeAction(f,i){const l=f.ledge;if(!l)return;f.vx=f.vy=0;
   if(f.mode==='LedgeCatch'){let t=Math.min(1,f.stateFrame/Math.min(4,f.stateDuration));let grip=ledgeHangPosition(f,l);f.x=lerp(f.snapFrom[0],grip.x,t);f.y=lerp(f.snapFrom[1],grip.y,t);if(t===1&&f.ledgeInvOnCatch){f.intangible=f.ledgeInvOnCatch;f.ledgeInvOnCatch=0;}if(f.stateFrame>f.stateDuration)enter(f,'LedgeHang');return;}
@@ -113,7 +113,7 @@ const PlayerController=(()=>{
   }
   if(f.grounded){groundMove(f,i);if(i.y>.5&&Math.abs(i.x)<.1)enterIf(f,'Crouch');}else{airControl(f,i);enterIf(f,f.fastFall?'FastFall':f.vy<0?'Jump':'Fall');}
  }
- function tick(f,raw){if(!f.mode)prepareFighter(f);const c=f.character,i=InputFrames.sample(f,raw);for(let key of ['inv','intangible','grabImmunity','techBuffer','techLock','drop','ledgeCooldown'])f[key]=Math.max(0,(f[key]||0)-1);if(i.guardPressed)f.techBuffer=11;if(++f.dodgeRest>=180){f.dodgeStale=Math.max(0,f.dodgeStale-1);f.dodgeRest=0;}InputFrames.queue(f,i);
+ function tick(f,raw){f.airHoverActive=false;if(!f.mode)prepareFighter(f);const c=f.character,i=InputFrames.sample(f,raw);for(let key of ['inv','intangible','grabImmunity','techBuffer','techLock','drop','ledgeCooldown'])f[key]=Math.max(0,(f[key]||0)-1);if(i.guardPressed)f.techBuffer=11;if(++f.dodgeRest>=180){f.dodgeStale=Math.max(0,f.dodgeStale-1);f.dodgeRest=0;}InputFrames.queue(f,i);
   stopLaunchOnPress(f,i);
   f.shadowTimeSlowed=ShadowRules.slowSkip(f,i);if(f.shadowTimeSlowed||SolRules.slowSkip(f,i)||AstroRules.slowSkip(f,i)){f.stateEnd++;f.faf++;return;}
   if(f.hitlag>0){CombatSystem.hitlag(f,i);return;}if(f.attack?.hauntDelay>0&&!f.hitstun&&!f.tumbling&&!f.respawn){f.attack.hauntDelay--;f.stateEnd++;f.faf++;physics(f,i);return;}if(f.laytonThink>0&&!f.hitstun&&!f.tumbling&&!f.respawn){f.laytonThink=Math.max(0,f.laytonThink-i.mash*2);f.buffer=null;f.vx*=.75;physics(f,i);return;}f.timer++;f.stateFrame++;f.landingLag=['NormalLanding','HardLanding','AerialLanding','SpecialLanding'].includes(f.mode)?Math.max(0,f.stateDuration-f.stateFrame+1):0;
@@ -153,7 +153,7 @@ const PlayerController=(()=>{
  }
  function physics(f,i){let c=f.character,oldX=f.x,oldY=f.y,wasAir=!f.grounded,oldVx=f.vx,oldVy=f.vy,def=PlayerStates.defs[f.mode];
   const dodgeFloor=f.grounded&&is(f,'SpotDodge','ForwardRoll','BackwardRoll','TechRoll','GetupRoll','LedgeRoll')?platforms.find(p=>Math.abs(oldY-p.y)<6&&oldX>=p.x-9&&oldX<=p.x+p.w+9):null;
-  if(def.gravity&&!f.gravityOff&&!BattleFeel.dodgeMotion(f)){let gravity=c.gravity*(f.attack?.gravityMultiplier??1);if(f.fastFall&&!f.tumbling&&!f.hitstun)gravity=Math.max(gravity,MovementTuning.fastFallAcceleration);let next=f.vy+gravity;f.vy=f.tumbling||f.hitstun?next:Math.min(f.attack?.glideStart&&f.timer>=f.attack.glideStart&&f.timer<=f.attack.glideEnd?f.attack.glideFallSpeed:f.attack?.diveSpeed&&f.timer>=f.attack.startupFrames?f.attack.diveSpeed:f.fastFall?c.fastFallSpeed:c.fallSpeed,next);}f.x+=f.vx*(!f.hitstun&&!f.tumbling?(f.logicSlow??1)*JibanyanRules.hauntScale(f)*PiposaruRules.speed(f)*TwinbeeRules.speed(f):1);f.y+=f.vy;
+  if(def.gravity&&!f.gravityOff&&!BattleFeel.dodgeMotion(f)){let gravity=c.gravity*(f.attack?.gravityMultiplier??1);if(f.fastFall&&!f.tumbling&&!f.hitstun)gravity=Math.max(gravity,MovementTuning.fastFallAcceleration);let next=f.vy+gravity;f.vy=f.tumbling||f.hitstun?next:Math.min(f.attack?.glideStart&&f.timer>=f.attack.glideStart&&f.timer<=f.attack.glideEnd?f.attack.glideFallSpeed:f.attack?.diveSpeed&&f.timer>=f.attack.startupFrames?f.attack.diveSpeed:f.fastFall?c.fastFallSpeed:c.fallSpeed,next);}AirMobility.physics(f,i);f.x+=f.vx*(!f.hitstun&&!f.tumbling?(f.logicSlow??1)*JibanyanRules.hauntScale(f)*PiposaruRules.speed(f)*TwinbeeRules.speed(f):1);f.y+=f.vy;
   if(dodgeFloor){const x=clamp(f.x,dodgeFloor.x+1,dodgeFloor.x+dodgeFloor.w-1);if(x!==f.x)f.vx=0;f.x=x;f.y=dodgeFloor.y;f.vy=0;}
   f.grounded=false;
   let p=platforms.find(p=>p.main),dy=f.y-oldY;
@@ -188,7 +188,7 @@ const PlayerController=(()=>{
   if(!f.grounded&&canLedge&&!f.hitstun&&!f.ledgeCooldown&&i.y<.65)for(let l of StageRules.ledges)if(l.face!==f.ledgeExitSide&&Math.abs(f.x-l.x)<c.ledgeGrabRange[0]&&(f.x-l.x)*l.face<35&&f.y>l.y+8&&f.y<l.y+c.ledgeGrabRange[1]){catchLedge(f,l);break;}
   if(blastZoneSide(f))ko(f);
  }
- function land(f,i,landingSpeed=Math.abs(f.vy)){if(NewcomerCore.ids.includes(f.characterId)&&NewcomerCore.land(f,i))return;if(f.characterId==='adol'&&AdolRules.land(f,i))return;let c=f.character,a=f.attack,wasFast=f.fastFall;BattleFeel.landing(f,Math.abs(landingSpeed),wasFast);f.shortHop=false;f.airJumps=c.airJumpCount;f.jumps=0;f.airDodged=false;f.ledgeGrabs=0;f.recovered=false;f.fastFall=false;f.helpless=false;
+ function land(f,i,landingSpeed=Math.abs(f.vy)){AirMobility.reset(f);if(NewcomerCore.ids.includes(f.characterId)&&NewcomerCore.land(f,i))return;if(f.characterId==='adol'&&AdolRules.land(f,i))return;let c=f.character,a=f.attack,wasFast=f.fastFall;BattleFeel.landing(f,Math.abs(landingSpeed),wasFast);f.shortHop=false;f.airJumps=c.airJumpCount;f.jumps=0;f.airDodged=false;f.ledgeGrabs=0;f.recovered=false;f.fastFall=false;f.helpless=false;
   if(f.mode==='ShieldBreak'){enter(f,'Stunned',180);return;}
   if(f.tumbling){f.attack=null;if(!tech(f,i,'floor')){f.hitstun=0;f.tumbling=false;enter(f,'Knockdown');f.vx*=.4;}return;}
   if(f.hitstun>0){f.vx*=.6;return;}

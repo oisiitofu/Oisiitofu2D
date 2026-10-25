@@ -1,0 +1,71 @@
+'use strict';
+// Add completed releases here with their actual date/time; newest is rendered first.
+const HomeUpdates=(()=>{
+ const entries=[
+ {
+  "at": "2026-10-25T17:35:53+09:00",
+  "items": [
+   "多段ジャンプ・ジャンプ長押しの浮遊を実装しました。",
+   "検索・あいうえお順・お気に入り付きのキャラリストを追加しました。",
+   "オンラインのプレイヤー名設定とブラウザ保存を追加しました。"
+  ]
+ },
+ {
+  "at": "2026-10-25T07:38:15.664737+00:00",
+  "items": [
+   "新キャラ「キュービィ・リング・エルザ」を追加しました。"
+  ]
+ },
+ {
+  "at": "2026-10-25T05:59:20.065758+00:00",
+  "items": [
+   "新キャラ「エスターク」を追加しました。"
+  ]
+ },
+ {
+  "at": "2026-10-25T05:04:44.185408+00:00",
+  "items": [
+   "新キャラ「ベロニカ・マロ」を追加しました。"
+  ]
+ },
+ {
+  "at": "2026-10-25T01:20:17.989170+00:00",
+  "items": [
+   "新キャラ「アシュリー」を追加しました。"
+  ]
+ },
+ {
+  "at": "2026-10-25T00:37:26.305326+00:00",
+  "items": [
+   "新キャラ「ナホビノ・リョク・リップ」を追加しました。"
+  ]
+ },
+ {
+  "at": "2026-10-24T17:44:48.688585+00:00",
+  "items": [
+   "新キャラ「テイルス」を追加しました。"
+  ]
+ },
+ {
+  "at": "2026-10-24T17:07:08.104594+00:00",
+  "items": [
+   "新キャラ「エトナ」を追加しました。"
+  ]
+ },
+ {
+  "at": "2026-10-24T16:15:17.504285+00:00",
+  "items": [
+   "新ステージ「ギアワーク・ファクトリー」「チャンピオンズ・スタジアム」を追加しました。",
+   "キャラ選択画面とキーコンフィグを改善しました。"
+  ]
+ },
+ {
+  "at": "2026-10-24T15:36:30.539709+00:00",
+  "items": [
+   "新キャラ「イーノック・アストロ・ラチェット・ジャンゴ」を追加しました。"
+  ]
+ }
+];
+ function render(){const list=document.getElementById('home-updates-list');if(!list)return;const formatter=new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});const fragment=document.createDocumentFragment();for(const entry of [...entries].sort((a,b)=>Date.parse(b.at)-Date.parse(a.at))){const row=document.createElement('li'),time=document.createElement('time'),items=document.createElement('ul');time.dateTime=entry.at;time.textContent=formatter.format(new Date(entry.at));for(const text of entry.items){const li=document.createElement('li');li.textContent=text;items.append(li);}row.append(time,items);fragment.append(row);}list.replaceChildren(fragment);}
+ render();return{entries,render};
+})();

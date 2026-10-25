@@ -17,7 +17,7 @@ function astroLaunch(f,a){a.phase='rise';a.launchAt=f.timer;f.grounded=false;f.r
 const AstroRules=NewcomerCore.create('astro',AstroMoves,{
  reset(){for(const f of fighters)if(f.characterId==='astro'){f.astroClockEnergy=100;f.astroClockCooldown=0;f.astroRocketUsed=f.astroBoostUsed=false;f.astroHoverFuel=45;}},
  status(f){if(f.respawn){f.astroClockEnergy=100;f.astroClockCooldown=0;}else if(!AstroRules.objects.some(q=>q.owner===f.id&&q.kind==='clock'&&!q.dead))f.astroClockEnergy=Math.min(100,(f.astroClockEnergy??100)+.32);f.astroClockCooldown=Math.max(0,(f.astroClockCooldown||0)-1);if((f.grounded||f.ledge||f.respawn)&&!f.attack?.astroRocket&&!f.attack?.astroBoost){f.astroRocketUsed=f.astroBoostUsed=false;f.astroHoverFuel=45;}
-  if(!f.attack&&!f.grounded&&!f.hitlag&&!f.hitstun&&!f.recovered&&f.input?.jumpHeld&&f.vy>0&&f.astroHoverFuel>0){f.astroHoverFuel--;f.vy=Math.min(f.vy,1.7);}
+  // Jump-held hover is handled once, before collision, by AirMobility.
  },
  prepare(f,a){a.activeFrames=a.activeFrames.map(w=>({...w}));if(a.special){a.animationWindows=[{start:1,end:a.totalFrames,pose:a.pose}];a.motionCommitEnd=a.totalFrames-7;}if(a.astroBoost){f.astroBoostUsed=true;a.phase='start';a.heading=a.originGrounded?0:-.13;a.bounced=false;}if(a.astroRocket){f.astroRocketUsed=true;a.phase='start';}if(a.astroClock){f.astroClockEnergy=0;f.astroClockCooldown=180;}},
  action(f,i,r){const a=f.attack,t=f.timer,held=!!(i.special||i.specialHeld);

@@ -6,7 +6,7 @@ const Net=(()=>{
   if(room)url.searchParams.set('room',room.toUpperCase());return url.href;
  }
  const browse=()=>location.assign(onlineUrl());
- function init(){
+ function init(){PlayerNames.init();
   const button=document.querySelector('#enter-online');
   button.onclick=browse;
   button.title='オンラインの部屋一覧を開く';
@@ -16,5 +16,5 @@ const Net=(()=>{
   }
  }
  const noop=()=>{};
- return{init,browse,returnToSelection:noop,leave:noop,capture:noop,finished:noop,ready:noop,status:noop,active:false,applying:false,code:'',slot:0,config:null,inputs:null,starting:false};
+ return{init,browse,playerName:id=>id===0?PlayerNames.current:(id+1)+'P',returnToSelection:noop,leave:noop,capture:noop,finished:noop,ready:noop,status:noop,active:false,applying:false,code:'',slot:0,config:null,inputs:null,starting:false};
 })();

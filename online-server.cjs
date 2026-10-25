@@ -1,6 +1,7 @@
 const {WebSocketServer,WebSocket}=require('ws');
 const crypto=require('node:crypto');
 const InputCodec=require('./input-codec.js');
+const PlayerNames=require('./player-names.js');
 const StageCatalog=require('./stage-data.js');
 const MatchRules=require('./match-rules.js');
 const SquadRules=require('./squad-rules.js');
@@ -15,7 +16,7 @@ function attachOnline(server){
  const publishRooms=()=>{const data=roomList();for(const ws of wss.clients)if(ws.watchingRooms&&!ws.room)send(ws,data);};
  const status=room=>{
   room.players.forEach((viewer,slot)=>{if(!viewer)return;send(viewer.ws,{type:'room',code:room.code,playing:room.playing,preparing:!!room.preparing,revealed:!!room.revealedConfig,matchId:room.matchId,playerCount:room.players.length,format:room.format,teamAttack:room.teamAttack,stocks:room.stocks,timeLimit:room.timeLimit,squadSize:room.squadSize,oneOnOne:!!room.oneOnOne,ruleSet:room.ruleSet,bingo:BingoRules.view(room.bingo,slot),notice:room.notice||'',players:room.players.map((p,n)=>{
-   if(!p)return null;const result={color:p.color,ready:p.ready,battleTeam:p.battleTeam,stage:p.settings?.stage??null};
+   if(!p)return null;const result={name:p.name,color:p.color,ready:p.ready,battleTeam:p.battleTeam,stage:p.settings?.stage??null};
    if(room.bingo&&!room.bingo.revealed&&n!==slot)return result;
    return{...result,...(room.revealedConfig?{character:room.revealedConfig.players[n].character,team:room.revealedConfig.players[n].team}:room.squadSize===1||n===slot?{character:p.character,team:p.team?.slice(0,room.squadSize)}:{})};
   })});});publishRooms();
@@ -31,7 +32,7 @@ function attachOnline(server){
   room.preparing=true;room.matchId++;room.touched=Date.now();room.players.forEach(p=>{p.artReady=false;p.finished=false;p.reportedWinner=undefined;});
   room.pendingConfig={oneOnOne:!!room.oneOnOne,matchId:room.matchId,stocks:room.stocks,timeLimit:room.timeLimit,squadSize:room.squadSize,playerCount:room.players.length,format:room.format,teamAttack:room.teamAttack,ruleSet:room.ruleSet,bingo:BingoRules.view(room.bingo,-1),stage:StageCatalog.chooseOnline(room.players.map(p=>p.settings.stage),n=>crypto.randomInt(n)),players:room.players.map(p=>{
    const draw=id=>id==='random'?selectableCharacters[crypto.randomInt(selectableCharacters.length)]:id,team=room.squadSize>1?SquadRules.resolve(p.team.slice(0,room.squadSize),selectableCharacters,n=>crypto.randomInt(n)):p.team.slice(0,1).map(draw);
-   return{battleTeam:p.battleTeam,color:p.color,character:room.squadSize>1?team[0]:draw(p.character),team};
+   return{name:p.name,battleTeam:p.battleTeam,color:p.color,character:room.squadSize>1?team[0]:draw(p.character),team};
   })};room.revealedConfig=room.squadSize>1||room.bingo?room.pendingConfig:null;status(room);all(room,{type:'prepare',config:room.pendingConfig});
  }
  const resetLobby=room=>{room.playing=room.preparing=false;room.pendingConfig=room.revealedConfig=null;room.touched=Date.now();room.players.forEach(p=>{if(p){p.ready=p.artReady=false;p.input=neutral();p.pending={};}});};
@@ -64,10 +65,11 @@ function attachOnline(server){
     if(ws.room)return;let room,slot=0;
     if(m.type==='create'){if(rooms.size>=40){send(ws,{type:'error',message:'ルームが満員です。'});return;}let code;do{code=crypto.randomBytes(4).toString('hex').slice(0,6).toUpperCase();}while(rooms.has(code));room={code,ruleSet:m.ruleSet==='bingo'?'bingo':'normal',stocks:Number.isInteger(m.stocks)&&m.stocks>=1&&m.stocks<=10?m.stocks:3,players:Array.from({length:[3,4].includes(+m.playerCount)?+m.playerCount:2},()=>null),format:m.format==='teams'&&+m.playerCount>2?'teams':'free',teamAttack:MatchRules.teamAttack(m.teamAttack),oneOnOne:m.oneOnOne===true,playing:false,frame:0,matchId:0,timeLimit:MatchRules.time(m.timeLimit),squadSize:[3,5].includes(+m.squadSize)?+m.squadSize:1,created:Date.now(),touched:Date.now()};if(room.ruleSet==='bingo')room.squadSize=1;resetBingo(room);rooms.set(code,room);}
     else{room=rooms.get(String(m.code||'').toUpperCase());if(!room||room.playing||room.preparing||room.players.every(Boolean)){send(ws,{type:'error',message:'ルームが見つからないか、対戦中・満員です。'});return;}slot=room.players.findIndex(p=>!p);}
-    if(m.type==='join'&&room.bingo&&(room.bingo.round>1||room.bingo.result))resetBingo(room,'参加者が変わったためカードを配り直しました。');ws.room=room;ws.slot=slot;ws.compactInput=m.inputFormat===InputCodec.format;room.players[slot]={ws,color:slot?2:0,character:'dragoon',battleTeam:slot%2,ready:false,input:neutral(),pending:{},lastInput:Date.now(),finished:false};send(ws,{type:'joined',slot,code:room.code,...(ws.compactInput?{inputFormat:InputCodec.format}:{})});status(room);return;
+    if(m.type==='join'&&room.bingo&&(room.bingo.round>1||room.bingo.result))resetBingo(room,'参加者が変わったためカードを配り直しました。');ws.room=room;ws.slot=slot;ws.compactInput=m.inputFormat===InputCodec.format;room.players[slot]={ws,name:PlayerNames.normalize(m.name,PlayerNames.presets[0]),color:slot?2:0,character:'dragoon',battleTeam:slot%2,ready:false,input:neutral(),pending:{},lastInput:Date.now(),finished:false};send(ws,{type:'joined',slot,code:room.code,...(ws.compactInput?{inputFormat:InputCodec.format}:{})});status(room);return;
    }
    const room=ws.room,p=room?.players[ws.slot];if(!p)return;
    if(m.matchId!==undefined&&m.matchId!==room.matchId)return;
+   if(m.type==='profile'&&!room.playing&&!room.preparing){p.name=PlayerNames.normalize(m.name,p.name);status(room);return;}
    if(m.type==='lobby'){if(room.bingo&&room.playing&&p.finished){send(ws,{type:'error',message:'全員の対戦結果を集計しています。完了までお待ちください。'});return;}if(room.playing||room.preparing){cancelBingo(room);resetLobby(room);all(room,{type:'ended',message:'キャラクター選択へ戻りました。同じ部屋で再戦できます。'});}if(room.bingo?.result&&!room.bingo.champion){BingoRules.next(room.bingo);resetLobby(room);}if(!room.bingo?.picks[ws.slot])p.ready=false;status(room);return;}
    if(m.type==='load-error'&&room.preparing&&m.matchId===room.matchId){cancelBingo(room);resetLobby(room);all(room,{type:'error',message:'画像を準備できませんでした。準備完了を押して再試行してください。'});status(room);return;}
    if(m.type==='loaded'&&room.preparing&&m.matchId===room.matchId){p.artReady=true;if(room.players.every(q=>q?.artReady)){room.preparing=false;room.playing=true;room.frame=0;room.started=room.touched=Date.now();room.players.forEach(q=>{q.input=neutral();q.pending={};q.lastInput=room.started;});all(room,{type:'start',config:room.pendingConfig});room.pendingConfig=null;publishRooms();}return;}

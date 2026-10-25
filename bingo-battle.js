@@ -4,7 +4,7 @@ const BingoBattle=(()=>{
  const $=id=>document.getElementById(id),isOnline=()=>$('battle-mode').value==='online';
  const enabled=()=>isOnline()&&!!online&&!!Net.code;
  const current=()=>online,seat=()=>Net.slot;
- const ownerName=key=>key.startsWith('team:')?(key==='team:0'?'赤チーム':'青チーム'):(+key.split(':')[1]+1)+'P';
+ const ownerName=key=>key.startsWith('team:')?(key==='team:0'?'赤チーム':'青チーム'):Net.playerName(+key.split(':')[1]);
  const name=id=>Roster.definitions.find(d=>d.id===id)?.name||id;
  function picture(id){const img=document.createElement('img');img.alt='';const url=ArtLoader.thumbnail(id)?.src||ArtLoader.portrait(id,0,0,true);if(url)img.src=url;return img;}
  function isOpen(){return !$('bingo-select').classList.contains('hidden');}
@@ -17,7 +17,7 @@ const BingoBattle=(()=>{
   for(const b of s.boards){
    const mine=b.key===myKey,panel=document.createElement('section');panel.className='bingo-board'+(mine?' mine':'');panel.dataset.board=b.key;
    const head=document.createElement('header'),title=document.createElement('h3'),score=document.createElement('span');title.textContent=ownerName(b.key)+(mine?' · あなた':'');
-   const members=s.picks.flatMap((_,k)=>BingoRules.key(s,k)===b.key?[(k+1)+'P']:[]);if(s.format==='teams')title.textContent+=' ('+members.join(' / ')+')';
+   const members=s.picks.flatMap((_,k)=>BingoRules.key(s,k)===b.key?[Net.playerName(k)]:[]);if(s.format==='teams')title.textContent+=' ('+members.join(' / ')+')';
    score.className='bingo-board-score';score.textContent=b.lines+' / 2 BINGO · '+b.open.filter(Boolean).length+' / 25 OPEN';head.append(title,score);panel.append(head);
    const grid=document.createElement('div');grid.className='bingo-grid';if(selecting&&mine)grid.id='bingo-grid';grid.setAttribute('aria-label',ownerName(b.key)+'のビンゴカード');
    const completed=new Set(BingoRules.complete(b).flat()),chosen=new Set(s.picks.flatMap((p,k)=>p?.character&&BingoRules.key(s,k)===b.key&&(!selecting||k!==n||draft===null)?[p.cell]:[]));if(selecting&&mine&&draft!==null)chosen.add(draft);
@@ -34,7 +34,7 @@ const BingoBattle=(()=>{
   const n=seat(),b=BingoRules.board(s,n);if(!b)return;
   $('bingo-round').textContent='ROUND '+s.round;$('bingo-owner').textContent='全員のビンゴカード';
   $('bingo-help').textContent=s.champion?ownerName(s.champion)+'が2ビンゴで優勝！':s.revealed?'全員の選択が確定しました。対戦を準備しています。':s.picks[n]?'決定済み · 全員が決定するまではキャンセル・変更できます。':draft!==null?name(b.cells[draft])+'を選択中。「決定」で準備完了になります。':'マスを選んでから「決定」を押してください。選択は全員が決定するまで秘密です。';
-  progress(s,$('bingo-progress'));const list=$('bingo-picks');list.replaceChildren();s.picks.forEach((p,k)=>{const chip=document.createElement('div');chip.className='bingo-player-pick';const who=(k+1)+'P';chip.textContent=who+' · '+(p?.selected||p?.character?s.revealed?'確定済み':'選択済み':'選択中');if(s.revealed&&p?.character){chip.textContent='';chip.append(picture(p.character),document.createTextNode(who+' · '+name(p.character)));}list.append(chip);});
+  progress(s,$('bingo-progress'));const list=$('bingo-picks');list.replaceChildren();s.picks.forEach((p,k)=>{const chip=document.createElement('div');chip.className='bingo-player-pick';const who=Net.playerName(k);chip.textContent=who+' · '+(p?.selected||p?.character?s.revealed?'確定済み':'選択済み':'選択中');if(s.revealed&&p?.character){chip.textContent='';chip.append(picture(p.character),document.createTextNode(who+' · '+name(p.character)));}list.append(chip);});
   renderBoards(s,$('bingo-boards'),true);
   $('bingo-stage').value=$('stage').value;$('bingo-stage').disabled=!!s.picks[n]||!!s.result||!!s.champion;
   $('bingo-reset').classList.toggle('hidden',Net.slot!==0);$('bingo-reset').disabled=!!Net.active;
