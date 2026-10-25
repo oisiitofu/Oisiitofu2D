@@ -1,0 +1,69 @@
+{
+  "definition": {
+    "id": "elza",
+    "name": "エルザ",
+    "style": "THE LAST STORY",
+    "number": "189",
+    "description": "剣と左腕の鎖で射線と間合いを作る傭兵。ギャザリングの円を通す鎖と風の斬撃で連携する。",
+    "pose": 76
+  },
+  "after": "akira",
+  "anchorName": "アキラ",
+  "height": 98,
+  "tier": 3,
+  "weight": 99,
+  "physics": {
+    "weight": 99,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.5,
+    "airSpeed": 5.4,
+    "airAcceleration": 0.4,
+    "gravity": 0.58,
+    "fullHopVelocity": 14.2,
+    "ecb": {
+      "radius": 17,
+      "height": 91
+    },
+    "shieldSize": 47.04,
+    "shieldOffset": [
+      0,
+      -45.080000000000005
+    ],
+    "ledgeGrip": [
+      0.31713161984915766,
+      0.9660507446221732
+    ]
+  },
+  "mask": "(r>125&&green>115&&b>95&&Math.max(r,green,b)-Math.min(r,green,b)<75)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 0,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 0
+  }
+}

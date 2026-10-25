@@ -1,0 +1,67 @@
+{
+  "definition": {
+    "id": "qbby",
+    "name": "キュービィ",
+    "style": "BOXBOY! / ハコボーイ！",
+    "number": "187",
+    "description": "白い箱を伸ばして間合いと足場を作る。ハコフックで引き寄せ、階段箱を踏んで場外から戻る。",
+    "pose": 76
+  },
+  "after": "karateka",
+  "anchorName": "カラテ家",
+  "height": 60,
+  "tier": null,
+  "weight": 80,
+  "physics": {
+    "weight": 80,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 5.6,
+    "airSpeed": 4.8,
+    "airAcceleration": 0.4,
+    "gravity": 0.5,
+    "fullHopVelocity": 12.5,
+    "ecb": {
+      "radius": 21,
+      "height": 55
+    },
+    "shieldSize": 28.799999999999997,
+    "shieldOffset": [
+      0,
+      -27.6
+    ],
+    "ledgeGrip": [
+      0.3928779140212281,
+      0.940363059817567
+    ]
+  },
+  "mask": "(r>170&&green>170&&b>170)",
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 0,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 0
+  }
+}

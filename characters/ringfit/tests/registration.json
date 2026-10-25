@@ -1,0 +1,67 @@
+{
+  "definition": {
+    "id": "ringfit",
+    "name": "リング",
+    "style": "RING FIT ADVENTURE",
+    "number": "188",
+    "description": "リングコンを押す・引くフィットスキル。四つの運動を切り替え、空気の圧力と溜める跳躍で間合いを作る。",
+    "pose": 76
+  },
+  "after": "karateka",
+  "anchorName": "カラテ家",
+  "height": 94,
+  "tier": 2,
+  "weight": 94,
+  "physics": {
+    "weight": 94,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.8,
+    "airSpeed": 5.3,
+    "airAcceleration": 0.4,
+    "gravity": 0.57,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 16.30612244897959,
+      "height": 87
+    },
+    "shieldSize": 45.12,
+    "shieldOffset": [
+      0,
+      -43.24
+    ],
+    "ledgeGrip": [
+      0.03404792139476931,
+      0.9534571473120701
+    ]
+  },
+  "mask": "(r>145&&green>50&&green<r*.8&&b<green*.85)",
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 0,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 0
+  }
+}

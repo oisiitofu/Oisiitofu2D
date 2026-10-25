@@ -1990,5 +1990,38 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "qbby": {
+    "source": "characters/qbby/assets/qbby-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution square face and body closeup; original nonhuman anatomy retained"
+  },
+  "ringfit": {
+    "source": "characters/ringfit/assets/ringfit-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "elza": {
+    "source": "characters/elza/assets/elza-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
