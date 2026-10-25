@@ -1,0 +1,86 @@
+{
+  "publishedAt": "2026-10-25T12:41:53.377306+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 157,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_f95a467b77a08191aa97d636977bb520",
+  "deploymentId": "appgdep_6addf90217a08191b21dd36dc5da842c",
+  "environmentRevision": 309,
+  "status": "succeeded",
+  "siteSourceCommit": "6015d100fffda5f20bb862268bc6637ac41b3197",
+  "implementationCommit": "8439eb866a016441e7ada277c9937ffca20abaf4",
+  "character": {
+    "id": "jehuty",
+    "name": "ジェフティ",
+    "after": "kingbonby",
+    "source": "User ANUBIS Jehuty motion sheet jefuty.png",
+    "height": 128,
+    "hoverFrames": 90,
+    "energy": 100,
+    "neutral": "Finite homing lasers; locks shared with Zero Shift",
+    "side": "Target-relative or directed teleport; optional attack followup accepts neutral and directional attack inputs",
+    "up": "Finite steering thrust and a single release slash",
+    "down": "One unchanged cannon prop and body pose throughout charge/release; only internal rifling rotates"
+  },
+  "cannon": {
+    "propImage": 10,
+    "bodyPose": 42,
+    "chargeFrames": [
+      30,
+      72
+    ],
+    "energyCost": [
+      20,
+      60
+    ],
+    "rigidHardwareChangedPixels": [
+      0,
+      0
+    ],
+    "rotatingInnerPixels": [
+      1408,
+      1407
+    ],
+    "zeroPercentDirectBlastKO": false
+  },
+  "imageGeneration": {
+    "mode": "built-in image_gen",
+    "prompts": "characters/jehuty/docs/art-prompts.json",
+    "assets": "characters/jehuty/assets/",
+    "poses": 77,
+    "effects": 16
+  },
+  "validation": {
+    "localMechanics": 121,
+    "publicMechanics": 121,
+    "normalAndColorScenes": 75,
+    "specialScenes": 20,
+    "cpuMatches": 2,
+    "localOnlineIdenticalFrames": 331,
+    "publicOnlineIdenticalFrames": 331,
+    "bakedPoses": 77,
+    "bakedEffects": 16,
+    "bakedCostumes": 385,
+    "atlasChecksumMismatches": [],
+    "pcOnly": true,
+    "errors": []
+  },
+  "assets": {
+    "uploaded": 30,
+    "bytes": 30029593,
+    "failed": [],
+    "sha256Files": 29,
+    "normalizedHtmlFiles": 1
+  },
+  "server": {
+    "previousPid": 39216,
+    "currentPid": 42232,
+    "roomChecks": [
+      [],
+      []
+    ],
+    "launcherPid": 3876,
+    "tunnelPid": 12588,
+    "preserved": true
+  },
+  "uploadKeyRemoved": true
+}
