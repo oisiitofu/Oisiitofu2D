@@ -1,0 +1,8 @@
+{
+  "mode": "built-in imagegen",
+  "id": "elma",
+  "source": "C:\\Users\\haro_\\.codex\\generated_images\\01a0d8c0-ef4f-7271-8889-854f000c1ba9\\exec-bd916ad6-b969-40c6-8355-c204ace44077.png",
+  "dest": "characters/elma/assets/elma-presentation-portrait.png",
+  "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ゼノブレイドクロスのエルマ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Dark-tan woman, long flowing silver-white hair, bright blue eyes, red and black futuristic armored suit with silver details and high black collar. Calm experienced expression. Preserve reference's exact armor and skin tone. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
+  "reference": "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/assets/ready/elma-selection-0-56a4fd165d2aa40f.png"
+}

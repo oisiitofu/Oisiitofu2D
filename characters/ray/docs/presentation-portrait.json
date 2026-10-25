@@ -1,0 +1,8 @@
+{
+  "mode": "built-in imagegen",
+  "id": "ray",
+  "source": "C:\\Users\\haro_\\.codex\\generated_images\\01a0d8c0-ef4f-7271-8889-854f000c1ba9\\exec-190c274c-96bb-4a28-b417-243858a2b30f.png",
+  "dest": "characters/ray/assets/ray-presentation-portrait.png",
+  "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of CUSTOM ROBOのレイ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Compact red, blue, white robot with red spiked helmet and swept red fins, sharp yellow V-shaped crest, narrow red mechanical eyes, white mechanical face mask, blue shoulder armor. NOT a human or an alternative Gundam. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
+  "reference": "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/assets/ready/ray-selection-0-0483f2e683826725.webp"
+}

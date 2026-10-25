@@ -1,0 +1,8 @@
+{
+  "mode": "built-in imagegen",
+  "id": "toro",
+  "source": "C:\\Users\\haro_\\.codex\\generated_images\\01a0d8c0-ef4f-7271-8889-854f000c1ba9\\exec-bc28beef-0472-4fbf-8ca1-b8649ecc677c.png",
+  "dest": "characters/toro/assets/toro-presentation-portrait.png",
+  "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of どこでもいっしょのトロ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Minimalist white cat, two tall triangular ears with peach inner ears, tiny black oval eyes, black triangular nose, simple black smiling mouth, pink round cheeks. Flat clean official-like simple geometry, complete ears. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
+  "reference": "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/assets/ready/toro-selection-0-4f3748014e3d0361.webp"
+}

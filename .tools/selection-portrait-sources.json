@@ -1226,86 +1226,111 @@
     "original": "built-in imagegen; see .tools/kisuke-generation.json"
   },
   "ray": {
-    "source": "characters/ray/assets/ray-native.png",
+    "source": "characters/ray/assets/ray-presentation-portrait.png",
     "crop": [
-      57,
-      2099,
-      280,
-      200
-    ]
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of CUSTOM ROBOのレイ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Compact red, blue, white robot with red spiked helmet and swept red fins, sharp yellow V-shaped crest, narrow red mechanical eyes, white mechanical face mask, blue shoulder armor. NOT a human or an alternative Gundam. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   },
   "alain": {
-    "source": "characters/alain/assets/alain-native.png",
+    "source": "characters/alain/assets/alain-selection.png",
     "crop": [
-      84,
-      2095,
-      294,
-      210
-    ]
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "existing approved high-resolution portrait",
+    "framing": "full-resolution original, replacing reduced native atlas crop"
   },
   "hinako": {
-    "source": "characters/hinako/assets/hinako-native.png",
+    "source": "characters/hinako/assets/hinako-presentation-portrait.png",
     "crop": [
-      785,
-      3925,
-      424,
-      424
-    ]
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of SILENT HILL f の深水雛子, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Japanese teenage schoolgirl, short straight black bob with warm reddish ends and wispy bangs, brown eyes, serious calm face, dark sailor school uniform with red sailor scarf and thin white collar trim. Moody detailed anime painted style, fully opaque skin, transparent background. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   },
   "cojicoji": {
-    "source": "characters/cojicoji/assets/cojicoji-native.png",
+    "source": "characters/cojicoji/assets/cojicoji-presentation-portrait.png",
     "crop": [
-      2,
-      1581,
-      384,
-      404
-    ]
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of コジコジ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Preserve exactly the reference: round pale yellow face, black oval eyes, tiny red smiling mouth, red spiral cheeks, green scalloped head rim with alternating orange lobes, small yellow triangular crown feature, red shoulders. Simple flat colorful cartoon. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   },
   "megamanexe": {
-    "source": "characters/megamanexe/assets/megamanexe-native.png",
+    "source": "characters/megamanexe/assets/megamanexe-presentation-portrait.png",
     "crop": [
-      1307,
-      1641,
-      343,
-      334
-    ]
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ロックマンエグゼ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Green-eyed boy robot with round blue helmet, yellow central forehead stripe, red circular ear discs in yellow housings, blue bodysuit, shoulder armor and red/yellow chest emblem. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   },
   "melia": {
-    "source": "characters/melia/assets/melia-native.png",
+    "source": "characters/melia/assets/melia-presentation-portrait.png",
     "crop": [
-      1228,
-      1696,
-      368,
-      368
-    ]
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ゼノブレイドのメリア, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Silver-lavender hair with fine wing-shaped feather head ornaments and blue/gold jewelry, blue eyes, regal purple and gold embroidered costume, pale skin. Keep exact existing elaborate outfit and graceful expression. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   },
   "fiora": {
-    "source": "characters/fiora/assets/fiora-selection-complete.png",
+    "source": "characters/fiora/assets/fiora-presentation-portrait.png",
     "crop": [
-      110,
       0,
-      448,
-      320
+      0,
+      1536,
+      1024
     ],
-    "framing": "face centered in selection card, existing dedicated artwork"
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ゼノブレイドのフィオルン, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Blonde-haired blue-eyed young woman in the reference's black/silver/gold mechanical armor, silver angular ear/head machinery and rounded silver shoulder plates. Preserve the exact armored form, short tousled blonde hair and warm confident expression. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   },
   "krystal": {
-    "source": "characters/krystal/assets/krystal-native.png",
+    "source": "characters/krystal/assets/krystal-presentation-portrait.png",
     "crop": [
-      827,
-      2075,
-      434,
-      262
-    ]
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of スターフォックスのクリスタル, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Anthropomorphic blue-furred vixen, white muzzle and chest fur, green eyes, long blue hair, pointed fox ears, small dark nose, purple and gold circlet and gold/blue shoulder ornament. Preserve clear fox identity and muzzle. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   },
   "yuri": {
-    "source": "characters/yuri/assets/yuri-native.png",
+    "source": "characters/yuri/assets/yuri-presentation-portrait.png",
     "crop": [
-      1303,
-      1893,
-      337,
-      351
-    ]
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of 零の不来方夕莉, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Young Japanese woman with long straight black hair and bangs, dark brown eyes, light skin, white blouse under dark waistcoat, serious gentle expression. Detailed painted anime realism. Do not add a camera in front of the face. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   },
   "hornet": {
     "source": "characters/hornet/assets/hornet-selection-closeup.png",
@@ -1319,13 +1344,16 @@
     "framing": "dedicated close head and cloak, complete horns and cloak extending through bottom edge"
   },
   "toro": {
-    "source": "characters/toro/assets/toro-native.png",
+    "source": "characters/toro/assets/toro-presentation-portrait.png",
     "crop": [
-      1658,
-      3210,
-      306,
-      262
-    ]
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of どこでもいっしょのトロ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Minimalist white cat, two tall triangular ears with peach inner ears, tiny black oval eyes, black triangular nose, simple black smiling mouth, pink round cheeks. Flat clean official-like simple geometry, complete ears. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   },
   "c4621": {
     "source": "characters/c4621/assets/c4621-selection.png",
@@ -2056,5 +2084,101 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution robotic head and shoulder close-up"
+  },
+  "metabee": {
+    "source": "characters/metabee/assets/metabee-presentation-portrait.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of メダロットのメタビー, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Yellow beetle robot with two black gun barrels protruding from the top of the head, green glowing oval eyes in black visor, angular white mouth armor and chunky yellow shoulders. Preserve exact head design. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
+  },
+  "jibanyan": {
+    "source": "characters/jibanyan/assets/jibanyan-presentation-portrait.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of 妖怪ウォッチのジバニャン, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Friendly red-orange cat yokai, cream muzzle and forehead flame marking, huge yellow-rimmed eyes, pink ears, joyful open smiling mouth, pale aqua collar bell. Include complete ears. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
+  },
+  "kitten": {
+    "source": "characters/kitten/assets/kitten-presentation-portrait.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of GRAVITY DAZEのキトゥン, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Young dark-tan woman with wavy shoulder-length blonde hair, red eyes, black headband, black-and-gold high-collared gravity shifter outfit and ornate gold trim. Preserve skin tone and face, confident gentle expression. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
+  },
+  "elma": {
+    "source": "characters/elma/assets/elma-presentation-portrait.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ゼノブレイドクロスのエルマ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Dark-tan woman, long flowing silver-white hair, bright blue eyes, red and black futuristic armored suit with silver details and high black collar. Calm experienced expression. Preserve reference's exact armor and skin tone. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
+  },
+  "goemon": {
+    "source": "characters/goemon/assets/goemon-presentation-portrait.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of がんばれゴエモンのゴエモン, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Bold blue spiky-haired young Japanese cartoon hero, large expressive blue eyes, red kimono with yellow trim over patterned undershirt. Upbeat determined grin. Preserve stylized youthful face and huge spiky blue hair. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
+  },
+  "nier": {
+    "source": "characters/nier/assets/nier-presentation-portrait.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ニーア レプリカントのニーア, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Silver-white short tousled-haired young man, light pale eyes, black headband, dark gray ornate high-neck leather outfit with lacing and metal ornaments. Detailed Japanese fantasy anime painting, calm determined expression. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
+  },
+  "miku": {
+    "source": "characters/miku/assets/miku-presentation-portrait.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of 初音ミク, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Teal-eyed virtual singer with very long aqua twin tails, black and magenta hair ornaments/headphones, pale skin, gray sleeveless top with teal necktie and trim. Friendly energetic smile. Include top of head and twin-tail attachments. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
+  },
+  "naruhodo": {
+    "source": "characters/naruhodo/assets/naruhodo-presentation-portrait.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "high-resolution head and shoulders for roster, introduction and victory",
+    "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of 逆転裁判の成歩堂龍一, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Young Japanese male defense attorney with swept-back sharply spiked black hair, thick eyebrows, blue suit, white shirt, red tie, small round gold attorney lapel pin. Confident focused expression, crisp anime game illustration. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
   }
 }

@@ -1,0 +1,8 @@
+{
+  "mode": "built-in imagegen",
+  "id": "goemon",
+  "source": "C:\\Users\\haro_\\.codex\\generated_images\\01a0d8c0-ef4f-7271-8889-854f000c1ba9\\exec-e665cb89-09c5-4de4-8d12-d3afd5f544a8.png",
+  "dest": "characters/goemon/assets/goemon-presentation-portrait.png",
+  "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of がんばれゴエモンのゴエモン, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Bold blue spiky-haired young Japanese cartoon hero, large expressive blue eyes, red kimono with yellow trim over patterned undershirt. Upbeat determined grin. Preserve stylized youthful face and huge spiky blue hair. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
+  "reference": "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/assets/ready/goemon-selection-0-a57e634b60ebf5eb.png"
+}
