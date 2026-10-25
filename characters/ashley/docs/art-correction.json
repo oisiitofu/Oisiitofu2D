@@ -1,0 +1,11 @@
+{
+  "mode": "builtin image_gen",
+  "prompt": "Use case stylized-concept. Create a TRANSPARENT corrective full-body pose sheet ASHLEY WARIOWARE matching the FIXED model image2 exactly. SIX full-body figures in TWO COLUMNS x THREE ROWS, generous clear gutters. Long black hair huge orange bow, red eyes, red dress black cape skull clasp black stockings shoes, cute short fixed proportions and crisp cel paint. Row1 left: reference NEUTRAL idle wand forward facing RIGHT; row1 right: SECOND JAB STRIKE torso twisted and right hand crossing body, wand GEM thrust toward RIGHT in front of face, left hand pulled back; wand must NOT point left. Row2 left: AIR ANTICIPATION knees tucked with one ordinary BROOM held diagonal from lower-left bristles to upper-right HANDLE, one bristle head ONLY, no wand; row2 right: AIR NEUTRAL STRIKE legs curled kicking outward, torso bent, one BROOM swung diagonally toward lower RIGHT with bristle head on RIGHT and handle in her hands near chest, silhouette very different from anticipation, no wand. Row3 left: AIR RECOVERY legs dangling and one ordinary broom held close across waist, one bristle head only, no wand; row3 right: relaxed standing idle holding wand low at right side facing right. ONE tool per figure, broom must have ONE wooden handle and ONE golden bristle head, never two bristle heads or duplicated wand. Entire figure hair bow boots tools within every cell. No effects, opponents, shadows, floor, scenery, text or borders. Actual transparent alpha background. Do not change the original neutral reference game design.",
+  "frames": {
+    "17": "second jab forward",
+    "26": "air broom sweep",
+    "63": "air anticipation one broom",
+    "64": "air recovery one broom",
+    "75": "relaxed idle"
+  }
+}

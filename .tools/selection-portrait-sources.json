@@ -1944,5 +1944,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "ashley": {
+    "source": "characters/ashley/assets/ashley-selection.png",
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

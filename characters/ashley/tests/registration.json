@@ -1,0 +1,69 @@
+{
+  "definition": {
+    "id": "ashley",
+    "name": "アシュリー",
+    "style": "WARIOWARE / メイド イン ワリオ",
+    "number": "183",
+    "description": "呪いの詠唱とポーショントラップを扱う魔女。ほうきで設置物を運び、有限の飛行時間を上昇と旋回へ配分する。",
+    "pose": 76
+  },
+  "after": "lip",
+  "anchorName": "リップ",
+  "height": 78,
+  "tier": 1,
+  "weight": 74,
+  "physics": {
+    "weight": 74,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 5.9,
+    "airSpeed": 5.2,
+    "airAcceleration": 0.4,
+    "gravity": 0.5,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 13.53061224489796,
+      "height": 71
+    },
+    "shieldSize": 37.44,
+    "shieldOffset": [
+      0,
+      -35.88
+    ],
+    "ledgeGrip": [
+      0.04926746672755111,
+      0.9490531700359057
+    ]
+  },
+  "mask": "(r>green*1.6&&r>b*.95&&r>90)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 0,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 0,
+    "smash": 0,
+    "upsmash": 0,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 0
+  }
+}
