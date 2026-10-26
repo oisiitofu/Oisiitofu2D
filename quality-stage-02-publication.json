@@ -1,0 +1,188 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    5,
+    6
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "b039cd0f726e5fef28bdb7a895fb2ab87ae43607",
+  "siteCommit": "1e3e5640af626c3ea5537e0d0810983b1a2e3246",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_8ab11390eb5481918a6fa81cd31f676e",
+  "versionNumber": 163,
+  "deployment": {
+    "id": "appgdep_6adf62a3e6d081919015e86dc31df9ea",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_8ab11390eb5481918a6fa81cd31f676e",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 321,
+    "updated_at": "2026-10-26T14:24:51.013795+00:00"
+  },
+  "changes": {
+    "movement": "Cancel an abandoned pending turn without a fresh dash; neutral release brakes, sustained and post-commit reversals keep 4F facing timing.",
+    "guard": "Release parries require the existing shield coverage, with HP and tilt preserved. Null-box scripted contacts retain compatibility."
+  },
+  "verification": {
+    "turnaround": {
+      "checks": 87,
+      "characters": [
+        "dragoon",
+        "tifa",
+        "nightraven"
+      ],
+      "bothFaces": true,
+      "failed": [],
+      "errors": []
+    },
+    "parryCoverage": {
+      "checks": 110,
+      "frames": [
+        1,
+        5,
+        6
+      ],
+      "bothFaces": true,
+      "smallTiltedShield": true,
+      "actualBodyContact": true,
+      "meleeAndProjectiles": true,
+      "grabBypass": true,
+      "consecutiveShieldProjectiles": true,
+      "failed": [],
+      "errors": []
+    },
+    "priorDirectionalInput": {
+      "checks": 34,
+      "failed": [],
+      "errors": []
+    },
+    "online": {
+      "localIdenticalFrames": 240,
+      "publicIdenticalFrames": 240,
+      "scenes": 8,
+      "moveOutcomes": [
+        {
+          "character": "dragoon",
+          "face": 1,
+          "vx": 6.8
+        },
+        {
+          "character": "dragoon",
+          "face": -1,
+          "vx": -6.8
+        },
+        {
+          "character": "nightraven",
+          "face": 1,
+          "vx": 12.8
+        },
+        {
+          "character": "nightraven",
+          "face": -1,
+          "vx": -12.8
+        }
+      ],
+      "parryOutcomes": [
+        {
+          "covered": true,
+          "frame": 1,
+          "parried": true
+        },
+        {
+          "covered": false,
+          "frame": 1,
+          "parried": false
+        },
+        {
+          "covered": true,
+          "frame": 6,
+          "parried": false
+        },
+        {
+          "covered": true,
+          "frame": 1,
+          "projectile": true,
+          "parried": true
+        }
+      ],
+      "errors": []
+    },
+    "cpu": {
+      "matches": 1,
+      "frames": 1800,
+      "characters": [
+        "dragoon",
+        "tifa"
+      ],
+      "hits": [
+        11,
+        13
+      ],
+      "finite": true,
+      "grabLinks": true,
+      "turnFrames": 8
+    },
+    "visual": {
+      "renderedScenes": 6,
+      "inspected": [
+        "turn-cancel-dragoon-1.png",
+        "turn-cancel-nightraven--1.png",
+        "parry-covered.png",
+        "parry-outside.png"
+      ],
+      "directory": "previews/quality/"
+    },
+    "publicAssetSHA256": {
+      "path": "game-bundle.js",
+      "hash": "706fc7122d881c5919fe6eccb3343be8274da380142e2775d5eb693fa9522281",
+      "matches": true
+    }
+  },
+  "assets": {
+    "uploaded": 1,
+    "bytes": 4136195,
+    "failed": []
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false,
+    "sourceBundleRefresh": "mtime-based"
+  },
+  "ownedPreview": {
+    "pid": 35024,
+    "stopped": true
+  }
+}
