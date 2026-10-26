@@ -3,7 +3,7 @@
 const BattleFeel=(()=>{
  const tuning=Object.freeze({diAngle:.17,shieldHitlag:.67,directionalDodgeBrake:.94,directionalDodgeFloat:22,neutralDodgeBrake:.88,neutralDodgeFloat:25});
  let trails=[],cameraKick=0;
- function reset(){trails=[];cameraKick=0;}
+ function reset(){trails=[];cameraKick=0;BattleReadability.reset();}
  function hitlag(a){const damage=a.damage??a.dmg??0,electric=a.element==='thunder'||a.element==='electric';return clamp(Math.floor((damage*.65+6)*(electric?1.5:1)*(a.hitlagMultiplier??1)),0,30);}
  function shieldStun(a,damage){const custom=a.shieldstunMultiplier??1,mult=a.projectile?(custom!==1?custom:.29):custom*(a.aerial?.33:/smash/i.test(a.type)?.725:1);return Math.max(0,Math.floor(damage*.8*mult+3)-1);}
  function impact(f,o,a,damage,raw,lag,touch){
@@ -45,7 +45,7 @@ const BattleFeel=(()=>{
   cameraKick*=.84;
  }
  function update(){
-  updateCamera();if(hitstop>0)return;
+  updateCamera();BattleReadability.update();if(hitstop>0)return;
   trails.forEach(p=>p.life--);trails=trails.filter(p=>p.life>0);
   for(const f of fighters){if(!f.respawn&&!f.hitlag&&f.grounded&&f.mode==='InitialDash'&&f.stateFrame===1)emit(f.x-f.face*8,f.y,'#e0dcd4',6,1.8);if(f.respawn||f.hitlag||!f.tumbling||f.hitstun<=0||f.lastKnockback<50||Math.hypot(f.vx,f.vy)<7||frame%2)continue;
    trails.push({x:f.x,y:f.y-f.character.ecb.height*.45,vx:f.vx,vy:f.vy,life:20,power:clamp(f.lastKnockback/140,.4,1.4),color:colors[f.color]});
