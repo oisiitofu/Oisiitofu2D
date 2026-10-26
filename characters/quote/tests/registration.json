@@ -1,0 +1,71 @@
+{
+  "definition": {
+    "id": "quote",
+    "name": "クォート",
+    "style": "洞窟物語",
+    "number": "198",
+    "description": "武器ごとの経験値と燃料を管理する。跳ねる火球、消耗するバブリン、8方向ブースター。",
+    "pose": 76
+  },
+  "after": "reimu",
+  "anchorName": "博麗霊夢",
+  "height": 76,
+  "tier": 0,
+  "weight": 83,
+  "physics": {
+    "weight": 83,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.51,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 16,
+      "height": 69
+    },
+    "shieldSize": 36.48,
+    "shieldOffset": [
+      0,
+      -34.96
+    ],
+    "ledgeGrip": [
+      -0.215,
+      0.962
+    ]
+  },
+  "mask": "(r>85&&r>green*1.4&&r>b*1.3)",
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 2,
+    "jab2": 2,
+    "jab3": 2,
+    "heavy": 13,
+    "up": 2,
+    "low": 2,
+    "dashAttack": 2,
+    "smash": 3,
+    "upsmash": 0,
+    "downsmash": 4,
+    "air": 2,
+    "fair": 2,
+    "bair": 2,
+    "uair": 2,
+    "dair": 2
+  }
+}

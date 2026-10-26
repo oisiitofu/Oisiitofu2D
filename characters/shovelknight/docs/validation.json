@@ -1,0 +1,90 @@
+{
+  "character": "shovelknight",
+  "mechanics": {
+    "checks": 80,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "lance",
+      "box",
+      "gear"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "gear",
+          "box",
+          "bomb"
+        ],
+        "stats": [
+          {
+            "damage": 157.09500000000003,
+            "hits": 15,
+            "kos": 0
+          },
+          {
+            "damage": 95.45166666666667,
+            "hits": 8,
+            "kos": 0
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "gear",
+          "box",
+          "bomb"
+        ],
+        "stats": [
+          {
+            "damage": 129.75000000000003,
+            "hits": 14,
+            "kos": 0
+          },
+          {
+            "damage": 148.94000000000003,
+            "hits": 17,
+            "kos": 1
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "shovelknight",
+    "checks": [
+      {
+        "name": "dig creates persistent treasure foothold",
+        "pass": true
+      },
+      {
+        "name": "box anchor adds recoil propulsion",
+        "pass": true
+      },
+      {
+        "name": "pogo contact rebounds exactly once",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

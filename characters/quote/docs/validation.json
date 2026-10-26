@@ -1,0 +1,98 @@
+{
+  "character": "quote",
+  "mechanics": {
+    "checks": 86,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "spur",
+      "fire",
+      "bubble",
+      "polar"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "bubble",
+          "fire"
+        ],
+        "stats": [
+          {
+            "damage": 16.8525,
+            "hits": 2,
+            "kos": 0
+          },
+          {
+            "damage": 95.915,
+            "hits": 12,
+            "kos": 0
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "bubble",
+          "fire",
+          "spur"
+        ],
+        "stats": [
+          {
+            "damage": 92.03000000000003,
+            "hits": 19,
+            "kos": 1
+          },
+          {
+            "damage": 138.09,
+            "hits": 14,
+            "kos": 0
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "quote",
+    "checks": [
+      {
+        "name": "held bubbler has a capped orbiting stock",
+        "pass": true
+      },
+      {
+        "name": "enemy projectile consumes a bubble",
+        "pass": true
+      },
+      {
+        "name": "released surviving bubbles become moving projectiles",
+        "pass": true
+      },
+      {
+        "name": "weapon levels are independent",
+        "pass": true
+      },
+      {
+        "name": "taking damage removes weapon experience",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

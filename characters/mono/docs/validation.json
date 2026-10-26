@@ -1,0 +1,96 @@
+{
+  "character": "mono",
+  "mechanics": {
+    "checks": 80,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "color",
+      "path",
+      "doodle",
+      "current"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "doodle",
+          "path",
+          "current",
+          "color"
+        ],
+        "stats": [
+          {
+            "damage": 97.53499999999998,
+            "hits": 14,
+            "kos": 0
+          },
+          {
+            "damage": 132.54500000000002,
+            "hits": 17,
+            "kos": 1
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "doodle",
+          "path",
+          "current"
+        ],
+        "stats": [
+          {
+            "damage": 94.27000000000001,
+            "hits": 13,
+            "kos": 1
+          },
+          {
+            "damage": 203.35000000000005,
+            "hits": 21,
+            "kos": 1
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "mono",
+    "checks": [
+      {
+        "name": "hold selects a different ink behavior",
+        "pass": true
+      },
+      {
+        "name": "summoning consumes color and creates one selected creature",
+        "pass": true
+      },
+      {
+        "name": "doodle path advances before owner",
+        "pass": true
+      },
+      {
+        "name": "reinput rides to drawn path end",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

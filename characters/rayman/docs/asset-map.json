@@ -1,0 +1,51 @@
+{
+  "id": "rayman",
+  "height": 82,
+  "portrait": 76,
+  "frames": 77,
+  "normalMap": {
+    "jab": 16,
+    "jab2": 17,
+    "jab3": 18,
+    "heavy": 19,
+    "up": 20,
+    "low": 21,
+    "dashAttack": 22,
+    "smash": 23,
+    "upsmash": 24,
+    "downsmash": 25,
+    "air": 26,
+    "fair": 27,
+    "bair": 28,
+    "uair": 29,
+    "dair": 30
+  },
+  "specialMap": {
+    "NB": [
+      31,
+      32,
+      33
+    ],
+    "SB": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "UB": [
+      38,
+      39,
+      40,
+      41
+    ],
+    "DB": [
+      42,
+      43,
+      44,
+      45
+    ]
+  },
+  "effects": "0 yellow-white punch crescent convex RIGHT open LEFT; 1 golden helicopter hair wind arc convex TOP open BOTTOM; 2 RED floating fist glove projectile pointed RIGHT with short red trail LEFT; 3 golden horizontal wind swirl; 4 gold punch impact RIGHT; 5 large red charged fist projectile pointed RIGHT; 6 gold radial Lum burst; 7 smiling small golden Lum fullbody with tiny wings and legs; 8 small BLUE Teensie fullbody ally cartoon long blue nose wearing blue tunic; 9 golden return-glove trail RIGHT; 10 blue downward kick impact; 11 white boot skid dust; 12 pale blue shield orb; 13 golden hit star; 14 white landing dust; 15 white floating cartoon glove palm FRONT.",
+  "direction": "FX0 convex RIGHT/open LEFT. FX1 is a horizontal golden WIND RING / small tornado (not a single upper canopy); do not classify FX1 as ordinary crescent without checking actual image. Up smash/uair body already contains helicopter-hair wind. Reflection occurs after local rotation.",
+  "provenance": "tests/art-layout.json sourcePoses contains exact final-frame to source-cell mapping. Source sheets preserved unmodified; correction sources separately named."
+}

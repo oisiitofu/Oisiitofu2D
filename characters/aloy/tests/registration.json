@@ -1,0 +1,73 @@
+{
+  "definition": {
+    "id": "aloy",
+    "name": "アーロイ",
+    "style": "HORIZON",
+    "number": "195",
+    "description": "属性矢でワイヤー罠を変化させ、地形やワイヤーの端点へグラップルする狩人。",
+    "pose": 76
+  },
+  "after": "sam",
+  "anchorName": "サム",
+  "height": 94,
+  "tier": 2,
+  "weight": 98,
+  "physics": {
+    "weight": 98,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 16.30612244897959,
+      "height": 87
+    },
+    "shieldSize": 45.12,
+    "shieldOffset": [
+      0,
+      -43.24
+    ],
+    "ledgeGrip": [
+      0.423,
+      0.968
+    ]
+  },
+  "mask": "(r>70&&r>green*1.2&&green>b*1.1)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 11,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 11,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 11
+  }
+}

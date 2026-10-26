@@ -1,0 +1,66 @@
+{
+  "normals": {
+    "16": "bow body close forward strike",
+    "17": "bow body second forward strike at raised height",
+    "18": "forward right boot kick with bow tucked",
+    "19": "strong FORWARD spear tip extended RIGHT in front, torso lunging",
+    "20": "bow raised striking overhead",
+    "21": "crouch low spear sweep right",
+    "22": "running forward shoulder hit",
+    "23": "full extended horizontal spear thrust",
+    "24": "bow tilted skyward arrow release",
+    "25": "kneeling placing shock trap",
+    "26": "midair bow sweep across front chest",
+    "27": "midair forward bow shot right",
+    "28": "midair backwards boot kick LEFT",
+    "29": "midair bow shot upward",
+    "30": "midair spear plunged DOWN"
+  },
+  "specials": {
+    "31": "aiming bow right with normal arrow",
+    "32": "drawing bow charged flaming arrow",
+    "33": "releasing electric arrow right bow fully extended",
+    "34": "low sliding drawing wire endpoint from left hand",
+    "35": "kneeling firing second wire stake right",
+    "36": "rolling over own taut wire while bow tucked",
+    "37": "ready low standing with anchored wire to right",
+    "38": "shooting grappling rope diagonally above right",
+    "39": "hanging from taut grapple with feet tucked",
+    "40": "swinging on rope toward right, bow at hip",
+    "41": "releasing rope one hand and jumping forward",
+    "42": "kneeling placing mechanical tripwire anchor",
+    "43": "pulling wire taut toward second anchor",
+    "44": "pointing at electrified trap on right",
+    "45": "low ready pose watching wire trap"
+  },
+  "effects": [
+    "blue spear crescent slash, bulging convex cutting edge RIGHT, open tail LEFT",
+    "single overhead canopy crescent, bulging convex edge UP, open side DOWN",
+    "ordinary arrow pointing RIGHT",
+    "flaming arrow pointing RIGHT",
+    "ice arrow pointing RIGHT",
+    "electric arrow pointing RIGHT",
+    "taut grappling rope diagonal upper right with hook",
+    "small tripwire anchor device",
+    "two mechanical stakes joined by blue electric wire",
+    "blue Focus concentric targeting mark",
+    "shock trap electric low burst",
+    "smoke cloud",
+    "orange explosive trap burst",
+    "sharp golden hit spark",
+    "soft grey-brown landing dust",
+    "green machine override sparks"
+  ],
+  "effectOrientation": {
+    "0": {
+      "convex": "right",
+      "open": "left"
+    },
+    "1": {
+      "convex": "up",
+      "open": "down"
+    }
+  },
+  "bodyHeight": 94,
+  "portraitIndex": 76
+}

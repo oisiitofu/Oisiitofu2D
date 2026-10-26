@@ -1,0 +1,66 @@
+{
+  "normals": {
+    "16": "short forward halberd jab",
+    "17": "diagonal up-right halberd slice",
+    "18": "wide forward halberd pull",
+    "19": "strong FORWARD full extended halberd strike to RIGHT, blade in front of body not behind",
+    "20": "halberd flick above head",
+    "21": "low rightward thorn swipe crouching",
+    "22": "running rightward shoulder and halberd thrust",
+    "23": "two handed halberd forward broad cleave",
+    "24": "upright golden palm raised above head",
+    "25": "kneeling casting two thorn roots outward",
+    "26": "airborne horizontal halberd orbit across chest without somersault",
+    "27": "midair forward long halberd thrust",
+    "28": "midair backward halberd slice to LEFT while looking right",
+    "29": "midair halberd arcing directly ABOVE",
+    "30": "midair spear pointed vertically DOWN"
+  },
+  "specials": {
+    "31": "standing gathering red blood sigil at palm",
+    "32": "halberd steady right while firing red blood thorn from palm",
+    "33": "strong fully released red thorn bolt pose",
+    "34": "kneeling summoning black-red thorns forward",
+    "35": "hand pointing toward thorn root, body stays at origin",
+    "36": "sliding cloak along planted thorn with halberd extended",
+    "37": "arriving at thorn root halberd sweep recovery",
+    "38": "cloak opens downward as support veil raises body",
+    "39": "rising with black thorn veil beneath feet",
+    "40": "hovering upright with cloak spread, halberd lowered",
+    "41": "releasing floating veil and gently descending",
+    "42": "prayer hands golden sigil summoned",
+    "43": "kneeling healing light radiates around palm",
+    "44": "both arms open protecting golden circle",
+    "45": "returning prayer holding halberd upright"
+  },
+  "effects": [
+    "red halberd crescent slash, bulging convex cutting edge faces RIGHT and open tail faces LEFT",
+    "gold-red single overhead canopy arc, bulging convex edge UP and open side DOWN",
+    "rightward red thorn projectile",
+    "black-red thorn roots low branching upward",
+    "golden healing light column",
+    "golden protective circle seal",
+    "red blood magic sigil",
+    "black thorn veil supporting platform",
+    "thorn halberd tip lance trail",
+    "red life motes",
+    "golden healing sparkles",
+    "black cloak billowing silhouette",
+    "red thorn impact burst",
+    "sharp red-gold hit spark",
+    "soft grey-brown landing dust",
+    "gold radiant pulse ring"
+  ],
+  "effectOrientation": {
+    "0": {
+      "convex": "right",
+      "open": "left"
+    },
+    "1": {
+      "convex": "up",
+      "open": "down"
+    }
+  },
+  "bodyHeight": 94,
+  "portraitIndex": 76
+}

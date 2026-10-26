@@ -1,0 +1,55 @@
+{
+  "mode": "builtin image_gen",
+  "assets": [
+    {
+      "asset": "nargacuga-basic",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-edc166bb-819d-46d5-9e2f-c84dbbd10fc9.png",
+      "error": null
+    },
+    {
+      "asset": "nargacuga-selection",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-234b3f7c-5ca2-40fb-8eeb-c2e537682853.png",
+      "error": null
+    },
+    {
+      "asset": "nargacuga-attacks",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-5679134b-96f2-4183-8144-52971c688b07.png",
+      "error": null
+    },
+    {
+      "asset": "nargacuga-specials",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-f0b9000e-3789-49d7-8db3-268fdd298009.png",
+      "error": null
+    },
+    {
+      "asset": "nargacuga-defense",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-68e9c23a-062c-4f14-acb0-87a52f174ea6.png",
+      "error": null
+    },
+    {
+      "asset": "nargacuga-extra",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-96e0c97c-c704-4f42-8b53-9e5a8d2c2d6c.png",
+      "error": null
+    },
+    {
+      "asset": "nargacuga-effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-2348f13e-42f2-4ca7-bf0b-4082e9faca35.png",
+      "error": null
+    },
+    {
+      "asset": "nargacuga-selection-v2",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-2f0b4116-b5e8-4c3e-ac3c-476bc1ebc7e1.png",
+      "error": null
+    },
+    {
+      "asset": "nargacuga-motion",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-ab58ea10-5ff2-43ba-9e73-10f2b5e067ec.png",
+      "error": null
+    },
+    {
+      "asset": "nargacuga-tail-slam",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-89c32897-7d19-4ffe-bef4-ff229a557f1b.png",
+      "error": null
+    }
+  ]
+}

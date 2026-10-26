@@ -1,0 +1,20 @@
+{
+  "id": "quote",
+  "frames": 77,
+  "effects": 16,
+  "portrait": 76,
+  "portraitSource": {
+    "width": 1536,
+    "height": 1024
+  },
+  "neutralExactlyRetained": true,
+  "uniqueNormalPoses": 15,
+  "alpha": {
+    "min": 0,
+    "max": 255
+  },
+  "wholebodyGallery": "previews/poses.png",
+  "effectsGallery": "previews/effects.png",
+  "generationRefused": false,
+  "notes": "Pixel art, nearest scaling; complete bubble release frame45 separately drawn."
+}

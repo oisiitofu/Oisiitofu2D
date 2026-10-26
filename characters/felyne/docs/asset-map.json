@@ -1,0 +1,130 @@
+{
+  "id": "felyne",
+  "height": 62,
+  "frameCount": 77,
+  "effectCount": 16,
+  "portraitIndex": 76,
+  "portraitSource": "characters/felyne/assets/felyne-selection.png",
+  "normal": {
+    "jab": 16,
+    "jab2": 17,
+    "jab3": 18,
+    "heavy": 19,
+    "up": 20,
+    "low": 21,
+    "dashAttack": 22,
+    "smash": 23,
+    "upsmash": 24,
+    "downsmash": 25,
+    "air": 26,
+    "fair": 27,
+    "bair": 28,
+    "uair": 29,
+    "dair": 30
+  },
+  "locomotion": {
+    "idle": 0,
+    "walk": [
+      1
+    ],
+    "run": [
+      2,
+      4
+    ],
+    "dashStart": 3,
+    "skid": 5,
+    "crouch": 6,
+    "jumpSquat": 7,
+    "jump": 8,
+    "rise": 9,
+    "double": 10,
+    "fall": 11,
+    "land": 12,
+    "turn": 13
+  },
+  "defense": {
+    "guard": 46,
+    "forwardRoll": 47,
+    "backwardRoll": 48,
+    "spotDodge": 49,
+    "airDodge": 50,
+    "hit": 51,
+    "fly": 52,
+    "prone": 53,
+    "down": 54,
+    "getup": 55,
+    "rollGetup": 56,
+    "ledge": 57,
+    "ledgeClimb": 58,
+    "helpless": 59,
+    "rest": 60
+  },
+  "grab": {
+    "grab": 61,
+    "pummel": 62,
+    "forwardThrow": 63,
+    "backThrow": 64,
+    "upThrow": 65,
+    "downThrow": 66
+  },
+  "specials": {
+    "NB": [
+      31,
+      32,
+      33
+    ],
+    "SB": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "UB": [
+      38,
+      39,
+      40,
+      41
+    ],
+    "DB": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "notes": "42 is horn landing; DB placement starts43. 34 carry barrel,35 push,36 ride,37 jump off contain barrel artwork: suppress duplicate independent barrel render while rider pose36 displayed."
+  },
+  "effects": {
+    "0": "blue claw crescent convex RIGHT",
+    "1": "blue overhead canopy convex UP",
+    "2": "wood boomerang",
+    "3": "wood barrel lit fuse",
+    "4": "yellow shock trap",
+    "5": "green healing music notes",
+    "6": "upward blue wind plume",
+    "7": "blue-gold healing horn",
+    "8": "triple white claw scratches",
+    "9": "blue shield",
+    "10": "barrel explosion",
+    "11": "tan tail/dust curve convex RIGHT",
+    "12": "yellow shock",
+    "13": "hit spark",
+    "14": "landing dust",
+    "15": "supply pouch"
+  },
+  "observedSourceAxes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "orientation": "For directional melee FX normalize observed convex axis to local +X, then rotate into local attack direction, then reflect whole local geometry by fighter.face. Do not assume all source curves face right. FX1 is already overhead canopy; preserve one broad curve, not per inner capsule.",
+  "animation": "Whole-body source poses only; no articulated rig, anatomy deformation or neutral regeneration."
+}

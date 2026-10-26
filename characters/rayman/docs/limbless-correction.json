@@ -1,0 +1,16 @@
+{
+  "mode": "built-in imagegen",
+  "changes": [
+    {
+      "kind": "basic-v2",
+      "prompt": "Use case: precise-object-edit. Edit target is the attached 4x4 Rayman basic animation sheet. Correct ONLY accidental skinny purple arm/leg connectors in action cells, especially row2col1 and row2col2: erase all connecting purple tubes between floating white gloves and purple torso. Rayman has NO ARMS OR LEGS. Every glove and shoe floats in space, separated by visible transparent gap from torso. Keep all complete poses, expressions, clothes, head, hair, shoes, exact locations/scales, all16cell order, original artwork rendering. Keep top-left neutral reference pose absolutely unchanged. Preserve original alpha transparency, do not add new colors/background/effects/text. Maintain4x4grid. Do not change wholebody proportions.",
+      "source": "Generated images are saved to C:\\Users\\haro_\\.codex\\generated_images\\01a174f1-fe4a-7363-b421-7ca264eeaff9 as C:\\Users\\haro_\\.codex\\generated_images\\01a174f1-fe4a-7363-b421-7ca264eeaff9\\exec-27981ab9-769e-4c93-881c-2218fea0627e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "kind": "attacks-v2",
+      "prompt": "Use case: precise-object-edit. Correct this Rayman 4x4 attack sheet only. Rayman is a LIMBLESS character. Remove EVERY skinny purple connector/upper arm/forearm/leg tube that incorrectly joins a glove to purple body. Particularly second row first and second cells have an incorrect curved purple tube extending from the back glove toward the torso; ERASE these tubes to transparent space. Every WHITE GLOVE floats separately with empty transparent gap, every shoe floats separately. KEEP glove locations and gloves themselves, preserve every face, hair, costume, all sixteen full-body poses, ordering, colors, effects, scale. No arms, no sleeves, no strings. Keep top-left neutral absolutely unchanged. Keep transparent alpha canvas and all original character bodies. This is NOT a rig: edit pixels only to remove the erroneous connectors and reveal transparent gap. Do not crop or remove gloves.",
+      "source": "Generated images are saved to C:\\Users\\haro_\\.codex\\generated_images\\01a174f1-fe4a-7363-b421-7ca264eeaff9 as C:\\Users\\haro_\\.codex\\generated_images\\01a174f1-fe4a-7363-b421-7ca264eeaff9\\exec-2a900d8a-65c6-4490-87e9-eff3646464f8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "reason": "Removed inadvertent purple limb connectors in generated motion cells; original neutral0 retained exactly. No articulated rig or part animation."
+}

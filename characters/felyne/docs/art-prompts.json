@@ -1,0 +1,87 @@
+{
+  "mode": "builtin image_gen",
+  "useCase": "stylized-concept",
+  "records": [
+    {
+      "id": "felyne",
+      "asset": "basic",
+      "prompt": "Use case: stylized-concept. Asset type: final production fullbody animation sprite sheet. Reference image role: exact character design and proportions. Create Monster Hunter Felyne / アイルー. A small upright cream-furred anthropomorphic CAT with large brown triangular ears, blue-green eyes, round cream muzzle, brown paws and feet, one curved brown tail. Green-beige leather headwrap/headgear with ears sticking out, red-brown neck scarf, small rugged tan explorer vest, pouches and backpack, absolutely identical to reference. Two short hind legs and two front paws. Cute plush-fur game illustration, detailed clean cel shaded, NOT human child. Transparent background. EXACT 4 columns x 4 rows, 16 separate fullbody poses row major. Each cell same size, same character body scale, same side-on camera facing RIGHT, ample 8% clear gutters and padding so NO figure, weapon or tail touches another cell or the sheet edge. All parts completely visible, including feet/tail/wing tips. No background, no text, no shadows, no panels, no gray mannequins, no VFX. Cell poses in order: neutral paws by sides; walking right forepaw forward; run right with tail extended; dash preparation crouch; run stride opposite paws; skid; crouch low; jump squat; jump takeoff; jump rising; double jump tuck; airborne spread; landing crouch; turn back threequarter; idle tail curl left; idle tail curl right. Do not change core proportions across poses. Detailed confident clean final game art at least reference quality. Use a wide 2048x2048 sheet if possible; long Nargacuga body must fit cell with ALL tail not shortened.",
+      "mode": "builtin image_gen",
+      "reference": "characters/felyne/assets/felyne-reference.png"
+    },
+    {
+      "id": "felyne",
+      "asset": "selection",
+      "prompt": "Use case: stylized-concept. Asset type: high resolution dedicated character selection AND victory portrait. Reference is exact design of Monster Hunter Felyne / アイルー. A small upright cream-furred anthropomorphic CAT with large brown triangular ears, blue-green eyes, round cream muzzle, brown paws and feet, one curved brown tail. Green-beige leather headwrap/headgear with ears sticking out, red-brown neck scarf, small rugged tan explorer vest, pouches and backpack, absolutely identical to reference. Two short hind legs and two front paws. Cute plush-fur game illustration, detailed clean cel shaded, NOT human child. Produce a polished 1536x1024 landscape portrait transparent background, face and shoulders / upper chest only, threequarter view looking toward right. Face should fill about 65% image height with full ears/hair/head within safe top margin 6%, shoulder silhouette spreads naturally below and to sides. No fullbody figure, no text, no border, no scenery, no effects obscuring face. Recognizable detailed expressive face, premium game key art, fidelity at least reference. Friendly attentive expression, individual fur strands, leather headwrap and large round green-blue eyes clear.",
+      "mode": "builtin image_gen",
+      "reference": "characters/felyne/assets/felyne-reference.png"
+    },
+    {
+      "id": "felyne",
+      "asset": "attacks",
+      "prompt": "Use case: stylized-concept. Asset type: final production game fullbody animation sprite sheet. Image1 exact character identity; Image2 approved basic proportions and style. Monster Hunter Felyne / アイルー: A small upright cream-furred anthropomorphic CAT with large brown triangular ears, blue-green eyes, round cream muzzle, brown paws and feet, one curved brown tail. Green-beige leather headwrap/headgear with ears sticking out, red-brown neck scarf, small rugged tan explorer vest, pouches and backpack, absolutely identical to reference. Two short hind legs and two front paws. Cute plush-fur game illustration, detailed clean cel shaded, NOT human child. Transparent background. EXACT 4 columns x4 rows =16 separate whole characters. Cell0 MUST be the same neutral pose/proportions as Image2 top left, to calibrate scale. All other cells same physical body scale, side camera facing RIGHT unless pose says otherwise. Fit EVERYTHING in each cell with 12% clear margin on each edge and 15% gutters. Long tails/weapons must never touch edges. NO backgrounds, panels, text, gray mannequins, duplicate targets or floating objects, NO slash arcs or dust: characters and held props only. Detailed final-quality faithful game illustration, distinct wholebody movement for every cell, no generic rotated idle. Row-major cells: 0 neutral exact reference stance; 1 right paw jab; 2 left paw reverse claw; 3 forward rotating double scratch keeping head upright; 4 low running shoulder pounce; 5 boomerang gripped sideways broad swipe; 6 paw uppercut overhead; 7 one paw planted tail sweeps ankle low; 8 powerful BOOMERANG two paw forward swing; 9 toss wooden BARREL upward overhead; 10 low fullbody crouch sweeping tail both sides; 11 airborne two paw circular scratch in front of chest; 12 forward diagonal double claws reaching right; 13 backward tail kick left while head looks right; 14 airborne chin/headbutt upward; 15 airborne feet together downward stomp.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/felyne/assets/felyne-reference.png",
+        "characters/felyne/assets/felyne-basic.png"
+      ]
+    },
+    {
+      "id": "felyne",
+      "asset": "specials",
+      "prompt": "Use case: stylized-concept. Asset type: final production game fullbody animation sprite sheet. Image1 exact character identity; Image2 approved basic proportions and style. Monster Hunter Felyne / アイルー: A small upright cream-furred anthropomorphic CAT with large brown triangular ears, blue-green eyes, round cream muzzle, brown paws and feet, one curved brown tail. Green-beige leather headwrap/headgear with ears sticking out, red-brown neck scarf, small rugged tan explorer vest, pouches and backpack, absolutely identical to reference. Two short hind legs and two front paws. Cute plush-fur game illustration, detailed clean cel shaded, NOT human child. Transparent background. EXACT 4 columns x4 rows =16 separate whole characters. Cell0 MUST be the same neutral pose/proportions as Image2 top left, to calibrate scale. All other cells same physical body scale, side camera facing RIGHT unless pose says otherwise. Fit EVERYTHING in each cell with 12% clear margin on each edge and 15% gutters. Long tails/weapons must never touch edges. NO backgrounds, panels, text, gray mannequins, duplicate targets or floating objects, NO slash arcs or dust: characters and held props only. Detailed final-quality faithful game illustration, distinct wholebody movement for every cell, no generic rotated idle. Row-major cells: 0 same neutral stance; 1 boomerang held back windup; 2 release boomerang right paw extended; 3 catch returning boomerang right; 4 carry wooden round barrel front; 5 push barrel right crouching; 6 stand riding on wooden barrel knees bent and tail balancing; 7 jump OFF barrel backward; 8 blow small blue gold healing horn tilted upward; 9 horn raised blowing notes before jump; 10 leap upward horn held chest; 11 glide in air horn held forward tail up; 12 land after horn lift; 13 crouch placing compact yellow metal shock trap front; 14 pat installed metal trap crouching; 15 stand point paw to trap right.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/felyne/assets/felyne-reference.png",
+        "characters/felyne/assets/felyne-basic.png"
+      ]
+    },
+    {
+      "id": "felyne",
+      "asset": "defense",
+      "prompt": "Use case: stylized-concept. Asset type: final production game fullbody animation sprite sheet. Image1 exact character identity; Image2 approved basic proportions and style. Monster Hunter Felyne / アイルー: A small upright cream-furred anthropomorphic CAT with large brown triangular ears, blue-green eyes, round cream muzzle, brown paws and feet, one curved brown tail. Green-beige leather headwrap/headgear with ears sticking out, red-brown neck scarf, small rugged tan explorer vest, pouches and backpack, absolutely identical to reference. Two short hind legs and two front paws. Cute plush-fur game illustration, detailed clean cel shaded, NOT human child. Transparent background. EXACT 4 columns x4 rows =16 separate whole characters. Cell0 MUST be the same neutral pose/proportions as Image2 top left, to calibrate scale. All other cells same physical body scale, side camera facing RIGHT unless pose says otherwise. Fit EVERYTHING in each cell with 12% clear margin on each edge and 15% gutters. Long tails/weapons must never touch edges. NO backgrounds, panels, text, gray mannequins, duplicate targets or floating objects, NO slash arcs or dust: characters and held props only. Detailed final-quality faithful game illustration, distinct wholebody movement for every cell, no generic rotated idle. Row-major cells: 0 neutral stance; 1 shield paws tucked face protected; 2 forward low dodge; 3 backward hopping dodge; 4 spot dodge leaning away; 5 midair compact tumble; 6 hurt small recoil; 7 hurt large airborne recoil; 8 prone down on belly; 9 down on back; 10 get up pushing paw floor; 11 roll getup; 12 ledge hang front paw reaching upper left, body below hand feet dangling; 13 pull up ledge same paw overhead; 14 airborne helpless feet hanging; 15 sleeping curled tail.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/felyne/assets/felyne-reference.png",
+        "characters/felyne/assets/felyne-basic.png"
+      ]
+    },
+    {
+      "id": "felyne",
+      "asset": "extra",
+      "prompt": "Use case: stylized-concept. Asset type: final production game fullbody animation sprite sheet. Image1 exact character identity; Image2 approved basic proportions and style. Monster Hunter Felyne / アイルー: A small upright cream-furred anthropomorphic CAT with large brown triangular ears, blue-green eyes, round cream muzzle, brown paws and feet, one curved brown tail. Green-beige leather headwrap/headgear with ears sticking out, red-brown neck scarf, small rugged tan explorer vest, pouches and backpack, absolutely identical to reference. Two short hind legs and two front paws. Cute plush-fur game illustration, detailed clean cel shaded, NOT human child. Transparent background. EXACT 4 columns x4 rows =16 separate whole characters. Cell0 MUST be the same neutral pose/proportions as Image2 top left, to calibrate scale. All other cells same physical body scale, side camera facing RIGHT unless pose says otherwise. Fit EVERYTHING in each cell with 12% clear margin on each edge and 15% gutters. Long tails/weapons must never touch edges. NO backgrounds, panels, text, gray mannequins, duplicate targets or floating objects, NO slash arcs or dust: characters and held props only. Detailed final-quality faithful game illustration, distinct wholebody movement for every cell, no generic rotated idle. Row-major cells: 0 neutral stance; 1 reach paw grab right; 2 pummel right; 3 forward throw paws thrust right; 4 back throw body twists left; 5 up throw paws raised; 6 down throw paws press down; 7 digging with pickaxe overhead windup; 8 pickaxe hit ground; 9 eating fish happy; 10 salute paw raised; 11 horn cheer victory; 12 celebrate arms up; 13 show ration pouch; 14 bow; 15 sit rest tail curls.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/felyne/assets/felyne-reference.png",
+        "characters/felyne/assets/felyne-basic.png"
+      ]
+    },
+    {
+      "id": "felyne",
+      "asset": "effects",
+      "prompt": "Use case: stylized-concept. Asset type:16 final game VFX and PROP sprites. Reference character sheet only informs palette and weapon design. NO complete main character or terrain. Transparent background. EXACT4 columns x4rows,16 separate assets, one isolated requested asset centered per cell. 15% clear transparent gutters. Do not merge neighboring assets or draw backgrounds/text/mannequins/panels. Polished crisp game effect illustrations same high-quality as reference. MONO ONLY: faceted and hand-scribbled pencil style; Felyne detailed cel-shaded props and effects; Nargacuga sharp navy/red fur and wingblade motif. Cell contents in row-major order for Monster Hunter Felyne / アイルー: 0 pale-blue curved claw slash, convex cutting edge RIGHT, open tail LEFT; 1 pale-blue overhead curved slash canopy convex UP open below; 2 complete carved wood crescent BOOMERANG side view pointing right; 3 complete round wooden BARREL with iron bands and lit fuse; 4 compact yellow-black metal SHOCK TRAP lying on ground open pincers; 5 green luminous healing music notes with small plus sparkles; 6 blue-white swirling wind plume rising UP with open loose spiral not solid pillar; 7 separate blue-gold healing HORN side view; 8 triple WHITE claw scratches diagonal pointing right; 9 blue protective shield oval; 10 orange wood barrel blast with sparks; 11 thin tan crescent tail swoosh convex right open left; 12 yellow electric shock with branching arcs; 13 small warm white-yellow HIT SPARK star; 14 soft beige landing DUST cloud; 15 small explorer supply pouch with fish icon and leaf.. Single cutting curves MUST obey given convex orientation. Props all complete, uncut, no dark rectangular background; real alpha including around glowing paint.",
+      "mode": "builtin image_gen",
+      "reference": "characters/felyne/assets/felyne-reference.png"
+    },
+    {
+      "id": "felyne",
+      "asset": "heavy",
+      "prompt": "Use case: stylized-concept. Asset type: ONE final game fullbody ACTIVE side-tilt attack pose, transparent. Reference1 identity, reference2 same approved proportions. A small upright cream-furred anthropomorphic CAT with large brown triangular ears, blue-green eyes, round cream muzzle, brown paws and feet, one curved brown tail. Green-beige leather headwrap/headgear with ears sticking out, red-brown neck scarf, small rugged tan explorer vest, pouches and backpack, absolutely identical to reference. Two short hind legs and two front paws. Cute plush-fur game illustration, detailed clean cel shaded, NOT human child. Face RIGHT, stance feet wide on one horizontal baseline. Both paws have ALREADY SWUNG the wooden boomerang FORWARD to the RIGHT at chest height. Boomerang is FULLY IN FRONT of his face and body to the RIGHT, tip points far RIGHT toward the opponent. NOT behind his back, NOT windup, NOT over shoulder. Torso follows forward, left foot braced behind and right foot forward. Full head, paws, boots and tail visible, 15% margin all edges. No VFX, no target, no environment, no text, no duplicate figure. Match original basic0 design exactly.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/felyne/assets/felyne-reference.png",
+        "characters/felyne/assets/felyne-basic.png"
+      ]
+    },
+    {
+      "id": "felyne",
+      "asset": "downsmash",
+      "prompt": "Use case: stylized-concept. ONE final fullbody side-facing RIGHT attack pose. A small upright cream-furred anthropomorphic CAT with large brown triangular ears, blue-green eyes, round cream muzzle, brown paws and feet, one curved brown tail. Green-beige leather headwrap/headgear with ears sticking out, red-brown neck scarf, small rugged tan explorer vest, pouches and backpack, absolutely identical to reference. Two short hind legs and two front paws. Cute plush-fur game illustration, detailed clean cel shaded, NOT human child. Entire cat extremely low to ground, forepaws braced, hindquarters turning for a low sweeping tail attack. CRITICAL only ONE tail growing from rump and curling in one long smooth arc behind body to LEFT. Do NOT put another tail on the right. Two ears, two paws, two feet, ONE tail. Head low facing right, green beige headband and outfit same as reference. All parts inside15% clear margins, transparent background, no text or effects. Slight torso twist and wide hindfoot stance, not lying flat asleep.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/felyne/assets/felyne-reference.png",
+        "characters/felyne/assets/felyne-basic.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "definition": {
+    "id": "battlecat",
+    "name": "ネコ",
+    "style": "にゃんこ大戦争",
+    "number": "197",
+    "description": "ネコ缶を開けて援軍を用意し、列車として出撃。ネコタワーから離脱して復帰する。",
+    "pose": 76
+  },
+  "after": "chiikawa",
+  "anchorName": "ちいかわ",
+  "height": 60,
+  "tier": 0,
+  "weight": 69,
+  "physics": {
+    "weight": 69,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.49,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 23,
+      "height": 51
+    },
+    "shieldSize": 28.799999999999997,
+    "shieldOffset": [
+      0,
+      -27.6
+    ],
+    "ledgeGrip": [
+      -0.131,
+      0.949
+    ]
+  },
+  "mask": "(r>150&&green>150&&b>150)",
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 4,
+    "jab2": 4,
+    "jab3": 5,
+    "heavy": 4,
+    "up": 4,
+    "low": 5,
+    "dashAttack": 5,
+    "smash": 4,
+    "upsmash": 4,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 4,
+    "bair": 4,
+    "uair": 5,
+    "dair": 5
+  }
+}

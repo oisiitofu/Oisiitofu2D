@@ -1,0 +1,77 @@
+{
+  "mode": "builtin image_gen",
+  "useCase": "stylized-concept",
+  "records": [
+    {
+      "id": "mono",
+      "asset": "basic",
+      "prompt": "Use case: stylized-concept. Asset type: final production fullbody animation sprite sheet. Reference image role: exact character design and proportions. Create Magic Pengel / Graffiti Kingdom MONO / ラクガキ王国 モノ. Mono from exact reference: small youthful boy with LARGE angular bright YELLOW polygonal star-shaped pointed hair and tiny top tuft, green eyes, pale peach face; WHITE angular tunic and white shorts, teal blue collar/cape shoulder piece, red pendant panel with white cross at chest, dark gray socks/leggings, BROWN blocky boots; giant multicolored MAGIC PENCIL with RED nib yellow/blue/red bands. Preserve stylized LOW POLYGON faceted clean flat triangular geometry. Do NOT turn into rounded anime chibi or realistic child. No smooth hair gradients. Transparent background. EXACT 4 columns x 4 rows, 16 separate fullbody poses row major. Each cell same size, same character body scale, same side-on camera facing RIGHT, ample 8% clear gutters and padding so NO figure, weapon or tail touches another cell or the sheet edge. All parts completely visible, including feet/tail/wing tips. No background, no text, no shadows, no panels, no gray mannequins, no VFX. Cell poses in order: neutral standing right with pencil down; walk right; run right; dash start pencil back; run stride opposing leg; skid pencil forward; crouch pencil beside body; jump squat; takeoff pencil up; jump rising; second jump reaching pencil; airborne; landing knees bent; turn back threequarter; neutral pencil held at chest; look right pencil on shoulder. Do not change core proportions across poses. Detailed confident clean final game art at least reference quality. Use a wide 2048x2048 sheet if possible; long Nargacuga body must fit cell with ALL tail not shortened.",
+      "mode": "builtin image_gen",
+      "reference": "characters/mono/assets/mono-reference.png"
+    },
+    {
+      "id": "mono",
+      "asset": "selection",
+      "prompt": "Use case: stylized-concept. Asset type: high resolution dedicated character selection AND victory portrait. Reference is exact design of Magic Pengel / Graffiti Kingdom MONO / ラクガキ王国 モノ. Mono from exact reference: small youthful boy with LARGE angular bright YELLOW polygonal star-shaped pointed hair and tiny top tuft, green eyes, pale peach face; WHITE angular tunic and white shorts, teal blue collar/cape shoulder piece, red pendant panel with white cross at chest, dark gray socks/leggings, BROWN blocky boots; giant multicolored MAGIC PENCIL with RED nib yellow/blue/red bands. Preserve stylized LOW POLYGON faceted clean flat triangular geometry. Do NOT turn into rounded anime chibi or realistic child. No smooth hair gradients. Produce a polished 1536x1024 landscape portrait transparent background, face and shoulders / upper chest only, threequarter view looking toward right. Face should fill about 65% image height with full ears/hair/head within safe top margin 6%, shoulder silhouette spreads naturally below and to sides. No fullbody figure, no text, no border, no scenery, no effects obscuring face. Recognizable detailed expressive face, premium game key art, fidelity at least reference. Keep LOW-POLYGON faceted angular geometric design with sharply divided flat color planes, not painterly anime.",
+      "mode": "builtin image_gen",
+      "reference": "characters/mono/assets/mono-reference.png"
+    },
+    {
+      "id": "mono",
+      "asset": "attacks",
+      "prompt": "Use case: stylized-concept. Asset type: final production game fullbody animation sprite sheet. Image1 exact identity; Image2 approved basic proportions and style. Magic Pengel / Graffiti Kingdom MONO / ラクガキ王国 モノ. Mono from exact reference: small youthful boy with LARGE angular bright YELLOW polygonal star-shaped pointed hair and tiny top tuft, green eyes, pale peach face; WHITE angular tunic and white shorts, teal blue collar/cape shoulder piece, red pendant panel with white cross at chest, dark gray socks/leggings, BROWN blocky boots; giant multicolored MAGIC PENCIL with RED nib yellow/blue/red bands. Preserve stylized LOW POLYGON faceted clean flat triangular geometry. Do NOT turn into rounded anime chibi or realistic child. No smooth hair gradients. Transparent background. EXACT4 columns x4rows,16 separately placed whole figures. Cell0 exactly neutral as Image2 top left. Every cell side camera facing right unless pose says left. Body scale and head ratio consistent. Huge pencil, all feet, hair tuft, hands fully inside each cell with 12% transparent margin, clear gutters. NO text, background, VFX, mannequins or targets. Clean sharp polygon planes. Cells row-major: 0 same neutral stance; 1 short forward pencil jab right; 2 reverse diagonally upward pencil stroke; 3 step in fullbody forward rainbow pencil swipe with no painted trail; 4 running pencil shoulder thrust; 5 long horizontal pencil sweep right; 6 pencil uppercut overhead; 7 pencil low ankle sweep right; 8 strong horizontal pencil thrust, leaning torso forward; 9 overhead rising pencil brush stroke; 10 low pen sweep both sides knees bent; 11 airborne sketching rabbit outline forward pencil points right; 12 airborne forward pencil swipe arm extends; 13 backward pencil sweep left head right; 14 upward pencil sketch overhead; 15 downward pencil stab below feet.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/mono/assets/mono-reference.png",
+        "characters/mono/assets/mono-basic.png"
+      ]
+    },
+    {
+      "id": "mono",
+      "asset": "specials",
+      "prompt": "Use case: stylized-concept. Asset type: final production game fullbody animation sprite sheet. Image1 exact identity; Image2 approved basic proportions and style. Magic Pengel / Graffiti Kingdom MONO / ラクガキ王国 モノ. Mono from exact reference: small youthful boy with LARGE angular bright YELLOW polygonal star-shaped pointed hair and tiny top tuft, green eyes, pale peach face; WHITE angular tunic and white shorts, teal blue collar/cape shoulder piece, red pendant panel with white cross at chest, dark gray socks/leggings, BROWN blocky boots; giant multicolored MAGIC PENCIL with RED nib yellow/blue/red bands. Preserve stylized LOW POLYGON faceted clean flat triangular geometry. Do NOT turn into rounded anime chibi or realistic child. No smooth hair gradients. Transparent background. EXACT4 columns x4rows,16 separately placed whole figures. Cell0 exactly neutral as Image2 top left. Every cell side camera facing right unless pose says left. Body scale and head ratio consistent. Huge pencil, all feet, hair tuft, hands fully inside each cell with 12% transparent margin, clear gutters. NO text, background, VFX, mannequins or targets. Clean sharp polygon planes. Cells row-major: 0 same neutral stance; 1 aim colored pencil right horizontal; 2 fire pen color shot right arm extended; 3 charged shot pen recoil backwards; 4 crouch sketching ground before sending doodle; 5 point pen forward to command charging doodle no summon on this cell; 6 ride sketch line one knee raised floating diagonal right; 7 jump off sketch line looking right; 8 draw upward rainbow curve with pencil; 9 rise while pencil arm reaches overhead; 10 midair swing along curved color current knees tuck; 11 float at apex pencil down side; 12 fall after current release; 13 open sketchbook and draw pencil; 14 kneel summon pen touches paper; 15 stand commanding summoned creature right.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/mono/assets/mono-reference.png",
+        "characters/mono/assets/mono-basic.png"
+      ]
+    },
+    {
+      "id": "mono",
+      "asset": "defense",
+      "prompt": "Use case: stylized-concept. Asset type: final production game fullbody animation sprite sheet. Image1 exact identity; Image2 approved basic proportions and style. Magic Pengel / Graffiti Kingdom MONO / ラクガキ王国 モノ. Mono from exact reference: small youthful boy with LARGE angular bright YELLOW polygonal star-shaped pointed hair and tiny top tuft, green eyes, pale peach face; WHITE angular tunic and white shorts, teal blue collar/cape shoulder piece, red pendant panel with white cross at chest, dark gray socks/leggings, BROWN blocky boots; giant multicolored MAGIC PENCIL with RED nib yellow/blue/red bands. Preserve stylized LOW POLYGON faceted clean flat triangular geometry. Do NOT turn into rounded anime chibi or realistic child. No smooth hair gradients. Transparent background. EXACT4 columns x4rows,16 separately placed whole figures. Cell0 exactly neutral as Image2 top left. Every cell side camera facing right unless pose says left. Body scale and head ratio consistent. Huge pencil, all feet, hair tuft, hands fully inside each cell with 12% transparent margin, clear gutters. NO text, background, VFX, mannequins or targets. Clean sharp polygon planes. Cells row-major: 0 neutral stance; 1 shield pencil close chest; 2 forward low dodge; 3 backward hop dodge; 4 spot dodge leaning; 5 aerial tumble tucked; 6 light hurt recoil; 7 large hurt knocked back; 8 prone down face toward right; 9 down on back; 10 getup push left hand; 11 roll getup; 12 ledge hang hand up LEFT, body hangs below feet dangling; 13 ledge climb knees tucked hand overhead; 14 helpless fall feet down; 15 exhausted seated pencil beside.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/mono/assets/mono-reference.png",
+        "characters/mono/assets/mono-basic.png"
+      ]
+    },
+    {
+      "id": "mono",
+      "asset": "extra",
+      "prompt": "Use case: stylized-concept. Asset type: final production game fullbody animation sprite sheet. Image1 exact identity; Image2 approved basic proportions and style. Magic Pengel / Graffiti Kingdom MONO / ラクガキ王国 モノ. Mono from exact reference: small youthful boy with LARGE angular bright YELLOW polygonal star-shaped pointed hair and tiny top tuft, green eyes, pale peach face; WHITE angular tunic and white shorts, teal blue collar/cape shoulder piece, red pendant panel with white cross at chest, dark gray socks/leggings, BROWN blocky boots; giant multicolored MAGIC PENCIL with RED nib yellow/blue/red bands. Preserve stylized LOW POLYGON faceted clean flat triangular geometry. Do NOT turn into rounded anime chibi or realistic child. No smooth hair gradients. Transparent background. EXACT4 columns x4rows,16 separately placed whole figures. Cell0 exactly neutral as Image2 top left. Every cell side camera facing right unless pose says left. Body scale and head ratio consistent. Huge pencil, all feet, hair tuft, hands fully inside each cell with 12% transparent margin, clear gutters. NO text, background, VFX, mannequins or targets. Clean sharp polygon planes. Cells row-major: 0 neutral stance; 1 pencil grab reach right; 2 pummel pencil butt jab; 3 forward throw right hand extends; 4 back throw left twist; 5 upward throw hand high; 6 down throw pressing pencil low; 7 pen flourish twirl raised; 8 sketchbook admiring; 9 one hand greeting with pencil in other; 10 celebrate pencil raised above head; 11 bow smiling; 12 draw in sketchbook seated; 13 two hands hold huge pencil front; 14 windup overhead pencil back; 15 return from slash pencil down right.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/mono/assets/mono-reference.png",
+        "characters/mono/assets/mono-basic.png"
+      ]
+    },
+    {
+      "id": "mono",
+      "asset": "effects",
+      "prompt": "Use case: stylized-concept. Asset type:16 final game VFX and PROP sprites. Reference character sheet only informs palette and weapon design. NO complete main character or terrain. Transparent background. EXACT4 columns x4rows,16 separate assets, one isolated requested asset centered per cell. 15% clear transparent gutters. Do not merge neighboring assets or draw backgrounds/text/mannequins/panels. Polished crisp game effect illustrations same high-quality as reference. MONO ONLY: faceted and hand-scribbled pencil style; Felyne detailed cel-shaded props and effects; Nargacuga sharp navy/red fur and wingblade motif. Cell contents in row-major order for Magic Pengel / Graffiti Kingdom MONO / ラクガキ王国 モノ: 0 RAINBOW pencil paint crescent, CONVEX cutting edge RIGHT and open side LEFT, distinct scribbled yellow blue red pencil hatch; 1 overhead RAINBOW canopy crescent CONVEX UP open below with sketchy hatching; 2 multicolored RED YELLOW BLUE crayon shot bright arrowhead pointing RIGHT; 3 white paper DOODLE KNIGHT outlined BLACK with red cross shield and sword, fullbody facing RIGHT; 4 white outlined DOODLE UNICORN horse with yellow horn red mane and blue sketched saddle, fullbody RIGHT; 5 bright orange outline DOODLE RABBIT, fullbody facing RIGHT; 6 dark BLACK sketched winged BAT flying RIGHT; 7 BLUE scribbled SLIME blob cute face; 8 horizontal rainbow DRAWN PATH line like three pencil marks going RIGHT; 9 tall rainbow curving COLOR CURRENT flowing UP, separate brush strokes yellow blue red; 10 white-gray PAPER fragments fading outward; 11 blue-white circle of sketched SUMMON stars and pencil hatches; 12 rough black pencil quick sketch hatching cluster; 13 small rainbow white HIT SPARK; 14 light beige DUST puff; 15 red crayon DOODLE DRAGON fullbody facing RIGHT with wings and tail.. Single cutting curves MUST obey given convex orientation. Props all complete, uncut, no dark rectangular background; real alpha including around glowing paint.",
+      "mode": "builtin image_gen",
+      "reference": "characters/mono/assets/mono-reference.png"
+    },
+    {
+      "id": "mono",
+      "asset": "selection-v2",
+      "prompt": "Use case: identity-preserve. Asset type: dedicated1536x1024 selection/victory head shoulders portrait. EDIT Image1 portrait framing ONLY. Image2 original exact character design. Keep identity, Mono from exact reference: small youthful boy with LARGE angular bright YELLOW polygonal star-shaped pointed hair and tiny top tuft, green eyes, pale peach face; WHITE angular tunic and white shorts, teal blue collar/cape shoulder piece, red pendant panel with white cross at chest, dark gray socks/leggings, BROWN blocky boots; giant multicolored MAGIC PENCIL with RED nib yellow/blue/red bands. Preserve stylized LOW POLYGON faceted clean flat triangular geometry. Do NOT turn into rounded anime chibi or realistic child. No smooth hair gradients. Correct the cropped top: ZOOM OUT until the entire head including BOTH ear tips / ENTIRE yellow hair tuft sits FULLY INSIDE the canvas. REQUIRE a plainly empty TRANSPARENT BAND of at least100 pixels across the TOP above the HIGHEST head point. Head+ears or head+hair together occupies ONLY60% of total image height. Shoulders/upper chest occupies lower third. Keep face big enough for selection. NO head, tuft or ear can touch any image edge; side shoulder/wing tips may crop naturally. Transparent background, remove colored backdrop/glow outside silhouette. Same polished detailed art style and threequarter pose facing right. No text.",
+      "mode": "builtin image_gen",
+      "references": [
+        "characters/mono/assets/mono-selection.png",
+        "characters/mono/assets/mono-reference.png"
+      ]
+    }
+  ]
+}

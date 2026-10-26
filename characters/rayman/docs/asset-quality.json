@@ -1,0 +1,20 @@
+{
+  "id": "rayman",
+  "frames": 77,
+  "effects": 16,
+  "portrait": 76,
+  "portraitSource": {
+    "width": 1536,
+    "height": 1024
+  },
+  "neutralExactlyRetained": true,
+  "uniqueNormalPoses": 15,
+  "alpha": {
+    "min": 0,
+    "max": 255
+  },
+  "wholebodyGallery": "previews/poses.png",
+  "effectsGallery": "previews/effects.png",
+  "generationRefused": false,
+  "notes": "Disconnected gloves and shoes retained. Inadvertent connectors corrected by whole-sheet imagegen edits; no rigs."
+}

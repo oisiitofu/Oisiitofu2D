@@ -1,0 +1,102 @@
+{
+  "character": "sackboy",
+  "mechanics": {
+    "checks": 81,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "box",
+      "bomb",
+      "rocket"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "box",
+          "bomb",
+          "rocket"
+        ],
+        "stats": [
+          {
+            "damage": 110.05000000000001,
+            "hits": 10,
+            "kos": 0
+          },
+          {
+            "damage": 115.30749999999999,
+            "hits": 11,
+            "kos": 1
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "box",
+          "bomb",
+          "rocket"
+        ],
+        "stats": [
+          {
+            "damage": 45.150000000000006,
+            "hits": 4,
+            "kos": 1
+          },
+          {
+            "damage": 161.735,
+            "hits": 16,
+            "kos": 2
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "sackboy",
+    "checks": [
+      {
+        "name": "popit creates a sticker box",
+        "pass": true
+      },
+      {
+        "name": "next sticker changes existing box behavior",
+        "pass": true
+      },
+      {
+        "name": "hook targets crafted box",
+        "pass": true
+      },
+      {
+        "name": "releasing hook finishes with finite velocity",
+        "pass": true
+      },
+      {
+        "name": "held rocket stays attached",
+        "pass": true
+      },
+      {
+        "name": "release detaches independent rocket",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

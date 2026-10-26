@@ -1,0 +1,73 @@
+{
+  "definition": {
+    "id": "io",
+    "name": "イオ",
+    "style": "CODE VEIN",
+    "number": "194",
+    "description": "血棘の遅延設置と再入力の移動、イコルを支払う回復ギフトを使う。血英で有限時間浮遊する。",
+    "pose": 76
+  },
+  "after": "kasane",
+  "anchorName": "カサネ",
+  "height": 94,
+  "tier": 2,
+  "weight": 91,
+  "physics": {
+    "weight": 91,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 16.30612244897959,
+      "height": 87
+    },
+    "shieldSize": 45.12,
+    "shieldOffset": [
+      0,
+      -43.24
+    ],
+    "ledgeGrip": [
+      0.242,
+      0.968
+    ]
+  },
+  "mask": "(r>65&&r>green*1.3&&r>b*1.25)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 8,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 8,
+    "smash": 0,
+    "upsmash": 4,
+    "downsmash": 3,
+    "air": 0,
+    "fair": 8,
+    "bair": 0,
+    "uair": 1,
+    "dair": 8
+  }
+}

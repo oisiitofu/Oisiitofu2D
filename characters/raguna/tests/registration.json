@@ -1,0 +1,80 @@
+{
+  "definition": {
+    "id": "raguna",
+    "name": "ラグナ",
+    "style": "Rune Factory",
+    "number": "193",
+    "description": "剣と農具を使い分ける冒険者。モコモコへの再指示と、耕地・ルーンファイアの収穫でRPを運用する。",
+    "pose": 76
+  },
+  "after": "kisuke",
+  "anchorName": "鬼助",
+  "height": 98,
+  "tier": 3,
+  "weight": 99,
+  "physics": {
+    "weight": 99,
+    "walkSpeed": 2.8,
+    "initialDashSpeed": 6.8,
+    "runSpeed": 6.6,
+    "airSpeed": 5.7,
+    "airAcceleration": 0.34,
+    "gravity": 0.53,
+    "fullHopVelocity": 13.4,
+    "ecb": {
+      "radius": 16,
+      "height": 89
+    },
+    "shieldSize": 45,
+    "shieldOffset": [
+      0,
+      -45
+    ],
+    "walkAcceleration": 0.38,
+    "runAcceleration": 0.36,
+    "airBrake": 0.26,
+    "groundFriction": 0.2,
+    "traction": 0.38,
+    "fallSpeed": 11,
+    "doubleJumpVelocity": 12.2,
+    "ledgeGrip": [
+      -0.062,
+      0.965
+    ]
+  },
+  "mask": "(r>70&&r>green*1.3&&green>b*1.05&&b<145)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 11,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 11,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 11
+  }
+}

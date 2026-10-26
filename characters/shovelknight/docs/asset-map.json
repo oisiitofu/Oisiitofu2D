@@ -1,0 +1,66 @@
+{
+  "normals": {
+    "16": "short shovel swipe forward right",
+    "17": "shovel upper diagonal right",
+    "18": "shovel straight thrust right",
+    "19": "powerful wide FORWARD shovel blade strike RIGHT in front of body, NOT behind",
+    "20": "shovel raised overhead",
+    "21": "kneeling shovel chop into low front ground",
+    "22": "running shovel held broadside to front",
+    "23": "deep stance massive forward shovel sweep",
+    "24": "jumping shovel uppercut directly above",
+    "25": "crouching shoveling soil to both sides",
+    "26": "midair shovel sweep front chest",
+    "27": "midair straight shovel thrust forward",
+    "28": "midair backwards shovel strike LEFT",
+    "29": "midair vertical shovel stab ABOVE",
+    "30": "midair shovel pogo point straight DOWN"
+  },
+  "specials": {
+    "31": "shovel ready selecting relic",
+    "32": "flail chain swung forward arc",
+    "33": "holding glowing phase lance forward",
+    "34": "kneeling digging front soil",
+    "35": "hooking shovel to front treasure box",
+    "36": "pulling box toward self knees planted",
+    "37": "springing forward from box leverage",
+    "38": "jumping shovel held underneath pointing down",
+    "39": "pogo landing on treasure chest shovel point touches",
+    "40": "rebounding upward knees spread shovel underneath",
+    "41": "airborne direction changing shovel points diagonal down",
+    "42": "digging straight into ground",
+    "43": "lifting red gold treasure chest from soil",
+    "44": "presenting potion treasure in hand",
+    "45": "preparing excavated bomb at own feet"
+  },
+  "effects": [
+    "blue shovel crescent slash, bulging convex cutting edge RIGHT, open tail LEFT",
+    "single overhead canopy crescent, bulging convex edge UP, open side DOWN",
+    "orange flail ball with metal chain arc",
+    "round blue Mobile Gear wheel",
+    "phase lance blue rightward projectile",
+    "red gold closed treasure chest",
+    "red potion glass bottle",
+    "round black bomb with fuse",
+    "brown soil excavation eruption",
+    "gold coin cluster",
+    "two step dirt wall platform",
+    "blue relic fireball",
+    "orange treasure chest opening ray",
+    "sharp golden hit spark",
+    "soft grey-brown landing dust",
+    "blue pogo bounce plume"
+  ],
+  "effectOrientation": {
+    "0": {
+      "convex": "right",
+      "open": "left"
+    },
+    "1": {
+      "convex": "up",
+      "open": "down"
+    }
+  },
+  "bodyHeight": 76,
+  "portraitIndex": 76
+}

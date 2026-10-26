@@ -1,0 +1,73 @@
+{
+  "definition": {
+    "id": "sackboy",
+    "name": "サックボーイ",
+    "style": "LITTLEBIGPLANET",
+    "number": "199",
+    "description": "ステッカー付き箱とボムを工作し、箱のフックや切り離せる紙ロケットで移動する。",
+    "pose": 76
+  },
+  "after": "ratchet",
+  "anchorName": "ラチェット",
+  "height": 70,
+  "tier": 0,
+  "weight": 80,
+  "physics": {
+    "weight": 80,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.5,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 19,
+      "height": 62
+    },
+    "shieldSize": 33.6,
+    "shieldOffset": [
+      0,
+      -32.2
+    ],
+    "ledgeGrip": [
+      0.362,
+      0.921
+    ]
+  },
+  "mask": "(r>65&&r>green*1.12&&green>b*1.05)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 11,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 11,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 11
+  }
+}

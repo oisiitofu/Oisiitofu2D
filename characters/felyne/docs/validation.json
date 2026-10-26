@@ -1,0 +1,101 @@
+{
+  "character": "felyne",
+  "mechanics": {
+    "checks": 80,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "boomerang",
+      "barrel",
+      "trap",
+      "hornwind"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "boomerang",
+          "trap",
+          "barrel",
+          "hornwind"
+        ],
+        "stats": [
+          {
+            "damage": 62.60000000000001,
+            "hits": 9,
+            "kos": 1
+          },
+          {
+            "damage": 110.38000000000001,
+            "hits": 12,
+            "kos": 3
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "boomerang",
+          "barrel",
+          "trap",
+          "hornwind"
+        ],
+        "stats": [
+          {
+            "damage": 104.61,
+            "hits": 12,
+            "kos": 0
+          },
+          {
+            "damage": 136.59,
+            "hits": 14,
+            "kos": 1
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "felyne",
+    "checks": [
+      {
+        "name": "barrel rolls independently",
+        "pass": true
+      },
+      {
+        "name": "second sideB mounts the barrel",
+        "pass": true
+      },
+      {
+        "name": "jump dismount finishes and leaves barrel",
+        "pass": true
+      },
+      {
+        "name": "boomerang returns toward owner",
+        "pass": true
+      },
+      {
+        "name": "boomerang expires",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

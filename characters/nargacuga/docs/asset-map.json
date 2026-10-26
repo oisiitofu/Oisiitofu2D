@@ -1,0 +1,151 @@
+{
+  "id": "nargacuga",
+  "height": 108,
+  "frameCount": 93,
+  "effectCount": 16,
+  "portraitIndex": 92,
+  "portraitSource": "characters/nargacuga/assets/nargacuga-selection-v2.png",
+  "normal": {
+    "jab": 16,
+    "jab2": 17,
+    "jab3": 18,
+    "heavy": 19,
+    "up": 20,
+    "low": 21,
+    "dashAttack": 22,
+    "smash": 23,
+    "upsmash": 24,
+    "downsmash": 25,
+    "air": 26,
+    "fair": 27,
+    "bair": 28,
+    "uair": 29,
+    "dair": 30
+  },
+  "locomotion": {
+    "idle": [
+      0,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83
+    ],
+    "walk": [
+      1,
+      2
+    ],
+    "run": [
+      84,
+      85,
+      86,
+      87
+    ],
+    "dashStart": 3,
+    "skid": 6,
+    "crouch": 7,
+    "jumpSquat": 8,
+    "jump": 9,
+    "rise": 10,
+    "double": 11,
+    "fall": [
+      88,
+      89,
+      90,
+      91
+    ],
+    "land": 13,
+    "turn": 14
+  },
+  "defense": {
+    "guard": 46,
+    "forwardRoll": 47,
+    "backwardRoll": 48,
+    "spotDodge": 49,
+    "airDodge": 50,
+    "hit": 51,
+    "fly": 52,
+    "prone": 53,
+    "down": 54,
+    "getup": 55,
+    "rollGetup": 56,
+    "ledge": 57,
+    "ledgeClimb": 58,
+    "helpless": 59,
+    "rest": 60
+  },
+  "grab": {
+    "grab": 61,
+    "pummel": 62,
+    "forwardThrow": 63,
+    "backThrow": 64,
+    "upThrow": 65,
+    "downThrow": 66
+  },
+  "specials": {
+    "NB": [
+      31,
+      32,
+      33
+    ],
+    "SB": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "UB": [
+      38,
+      39,
+      40,
+      41
+    ],
+    "DB": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "notes": "44 is dedicated tail-slam impact with ONE long tail arched over body into ground in front. 43 windup,45 recover. 38..41 cover full glide bank/release. Shared source neutral0 remains locked."
+  },
+  "effects": {
+    "0": "red/navy wingblade crescent convex RIGHT",
+    "1": "red overhead canopy convex UP",
+    "2": "spread of tail spikes pointing RIGHT",
+    "3": "one long tail spike RIGHT",
+    "4": "red eye streak",
+    "5": "white banked wind arc",
+    "6": "red tail thrust RIGHT",
+    "7": "jagged roar ring",
+    "8": "earth shards",
+    "9": "crossed red fang/claw hit with rock fragments",
+    "10": "tail slam rocks",
+    "11": "navy beast afterimage moving RIGHT",
+    "12": "red low tail crescent convex LEFT (must normalize before local rotation and facing flip)",
+    "13": "hit spark",
+    "14": "dust",
+    "15": "red claw streaks down-right"
+  },
+  "observedSourceAxes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "6": [
+      1,
+      0
+    ],
+    "12": [
+      -1,
+      0
+    ]
+  },
+  "orientation": "For directional melee FX normalize observed convex axis to local +X, then rotate into local attack direction, then reflect whole local geometry by fighter.face. Do not assume all source curves face right. FX1 is already overhead canopy; preserve one broad curve, not per inner capsule.",
+  "animation": "Whole-body source poses only; no articulated rig, anatomy deformation or neutral regeneration."
+}

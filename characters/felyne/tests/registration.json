@@ -1,0 +1,73 @@
+{
+  "definition": {
+    "id": "felyne",
+    "name": "アイルー",
+    "style": "MONSTER HUNTER",
+    "number": "202",
+    "description": "往復ブーメランと独立したタル、シビレ罠を使う。回復笛の風を残して復帰する。",
+    "pose": 76
+  },
+  "after": "hunter",
+  "anchorName": "ハンター",
+  "height": 62,
+  "tier": 0,
+  "weight": 75,
+  "physics": {
+    "weight": 75,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.5,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 19,
+      "height": 54
+    },
+    "shieldSize": 29.759999999999998,
+    "shieldOffset": [
+      0,
+      -28.52
+    ],
+    "ledgeGrip": [
+      -0.193,
+      0.959
+    ]
+  },
+  "mask": "(r>65&&green>55&&r>green*.9&&green>b*1.1)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 11,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 11,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 11
+  }
+}

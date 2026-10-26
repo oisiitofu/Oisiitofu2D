@@ -1,0 +1,51 @@
+{
+  "id": "ryuta",
+  "height": 98,
+  "portrait": 76,
+  "frames": 77,
+  "normalMap": {
+    "jab": 16,
+    "jab2": 17,
+    "jab3": 18,
+    "heavy": 19,
+    "up": 20,
+    "low": 21,
+    "dashAttack": 22,
+    "smash": 23,
+    "upsmash": 24,
+    "downsmash": 25,
+    "air": 26,
+    "fair": 27,
+    "bair": 28,
+    "uair": 29,
+    "dair": 30
+  },
+  "specialMap": {
+    "NB": [
+      31,
+      32,
+      33
+    ],
+    "SB": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "UB": [
+      38,
+      39,
+      40,
+      41
+    ],
+    "DB": [
+      42,
+      43,
+      44,
+      45
+    ]
+  },
+  "effects": "0 red-white punch swoosh convex RIGHT open LEFT; 1 red upward uppercut arc convex TOP open BOTTOM; 2 three RED concentric sound wave arcs pointing RIGHT open LEFT; 3 one bright red timing ring; 4 white-red glove impact RIGHT; 5 orange-red foot stomp ground burst; 6 red-gold radial cheer energy burst; 7 one black-gakuran uniform male squad member wholebody front kick RIGHT, red headband white gloves; 8 one black-gakuran uniform male squad member wholebody crouched with hands on knees for springboard; 9 red streak motion trail RIGHT; 10 small red footstep impact; 11 golden musical eighth note; 12 pale blue shield sphere; 13 red-yellow hit star; 14 gray landing dust; 15 three golden rhythm sparks.",
+  "direction": "FX0 source convex RIGHT/open LEFT; FX1 source was convex RIGHT and is normalized in assembler -90deg into convex UP/open BOTTOM. Renderer applies local rotation then facing reflection. FX2 wave arcs point RIGHT.",
+  "provenance": "tests/art-layout.json sourcePoses contains exact final-frame to source-cell mapping. Source sheets preserved unmodified; correction sources separately named."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "ryuta",
+  "frames": 77,
+  "effects": 16,
+  "portrait": 76,
+  "portraitSource": {
+    "width": 1536,
+    "height": 1024
+  },
+  "neutralExactlyRetained": true,
+  "uniqueNormalPoses": 15,
+  "alpha": {
+    "min": 0,
+    "max": 255
+  },
+  "wholebodyGallery": "previews/poses.png",
+  "effectsGallery": "previews/effects.png",
+  "generationRefused": false,
+  "notes": "Distinct upper-air wholebody29; FX1 normalized from right-convex to up-convex."
+}

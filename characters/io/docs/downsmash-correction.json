@@ -1,0 +1,7 @@
+{
+  "kind": "downsmash-correction",
+  "path": "characters/io/assets/io-downsmash.png",
+  "generated": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f1-5db6-72d1-bf6e-db569f6f9203\\exec-c074541b-6a1f-4f23-9b30-a705096d0b90.png",
+  "prompt": "Use case: stylized-concept. Corrective full-body 2-cell game pose sheet of Io from Code Vein. First reference is approved basic sprite design; preserve exact proportions/face/black gold hooded cloak/white layered costume/long thorn halberd. Transparent1536x1024. Exactly TWO equal cells left and right, generous transparent gaps. LEFT same relaxed standing reference pose as cell0 of supplied sprite sheet, feet on baseline85%canvas; RIGHT downward smash active pose: crouched low on BOTH bent knees, BOTH whole thighs/calves/feet completely visible, one palm touching ground and halberd in other hand held low across front, sparse dark red thorn roots emerging to both sides without hiding her body. Keep same absolute body scale left/right; right crouch naturally shorter. Entire head/hood/cloak/halberd/feet within own cell. No cropping at waist, no busts, no scenery/text/grid/mannequins. High fidelity detailed whole-body anime illustration. This is a full-body animation correction, no new character redesign.",
+  "reason": "Original active downsmash body clipped at waist; complete crouching full-body replacement at frame25 only, reference0 unchanged."
+}

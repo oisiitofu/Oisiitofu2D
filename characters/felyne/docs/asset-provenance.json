@@ -1,0 +1,50 @@
+{
+  "mode": "builtin image_gen",
+  "assets": [
+    {
+      "asset": "felyne-basic",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-99fc9485-fdab-4518-ac0a-293adc31a1dc.png",
+      "error": null
+    },
+    {
+      "asset": "felyne-selection",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-796edbd1-e25c-46eb-9a51-7a72f85308c8.png",
+      "error": null
+    },
+    {
+      "asset": "felyne-attacks",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-b2565c1d-e689-4e1f-a75c-f6f4cfeb2527.png",
+      "error": null
+    },
+    {
+      "asset": "felyne-specials",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-48d34a12-4730-44d7-b95f-786568c64fd5.png",
+      "error": null
+    },
+    {
+      "asset": "felyne-defense",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-1df675f9-8cb8-43a1-a6fa-a680c0006286.png",
+      "error": null
+    },
+    {
+      "asset": "felyne-extra",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-3918af9b-0b6a-43b2-ba61-3b986105bdaa.png",
+      "error": null
+    },
+    {
+      "asset": "felyne-effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-730ed332-9314-4029-bd1e-70672772760e.png",
+      "error": null
+    },
+    {
+      "asset": "felyne-heavy",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-75d10936-ae69-4671-95c2-390ec1b5eb7b.png",
+      "error": null
+    },
+    {
+      "asset": "felyne-downsmash",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-c153b344-304b-40e4-9e60-96ca5c22c37f.png",
+      "error": null
+    }
+  ]
+}

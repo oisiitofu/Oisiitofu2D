@@ -1,0 +1,17 @@
+{
+  "pose": 57,
+  "convention": "X is handX/imageWidth minus anchor .5; Y is 1-handY/imageHeight",
+  "hand": [
+    87.48924731182795,
+    10.795698924731182
+  ],
+  "dimensions": [
+    229,
+    306
+  ],
+  "grip": [
+    -0.118,
+    0.965
+  ],
+  "method": "Upper raised hand/claw pixels, visible pose reviewed"
+}

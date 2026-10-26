@@ -1,0 +1,7 @@
+{
+  "mode": "built-in image_gen edit",
+  "path": "characters/io/assets/io-selection.png",
+  "generated": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f1-5db6-72d1-bf6e-db569f6f9203\\exec-a1c1ebde-fac1-45fb-8099-b756df8eaad3.png",
+  "prompt": "Use case: precise-object-edit. Fix framing of this Io from Code Vein character select/victory portrait only. Preserve face identity, expression, colors, detailed hood embroidery and silver hair and artwork style exactly. Zoom OUT the entire portrait by about20 percent within the SAME1536x1024 landscape canvas; reconstruct the complete hood crest above her head that touches top edge. ALL head/hair/hood must fit and there must be a visibly EMPTY TRANSPARENT band of at least100 pixels above the highest head feature, 10% canvas height. Head centered horizontally, both shoulders visible, bottom cuts at chest. Keep face large but leave headroom! Real transparent background, no dark colored matte, no scene/text/logo. Do not crop at forehead or top hair.",
+  "reason": "Restore complete hood/hair and clear top margin; preserve sharp face and shoulders"
+}

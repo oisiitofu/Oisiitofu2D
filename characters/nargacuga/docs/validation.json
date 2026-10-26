@@ -1,0 +1,90 @@
+{
+  "character": "nargacuga",
+  "mechanics": {
+    "checks": 78,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "spine",
+      "debris"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "debris",
+          "spine"
+        ],
+        "stats": [
+          {
+            "damage": 146.865,
+            "hits": 16,
+            "kos": 1
+          },
+          {
+            "damage": 83.875,
+            "hits": 10,
+            "kos": 0
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "debris"
+        ],
+        "stats": [
+          {
+            "damage": 74.305,
+            "hits": 6,
+            "kos": 0
+          },
+          {
+            "damage": 157.10416666666666,
+            "hits": 15,
+            "kos": 0
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "nargacuga",
+    "checks": [
+      {
+        "name": "first pounce fixes target without homing or melee",
+        "pass": true
+      },
+      {
+        "name": "backward reinput chooses a feint",
+        "pass": true
+      },
+      {
+        "name": "feint returns to normal action",
+        "pass": true
+      },
+      {
+        "name": "tail impact and debris do not double-hit at contact",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

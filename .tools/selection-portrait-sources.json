@@ -2180,5 +2180,137 @@
     "mode": "built-in imagegen",
     "framing": "high-resolution head and shoulders for roster, introduction and victory",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of 逆転裁判の成歩堂龍一, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Young Japanese male defense attorney with swept-back sharply spiked black hair, thick eyebrows, blue suit, white shirt, red tie, small round gold attorney lapel pin. Confident focused expression, crisp anime game illustration. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution."
+  },
+  "raguna": {
+    "source": "characters/raguna/assets/raguna-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "io": {
+    "source": "characters/io/assets/io-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "battlecat": {
+    "source": "characters/battlecat/assets/battlecat-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "aloy": {
+    "source": "characters/aloy/assets/aloy-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "quote": {
+    "source": "characters/quote/assets/quote-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "shovelknight": {
+    "source": "characters/shovelknight/assets/shovelknight-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "rayman": {
+    "source": "characters/rayman/assets/rayman-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "sackboy": {
+    "source": "characters/sackboy/assets/sackboy-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "felyne": {
+    "source": "characters/felyne/assets/felyne-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "nargacuga": {
+    "source": "characters/nargacuga/assets/nargacuga-selection-v2.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "mono": {
+    "source": "characters/mono/assets/mono-selection-v2.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "ryuta": {
+    "source": "characters/ryuta/assets/ryuta-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution head and shoulder close-up"
   }
 }

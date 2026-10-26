@@ -1,0 +1,80 @@
+{
+  "character": "raguna",
+  "mechanics": {
+    "checks": 100,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "rune fire",
+      "summon and command",
+      "farm harvest",
+      "orbit and release recovery"
+    ],
+    "kinds": [
+      "fire",
+      "moko",
+      "plot",
+      "earth",
+      "crop",
+      "wind"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "plot",
+          "earth",
+          "moko",
+          "crop",
+          "fire",
+          "wind"
+        ],
+        "stats": [
+          {
+            "damage": 64.69000000000001,
+            "hits": 9,
+            "kos": 1
+          },
+          {
+            "damage": 125.325,
+            "hits": 15,
+            "kos": 0
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "plot",
+          "earth",
+          "moko",
+          "wind",
+          "fire"
+        ],
+        "stats": [
+          {
+            "damage": 110.01,
+            "hits": 9,
+            "kos": 1
+          },
+          {
+            "damage": 143.16166666666666,
+            "hits": 14,
+            "kos": 0
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": null,
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

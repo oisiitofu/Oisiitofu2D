@@ -1,0 +1,105 @@
+{
+  "character": "rayman",
+  "mechanics": {
+    "checks": 80,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "glove",
+      "hairwind",
+      "lum",
+      "anchor"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "glove",
+          "lum",
+          "hairwind",
+          "anchor"
+        ],
+        "stats": [
+          {
+            "damage": 126.69500000000001,
+            "hits": 15,
+            "kos": 1
+          },
+          {
+            "damage": 128.72000000000003,
+            "hits": 14,
+            "kos": 1
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "lum",
+          "glove",
+          "hairwind",
+          "anchor"
+        ],
+        "stats": [
+          {
+            "damage": 107.8,
+            "hits": 14,
+            "kos": 1
+          },
+          {
+            "damage": 86.39,
+            "hits": 9,
+            "kos": 1
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "rayman",
+    "checks": [
+      {
+        "name": "neutral sends only the glove",
+        "pass": true
+      },
+      {
+        "name": "glove enters bounded return phase",
+        "pass": true
+      },
+      {
+        "name": "glove returns to moved owner and expires",
+        "pass": true
+      },
+      {
+        "name": "one Lum waits for a normal hit",
+        "pass": true
+      },
+      {
+        "name": "normal hit triggers waiting Lum",
+        "pass": true
+      },
+      {
+        "name": "hair creates wind without a body dash",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

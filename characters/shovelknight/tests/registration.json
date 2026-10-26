@@ -1,0 +1,73 @@
+{
+  "definition": {
+    "id": "shovelknight",
+    "name": "ショベルナイト",
+    "style": "SHOVEL KNIGHT",
+    "number": "196",
+    "description": "宝箱とレリックを使い、ショベルの反動やポゴで足場と復帰を組み立てる。",
+    "pose": 76
+  },
+  "after": "ulgrim",
+  "anchorName": "ウルグリム",
+  "height": 76,
+  "tier": 0,
+  "weight": 103,
+  "physics": {
+    "weight": 103,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.58,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 20,
+      "height": 67
+    },
+    "shieldSize": 36.48,
+    "shieldOffset": [
+      0,
+      -34.96
+    ],
+    "ledgeGrip": [
+      0.104,
+      0.754
+    ]
+  },
+  "mask": "(b>r*1.2&&b>green*.95&&b>70)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 11,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 11,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 11
+  }
+}

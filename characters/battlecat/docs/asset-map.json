@@ -1,0 +1,51 @@
+{
+  "id": "battlecat",
+  "height": 60,
+  "portrait": 76,
+  "frames": 77,
+  "normalMap": {
+    "jab": 16,
+    "jab2": 17,
+    "jab3": 18,
+    "heavy": 19,
+    "up": 20,
+    "low": 21,
+    "dashAttack": 22,
+    "smash": 23,
+    "upsmash": 24,
+    "downsmash": 25,
+    "air": 26,
+    "fair": 27,
+    "bair": 28,
+    "uair": 29,
+    "dair": 30
+  },
+  "specialMap": {
+    "NB": [
+      31,
+      32,
+      33
+    ],
+    "SB": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "UB": [
+      38,
+      39,
+      40,
+      41
+    ],
+    "DB": [
+      42,
+      43,
+      44,
+      45
+    ]
+  },
+  "effects": "0 blue-white crescent slash convex side RIGHT, open side LEFT; 1 blue upward arc convex toward TOP open toward BOTTOM; 2 blue flying paw-print energy projectile traveling RIGHT; 3 blue ring-shaped summoning ripple; 4 yellow small front paw impact; 5 white elastic body stretch streak RIGHT; 6 orange radial can explosion; 7 orange cat-food can with tiny white Cat face logo NO words; 8 small identical white allied Cat fullbody running RIGHT; 9 tiny white allied Cat standing arms up ready for tower; 10 grey-white ground dash dust puff RIGHT; 11 blue-white tower rising vertical speed lines; 12 blue shield orb; 13 gold hit star; 14 white landing dust; 15 small gold three victory stars.",
+  "direction": "FX0 convex RIGHT/open LEFT. FX1 convex UP/open DOWN. Source correction then local rotation then facing reflection. Inspect final extracted actual image before gameplay.",
+  "provenance": "tests/art-layout.json sourcePoses contains exact final-frame to source-cell mapping. Source sheets preserved unmodified; correction sources separately named."
+}

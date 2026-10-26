@@ -1,0 +1,98 @@
+{
+  "character": "io",
+  "mechanics": {
+    "checks": 78,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "blood",
+      "thorn",
+      "gift"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "thorn",
+          "gift",
+          "blood"
+        ],
+        "stats": [
+          {
+            "damage": 44.66,
+            "hits": 3,
+            "kos": 1
+          },
+          {
+            "damage": 150.9025,
+            "hits": 17,
+            "kos": 0
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "gift",
+          "thorn",
+          "blood"
+        ],
+        "stats": [
+          {
+            "damage": 109.305,
+            "hits": 10,
+            "kos": 1
+          },
+          {
+            "damage": 124.58500000000001,
+            "hits": 12,
+            "kos": 0
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "io",
+    "checks": [
+      {
+        "name": "gift spends ichor, heals once",
+        "pass": true
+      },
+      {
+        "name": "field cannot heal repeatedly",
+        "pass": true
+      },
+      {
+        "name": "thorn stays while owner can act",
+        "pass": true
+      },
+      {
+        "name": "reinput travels toward existing root",
+        "pass": true
+      },
+      {
+        "name": "blood hit replenishes ichor",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

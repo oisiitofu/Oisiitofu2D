@@ -1,0 +1,14 @@
+{
+  "id": "felyne",
+  "frames": 77,
+  "effects": 16,
+  "portrait": 76,
+  "dedicatedPortrait": [
+    1536,
+    1024
+  ],
+  "uniqueNormals": 15,
+  "approvedNeutralAlphaPreserved": true,
+  "atlasRgbRoundingMax": 1,
+  "transparentFramesAndEffects": true
+}

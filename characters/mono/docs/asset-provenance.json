@@ -1,0 +1,45 @@
+{
+  "mode": "builtin image_gen",
+  "assets": [
+    {
+      "asset": "mono-basic",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-de7f39f8-58c5-4867-85e9-1e55aa60bd7f.png",
+      "error": null
+    },
+    {
+      "asset": "mono-selection",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-33d7e6bb-d8c4-470f-ad23-055c5ba64461.png",
+      "error": null
+    },
+    {
+      "asset": "mono-attacks",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-ccffe2e3-461d-4be5-888e-fe1076aae44c.png",
+      "error": null
+    },
+    {
+      "asset": "mono-specials",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-e9c21608-6f07-413c-9887-32d727529a31.png",
+      "error": null
+    },
+    {
+      "asset": "mono-defense",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-386c5747-edf6-4ccf-8646-f8b6c6395de4.png",
+      "error": null
+    },
+    {
+      "asset": "mono-extra",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-540030ea-915c-4af7-8edd-2b4a4752f0f0.png",
+      "error": null
+    },
+    {
+      "asset": "mono-effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-b5d01d91-d66e-4c96-b3e4-26ba99d0a3f3.png",
+      "error": null
+    },
+    {
+      "asset": "mono-selection-v2",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a174f2-885d-74e3-aa59-d5ef803cd2f8\\exec-34e522ee-6283-4545-8d9f-965e3a8b8763.png",
+      "error": null
+    }
+  ]
+}

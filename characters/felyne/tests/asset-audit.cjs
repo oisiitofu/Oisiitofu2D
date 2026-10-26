@@ -1,0 +1,12 @@
+'use strict';
+const fs=require('fs'),sharp=require('sharp'),assert=require('assert/strict'),crypto=require('crypto');
+const expected={felyne:77,nargacuga:93,mono:77},report=[];
+(async()=>{for(const[id,count]of Object.entries(expected)){const root='characters/'+id,meta=JSON.parse(fs.readFileSync(root+'/tests/art-layout.json')),pixels=await sharp(root+'/assets/'+id+'-native.png').ensureAlpha().raw().toBuffer({resolveWithObject:true}),hashes=[];assert.equal(meta.frames.length,count);assert.equal(meta.effects.length,16);assert.equal(meta.portrait,count-1);
+const crop=async rect=>sharp(pixels.data,{raw:pixels.info}).extract({left:rect[0],top:rect[1],width:rect[2],height:rect[3]}).raw().toBuffer();
+const neutral=await sharp(root+'/assets/'+id+'-neutral-locked.png').ensureAlpha().raw().toBuffer(),atlasNeutral=await crop(meta.frames[0]);assert.equal(atlasNeutral.length,neutral.length);let packRounding=0;for(let n=0;n<neutral.length;n++){if(n%4===3)assert.equal(atlasNeutral[n],neutral[n],'approved neutral alpha preserved');else packRounding=Math.max(packRounding,Math.abs(atlasNeutral[n]-neutral[n]));}assert(packRounding<=1,'approved neutral preserved within one least-significant-bit alpha composite rounding');
+for(let n=0;n<meta.frames.length;n++){const b=await crop(meta.frames[n]);let clear=0,solid=0;for(let k=3;k<b.length;k+=4){clear+=b[k]===0;solid+=b[k]>=220;}assert(clear>0&&solid>100,id+' alpha and body '+n);hashes.push(crypto.createHash('sha256').update(b).digest('hex'));}
+assert.equal(new Set(hashes.slice(16,31)).size,15,'all fifteen normals have distinct fullbody images');
+for(let n=0;n<16;n++){const b=await crop(meta.effects[n]);let clear=0,solid=0;for(let k=3;k<b.length;k+=4){clear+=b[k]===0;solid+=b[k]>=180;}assert(clear>0&&solid>30,id+' effect '+n);}
+const portraitSource=id==='felyne'?id+'-selection.png':id+'-selection-v2.png',p=await sharp(root+'/assets/'+portraitSource).metadata();assert.equal(p.width,1536);assert.equal(p.height,1024);
+const r={id,frames:count,effects:16,portrait:meta.portrait,dedicatedPortrait:[p.width,p.height],uniqueNormals:15,approvedNeutralAlphaPreserved:true,atlasRgbRoundingMax:packRounding,transparentFramesAndEffects:true};fs.writeFileSync(root+'/docs/asset-quality.json',JSON.stringify(r,null,2));report.push(r);}
+console.log(JSON.stringify({ok:true,characters:report},null,2));})().catch(e=>{console.error(e);process.exitCode=1;});

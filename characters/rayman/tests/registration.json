@@ -1,0 +1,77 @@
+{
+  "definition": {
+    "id": "rayman",
+    "name": "レイマン",
+    "style": "RAYMAN",
+    "number": "200",
+    "description": "浮遊する手足で戦う。手を先に送るロケットパンチ、ヘリコプターの風とルミを連携する。",
+    "pose": 76
+  },
+  "after": "metabee",
+  "anchorName": "メタビー",
+  "height": 82,
+  "tier": 0,
+  "weight": 87,
+  "physics": {
+    "weight": 87,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 19,
+      "height": 73
+    },
+    "shieldSize": 39.36,
+    "shieldOffset": [
+      0,
+      -37.72
+    ],
+    "airMobility": {
+      "frames": 60,
+      "fallSpeed": 1.5
+    },
+    "ledgeGrip": [
+      -0.319,
+      0.96
+    ]
+  },
+  "mask": "(r>b*.8&&b>green*1.2&&b>60)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 13,
+    "jab2": 13,
+    "jab3": 0,
+    "heavy": 13,
+    "up": 13,
+    "low": 0,
+    "dashAttack": 13,
+    "smash": 13,
+    "upsmash": 4,
+    "downsmash": 13,
+    "air": 13,
+    "fair": 13,
+    "bair": 13,
+    "uair": 4,
+    "dair": 13
+  }
+}

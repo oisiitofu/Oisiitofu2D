@@ -1,0 +1,51 @@
+{
+  "id": "quote",
+  "height": 76,
+  "portrait": 76,
+  "frames": 77,
+  "normalMap": {
+    "jab": 16,
+    "jab2": 17,
+    "jab3": 18,
+    "heavy": 19,
+    "up": 20,
+    "low": 21,
+    "dashAttack": 22,
+    "smash": 23,
+    "upsmash": 24,
+    "downsmash": 25,
+    "air": 26,
+    "fair": 27,
+    "bair": 28,
+    "uair": 29,
+    "dair": 30
+  },
+  "specialMap": {
+    "NB": [
+      31,
+      32,
+      33
+    ],
+    "SB": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "UB": [
+      38,
+      39,
+      40,
+      41
+    ],
+    "DB": [
+      42,
+      43,
+      44,
+      45
+    ]
+  },
+  "effects": "0 blue sharp Blade crescent convex RIGHT open LEFT; 1 blue-white upper sword canopy convex TOP open BOTTOM; 2 blue Polar Star bullet flying RIGHT; 3 yellow-white Spur narrow laser traveling RIGHT; 4 orange Fireball traveling RIGHT; 5 orange ricochet fire burst; 6 orange pixel explosion; 7 translucent blue protective bubble; 8 blue Bubble cluster of3; 9 blue-orange Booster exhaust pointing DOWN; 10 blue-orange Booster exhaust pointing LEFT; 11 grey pixel landing dust; 12 blue ring activation; 13 yellow hit spark; 14 pixel smoke; 15 blue narrow gun tracer RIGHT.",
+  "direction": "FX0 convex RIGHT/open LEFT. FX1 convex UP/open DOWN. Source correction then local rotation then facing reflection. Inspect final extracted actual image before gameplay.",
+  "provenance": "tests/art-layout.json sourcePoses contains exact final-frame to source-cell mapping. Source sheets preserved unmodified; correction sources separately named."
+}

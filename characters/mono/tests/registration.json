@@ -1,0 +1,73 @@
+{
+  "definition": {
+    "id": "mono",
+    "name": "モノ",
+    "style": "ラクガキ王国",
+    "number": "204",
+    "description": "色の弾とラクガキ召喚、描いた道への乗換え、曲げて描くカラーカレントを使う。",
+    "pose": 76
+  },
+  "after": "metabee",
+  "anchorName": "メタビー",
+  "height": 78,
+  "tier": 1,
+  "weight": 84,
+  "physics": {
+    "weight": 84,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 13.53061224489796,
+      "height": 71
+    },
+    "shieldSize": 37.44,
+    "shieldOffset": [
+      0,
+      -35.88
+    ],
+    "ledgeGrip": [
+      0.172,
+      0.962
+    ]
+  },
+  "mask": "(r>140&&green>100&&b<green*.65)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 11,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 11,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 11
+  }
+}

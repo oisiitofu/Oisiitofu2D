@@ -1,0 +1,66 @@
+{
+  "normals": {
+    "16": "short right fist jab",
+    "17": "long left fist forward punch",
+    "18": "right leg forward kick",
+    "19": "strong FORWARD cardboard hammer strike extended RIGHT in front, NOT behind",
+    "20": "leaping paintbrush strike above",
+    "21": "low extended leg trip",
+    "22": "sliding forward feet kick",
+    "23": "large cardboard hammer full forward swing",
+    "24": "lifting a craft paper rocket overhead",
+    "25": "kneeling setting a round black bomb",
+    "26": "midair right punch across chest",
+    "27": "midair forward right foot kick",
+    "28": "midair cardboard box swing LEFT backwards",
+    "29": "midair both hands scratch overhead",
+    "30": "midair downward two foot stomp"
+  },
+  "specials": {
+    "31": "holding colorful Popit sticker",
+    "32": "reaching forward sticking pink sticker",
+    "33": "throwing blue sticker forward",
+    "34": "shooting grappling hook diagonally right",
+    "35": "hanging beneath taut rope with legs curled",
+    "36": "swinging around own cardboard box",
+    "37": "releasing grappling rope and reaching forward",
+    "38": "holding launching paper rocket beneath feet",
+    "39": "riding paper rocket flying diagonally up right",
+    "40": "turning paper rocket in air with legs tucked",
+    "41": "jumping off detached rocket pointing down left",
+    "42": "kneeling setting round black bomb",
+    "43": "waiting finger on timer beside bomb",
+    "44": "pushing bomb on cardboard craft box forward",
+    "45": "lifting cardboard platform box with green sticker"
+  },
+  "effects": [
+    "cream cardboard hammer crescent slash, bulging convex cutting edge RIGHT, open tail LEFT",
+    "single overhead canopy crescent, bulging convex edge UP, open side DOWN",
+    "pink round sticker with star graphic",
+    "green round sticker with bounce arrow graphic",
+    "blue round sticker with speed arrow graphic",
+    "small metallic grappling hook and rope",
+    "cardboard cube with taped seams",
+    "round black bomb with fuse",
+    "paper craft rocket orange flame at tail pointing down",
+    "orange bomb explosion",
+    "burst of knitted yarn fibers",
+    "confetti stars and craft paper scraps",
+    "cardboard box platform with green sticker",
+    "sharp golden hit spark",
+    "soft grey-brown landing dust",
+    "pink sticker sparkle burst"
+  ],
+  "effectOrientation": {
+    "0": {
+      "convex": "right",
+      "open": "left"
+    },
+    "1": {
+      "convex": "up",
+      "open": "down"
+    }
+  },
+  "bodyHeight": 70,
+  "portraitIndex": 76
+}

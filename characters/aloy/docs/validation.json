@@ -1,0 +1,93 @@
+{
+  "character": "aloy",
+  "mechanics": {
+    "checks": 81,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "arrow",
+      "wire",
+      "burn"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "burn",
+          "wire",
+          "arrow"
+        ],
+        "stats": [
+          {
+            "damage": 85.97,
+            "hits": 10,
+            "kos": 1
+          },
+          {
+            "damage": 94.5,
+            "hits": 13,
+            "kos": 1
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "wire",
+          "burn"
+        ],
+        "stats": [
+          {
+            "damage": 51.00000000000001,
+            "hits": 6,
+            "kos": 2
+          },
+          {
+            "damage": 100.635,
+            "hits": 10,
+            "kos": 0
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "aloy",
+    "checks": [
+      {
+        "name": "one wire endpoint is safe and incomplete",
+        "pass": true
+      },
+      {
+        "name": "second endpoint creates a line",
+        "pass": true
+      },
+      {
+        "name": "electric arrow changes wire attribute",
+        "pass": true
+      },
+      {
+        "name": "side roll installs both endpoints",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

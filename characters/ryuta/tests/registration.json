@@ -1,0 +1,71 @@
+{
+  "definition": {
+    "id": "ryuta",
+    "name": "一本木龍太",
+    "style": "押忍！闘え！応援団",
+    "number": "201",
+    "description": "拍に合わせた追加の必殺入力で応援を合わせ、隊列のキックや踏み台の飛出しを変える。",
+    "pose": 76
+  },
+  "after": "qbby",
+  "anchorName": "キュービィ",
+  "height": 98,
+  "tier": 3,
+  "weight": 100,
+  "physics": {
+    "weight": 100,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.6,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 17,
+      "height": 91
+    },
+    "shieldSize": 47.04,
+    "shieldOffset": [
+      0,
+      -45.080000000000005
+    ],
+    "ledgeGrip": [
+      -0.118,
+      0.965
+    ]
+  },
+  "mask": "(r>85&&r>green*1.4&&r>b*1.3)",
+  "upperCurves": [],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 13,
+    "jab2": 13,
+    "jab3": 13,
+    "heavy": 13,
+    "up": 13,
+    "low": 13,
+    "dashAttack": 13,
+    "smash": 13,
+    "upsmash": 13,
+    "downsmash": 4,
+    "air": 13,
+    "fair": 13,
+    "bair": 13,
+    "uair": 13,
+    "dair": 13
+  }
+}

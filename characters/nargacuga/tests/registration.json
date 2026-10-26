@@ -1,0 +1,77 @@
+{
+  "definition": {
+    "id": "nargacuga",
+    "name": "ナルガクルガ",
+    "style": "MONSTER HUNTER",
+    "number": "203",
+    "description": "尾棘、狙い位置を固定する跳躍フェイント、離す時刻で軌道が変わる旋回滑空を使う。",
+    "pose": 92
+  },
+  "after": "felyne",
+  "anchorName": "アイルー",
+  "height": 108,
+  "tier": 0,
+  "weight": 118,
+  "physics": {
+    "weight": 118,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 8.3,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.6,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 39,
+      "height": 79
+    },
+    "shieldSize": 51.839999999999996,
+    "shieldOffset": [
+      0,
+      -49.68
+    ],
+    "airMobility": {
+      "frames": 45,
+      "fallSpeed": 2
+    },
+    "ledgeGrip": [
+      -0.333,
+      0.958
+    ]
+  },
+  "mask": "(b>r*1.2&&b>green*.9&&b>30)",
+  "upperCurves": [
+    1
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      0,
+      -1
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 0,
+    "jab2": 0,
+    "jab3": 11,
+    "heavy": 0,
+    "up": 1,
+    "low": 0,
+    "dashAttack": 11,
+    "smash": 0,
+    "upsmash": 1,
+    "downsmash": 0,
+    "air": 0,
+    "fair": 0,
+    "bair": 0,
+    "uair": 1,
+    "dair": 11
+  }
+}

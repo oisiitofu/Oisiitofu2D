@@ -1,0 +1,97 @@
+{
+  "character": "battlecat",
+  "mechanics": {
+    "checks": 78,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "paw",
+      "helper",
+      "can",
+      "tower"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "can",
+          "tower",
+          "paw",
+          "helper"
+        ],
+        "stats": [
+          {
+            "damage": 72.41999999999999,
+            "hits": 8,
+            "kos": 1
+          },
+          {
+            "damage": 102.20750000000001,
+            "hits": 12,
+            "kos": 0
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "can",
+          "helper",
+          "tower",
+          "paw"
+        ],
+        "stats": [
+          {
+            "damage": 103.19,
+            "hits": 13,
+            "kos": 0
+          },
+          {
+            "damage": 157.7216666666667,
+            "hits": 13,
+            "kos": 1
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "battlecat",
+    "checks": [
+      {
+        "name": "can falls and remains available",
+        "pass": true
+      },
+      {
+        "name": "own paw shot opens can into reserve",
+        "pass": true
+      },
+      {
+        "name": "stored cats deploy without owner dashing",
+        "pass": true
+      },
+      {
+        "name": "second order stops existing cats",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}

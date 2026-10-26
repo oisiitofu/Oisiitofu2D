@@ -1,0 +1,97 @@
+{
+  "character": "ryuta",
+  "mechanics": {
+    "checks": 78,
+    "failed": [],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "voice",
+      "mate",
+      "call",
+      "step"
+    ],
+    "errors": []
+  },
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "call",
+          "voice",
+          "mate",
+          "step"
+        ],
+        "stats": [
+          {
+            "damage": 49.35,
+            "hits": 4,
+            "kos": 1
+          },
+          {
+            "damage": 134.19,
+            "hits": 16,
+            "kos": 0
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "mate",
+          "call",
+          "voice",
+          "step"
+        ],
+        "stats": [
+          {
+            "damage": 134.60500000000002,
+            "hits": 11,
+            "kos": 0
+          },
+          {
+            "damage": 111.335,
+            "hits": 12,
+            "kos": 0
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "gimmick": {
+    "id": "ryuta",
+    "checks": [
+      {
+        "name": "timed inputs give three GOOD beats",
+        "pass": true
+      },
+      {
+        "name": "GOOD voice waits and broadens the cone",
+        "pass": true
+      },
+      {
+        "name": "sideB creates two distinct delayed kickers",
+        "pass": true
+      },
+      {
+        "name": "squad retires and cooldown prevents overlap",
+        "pass": true
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "scope": "Added character and modified registration/art paths only. PC only. No broad existing roster combat rerun."
+}
