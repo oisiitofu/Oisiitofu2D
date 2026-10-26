@@ -86,7 +86,9 @@
       "scenes": 4,
       "resourceLineMaxWidth": 281,
       "directory": "previews/quality/",
-      "headIndicatorsAndTrainingPanelInspected": true
+      "headIndicatorsAndTrainingPanelInspected": true,
+      "hudPortraitsAwaited": true,
+      "trainingControlsMatchScene": true
     },
     "recovery": {
       "stage": "0",
