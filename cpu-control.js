@@ -32,7 +32,7 @@ const CPUControl=(()=>{
    }
    if(o.attack&&dist<180&&difficulty!=='easy'&&random()<.055){i.guard=true;i.x=random()<.5?-Math.sign(dx):0;}
   }
-  if(f.attack?.chargeFrame)i.charge=!recovering&&f.attack.chargeFrames<20;
+  if(f.attack?.chargeFrame)i.charge=(!recovering||f.attack.special)&&f.attack.chargeFrames<20;
   if(f.state==='ledge'){i.jump=true;i.x=Math.sign(center-f.x);}
   if(f.state==='grab')i.y=dist<60?-1:0;
   return i;
