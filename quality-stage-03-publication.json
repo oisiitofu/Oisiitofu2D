@@ -1,0 +1,179 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    7,
+    8
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "5afbd9374f63cb5443e9d6046093e1f266f4868e",
+  "featureCommit": "ef5e3e71e9a67cf87e7c52c169f2d08b2ecc6828",
+  "siteCommit": "07f30505679fe50d5630943ab87735f89b38f9ee",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_7b76cecd573881918ce03d63fc3d22f3",
+  "versionNumber": 164,
+  "deployment": {
+    "id": "appgdep_6adf6cf744988191b65805382080ac8a",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_7b76cecd573881918ce03d63fc3d22f3",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 323,
+    "updated_at": "2026-10-26T15:08:55.525483+00:00"
+  },
+  "features": {
+    "launch": "World-velocity arrow during significant launch stun, after DI/SDI hitlag is resolved.",
+    "actionable": "18 simulation-frame signal after hit recovery; blocked during knockdown, getup recovery, landing lag, helplessness and other action locks.",
+    "recovery": "Airborne HUD shows current aerial jumps, air dodge, recovery-special budget/state and conditional finite hover.",
+    "training": "Final launch angle, actual current speed, stun, recovery budget and ledge grab count/limit; shared legend in manual."
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 79,
+      "publicChecks": 79,
+      "failed": [],
+      "errors": [],
+      "fighterInputAttackStateUnchangedByPresentation": true,
+      "renderRefreshCannotRenewSignal": true
+    },
+    "visual": {
+      "publicAndLocal": true,
+      "resolutions": [
+        [
+          1440,
+          900
+        ],
+        [
+          1280,
+          720
+        ]
+      ],
+      "fighterCounts": [
+        2,
+        4
+      ],
+      "scenes": 4,
+      "resourceLineMaxWidth": 281,
+      "directory": "previews/quality/",
+      "headIndicatorsAndTrainingPanelInspected": true
+    },
+    "recovery": {
+      "stage": "0",
+      "flights": [
+        {
+          "character": "dragoon",
+          "side": -1,
+          "startOutside": 150,
+          "startBelow": 160,
+          "success": true,
+          "frames": 42
+        },
+        {
+          "character": "dragoon",
+          "side": 1,
+          "startOutside": 150,
+          "startBelow": 160,
+          "success": true,
+          "frames": 42
+        },
+        {
+          "character": "reimu",
+          "side": -1,
+          "success": true,
+          "frames": 67
+        },
+        {
+          "character": "reimu",
+          "side": 1,
+          "success": true,
+          "frames": 67
+        }
+      ],
+      "jumpDodgeRecoveryHoverLandingLedgeRespawn": true,
+      "ledgeRegrabInvulnerabilityAndLimitPreserved": true
+    },
+    "cpu": {
+      "trials": 2,
+      "framesPerTrial": 1800,
+      "characters": [
+        "tails",
+        "reimu"
+      ],
+      "finalRepresentativeHits": [
+        3,
+        7
+      ],
+      "finite": true,
+      "grabLinks": true
+    },
+    "online": {
+      "localIdenticalFrames": 180,
+      "publicIdenticalFrames": 180,
+      "scenes": 3,
+      "presentationDisabledOnSecondClient": true,
+      "feedbackClientSawReady": true,
+      "disabledClientSawReady": false,
+      "remainingJumpsBothClients": 0,
+      "remainingHoverBothClients": 60,
+      "errors": []
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "normalizedHTMLFiles": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "2de896a7667e4e192129ceb16fad653049f5fcce2effc92c622d0c188a1a940a",
+        "index.html": "5faace5b8d1e9cc4e0057891d8c45d70641d82e1e08345a8584f4d365d2ca978",
+        "style.css": "357a16f77c9322e65091b37b8e40e25bdb7a1e65f4f0664e60c91d558927b7b1"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 4248517,
+    "failed": [],
+    "sourceImagesUnchanged": true,
+    "exportRetry": "One transient OneDrive write error; existing destination SHA matched source, full subsequent export succeeded."
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false,
+    "sourceBundleRefresh": "mtime-based"
+  },
+  "ownedPreview": {
+    "pid": 37316,
+    "stopped": true
+  }
+}
