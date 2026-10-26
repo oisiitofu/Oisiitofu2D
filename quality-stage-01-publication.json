@@ -1,0 +1,107 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedItems": [
+    {
+      "number": 1,
+      "status": "existing implementation verified"
+    },
+    {
+      "number": 4,
+      "status": "implemented, verified and published"
+    }
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "f247689ddf21f0724b119161948e92abb8005a9b",
+  "siteCommit": "e5343458566f8f4fc9ff617ad7f804d7903c9a18",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_708295218aec8191b28b02ef5a40df24",
+  "versionNumber": 162,
+  "deployment": {
+    "id": "appgdep_6adf5cb630a8819198489e0ed6c7f3d4",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_708295218aec8191b28b02ef5a40df24",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 319,
+    "updated_at": "2026-10-26T13:59:31.829700+00:00"
+  },
+  "assets": {
+    "uploaded": 1,
+    "bytes": 4135342,
+    "failed": [],
+    "sha256": "5efc4edb97dbd59b60ec75b2b5f4735ef719ca297c236d9a2a772dc613a13bcd"
+  },
+  "verification": {
+    "publicDirectionalChecks": 34,
+    "inputEdgeChecks": 14,
+    "codecRoundTrips": 210,
+    "serverCommands": 3,
+    "legacyClientEqual": true,
+    "localAndPublicOnline": {
+      "identicalFrames": 120,
+      "commands": [
+        "heavy",
+        "rise",
+        "downsmash"
+      ],
+      "inputFormat": "compact-v2",
+      "errors": []
+    },
+    "hitAudio": {
+      "contacts": 32,
+      "authored": 11,
+      "decoded": 228,
+      "fourPlayerMixPeak": 0.3365982472896576,
+      "onlineIdenticalFrames": 120
+    },
+    "legacyRegression": {
+      "fullSuitePassed": false,
+      "scopedBaselineCharacters": [
+        "dragoon",
+        "etna",
+        "mono"
+      ],
+      "scopedChecks": 249,
+      "baselineFailures": 14,
+      "currentFailures": 14,
+      "identicalFailures": true,
+      "notes": "Old all-roster assumptions are excluded from passing checks; no new failures in bounded before/after comparison."
+    }
+  },
+  "backend": {
+    "previousPid": 13988,
+    "currentPid": 34136,
+    "emptyRoomChecks": 2,
+    "launcherAndTunnelPreserved": true
+  },
+  "uploadSecretRemoved": true,
+  "ownedPreviewStopped": true
+}
