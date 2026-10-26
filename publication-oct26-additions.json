@@ -1,0 +1,69 @@
+{
+  "publishedAt": "2026-10-26T04:21:24.361648+00:00",
+  "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 161,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_cd606595b4f881919087189e508b3f77",
+  "deploymentId": "appgdep_6aded534f0808191a28532e401348652",
+  "environmentRevision": 317,
+  "status": "succeeded",
+  "siteSourceCommit": "8dd06fea05558cfba88a9e5e336a49650f266141",
+  "implementationCommit": "98ffeaa005fd9a771795ed5c564351272715cba2",
+  "presentationPolishCommit": "b3a8589183a9af01c7583f71e90ce50247510180",
+  "initialVersion": 160,
+  "characters": [
+    "raguna",
+    "io",
+    "shovelknight",
+    "aloy",
+    "battlecat",
+    "quote",
+    "sackboy",
+    "rayman",
+    "ryuta",
+    "felyne",
+    "nargacuga",
+    "mono"
+  ],
+  "qa": {
+    "mechanicsChecks": 980,
+    "gimmickChecks": 50,
+    "cpuMatches": 24,
+    "onlineIdenticalFramesPerCharacter": 421,
+    "onlineTotalIdenticalFrames": 5052,
+    "publicOnlineRepresentative": "mono",
+    "poses": 940,
+    "effects": 192,
+    "costumes": 4700,
+    "artMismatches": 0,
+    "highResolutionVictoryPortraits": 60,
+    "victoryScenes": 13,
+    "publicCharactersVerified": 12,
+    "publicPolishCharactersVerified": 4,
+    "publicAssetFilesVerified": 327,
+    "publicBundleSHA256": "84849a731af9d0c35495e0c6d05dbb2f7119feae62094a1c645a6bfab4046e06",
+    "scope": "PC only; added characters and changed paths; no broad unchanged-roster combat rerun"
+  },
+  "uploaded": {
+    "initialFiles": 327,
+    "initialBytes": 193441804,
+    "polishFiles": 1,
+    "polishBytes": 4134045,
+    "failed": []
+  },
+  "assetUploadTokenRemoved": true,
+  "backend": {
+    "port": 4173,
+    "previousPid": 2088,
+    "newPid": 13988,
+    "roomsCheckedEmptyTwice": true,
+    "launcherPidPreserved": 3876,
+    "tunnelPidPreserved": 12588
+  },
+  "imageProduction": {
+    "mode": "built-in imagegen",
+    "references": "characters/<id>/assets/",
+    "prompts": "characters/<id>/docs/art-prompts.json",
+    "noRefusals": true
+  },
+  "notes": "A transient automated UI test froze requestAnimationFrame before lazy portrait refresh; normal animation-frame flow verified Mono selection portrait 1536px. Presentation polish is VFX-only and uses the same tested physics."
+}

@@ -1619,3 +1619,5 @@ PCで勝利BGM・配置14項目、名前13項目、メニュー音楽7場面と2
 ## 2026-10-26 — 追加12キャラ
 
 raguna, io, shovelknight, aloy, battlecat, quote, sackboy, rayman, ryuta, felyne, nargacuga, mono を指定順へ登録。固有操作と範囲を絞った検証は `character-additions-oct26.md` および各 `characters/<ID>/docs/validation.json` に記録。ホームの更新情報・高解像度の選択/勝利画像・サイズ一覧も更新。
+
+公開版 v161（初回追加v160）、Site source `8dd06fea05558cfba88a9e5e336a49650f266141`。実装 `98ffeaa`、小物表示/描線の仕上げ `b3a8589`。公開327ファイルの配信ハッシュと12体の表示/主要技、公開オンラインのモノ421フレーム一致を確認。`publication-oct26-additions.json` に配信と検証の記録を保存。
