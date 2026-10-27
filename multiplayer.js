@@ -56,7 +56,7 @@ const BattlePlayers=(()=>{
  function spawnX(f){const main=platforms.find(p=>p.main);return fighters.length===2?(f.id?850:590):main.x+main.w*(f.id+1)/(fighters.length+1);}
  function localInput(f){
   const demo=TrainingDemo.input();if(demo)return demo;
-  if(f.control==='cpu'||f.control===undefined&&f.id>0){if(out(f))return{...emptyInput(),shareStock:canShare(f)};return training?emptyInput():cpu(f,target(f));}
+  if(f.control==='cpu'||f.control===undefined&&f.id>0){if(out(f))return{...emptyInput(),shareStock:canShare(f)};return training?TrainingDummy.input(f):cpu(f,target(f));}
   const device=f.control||'primary',claimed=fighters.some(o=>o!==f&&o.control==='pad1');return Controls.read(device==='primary'&&claimed?'keyboard':device);
  }
  function donor(f){return teams&&out(f)&&!f.squad?fighters.filter(o=>o!==f&&sameTeam(f,o)&&o.stocks>=2&&!o.squad).sort((a,b)=>b.stocks-a.stocks||a.id-b.id)[0]:null;}
