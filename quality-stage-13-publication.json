@@ -1,0 +1,149 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    18
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    19,
+    20
+  ],
+  "gameCommit": "6c6f36a1fb7a929ba37963b41b39bb4c949cdf08",
+  "siteCommit": "317aac1a4d6cc8a710a3532f752ae12d3237aa54",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_2c9da41b4da88191a399372fd4994320",
+  "versionNumber": 174,
+  "deployment": {
+    "id": "appgdep_6ae086b0ece081919b76d4c158d84975",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_2c9da41b4da88191a399372fd4994320",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 343,
+    "updated_at": "2026-10-27T11:10:55.569977+00:00"
+  },
+  "features": {
+    "selection": "Offline training CPU behavior selector: idle or guard.",
+    "input": "Ordinary grounded guard input through BattlePlayers.localInput; no edits to shield HP, stun, invulnerability or physics.",
+    "shield": "Finite natural drain and real hit depletion, shieldstun, break, stun and normal recovery; stopping uses ordinary shield-drop recovery.",
+    "lifecycle": "Choice persists through reset, demo replay and cancel; demo neutral input has priority. New training sessions start idle.",
+    "isolation": "Human seats and normal CPU AI unaffected; no online messages or server changes.",
+    "layout": "Compact selector beside existing percent and frame-table controls, with title and aria description. Demo footer can wrap.",
+    "preserved": [
+      "source art and animations",
+      "attack windows and hit IDs",
+      "normal battle physics",
+      "saved settings and names",
+      "roster order and favorites",
+      "backend and network format"
+    ]
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 34,
+      "publicChecks": 34,
+      "failed": [],
+      "errors": [],
+      "defaultIdle": true,
+      "realKeyAttackShieldContact": true,
+      "shieldStunAndHitlag": true,
+      "noBodyDamageOnBlock": true,
+      "naturalFullShieldDrainBreakStunAndRecovery": true,
+      "lowShieldRealHitBreak": true,
+      "noAutomaticAirDodge": true,
+      "ordinaryShieldDropRecovery": true,
+      "resetAndDemoChoicePreserved": true,
+      "frameAdvance": true,
+      "twoAndFourPlayers": true,
+      "humanSeatsAndNormalCpuUnaffected": true,
+      "unchangedDataAndStorage": true,
+      "newSessionIdle": true
+    },
+    "regression": {
+      "test": "training-demo-test.cjs",
+      "localChecks": 88,
+      "publicChecks": 88,
+      "failed": [],
+      "errors": []
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1280,
+          720
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "publicScreenshots": 4,
+      "publicScreenshotsInspected": true,
+      "selectorAndFightersVisible": true,
+      "directory": "previews/quality/",
+      "publicPattern": "dummy-public-*.png"
+    },
+    "online": {
+      "test": "training-dummy-online-test.cjs",
+      "localIdenticalFrames": 60,
+      "publicIdenticalFrames": 60,
+      "dummyInputDisabledOnSecondClient": true,
+      "guardChoiceHasNoOnlineEffect": true,
+      "fullNamesAndSavedProfilesPreserved": true,
+      "errors": []
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "normalizedHtmlFiles": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "46fdf7cf58283fa201313e0e428876d47c55c78ad7b1135211ea7cb2a748ea5e",
+        "index.html": "a27366f220167bc5071542c4ac02066e90c7bdd19766128397550a62ff61d7e4",
+        "style.css": "cdffdaf6d5373865af68ab887fca375d12b4cea414d1ddf1bcee3ed55c6d3e60"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 4288572,
+    "failed": [],
+    "sourceImagesAndSizesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 36964,
+    "stopped": true
+  }
+}
