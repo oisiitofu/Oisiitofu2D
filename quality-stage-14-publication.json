@@ -1,0 +1,149 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    19
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    20
+  ],
+  "gameCommit": "23c5d55d910cc44b637baa4ec65c31d29a13a103",
+  "siteCommit": "cd913607e29fcbc58f57b99d3da9cc6fec2a02c7",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_ff8f70857af48191a5674cbabe0e654b",
+  "versionNumber": 175,
+  "deployment": {
+    "id": "appgdep_6ae08c9550608191b69b5678e0d94e16",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_ff8f70857af48191a5674cbabe0e654b",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 345,
+    "updated_at": "2026-10-27T11:36:04.443546+00:00"
+  },
+  "features": {
+    "waiting": "Read-only wall clock since last applied authoritative frame; show after 500ms without progress.",
+    "recovery": "Hide after 250ms of frame application with gaps at most 100ms; one packet cannot flicker the badge off.",
+    "lifecycle": "Reset on match start, room clear, end, finish, selection and leave; document visibility event gives a fresh grace interval.",
+    "view": "Compact non-interactive wait badge beneath the topbar, without changing player-name or volume layout.",
+    "preserved": [
+      "ordered packet delivery",
+      "NetworkPacing and buffer rules",
+      "input format and server",
+      "simulation timing and state",
+      "existing RTT and room status",
+      "saved and synchronized names",
+      "source art and attack geometry"
+    ]
+  },
+  "verification": {
+    "unit": {
+      "test": "network-status-test.cjs",
+      "checks": 37,
+      "failed": [],
+      "orderedFrames": 180,
+      "observerDoesNotChangePacingOrPackets": true
+    },
+    "pacing": {
+      "test": "network-pacing-test.cjs",
+      "orderedFrames": 600,
+      "backgroundFlush": true,
+      "sequenceGuard": true,
+      "boundedBacklogRecovery": true
+    },
+    "online": {
+      "test": "network-status-online-test.cjs",
+      "localChecks": 20,
+      "publicChecks": 20,
+      "failed": [],
+      "errors": [],
+      "actualReceiveHolds": true,
+      "short180msQuiet": true,
+      "sustainedHoldShown": true,
+      "noFabricatedProgress": true,
+      "peerContinues": true,
+      "localIdenticalFrames": 240,
+      "publicIdenticalFrames": 240,
+      "receivedAndDeliveredOrderMatch": true,
+      "realFinishRematchDisconnect": true,
+      "documentVisibilityEventGrace": true,
+      "selectionAndLeaveResetClockInjected": true,
+      "fullNamesAndSavedProfilesPreserved": true
+    },
+    "offlineStatic": {
+      "checks": 3,
+      "homeAndTrainingBadgeHidden": true,
+      "errors": []
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1280,
+          720
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "publicScreenshots": 2,
+      "publicScreenshotsInspected": true,
+      "directory": "previews/quality/",
+      "publicPattern": "network-wait-public-*.png"
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "normalizedHtmlFiles": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "cedfc221f38cad1030ec5f2674d096762d2b6cdf8049be235696b232170b2b2c",
+        "index.html": "3d382818a459c6c3b1f9802e6f3b4df6d62ddfbd8734740a2d6757b60b9b2e90",
+        "style.css": "79249fbaf21fbd1cbc3d55292667289fb283da0da79ff7da66801d63371a28ce"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 4290996,
+    "failed": [],
+    "sourceImagesAndSizesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 35356,
+    "stopped": true
+  }
+}
