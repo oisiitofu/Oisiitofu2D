@@ -13,11 +13,12 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    const snap=()=>JSON.stringify([fighters,CharacterData,CombatData.moves,NoctisMoves,IsaacMoves,FioraRules.objects,localStorage,Controls.config,Roster.selectable]);const before=snap();
    const ids=['dragoon','noctis','isaac','enoch','onionknight','fiora','kurabe','malenia','zero3'],data=ids.map(id=>CharacterGuide.introduction(id,Roster.definitions.find(d=>d.id===id)));
    let mapping=[];const original=attack;try{attack=(f,type)=>{mapping.push(type);return true;};for(const [x,y]of[[0,0],[1,0],[0,-1],[0,1]])selectAttack({grounded:true,face:1},{x,y,special:true});}finally{attack=original;}
-   return{data,mapping,unchanged:before===snap(),random:CharacterGuide.introduction('random',{}),unknown:CharacterGuide.introduction('unregistered',{})};
+   const defaults={enoch:EnochKits[0],onionknight:OnionKnightKits[0],fiora:FioraMoves,kurabe:KurabeMoves,malenia:MaleniaMoves,zero3:Zero3Moves},baseEquipment=Object.entries(defaults).every(([id,kit])=>data.find(d=>d.id===id).specials.every(s=>s.name===kit[s.key].name));
+   return{data,mapping,baseEquipment,unchanged:before===snap(),random:CharacterGuide.introduction('random',{}),unknown:CharacterGuide.introduction('unregistered',{})};
   });
   check('guide does not mutate data, objects, players, storage or input '+width,pure.unchanged);
   check('command labels follow actual selectAttack routing '+width,JSON.stringify(pure.mapping)===JSON.stringify(['dragon','dash','rise','gale']));
-  check('base equipment selectors are readable '+width,pure.data.every(d=>d.specials.length===4&&d.specials.every(s=>s.name&&s.name!=='技名未設定')));
+  check('base equipment selectors match initial kits '+width,pure.baseEquipment&&pure.data.every(d=>d.specials.length===4&&d.specials.every(s=>s.name&&s.name!=='技名未設定')));
   check('random and unknown cannot fall back to Dragoon '+width,pure.random===null&&pure.unknown===null);
   const expected={dragoon:['竜牙貫通','ドラゴンダイブ・突撃','ハイジャンプ','竜鱗カウンター'],noctis:['ファントムソード','ワープストライク・剣設置','エアステップ','エレメントフラスク'],isaac:['ストーンスピア','ムーブ','グロウ','グラニト']};
   for(const[id,names]of Object.entries(expected)){

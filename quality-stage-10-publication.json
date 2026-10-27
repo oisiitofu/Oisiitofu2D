@@ -1,0 +1,155 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    15
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "24037fab591f20658ead9a2e94aed1169e41ff0f",
+  "siteCommit": "43710fb013caa84f07aec18569cab622f0f3fec3",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_e684a80659908191bba6b11a7dd32902",
+  "versionNumber": 171,
+  "deployment": {
+    "id": "appgdep_6ae07673dbd08191b1a211132fe86c1b",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_e684a80659908191bba6b11a7dd32902",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 337,
+    "updated_at": "2026-10-27T10:01:37.938176+00:00"
+  },
+  "features": {
+    "introduction": "Existing selected-fighter style and description appear beside four actual special entry names in the performance guide and general field manual.",
+    "moveSource": "movesFor with a separate unpowered initial-equipment snapshot and unique non-player owner identity; explicit ground/air, equipment, transformation, gauge and follow-up disclaimer.",
+    "commands": {
+      "neutral": "dragon",
+      "side": "dash",
+      "up": "rise",
+      "down": "gale"
+    },
+    "bindings": "Read-only current primary keyboard and shared pad special-button labels from Controls existing formatters.",
+    "manual": "Removed unqualified Dragoon-specific claims and corrected the standard right-stick setting to smash.",
+    "random": "No invented names or Dragoon fallback.",
+    "unchanged": [
+      "portraits and source art",
+      "move timing and animation",
+      "physics and attack geometry",
+      "live character and object state",
+      "roster order",
+      "saved settings and favorites",
+      "backend and wire protocol"
+    ]
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 54,
+      "publicChecks": 54,
+      "failed": [],
+      "errors": [],
+      "characters": [
+        "dragoon",
+        "noctis",
+        "isaac"
+      ],
+      "defaultEquipmentSelectors": [
+        "enoch",
+        "onionknight",
+        "fiora",
+        "kurabe",
+        "malenia",
+        "zero3"
+      ],
+      "actualSelectAttackCommandMapping": true,
+      "openDialogFollowsTarget": true,
+      "remappedKeyAndPad": true,
+      "randomAndUnknownDoNotInventMoves": true,
+      "readOnlyDataAndState": true,
+      "noCombatInputWhileGuideOpen": true
+    },
+    "regression": {
+      "test": "character-guide-test.cjs",
+      "localChecks": 60,
+      "publicChecks": 60,
+      "failed": [],
+      "errors": []
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1280,
+          720
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "publicScreenshots": 4,
+      "publicScreenshotsInspected": true,
+      "directory": "previews/quality/",
+      "publicPattern": "character-intro-public-*.png"
+    },
+    "online": {
+      "backendAndMessagesUnchanged": true,
+      "matchRetestNotRequiredForReadOnlyHelp": true,
+      "publicEntryStatus": 200
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "normalizedHtmlFiles": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "5acaf1b44d87554c964400db6943b8faba05381e3f18a180bb4b959c471d248a",
+        "index.html": "216f4eb2d0f446ed3531f764c49658df08df7e6dd20dc01956ab2e405e7634da",
+        "style.css": "fbe37b42b02eb22608ef8eefe9ae6e0cd52eecbe21372ae3e466f52e1b1c8d5e"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 4273359,
+    "failed": [],
+    "sourceImagesAndSizesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 27724,
+    "stopped": true
+  }
+}
