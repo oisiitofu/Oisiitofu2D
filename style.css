@@ -362,3 +362,5 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 #training-tools .training-dummy-control{display:inline-flex;flex:none;align-items:center;gap:6px;margin:0;font-size:10px;color:#d1e8fa}#training-tools .training-dummy-control select{width:76px;margin:0;padding:4px;font-size:10px}
 
 #training-tools.demo-view>div:last-child{flex-wrap:wrap}
+
+.network-wait{position:absolute;top:92px;right:4%;z-index:4;padding:10px 14px;background:#172235;border:1px solid #e8b96a;border-radius:4px;box-shadow:0 4px 18px #0005;pointer-events:none;max-width:280px}.network-wait b{display:block;font-size:13px;line-height:1.5;color:#ffe2ad}.network-wait small{display:block;font-size:11px;line-height:1.6;color:#eed7b5}

@@ -2,6 +2,7 @@
 // Add completed releases here with their actual date/time; newest is rendered first.
 const HomeUpdates=(()=>{
  const entries=[
+ {"at": "2026-10-27T20:25:22+09:00", "items": ["オンライン対戦中の通信待ちを表示するようにしました。"]},
  {"at": "2026-10-27T20:02:44+09:00", "items": ["トレーニングでダミーの停止・ガードを選べるようにしました。"]},
  {"at": "2026-10-27T19:41:38+09:00", "items": ["設定画面にスティック入力と遊びの範囲の表示を追加しました。"]},
  {"at": "2026-10-27T19:20:23+09:00", "items": ["トレーニングの技表に実演・再生・中止を追加しました。"]},
