@@ -1,0 +1,141 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    9
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "353e204e5cc4d73c279eaee5f84cb5bf3b4e9bef",
+  "featureCommit": "5c7941a",
+  "siteCommit": "e69f25614efc657bc341314f962962f7bae620b3",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_ebeb7fed86488191bad521524ea90718",
+  "versionNumber": 165,
+  "deployment": {
+    "id": "appgdep_6adff3cef41881918fd692a41b7618d5",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_ebeb7fed86488191bad521524ea90718",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 325,
+    "updated_at": "2026-10-27T00:44:13.470943+00:00"
+  },
+  "features": {
+    "recovery": "Read remaining airJumps, preserve recovery inputs against generic combat choices; retain authored character CPU and flight helpers.",
+    "stageCoordinates": "Read main-platform center and height.",
+    "resources": "Preserve jumps while rising, avoid premature recovery-special use during reaction wait, retain special charge and tech buffering."
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 72,
+      "publicChecks": 72,
+      "failed": [],
+      "errors": []
+    },
+    "recovery": {
+      "characters": [
+        {
+          "id": "dragoon",
+          "frames": 17
+        },
+        {
+          "id": "tails",
+          "frames": 166
+        },
+        {
+          "id": "noctis",
+          "frames": 24
+        },
+        {
+          "id": "reimu",
+          "frames": 54
+        }
+      ],
+      "bothSides": true,
+      "successes": 8
+    },
+    "cpu": {
+      "finalRepresentativeMatchFrames": 1800,
+      "characters": [
+        "dragoon",
+        "tifa"
+      ],
+      "hits": [
+        13,
+        3
+      ],
+      "actionTypes": 17,
+      "finite": true,
+      "grabLinks": true
+    },
+    "online": {
+      "localIdenticalFrames": 270,
+      "publicIdenticalFrames": 270,
+      "scenes": 3,
+      "oneClientAuthorsCPUInputs": true,
+      "reached": [
+        true,
+        true,
+        true
+      ],
+      "commands": {
+        "jump": true,
+        "special": true
+      },
+      "errors": []
+    },
+    "publicAssets": {
+      "sha256Files": 1,
+      "hashes": {
+        "game-bundle.js": "5e5b85b0dd326600a4eebf7af61a8fca52286f1e3229d2ec17306ffbe5848d44"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 1,
+    "bytes": 4142761,
+    "failed": [],
+    "sourceImagesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false,
+    "sourceBundleRefresh": "mtime-based"
+  },
+  "ownedPreview": {
+    "pid": 16524,
+    "stopped": true
+  }
+}
