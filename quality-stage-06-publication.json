@@ -1,0 +1,145 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    11
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "298b1c4e7e87c87ef08df3ffb536a72a8c02ce89",
+  "siteCommit": "1725fad89c7be2e7aee9eca84beff0724fb9538f",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_ed23dba2dd448191a861b71b1a8de9d0",
+  "versionNumber": 167,
+  "deployment": {
+    "id": "appgdep_6adfffe1046081919a1b15986386e9a4",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_ed23dba2dd448191a861b71b1a8de9d0",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 329,
+    "updated_at": "2026-10-27T01:35:44.008498+00:00"
+  },
+  "features": {
+    "playerNames": "Dedicated row above main/character-specific HUD. 14px down to 12px, maximum 265px, grapheme-aware ellipsis without changing stored or synchronized names.",
+    "headNames": "Maximum 120px, fixed size under camera zoom, dark backing, grapheme-aware ellipsis.",
+    "gaugeExtents": {
+      "edf": 76,
+      "rean": 20
+    },
+    "opacity": "Existing .14 body-overlap fade applies once to the entire expanded HUD, including name row.",
+    "controls": "Stage/reset/pause/exit controls stay above the complete HUD using letterboxed canvas scale."
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 56,
+      "publicChecks": 56,
+      "failed": [],
+      "errors": [],
+      "fullNamesAndProfileStoragePreserved": true,
+      "gameplayStateUnchanged": true
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1280,
+          720
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "fighterCounts": [
+        2,
+        4
+      ],
+      "nameCases": [
+        "short preset",
+        "20 Japanese characters",
+        "20 wide Latin characters",
+        "20 emoji"
+      ],
+      "characters": [
+        "tails",
+        "tifa",
+        "edf",
+        "rean"
+      ],
+      "headZooms": [
+        0.6,
+        1,
+        1.5
+      ],
+      "nameRowsDoNotOverlapGauges": true,
+      "controlsDoNotOverlapHUD": true,
+      "damageStocksGaugesAndClockPreserved": true,
+      "overlapNameAlpha": 0.14,
+      "pauseButtonClickable": true,
+      "publicScreenshotsInspected": true,
+      "directory": "previews/quality/"
+    },
+    "online": {
+      "localIdenticalFrames": 60,
+      "publicIdenticalFrames": 60,
+      "newHUDDisabledOnSecondClient": true,
+      "oneClientMovesThroughNetwork": true,
+      "fullNamesPreserved": true,
+      "ownProfilePreserved": true,
+      "errors": []
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "69c299bd20c9f9cf39a756ffeb607330bdac58a2c891789dfc0d8a8607b61458",
+        "style.css": "8dc6a3dd95fcd7857310676612b1e0fba07041a6df89479feb99b501d7566b25"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 2,
+    "bytes": 4232894,
+    "failed": [],
+    "sourceImagesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 33476,
+    "stopped": true
+  }
+}
