@@ -1,0 +1,167 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    13
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "d9d3a1e0eeca2d7e1bfab63c8224923017e4d4d3",
+  "siteCommit": "118dfe1412121f6d3bd31b2ee7fcbd87d678b8d3",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_a0d79358b0bc8191bfce674cfe7ee034",
+  "versionNumber": 169,
+  "deployment": {
+    "id": "appgdep_6ae00f0015b081919ced4cf95158718f",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_a0d79358b0bc8191bfce674cfe7ee034",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 333,
+    "updated_at": "2026-10-27T02:40:15.624204+00:00"
+  },
+  "features": {
+    "canonicalBody": "World-space standing-body envelope shared by camera framing, viewport visibility/HUD overlap and overhead name anchors.",
+    "scale": "Physics ECB already scaled; compare against display/form size multiplied once.",
+    "preservedForms": {
+      "kurabe": {
+        "height": 150,
+        "radius": 64
+      },
+      "elma": {
+        "height": 140,
+        "radius": 72
+      },
+      "goemon": {
+        "height": 100,
+        "radius": 40
+      }
+    },
+    "kitten": "Explicit active gravity-slide/shift radius, actual draw origin, rotation and facing, including floor/wall/ceiling and diagonal shift.",
+    "unchanged": [
+      "sprite size and pose",
+      "physics and attack geometry",
+      "camera anticipation and easing",
+      "stage camera limits",
+      "blast boundaries and warning strip"
+    ],
+    "distantObjectsNotFramed": true
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 94,
+      "publicChecks": 94,
+      "failed": [],
+      "errors": [],
+      "opaquePixelsCompared": true,
+      "kittenBothFacings": true,
+      "enlargementNotDoubled": true,
+      "physicsAndStageRulesUnchanged": true,
+      "respawnAndEliminatedBodiesExcluded": true,
+      "distantObjectExcluded": true,
+      "oneVsThreeRendersPerCameraUpdateAgree": true,
+      "machineNameTagsClearMeasuredHeads": true
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1440,
+          900
+        ],
+        [
+          1280,
+          720
+        ]
+      ],
+      "cameraScenarios": [
+        "close",
+        "top",
+        "below-stage recovery",
+        "wide separation",
+        "preserved machines",
+        "ceiling",
+        "four fighters"
+      ],
+      "photographedScenarios": [
+        "recovery",
+        "machines",
+        "ceiling"
+      ],
+      "publicScreenshots": 6,
+      "publicScreenshotsInspected": true,
+      "characters": [
+        "chiikawa",
+        "estark",
+        "morphie",
+        "kitten",
+        "kurabe",
+        "elma",
+        "goemon"
+      ],
+      "directory": "previews/quality/",
+      "publicPattern": "camera-body-public-*"
+    },
+    "online": {
+      "localIdenticalFrames": 120,
+      "publicIdenticalFrames": 120,
+      "scenes": 2,
+      "extraRendersOnSecondClient": 2,
+      "displayAndPhysicsStateAgree": true,
+      "kittenGravityAndEnlargement": true,
+      "preservedMachines": true,
+      "errors": []
+    },
+    "publicAssets": {
+      "sha256Files": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "3611373ca9aaee9615035e362711e7abc9c2a08320d66fa71c820e2952f0bba3"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 1,
+    "bytes": 4155810,
+    "failed": [],
+    "sourceImagesAndSizesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 38372,
+    "stopped": true
+  }
+}
