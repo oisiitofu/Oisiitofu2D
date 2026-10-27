@@ -1,0 +1,147 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    12
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "518a76e85c31d03348bc929e0c88a074b2880fe3",
+  "siteCommit": "2402ec5413137b46544d971915598918f51a8385",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_49ce9a2d50d08191b89b186d93ce63b0",
+  "versionNumber": 168,
+  "deployment": {
+    "id": "appgdep_6ae0058c47248191bf640b291a11a87c",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_49ce9a2d50d08191b89b186d93ce63b0",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 331,
+    "updated_at": "2026-10-27T01:59:54.872537+00:00"
+  },
+  "features": {
+    "renderOrder": [
+      "platforms and launch trails",
+      "shared decorative waves/particles",
+      "ghosts",
+      "projectiles/placed objects",
+      "fighters and authored attack artwork",
+      "focused impact confirmations"
+    ],
+    "drawMathUnchanged": true,
+    "effectsTickUnchangedAfterNewlineNormalization": true,
+    "gameplayAndArtworkUnchanged": true
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 19,
+      "publicChecks": 19,
+      "failed": [],
+      "errors": [],
+      "threeRendersPreserveFighterAttackEffectsAndObjectState": true,
+      "canvasTransformAndAlphaRestored": true,
+      "opaqueBodyParticleProbeUnchanged": true,
+      "opaqueBodyWaveProbeUnchanged": true,
+      "probePixel": [
+        18,
+        52,
+        86,
+        255
+      ],
+      "beforeChangeBothProbesOccluded": true
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1440,
+          900
+        ],
+        [
+          1280,
+          720
+        ]
+      ],
+      "scenes": [
+        "four-player clustered strong impacts",
+        "Noctis sword projectile and placed marker"
+      ],
+      "characters": [
+        "tifa",
+        "tails",
+        "noctis",
+        "edf"
+      ],
+      "sameSeedPoseAndFrame": true,
+      "focusedImpactConfirmationsRetained": 4,
+      "projectileAndMarkerRemain": true,
+      "publicScreenshotsInspected": true,
+      "directory": "previews/quality/",
+      "beforePattern": "clutter-before-*",
+      "afterPattern": "clutter-after-*",
+      "publicPattern": "clutter-public-*"
+    },
+    "online": {
+      "localIdenticalFrames": 60,
+      "publicIdenticalFrames": 60,
+      "commonDebrisDisabledOnSecondClient": true,
+      "sharedDecorationsObservedOnBoth": true,
+      "oneClientMovesThroughNetwork": true,
+      "fullNamesPreserved": true,
+      "ownProfilePreserved": true,
+      "errors": []
+    },
+    "publicAssets": {
+      "sha256Files": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "cd0757ac0ad498e08bd223020d7c79cfbfeece451fef9f978065a4e5824ce079"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 1,
+    "bytes": 4154138,
+    "failed": [],
+    "sourceImagesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 7952,
+    "stopped": true
+  }
+}
