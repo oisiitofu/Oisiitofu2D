@@ -16,5 +16,5 @@ const Net=(()=>{
   }
  }
  const noop=()=>{};
- return{init,browse,playerName:id=>id===0?PlayerNames.current:(id+1)+'P',returnToSelection:noop,leave:noop,capture:noop,finished:noop,ready:noop,status:noop,active:false,applying:false,code:'',slot:0,config:null,inputs:null,starting:false};
+ return{init,browse,playerName:id=>id===0?PlayerNames.current:(id+1)+'P',returnToSelection:noop,leave:noop,capture:noop,finished:noop,refreshResult:noop,ready:noop,status:noop,active:false,applying:false,code:'',slot:0,config:null,inputs:null,starting:false};
 })();

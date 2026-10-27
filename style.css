@@ -364,3 +364,15 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 #training-tools.demo-view>div:last-child{flex-wrap:wrap}
 
 .network-wait{position:absolute;top:92px;right:4%;z-index:4;padding:10px 14px;background:#172235;border:1px solid #e8b96a;border-radius:4px;box-shadow:0 4px 18px #0005;pointer-events:none;max-width:280px}.network-wait b{display:block;font-size:13px;line-height:1.5;color:#ffe2ad}.network-wait small{display:block;font-size:11px;line-height:1.6;color:#eed7b5}
+
+/* Public room readiness on the result screen. Names wrap without truncating. */
+#result-readiness{margin:16px 0;padding:12px;border:1px solid #5a728d;border-radius:10px;background:#0e1b2ce8;text-align:left;color:#eaf2ff}.result-ready-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;justify-content:space-between}.result-ready-heading h3{font-size:13px;margin:0}.result-ready-heading small{font-size:11px;color:#bdcde0}#result-ready-players{list-style:none;margin:8px 0;padding:0}#result-ready-players li{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:5px 0;border-bottom:1px solid #ffffff16}#result-ready-players span{min-width:0;font-size:12px;overflow-wrap:anywhere;line-height:1.5}#result-ready-players b{flex-shrink:0;font-size:11px;color:#c6d8f4}#result-ready-players .ready b{color:#9bf0b5}#result-ready-hint{font-size:11px!important;line-height:1.6;margin:8px 0 0!important;color:#bdcde0!important}
+
+#result:has(#result-readiness:not(.hidden)) .restart:disabled{color:#eaf2ff;background:#263e57;border-color:#58758d;opacity:1}
+@media(min-width:1000px) and (max-height:800px){
+ #result.presentation-result:has(#result-readiness:not(.hidden)) .result{padding:20px;max-height:86dvh}
+ #result:has(#result-readiness:not(.hidden)) h2{font-size:32px;margin:8px 0}
+ #result:has(#result-readiness:not(.hidden)) #resultdetail{margin:8px 0}
+ #result:has(#result-readiness:not(.hidden)) #stats{font-size:10px;line-height:1.4;margin:8px 0}
+ #result-readiness{margin:10px 0;padding:10px}
+}
