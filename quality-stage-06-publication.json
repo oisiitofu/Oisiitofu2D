@@ -62,12 +62,13 @@
   },
   "verification": {
     "functional": {
-      "localChecks": 56,
-      "publicChecks": 56,
+      "localChecks": 60,
+      "publicChecks": 60,
       "failed": [],
       "errors": [],
       "fullNamesAndProfileStoragePreserved": true,
-      "gameplayStateUnchanged": true
+      "gameplayStateUnchanged": true,
+      "drawnLabelsMatchFullNameOrGraphemePrefix": true
     },
     "visual": {
       "resolutions": [
@@ -107,7 +108,8 @@
       "overlapNameAlpha": 0.14,
       "pauseButtonClickable": true,
       "publicScreenshotsInspected": true,
-      "directory": "previews/quality/"
+      "directory": "previews/quality/",
+      "staticPublicFixture": "Static adapter removes the online select option; test adds a temporary option to exercise actual long-name drawing, then removes it. Real synchronized names are separately verified through the online entry."
     },
     "online": {
       "localIdenticalFrames": 60,
