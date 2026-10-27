@@ -217,6 +217,12 @@ const Roster=(()=>{
  const $roster=id=>document.getElementById(id);
  function activeId(){if(BattlePlayers.selection>=2)return BattlePlayers.seats[BattlePlayers.selection].character;return target==='cpu'?$roster('cpu-character').value:chosen;}
  function activeColor(){if(BattlePlayers.selection>=2)return BattlePlayers.seats[BattlePlayers.selection].color;return target==='cpu'?+$roster('color2').value:selected;}
+ function selectionContext(){
+  const online=$roster('battle-mode').value==='online',seat=BattlePlayers.selection,count=SquadBattle.size(),id=count>1?SquadBattle.selectedCharacter:activeId(),cpu=BattlePlayers.seats[seat]?.control==='cpu';
+  const owner=online?Net.playerName(Net.slot):seat===1&&BattlePlayers.count()===2&&cpu?'CPU':`${seat+1}P`+(cpu?' · CPU':'');
+  const bingo=online&&$roster('match-kind').value==='bingo',locked=online&&Net.lineupLocked;
+  return{owner,characterId:id,characterName:bingo?'ビンゴカードで選択':definitionFor(id)?.name||'おまかせ',slot:count>1?SquadBattle.selectedSlot+1:null,count,editable:state==='menu'&&!locked&&!bingo,reason:bingo?'使用キャラはビンゴカードから選択してください。':locked?'対戦の準備中・対戦中は編成を変更できません。':state!=='menu'?'対戦の前にキャラを選択してください。':count>1?'他の出場枠で選択済みのキャラは選べません。':'名前を押すと、このプレイヤーのキャラを変更します。'};
+ }
  function refreshSelection(){
   BattlePlayers.refresh();
   const id=activeId(),d=definitionFor(id);if(!d)return;
@@ -241,7 +247,7 @@ const Roster=(()=>{
    c.setAttribute('aria-pressed',String(c.dataset.id===id));
    c.setAttribute('aria-label',d.name===c.querySelector('b').textContent?`${d.name}（${target==='cpu'?'CPU':'1P'} 選択中）`:c.querySelector('b').textContent);
   });
-  artReady();summary();SquadBattle.refresh();BattlePlayers.refresh();
+  artReady();summary();SquadBattle.refresh();BattlePlayers.refresh();dispatchEvent(new Event('roster-context-change'));
  }
  function select(id){if(!definitionFor(id))return;if(BattlePlayers.setCharacter(id))return;if(!SquadBattle.choose(id))return;if(target==='cpu'){$roster('cpu-character').value=id;$roster('cpu-character').dispatchEvent(new Event('change'));}else{chosen=id;refreshSelection();}}
  function setTarget(value,preserveSeat=false){if(!preserveSeat)return BattlePlayers.setSelection(value==='cpu'?1:0);target=value==='cpu'&&$roster('battle-mode').value!=='online'?'cpu':'player';refreshSelection();}
@@ -305,5 +311,5 @@ const Roster=(()=>{
   for(const d of selectable){const option=[...cpu.options].find(o=>o.value===d.id)||new Option(d.name,d.id);cpu.append(option);}
   const random=[...cpu.options].find(o=>o.value==='random');if(random)cpu.append(random);cpu.value=previous;
   document.querySelector('#open-match-settings').onclick=()=>document.querySelector('#match-settings').showModal();document.querySelector('#close-match-settings').onclick=()=>document.querySelector('#match-settings').close();document.querySelector('#open-room').onclick=()=>BingoBattle.enabled()?BingoBattle.openOnline(false):Net.browse();document.querySelector('#close-room').onclick=()=>document.querySelector('#online-room').close();for(const id of ['cpu-character','difficulty','stage','color2','one-on-one'])document.getElementById(id).addEventListener('change',()=>{if(id==='cpu-character'||id==='color2')refreshSelection();else summary();});document.querySelector('#match-settings').addEventListener('click',e=>{if(e.target.closest('.open-settings,#help'))document.querySelector('#match-settings').close();},true);addEventListener('resize',fit);document.fonts.ready.then(fit);document.fonts.addEventListener('loadingdone',fit);summary();}
- return{definitions,selectable,fit,chooseForSlot:select,init(){initStages();init();initPanels();SquadBattle.init();BattlePlayers.init();},open,artReady,summary,closePanels,setColor,setTarget,refreshSelection,resolve,get target(){return target},get selected(){return chosen},get current(){return definitionFor(chosen)}};
+ return{definitions,selectable,fit,chooseForSlot:select,init(){initStages();init();initPanels();SquadBattle.init();BattlePlayers.init();},open,artReady,summary,closePanels,setColor,setTarget,refreshSelection,selectionContext,resolve,get target(){return target},get selected(){return chosen},get current(){return definitionFor(chosen)}};
 })();

@@ -13,6 +13,7 @@ const SquadBattle=(()=>{
  function refresh(){
   const bingo=document.querySelector('#match-kind').value==='bingo'&&document.querySelector('#battle-mode').value==='online',count=size(),online=document.querySelector('#battle-mode').value==='online',joined=online&&!!Net.code;document.querySelector('#online-lineup-size').value=String(count);document.querySelector('#online-lineup-help').textContent=joined&&Net.slot!==0?'編成数はルーム作成者が設定':count>1?'出場枠 → ファイターを選択':'3・5キャラの団体戦も選べます';const row=document.querySelector('#squad-lineup');if(!row)return;
   if(count>1&&previousSize===1){teams.player[0]=Roster.selected;teams.cpu[0]=document.querySelector('#cpu-character').value;slots.player=slots.cpu=0;}if(count>previousSize)for(const side of ['player','cpu']){const seen=new Set();for(let n=0;n<count;n++){const id=teams[side][n];if(id==='random')continue;if(seen.has(id))teams[side][n]='random';else seen.add(id);}}previousSize=count;for(const side of ['player','cpu'])slots[side]=Math.min(slots[side],Math.max(0,count-1));
+  dispatchEvent(new Event('roster-context-change'));
   for(const card of document.querySelectorAll('.fighter-card')){card.disabled=!available(card.dataset.id);card.classList.toggle('squad-taken',card.disabled&&count>1);card.setAttribute('aria-label',card.querySelector('b').textContent+(card.disabled?bingo?'（ビンゴカードから選択）':'（別の出場枠で選択済み）':''));}
   row.classList.toggle('hidden',count<2);row.replaceChildren();if(bingo)document.querySelector('#roster-selection-hint').textContent='使用キャラはビンゴカードから選択してください';if(count<2)return;
   const side=online?'player':Roster.target,owner=online?Net.playerName(Net.slot):side==='cpu'?'CPU':'1P';if(moving&&(moving.side!==side||moving.slot>=count||!editable()))moving=null;row.setAttribute('aria-label',owner+'の出場順');
@@ -40,5 +41,5 @@ const SquadBattle=(()=>{
   document.querySelector('#online-lineup-size').onchange=event=>{select.value=event.target.value;select.dispatchEvent(new Event('change',{bubbles:true}));};
   refresh();
  }
- return{init,size,available,valid,choose,refresh,config,start,onKO,respawn,hud,teams,reorder,cancelReorder,get reordering(){return!!moving;}};
+ return{init,size,available,valid,choose,refresh,config,start,onKO,respawn,hud,teams,reorder,cancelReorder,get selectedSlot(){return slots[document.querySelector('#battle-mode').value==='online'?'player':Roster.target];},get selectedCharacter(){const side=document.querySelector('#battle-mode').value==='online'?'player':Roster.target;return teams[side][slots[side]];},get reordering(){return!!moving;}};
 })();
