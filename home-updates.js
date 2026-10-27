@@ -2,6 +2,7 @@
 // Add completed releases here with their actual date/time; newest is rendered first.
 const HomeUpdates=(()=>{
  const entries=[
+ {"at": "2026-10-27T10:51:46+09:00", "items": ["対戦中のエフェクトを見やすく調整しました。"]},
  {"at": "2026-10-27T10:28:27+09:00", "items": ["対戦中のプレイヤー名とHUDを見やすくしました。"]},
  {"at": "2026-10-27T10:00:54+09:00", "items": ["キャラ選択に性能・立ち回りの説明を追加しました。"]},
  {"at": "2026-10-27T00:48:27+09:00", "items": ["CPUの復帰行動を改善しました。"]},
