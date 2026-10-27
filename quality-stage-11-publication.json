@@ -1,0 +1,169 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    16
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "19b2535a96a23b05248a533fed8793b16e3cea9e",
+  "siteCommit": "5dff44bb96724627c46be6e3da841801a1d50365",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_b6db6230da108191b9fbccd59c500738",
+  "versionNumber": 172,
+  "deployment": {
+    "id": "appgdep_6ae07c6954348191847a1cceb6f95dd1",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_b6db6230da108191b9fbccd59c500738",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 339,
+    "updated_at": "2026-10-27T10:27:03.688412+00:00"
+  },
+  "features": {
+    "entry": "Training-only frame-table demo actions for normal, smash, aerial and four special-entry moves.",
+    "engine": "Existing attack entry and normal physics, rules, windows, hit identity, poses and VFX progression; one action without follow-up input or charging.",
+    "reset": "Positions, damage and gauges reset; participant count, characters, colors, teams and devices are preserved, including 3P and 4P.",
+    "playback": "Replay, cancel/reset, frame advance, 60-frame observation tail and bounded automatic input; ordinary control resumes after completion or cancel.",
+    "prerequisites": "Chains, throws and counters explain manual confirmation; changed equipment/form asks for reset. Real move-gate rejection reports failure without retained input.",
+    "layout": "Right-side compact demo panel avoids the selected actor.",
+    "online": "No demo activation, replay or input substitution outside offline training.",
+    "preserved": [
+      "source art and animation",
+      "move data and hit IDs",
+      "normal battle physics",
+      "network format and backend",
+      "saved names and settings",
+      "roster order and favorites"
+    ]
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 88,
+      "publicChecks": 88,
+      "failed": [],
+      "errors": [],
+      "moves": [
+        [
+          "dragoon",
+          "jab"
+        ],
+        [
+          "dragoon",
+          "fair"
+        ],
+        [
+          "noctis",
+          "dragon"
+        ]
+      ],
+      "phases": [
+        "anticipation",
+        "acceleration",
+        "attack",
+        "follow-through",
+        "recovery"
+      ],
+      "actualHitboxesAndProjectile": true,
+      "wholeBodyPosesChange": true,
+      "replayPositionVelocityAndPoseTraceMatches": true,
+      "cancelAndRealKeyboardControl": true,
+      "fourParticipantsAndDevicesPreserved": true,
+      "frameAdvance": true,
+      "prerequisiteAndRealGateFailure": true,
+      "boundedPlayback": true,
+      "noMutationOfMoveDataOrSavedSetup": true
+    },
+    "regression": {
+      "test": "training-reset-input-test.cjs",
+      "localChecks": 258,
+      "publicChecks": 258,
+      "failed": [],
+      "errors": [],
+      "defaultAndCustomBindings": true,
+      "fourGamepads": true,
+      "normalBattleAndSettingsUnaffected": true
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1280,
+          720
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "publicScreenshots": 8,
+      "publicScreenshotsInspected": true,
+      "actorPanelNonOverlap": true,
+      "directory": "previews/quality/",
+      "publicPattern": "demo-public-*.png"
+    },
+    "online": {
+      "localIdenticalFrames": 60,
+      "publicIdenticalFrames": 60,
+      "demoTickDisabledOnSecondClient": true,
+      "demoActionsBlockedAndReadOnlyOnBoth": true,
+      "oneClientMovesThroughNetwork": true,
+      "fullNamesAndSavedProfilesPreserved": true,
+      "errors": []
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "normalizedHtmlFiles": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "a2e6685c9ea5f7606da9e8c41316231b30991fd109255713002cf784315e58a8",
+        "index.html": "ab8568965b9e72a71e636adc2d05b0292cfab3d8bec711b0cad9613a08f6ff16",
+        "style.css": "b3323894470e324e6080316f1df67d891f9a6b391567ca3995ca61048b6efe10"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 4280799,
+    "failed": [],
+    "sourceImagesAndSizesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 41576,
+    "stopped": true
+  }
+}
