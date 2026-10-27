@@ -1,0 +1,129 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    10
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "d146e321d2160cd8333a8490c3a8608d229c4f9b",
+  "siteCommit": "0151d0108c4aa0842184a31df29aacb72fcc7039",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_582f5fc5140c81918696e1b118baaf25",
+  "versionNumber": 166,
+  "deployment": {
+    "id": "appgdep_6adff8fad6b88191a5e565517ecaaeac",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_582f5fc5140c81918696e1b118baaf25",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 327,
+    "updated_at": "2026-10-27T01:06:16.256334+00:00"
+  },
+  "features": {
+    "entry": "Selected-fighter performance/tactics dialog, respects current player/CPU selection.",
+    "comparison": "Live runSpeed/airSpeed/weight relative to selectable-character medians; near baseline is plus/minus five percent.",
+    "resources": "Actual aerial-jump count and finite/conditional passive hover.",
+    "authoredNotes": [
+      "vivi",
+      "ulgrim",
+      "noctis",
+      "edea",
+      "tails",
+      "nightraven"
+    ],
+    "fallback": "Other selectable fighters show verified base-stat implications and air resources; no invented move or recovery ratings.",
+    "random": "No fabricated stats before the random fighter is resolved."
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 60,
+      "publicChecks": 60,
+      "failed": [],
+      "errors": [],
+      "gameplayMoveOrderAndStorageUnchanged": true,
+      "hiddenFormsExcluded": true,
+      "randomLast": true,
+      "tailsResourceGateMatchesNotes": true
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1280,
+          720
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "selectedFighters": [
+        "vivi",
+        "tails",
+        "nightraven",
+        "megamanexe"
+      ],
+      "entryNamePortraitNonOverlap": true,
+      "dialogNoHorizontalOverflow": true,
+      "escapeRestoresFocus": true,
+      "publicScreenshotsInspected": true,
+      "directory": "previews/quality/"
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "normalizedHTMLFiles": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "fe1da59aa37a8c1ee83773dab326aede7d2ebcfa5f2091c8e782873118722f9a",
+        "index.html": "3284991f5e1e7b408c52152f727362ff223420a50e11c8c65a6046afdf0cc481",
+        "style.css": "2e26a3c15455e6d5449979fe2f8226344ac438e9b84cbcc76fc9c182874bd1b7"
+      }
+    },
+    "scope": "Selection information only; no gameplay/online protocol changes, CPU fights or repeated online simulation required for this stage."
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 4260349,
+    "failed": [],
+    "sourceImagesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 1748,
+    "stopped": true
+  }
+}
