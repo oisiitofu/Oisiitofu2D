@@ -26,3 +26,6 @@ const ReanVFX=(()=>{
  }
  return{draw,impact,hud};
 })();
+
+// Reserve the existing gauge above the panel when placing the player-name row.
+if(typeof BattleHud!=='undefined')BattleHud.reserve('rean',20);

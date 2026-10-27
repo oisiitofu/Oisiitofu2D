@@ -121,10 +121,10 @@ function fighterScreenBody(f){
 }
 function fighterOutsideViewport(f){const b=fighterScreenBody(f);return b.right<=0||b.left>=W||b.bottom<=0||b.top>=H;}
 function battleWorldHidden(f){return!!blastWarningSide(f)&&fighterOutsideViewport(f);}
-function battleHudOpacity(x,y){
+function battleHudOpacity(x,y,topInset=0){
  // Fade any player's whole panel when any live body overlaps it, including
  // portraits and character-specific gauges. This is presentation only.
- return fighters.some(f=>{if(f.respawn||BattlePlayers.out(f)||fighterOutsideViewport(f))return false;const b=fighterScreenBody(f);return b.right>x-55&&b.left<x+262&&b.bottom>y-32&&b.top<Math.min(H,y+112);})?.14:1;
+ return fighters.some(f=>{if(f.respawn||BattlePlayers.out(f)||fighterOutsideViewport(f))return false;const b=fighterScreenBody(f);return b.right>x-55&&b.left<x+262&&b.bottom>y-32-topInset&&b.top<Math.min(H,y+112);})?.14:1;
 }
 function loupePosition(f){
  if(f.respawn||BattlePlayers.out(f)||!fighterOutsideViewport(f))return null;

@@ -13,3 +13,6 @@ const EdfVFX=(()=>{
  }
  return{stamp,directed,draw,drawObjects,impact,hud};
 })();
+
+// Reserve the existing gauge above the panel when placing the player-name row.
+if(typeof BattleHud!=='undefined')BattleHud.reserve('edf',76);

@@ -337,6 +337,8 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 
 .battle-detail-readout{max-width:390px;margin-top:4px;line-height:1.6;color:#b9e5ff;font-size:10px}.battle-status-legend p{max-width:390px;line-height:1.7;color:#c5d5e8}
 
+#battlebar{gap:12px}#battlebar #battlelabel{padding:6px 9px;max-width:38%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#0c1827cc;border-radius:3px;font-size:11px}#battlebar button{font-size:11px}
+
 /* A compact entry in the selected-fighter banner; detail stays readable at PC size. */
 #open-character-guide{position:absolute;right:120px;top:50%;transform:translateY(-50%);z-index:2;padding:8px 12px;font-size:11px;line-height:1.3;color:#edf5ff;background:#213c55;border:1px solid #6c9cc1;border-radius:4px}
 #open-character-guide:hover{background:#315674}#open-character-guide:focus-visible{outline:2px solid #c1e5ff;outline-offset:2px}
