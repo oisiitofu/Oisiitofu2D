@@ -49,3 +49,6 @@ function tailsNativeBox(f,a,w){const n=w.pose??a.pose,rect=TailsArtRects.frames[
 function tailsPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 65;if(f.mode==='LedgeGetup')return 66;if(f.mode==='JumpSquat')return 12;if(f.mode==='ForwardRoll')return 48;if(f.mode==='BackwardRoll')return 49;if(f.mode==='SpotDodge')return 47;if(f.state==='walk')return[1,2,3][Math.floor(frame/6)%3];if(f.state==='run')return[4,5,6,7][Math.floor(frame/3)%4];return({idle:0,crouch:11,jump:13,double:15,fall:50,land:73,guard:46,dodge:47,hit:51,fly:52,down:53,getup:54,grab:55,caught:51,throw:57})[f.state]??0;}
 MoveMotion.define('tails',Object.fromEntries(Object.entries(TailsMotion).map(([k,s])=>[k,{windup:s[0],strike:[s[1]],recovery:s[2]}])));
 
+
+// Selection notes describe existing move behavior; they do not tune combat.
+if(typeof CharacterGuide!=='undefined')CharacterGuide.define("tails",{"strength":"追加の空中ジャンプと、上必殺を長押しする飛行で空中の位置を調整できる。","caution":"空中の横必殺は着地まで1回。上必殺も燃料を使うので、帰る手段を残そう。"});

@@ -36,3 +36,6 @@ const EdeaRules=NewcomerCore.create('edea',EdeaMoves,{
 function edeaDefaultReduction(f){return f.attack?.edeaDefault&&f.timer>=8&&f.timer<40&&!f.attack.released ? .45 : 1;}
 function edeaPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 38;if(f.mode==='LedgeGetup')return 39;if(f.mode==='JumpSquat')return 32;if(f.state==='walk')return [1,52,53,24][Math.floor(frame/6)%4];if(f.state==='run')return [2,54,55,29][Math.floor(frame/3)%4];if(f.recovered&&!f.grounded&&f.state==='fall')return 51;return({idle:0,crouch:3,jump:33,double:34,fall:35,land:36,guard:20,dodge:3,hit:21,fly:21,down:22,getup:37,grab:17,caught:21,throw:19})[f.state]??0;}
 MoveMotion.define('edea',{heavy:{windup:3,strike:[49,50],recovery:0},fair:{windup:34,strike:[44,6],recovery:5}});
+
+// Selection notes describe existing move behavior; they do not tune combat.
+if(typeof CharacterGuide!=='undefined')CharacterGuide.define("edea",{"strength":"下必殺でBPを貯め、通常必殺を最大4段の連撃にできる。","caution":"BPは通常必殺でまとめて消費。下必殺を最後まで構える時間を確保して貯め直そう。"});

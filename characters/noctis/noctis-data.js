@@ -102,3 +102,6 @@ Object.assign(NoctisMoves.dash,{rangedInterval:32,rangedRearm:16});
 
 // Reviewed whole-body attack sequences; timings and hit identities stay shared.
 MoveMotion.define('noctis',{"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"fair":{"strike":[13],"windup":14},"smash":{"strike":[13,9],"windup":14},"jab3":{"strike":[6,7],"windup":14},"bair":{"strike":[7,10],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});
+
+// Selection notes describe existing move behavior; they do not tune combat.
+if(typeof CharacterGuide!=='undefined')CharacterGuide.define("noctis",{"strength":"横必殺で剣を設置し、押し直すと剣の位置へ転移して斬る。先に置いて進路を作れる。","caution":"転移斬りには先に剣の設置が必要。上必殺も方向を選んだ後に移動するため、出だしに注意。"});

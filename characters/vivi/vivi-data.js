@@ -15,3 +15,6 @@ Object.assign(ViviMoves.dragon,{rangedInterval:40,rangedRearm:20});
 
 // Reviewed whole-body attack sequences; timings and hit identities stay shared.
 MoveMotion.define('vivi',{"fair":{"strike":[13],"windup":14},"upsmash":{"strike":[14,8],"windup":14},"uair":{"strike":[16],"windup":14},"smash":{"strike":[13,9],"windup":14},"bair":{"strike":[7,10],"windup":14},"jab3":{"strike":[6,7],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});
+
+// Selection notes describe existing move behavior; they do not tune combat.
+if(typeof CharacterGuide!=='undefined')CharacterGuide.define("vivi",{"strength":"通常必殺は溜めて強化。横必殺は炎と氷の2連射で前方を攻められる。","caution":"下必殺のフレアバーストは出だしが遅い。溜め中に近づかれたときの間合いに注意。"});

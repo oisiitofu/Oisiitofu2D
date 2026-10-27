@@ -32,3 +32,6 @@ const UlgrimMoves=(()=>{
 
 // Reviewed whole-body attack sequences; timings and hit identities stay shared.
 MoveMotion.define('ulgrim',{"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"fair":{"strike":[13],"windup":14},"smash":{"strike":[13,9],"windup":14},"bair":{"strike":[7,10],"windup":14},"jab3":{"strike":[6,7],"windup":14},"downsmash":{"strike":[17,7],"windup":14}});
+
+// Selection notes describe existing move behavior; they do not tune combat.
+if(typeof CharacterGuide!=='undefined')CharacterGuide.define("ulgrim",{"strength":"横必殺の出だしには短い無敵があり、相手の攻撃をすり抜けて斬り込める。","caution":"下必殺のカウンターは一定時間で受付が終わる。構え続けて守る技ではない。"});
