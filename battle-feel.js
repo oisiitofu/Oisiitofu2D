@@ -28,9 +28,9 @@ const BattleFeel=(()=>{
   const constrain=()=>{camera.z=Math.max(minZoom,camera.z);camera.x=clamp(camera.x,view.left+W/2/camera.z,view.right-W/2/camera.z);camera.y=clamp(camera.y,view.top+H*.47/camera.z,view.bottom-H*.53/camera.z);};
   // Frame every live body, with a little room in its direction of travel.
   // Bounded anticipation handles launches without chasing a distant projectile.
-  const bounds=alive.map(f=>{const dx=clamp((f.vx||0)*7,-110,110),dy=clamp((f.vy||0)*5,-90,90);return{
-   left:clamp(f.x-f.character.ecb.radius+Math.min(0,dx),view.left,view.right),right:clamp(f.x+f.character.ecb.radius+Math.max(0,dx),view.left,view.right),
-   top:clamp(f.y-f.character.ecb.height+Math.min(0,dy),view.top,view.bottom),bottom:clamp(f.y+Math.max(0,dy),view.top,view.bottom)};});
+  const bounds=alive.map(f=>{const body=fighterWorldBody(f),dx=clamp((f.vx||0)*7,-110,110),dy=clamp((f.vy||0)*5,-90,90);return{
+   left:clamp(body.left+Math.min(0,dx),view.left,view.right),right:clamp(body.right+Math.max(0,dx),view.left,view.right),
+   top:clamp(body.top+Math.min(0,dy),view.top,view.bottom),bottom:clamp(body.bottom+Math.max(0,dy),view.top,view.bottom)};});
   const left=Math.min(...bounds.map(b=>b.left)),right=Math.max(...bounds.map(b=>b.right));
   const top=Math.min(...bounds.map(b=>b.top)),bottom=Math.max(...bounds.map(b=>b.bottom));
   const target={x:clamp((left+right)/2,rule.minX,rule.maxX),y:clamp((top+bottom)/2-24,rule.minY,rule.maxY)};

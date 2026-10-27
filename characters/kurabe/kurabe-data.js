@@ -65,3 +65,6 @@ function kurabePose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatD
 
 // Reviewed whole-body attack sequences; timings and hit identities stay shared.
 MoveMotion.define('kurabe',{"jab3":{"strike":[7,8],"windup":3},"fair":{"strike":[12,13],"windup":3},"upsmash":{"strike":[10,15],"windup":3}});
+
+// Presentation envelope for the existing body/form; never changes art or collision.
+KurabeRules.framingBody=f=>kurabeMech(f)?{height:150,radius:64}:null;

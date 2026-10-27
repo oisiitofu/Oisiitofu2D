@@ -59,3 +59,6 @@ Object.assign(KittenMoves.dragon,{rangedInterval:40,rangedRearm:20});
 
 // Reviewed whole-body attack sequences; timings and hit identities stay shared.
 MoveMotion.define('kitten',{"jab2":{"strike":[6,7],"windup":14},"upsmash":{"strike":[16,8],"windup":14},"uair":{"strike":[16],"windup":14},"jab3":{"strike":[7,9],"windup":14},"fair":{"strike":[12,13],"windup":14},"smash":{"strike":[13,9],"windup":14}});
+
+// Presentation envelope for the existing body/form; never changes art or collision.
+KittenRules.framingBody=f=>{const a=f.attack;if(!(a?.gravitySlide&&a.sliding||a?.gravityShift&&a.launched&&!a.escapeSide))return null;return{rotation:kittenMotionRotation(f),radius:66};};

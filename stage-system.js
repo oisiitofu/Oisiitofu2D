@@ -113,11 +113,18 @@ function blastEdgeDistances(f){const z=StageRules.blast,h=f.character?.ecb.heigh
 function blastWarningSide(f){return blastEdgeDistances(f).sort((a,b)=>a.distance-b.distance).find(e=>e.distance<=StageRules.loupe.warningDistance)?.side||null;}
 // Screen visibility includes the HUD area. Damage panels must not shorten the
 // playable viewport or turn an on-screen fighter into an off-screen indicator.
+function fighterWorldBody(f){
+ // Standing-body envelope, not weapons/VFX. Physics already scales its ECB;
+ // display calibration and explicit independent forms receive their scale once.
+ const id=f.characterId,scale=MorphieRules.scale(f),form=NewcomerCore.registry[id]?.framingBody?.(f);
+ const h=Math.max(f.character?.ecb.height??CharacterData[id]?.ecb.height??BODY_HEIGHT,(BattleSize.heights[id]??0)*scale,(form?.height??0)*scale);
+ const radius=Math.max(f.character?.ecb.radius??CharacterData[id]?.ecb.radius??18,h*.3,(form?.radius??0)*scale),y=BattleSize.originY(f),rotation=Number.isFinite(form?.rotation)?form.rotation:0;
+ if(!rotation)return{left:f.x-radius,right:f.x+radius,top:y-h,bottom:y};
+ const c=Math.cos(rotation),s=Math.sin(rotation),points=[[-radius,-h],[radius,-h],[-radius,0],[radius,0]].map(([px,py])=>({x:f.x+(px*c-py*s)*f.face,y:y+px*s+py*c}));
+ return{left:Math.min(...points.map(p=>p.x)),right:Math.max(...points.map(p=>p.x)),top:Math.min(...points.map(p=>p.y)),bottom:Math.max(...points.map(p=>p.y))};
+}
 function fighterScreenBody(f){
- const id=f.characterId,h=Math.max(f.character?.ecb.height??CharacterData[id]?.ecb.height??BODY_HEIGHT,(BattleSize.heights[id]??0)*MorphieRules.scale(f));
- const radius=Math.max(f.character?.ecb.radius??CharacterData[id]?.ecb.radius??18,h*.3);
- const x=W/2+(f.x-camera.x)*camera.z,y=H*.47+(BattleSize.originY(f)-camera.y)*camera.z;
- return{left:x-radius*camera.z,right:x+radius*camera.z,top:y-h*camera.z,bottom:y};
+ const b=fighterWorldBody(f);return{left:W/2+(b.left-camera.x)*camera.z,right:W/2+(b.right-camera.x)*camera.z,top:H*.47+(b.top-camera.y)*camera.z,bottom:H*.47+(b.bottom-camera.y)*camera.z};
 }
 function fighterOutsideViewport(f){const b=fighterScreenBody(f);return b.right<=0||b.left>=W||b.bottom<=0||b.top>=H;}
 function battleWorldHidden(f){return!!blastWarningSide(f)&&fighterOutsideViewport(f);}
