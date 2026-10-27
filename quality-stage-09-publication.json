@@ -1,0 +1,149 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    14
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "aafdfec39c3cd8165732a204334b9bc754afcb23",
+  "siteCommit": "be07ca95e7f7c04ff3348976ce91dbaf68ee9d63",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_f94cec6b8fdc8191b1f685eeec7a5377",
+  "versionNumber": 170,
+  "deployment": {
+    "id": "appgdep_6ae01800bd6c8191987d132203af06f8",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_f94cec6b8fdc8191b1f685eeec7a5377",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 335,
+    "updated_at": "2026-10-27T03:18:39.101644+00:00"
+  },
+  "features": {
+    "selectionTarget": "Own player name, active squad slot/count and actual current fighter remain visible during search, sorting and favorites.",
+    "availability": "Disabled names explain duplicate/locked/Bingo constraints; favorite stars stay usable. Choice is rechecked before changing the existing roster selection.",
+    "liveUpdates": "Host squad resizing, local target switching and online name changes update the target panel without rebuilding the list.",
+    "preserved": [
+      "roster order and display numbers",
+      "hidden forms and random last",
+      "saved names and favorites",
+      "settings/list button placement",
+      "card art without numbers",
+      "Bingo/server selection rules",
+      "communication format"
+    ]
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 56,
+      "publicChecks": 56,
+      "failed": [],
+      "errors": [],
+      "seats": [
+        "1P",
+        "CPU",
+        "3P",
+        "4P"
+      ],
+      "squadSlots": true,
+      "duplicateGuard": true,
+      "favoritesReload": true,
+      "searchAndSort": true,
+      "namesContrastAtLeast": 4.5,
+      "nameOnlyList": true,
+      "escapeAndFocus": true,
+      "contextContainsOnlyPrimitives": true
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1280,
+          720
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "publicScreenshots": 3,
+      "publicScreenshotsInspected": true,
+      "directory": "previews/quality/",
+      "publicPattern": "list-target-*public*"
+    },
+    "online": {
+      "localChecks": 17,
+      "publicChecks": 17,
+      "realClients": 2,
+      "roomPreparationOnly": true,
+      "ownThirdSlot": true,
+      "otherLineupUnchanged": true,
+      "squadSizeSequence": [
+        3,
+        5,
+        3
+      ],
+      "longNameCharacters": 20,
+      "opponentLineupsConcealedInReceivedJSON": true,
+      "noNewMessageJustFromOpeningList": true,
+      "preparationLockGuardSimulated": true,
+      "bingoGuardSimulated": true,
+      "errors": []
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "normalizedHtmlFiles": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "33a86476f4960870be0e0aa66b17ce7a7a000fe4b8592733c2184fe0d0654629",
+        "index.html": "7d226dcce307c3f583eff6e33b562cc0cd7c34a28c4bf10b4799a14e1a10d534",
+        "style.css": "aec228fa5489c7545edd6bff012af26a813f4dc4249c4115d4ba623a3e15a009"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 4269665,
+    "failed": [],
+    "sourceImagesAndSizesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 2444,
+    "stopped": true
+  }
+}
