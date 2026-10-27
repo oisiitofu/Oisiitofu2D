@@ -13,12 +13,31 @@ const CharacterGuide=(()=>{
   return{id,stats,facts:facts.length?facts:['移動速度と重さは基準付近。技の間合いと隙を見て使い分けよう。'],jumps,hover,note:notes.get(id)||null};
  }
  function node(tag,text,className){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(className)el.className=className;return el;}
+ // A separate, unpowered selection snapshot: never inspect or create a live fighter.
+ function introduction(id,definition){
+  if(!CharacterData[id]||id==='random')return null;
+  const kit=movesFor({characterId:id,id:Symbol('guide-only')}),commands=[['dragon','通常必殺','方向なし＋必殺'],['dash','横必殺','横＋必殺'],['rise','上必殺','上＋必殺'],['gale','下必殺','下＋必殺']];
+  return{id,name:definition.name,style:definition.style,description:definition.description,specials:commands.map(([key,label,command])=>({key,label,command,name:kit[key]?.name||'技名未設定'}))};
+ }
+ function appendIntroduction(content,manual=false){
+  const{id,definition:d}=current,p=introduction(id,d),section=node('section',undefined,'character-guide-intro');
+  section.append(node('h3',manual?'選択中のキャラ：'+d.name:'キャラ紹介・必殺技'));
+  if(!p){section.append(node('p','おまかせは対戦開始時にキャラが決まります。キャラを選ぶと、ここで紹介と必殺技を確認できます。'));content.append(section);return;}
+  section.dataset.character=id;section.append(node('b',p.style,'character-guide-series'),node('p',p.description));
+  const list=node('dl',undefined,'character-guide-specials');
+  for(const s of p.specials){const row=node('div');row.dataset.move=s.key;const term=node('dt');term.append(node('b',s.label),node('small',s.command));row.append(term,node('dd',s.name));list.append(row);}section.append(list);
+  const binding=Controls.bindingLabels('special');section.append(node('p','現在の必殺ボタン：1Pキー '+binding.keyboard+' ／ パッド '+binding.pad,'character-guide-binding'));
+  section.append(node('small','通常形態・初期装備で最初に出す技の名前です。空中・変身・装備・追加入力・残りゲージなどで技や使用条件が変わります。','character-guide-variant'));
+  content.append(section);
+ }
+ function renderManual(){const content=document.getElementById('manual-character');if(!content||!current)return;content.replaceChildren();appendIntroduction(content,true);}
  function refresh(id,definition,selectable){
-  current={id,definition,selectable};const dialog=document.getElementById('character-guide-dialog');if(dialog?.open)render();
+  current={id,definition,selectable};const dialog=document.getElementById('character-guide-dialog');if(dialog?.open)render();if(document.getElementById('guide')?.open)renderManual();
  }
  function render(){
   if(!current)return;const{id,definition:d,selectable}=current,p=summary(id,selectable),content=document.getElementById('character-guide-content');
   document.getElementById('character-guide-title').textContent=d.name+'の性能・立ち回り';content.replaceChildren();
+  appendIntroduction(content);
   if(!p){content.append(node('p','おまかせの性能は抽選されたキャラによって決まります。'));return;}
   const stats=node('div',undefined,'character-guide-stats');
   for(const s of p.stats){const row=node('div',undefined,'character-guide-stat');row.dataset.stat=s.key;row.append(node('b',s.label),node('strong',s.word));const bar=node('div',undefined,'character-guide-bar'),fill=node('span');fill.style.width=(s.ratio===null?0:Math.max(0,Math.min(100,s.ratio*50)))+'%';bar.append(fill);bar.setAttribute('aria-hidden','true');row.append(bar,node('small',s.ratio===null?'比較データなし':'基準比 '+Math.round(s.ratio*100)+'%'));stats.append(row);}content.append(stats);
@@ -30,6 +49,6 @@ const CharacterGuide=(()=>{
  }
  function open(){if(!current)return;Controls.clear();render();document.getElementById('character-guide-dialog').showModal();}
  function close(){document.getElementById('character-guide-dialog').close();}
- addEventListener('DOMContentLoaded',()=>{document.getElementById('open-character-guide').onclick=open;document.getElementById('close-character-guide').onclick=close;document.getElementById('character-guide-dialog').addEventListener('close',()=>Controls.clear());});
- return{define,summary,refresh,open,close};
+ addEventListener('DOMContentLoaded',()=>{document.getElementById('open-character-guide').onclick=open;document.getElementById('close-character-guide').onclick=close;document.getElementById('character-guide-dialog').addEventListener('close',()=>Controls.clear());for(const id of ['home-help','help'])document.getElementById(id).addEventListener('click',()=>{Controls.clear();renderManual();},true);document.getElementById('guide').addEventListener('close',()=>Controls.clear());});
+ return{define,summary,introduction,refresh,open,close};
 })();
