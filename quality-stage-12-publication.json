@@ -1,0 +1,166 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active",
+  "completedThisStage": [
+    17
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [
+    18,
+    19,
+    20
+  ],
+  "gameCommit": "a709c3b42536866b4cb4357eb4cb927d5eeaf14d",
+  "siteCommit": "21b1634b7eb24da19c7df0e47f0af42d10e005c6",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_82379123171081919963c3e586065a92",
+  "versionNumber": 173,
+  "deployment": {
+    "id": "appgdep_6ae081a1dc2c81919cd868202087c413",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_82379123171081919963c3e586065a92",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 341,
+    "updated_at": "2026-10-27T10:49:20.056281+00:00"
+  },
+  "features": {
+    "view": "Selected active pad raw left/right axis coordinates, marker and axis-aligned square deadzone, with inside/outside states.",
+    "threshold": "Same per-axis strict comparison as actual Controls; adjacent existing slider, immediate display and unchanged browser persistence.",
+    "devices": "Actual gamepad index, explicit disconnected/reconnected/missing-axis states.",
+    "lifecycle": "View updates only while settings is open and reuses the pad already selected by Controls.poll; no extra polling or changes to combat input.",
+    "navigation": "Only stick-driven menu movement is suppressed while calibration has focus; physical D-pad and back remain available.",
+    "preserved": [
+      "keyboard and pad bindings",
+      "right-stick mode",
+      "deadzone range and save key",
+      "audio settings",
+      "saved names and favorites",
+      "source art and moves",
+      "normal game physics",
+      "network and backend"
+    ]
+  },
+  "verification": {
+    "functional": {
+      "localChecks": 56,
+      "publicChecks": 56,
+      "failed": [],
+      "errors": [],
+      "cases": [
+        "center",
+        "below threshold",
+        "equal threshold",
+        "just outside",
+        "diagonal within square",
+        "full tilt",
+        "independent left/right",
+        "active pad selection",
+        "missing and nonfinite axes",
+        "disconnect and reconnect",
+        "immediate slider and reset",
+        "save and reload",
+        "closed dialog non-update",
+        "no extra pad sampling",
+        "capture cannot assign axes",
+        "paused fighters and reset chord unaffected",
+        "normal per-axis inputs unchanged",
+        "back button"
+      ],
+      "unrelatedStorageAndBindingsPreserved": true
+    },
+    "regression": {
+      "menu": {
+        "test": "menu-pad-test.cjs",
+        "localChecks": 54,
+        "publicChecks": 51,
+        "publicOnlineLobbyCasesSkipped": 3,
+        "failed": [],
+        "errors": []
+      },
+      "input": {
+        "test": "input-edge-test.cjs",
+        "fixture": "Explicit test URL and fixed Dragoon; existing 14 assertions retained.",
+        "localChecks": 14,
+        "publicChecks": 14,
+        "failed": [],
+        "errors": []
+      }
+    },
+    "visual": {
+      "resolutions": [
+        [
+          1280,
+          720
+        ],
+        [
+          1440,
+          900
+        ]
+      ],
+      "publicScreenshots": 2,
+      "publicScreenshotsInspected": true,
+      "directory": "previews/quality/",
+      "publicPattern": "calibration-public-*.png"
+    },
+    "online": {
+      "test": "training-demo-online-test.cjs",
+      "localIdenticalFrames": 60,
+      "publicIdenticalFrames": 60,
+      "normalNetworkMovement": true,
+      "fullNamesAndSavedProfilesPreserved": true,
+      "errors": []
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "normalizedHtmlFiles": 1,
+      "onlineStatus": 200,
+      "hashes": {
+        "game-bundle.js": "2d29e432d9a361d200b81d2037373723b9607c0a84f47d0d3314c36322d7d105",
+        "index.html": "8cf51230088f86af94a2676ad60df89027bc3cf907ca05d05dbfa2ac3967bcfd",
+        "style.css": "304b3c34be13d88e81b75c3a3e24580074c13c449b224375f631e2908fc5b625"
+      }
+    }
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 4287062,
+    "failed": [],
+    "sourceImagesAndSizesUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 23812,
+    "stopped": true
+  }
+}
