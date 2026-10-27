@@ -1,0 +1,123 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "goalStatus": "active pending final completion audit",
+  "completedThisStage": [
+    20
+  ],
+  "completedTotal": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [],
+  "gameCommit": "8e5506d9b1c73c563d6b81443421a87a9de87591",
+  "siteCommit": "4a3ba9a1d2412ea1f8ce592a1b4838035f3716ae",
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_22402acc7ae48191a7a793631c64f4d4",
+  "versionNumber": 176,
+  "deployment": {
+    "id": "appgdep_6ae094c049d48191b09646091e15c6a0",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_22402acc7ae48191a7a793631c64f4d4",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 347,
+    "updated_at": "2026-10-27T12:10:56.884804+00:00"
+  },
+  "features": {
+    "publicProjection": "Only code, match identity, public names, readiness and phase; no characters, lineups, colors, cards or choices.",
+    "phases": "Ignore previous-match ready flags until all clients finish; distinguish queued request, authoritative readiness, empty slots and next-match preparation.",
+    "routing": "Keep same-room and squad rematches; preserve Bingo-owned buttons; reconnect from results closes result overlay.",
+    "view": "PC 1280x720 and 1440x900, 20-character names wrap, entire result fits without scrolling.",
+    "preserved": [
+      "input packets and server",
+      "battle simulation and authored abilities",
+      "character assets and motion",
+      "names and favorites persistence"
+    ]
+  },
+  "verification": {
+    "unit": {
+      "checks": 35,
+      "privacyProjection": true,
+      "staleMatchProtection": true
+    },
+    "functional": {
+      "local": 13,
+      "public": 13,
+      "offlineFinishRematch": true,
+      "buttonPhaseFixtures": true,
+      "bingoButtonOwnership": true
+    },
+    "online": {
+      "local": 53,
+      "public": 53,
+      "clients": 4,
+      "identicalRematchFrames": 60,
+      "queuedReadiness": true,
+      "unready": true,
+      "leaveRejoin": true,
+      "squadSize": 3,
+      "bingoNextRound": true,
+      "privateChoices": true,
+      "errors": [],
+      "fixtures": "Normal result tests call finish(); Bingo sets loser stock to zero at authoritative frame 240."
+    },
+    "regression": {
+      "networkStatusPublicChecks": 20,
+      "identicalFrames": 240,
+      "actualReceiveHolds": true,
+      "networkStatusUnitChecks": 37,
+      "pacingOrderedFrames": 600,
+      "clutterCurrentChecks": 19
+    },
+    "publicAssets": {
+      "sha256Files": 2,
+      "normalizedHtmlFiles": 1,
+      "onlineStatus": 200
+    },
+    "visual": [
+      "previews/quality/result-ready-public-1280.png",
+      "previews/quality/result-ready-public-1440.png"
+    ]
+  },
+  "assets": {
+    "uploaded": 3,
+    "bytes": 4297341,
+    "failed": []
+  },
+  "uploadSecretRemoved": true,
+  "backend": {
+    "pid": 34136,
+    "restarted": false
+  },
+  "ownedPreview": {
+    "pid": 33248,
+    "stopped": true
+  }
+}

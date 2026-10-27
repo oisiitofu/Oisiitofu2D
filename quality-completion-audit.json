@@ -1,0 +1,577 @@
+{
+  "completionEvidenceSatisfied": true,
+  "sourceHead": "8e5506d9b1c73c563d6b81443421a87a9de87591",
+  "completedItems": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "excludedItems": [
+    2,
+    3
+  ],
+  "remainingItems": [],
+  "releaseCount": 15,
+  "currentVersion": 176,
+  "sourceChecks": [
+    {
+      "item": 1,
+      "path": "audio.js",
+      "verifiedVersion": 169,
+      "verifiedCommit": "d9d3a1e0eeca2d7e1bfab63c8224923017e4d4d3",
+      "sha256": "2ec536be2c8d7f9fde5eea4b2f6591d9af1792275a03a7dc1ee9be9cab8cecd1"
+    },
+    {
+      "item": 1,
+      "path": "battle-feel.js",
+      "verifiedVersion": 169,
+      "verifiedCommit": "d9d3a1e0eeca2d7e1bfab63c8224923017e4d4d3",
+      "sha256": "27c7b1e0a2f874fd972b43955aba04c225b58a0f9d340897120a6f40927677fe"
+    },
+    {
+      "item": 4,
+      "path": "input.js",
+      "verifiedVersion": 173,
+      "verifiedCommit": "a709c3b42536866b4cb4357eb4cb927d5eeaf14d",
+      "sha256": "e00d7df78d2670122ca86ce7ea5e54c6fbf1d752210a52bf54d9fc62a9d3bb4a"
+    },
+    {
+      "item": 4,
+      "path": "input-codec.js",
+      "verifiedVersion": 173,
+      "verifiedCommit": "a709c3b42536866b4cb4357eb4cb927d5eeaf14d",
+      "sha256": "f3ad46070ab3f1d501072c4576d54ac162e477e3b8ad41fd217acf824cded2a1"
+    },
+    {
+      "item": 4,
+      "path": "online-server.cjs",
+      "verifiedVersion": 173,
+      "verifiedCommit": "a709c3b42536866b4cb4357eb4cb927d5eeaf14d",
+      "sha256": "09b0e1dd3c96c1dc421e1338f73eb2dd2bf42de070fdccc4e6724751f23b30ba"
+    },
+    {
+      "item": 5,
+      "path": "player-controller.js",
+      "verifiedVersion": 163,
+      "verifiedCommit": "b039cd0f726e5fef28bdb7a895fb2ab87ae43607",
+      "sha256": "2aa68407c764363eac9342affe6b60492ffdffaaa41e99a999a7907ea7f08e70"
+    },
+    {
+      "item": 6,
+      "path": "combat-system.js",
+      "verifiedVersion": 163,
+      "verifiedCommit": "b039cd0f726e5fef28bdb7a895fb2ab87ae43607",
+      "sha256": "60489e6c54b4627429ff62fbace833eb374cb3d074e8266ceccad3946412b808"
+    },
+    {
+      "item": 7,
+      "path": "battle-readability.js",
+      "verifiedVersion": 164,
+      "verifiedCommit": "5afbd9374f63cb5443e9d6046093e1f266f4868e",
+      "sha256": "29d893e463b997f33e50d7f4ce34d2f14af3878e006473ca6b698776d80d9470"
+    },
+    {
+      "item": 8,
+      "path": "air-mobility.js",
+      "verifiedVersion": 164,
+      "verifiedCommit": "5afbd9374f63cb5443e9d6046093e1f266f4868e",
+      "sha256": "8ccd06bafd7e95fa88a29d69412f9848593a19ec0152c8a1de5ebb6ec451d6e5"
+    },
+    {
+      "item": 9,
+      "path": "cpu-control.js",
+      "verifiedVersion": 165,
+      "verifiedCommit": "353e204e5cc4d73c279eaee5f84cb5bf3b4e9bef",
+      "sha256": "c7becd297058fd05ca92a20b5943c0aff576eb76884b04db0d2c1662edb45777"
+    },
+    {
+      "item": 10,
+      "path": "character-guide.js",
+      "verifiedVersion": 171,
+      "verifiedCommit": "24037fab591f20658ead9a2e94aed1169e41ff0f",
+      "sha256": "adceea7ef21a6b6587eb8e32237a0a47be679845d03231f83c6376c5aa1f41e9"
+    },
+    {
+      "item": 11,
+      "path": "battle-hud.js",
+      "verifiedVersion": 167,
+      "verifiedCommit": "298b1c4e7e87c87ef08df3ffb536a72a8c02ce89",
+      "sha256": "1094016c0e7a12cd7893964ed1f98df3e3c7a63c1f989ee8beba8c5ae55fc6ef"
+    },
+    {
+      "item": 11,
+      "path": "characters/edf/edf-vfx.js",
+      "verifiedVersion": 167,
+      "verifiedCommit": "298b1c4e7e87c87ef08df3ffb536a72a8c02ce89",
+      "sha256": "94b166fb2d094004873487a0879c0f1fbf72bc447f5ffba9d92cbd0f622f758d"
+    },
+    {
+      "item": 11,
+      "path": "characters/rean/rean-vfx.js",
+      "verifiedVersion": 167,
+      "verifiedCommit": "298b1c4e7e87c87ef08df3ffb536a72a8c02ce89",
+      "sha256": "f47233d9d5bbcfae7733cc34532fbb298aacf4a3c3082797fbb329ce04781466"
+    },
+    {
+      "item": 13,
+      "path": "stage-system.js",
+      "verifiedVersion": 169,
+      "verifiedCommit": "d9d3a1e0eeca2d7e1bfab63c8224923017e4d4d3",
+      "sha256": "d1ac344543a18258c4f40bf2b821630a37cb2a78e47cdcb78a33a040abd54ada"
+    },
+    {
+      "item": 13,
+      "path": "characters/elma/elma-data.js",
+      "verifiedVersion": 169,
+      "verifiedCommit": "d9d3a1e0eeca2d7e1bfab63c8224923017e4d4d3",
+      "sha256": "1df75f3e3536bcaf1138ed4dec2bf2040029b031211e0ddfb9f5ad34887b6e16"
+    },
+    {
+      "item": 13,
+      "path": "characters/goemon/goemon-data.js",
+      "verifiedVersion": 169,
+      "verifiedCommit": "d9d3a1e0eeca2d7e1bfab63c8224923017e4d4d3",
+      "sha256": "de0640f3419cc0c42d5e0ef9e787a88eb3b055e7f5299f15da0530eb205a18ae"
+    },
+    {
+      "item": 13,
+      "path": "characters/kitten/kitten-data.js",
+      "verifiedVersion": 169,
+      "verifiedCommit": "d9d3a1e0eeca2d7e1bfab63c8224923017e4d4d3",
+      "sha256": "8ddf85441186c378d3d2a8e05647d069d50d7044b39ce949a750fc8a8f32678d"
+    },
+    {
+      "item": 13,
+      "path": "characters/kurabe/kurabe-data.js",
+      "verifiedVersion": 169,
+      "verifiedCommit": "d9d3a1e0eeca2d7e1bfab63c8224923017e4d4d3",
+      "sha256": "d6cd389cac325b4e19528b6ed7244f4e6759ca8b853ef4c570e9ab67dafd9a83"
+    },
+    {
+      "item": 14,
+      "path": "fighter-list.js",
+      "verifiedVersion": 170,
+      "verifiedCommit": "aafdfec39c3cd8165732a204334b9bc754afcb23",
+      "sha256": "e8ce9552764bb658466f70f09a46ce4376669a798f1afe322cc7bd954bf2e9f2"
+    },
+    {
+      "item": 14,
+      "path": "roster.js",
+      "verifiedVersion": 170,
+      "verifiedCommit": "aafdfec39c3cd8165732a204334b9bc754afcb23",
+      "sha256": "01aa86962a50a3c8fb108eeb41991cf9217b47744115eec5ecb9cf00ecf12182"
+    },
+    {
+      "item": 14,
+      "path": "squad-battle.js",
+      "verifiedVersion": 170,
+      "verifiedCommit": "aafdfec39c3cd8165732a204334b9bc754afcb23",
+      "sha256": "01dca2ef2de81c3625d9005fd57e2d8187ef055ccae87b4e9c07ed9399001b80"
+    },
+    {
+      "item": 15,
+      "path": "character-guide.js",
+      "verifiedVersion": 171,
+      "verifiedCommit": "24037fab591f20658ead9a2e94aed1169e41ff0f",
+      "sha256": "adceea7ef21a6b6587eb8e32237a0a47be679845d03231f83c6376c5aa1f41e9"
+    },
+    {
+      "item": 16,
+      "path": "training-demo.js",
+      "verifiedVersion": 172,
+      "verifiedCommit": "19b2535a96a23b05248a533fed8793b16e3cea9e",
+      "sha256": "db9847c4e916ec6162427fbd932c2a39c242516e2a643d291c61612ba9d20e3d"
+    },
+    {
+      "item": 17,
+      "path": "stick-calibration.js",
+      "verifiedVersion": 173,
+      "verifiedCommit": "a709c3b42536866b4cb4357eb4cb927d5eeaf14d",
+      "sha256": "db2ec6a46c5953db90fa57f7c301397504fec9a9db92fe53c823a9d5e77fc094"
+    },
+    {
+      "item": 18,
+      "path": "training-dummy.js",
+      "verifiedVersion": 174,
+      "verifiedCommit": "6c6f36a1fb7a929ba37963b41b39bb4c949cdf08",
+      "sha256": "e0d168750ffa313b110c44b9a15ed9ca613049ed71528aa46937d1b1deeef3dc"
+    },
+    {
+      "item": 19,
+      "path": "network-status.js",
+      "verifiedVersion": 175,
+      "verifiedCommit": "23c5d55d910cc44b637baa4ec65c31d29a13a103",
+      "sha256": "cdd2d8a042e5f1dcced07c8229677ad7673b85de8132caf41692ce1e46ba28ea"
+    },
+    {
+      "item": 19,
+      "path": "network-pacing.js",
+      "verifiedVersion": 175,
+      "verifiedCommit": "23c5d55d910cc44b637baa4ec65c31d29a13a103",
+      "sha256": "7e2cf00767fac2dae8c2d960e42bbc53aaf9abf4c503250b2c36cd96f2a77763"
+    },
+    {
+      "item": 20,
+      "path": "result-readiness.js",
+      "verifiedVersion": 176,
+      "verifiedCommit": "8e5506d9b1c73c563d6b81443421a87a9de87591",
+      "sha256": "7382615eff05238ab7ca298066c7f454cde8ae984ed00c32582d192c44708fa6"
+    },
+    {
+      "item": 20,
+      "path": "online.js",
+      "verifiedVersion": 176,
+      "verifiedCommit": "8e5506d9b1c73c563d6b81443421a87a9de87591",
+      "sha256": "a7653a83ac827657a17a089e52c5011e2c911936a38bbeae085c012a828e2f5a"
+    },
+    {
+      "item": 20,
+      "path": "public-online.js",
+      "verifiedVersion": 176,
+      "verifiedCommit": "8e5506d9b1c73c563d6b81443421a87a9de87591",
+      "sha256": "746e626ffdd9703e42637750151f49cddacdf992684dfd90cc8a558d323d99e8"
+    }
+  ],
+  "uniqueFilesCompared": 30,
+  "shared": [
+    {
+      "item": 9,
+      "function": "function cpuRaw(",
+      "verifiedVersion": 165,
+      "sha256": "f5b324f3e1abbb19dc58ce1315478efd1a8e4a04a11509430be99df5a1eaeba5"
+    },
+    {
+      "item": 9,
+      "function": "function cpu(",
+      "verifiedVersion": 165,
+      "sha256": "3d3795c5f7589d1c63808d89b65dcbf7aaccf8564efcafe5cb53e2fa45aa9601"
+    },
+    {
+      "item": 16,
+      "function": "function resetTraining(",
+      "verifiedVersion": 172,
+      "sha256": "03322e65e5351795701282ff8777a98b726553c265c5c97ea98f4b5806e07574"
+    },
+    {
+      "item": 12,
+      "function": "function drawBattleDecorations(",
+      "verifiedVersion": 168,
+      "sha256": "66ad8d418091ce6b96e8d3b775565227322dc9dbd275bd4fd70c27284db808a3"
+    }
+  ],
+  "rows": [
+    {
+      "item": 1,
+      "releaseVersion": 162,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 4,
+      "releaseVersion": 162,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 5,
+      "releaseVersion": 163,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 6,
+      "releaseVersion": 163,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 7,
+      "releaseVersion": 164,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 8,
+      "releaseVersion": 164,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 9,
+      "releaseVersion": 165,
+      "proof": "Unchanged verified module(s) and published receipt; shared game functions also identical"
+    },
+    {
+      "item": 10,
+      "releaseVersion": 166,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 11,
+      "releaseVersion": 167,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 12,
+      "releaseVersion": 168,
+      "proof": "Exact decoration function, current draw order, fresh 19 checks and published receipt"
+    },
+    {
+      "item": 13,
+      "releaseVersion": 169,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 14,
+      "releaseVersion": 170,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 15,
+      "releaseVersion": 171,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 16,
+      "releaseVersion": 172,
+      "proof": "Unchanged verified module(s) and published receipt; shared game functions also identical"
+    },
+    {
+      "item": 17,
+      "releaseVersion": 173,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 18,
+      "releaseVersion": 174,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 19,
+      "releaseVersion": 175,
+      "proof": "Unchanged verified module(s) and published receipt"
+    },
+    {
+      "item": 20,
+      "releaseVersion": 176,
+      "proof": "Current feature source, 35 unit checks, local/public 13 UI and 53 online checks"
+    }
+  ],
+  "homeReleaseEntriesRetained": 15,
+  "rosterOrderPreserved": true,
+  "sourceArtAndAttackMotionUnchanged": true,
+  "playerNameStorageAndBingoRulesUnchanged": true,
+  "pcOnly": true,
+  "focusedChecks": {
+    "result-readiness-online-local": {
+      "checks": 53,
+      "clients": 4,
+      "sameRoomRematch": true,
+      "squadSize": 3,
+      "identicalRematchFrames": 60,
+      "queuedReadiness": true,
+      "unready": true,
+      "leaveRejoin": true,
+      "bingoNextRound": true,
+      "privateChoices": true,
+      "errors": []
+    },
+    "result-readiness-online-public": {
+      "checks": 53,
+      "clients": 4,
+      "sameRoomRematch": true,
+      "squadSize": 3,
+      "identicalRematchFrames": 60,
+      "queuedReadiness": true,
+      "unready": true,
+      "leaveRejoin": true,
+      "bingoNextRound": true,
+      "privateChoices": true,
+      "errors": []
+    },
+    "result-readiness-ui-local": {
+      "checks": 13,
+      "errors": [],
+      "offlineFinishRematch": true,
+      "buttonPhaseFixtures": true,
+      "bingoButtonOwnership": true
+    },
+    "result-readiness-ui-public": {
+      "checks": 13,
+      "errors": [],
+      "offlineFinishRematch": true,
+      "buttonPhaseFixtures": true,
+      "bingoButtonOwnership": true
+    },
+    "network-status-online-public-final": {
+      "checks": 20,
+      "failed": [],
+      "errors": [],
+      "identicalFrames": 240,
+      "actualReceiveHolds": true,
+      "orderedDelivery": true,
+      "realFinishRematchDisconnect": true,
+      "visibilityEventGrace": true,
+      "selectionAndLeaveResetClockInjected": true
+    },
+    "clutter-completion": {
+      "baseline": false,
+      "checks": 19,
+      "failed": [],
+      "scenes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scene": "cluster",
+          "order": [
+            "decorations",
+            "objects",
+            "fighter",
+            "fighter",
+            "fighter",
+            "fighter",
+            "impact"
+          ],
+          "unchanged": true,
+          "particles": 520,
+          "waves": 4,
+          "impacts": 4,
+          "objects": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "scene": "objects",
+          "order": [
+            "decorations",
+            "objects",
+            "fighter",
+            "fighter",
+            "impact"
+          ],
+          "unchanged": true,
+          "particles": 260,
+          "waves": 2,
+          "impacts": 0,
+          "objects": [
+            "sword",
+            "marker"
+          ]
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "scene": "cluster",
+          "order": [
+            "decorations",
+            "objects",
+            "fighter",
+            "fighter",
+            "fighter",
+            "fighter",
+            "impact"
+          ],
+          "unchanged": true,
+          "particles": 520,
+          "waves": 4,
+          "impacts": 4,
+          "objects": []
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "scene": "objects",
+          "order": [
+            "decorations",
+            "objects",
+            "fighter",
+            "fighter",
+            "impact"
+          ],
+          "unchanged": true,
+          "particles": 260,
+          "waves": 2,
+          "impacts": 0,
+          "objects": [
+            "sword",
+            "marker"
+          ]
+        }
+      ],
+      "probe": {
+        "base": [
+          18,
+          52,
+          86,
+          255
+        ],
+        "edge": [
+          18,
+          52,
+          86,
+          255
+        ],
+        "particle": [
+          18,
+          52,
+          86,
+          255
+        ],
+        "wave": [
+          18,
+          52,
+          86,
+          255
+        ],
+        "contextRestored": true
+      },
+      "errors": []
+    }
+  },
+  "native": {
+    "siteId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "accessMode": "public",
+    "latestVersionNumber": 176,
+    "currentLiveUrl": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_22402acc7ae48191a7a793631c64f4d4",
+    "source": {
+      "commit_sha": "4a3ba9a1d2412ea1f8ce592a1b4838035f3716ae"
+    },
+    "deployment": {
+      "id": "appgdep_6ae094c049d48191b09646091e15c6a0",
+      "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+      "title": "おいしいとうふブラザーズ",
+      "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_22402acc7ae48191a7a793631c64f4d4",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+      "failure_message": null,
+      "env_set_revision": 347,
+      "updated_at": "2026-10-27T12:10:56.884804+00:00"
+    }
+  },
+  "publicAssets": {
+    "sha256Files": 2,
+    "htmlFiles": 1,
+    "catalogMatches": true,
+    "onlineStatus": 200
+  },
+  "limits": [
+    "Prior per-stage tests are retained evidence, not rerun wholesale; unchanged source is compared to each verified release.",
+    "Normal rematch end fixtures call finish; Bingo fixture sets losing stocks to zero at frame 240.",
+    "The old broad battle-input-regression suite has 14 baseline failures, identically present before/after; it is not counted as passing.",
+    "No all-character/all-color asset sweep or mobile QA was performed."
+  ]
+}
