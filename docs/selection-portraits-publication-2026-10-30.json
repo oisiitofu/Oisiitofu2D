@@ -1,0 +1,60 @@
+{
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 178,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_e0ef93c7f3008191b99f58225c1876b3",
+  "gameCommit": "18c1d48",
+  "siteCommit": "c7057f9e3316f86857f846134ec551d8a9317820",
+  "deployment": {
+    "id": "appgdep_6ae4ad7eec188191bb680108f7d73093",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_e0ef93c7f3008191b99f58225c1876b3",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 351,
+    "updated_at": "2026-10-30T14:45:33.343520+00:00"
+  },
+  "uploaded": {
+    "uploaded": 322,
+    "bytes": 93252473,
+    "failed": []
+  },
+  "verification": {
+    "localChecks": 738,
+    "publicChecks": 738,
+    "PC": [
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "colors": 5,
+    "artLoading": {
+      "poses": 990,
+      "effects": 216,
+      "costumes": 4950,
+      "mismatches": [],
+      "errors": []
+    },
+    "publicSHA256Files": 322,
+    "originalDedicatedSourcesUnchanged": true,
+    "otherManifestEntriesUnchanged": true,
+    "targetCombatArtUnchanged": true
+  },
+  "uploadSecretRemoved": true,
+  "homeUpdateAdded": true
+}
