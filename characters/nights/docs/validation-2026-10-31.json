@@ -345,6 +345,10 @@
         "pass": true
       },
       {
+        "name": "eight-way loop tolerates a late direction change",
+        "pass": true
+      },
+      {
         "name": "nightmare uses winged whole poses",
         "pass": true
       },
@@ -408,7 +412,7 @@
         "closed": true,
         "loop": true,
         "damage": 13.65,
-        "turn": 5.59
+        "turn": 5.33
       },
       {
         "recovery": 150,
@@ -559,5 +563,18 @@
     "nights-selection.png": "fecd499c373831090c2ac6dd2cd1ebe9916e8c07d20516cd0eb1dc7e019eb6c3",
     "nights-specials.png": "caa3c174ea5c13baa40e89d480fde2c859d93c667e3b13032888211fe45c8db2",
     "nights-windup.png": "b6fe2566cf111b36fb04ae0654301e5626b739a01083f6faf47b84fad8ede515"
-  }
+  },
+  "onlineServiceReload": {
+    "oldPID": 3652,
+    "newPID": 28756,
+    "rooms": 0,
+    "members": 0,
+    "playing": 0,
+    "health": "ok",
+    "reason": "load new character allowlist; fixed public entry and tunnel preserved"
+  },
+  "onlineVerifiedCharacterIds": [
+    "nights",
+    "nights"
+  ]
 }
