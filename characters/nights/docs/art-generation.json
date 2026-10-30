@@ -1,0 +1,55 @@
+{
+  "mode": "built-in image_gen.imagegen",
+  "date": "2026-10-31",
+  "outputDirectory": "characters/nights/assets",
+  "reference": "characters/nights/assets/nights-reference.png",
+  "sharedBrief": "Preserve NiGHTS face, slender proportions, blue eyes, cyan-tipped purple jester hat, white chest/gloves, magenta/gold clothing and curled shoes. Transparent backgrounds. Fully contained isolated whole bodies, equal physical head/torso size across poses, no labels, no articulated rigs. Dedicated selection artwork is a new high-resolution head/shoulder bust.",
+  "assets": [
+    {
+      "file": "characters/nights/assets/nights-basic.png",
+      "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-e227016d-e464-4bb0-a3f5-0901a31ec095.png",
+      "productionBrief": "4x4: neutral/walk/run/crouch; float/flight/jump/glide; dash start/forward flight/bank/landing; dodge/guard/recoil/neutral recovery."
+    },
+    {
+      "file": "characters/nights/assets/nights-attacks.png",
+      "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-3a1da126-262d-47fd-82c7-e49c317ea579.png",
+      "productionBrief": "4x4: neutral reference, then fifteen individual full-body jab/hook/kick/heavy/up/low/slide/forward smash/up smash/down smash/neutral air/forward air/back kick/up air/down air strikes."
+    },
+    {
+      "file": "characters/nights/assets/nights-specials.png",
+      "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-fbd93ef2-f816-4301-a6e1-78bbd0a18e35.png",
+      "productionBrief": "4x4: neutral reference; charging/releasing/charged ball; curved flight start/bank/loop close; ring reach/orbit/tangent launch/recovery; curl transformation/winged guard/winged strike/winged brake/normal return."
+    },
+    {
+      "file": "characters/nights/assets/nights-defense.png",
+      "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-f7a44732-2ff2-4ab9-a74e-83e626c52bb8.png",
+      "productionBrief": "4x4: neutral reference; guard/forward roll/back roll/spot dodge/air dodge/hit/tumble/down/getup/ledge hang/climb/grab/pummel/forward throw/back throw."
+    },
+    {
+      "file": "characters/nights/assets/nights-extra.png",
+      "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-55b1625e-3f29-4ffb-aa19-63da5fd9a4e7.png",
+      "productionBrief": "4x4: neutral reference; up/down throws; three taunts; three victories; hover/landing/opposite walking/opposite running/idle/ledge attack/turn."
+    },
+    {
+      "file": "characters/nights/assets/nights-windup.png",
+      "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-10bf8379-1a37-44d3-b8a3-91f90f3d2e50.png",
+      "prompt": "Create a transparent 4-column x 4-row sixteen-cell sprite sheet of NiGHTS. Match the first reference's exact head and torso size, face, slender body, purple jester hat cyan tips, white chest/gloves and magenta/gold costume. The second sheet shows FINISHED attacks; this new sheet supplies the DISTINCT ANTICIPATION POSE immediately BEFORE each attack. Do not redraw those finished strike poses. Complete body in every cell, no text, labels, borders, ground shadow or effects. Generous invisible gutters, retain all hat tips and shoes. Normal proportions remain consistent even when bending, crouching and flying. Row1: (0) same neutral standing reference as first sheet cell1, (1) jab preparation drawing right fist and a tiny gold ring back to chest, (2) hook preparation twisting shoulders left with bent left elbow, (3) kick preparation raising bent right knee toward chest. Row2: (4) heavy arm-sweep preparation arms crossed behind left hip torso wound up, (5) upward strike preparation crouched and looking up with both hands low, (6) low kick preparation standing on left foot with right leg tucked to side, (7) sliding tackle preparation low backward lean with one heel forward and hands behind. Row3: (8) forward smash preparation deep wide stance with both hands tightly pulled beside chest, (9) upward smash preparation coiled low with arms folded inward, (10) down smash preparation standing slightly sideways winding arms across opposite shoulder, (11) neutral air preparation knees bent and arms extended out before crossing. Row4: (12) forward air preparation flying horizontally right with right fist pulled far back, (13) BACKWARD air kick preparation facing right and tucking left heel behind body to kick LEFT, (14) upward air preparation floating knees tucked and both hands at waist, (15) downward air preparation airborne tilted slightly backward with both knees raised before stamping down. Crisp hand painted whole-figure animation drawings, distinct full-body anticipation, no joint pieces, no redesign, no repeated strike pose."
+    },
+    {
+      "file": "characters/nights/assets/nights-recovery.png",
+      "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-5aaea1d7-ddfb-44c5-b8d0-d54f51e91ce8.png",
+      "prompt": "Make a transparent 4-column x 4-row sheet of sixteen FULL-BODY NiGHTS game sprites, exactly matching the first reference character's face, head/torso size, slender proportions, purple cyan-tipped jester hat, white chest/gloves, magenta/gold costume and curled shoes. The second reference shows STRIKES: create the DISTINCT FOLLOW-THROUGH/RECOVERY pose immediately AFTER each strike rather than copying it. SAME PHYSICAL BODY SCALE in all cells, including crouched/flying poses. Invisible roomy gutters, no clipped hat tips or shoes. No text, labels, borders, shadows, scenery, enemies, ground lines, joints or effect overlays. Row1: neutral standing calibration pose matching first reference cell1; finishing a ring jab withdrawing the right arm with elbow low; recovering from hook shoulders now turned right arm lowered; lowering the right leg after forward kick with weight shifted forward. Row2: ending a wide arm sweep with one arm crossing in front and rear heel raised; hands lowering after an overhead strike and chest slightly stretched; low kick follow-through with right heel along the ground and torso bent sideways; braking from a slide sitting back one knee bent and both hands to sides. Row3: ending forward smash with arms extended then relaxing outward and bent front knee; upward smash ending upright with one hand high and the other lowering; down smash finishing deep crouch with one hand extended sideways; neutral air ending with arms opened from a cross and one leg extended. Row4: forward air punch follow-through body horizontally flying right with bent punch elbow returning; BACKWARD air kick follow-through facing right but left leg stretched LEFT behind with knee beginning to bend; upward air follow-through both hands opening overhead and legs relaxing downward; downward air stamp follow-through legs extended down and arms lifted for balance. Crisp polished hand-painted whole figures, original reference design preserved, fifteen individually distinct motion endings."
+    },
+    {
+      "file": "characters/nights/assets/nights-effects.png",
+      "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-5edef7d6-d113-4375-bd23-5166f34a31f1.png",
+      "prompt": "Create a transparent 4 columns x 4 rows VFX sprite sheet for a colorful NiGHTS into Dreams fighting game. Exactly sixteen DIFFERENT isolated effects, NO characters, NO lettering, NO borders, NO dark backgrounds, NO ground. Generous transparent gutters so effects do not touch. Crisp magical effects in gold, starlight blue, purple and magenta. Each cell effect fully contained. Row1: (0) thin GOLD CRESCENT SLASH convex cutting edge points RIGHT, open concave side faces LEFT toward the hand, tapered tails trail left; (1) short GOLD PUNCH impact streak traveling RIGHT with star-shaped tip, not a circle; (2) a single GOLD overhead crescent whose convex edge faces UP and open side faces DOWN; (3) a GOLD descending crescent convex edge DOWN open side UP. Row2: (4) small bright BLUE spherical idea ball surrounded by tiny star specks; (5) a larger charged blue idea ball with pale core and electric halo; (6) a clean golden dream ring seen obliquely as a narrow ellipse, empty center; (7) a curved MAGENTA and GOLD flight ribbon with arrowlike tapered front pointing RIGHT. Row3: (8) a PARALOOP completion burst, golden star points enclosing an empty center with delicate dotted ring; (9) sharp PURPLE wing-shaped attack sweep pointing RIGHT and trailing feathers of light; (10) smoky purple dream cloud with tiny crescent moons; (11) small bright gold-and-white HIT SPARK starburst. Row4: (12) falling golden dream stars with short vertical DOWNWARD trails; (13) soft blue hovering wind wisps curving sideways, no hard circle; (14) small landing dust puffs with blue glints; (15) magenta-to-violet nightmare transformation flare with triangular rays and no figure. Each source's direction must be unambiguous. Beautiful high resolution transparent game effect assets. Exactly four rows and four columns."
+    },
+    {
+      "file": "characters/nights/assets/nights-selection.png",
+      "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-68f7494a-2f03-4e26-822f-e5514e174a53.png",
+      "prompt": "Create ONE dedicated HIGH-RESOLUTION character-selection portrait of NiGHTS from NiGHTS into Dreams, matching the reference character identity, face, bright blue eyes, purple two-pronged jester hat with cyan tips, magenta collar, white chest and gold trim. A polished charming confident face-and-shoulders BUST, three-quarter view looking slightly toward the viewer's RIGHT, friendly mischievous smile. The FACE must be large and visually central, with shoulders along the bottom edge; do not show a small distant full-body figure. Retain BOTH entire jester hat tips with a comfortable clear margin above and on each side. Beautiful clean premium hand-painted game-selection art, richer facial and fabric detail than a gameplay sprite, crisp edges and expressive eyes. Bright even studio-like illustration lighting, no extreme glow, no text, no logo, no effects, no props, no frame, NO BACKGROUND. Fully transparent background. Original slender character design, not a different human or baby redesign. This is an individually composed bust portrait, not an enlargement of the reference sheet. Landscape composition suitable for cropping into a compact selection card; keep the face and shoulders balanced and avoid excessive empty margins."
+    }
+  ],
+  "packing": "Deterministically crop and pack complete painted figures, retaining the locked original neutral. Uniform reference-pose scale per sheet; no joint deformation. Effects retain transparent paint near their opaque cores."
+}

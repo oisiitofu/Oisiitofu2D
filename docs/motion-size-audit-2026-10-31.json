@@ -1,0 +1,1472 @@
+{
+  "date": "2026-10-31",
+  "scope": "All 204 existing characters",
+  "measurement": "Body-palette weighted pixel area, scaled by native art. Bounds alone are not physical size. Large props, capes, spread wings and deliberate transformations require visual review. No blanket resizing applied.",
+  "measuredPoses": 9984,
+  "reviewedRepresentativeRenders": 1428,
+  "representativeStates": [
+    "idle",
+    "walk",
+    "run",
+    "jab",
+    "smash",
+    "fair",
+    "rise"
+  ],
+  "changedCharacters": [
+    "nargacuga"
+  ],
+  "nargacuga": {
+    "reviewedWholeBodyPoses": 92,
+    "neutralScale": 1,
+    "runningScale": [
+      1.29479,
+      1.30452,
+      1.38282,
+      1.35992
+    ],
+    "sourceArtUnchanged": true,
+    "aspectRatioUnchanged": true,
+    "sizeTierUnchanged": true,
+    "collisionAndEffectsUseSameNativeScale": true,
+    "mechanicsChecks": 78,
+    "CPU": 2,
+    "onlineIdenticalFrames": 421,
+    "onlineScenes": [
+      "neutral special",
+      "side special and reinput",
+      "down special",
+      "recovery"
+    ]
+  },
+  "characters": [
+    {
+      "id": "ryuta",
+      "poses": 61,
+      "areaCandidateMin": 0.69969,
+      "areaCandidateMax": 1.26055,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "mono",
+      "poses": 59,
+      "areaCandidateMin": 0.83605,
+      "areaCandidateMax": 1.17752,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "nargacuga",
+      "poses": 92,
+      "areaCandidateMin": 0.76023,
+      "areaCandidateMax": 1.38282,
+      "decision": "calibrated body poses"
+    },
+    {
+      "id": "felyne",
+      "poses": 60,
+      "areaCandidateMin": 0.62304,
+      "areaCandidateMax": 1.17938,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "sackboy",
+      "poses": 61,
+      "areaCandidateMin": 0.81023,
+      "areaCandidateMax": 1.23307,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "rayman",
+      "poses": 61,
+      "areaCandidateMin": 0.7859,
+      "areaCandidateMax": 1.07531,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "shovelknight",
+      "poses": 61,
+      "areaCandidateMin": 0.88002,
+      "areaCandidateMax": 1.34516,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "quote",
+      "poses": 61,
+      "areaCandidateMin": 0.945,
+      "areaCandidateMax": 1.14416,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "aloy",
+      "poses": 61,
+      "areaCandidateMin": 0.89054,
+      "areaCandidateMax": 1.18995,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "battlecat",
+      "poses": 61,
+      "areaCandidateMin": 0.90491,
+      "areaCandidateMax": 1.25914,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "io",
+      "poses": 60,
+      "areaCandidateMin": 0.79864,
+      "areaCandidateMax": 1.188,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "raguna",
+      "poses": 61,
+      "areaCandidateMin": 0.79613,
+      "areaCandidateMax": 1.19074,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "anubis",
+      "poses": 72,
+      "areaCandidateMin": 0.77244,
+      "areaCandidateMax": 1.06224,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "jehuty",
+      "poses": 61,
+      "areaCandidateMin": 0.88145,
+      "areaCandidateMax": 1.1365,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "nightraven",
+      "poses": 63,
+      "areaCandidateMin": 0.87686,
+      "areaCandidateMax": 1.27128,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "elza",
+      "poses": 57,
+      "areaCandidateMin": 0.88368,
+      "areaCandidateMax": 1.24871,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ringfit",
+      "poses": 57,
+      "areaCandidateMin": 0.86407,
+      "areaCandidateMax": 1.05167,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "qbby",
+      "poses": 57,
+      "areaCandidateMin": 0.56391,
+      "areaCandidateMax": 1.2971,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "estark",
+      "poses": 57,
+      "areaCandidateMin": 0.90698,
+      "areaCandidateMax": 1.17212,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "mallow",
+      "poses": 57,
+      "areaCandidateMin": 0.93807,
+      "areaCandidateMax": 1.27054,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "veronica",
+      "poses": 57,
+      "areaCandidateMin": 0.86521,
+      "areaCandidateMax": 1.10504,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ashley",
+      "poses": 58,
+      "areaCandidateMin": 0.89752,
+      "areaCandidateMax": 1.2146,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "lip",
+      "poses": 58,
+      "areaCandidateMin": 0.92286,
+      "areaCandidateMax": 1.06248,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ryoku",
+      "poses": 58,
+      "areaCandidateMin": 0.85294,
+      "areaCandidateMax": 1.15592,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "nahobino",
+      "poses": 58,
+      "areaCandidateMin": 0.94158,
+      "areaCandidateMax": 1.29267,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "tails",
+      "poses": 57,
+      "areaCandidateMin": 0.87697,
+      "areaCandidateMax": 1.20978,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "etna",
+      "poses": 57,
+      "areaCandidateMin": 0.80353,
+      "areaCandidateMax": 1.07183,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "django",
+      "poses": 59,
+      "areaCandidateMin": 0.80459,
+      "areaCandidateMax": 1.09258,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ratchet",
+      "poses": 58,
+      "areaCandidateMin": 0.86002,
+      "areaCandidateMax": 1.26003,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "astro",
+      "poses": 59,
+      "areaCandidateMin": 0.73689,
+      "areaCandidateMax": 1,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "enoch",
+      "poses": 58,
+      "areaCandidateMin": 0.77718,
+      "areaCandidateMax": 1.27836,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "sam",
+      "poses": 59,
+      "areaCandidateMin": 0.82832,
+      "areaCandidateMax": 1.18804,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "parappa",
+      "poses": 59,
+      "areaCandidateMin": 0.79548,
+      "areaCandidateMax": 1.12817,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "octane",
+      "poses": 59,
+      "areaCandidateMin": 0.84954,
+      "areaCandidateMax": 1.0711,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "jett",
+      "poses": 60,
+      "areaCandidateMin": 0.92186,
+      "areaCandidateMax": 1.41569,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "reimu",
+      "poses": 60,
+      "areaCandidateMin": 0.98346,
+      "areaCandidateMax": 1.56895,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "zack",
+      "poses": 60,
+      "areaCandidateMin": 0.97696,
+      "areaCandidateMax": 1.25037,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "presea",
+      "poses": 60,
+      "areaCandidateMin": 0.90023,
+      "areaCandidateMax": 1.36856,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "hachiware",
+      "poses": 60,
+      "areaCandidateMin": 1,
+      "areaCandidateMax": 1.30218,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "tidus",
+      "poses": 60,
+      "areaCandidateMin": 0.86026,
+      "areaCandidateMax": 1.05308,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "terra",
+      "poses": 56,
+      "areaCandidateMin": 0.84521,
+      "areaCandidateMax": 1.1517,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "onionknight",
+      "poses": 57,
+      "areaCandidateMin": 0.84749,
+      "areaCandidateMax": 1.07644,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "arthur",
+      "poses": 58,
+      "areaCandidateMin": 0.82736,
+      "areaCandidateMax": 1.1474,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "sakura",
+      "poses": 58,
+      "areaCandidateMin": 0.86007,
+      "areaCandidateMax": 1.22682,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "viewtifuljoe",
+      "poses": 59,
+      "areaCandidateMin": 0.67462,
+      "areaCandidateMax": 1.12403,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "shionne",
+      "poses": 57,
+      "areaCandidateMin": 0.82058,
+      "areaCandidateMax": 1.1631,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "genis",
+      "poses": 56,
+      "areaCandidateMin": 0.86918,
+      "areaCandidateMax": 1.07926,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ellen",
+      "poses": 54,
+      "areaCandidateMin": 0.74923,
+      "areaCandidateMax": 1.15202,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "billy",
+      "poses": 56,
+      "areaCandidateMin": 0.86125,
+      "areaCandidateMax": 1.12983,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "narmaya",
+      "poses": 46,
+      "areaCandidateMin": 0.88756,
+      "areaCandidateMax": 1.25309,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "wonder",
+      "poses": 47,
+      "areaCandidateMin": 0.85817,
+      "areaCandidateMax": 1.24299,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "rena",
+      "poses": 47,
+      "areaCandidateMin": 0.92361,
+      "areaCandidateMax": 1.22845,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "gran",
+      "poses": 47,
+      "areaCandidateMin": 0.86719,
+      "areaCandidateMax": 1.30661,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "welch",
+      "poses": 46,
+      "areaCandidateMin": 0.85307,
+      "areaCandidateMax": 1.14578,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "zoe",
+      "poses": 46,
+      "areaCandidateMin": 0.84519,
+      "areaCandidateMax": 1.24635,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ky",
+      "poses": 45,
+      "areaCandidateMin": 0.94117,
+      "areaCandidateMax": 1.22305,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "alphen",
+      "poses": 46,
+      "areaCandidateMin": 0.88753,
+      "areaCandidateMax": 1.22963,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ash",
+      "poses": 46,
+      "areaCandidateMin": 0.82856,
+      "areaCandidateMax": 1.19464,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "judas",
+      "poses": 46,
+      "areaCandidateMin": 0.89099,
+      "areaCandidateMax": 1.27217,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "rion",
+      "poses": 46,
+      "areaCandidateMin": 0.87562,
+      "areaCandidateMax": 1.20006,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "sol",
+      "poses": 46,
+      "areaCandidateMin": 0.76874,
+      "areaCandidateMax": 1,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "miyabi",
+      "poses": 46,
+      "areaCandidateMin": 0.82641,
+      "areaCandidateMax": 1.18744,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "zero3",
+      "poses": 48,
+      "areaCandidateMin": 0.86451,
+      "areaCandidateMax": 1.23618,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "dana",
+      "poses": 48,
+      "areaCandidateMin": 0.90581,
+      "areaCandidateMax": 1.38563,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "dragoon",
+      "poses": 40,
+      "areaCandidateMin": 0.8662,
+      "areaCandidateMax": 1.24489,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "isaac",
+      "poses": 40,
+      "areaCandidateMin": 0.91729,
+      "areaCandidateMax": 1.10782,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ulgrim",
+      "poses": 40,
+      "areaCandidateMin": 0.94716,
+      "areaCandidateMax": 1.3232,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "chiikawa",
+      "poses": 40,
+      "areaCandidateMin": 0.90884,
+      "areaCandidateMax": 1.29406,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "chocobo",
+      "poses": 43,
+      "areaCandidateMin": 0.90356,
+      "areaCandidateMax": 1.22159,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "monokuma",
+      "poses": 40,
+      "areaCandidateMin": 0.94063,
+      "areaCandidateMax": 1.25976,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "riki",
+      "poses": 40,
+      "areaCandidateMin": 0.83635,
+      "areaCandidateMax": 1.19947,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "roxas",
+      "poses": 40,
+      "areaCandidateMin": 0.96847,
+      "areaCandidateMax": 1.3285,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "twob",
+      "poses": 40,
+      "areaCandidateMin": 0.75418,
+      "areaCandidateMax": 1.06183,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "okami",
+      "poses": 40,
+      "areaCandidateMin": 0.94523,
+      "areaCandidateMax": 1.15459,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "gundam",
+      "poses": 40,
+      "areaCandidateMin": 0.97142,
+      "areaCandidateMax": 1.39527,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "vivi",
+      "poses": 40,
+      "areaCandidateMin": 0.95442,
+      "areaCandidateMax": 1.25412,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "zero",
+      "poses": 45,
+      "areaCandidateMin": 0.94279,
+      "areaCandidateMax": 1.17054,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "rin",
+      "poses": 40,
+      "areaCandidateMin": 0.95029,
+      "areaCandidateMax": 1.18801,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "nia",
+      "poses": 40,
+      "areaCandidateMin": 0.92715,
+      "areaCandidateMax": 1.24174,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "lightning",
+      "poses": 40,
+      "areaCandidateMin": 0.89695,
+      "areaCandidateMax": 1.20694,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "colette",
+      "poses": 40,
+      "areaCandidateMin": 0.82039,
+      "areaCandidateMax": 1.08491,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "rean",
+      "poses": 40,
+      "areaCandidateMin": 0.8591,
+      "areaCandidateMax": 1.05289,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "estelle",
+      "poses": 40,
+      "areaCandidateMin": 0.94213,
+      "areaCandidateMax": 1.2155,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "noctis",
+      "poses": 40,
+      "areaCandidateMin": 0.99438,
+      "areaCandidateMax": 1.32277,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "clive",
+      "poses": 40,
+      "areaCandidateMin": 0.77409,
+      "areaCandidateMax": 1.27796,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "makoto",
+      "poses": 40,
+      "areaCandidateMin": 0.84249,
+      "areaCandidateMax": 1.29456,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "neku",
+      "poses": 40,
+      "areaCandidateMin": 0.82991,
+      "areaCandidateMax": 1.1395,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "narukami",
+      "poses": 40,
+      "areaCandidateMin": 0.78329,
+      "areaCandidateMax": 1.09943,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "naegi",
+      "poses": 40,
+      "areaCandidateMin": 0.90776,
+      "areaCandidateMax": 1.1235,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "rex",
+      "poses": 40,
+      "areaCandidateMin": 0.83319,
+      "areaCandidateMax": 1.26688,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "luke",
+      "poses": 40,
+      "areaCandidateMin": 0.69921,
+      "areaCandidateMax": 1.18308,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "will",
+      "poses": 40,
+      "areaCandidateMin": 0.76678,
+      "areaCandidateMax": 1.13175,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "kosmos",
+      "poses": 40,
+      "areaCandidateMin": 0.80696,
+      "areaCandidateMax": 1.14756,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "fayt",
+      "poses": 40,
+      "areaCandidateMin": 0.81259,
+      "areaCandidateMax": 1.13295,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "emma",
+      "poses": 40,
+      "areaCandidateMin": 0.88426,
+      "areaCandidateMax": 1.23628,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ryza",
+      "poses": 40,
+      "areaCandidateMin": 0.76607,
+      "areaCandidateMax": 1.2162,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "noah",
+      "poses": 40,
+      "areaCandidateMin": 0.81085,
+      "areaCandidateMax": 1.12073,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "midna",
+      "poses": 40,
+      "areaCandidateMin": 0.83873,
+      "areaCandidateMax": 1.09998,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "bomberman",
+      "poses": 40,
+      "areaCandidateMin": 0.91489,
+      "areaCandidateMax": 1.1821,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "sans",
+      "poses": 40,
+      "areaCandidateMin": 0.8941,
+      "areaCandidateMax": 1.14831,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "lloyd",
+      "poses": 40,
+      "areaCandidateMin": 0.80088,
+      "areaCandidateMax": 1.17287,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "shiren",
+      "poses": 40,
+      "areaCandidateMin": 0.86117,
+      "areaCandidateMax": 1.19394,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "pokoa",
+      "poses": 40,
+      "areaCandidateMin": 0.91879,
+      "areaCandidateMax": 1.12312,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "hunter",
+      "poses": 40,
+      "areaCandidateMin": 0.85198,
+      "areaCandidateMax": 1.3876,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "adol",
+      "poses": 40,
+      "areaCandidateMin": 0.86595,
+      "areaCandidateMax": 1.19115,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "terry",
+      "poses": 40,
+      "areaCandidateMin": 0.96109,
+      "areaCandidateMax": 1.14154,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "valkyrie",
+      "poses": 40,
+      "areaCandidateMin": 0.92818,
+      "areaCandidateMax": 1.34195,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "agumon",
+      "poses": 40,
+      "areaCandidateMin": 0.9216,
+      "areaCandidateMax": 1.19259,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "pawapuro",
+      "poses": 44,
+      "areaCandidateMin": 0.90029,
+      "areaCandidateMax": 1.17472,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "headmaster",
+      "poses": 40,
+      "areaCandidateMin": 0.90252,
+      "areaCandidateMax": 1.23317,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "sakuna",
+      "poses": 40,
+      "areaCandidateMin": 0.88434,
+      "areaCandidateMax": 1.1721,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "haseo",
+      "poses": 40,
+      "areaCandidateMin": 0.95356,
+      "areaCandidateMax": 1.35946,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "terrarian",
+      "poses": 40,
+      "areaCandidateMin": 0.85479,
+      "areaCandidateMax": 1.07963,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "horse",
+      "poses": 40,
+      "areaCandidateMin": 0.87299,
+      "areaCandidateMax": 1.0927,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "chef",
+      "poses": 40,
+      "areaCandidateMin": 0.92936,
+      "areaCandidateMax": 1.07533,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "akira",
+      "poses": 40,
+      "areaCandidateMin": 0.83493,
+      "areaCandidateMax": 1.12293,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "morphie",
+      "poses": 40,
+      "areaCandidateMin": 0.95087,
+      "areaCandidateMax": 1.2119,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "fei",
+      "poses": 40,
+      "areaCandidateMin": 0.84483,
+      "areaCandidateMax": 1.27507,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "human",
+      "poses": 40,
+      "areaCandidateMin": 0.96187,
+      "areaCandidateMax": 1.28532,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "kitten",
+      "poses": 40,
+      "areaCandidateMin": 0.87436,
+      "areaCandidateMax": 1.06984,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "elma",
+      "poses": 56,
+      "areaCandidateMin": 0.50308,
+      "areaCandidateMax": 1.02713,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "goemon",
+      "poses": 80,
+      "areaCandidateMin": 0.93251,
+      "areaCandidateMax": 1.1803,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "bayleef",
+      "poses": 40,
+      "areaCandidateMin": 0.87608,
+      "areaCandidateMax": 1.19768,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "metabee",
+      "poses": 40,
+      "areaCandidateMin": 0.95375,
+      "areaCandidateMax": 1.16097,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "nier",
+      "poses": 40,
+      "areaCandidateMin": 0.88088,
+      "areaCandidateMax": 1.09963,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "miku",
+      "poses": 40,
+      "areaCandidateMin": 0.83661,
+      "areaCandidateMax": 1.30846,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "naruhodo",
+      "poses": 41,
+      "areaCandidateMin": 0.76211,
+      "areaCandidateMax": 1.25981,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "jibanyan",
+      "poses": 40,
+      "areaCandidateMin": 0.87031,
+      "areaCandidateMax": 1.07377,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "layton",
+      "poses": 40,
+      "areaCandidateMin": 0.86518,
+      "areaCandidateMax": 1.15566,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "dante",
+      "poses": 48,
+      "areaCandidateMin": 0.60559,
+      "areaCandidateMax": 1.24927,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "leon",
+      "poses": 48,
+      "areaCandidateMin": 0.84337,
+      "areaCandidateMax": 1.23161,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "tifa",
+      "poses": 46,
+      "areaCandidateMin": 0.90028,
+      "areaCandidateMax": 1.23063,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "zidane",
+      "poses": 48,
+      "areaCandidateMin": 0.96377,
+      "areaCandidateMax": 1.4194,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "yuffie",
+      "poses": 48,
+      "areaCandidateMin": 1,
+      "areaCandidateMax": 1.3668,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "vincent",
+      "poses": 48,
+      "areaCandidateMin": 0.90174,
+      "areaCandidateMax": 1.22093,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "kiryu",
+      "poses": 48,
+      "areaCandidateMin": 0.92976,
+      "areaCandidateMax": 1.14569,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "crash",
+      "poses": 48,
+      "areaCandidateMin": 0.89708,
+      "areaCandidateMax": 1.29085,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "charlotta",
+      "poses": 48,
+      "areaCandidateMin": 0.82889,
+      "areaCandidateMax": 1.10802,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ryofu",
+      "poses": 48,
+      "areaCandidateMin": 0.95334,
+      "areaCandidateMax": 1.36915,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "mametchi",
+      "poses": 48,
+      "areaCandidateMin": 0.93541,
+      "areaCandidateMax": 1.16332,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "piposaru",
+      "poses": 48,
+      "areaCandidateMin": 0.81782,
+      "areaCandidateMax": 1.19316,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "twinbee",
+      "poses": 48,
+      "areaCandidateMin": 0.83169,
+      "areaCandidateMax": 1.20074,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "aruru",
+      "poses": 48,
+      "areaCandidateMin": 0.85699,
+      "areaCandidateMax": 1.22093,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "maruku",
+      "poses": 48,
+      "areaCandidateMin": 0.91337,
+      "areaCandidateMax": 1.3846,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "dietrich",
+      "poses": 48,
+      "areaCandidateMin": 0.75526,
+      "areaCandidateMax": 1.16304,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "edf",
+      "poses": 48,
+      "areaCandidateMin": 0.70239,
+      "areaCandidateMax": 1.11445,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "edelgard",
+      "poses": 48,
+      "areaCandidateMin": 0.75283,
+      "areaCandidateMax": 1.16035,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "guile",
+      "poses": 48,
+      "areaCandidateMin": 0.80217,
+      "areaCandidateMax": 1.19481,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "sukapon",
+      "poses": 43,
+      "areaCandidateMin": 0.89721,
+      "areaCandidateMax": 1.09475,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "pneuma",
+      "poses": 48,
+      "areaCandidateMin": 0.58928,
+      "areaCandidateMax": 1.23289,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "arus",
+      "poses": 48,
+      "areaCandidateMin": 0.77856,
+      "areaCandidateMax": 1.21942,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "knight",
+      "poses": 48,
+      "areaCandidateMin": 0.74753,
+      "areaCandidateMax": 1.06645,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "maelle",
+      "poses": 48,
+      "areaCandidateMin": 0.81545,
+      "areaCandidateMax": 1.06812,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "sumino",
+      "poses": 48,
+      "areaCandidateMin": 0.68097,
+      "areaCandidateMax": 1.05521,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "rocbouquet",
+      "poses": 48,
+      "areaCandidateMin": 0.75611,
+      "areaCandidateMax": 1.32293,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "frog",
+      "poses": 48,
+      "areaCandidateMin": 0.91691,
+      "areaCandidateMax": 1.18488,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "tressa",
+      "poses": 48,
+      "areaCandidateMin": 0.83452,
+      "areaCandidateMax": 1.14945,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "eve",
+      "poses": 48,
+      "areaCandidateMin": 0.6727,
+      "areaCandidateMax": 1.29009,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "odio",
+      "poses": 48,
+      "areaCandidateMin": 0.73949,
+      "areaCandidateMax": 1.23817,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "laharl",
+      "poses": 48,
+      "areaCandidateMin": 0.90874,
+      "areaCandidateMax": 1.20765,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "deemo",
+      "poses": 48,
+      "areaCandidateMin": 0.77333,
+      "areaCandidateMax": 1.39737,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "kasane",
+      "poses": 48,
+      "areaCandidateMin": 0.79101,
+      "areaCandidateMax": 1.06993,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "shadow",
+      "poses": 48,
+      "areaCandidateMin": 0.91577,
+      "areaCandidateMax": 1.24337,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "saki",
+      "poses": 48,
+      "areaCandidateMin": 0.92664,
+      "areaCandidateMax": 1.14468,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "aerith",
+      "poses": 48,
+      "areaCandidateMin": 0.79617,
+      "areaCandidateMax": 1.03258,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "doshin",
+      "poses": 48,
+      "areaCandidateMin": 0.93963,
+      "areaCandidateMax": 1.14266,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "moogle",
+      "poses": 48,
+      "areaCandidateMin": 0.89617,
+      "areaCandidateMax": 1.13511,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "greymon",
+      "poses": 48,
+      "areaCandidateMin": 0.94932,
+      "areaCandidateMax": 1.20307,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "metalgreymon",
+      "poses": 48,
+      "areaCandidateMin": 0.90077,
+      "areaCandidateMax": 1.29634,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "wargreymon",
+      "poses": 48,
+      "areaCandidateMin": 0.9575,
+      "areaCandidateMax": 1.32846,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "omegamon",
+      "poses": 48,
+      "areaCandidateMin": 0.92336,
+      "areaCandidateMax": 1.2726,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "donchan",
+      "poses": 48,
+      "areaCandidateMin": 0.96737,
+      "areaCandidateMax": 1.18072,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "shizuna",
+      "poses": 48,
+      "areaCandidateMin": 0.88473,
+      "areaCandidateMax": 1.16866,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "hanajs",
+      "poses": 48,
+      "areaCandidateMin": 0.68647,
+      "areaCandidateMax": 1.15721,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "hanajk",
+      "poses": 48,
+      "areaCandidateMin": 0.6894,
+      "areaCandidateMax": 1.10398,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "hanajd",
+      "poses": 48,
+      "areaCandidateMin": 0.78701,
+      "areaCandidateMax": 1.31627,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "kisuke",
+      "poses": 48,
+      "areaCandidateMin": 0.91912,
+      "areaCandidateMax": 1.22809,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "ray",
+      "poses": 48,
+      "areaCandidateMin": 0.83142,
+      "areaCandidateMax": 1.08956,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "alain",
+      "poses": 48,
+      "areaCandidateMin": 0.71454,
+      "areaCandidateMax": 1.19139,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "hinako",
+      "poses": 96,
+      "areaCandidateMin": 0.84201,
+      "areaCandidateMax": 1.11323,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "cojicoji",
+      "poses": 48,
+      "areaCandidateMin": 0.8933,
+      "areaCandidateMax": 1.02215,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "megamanexe",
+      "poses": 48,
+      "areaCandidateMin": 0.88363,
+      "areaCandidateMax": 1.13122,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "melia",
+      "poses": 48,
+      "areaCandidateMin": 0.55405,
+      "areaCandidateMax": 1.12467,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "fiora",
+      "poses": 48,
+      "areaCandidateMin": 0.9135,
+      "areaCandidateMax": 1.15863,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "krystal",
+      "poses": 48,
+      "areaCandidateMin": 0.91664,
+      "areaCandidateMax": 1.14047,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "yuri",
+      "poses": 48,
+      "areaCandidateMin": 0.86247,
+      "areaCandidateMax": 1.07849,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "hornet",
+      "poses": 48,
+      "areaCandidateMin": 0.7649,
+      "areaCandidateMax": 1.02247,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "toro",
+      "poses": 104,
+      "areaCandidateMin": 0.59981,
+      "areaCandidateMax": 1.76254,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "c4621",
+      "poses": 48,
+      "areaCandidateMin": 0.91072,
+      "areaCandidateMax": 1.14715,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "malenia",
+      "poses": 43,
+      "areaCandidateMin": 0.79602,
+      "areaCandidateMax": 1.3035,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "hayabusa",
+      "poses": 48,
+      "areaCandidateMin": 0.98389,
+      "areaCandidateMax": 1.35815,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "klonoa",
+      "poses": 48,
+      "areaCandidateMin": 0.895,
+      "areaCandidateMax": 1.1997,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "katamari",
+      "poses": 48,
+      "areaCandidateMin": 0.94625,
+      "areaCandidateMax": 1.13869,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "kingbonby",
+      "poses": 48,
+      "areaCandidateMin": 0.90845,
+      "areaCandidateMax": 1.21,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "alucard",
+      "poses": 48,
+      "areaCandidateMin": 0.75933,
+      "areaCandidateMax": 1.33104,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "kurabe",
+      "poses": 42,
+      "areaCandidateMin": 0.85984,
+      "areaCandidateMax": 1.19774,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "battlemage",
+      "poses": 48,
+      "areaCandidateMin": 0.81082,
+      "areaCandidateMax": 1.21948,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "karateka",
+      "poses": 48,
+      "areaCandidateMin": 0.94172,
+      "areaCandidateMax": 1.19732,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "aiai",
+      "poses": 48,
+      "areaCandidateMin": 0.97617,
+      "areaCandidateMax": 1.06582,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "chibirobo",
+      "poses": 48,
+      "areaCandidateMin": 0.90752,
+      "areaCandidateMax": 1.18205,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "octoling",
+      "poses": 48,
+      "areaCandidateMin": 0.87565,
+      "areaCandidateMax": 1.39429,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "viridi",
+      "poses": 48,
+      "areaCandidateMin": 0.92071,
+      "areaCandidateMax": 1.25404,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "riesz",
+      "poses": 52,
+      "areaCandidateMin": 0.96847,
+      "areaCandidateMax": 1.15766,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    },
+    {
+      "id": "edea",
+      "poses": 52,
+      "areaCandidateMin": 0.82285,
+      "areaCandidateMax": 1.19397,
+      "decision": "representative render reviewed; preserve existing scale and intentional poses/forms"
+    }
+  ]
+}

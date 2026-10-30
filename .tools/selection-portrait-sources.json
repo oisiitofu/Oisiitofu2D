@@ -2317,5 +2317,16 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution head and shoulder close-up"
+  },
+  "nights": {
+    "source": "characters/nights/assets/nights-selection.png",
+    "crop": [
+      -50,
+      -55,
+      1638,
+      1170
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

@@ -1,0 +1,563 @@
+{
+  "date": "2026-10-31",
+  "placement": "after tails",
+  "mechanics": {
+    "id": "nights",
+    "checks": [
+      {
+        "name": "jab -1 tip",
+        "pass": true
+      },
+      {
+        "name": "jab -1 close",
+        "pass": true
+      },
+      {
+        "name": "jab2 -1 tip",
+        "pass": true
+      },
+      {
+        "name": "jab2 -1 close",
+        "pass": true
+      },
+      {
+        "name": "jab3 -1 tip",
+        "pass": true
+      },
+      {
+        "name": "jab3 -1 close",
+        "pass": true
+      },
+      {
+        "name": "heavy -1 tip",
+        "pass": true
+      },
+      {
+        "name": "heavy -1 close",
+        "pass": true
+      },
+      {
+        "name": "up -1 tip",
+        "pass": true
+      },
+      {
+        "name": "up -1 close",
+        "pass": true
+      },
+      {
+        "name": "low -1 tip",
+        "pass": true
+      },
+      {
+        "name": "low -1 close",
+        "pass": true
+      },
+      {
+        "name": "dashAttack -1 tip",
+        "pass": true
+      },
+      {
+        "name": "dashAttack -1 close",
+        "pass": true
+      },
+      {
+        "name": "smash -1 tip",
+        "pass": true
+      },
+      {
+        "name": "smash -1 close",
+        "pass": true
+      },
+      {
+        "name": "upsmash -1 tip",
+        "pass": true
+      },
+      {
+        "name": "upsmash -1 close",
+        "pass": true
+      },
+      {
+        "name": "downsmash -1 tip",
+        "pass": true
+      },
+      {
+        "name": "downsmash -1 close",
+        "pass": true
+      },
+      {
+        "name": "air -1 tip",
+        "pass": true
+      },
+      {
+        "name": "air -1 close",
+        "pass": true
+      },
+      {
+        "name": "fair -1 tip",
+        "pass": true
+      },
+      {
+        "name": "fair -1 close",
+        "pass": true
+      },
+      {
+        "name": "bair -1 tip",
+        "pass": true
+      },
+      {
+        "name": "bair -1 close",
+        "pass": true
+      },
+      {
+        "name": "uair -1 tip",
+        "pass": true
+      },
+      {
+        "name": "uair -1 close",
+        "pass": true
+      },
+      {
+        "name": "dair -1 tip",
+        "pass": true
+      },
+      {
+        "name": "dair -1 close",
+        "pass": true
+      },
+      {
+        "name": "jab 1 tip",
+        "pass": true
+      },
+      {
+        "name": "jab 1 close",
+        "pass": true
+      },
+      {
+        "name": "jab2 1 tip",
+        "pass": true
+      },
+      {
+        "name": "jab2 1 close",
+        "pass": true
+      },
+      {
+        "name": "jab3 1 tip",
+        "pass": true
+      },
+      {
+        "name": "jab3 1 close",
+        "pass": true
+      },
+      {
+        "name": "heavy 1 tip",
+        "pass": true
+      },
+      {
+        "name": "heavy 1 close",
+        "pass": true
+      },
+      {
+        "name": "up 1 tip",
+        "pass": true
+      },
+      {
+        "name": "up 1 close",
+        "pass": true
+      },
+      {
+        "name": "low 1 tip",
+        "pass": true
+      },
+      {
+        "name": "low 1 close",
+        "pass": true
+      },
+      {
+        "name": "dashAttack 1 tip",
+        "pass": true
+      },
+      {
+        "name": "dashAttack 1 close",
+        "pass": true
+      },
+      {
+        "name": "smash 1 tip",
+        "pass": true
+      },
+      {
+        "name": "smash 1 close",
+        "pass": true
+      },
+      {
+        "name": "upsmash 1 tip",
+        "pass": true
+      },
+      {
+        "name": "upsmash 1 close",
+        "pass": true
+      },
+      {
+        "name": "downsmash 1 tip",
+        "pass": true
+      },
+      {
+        "name": "downsmash 1 close",
+        "pass": true
+      },
+      {
+        "name": "air 1 tip",
+        "pass": true
+      },
+      {
+        "name": "air 1 close",
+        "pass": true
+      },
+      {
+        "name": "fair 1 tip",
+        "pass": true
+      },
+      {
+        "name": "fair 1 close",
+        "pass": true
+      },
+      {
+        "name": "bair 1 tip",
+        "pass": true
+      },
+      {
+        "name": "bair 1 close",
+        "pass": true
+      },
+      {
+        "name": "uair 1 tip",
+        "pass": true
+      },
+      {
+        "name": "uair 1 close",
+        "pass": true
+      },
+      {
+        "name": "dair 1 tip",
+        "pass": true
+      },
+      {
+        "name": "dair 1 close",
+        "pass": true
+      },
+      {
+        "name": "actual air-jump count is four",
+        "pass": true
+      },
+      {
+        "name": "four jumps consume the allowance",
+        "pass": true
+      },
+      {
+        "name": "fifth aerial jump denied",
+        "pass": true
+      },
+      {
+        "name": "jumps do not refill flight",
+        "pass": true
+      },
+      {
+        "name": "landing restores aerial jumps",
+        "pass": true
+      },
+      {
+        "name": "landing restores flight",
+        "pass": true
+      },
+      {
+        "name": "ball releases and finishes false",
+        "pass": true
+      },
+      {
+        "name": "charged behavior false",
+        "pass": true
+      },
+      {
+        "name": "ball releases and finishes true",
+        "pass": true
+      },
+      {
+        "name": "charged behavior true",
+        "pass": true
+      },
+      {
+        "name": "ring amplifies ball false",
+        "pass": true
+      },
+      {
+        "name": "ball consumes ring false",
+        "pass": true
+      },
+      {
+        "name": "ring amplifies ball true",
+        "pass": true
+      },
+      {
+        "name": "ball consumes ring true",
+        "pass": true
+      },
+      {
+        "name": "nightmare ring splits shot",
+        "pass": true
+      },
+      {
+        "name": "ring creates two split balls",
+        "pass": true
+      },
+      {
+        "name": "split direction matches travel",
+        "pass": true
+      },
+      {
+        "name": "split retains original move source",
+        "pass": true
+      },
+      {
+        "name": "route completion false",
+        "pass": true
+      },
+      {
+        "name": "route loop false",
+        "pass": true
+      },
+      {
+        "name": "unclosed flight no hidden damage",
+        "pass": true
+      },
+      {
+        "name": "route completion true",
+        "pass": true
+      },
+      {
+        "name": "route loop true",
+        "pass": true
+      },
+      {
+        "name": "curved route turns around",
+        "pass": true
+      },
+      {
+        "name": "enclosed target hit",
+        "pass": true
+      },
+      {
+        "name": "nightmare uses winged whole poses",
+        "pass": true
+      },
+      {
+        "name": "nightmare ends",
+        "pass": true
+      },
+      {
+        "name": "nightmare marks ring",
+        "pass": true
+      },
+      {
+        "name": "nightmare cooldown enforced",
+        "pass": true
+      },
+      {
+        "name": "enemy can destroy ring",
+        "pass": true
+      },
+      {
+        "name": "recovery 150",
+        "pass": true
+      },
+      {
+        "name": "recovery 1290",
+        "pass": true
+      },
+      {
+        "name": "recovery 720",
+        "pass": true
+      },
+      {
+        "name": "recovery no full invulnerability",
+        "pass": true
+      },
+      {
+        "name": "recovery finite if held",
+        "pass": true
+      },
+      {
+        "name": "air jump does not refill flight",
+        "pass": true
+      },
+      {
+        "name": "flying profile additional jumps",
+        "pass": true
+      },
+      {
+        "name": "KO clears rings",
+        "pass": true
+      }
+    ],
+    "summary": [
+      {
+        "closed": false,
+        "loop": false,
+        "damage": 0,
+        "turn": 0
+      },
+      {
+        "closed": true,
+        "loop": true,
+        "damage": 13.65,
+        "turn": 5.59
+      },
+      {
+        "recovery": 150,
+        "safe": true,
+        "phases": [
+          "wind",
+          "pull",
+          "orbit",
+          "launch",
+          null
+        ]
+      },
+      {
+        "recovery": 1290,
+        "safe": true,
+        "phases": [
+          "wind",
+          "pull",
+          "orbit",
+          "launch",
+          null
+        ]
+      },
+      {
+        "recovery": 720,
+        "safe": true,
+        "phases": [
+          "wind",
+          "escape",
+          "pull",
+          "orbit",
+          "launch",
+          null
+        ]
+      }
+    ],
+    "failed": [],
+    "errors": []
+  },
+  "selection": {
+    "checks": 41,
+    "errors": [],
+    "PC": [
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "colors": 5,
+    "dedicatedSource": {
+      "width": 1536,
+      "height": 1024
+    },
+    "portrait": "assets/ready/nights-selection-0-1642b4e515771b9d.webp"
+  },
+  "online": {
+    "identicalFrames": 421,
+    "scenes": [
+      "neutral special",
+      "curved flight and closed paraloop",
+      "down special",
+      "recovery"
+    ],
+    "kinds": [
+      "ball",
+      "ring",
+      "loop"
+    ],
+    "errors": []
+  },
+  "CPU": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "ring",
+          "loop"
+        ],
+        "stats": [
+          {
+            "damage": 52.01,
+            "hits": 5,
+            "kos": 0
+          },
+          {
+            "damage": 101.36,
+            "hits": 11,
+            "kos": 0
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "ring",
+          "loop",
+          "ball"
+        ],
+        "stats": [
+          {
+            "damage": 82.83250000000001,
+            "hits": 10,
+            "kos": 0
+          },
+          {
+            "damage": 118.57900000000001,
+            "hits": 15,
+            "kos": 0
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "artLoading": {
+    "poses": 107,
+    "effects": 16,
+    "costumes": 535,
+    "mismatches": [],
+    "errors": []
+  },
+  "visual": {
+    "normalScenes": 30,
+    "specialScenes": 12,
+    "continuousSamples": 36,
+    "reviewed": true
+  },
+  "sourcesSHA256": {
+    "nights-attacks.png": "e7d2e3b6acc4bb202a8d97ea349e88ec5b9762294b874ece00517daf6f276e21",
+    "nights-basic.png": "9fc34dcb44d41e04dba9878e1841242d0b98428f5b525de286d7c2ecd04c7fc1",
+    "nights-defense.png": "db810927eda1fecb679793e31d3b40ff49dfb22eb826337a783568e13e5c071f",
+    "nights-effects.png": "cc65a86315323df57d38c38451cb5855c33aa793e7aa7c07cb10e87f12619d35",
+    "nights-extra.png": "04830c5ae7720a79864d1b3e8783f8817a22faa46f714156f46914aa9b9564bf",
+    "nights-native.png": "298dd46525f3fc7a64fa72ab4e63dad15cf49df88cbd2a0e9ba3a0f3f91a8d58",
+    "nights-neutral-locked.png": "d247bb4c0faa3de96aadd63542f55cd1cb7dcb4914899f4b6b216b9927828cd7",
+    "nights-recovery.png": "fe97ceaf1b200d60fd09f5dbf08f3ef7e2c12395c33604891a60723d3807142d",
+    "nights-reference.png": "830de525bb883f08b9dba2b68b1602d5e2d88322c4f38d7bc1c805a87fe38e05",
+    "nights-selection.png": "fecd499c373831090c2ac6dd2cd1ebe9916e8c07d20516cd0eb1dc7e019eb6c3",
+    "nights-specials.png": "caa3c174ea5c13baa40e89d480fde2c859d93c667e3b13032888211fe45c8db2",
+    "nights-windup.png": "b6fe2566cf111b36fb04ae0654301e5626b739a01083f6faf47b84fad8ede515"
+  }
+}
