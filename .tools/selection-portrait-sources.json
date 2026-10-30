@@ -756,14 +756,14 @@
   "kiryu": {
     "source": "characters/kiryu/assets/kiryu-selection.png",
     "crop": [
-      -66,
+      140,
       0,
-      1551,
-      1108
+      1120,
+      800
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/kiryu-prompts.json",
-    "framing": "head and shoulders; matched to roster 1-55"
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "crash": {
     "source": "characters/crash/assets/crash-selection.png",
@@ -1030,13 +1030,14 @@
   "laharl": {
     "source": "characters/laharl/assets/laharl-selection.png",
     "crop": [
-      51,
-      0,
-      1434,
-      1024
+      420,
+      80,
+      980,
+      700
     ],
     "mode": "built-in imagegen",
-    "original": "built-in imagegen; see .tools/laharl-prompts-final.json"
+    "original": "built-in imagegen; see .tools/laharl-prompts-final.json",
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "deemo": {
     "source": "characters/deemo/assets/deemo-selection.png",
@@ -1240,13 +1241,13 @@
   "alain": {
     "source": "characters/alain/assets/alain-selection.png",
     "crop": [
-      0,
-      0,
-      1536,
-      1024
+      350,
+      -20,
+      980,
+      700
     ],
     "mode": "existing approved high-resolution portrait",
-    "framing": "full-resolution original, replacing reduced native atlas crop"
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "hinako": {
     "source": "characters/hinako/assets/hinako-presentation-portrait.png",
@@ -1377,11 +1378,12 @@
   "hayabusa": {
     "source": "characters/hayabusa/assets/hayabusa-selection.png",
     "crop": [
+      260,
       0,
-      0,
-      1254,
-      1254
-    ]
+      840,
+      600
+    ],
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "klonoa": {
     "source": "characters/klonoa/assets/klonoa-selection.png",
@@ -1404,29 +1406,32 @@
   "kingbonby": {
     "source": "characters/kingbonby/assets/kingbonby-selection.png",
     "crop": [
+      180,
       0,
-      0,
-      1254,
-      1254
-    ]
+      1036,
+      740
+    ],
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "alucard": {
     "source": "characters/alucard/assets/alucard-selection.png",
     "crop": [
+      240,
       0,
-      0,
-      1254,
-      1254
-    ]
+      882,
+      630
+    ],
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "kurabe": {
     "source": "characters/kurabe/assets/kurabe-selection.png",
     "crop": [
+      140,
       0,
-      0,
-      1254,
-      1254
-    ]
+      882,
+      630
+    ],
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "battlemage": {
     "source": "characters/battlemage/assets/battlemage-selection.png",
@@ -1537,12 +1542,12 @@
     "source": "characters/miyabi/assets/miyabi-selection.png",
     "crop": [
       50,
-      0,
+      90,
       1436,
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Original dedicated portrait; raise face per user request 2026-10-30"
   },
   "sol": {
     "source": "characters/sol/assets/sol-selection.png",
@@ -1559,12 +1564,12 @@
     "source": "characters/rion/assets/rion-selection.png",
     "crop": [
       180,
-      55,
+      145,
       1175,
       783
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Original dedicated portrait; raise face per user request 2026-10-30"
   },
   "judas": {
     "source": "characters/judas/assets/judas-selection.png",
@@ -1603,12 +1608,12 @@
     "source": "characters/ky/assets/ky-selection.png",
     "crop": [
       170,
-      30,
+      110,
       1200,
       800
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Original dedicated portrait; raise face per user request 2026-10-30"
   },
   "zoe": {
     "source": "characters/zoe/assets/zoe-selection.png",
@@ -1624,24 +1629,24 @@
   "welch": {
     "source": "characters/welch/assets/welch-selection.png",
     "crop": [
-      0,
-      0,
-      1536,
-      1024
+      380,
+      -12,
+      910,
+      650
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "gran": {
     "source": "characters/gran/assets/gran-selection.png",
     "crop": [
-      0,
-      0,
-      1536,
-      1024
+      390,
+      70,
+      840,
+      600
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "rena": {
     "source": "characters/rena/assets/rena-selection.png",
@@ -2067,23 +2072,23 @@
     "source": "characters/jehuty/assets/jehuty-selection.png",
     "crop": [
       0,
-      0,
+      130,
       1254,
       1254
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution robotic head and shoulder close-up"
+    "framing": "Original dedicated portrait; raise face per user request 2026-10-30"
   },
   "anubis": {
     "source": "characters/anubis/assets/anubis-selection.png",
     "crop": [
       0,
-      0,
+      130,
       1254,
       1254
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution robotic head and shoulder close-up"
+    "framing": "Original dedicated portrait; raise face per user request 2026-10-30"
   },
   "metabee": {
     "source": "characters/metabee/assets/metabee-presentation-portrait.png",
@@ -2195,13 +2200,13 @@
   "io": {
     "source": "characters/io/assets/io-selection.png",
     "crop": [
-      0,
-      0,
-      1536,
-      1024
+      350,
+      20,
+      1008,
+      720
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution head and shoulder close-up"
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "battlecat": {
     "source": "characters/battlecat/assets/battlecat-selection.png",
@@ -2217,13 +2222,13 @@
   "aloy": {
     "source": "characters/aloy/assets/aloy-selection.png",
     "crop": [
-      0,
-      0,
-      1536,
-      1024
+      500,
+      75,
+      910,
+      650
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution head and shoulder close-up"
+    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
   },
   "quote": {
     "source": "characters/quote/assets/quote-selection.png",

@@ -1,0 +1,274 @@
+{
+  "io": {
+    "before": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "after": [
+      350,
+      20,
+      1008,
+      720
+    ],
+    "mode": "face zoom",
+    "source": "characters/io/assets/io-selection.png",
+    "sourceSha256": "4180dd3d1249b8c623b650c9b10a8b7436ca7c9c91212efcb3d8da1b3d3257a5"
+  },
+  "alain": {
+    "before": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "after": [
+      350,
+      -20,
+      980,
+      700
+    ],
+    "mode": "face zoom",
+    "source": "characters/alain/assets/alain-selection.png",
+    "sourceSha256": "fb82c51eeda4be03ec0e11ab1e1e7c78bb26e95bc710ec9e62ea70c5172e82d0"
+  },
+  "kurabe": {
+    "before": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "after": [
+      140,
+      0,
+      882,
+      630
+    ],
+    "mode": "face zoom",
+    "source": "characters/kurabe/assets/kurabe-selection.png",
+    "sourceSha256": "bff6954b46ccb6f8396752626ee58f5be3b8f089d8c8389df6bac53a6e8ef5a1"
+  },
+  "aloy": {
+    "before": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "after": [
+      500,
+      75,
+      910,
+      650
+    ],
+    "mode": "face zoom",
+    "source": "characters/aloy/assets/aloy-selection.png",
+    "sourceSha256": "d4c5f6595a74060c6daaa6b151aebd3fed7e34d8c173a4cef10f63a71f8b0155"
+  },
+  "gran": {
+    "before": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "after": [
+      390,
+      70,
+      840,
+      600
+    ],
+    "mode": "face zoom",
+    "source": "characters/gran/assets/gran-selection.png",
+    "sourceSha256": "d0e367cf2d1bb4a68b2c5796bf24385d177cb2fa23906c0115e85264fa29c6c0"
+  },
+  "laharl": {
+    "before": [
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "after": [
+      420,
+      80,
+      980,
+      700
+    ],
+    "mode": "face zoom",
+    "source": "characters/laharl/assets/laharl-selection.png",
+    "sourceSha256": "d7948a5675602ed50565d92d5eb23f9855d3a038c0acfe8e33669e30b45ea6a8"
+  },
+  "hayabusa": {
+    "before": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "after": [
+      260,
+      0,
+      840,
+      600
+    ],
+    "mode": "face zoom",
+    "source": "characters/hayabusa/assets/hayabusa-selection.png",
+    "sourceSha256": "2471dbe9880630d9b9810f0930faa663979458906dfada076214c5a97acc35ac"
+  },
+  "kingbonby": {
+    "before": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "after": [
+      180,
+      0,
+      1036,
+      740
+    ],
+    "mode": "face zoom",
+    "source": "characters/kingbonby/assets/kingbonby-selection.png",
+    "sourceSha256": "ae24c4dd837c8c410aedc02b9cf312542b4c803641aea9285c6861e110d28919"
+  },
+  "alucard": {
+    "before": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "after": [
+      240,
+      0,
+      882,
+      630
+    ],
+    "mode": "face zoom",
+    "source": "characters/alucard/assets/alucard-selection.png",
+    "sourceSha256": "188b87f5d8665c7f31ac62607e369f6d9452d4ccac0bd5fa7570e8d6047bd8e7"
+  },
+  "kiryu": {
+    "before": [
+      -66,
+      0,
+      1551,
+      1108
+    ],
+    "after": [
+      140,
+      0,
+      1120,
+      800
+    ],
+    "mode": "face zoom",
+    "source": "characters/kiryu/assets/kiryu-selection.png",
+    "sourceSha256": "7c9aa0fbd12fa2b3664c844c1254538e32cdd42514fdcf75e433e805b5f2670c"
+  },
+  "welch": {
+    "before": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "after": [
+      380,
+      -12,
+      910,
+      650
+    ],
+    "mode": "face zoom",
+    "source": "characters/welch/assets/welch-selection.png",
+    "sourceSha256": "d5947941e6713b4f7fe9d46931e714cd4d52918dedf66453b76bb4a3beccacc3"
+  },
+  "miyabi": {
+    "before": [
+      50,
+      0,
+      1436,
+      1024
+    ],
+    "after": [
+      50,
+      90,
+      1436,
+      1024
+    ],
+    "mode": "raise face",
+    "source": "characters/miyabi/assets/miyabi-selection.png",
+    "sourceSha256": "5db66b3004d211d2c647d0dbf34e1ecaf96183e29535c576592c2378e7718317"
+  },
+  "rion": {
+    "before": [
+      180,
+      55,
+      1175,
+      783
+    ],
+    "after": [
+      180,
+      145,
+      1175,
+      783
+    ],
+    "mode": "raise face",
+    "source": "characters/rion/assets/rion-selection.png",
+    "sourceSha256": "1c27dc7835e57cf05a1a2edf7621cadcf62103413dc923c6bbbbb10f9029002b"
+  },
+  "anubis": {
+    "before": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "after": [
+      0,
+      130,
+      1254,
+      1254
+    ],
+    "mode": "raise face",
+    "source": "characters/anubis/assets/anubis-selection.png",
+    "sourceSha256": "303efe156dacc10fac232d4cbfdb0725009ee13c772c528cd1a59038d444f064"
+  },
+  "jehuty": {
+    "before": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "after": [
+      0,
+      130,
+      1254,
+      1254
+    ],
+    "mode": "raise face",
+    "source": "characters/jehuty/assets/jehuty-selection.png",
+    "sourceSha256": "9575a67c2296701ac231a2b8e55c690ca7905058de4d535d5ed8e8e0178ec63d"
+  },
+  "ky": {
+    "before": [
+      170,
+      30,
+      1200,
+      800
+    ],
+    "after": [
+      170,
+      110,
+      1200,
+      800
+    ],
+    "mode": "raise face",
+    "source": "characters/ky/assets/ky-selection.png",
+    "sourceSha256": "32521c06ab7995eec7ef2ef40141bb972eac2866fc8f4fef19d7adec2044d761"
+  }
+}
