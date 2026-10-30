@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-31",
+  "projectId": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+  "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+  "version": 180,
+  "versionId": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_c1e6aa6200b08191808dcab4296f89e0",
+  "siteCommit": "73041784049585de6388ca323a1b171f090ca016",
+  "gameCommits": [
+    "d13b34c9e1c1cee0fbbb034e38ecacbf8f83cffb",
+    "9050e2ebe415e7501d4093cbaff73eb36007e6c0"
+  ],
+  "deployment": {
+    "id": "appgdep_6ae4cabc504481918a7111f3fda4a469",
+    "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+    "title": "おいしいとうふブラザーズ",
+    "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_c1e6aa6200b08191808dcab4296f89e0",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+    "failure_message": null,
+    "env_set_revision": 355,
+    "updated_at": "2026-10-30T16:50:18.928343+00:00"
+  },
+  "initialArtRelease": {
+    "version": 179,
+    "siteCommit": "1b497cc838583fc60173956167cb636dc79e5a2b",
+    "uploaded": {
+      "uploaded": 30,
+      "bytes": 26408897,
+      "failed": []
+    },
+    "deployment": {
+      "id": "appgdep_6ae4c3f3b25881918c93fda9ec66b6fb",
+      "project_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40",
+      "title": "おいしいとうふブラザーズ",
+      "version_id": "appgprj_6acb75f860a881919fa3c7cf1a439c40~appgver_e0a73718fe008191a77e25213e30ae28",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6acb75f860a881919fa3c7cf1a439c40",
+      "failure_message": null,
+      "env_set_revision": 353,
+      "updated_at": "2026-10-30T16:21:22.172790+00:00"
+    }
+  },
+  "finalUpload": {
+    "uploaded": 1,
+    "bytes": 4206775,
+    "failed": []
+  },
+  "publicValidation": {
+    "selectionChecks": 41,
+    "PC": [
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "colors": 5,
+    "nightsMechanicsChecks": 99,
+    "nargacugaMechanicsChecks": 78,
+    "online": {
+      "identicalFrames": 421,
+      "characterIds": [
+        "nights",
+        "nights"
+      ],
+      "scenes": [
+        "neutral special",
+        "curved flight and closed paraloop",
+        "down special",
+        "recovery"
+      ],
+      "objects": [
+        "ball",
+        "ring",
+        "loop"
+      ],
+      "errors": []
+    },
+    "initialAssets": {
+      "sha256Files": 29,
+      "normalizedHTML": 1,
+      "catalogMatches": true
+    },
+    "finalAssets": {
+      "sha256Files": 1,
+      "errors": []
+    }
+  },
+  "sizeReview": {
+    "existingCharacters": 204,
+    "measuredPoses": 9984,
+    "representativeRenders": 1428,
+    "correctedCharacter": "nargacuga",
+    "correctedWholeBodyPoses": 92,
+    "sourceArtAndNeutralPreserved": true
+  },
+  "onlineService": {
+    "registeredCharacterAllowlistReloaded": true,
+    "verifiedEmptyRoomsBeforeRestart": true,
+    "oldPID": 3652,
+    "newPID": 28756,
+    "health": "ok",
+    "fixedEntryPreserved": true
+  },
+  "homeUpdateAdded": true,
+  "temporaryUploadSecretRemoved": true,
+  "temporaryDeploymentErrorRecovered": true
+}
