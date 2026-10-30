@@ -1921,13 +1921,13 @@
   "etna": {
     "source": "characters/etna/assets/etna-selection.png",
     "crop": [
-      0,
-      0,
-      1223,
-      1286
+      -144,
+      -48,
+      1512,
+      1080
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Original dedicated art; full hair silhouette with top padding, face and shoulders in a 1.4 landscape frame"
   },
   "tails": {
     "source": "characters/tails/assets/tails-selection.png",

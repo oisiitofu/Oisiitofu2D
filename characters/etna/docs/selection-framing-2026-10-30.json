@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-30",
+  "source": "characters/etna/assets/etna-selection.png",
+  "sourceSha256": "d39992345d127e07a9d1ff605213cfd3b19d315bfb0828f8247a6bcadae3b52c",
+  "problem": "A bottom-aligned cover rule clipped the full hair silhouette in landscape cards.",
+  "crop": [
+    -144,
+    -48,
+    1512,
+    1080
+  ],
+  "change": "Frame original high-resolution source in a padded landscape portrait and contain it at the top of the Etna card. Original art pixels are not repainted.",
+  "bake": "ART_IDS=etna ART_PORTRAITS_ONLY=1 node .tools/build-art.cjs",
+  "verification": {
+    "selectionFramingChecks": 58,
+    "PC": [
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "colors": 5,
+    "artLoading": {
+      "poses": 75,
+      "effects": 16,
+      "costumes": 375,
+      "mismatches": []
+    },
+    "otherManifestEntriesUnchanged": true,
+    "etnaCombatMetadataUnchanged": true
+  },
+  "screenshots": "previews/etna-selection-local-*.png"
+}
