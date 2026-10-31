@@ -13,7 +13,7 @@ const ThrowTuning=(()=>{
  // Weapon specialists keep useful positioning throws; supernatural and
  // power identities get the designated KO directions below.
  groups.blade='shovelknight aloy io raguna anubis jehuty elza nahobino django enoch zack tidus arthur sakura edea narmaya gran ky alphen ash judas rion sol miyabi zero3 dana ulgrim roxas twob zero lightning rean noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian nier dante charlotta arus maelle frog eve saki hanajk hanajd kisuke ray alain hinako fiora malenia alucard shizuna knight hornet hayabusa';
- groups.psion='kasane neku midna emma pneuma laharl odio will melia battlemage reimu rocbouquet deemo';
+ groups.psion='namine hydaelyn kasane neku midna emma pneuma laharl odio will melia battlemage reimu rocbouquet deemo';
  groups.power='nargacuga nightraven estark agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby presea zoe greymon metalgreymon wargreymon omegamon';
  // Per-character selections, rather than roster-number/modulo assignments.
  const assignments=Object.fromEntries(Object.entries(groups).flatMap(([group,ids])=>ids.split(' ').map(id=>[id,group])));

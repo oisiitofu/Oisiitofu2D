@@ -1,0 +1,97 @@
+{
+  "definition": {
+    "id": "hydaelyn",
+    "name": "ハイデリン",
+    "style": "FINAL FANTASY XIV",
+    "number": "206",
+    "description": "結晶を置いて光線や翼の移動を強化する光の母。再入力で目印へ飛ぶ横Bと、破壊可能な光の輪に乗る上Bを使い分ける。",
+    "pose": 106
+  },
+  "after": "dragoon",
+  "anchorName": "ララフェル",
+  "height": 116,
+  "tier": 4,
+  "weight": 104,
+  "physics": {
+    "weight": 104,
+    "walkSpeed": 2.8,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.3,
+    "airSpeed": 5.7,
+    "airAcceleration": 0.4,
+    "gravity": 0.5,
+    "fullHopVelocity": 13.5,
+    "ecb": {
+      "radius": 20.122448979591837,
+      "height": 109
+    },
+    "shieldSize": 55.68,
+    "shieldOffset": [
+      0,
+      -53.36
+    ],
+    "airMobility": {
+      "frames": 90,
+      "fallSpeed": 1.1
+    },
+    "ledgeGrip": [
+      -0.019792004030371735,
+      0.9572414723973699
+    ]
+  },
+  "mask": "(b>r*1.12&&b>green*1.03&&b>75)",
+  "upperCurves": [
+    2
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      1,
+      0
+    ],
+    "2": [
+      0,
+      -1
+    ],
+    "3": [
+      0,
+      1
+    ],
+    "7": [
+      1,
+      0
+    ],
+    "9": [
+      1,
+      0
+    ],
+    "11": [
+      1,
+      0
+    ],
+    "15": [
+      0,
+      -1
+    ]
+  },
+  "types": {
+    "jab": 1,
+    "jab2": 1,
+    "jab3": 1,
+    "heavy": 9,
+    "up": 2,
+    "low": 0,
+    "dashAttack": 1,
+    "smash": 9,
+    "upsmash": 15,
+    "downsmash": 8,
+    "air": 9,
+    "fair": 1,
+    "bair": 0,
+    "uair": 2,
+    "dair": 3
+  }
+}

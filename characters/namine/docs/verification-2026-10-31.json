@@ -1,0 +1,1019 @@
+{
+  "id": "namine",
+  "date": "2026-10-31",
+  "mechanics": [
+    {
+      "id": "namine",
+      "name": "jab -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab2 -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab2 -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab3 -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab3 -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "heavy -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "heavy -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "up -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "up -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "low -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "low -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "dashAttack -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "dashAttack -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "smash -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "smash -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "upsmash -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "upsmash -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "downsmash -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "downsmash -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "air -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "air -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "fair -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "fair -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "bair -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "bair -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "uair -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "uair -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "dair -1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "dair -1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab2 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab2 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab3 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "jab3 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "heavy 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "heavy 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "up 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "up 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "low 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "low 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "dashAttack 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "dashAttack 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "smash 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "smash 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "upsmash 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "upsmash 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "downsmash 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "downsmash 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "air 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "air 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "fair 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "fair 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "bair 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "bair 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "uair 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "uair 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "dair 1 tip",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "dair 1 close",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "hold selects fox",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "sketch action finishes fox",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "hold selects rabbit",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "sketch action finishes rabbit",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "hold selects cat",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "sketch action finishes cat",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "memory thread telegraph",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "thread leaves memory mark",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "same thread never rebinds target",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "phantom travels while owner stays",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "reinput turns phantom into empowered burst",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "burst consumes memory mark",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "remote burst hits",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "phantom action finite",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "guard retracts phantom",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "cat drawing marks its victim",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "corridor recovery 150",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "corridor recovery 1290",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "corridor recovery 720",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "aiming corridor is vulnerable",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "corridor consumes nearby rabbit page",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "corridor has finite recovery",
+      "pass": true
+    },
+    {
+      "id": "namine",
+      "name": "nonflying Namine has no flight profile",
+      "pass": true
+    }
+  ],
+  "throws": [
+    {
+      "name": "namine explicit psion identity",
+      "pass": true
+    },
+    {
+      "name": "namineforwardThrow real low release -1",
+      "pass": true
+    },
+    {
+      "name": "namineforwardThrow actual direction -1",
+      "pass": true
+    },
+    {
+      "name": "namineforwardThrow real low release 1",
+      "pass": true
+    },
+    {
+      "name": "namineforwardThrow actual direction 1",
+      "pass": true
+    },
+    {
+      "name": "naminebackThrow real low release -1",
+      "pass": true
+    },
+    {
+      "name": "naminebackThrow actual direction -1",
+      "pass": true
+    },
+    {
+      "name": "naminebackThrow real low release 1",
+      "pass": true
+    },
+    {
+      "name": "naminebackThrow actual direction 1",
+      "pass": true
+    },
+    {
+      "name": "namineupThrow real low release -1",
+      "pass": true
+    },
+    {
+      "name": "namineupThrow actual direction -1",
+      "pass": true
+    },
+    {
+      "name": "namineupThrow designated direct KO -1",
+      "pass": true
+    },
+    {
+      "name": "namineupThrow not early KO -1",
+      "pass": true
+    },
+    {
+      "name": "namineupThrow real low release 1",
+      "pass": true
+    },
+    {
+      "name": "namineupThrow actual direction 1",
+      "pass": true
+    },
+    {
+      "name": "namineupThrow designated direct KO 1",
+      "pass": true
+    },
+    {
+      "name": "namineupThrow not early KO 1",
+      "pass": true
+    },
+    {
+      "name": "naminedownThrow real low release -1",
+      "pass": true
+    },
+    {
+      "name": "naminedownThrow actual direction -1",
+      "pass": true
+    },
+    {
+      "name": "namine ground bounce -1",
+      "pass": true
+    },
+    {
+      "name": "naminedownThrow real low release 1",
+      "pass": true
+    },
+    {
+      "name": "naminedownThrow actual direction 1",
+      "pass": true
+    },
+    {
+      "name": "namine ground bounce 1",
+      "pass": true
+    },
+    {
+      "name": "namine weak single ledge -1",
+      "pass": true
+    },
+    {
+      "name": "namine ledge hit -1",
+      "pass": true
+    },
+    {
+      "name": "namine weak single ledge 1",
+      "pass": true
+    },
+    {
+      "name": "namine ledge hit 1",
+      "pass": true
+    }
+  ],
+  "throwFlights": [
+    {
+      "id": "namine",
+      "type": "forwardThrow",
+      "pct": 0,
+      "role": "position",
+      "group": "psion",
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 58.086745263157894,
+        "speed": 13.940818863157894,
+        "angle": 3.8920842319473548,
+        "decayAngle": 3.8920842319473548,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 22,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 306.94176229187815,
+      "height": 82.60184964163244,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "forwardThrow",
+      "pct": 0,
+      "role": "position",
+      "group": "psion",
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 58.086745263157894,
+        "speed": 13.940818863157894,
+        "angle": -0.7504915783575616,
+        "decayAngle": -0.7504915783575616,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 22,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 306.9417622918786,
+      "height": 82.60184964163244,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "backThrow",
+      "pct": 0,
+      "role": "position",
+      "group": "psion",
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 58.53211657894737,
+        "speed": 14.047707978947367,
+        "angle": 3.9444441095071845,
+        "decayAngle": 3.9444441095071845,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 22,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 307.9658856002203,
+      "height": 92.57628269745834,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "backThrow",
+      "pct": 0,
+      "role": "position",
+      "group": "psion",
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 58.53211657894737,
+        "speed": 14.047707978947367,
+        "angle": -0.8028514559173915,
+        "decayAngle": -0.8028514559173915,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 22,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 307.9658856002203,
+      "height": 92.57628269745857,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "upThrow",
+      "pct": 0,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 66.88408421052631,
+        "speed": 16.052180210526313,
+        "angle": 4.642575810304916,
+        "decayAngle": 4.642575810304916,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 25,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 7.801408823481552,
+      "height": 224.94618137677008,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 35,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "upThrow",
+      "pct": 160,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 146.58092631578947,
+        "speed": 35.17942231578947,
+        "angle": 4.642575810304916,
+        "decayAngle": 4.642575810304916,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 57,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 38.927758371355594,
+      "height": 997.26771550129,
+      "landed": false,
+      "zone": "top",
+      "direct": true,
+      "stunnedKO": true,
+      "actionableAt": null,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "upThrow",
+      "pct": 140,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 136.61882105263157,
+        "speed": 32.788517052631576,
+        "angle": 4.642575810304916,
+        "decayAngle": 4.642575810304916,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 53,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 33.74133986672109,
+      "height": 930.1828147630779,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 63,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "upThrow",
+      "pct": 0,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 66.88408421052631,
+        "speed": 16.052180210526313,
+        "angle": -1.5009831567151233,
+        "decayAngle": -1.5009831567151233,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 25,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 7.801408823481552,
+      "height": 224.94618137677008,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 35,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "upThrow",
+      "pct": 160,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 146.58092631578947,
+        "speed": 35.17942231578947,
+        "angle": -1.5009831567151233,
+        "decayAngle": -1.5009831567151233,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 57,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 38.927758371355594,
+      "height": 997.26771550129,
+      "landed": false,
+      "zone": "top",
+      "direct": true,
+      "stunnedKO": true,
+      "actionableAt": null,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "upThrow",
+      "pct": 140,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 136.61882105263157,
+        "speed": 32.788517052631576,
+        "angle": -1.5009831567151233,
+        "decayAngle": -1.5009831567151233,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 53,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 33.74133986672109,
+      "height": 930.1828147630779,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 63,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "downThrow",
+      "pct": 0,
+      "role": "combo",
+      "group": "psion",
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 57.992943157894736,
+        "speed": 13.918306357894735,
+        "angle": 4.223696789826278,
+        "decayAngle": 4.223696789826278,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 24,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 216.99270859846666,
+      "height": 126.40183700290123,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "namine",
+      "type": "downThrow",
+      "pct": 0,
+      "role": "combo",
+      "group": "psion",
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 57.992943157894736,
+        "speed": 13.918306357894735,
+        "angle": -1.0821041362364843,
+        "decayAngle": -1.0821041362364843,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 24,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 216.99270859846683,
+      "height": 126.40183700290123,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    }
+  ],
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "drawing",
+          "phantom",
+          "thread",
+          "corridor"
+        ],
+        "stats": [
+          {
+            "damage": 53.97,
+            "hits": 6,
+            "kos": 0
+          },
+          {
+            "damage": 122.48250000000002,
+            "hits": 13,
+            "kos": 0
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "corridor",
+          "thread",
+          "drawing"
+        ],
+        "stats": [
+          {
+            "damage": 144.70533333333336,
+            "hits": 15,
+            "kos": 0
+          },
+          {
+            "damage": 68.74,
+            "hits": 8,
+            "kos": 0
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 321,
+    "characters": [
+      "hydaelyn",
+      "namine"
+    ],
+    "kinds": [
+      "crystal",
+      "drawing",
+      "ray",
+      "phantom",
+      "tracer",
+      "shatter",
+      "thread",
+      "circle",
+      "corridor"
+    ],
+    "errors": []
+  },
+  "PCSelection": {
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "colors": 5,
+    "headUnclipped": true
+  },
+  "motion": {
+    "wholeBodyFrames": 106,
+    "samples": 42,
+    "video": "previews/namine/motion.webm"
+  },
+  "assets": {
+    "atlas": "characters/namine/assets/namine-native.png",
+    "selection": "characters/namine/assets/namine-selection.png",
+    "prompts": "characters/namine/docs/art-generation.json",
+    "mode": "built-in image_gen"
+  }
+}

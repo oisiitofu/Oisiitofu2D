@@ -1,0 +1,1045 @@
+{
+  "id": "hydaelyn",
+  "date": "2026-10-31",
+  "mechanics": [
+    {
+      "id": "hydaelyn",
+      "name": "jab -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab2 -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab2 -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab3 -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab3 -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "heavy -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "heavy -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "up -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "up -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "low -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "low -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "dashAttack -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "dashAttack -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "smash -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "smash -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "upsmash -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "upsmash -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "downsmash -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "downsmash -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "air -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "air -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "fair -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "fair -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "bair -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "bair -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "uair -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "uair -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "dair -1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "dair -1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab2 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab2 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab3 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "jab3 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "heavy 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "heavy 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "up 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "up 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "low 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "low 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "dashAttack 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "dashAttack 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "smash 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "smash 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "upsmash 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "upsmash 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "downsmash 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "downsmash 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "air 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "air 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "fair 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "fair 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "bair 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "bair 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "uair 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "uair 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "dair 1 tip",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "dair 1 close",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "crystal is placed",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "pillar has a visible delay",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "pillar hits after telegraph",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "pillar does not repeatedly bind/hit",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "at most two crystal anchors",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "ray releases false",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "ray anchor amplification false",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "ray action finite false",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "ray releases true",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "ray anchor amplification true",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "ray consumes crystal",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "ray action finite true",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "wing tracer does not move owner false",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "wing followup only on reinput false",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "wing movement matches choice false",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "wing action finishes false",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "wing tracer does not move owner true",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "wing followup only on reinput true",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "wing movement matches choice true",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "wing action finishes true",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "enemy destroys wing destination",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "rising support recovery 150",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "rising support recovery 1290",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "rising support recovery 720",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "finite wing hover consumed",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "aerial jump does not refill hover",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "landing refills hover",
+      "pass": true
+    },
+    {
+      "id": "hydaelyn",
+      "name": "hover/input preserve reserved launch",
+      "pass": true
+    }
+  ],
+  "throws": [
+    {
+      "name": "hydaelyn explicit psion identity",
+      "pass": true
+    },
+    {
+      "name": "hydaelynforwardThrow real low release -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynforwardThrow actual direction -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynforwardThrow real low release 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynforwardThrow actual direction 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynbackThrow real low release -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynbackThrow actual direction -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynbackThrow real low release 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynbackThrow actual direction 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynupThrow real low release -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynupThrow actual direction -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynupThrow designated direct KO -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynupThrow not early KO -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynupThrow real low release 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynupThrow actual direction 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynupThrow designated direct KO 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelynupThrow not early KO 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyndownThrow real low release -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyndownThrow actual direction -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyn ground bounce -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyndownThrow real low release 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyndownThrow actual direction 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyn ground bounce 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyn weak single ledge -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyn ledge hit -1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyn weak single ledge 1",
+      "pass": true
+    },
+    {
+      "name": "hydaelyn ledge hit 1",
+      "pass": true
+    }
+  ],
+  "throwFlights": [
+    {
+      "id": "hydaelyn",
+      "type": "forwardThrow",
+      "pct": 0,
+      "role": "position",
+      "group": "psion",
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 58.086745263157894,
+        "speed": 13.940818863157894,
+        "angle": 3.8920842319473548,
+        "decayAngle": 3.8920842319473548,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 22,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 306.94176229187815,
+      "height": 82.60184964163244,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "forwardThrow",
+      "pct": 0,
+      "role": "position",
+      "group": "psion",
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 58.086745263157894,
+        "speed": 13.940818863157894,
+        "angle": -0.7504915783575616,
+        "decayAngle": -0.7504915783575616,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 22,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 306.9417622918786,
+      "height": 82.60184964163244,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "backThrow",
+      "pct": 0,
+      "role": "position",
+      "group": "psion",
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 58.53211657894737,
+        "speed": 14.047707978947367,
+        "angle": 3.9444441095071845,
+        "decayAngle": 3.9444441095071845,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 22,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 307.9658856002203,
+      "height": 92.57628269745834,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "backThrow",
+      "pct": 0,
+      "role": "position",
+      "group": "psion",
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 58.53211657894737,
+        "speed": 14.047707978947367,
+        "angle": -0.8028514559173915,
+        "decayAngle": -0.8028514559173915,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 22,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 307.9658856002203,
+      "height": 92.57628269745857,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "upThrow",
+      "pct": 0,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 66.88408421052631,
+        "speed": 16.052180210526313,
+        "angle": 4.642575810304916,
+        "decayAngle": 4.642575810304916,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 25,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 7.801408823481552,
+      "height": 224.94618137677008,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 35,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "upThrow",
+      "pct": 160,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 146.58092631578947,
+        "speed": 35.17942231578947,
+        "angle": 4.642575810304916,
+        "decayAngle": 4.642575810304916,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 57,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 38.927758371355594,
+      "height": 997.26771550129,
+      "landed": false,
+      "zone": "top",
+      "direct": true,
+      "stunnedKO": true,
+      "actionableAt": null,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "upThrow",
+      "pct": 140,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 136.61882105263157,
+        "speed": 32.788517052631576,
+        "angle": 4.642575810304916,
+        "decayAngle": 4.642575810304916,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 53,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 33.74133986672109,
+      "height": 930.1828147630779,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 63,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "upThrow",
+      "pct": 0,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 66.88408421052631,
+        "speed": 16.052180210526313,
+        "angle": -1.5009831567151233,
+        "decayAngle": -1.5009831567151233,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 25,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 7.801408823481552,
+      "height": 224.94618137677008,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 35,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "upThrow",
+      "pct": 160,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 146.58092631578947,
+        "speed": 35.17942231578947,
+        "angle": -1.5009831567151233,
+        "decayAngle": -1.5009831567151233,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 57,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 38.927758371355594,
+      "height": 997.26771550129,
+      "landed": false,
+      "zone": "top",
+      "direct": true,
+      "stunnedKO": true,
+      "actionableAt": null,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "upThrow",
+      "pct": 140,
+      "role": "ko",
+      "group": "psion",
+      "reference": 160,
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 136.61882105263157,
+        "speed": 32.788517052631576,
+        "angle": -1.5009831567151233,
+        "decayAngle": -1.5009831567151233,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 53,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 33.74133986672109,
+      "height": 930.1828147630779,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 63,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "downThrow",
+      "pct": 0,
+      "role": "combo",
+      "group": "psion",
+      "side": -1,
+      "weight": 90,
+      "launch": {
+        "raw": 57.992943157894736,
+        "speed": 13.918306357894735,
+        "angle": 4.223696789826278,
+        "decayAngle": 4.223696789826278,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 24,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 216.99270859846666,
+      "height": 126.40183700290123,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    },
+    {
+      "id": "hydaelyn",
+      "type": "downThrow",
+      "pct": 0,
+      "role": "combo",
+      "group": "psion",
+      "side": 1,
+      "weight": 90,
+      "launch": {
+        "raw": 57.992943157894736,
+        "speed": 13.918306357894735,
+        "angle": -1.0821041362364843,
+        "decayAngle": -1.0821041362364843,
+        "horizontalScale": 1,
+        "velocityScale": 1,
+        "hitstun": 24,
+        "SDIMultiplier": 1,
+        "smash": false
+      },
+      "released": true,
+      "bounce": true,
+      "launched": true,
+      "finite": true,
+      "range": 216.99270859846683,
+      "height": 126.40183700290123,
+      "landed": true,
+      "zone": null,
+      "direct": false,
+      "stunnedKO": false,
+      "actionableAt": 32,
+      "unrecoveredFall": false
+    }
+  ],
+  "cpu": {
+    "matches": [
+      {
+        "stage": "0",
+        "finite": true,
+        "kinds": [
+          "tracer",
+          "circle",
+          "crystal",
+          "ray"
+        ],
+        "stats": [
+          {
+            "damage": 70.695,
+            "hits": 7,
+            "kos": 0
+          },
+          {
+            "damage": 106.231,
+            "hits": 11,
+            "kos": 1
+          }
+        ]
+      },
+      {
+        "stage": "11",
+        "finite": true,
+        "kinds": [
+          "tracer",
+          "crystal",
+          "ray",
+          "circle"
+        ],
+        "stats": [
+          {
+            "damage": 105.7225,
+            "hits": 12,
+            "kos": 0
+          },
+          {
+            "damage": 129.70499999999998,
+            "hits": 12,
+            "kos": 1
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "online": {
+    "identicalFrames": 321,
+    "characters": [
+      "hydaelyn",
+      "namine"
+    ],
+    "kinds": [
+      "crystal",
+      "drawing",
+      "ray",
+      "phantom",
+      "tracer",
+      "shatter",
+      "thread",
+      "circle",
+      "corridor"
+    ],
+    "errors": []
+  },
+  "PCSelection": {
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "colors": 5,
+    "headUnclipped": true
+  },
+  "motion": {
+    "wholeBodyFrames": 106,
+    "samples": 42,
+    "video": "previews/hydaelyn/motion.webm"
+  },
+  "assets": {
+    "atlas": "characters/hydaelyn/assets/hydaelyn-native.png",
+    "selection": "characters/hydaelyn/assets/hydaelyn-selection.png",
+    "prompts": "characters/hydaelyn/docs/art-generation.json",
+    "mode": "built-in image_gen"
+  }
+}

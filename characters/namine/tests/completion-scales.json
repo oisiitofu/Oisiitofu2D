@@ -1,0 +1,59 @@
+[
+  {
+    "frame": 20,
+    "sheet": "attacks",
+    "source": "attacks-up-tilt-incomplete",
+    "file": "up-tilt-completion",
+    "original": [
+      173,
+      252
+    ],
+    "completion": [
+      698,
+      1362
+    ],
+    "score": 0.9360814690428471,
+    "width": 169,
+    "dx": 0,
+    "dy": 3,
+    "scale": 0.24212034383954154
+  },
+  {
+    "frame": 24,
+    "sheet": "attacks",
+    "source": "up-smash-incomplete",
+    "file": "up-smash-completion",
+    "original": [
+      161,
+      295
+    ],
+    "completion": [
+      762,
+      1504
+    ],
+    "score": 0.9252197152695688,
+    "width": 155,
+    "dx": 6,
+    "dy": 3,
+    "scale": 0.20341207349081364
+  },
+  {
+    "frame": 80,
+    "sheet": "windup",
+    "source": "windup-up-tilt-incomplete",
+    "file": "up-tilt-windup-completion",
+    "original": [
+      197,
+      288
+    ],
+    "completion": [
+      664,
+      1279
+    ],
+    "score": 0.9713212944752369,
+    "width": 189,
+    "dx": 3,
+    "dy": 3,
+    "scale": 0.28463855421686746
+  }
+]

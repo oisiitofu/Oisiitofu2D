@@ -2328,5 +2328,27 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "hydaelyn": {
+    "source": "characters/hydaelyn/assets/hydaelyn-selection.png",
+    "crop": [
+      280,
+      35,
+      1120,
+      800
+    ],
+    "mode": "built-in imagegen",
+    "framing": "Close head/crown and shoulder tops; wings/flowing hair may leave portrait edges, entire crown and head retained"
+  },
+  "namine": {
+    "source": "characters/namine/assets/namine-selection.png",
+    "crop": [
+      -140,
+      -50,
+      1750,
+      1250
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }
