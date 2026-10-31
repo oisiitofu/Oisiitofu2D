@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "status": "implemented and locally verified",
+  "status": "published and verified",
   "id": "velvet",
   "mechanics": 116,
   "throws": 27,
@@ -173,5 +173,71 @@
     "characters": 209,
     "sha256": "3b81083d076a1e6e9b78d1a60ae2297a6ca548c39e059a09cff67a4ba3b1c922"
   },
-  "artProvenance": "characters/velvet/docs/art-generation.json"
+  "artProvenance": "characters/velvet/docs/art-generation.json",
+  "publicRelease": {
+    "site": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site/",
+    "version": 182,
+    "featureCommit": "a95f80c7158720a1538db63c9db4130c6ba808b2",
+    "siteCommit": "8b9e2ca8c49fd014bc8a58edb7c4e4c53aded5b7",
+    "deployment": "appgdep_6ae58a64c2988191b1f7d2faa2a421de",
+    "environmentRevision": 359,
+    "publishedAt": "2026-10-31T15:28:02+09:00",
+    "uploadSecretRemoved": true,
+    "audioUnchanged": true,
+    "assets": {
+      "sha256Files": 56,
+      "htmlFiles": 1,
+      "catalogMatches": true,
+      "onlineStatus": 200
+    },
+    "smoke": {
+      "results": [
+        {
+          "id": "velvet",
+          "after": "ash",
+          "correctOrder": true,
+          "poses": 107,
+          "phases": [
+            "wind",
+            "reel",
+            "vault",
+            null
+          ],
+          "branch": true,
+          "finite": true
+        },
+        {
+          "id": "leanne",
+          "after": "kiryu",
+          "correctOrder": true,
+          "poses": 107,
+          "phases": [
+            "wind",
+            "aim",
+            "route",
+            "recover",
+            null
+          ],
+          "branch": true,
+          "finite": true
+        }
+      ],
+      "errors": []
+    },
+    "online": {
+      "identicalFrames": 286,
+      "characters": [
+        "velvet",
+        "leanne"
+      ],
+      "kinds": [
+        "release",
+        "bullet",
+        "soul",
+        "grenade",
+        "blast"
+      ],
+      "errors": []
+    }
+  }
 }
