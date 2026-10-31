@@ -1019,13 +1019,14 @@
   "odio": {
     "source": "characters/odio/assets/odio-selection.png",
     "crop": [
-      51,
-      0,
-      1434,
-      1024
+      470,
+      150,
+      700,
+      500
     ],
     "mode": "built-in imagegen",
-    "original": "built-in imagegen; see .tools/odio-prompts-final.json"
+    "original": "built-in imagegen; see .tools/odio-prompts-final.json",
+    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame"
   },
   "laharl": {
     "source": "characters/laharl/assets/laharl-selection.png",
@@ -1673,13 +1674,13 @@
   "narmaya": {
     "source": "characters/narmaya/assets/narmaya-selection.png",
     "crop": [
-      0,
-      0,
-      1536,
-      1024
+      500,
+      60,
+      700,
+      500
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame"
   },
   "billy": {
     "source": "characters/billy/assets/billy-selection.png",
@@ -2332,13 +2333,13 @@
   "hydaelyn": {
     "source": "characters/hydaelyn/assets/hydaelyn-selection.png",
     "crop": [
-      280,
-      35,
-      1120,
-      800
+      450,
+      300,
+      840,
+      600
     ],
     "mode": "built-in imagegen",
-    "framing": "Close head/crown and shoulder tops; wings/flowing hair may leave portrait edges, entire crown and head retained"
+    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame"
   },
   "namine": {
     "source": "characters/namine/assets/namine-selection.png",
@@ -2354,13 +2355,13 @@
   "velvet": {
     "source": "characters/velvet/assets/velvet-selection.png",
     "crop": [
-      300,
-      -60,
-      1350,
-      965
+      600,
+      150,
+      840,
+      600
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame"
   },
   "leanne": {
     "source": "characters/leanne/assets/leanne-selection.png",

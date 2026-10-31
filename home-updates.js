@@ -2,6 +2,7 @@
 // Add completed releases here with their actual date/time; newest is rendered first.
 const HomeUpdates=(()=>{
  const entries=[
+ {"at":"2026-10-31T19:30:56+09:00","items":["キャラ選択画面の顔の位置と大きさを調整しました。"]},
  {"at":"2026-10-31T15:20:12+09:00","items":["新キャラ「ベルベット」「リーンベル」を追加しました。"]},
  {"at":"2026-10-31T14:17:05+09:00","items":["新キャラ「ハイデリン」「ナミネ」を追加しました。"]},
  {"at": "2026-10-31T01:01:44+09:00", "items": ["新キャラ「ナイツ」を追加しました。", "バグを修正しました。"]},
