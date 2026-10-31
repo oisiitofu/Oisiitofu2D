@@ -2373,5 +2373,38 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "magus": {
+    "source": "characters/magus/assets/magus-selection.png",
+    "crop": [
+      455,
+      155,
+      770,
+      550
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "yuma": {
+    "source": "characters/yuma/assets/yuma-selection.png",
+    "crop": [
+      260,
+      325,
+      910,
+      650
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "elliot": {
+    "source": "characters/elliot/assets/elliot-selection.png",
+    "crop": [
+      176,
+      350,
+      1050,
+      750
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

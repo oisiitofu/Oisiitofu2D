@@ -1,0 +1,119 @@
+{
+  "lockedBeforeIntermediates": true,
+  "correctionScale": 0.373,
+  "correctionRationale": "Single whole-pose correction scaled by unchanged hat/head width 136/365=.373, never fit by pose height. All other keys use shared neutral scale.",
+  "keys": [
+    {
+      "index": 0,
+      "path": "characters/yuma/assets/locked/0.png",
+      "width": 163,
+      "height": 270,
+      "sha256": "563eca055dae82fd70d58f18e0ad38986a5eed0632d35fe9c2ec5079a52de31f"
+    },
+    {
+      "index": 1,
+      "path": "characters/yuma/assets/locked/1.png",
+      "width": 352,
+      "height": 247,
+      "sha256": "7fdbf3bf0930effefbd4ac09a906bdc39a41abd5e9dd456c1bdea0c05d22c1a2"
+    },
+    {
+      "index": 2,
+      "path": "characters/yuma/assets/locked/2.png",
+      "width": 312,
+      "height": 256,
+      "sha256": "b47f7056eb1404085ad3fb8b4fe4d8e1fb7023de8ca9a46d40c80caf460821fa"
+    },
+    {
+      "index": 3,
+      "path": "characters/yuma/assets/locked/3.png",
+      "width": 378,
+      "height": 235,
+      "sha256": "a7d05aa3f691e2c14763c8990404024ac034205f20eec4bc0558cbdef4ed1dd6"
+    },
+    {
+      "index": 4,
+      "path": "characters/yuma/assets/locked/4.png",
+      "width": 393,
+      "height": 231,
+      "sha256": "1b789a408e41cc4a23c8d70bccac5e864895e71f8e2dfd6c889fc9fd609c49d3"
+    },
+    {
+      "index": 5,
+      "path": "characters/yuma/assets/locked/5.png",
+      "width": 249,
+      "height": 277,
+      "sha256": "a7139669c4095d0382ffeff533135c659a31f6218ee29c4d6e31707099194bc0"
+    },
+    {
+      "index": 6,
+      "path": "characters/yuma/assets/locked/6.png",
+      "width": 344,
+      "height": 175,
+      "sha256": "5e5ac2d1fc450bd4830c2999c65b3ccdde9e5dc352ef7b9553504adacc7baeee"
+    },
+    {
+      "index": 7,
+      "path": "characters/yuma/assets/locked/7.png",
+      "width": 369,
+      "height": 219,
+      "sha256": "595484e84e079e45a08c4df3a340db270697e4c59e9ae09fc27b67e4d512c90a"
+    },
+    {
+      "index": 8,
+      "path": "characters/yuma/assets/locked/8.png",
+      "width": 415,
+      "height": 242,
+      "sha256": "40993a8e49f423dd05c2747a98818c47939d35638c6758572f5ad95e1ee5fded"
+    },
+    {
+      "index": 9,
+      "path": "characters/yuma/assets/locked/9.png",
+      "width": 248,
+      "height": 304,
+      "sha256": "ad31b31ccf691f1fa5f2bf8d16332bf81cb8f1f02d340f48e2444f5fe7d039d3"
+    },
+    {
+      "index": 10,
+      "path": "characters/yuma/assets/locked/10.png",
+      "width": 339,
+      "height": 169,
+      "sha256": "b358ad77908d31c2ca30ec41dcff46b4fe22eefdca96c7f7edeaf32f1d57d11b"
+    },
+    {
+      "index": 11,
+      "path": "characters/yuma/assets/locked/11.png",
+      "width": 323,
+      "height": 217,
+      "sha256": "a6e3ac392c4e336ebb432e1861a2f8a0b4425a6b674fc6ac51a4fee128cf9772"
+    },
+    {
+      "index": 12,
+      "path": "characters/yuma/assets/locked/12.png",
+      "width": 326,
+      "height": 228,
+      "sha256": "c3b15abed8fa315e8715b4ede6f70b3b821ec18f14c570e47656162ff4d8b221"
+    },
+    {
+      "index": 13,
+      "path": "characters/yuma/assets/locked/13.png",
+      "width": 330,
+      "height": 221,
+      "sha256": "4909a7ea006228f191abd5fc62f3b03e35e881c3185bdba34138d9f2f967c221"
+    },
+    {
+      "index": 14,
+      "path": "characters/yuma/assets/locked/14.png",
+      "width": 282,
+      "height": 371,
+      "sha256": "9c098023867babddb58064e7d41a9ba28b032ae2bb396f2ecacd3a5e5c3a0de4"
+    },
+    {
+      "index": 15,
+      "path": "characters/yuma/assets/locked/15.png",
+      "width": 278,
+      "height": 271,
+      "sha256": "44f34334fca2d2bef3e2a3608cdc833a82792d491d2660e04e06934cd2fffec6"
+    }
+  ]
+}

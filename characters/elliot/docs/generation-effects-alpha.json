@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: background-extraction\nAsset type: 16-asset transparent game FX and fairy atlas.\nChange ONLY backdrop of supplied sheet. Remove ALL gray/blue/beige background, haze and large diffuse glow between16 assets; make those pixels true alpha zero. Preserve each of16 isolated assets exactly in readingorder 4x4: swordcrescentright,thrust,arcup,arcdown,Feiidle,Feiflap,Feibowaim,Feibowfire,Feilifting,Feitired,arrow,impact,map,glyph,feather,pulse. Keep allsix Fei complete head/hands/legs/feet/translucentwings and delicateedges. Keep genuine translucent edgepaint only immediately nexttoeachasset, not fullsheet matte. No otherdrawing, no ground/checkerboard/text. Generous transparentgutters. True alpha transparent output required.",
+  "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-0f0d86ea-c512-43aa-abd7-fc515828b9b8.png",
+  "finalPath": "characters/elliot/assets/elliot-effects-alpha.png"
+}

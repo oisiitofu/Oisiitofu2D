@@ -1,0 +1,38 @@
+{
+  "frame": 16,
+  "coordinateSystem": "normalized crop x-right/y-down, before mirroring",
+  "grip": [
+    0.27,
+    0.26
+  ],
+  "tip": [
+    0.015,
+    0.015
+  ],
+  "bladeBase": [
+    0.234,
+    0.208
+  ],
+  "cuttingEdge": [
+    [
+      0.234,
+      0.208
+    ],
+    [
+      0.018,
+      0.009
+    ]
+  ],
+  "oppositeEdge": [
+    [
+      0.203,
+      0.225
+    ],
+    [
+      0.018,
+      0.009
+    ]
+  ],
+  "angleDegrees": -136.51984251496577,
+  "note": "Contact blade extends up-left from the raised right fist. The locked pose is unchanged. A single contact painting does not establish the entire temporal swing path; windup76 and recovery91 provide the surrounding poses."
+}

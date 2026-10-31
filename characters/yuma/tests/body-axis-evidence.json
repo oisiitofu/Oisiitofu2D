@@ -1,0 +1,2347 @@
+{
+  "poses": [
+    {
+      "index": 0,
+      "sheet": "basic",
+      "cell": 0,
+      "sourceOrigin": [
+        147,
+        4
+      ],
+      "sourceDimensions": [
+        163,
+        270
+      ],
+      "sourceWaist": [
+        236,
+        181
+      ],
+      "waist": [
+        0.5460122699386503,
+        0.6555555555555556
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 1,
+      "sheet": "basic",
+      "cell": 1,
+      "sourceOrigin": [
+        471,
+        6
+      ],
+      "sourceDimensions": [
+        210,
+        268
+      ],
+      "sourceWaist": [
+        595,
+        176
+      ],
+      "waist": [
+        0.5904761904761905,
+        0.6343283582089553
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 2,
+      "sheet": "basic",
+      "cell": 2,
+      "sourceOrigin": [
+        858,
+        5
+      ],
+      "sourceDimensions": [
+        177,
+        269
+      ],
+      "sourceWaist": [
+        947,
+        175
+      ],
+      "waist": [
+        0.5028248587570622,
+        0.6319702602230484
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 3,
+      "sheet": "basic",
+      "cell": 3,
+      "sourceOrigin": [
+        1161,
+        12
+      ],
+      "sourceDimensions": [
+        288,
+        265
+      ],
+      "sourceWaist": [
+        1330,
+        177
+      ],
+      "waist": [
+        0.5868055555555556,
+        0.6226415094339622
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 4,
+      "sheet": "basic",
+      "cell": 4,
+      "sourceOrigin": [
+        66,
+        321
+      ],
+      "sourceDimensions": [
+        309,
+        199
+      ],
+      "sourceWaist": [
+        255,
+        436
+      ],
+      "waist": [
+        0.6116504854368932,
+        0.5778894472361809
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 5,
+      "sheet": "basic",
+      "cell": 5,
+      "sourceOrigin": [
+        465,
+        329
+      ],
+      "sourceDimensions": [
+        290,
+        190
+      ],
+      "sourceWaist": [
+        597,
+        458
+      ],
+      "waist": [
+        0.45517241379310347,
+        0.6789473684210526
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 6,
+      "sheet": "basic",
+      "cell": 6,
+      "sourceOrigin": [
+        827,
+        299
+      ],
+      "sourceDimensions": [
+        264,
+        229
+      ],
+      "sourceWaist": [
+        992,
+        439
+      ],
+      "waist": [
+        0.625,
+        0.611353711790393
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 7,
+      "sheet": "basic",
+      "cell": 7,
+      "sourceOrigin": [
+        1191,
+        266
+      ],
+      "sourceDimensions": [
+        257,
+        235
+      ],
+      "sourceWaist": [
+        1346,
+        439
+      ],
+      "waist": [
+        0.603112840466926,
+        0.7361702127659574
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 8,
+      "sheet": "basic",
+      "cell": 8,
+      "sourceOrigin": [
+        94,
+        513
+      ],
+      "sourceDimensions": [
+        304,
+        220
+      ],
+      "sourceWaist": [
+        235,
+        657
+      ],
+      "waist": [
+        0.46381578947368424,
+        0.6545454545454545
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 9,
+      "sheet": "basic",
+      "cell": 9,
+      "sourceOrigin": [
+        455,
+        525
+      ],
+      "sourceDimensions": [
+        271,
+        213
+      ],
+      "sourceWaist": [
+        591,
+        671
+      ],
+      "waist": [
+        0.5018450184501845,
+        0.6854460093896714
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 10,
+      "sheet": "basic",
+      "cell": 10,
+      "sourceOrigin": [
+        820,
+        573
+      ],
+      "sourceDimensions": [
+        286,
+        177
+      ],
+      "sourceWaist": [
+        978,
+        710
+      ],
+      "waist": [
+        0.5524475524475524,
+        0.7740112994350282
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 11,
+      "sheet": "basic",
+      "cell": 11,
+      "sourceOrigin": [
+        1252,
+        515
+      ],
+      "sourceDimensions": [
+        212,
+        237
+      ],
+      "sourceWaist": [
+        1333,
+        657
+      ],
+      "waist": [
+        0.38207547169811323,
+        0.5991561181434599
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 12,
+      "sheet": "basic",
+      "cell": 12,
+      "sourceOrigin": [
+        132,
+        748
+      ],
+      "sourceDimensions": [
+        179,
+        271
+      ],
+      "sourceWaist": [
+        235,
+        924
+      ],
+      "waist": [
+        0.5754189944134078,
+        0.6494464944649446
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 13,
+      "sheet": "basic",
+      "cell": 13,
+      "sourceOrigin": [
+        443,
+        755
+      ],
+      "sourceDimensions": [
+        321,
+        263
+      ],
+      "sourceWaist": [
+        589,
+        911
+      ],
+      "waist": [
+        0.45482866043613707,
+        0.5931558935361216
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 14,
+      "sheet": "basic",
+      "cell": 14,
+      "sourceOrigin": [
+        866,
+        751
+      ],
+      "sourceDimensions": [
+        172,
+        268
+      ],
+      "sourceWaist": [
+        973,
+        918
+      ],
+      "waist": [
+        0.622093023255814,
+        0.6231343283582089
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 15,
+      "sheet": "basic",
+      "cell": 15,
+      "sourceOrigin": [
+        1236,
+        746
+      ],
+      "sourceDimensions": [
+        160,
+        273
+      ],
+      "sourceWaist": [
+        1334,
+        920
+      ],
+      "waist": [
+        0.6125,
+        0.6373626373626373
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 16,
+      "sheet": "attacks",
+      "cell": 1,
+      "sourceOrigin": [
+        409,
+        19
+      ],
+      "sourceDimensions": [
+        356,
+        250
+      ],
+      "sourceWaist": [
+        556,
+        181
+      ],
+      "waist": [
+        0.41292134831460675,
+        0.648
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 17,
+      "sheet": "attacks",
+      "cell": 2,
+      "sourceOrigin": [
+        801,
+        15
+      ],
+      "sourceDimensions": [
+        316,
+        259
+      ],
+      "sourceWaist": [
+        952,
+        181
+      ],
+      "waist": [
+        0.4778481012658228,
+        0.640926640926641
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 18,
+      "sheet": "attacks",
+      "cell": 3,
+      "sourceOrigin": [
+        1147,
+        31
+      ],
+      "sourceDimensions": [
+        382,
+        237
+      ],
+      "sourceWaist": [
+        1332,
+        186
+      ],
+      "waist": [
+        0.48429319371727747,
+        0.6540084388185654
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 19,
+      "sheet": "attacks",
+      "cell": 4,
+      "sourceOrigin": [
+        29,
+        294
+      ],
+      "sourceDimensions": [
+        397,
+        233
+      ],
+      "sourceWaist": [
+        247,
+        436
+      ],
+      "waist": [
+        0.5491183879093199,
+        0.6094420600858369
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 20,
+      "sheet": "attacks",
+      "cell": 5,
+      "sourceOrigin": [
+        444,
+        252
+      ],
+      "sourceDimensions": [
+        252,
+        280
+      ],
+      "sourceWaist": [
+        563,
+        439
+      ],
+      "waist": [
+        0.4722222222222222,
+        0.6678571428571428
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 21,
+      "sheet": "attacks",
+      "cell": 6,
+      "sourceOrigin": [
+        771,
+        347
+      ],
+      "sourceDimensions": [
+        348,
+        177
+      ],
+      "sourceWaist": [
+        953,
+        482
+      ],
+      "waist": [
+        0.5229885057471264,
+        0.7627118644067796
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 22,
+      "sheet": "attacks",
+      "cell": 7,
+      "sourceOrigin": [
+        1156,
+        294
+      ],
+      "sourceDimensions": [
+        373,
+        221
+      ],
+      "sourceWaist": [
+        1338,
+        429
+      ],
+      "waist": [
+        0.4879356568364611,
+        0.6108597285067874
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 23,
+      "sheet": "attacks",
+      "cell": 8,
+      "sourceOrigin": [
+        20,
+        532
+      ],
+      "sourceDimensions": [
+        420,
+        245
+      ],
+      "sourceWaist": [
+        239,
+        684
+      ],
+      "waist": [
+        0.5214285714285715,
+        0.6204081632653061
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 24,
+      "sheet": "attacks",
+      "cell": 9,
+      "sourceOrigin": [
+        425,
+        489
+      ],
+      "sourceDimensions": [
+        251,
+        308
+      ],
+      "sourceWaist": [
+        567,
+        687
+      ],
+      "waist": [
+        0.5657370517928287,
+        0.6428571428571429
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 25,
+      "sheet": "attacks",
+      "cell": 10,
+      "sourceOrigin": [
+        774,
+        598
+      ],
+      "sourceDimensions": [
+        343,
+        171
+      ],
+      "sourceWaist": [
+        964,
+        724
+      ],
+      "waist": [
+        0.5539358600583091,
+        0.7368421052631579
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 26,
+      "sheet": "attacks",
+      "cell": 11,
+      "sourceOrigin": [
+        1178,
+        521
+      ],
+      "sourceDimensions": [
+        327,
+        220
+      ],
+      "sourceWaist": [
+        1350,
+        661
+      ],
+      "waist": [
+        0.5259938837920489,
+        0.6363636363636364
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 27,
+      "sheet": "attacks",
+      "cell": 12,
+      "sourceOrigin": [
+        39,
+        780
+      ],
+      "sourceDimensions": [
+        330,
+        231
+      ],
+      "sourceWaist": [
+        243,
+        926
+      ],
+      "waist": [
+        0.6181818181818182,
+        0.6320346320346321
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 28,
+      "sheet": "attacks",
+      "cell": 13,
+      "sourceOrigin": [
+        416,
+        793
+      ],
+      "sourceDimensions": [
+        334,
+        224
+      ],
+      "sourceWaist": [
+        574,
+        923
+      ],
+      "waist": [
+        0.47305389221556887,
+        0.5803571428571429
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 29,
+      "sheet": "upair-correction",
+      "cell": 0,
+      "sourceOrigin": [
+        345,
+        9
+      ],
+      "sourceDimensions": [
+        757,
+        995
+      ],
+      "sourceWaist": [
+        841,
+        740
+      ],
+      "waist": [
+        0.655217965653897,
+        0.7346733668341708
+      ],
+      "method": "Visible belt centre in independent full-body corrected up-aerial; hat-width scale .373."
+    },
+    {
+      "index": 30,
+      "sheet": "attacks",
+      "cell": 15,
+      "sourceOrigin": [
+        1197,
+        737
+      ],
+      "sourceDimensions": [
+        281,
+        274
+      ],
+      "sourceWaist": [
+        1327,
+        924
+      ],
+      "waist": [
+        0.4626334519572954,
+        0.6824817518248175
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 31,
+      "sheet": "specials",
+      "cell": 1,
+      "sourceOrigin": [
+        460,
+        7
+      ],
+      "sourceDimensions": [
+        190,
+        275
+      ],
+      "sourceWaist": [
+        594,
+        186
+      ],
+      "waist": [
+        0.7052631578947368,
+        0.6509090909090909
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 32,
+      "sheet": "specials",
+      "cell": 2,
+      "sourceOrigin": [
+        807,
+        5
+      ],
+      "sourceDimensions": [
+        332,
+        276
+      ],
+      "sourceWaist": [
+        950,
+        184
+      ],
+      "waist": [
+        0.4307228915662651,
+        0.6485507246376812
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 33,
+      "sheet": "specials",
+      "cell": 3,
+      "sourceOrigin": [
+        1185,
+        7
+      ],
+      "sourceDimensions": [
+        295,
+        274
+      ],
+      "sourceWaist": [
+        1330,
+        186
+      ],
+      "waist": [
+        0.4915254237288136,
+        0.6532846715328468
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 34,
+      "sheet": "specials",
+      "cell": 4,
+      "sourceOrigin": [
+        49,
+        282
+      ],
+      "sourceDimensions": [
+        321,
+        249
+      ],
+      "sourceWaist": [
+        218,
+        433
+      ],
+      "waist": [
+        0.5264797507788161,
+        0.606425702811245
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 35,
+      "sheet": "specials",
+      "cell": 5,
+      "sourceOrigin": [
+        448,
+        279
+      ],
+      "sourceDimensions": [
+        263,
+        253
+      ],
+      "sourceWaist": [
+        593,
+        434
+      ],
+      "waist": [
+        0.5513307984790875,
+        0.6126482213438735
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 36,
+      "sheet": "specials",
+      "cell": 6,
+      "sourceOrigin": [
+        817,
+        316
+      ],
+      "sourceDimensions": [
+        272,
+        215
+      ],
+      "sourceWaist": [
+        950,
+        466
+      ],
+      "waist": [
+        0.4889705882352941,
+        0.6976744186046512
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 37,
+      "sheet": "specials",
+      "cell": 7,
+      "sourceOrigin": [
+        1214,
+        279
+      ],
+      "sourceDimensions": [
+        214,
+        252
+      ],
+      "sourceWaist": [
+        1330,
+        443
+      ],
+      "waist": [
+        0.5420560747663551,
+        0.6507936507936508
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 38,
+      "sheet": "specials",
+      "cell": 8,
+      "sourceOrigin": [
+        96,
+        528
+      ],
+      "sourceDimensions": [
+        241,
+        248
+      ],
+      "sourceWaist": [
+        235,
+        686
+      ],
+      "waist": [
+        0.5767634854771784,
+        0.6370967741935484
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 39,
+      "sheet": "specials",
+      "cell": 9,
+      "sourceOrigin": [
+        479,
+        525
+      ],
+      "sourceDimensions": [
+        208,
+        232
+      ],
+      "sourceWaist": [
+        596,
+        664
+      ],
+      "waist": [
+        0.5625,
+        0.5991379310344828
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 40,
+      "sheet": "specials",
+      "cell": 10,
+      "sourceOrigin": [
+        829,
+        552
+      ],
+      "sourceDimensions": [
+        273,
+        222
+      ],
+      "sourceWaist": [
+        952,
+        696
+      ],
+      "waist": [
+        0.45054945054945056,
+        0.6486486486486487
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 41,
+      "sheet": "specials",
+      "cell": 11,
+      "sourceOrigin": [
+        1241,
+        526
+      ],
+      "sourceDimensions": [
+        194,
+        249
+      ],
+      "sourceWaist": [
+        1335,
+        680
+      ],
+      "waist": [
+        0.4845360824742268,
+        0.6184738955823293
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 42,
+      "sheet": "specials",
+      "cell": 12,
+      "sourceOrigin": [
+        103,
+        772
+      ],
+      "sourceDimensions": [
+        211,
+        253
+      ],
+      "sourceWaist": [
+        224,
+        930
+      ],
+      "waist": [
+        0.5734597156398105,
+        0.6245059288537549
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 43,
+      "sheet": "specials",
+      "cell": 13,
+      "sourceOrigin": [
+        418,
+        763
+      ],
+      "sourceDimensions": [
+        312,
+        261
+      ],
+      "sourceWaist": [
+        587,
+        926
+      ],
+      "waist": [
+        0.5416666666666666,
+        0.6245210727969349
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 44,
+      "sheet": "specials",
+      "cell": 14,
+      "sourceOrigin": [
+        801,
+        772
+      ],
+      "sourceDimensions": [
+        343,
+        252
+      ],
+      "sourceWaist": [
+        961,
+        925
+      ],
+      "waist": [
+        0.46647230320699706,
+        0.6071428571428571
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 45,
+      "sheet": "specials",
+      "cell": 15,
+      "sourceOrigin": [
+        1251,
+        770
+      ],
+      "sourceDimensions": [
+        176,
+        255
+      ],
+      "sourceWaist": [
+        1346,
+        931
+      ],
+      "waist": [
+        0.5397727272727273,
+        0.6313725490196078
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 46,
+      "sheet": "defense",
+      "cell": 1,
+      "sourceOrigin": [
+        456,
+        11
+      ],
+      "sourceDimensions": [
+        287,
+        264
+      ],
+      "sourceWaist": [
+        586,
+        189
+      ],
+      "waist": [
+        0.4529616724738676,
+        0.6742424242424242
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 47,
+      "sheet": "defense",
+      "cell": 2,
+      "sourceOrigin": [
+        859,
+        61
+      ],
+      "sourceDimensions": [
+        236,
+        192
+      ],
+      "sourceWaist": [
+        986,
+        146
+      ],
+      "waist": [
+        0.538135593220339,
+        0.4427083333333333
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 48,
+      "sheet": "defense",
+      "cell": 3,
+      "sourceOrigin": [
+        1212,
+        27
+      ],
+      "sourceDimensions": [
+        273,
+        238
+      ],
+      "sourceWaist": [
+        1350,
+        133
+      ],
+      "waist": [
+        0.5054945054945055,
+        0.44537815126050423
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 49,
+      "sheet": "defense",
+      "cell": 4,
+      "sourceOrigin": [
+        51,
+        314
+      ],
+      "sourceDimensions": [
+        318,
+        199
+      ],
+      "sourceWaist": [
+        220,
+        454
+      ],
+      "waist": [
+        0.5314465408805031,
+        0.7035175879396985
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 50,
+      "sheet": "defense",
+      "cell": 5,
+      "sourceOrigin": [
+        430,
+        280
+      ],
+      "sourceDimensions": [
+        319,
+        215
+      ],
+      "sourceWaist": [
+        580,
+        417
+      ],
+      "waist": [
+        0.4702194357366771,
+        0.6372093023255814
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 51,
+      "sheet": "defense",
+      "cell": 6,
+      "sourceOrigin": [
+        834,
+        268
+      ],
+      "sourceDimensions": [
+        295,
+        239
+      ],
+      "sourceWaist": [
+        959,
+        399
+      ],
+      "waist": [
+        0.423728813559322,
+        0.5481171548117155
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 52,
+      "sheet": "defense",
+      "cell": 7,
+      "sourceOrigin": [
+        1187,
+        318
+      ],
+      "sourceDimensions": [
+        327,
+        186
+      ],
+      "sourceWaist": [
+        1343,
+        431
+      ],
+      "waist": [
+        0.47706422018348627,
+        0.6075268817204301
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 53,
+      "sheet": "defense",
+      "cell": 8,
+      "sourceOrigin": [
+        37,
+        603
+      ],
+      "sourceDimensions": [
+        349,
+        130
+      ],
+      "sourceWaist": [
+        204,
+        684
+      ],
+      "waist": [
+        0.4785100286532951,
+        0.6230769230769231
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 54,
+      "sheet": "defense",
+      "cell": 9,
+      "sourceOrigin": [
+        462,
+        529
+      ],
+      "sourceDimensions": [
+        295,
+        208
+      ],
+      "sourceWaist": [
+        606,
+        683
+      ],
+      "waist": [
+        0.488135593220339,
+        0.7403846153846154
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 55,
+      "sheet": "defense",
+      "cell": 10,
+      "sourceOrigin": [
+        890,
+        503
+      ],
+      "sourceDimensions": [
+        152,
+        284
+      ],
+      "sourceWaist": [
+        1001,
+        683
+      ],
+      "waist": [
+        0.7302631578947368,
+        0.6338028169014085
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 56,
+      "sheet": "defense",
+      "cell": 11,
+      "sourceOrigin": [
+        1284,
+        503
+      ],
+      "sourceDimensions": [
+        161,
+        275
+      ],
+      "sourceWaist": [
+        1381,
+        658
+      ],
+      "waist": [
+        0.6024844720496895,
+        0.5636363636363636
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 57,
+      "sheet": "defense",
+      "cell": 12,
+      "sourceOrigin": [
+        51,
+        759
+      ],
+      "sourceDimensions": [
+        298,
+        253
+      ],
+      "sourceWaist": [
+        210,
+        923
+      ],
+      "waist": [
+        0.5335570469798657,
+        0.6482213438735178
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 58,
+      "sheet": "defense",
+      "cell": 13,
+      "sourceOrigin": [
+        446,
+        754
+      ],
+      "sourceDimensions": [
+        242,
+        261
+      ],
+      "sourceWaist": [
+        588,
+        922
+      ],
+      "waist": [
+        0.5867768595041323,
+        0.6436781609195402
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 59,
+      "sheet": "defense",
+      "cell": 14,
+      "sourceOrigin": [
+        831,
+        786
+      ],
+      "sourceDimensions": [
+        285,
+        230
+      ],
+      "sourceWaist": [
+        981,
+        939
+      ],
+      "waist": [
+        0.5263157894736842,
+        0.6652173913043479
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 60,
+      "sheet": "defense",
+      "cell": 15,
+      "sourceOrigin": [
+        1194,
+        759
+      ],
+      "sourceDimensions": [
+        270,
+        252
+      ],
+      "sourceWaist": [
+        1340,
+        927
+      ],
+      "waist": [
+        0.5407407407407407,
+        0.6666666666666666
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 61,
+      "sheet": "extra",
+      "cell": 1,
+      "sourceOrigin": [
+        463,
+        20
+      ],
+      "sourceDimensions": [
+        234,
+        255
+      ],
+      "sourceWaist": [
+        594,
+        187
+      ],
+      "waist": [
+        0.5598290598290598,
+        0.6549019607843137
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 62,
+      "sheet": "extra",
+      "cell": 2,
+      "sourceOrigin": [
+        817,
+        70
+      ],
+      "sourceDimensions": [
+        279,
+        220
+      ],
+      "sourceWaist": [
+        981,
+        225
+      ],
+      "waist": [
+        0.5878136200716846,
+        0.7045454545454546
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 63,
+      "sheet": "extra",
+      "cell": 3,
+      "sourceOrigin": [
+        1216,
+        5
+      ],
+      "sourceDimensions": [
+        188,
+        279
+      ],
+      "sourceWaist": [
+        1345,
+        180
+      ],
+      "waist": [
+        0.6861702127659575,
+        0.6272401433691757
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 64,
+      "sheet": "extra",
+      "cell": 4,
+      "sourceOrigin": [
+        85,
+        283
+      ],
+      "sourceDimensions": [
+        249,
+        268
+      ],
+      "sourceWaist": [
+        224,
+        459
+      ],
+      "waist": [
+        0.5582329317269076,
+        0.6567164179104478
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 65,
+      "sheet": "extra",
+      "cell": 5,
+      "sourceOrigin": [
+        476,
+        283
+      ],
+      "sourceDimensions": [
+        230,
+        271
+      ],
+      "sourceWaist": [
+        595,
+        455
+      ],
+      "waist": [
+        0.5173913043478261,
+        0.6346863468634686
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 66,
+      "sheet": "extra",
+      "cell": 6,
+      "sourceOrigin": [
+        848,
+        279
+      ],
+      "sourceDimensions": [
+        205,
+        276
+      ],
+      "sourceWaist": [
+        970,
+        447
+      ],
+      "waist": [
+        0.5951219512195122,
+        0.6086956521739131
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 67,
+      "sheet": "extra",
+      "cell": 7,
+      "sourceOrigin": [
+        1196,
+        286
+      ],
+      "sourceDimensions": [
+        243,
+        266
+      ],
+      "sourceWaist": [
+        1342,
+        445
+      ],
+      "waist": [
+        0.6008230452674898,
+        0.5977443609022557
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 68,
+      "sheet": "extra",
+      "cell": 8,
+      "sourceOrigin": [
+        103,
+        560
+      ],
+      "sourceDimensions": [
+        220,
+        226
+      ],
+      "sourceWaist": [
+        242,
+        691
+      ],
+      "waist": [
+        0.6318181818181818,
+        0.5796460176991151
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 69,
+      "sheet": "extra",
+      "cell": 9,
+      "sourceOrigin": [
+        453,
+        549
+      ],
+      "sourceDimensions": [
+        308,
+        226
+      ],
+      "sourceWaist": [
+        602,
+        678
+      ],
+      "waist": [
+        0.4837662337662338,
+        0.5707964601769911
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 70,
+      "sheet": "extra",
+      "cell": 10,
+      "sourceOrigin": [
+        802,
+        584
+      ],
+      "sourceDimensions": [
+        358,
+        205
+      ],
+      "sourceWaist": [
+        973,
+        724
+      ],
+      "waist": [
+        0.4776536312849162,
+        0.6829268292682927
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 71,
+      "sheet": "extra",
+      "cell": 11,
+      "sourceOrigin": [
+        1245,
+        547
+      ],
+      "sourceDimensions": [
+        204,
+        242
+      ],
+      "sourceWaist": [
+        1346,
+        694
+      ],
+      "waist": [
+        0.4950980392156863,
+        0.6074380165289256
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 72,
+      "sheet": "extra",
+      "cell": 12,
+      "sourceOrigin": [
+        55,
+        780
+      ],
+      "sourceDimensions": [
+        343,
+        241
+      ],
+      "sourceWaist": [
+        250,
+        942
+      ],
+      "waist": [
+        0.5685131195335277,
+        0.6721991701244814
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 73,
+      "sheet": "extra",
+      "cell": 13,
+      "sourceOrigin": [
+        485,
+        760
+      ],
+      "sourceDimensions": [
+        187,
+        264
+      ],
+      "sourceWaist": [
+        593,
+        933
+      ],
+      "waist": [
+        0.5775401069518716,
+        0.6553030303030303
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 74,
+      "sheet": "extra",
+      "cell": 14,
+      "sourceOrigin": [
+        810,
+        810
+      ],
+      "sourceDimensions": [
+        348,
+        203
+      ],
+      "sourceWaist": [
+        957,
+        964
+      ],
+      "waist": [
+        0.4224137931034483,
+        0.7586206896551724
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 75,
+      "sheet": "extra",
+      "cell": 15,
+      "sourceOrigin": [
+        1240,
+        784
+      ],
+      "sourceDimensions": [
+        246,
+        238
+      ],
+      "sourceWaist": [
+        1345,
+        937
+      ],
+      "waist": [
+        0.4268292682926829,
+        0.6428571428571429
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 76,
+      "sheet": "windup",
+      "cell": 1,
+      "sourceOrigin": [
+        414,
+        8
+      ],
+      "sourceDimensions": [
+        254,
+        268
+      ],
+      "sourceWaist": [
+        570,
+        174
+      ],
+      "waist": [
+        0.6141732283464567,
+        0.6194029850746269
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 77,
+      "sheet": "windup",
+      "cell": 2,
+      "sourceOrigin": [
+        838,
+        30
+      ],
+      "sourceDimensions": [
+        223,
+        246
+      ],
+      "sourceWaist": [
+        955,
+        180
+      ],
+      "waist": [
+        0.5246636771300448,
+        0.6097560975609756
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 78,
+      "sheet": "windup",
+      "cell": 3,
+      "sourceOrigin": [
+        1135,
+        24
+      ],
+      "sourceDimensions": [
+        298,
+        250
+      ],
+      "sourceWaist": [
+        1337,
+        178
+      ],
+      "waist": [
+        0.6778523489932886,
+        0.616
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 79,
+      "sheet": "windup",
+      "cell": 4,
+      "sourceOrigin": [
+        66,
+        289
+      ],
+      "sourceDimensions": [
+        297,
+        240
+      ],
+      "sourceWaist": [
+        233,
+        432
+      ],
+      "waist": [
+        0.5622895622895623,
+        0.5958333333333333
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 80,
+      "sheet": "windup",
+      "cell": 5,
+      "sourceOrigin": [
+        424,
+        307
+      ],
+      "sourceDimensions": [
+        295,
+        222
+      ],
+      "sourceWaist": [
+        588,
+        454
+      ],
+      "waist": [
+        0.5559322033898305,
+        0.6621621621621622
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 81,
+      "sheet": "windup",
+      "cell": 6,
+      "sourceOrigin": [
+        800,
+        333
+      ],
+      "sourceDimensions": [
+        339,
+        195
+      ],
+      "sourceWaist": [
+        952,
+        465
+      ],
+      "waist": [
+        0.44837758112094395,
+        0.676923076923077
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 82,
+      "sheet": "windup",
+      "cell": 7,
+      "sourceOrigin": [
+        1186,
+        294
+      ],
+      "sourceDimensions": [
+        307,
+        232
+      ],
+      "sourceWaist": [
+        1343,
+        435
+      ],
+      "waist": [
+        0.511400651465798,
+        0.6077586206896551
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 83,
+      "sheet": "windup",
+      "cell": 8,
+      "sourceOrigin": [
+        46,
+        531
+      ],
+      "sourceDimensions": [
+        309,
+        251
+      ],
+      "sourceWaist": [
+        226,
+        684
+      ],
+      "waist": [
+        0.5825242718446602,
+        0.6095617529880478
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 84,
+      "sheet": "windup",
+      "cell": 9,
+      "sourceOrigin": [
+        453,
+        527
+      ],
+      "sourceDimensions": [
+        261,
+        256
+      ],
+      "sourceWaist": [
+        596,
+        688
+      ],
+      "waist": [
+        0.5478927203065134,
+        0.62890625
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 85,
+      "sheet": "windup",
+      "cell": 10,
+      "sourceOrigin": [
+        782,
+        584
+      ],
+      "sourceDimensions": [
+        316,
+        193
+      ],
+      "sourceWaist": [
+        967,
+        727
+      ],
+      "waist": [
+        0.5854430379746836,
+        0.7409326424870466
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 86,
+      "sheet": "windup",
+      "cell": 11,
+      "sourceOrigin": [
+        1180,
+        519
+      ],
+      "sourceDimensions": [
+        311,
+        228
+      ],
+      "sourceWaist": [
+        1367,
+        650
+      ],
+      "waist": [
+        0.6012861736334405,
+        0.5745614035087719
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 87,
+      "sheet": "windup",
+      "cell": 12,
+      "sourceOrigin": [
+        50,
+        794
+      ],
+      "sourceDimensions": [
+        354,
+        197
+      ],
+      "sourceWaist": [
+        259,
+        927
+      ],
+      "waist": [
+        0.5903954802259888,
+        0.6751269035532995
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 88,
+      "sheet": "windup",
+      "cell": 13,
+      "sourceOrigin": [
+        428,
+        789
+      ],
+      "sourceDimensions": [
+        307,
+        231
+      ],
+      "sourceWaist": [
+        580,
+        938
+      ],
+      "waist": [
+        0.495114006514658,
+        0.645021645021645
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 89,
+      "sheet": "windup",
+      "cell": 14,
+      "sourceOrigin": [
+        840,
+        751
+      ],
+      "sourceDimensions": [
+        231,
+        258
+      ],
+      "sourceWaist": [
+        987,
+        911
+      ],
+      "waist": [
+        0.6363636363636364,
+        0.6201550387596899
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 90,
+      "sheet": "windup",
+      "cell": 15,
+      "sourceOrigin": [
+        1208,
+        736
+      ],
+      "sourceDimensions": [
+        252,
+        275
+      ],
+      "sourceWaist": [
+        1359,
+        934
+      ],
+      "waist": [
+        0.5992063492063492,
+        0.72
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 91,
+      "sheet": "recovery",
+      "cell": 1,
+      "sourceOrigin": [
+        390,
+        5
+      ],
+      "sourceDimensions": [
+        257,
+        277
+      ],
+      "sourceWaist": [
+        552,
+        180
+      ],
+      "waist": [
+        0.6303501945525292,
+        0.631768953068592
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 92,
+      "sheet": "recovery",
+      "cell": 2,
+      "sourceOrigin": [
+        766,
+        5
+      ],
+      "sourceDimensions": [
+        312,
+        279
+      ],
+      "sourceWaist": [
+        938,
+        180
+      ],
+      "waist": [
+        0.5512820512820513,
+        0.6272401433691757
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 93,
+      "sheet": "recovery",
+      "cell": 3,
+      "sourceOrigin": [
+        1180,
+        9
+      ],
+      "sourceDimensions": [
+        313,
+        272
+      ],
+      "sourceWaist": [
+        1308,
+        181
+      ],
+      "waist": [
+        0.40894568690095845,
+        0.6323529411764706
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 94,
+      "sheet": "recovery",
+      "cell": 4,
+      "sourceOrigin": [
+        31,
+        283
+      ],
+      "sourceDimensions": [
+        354,
+        232
+      ],
+      "sourceWaist": [
+        198,
+        425
+      ],
+      "waist": [
+        0.4717514124293785,
+        0.6120689655172413
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 95,
+      "sheet": "recovery",
+      "cell": 5,
+      "sourceOrigin": [
+        445,
+        282
+      ],
+      "sourceDimensions": [
+        288,
+        241
+      ],
+      "sourceWaist": [
+        586,
+        441
+      ],
+      "waist": [
+        0.4895833333333333,
+        0.6597510373443983
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 96,
+      "sheet": "recovery",
+      "cell": 6,
+      "sourceOrigin": [
+        782,
+        310
+      ],
+      "sourceDimensions": [
+        356,
+        208
+      ],
+      "sourceWaist": [
+        952,
+        467
+      ],
+      "waist": [
+        0.47752808988764045,
+        0.7548076923076923
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 97,
+      "sheet": "recovery",
+      "cell": 7,
+      "sourceOrigin": [
+        1176,
+        292
+      ],
+      "sourceDimensions": [
+        326,
+        230
+      ],
+      "sourceWaist": [
+        1345,
+        424
+      ],
+      "waist": [
+        0.5184049079754601,
+        0.5739130434782609
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 98,
+      "sheet": "recovery",
+      "cell": 8,
+      "sourceOrigin": [
+        33,
+        512
+      ],
+      "sourceDimensions": [
+        366,
+        256
+      ],
+      "sourceWaist": [
+        204,
+        678
+      ],
+      "waist": [
+        0.4672131147540984,
+        0.6484375
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 99,
+      "sheet": "recovery",
+      "cell": 9,
+      "sourceOrigin": [
+        433,
+        514
+      ],
+      "sourceDimensions": [
+        307,
+        256
+      ],
+      "sourceWaist": [
+        579,
+        683
+      ],
+      "waist": [
+        0.4755700325732899,
+        0.66015625
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 100,
+      "sheet": "recovery",
+      "cell": 10,
+      "sourceOrigin": [
+        797,
+        563
+      ],
+      "sourceDimensions": [
+        316,
+        205
+      ],
+      "sourceWaist": [
+        952,
+        710
+      ],
+      "waist": [
+        0.49050632911392406,
+        0.7170731707317073
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 101,
+      "sheet": "recovery",
+      "cell": 11,
+      "sourceOrigin": [
+        1194,
+        512
+      ],
+      "sourceDimensions": [
+        281,
+        241
+      ],
+      "sourceWaist": [
+        1357,
+        645
+      ],
+      "waist": [
+        0.5800711743772242,
+        0.5518672199170125
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 102,
+      "sheet": "recovery",
+      "cell": 12,
+      "sourceOrigin": [
+        47,
+        774
+      ],
+      "sourceDimensions": [
+        287,
+        217
+      ],
+      "sourceWaist": [
+        202,
+        899
+      ],
+      "waist": [
+        0.5400696864111498,
+        0.576036866359447
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 103,
+      "sheet": "recovery",
+      "cell": 13,
+      "sourceOrigin": [
+        428,
+        766
+      ],
+      "sourceDimensions": [
+        296,
+        251
+      ],
+      "sourceWaist": [
+        595,
+        926
+      ],
+      "waist": [
+        0.5641891891891891,
+        0.6374501992031872
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 104,
+      "sheet": "recovery",
+      "cell": 14,
+      "sourceOrigin": [
+        824,
+        747
+      ],
+      "sourceDimensions": [
+        316,
+        277
+      ],
+      "sourceWaist": [
+        981,
+        900
+      ],
+      "waist": [
+        0.49683544303797467,
+        0.5523465703971119
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    },
+    {
+      "index": 105,
+      "sheet": "recovery",
+      "cell": 15,
+      "sourceOrigin": [
+        1200,
+        780
+      ],
+      "sourceDimensions": [
+        249,
+        236
+      ],
+      "sourceWaist": [
+        1334,
+        910
+      ],
+      "waist": [
+        0.5381526104417671,
+        0.5508474576271186
+      ],
+      "method": "Visible uniform belt/pelvis centre manually marked in original whole-figure pixels; no weapon/cape bounding-box midpoint."
+    }
+  ],
+  "ledge": {
+    "pose": 55,
+    "sourceHand": [
+      988,
+      519
+    ],
+    "normalized": [
+      0.6447368421052632,
+      0.056338028169014086
+    ]
+  }
+}

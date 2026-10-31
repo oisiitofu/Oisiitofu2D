@@ -1,0 +1,9 @@
+'use strict';
+const YumaVFX=(()=>{const k=CharacterVFXKit.create('yuma'),{stamp}=k;
+ function draw(f){if(f.respawn)return;const a=f.attack;if(!a)return;const e=k.envelope(f);if(e&&!a.yumaPartnerNormal){if(a.type==='downsmash'){stamp(0,f.x+e.w*.24,e.y,e.w*.52,Math.min(42,e.h),f.face,.85);stamp(0,f.x-e.w*.24,e.y,e.w*.52,Math.min(42,e.h),-f.face,.85);}else if(e.upper)stamp(2,e.x,e.t+Math.min(42,e.h)/2,e.w,Math.min(42,e.h),1,.9);else if(a.type==='dair')stamp(3,e.x,e.y,e.w,Math.min(42,e.h),1,.9);else stamp(0,e.x,e.y,e.w,Math.min(42,e.h),e.back?-f.face:f.face,.9);}
+ if(a.yumaKey&&!a.fired){const p=yumaPoint(f,31,YumaContacts[31]?.hand||[.85,.45]);stamp(11,p.x,p.y,18+f.timer*.5,18+f.timer*.5,1,.75,0,true);}
+ }
+ function drawObjects(){for(const q of YumaRules.objects){if(q.dead)continue;const f=fighters[q.owner];if(q.kind==='spirit'){const large=q.form==='large',n=large?(q.phase==='strike'?7:q.phase==='sweep'||q.phase==='support'?8:q.phase==='return'||q.phase==='returnSweep'?9:6):Math.floor(frame/10)%2?4:5,r=YumaArtRects.effects[n],scale=(large?94/YumaArtRects.effects[6][3]:26/YumaArtRects.effects[4][3])*BattleSize.art('yuma');stamp(n,q.x,q.y-r[3]*scale/2,r[2]*scale,r[3]*scale,q.face||f.face,1,0,true);}else if(q.kind==='door'){const fade=Math.min(1,(q.life-q.age)/10);stamp(12,q.x,q.y,46,86,1,fade*(q.selected?1:.45),0,true);if(q.selected)stamp(13,q.x,q.y-44,30,20,1,fade,0,true);}else if(q.kind==='key')stamp(10,q.x,q.y,42,q.radius*2,q.face,1,0,true);}}
+ function impact(v){stamp(11,v.x,v.y,30+v.power*2,30+v.power*2,1,v.life/v.max,0,true);}
+ function hud(f,x,y){text('解鍵 '+yumaKeys(f)+' / 3',x+147,y+24,10,'#d3bbff','left');const q=yumaSpirit(f);text(q?.phase==='follow'?'死に神ちゃん：そば':q?.phase==='guide'?'方向で相棒を操作':'相棒：行動中',x+147,y+42,8,'#e5d4ff','left');}
+ return{draw,drawObjects,impact,hud};})();

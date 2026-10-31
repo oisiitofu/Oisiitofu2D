@@ -1,0 +1,86 @@
+[
+  {
+    "name": "basic",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-82dab2ac-defb-45e3-a45c-3cd69286aa1a.png",
+    "final": "characters/magus/assets/magus-basic-draft.png",
+    "sha256": "2937c3bf5ab407ffe81f4d36123a1cef1605972ebfbb018f2976db71e41d376d"
+  },
+  {
+    "name": "basic-margin-repair",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-13a24604-012b-4e50-8d8d-6054952efb30.png",
+    "final": "characters/magus/assets/magus-basic.png",
+    "sha256": "b67656d9dc5d9aed9270e0db860bdcb85ce1521c0b9328d5c4316520ea227f61"
+  },
+  {
+    "name": "attacks",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-64c42e33-cca5-498e-a03d-03bba9705a79.png",
+    "final": "characters/magus/assets/magus-attacks-draft.png",
+    "sha256": "0b5237eac8cf43f9abb0702700b124b8e9076e57e85c017452784a48d853f25e"
+  },
+  {
+    "name": "specials",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-afc6ff55-9c2b-423a-8e80-32106501d2fe.png",
+    "final": "characters/magus/assets/magus-specials.png",
+    "sha256": "054c940f50046a91c611575599191a88d50795e2a1a9942b10c2f15e36fbca59"
+  },
+  {
+    "name": "selection",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-87a49113-3175-4097-9b68-79cbdcf1124e.png",
+    "final": "characters/magus/assets/magus-selection.png",
+    "sha256": "8892dcc107ee78ac771a302c2651c53ccb95e4e28147a43b21003e5e59040845"
+  },
+  {
+    "name": "effects",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-065e95dd-0c5e-4d38-b882-0fef5e9ecd61.png",
+    "final": "characters/magus/assets/magus-effects.png",
+    "sha256": "b7ef3e923681c12141bb9ea2064cf0be9e45a698e770cbd9b9c4085e1086c70c"
+  },
+  {
+    "name": "attack-repair",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-cdfd732f-9a69-4c41-87be-1049cfdc807f.png",
+    "final": "characters/magus/assets/magus-attacks.png",
+    "sha256": "a606ae2fc6cafbfc70da39b33d00f42f2da033db937ef608a8b1db5c282e5e7e"
+  },
+  {
+    "name": "defense",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-e78e8636-a067-4bd1-86fe-15dc8355a499.png",
+    "final": "characters/magus/assets/magus-defense.png",
+    "sha256": "630e2bdb998592cbc2854500b6a75099b57bdf771284c9f9ffe40d45c27a6404"
+  },
+  {
+    "name": "extra",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-95f7f57e-91b2-4778-8225-ef192b7a0a34.png",
+    "final": "characters/magus/assets/magus-extra.png",
+    "sha256": "7d1bbf7cd146f1b3836169558bcbe1b39c8eba5c7fe54300053d0344afc678bc"
+  },
+  {
+    "name": "jab-correction",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-7fe96575-935e-4585-965f-53ce23d787f1.png",
+    "final": "characters/magus/assets/magus-jab-correction.png",
+    "sha256": "887c7fd49c07d5dc37a464ffd39b66a9512dc50ad6d8fa1f1a5f1801222b4640"
+  },
+  {
+    "name": "windup",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-b89b10e9-2d4f-43ff-9ed5-4cdb9325bd71.png",
+    "final": "characters/magus/assets/magus-windup.png",
+    "sha256": "3e4e932c6c1fdb7f35401b7e4699fefc81e116f4bb01fa8fe37ce6d0a0d80061"
+  },
+  {
+    "name": "recovery",
+    "mode": "built-in image_gen",
+    "generated": "C:/Users/haro_/.codex/generated_images/01a190b1-a919-7980-a2b1-f2962a4ec62c/exec-123e174a-b7d6-49b9-8c59-0cc432c2fcd5.png",
+    "final": "characters/magus/assets/magus-recovery.png",
+    "sha256": "4a8403cc27e9088f4bf09f9ce75ae1b00bb5666d74d2c8fb62810ef91e2d7fd4"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: precise-object-edit\nAsset type: transparent basic animation sprite sheet correction.\nInput first image is the current 4x4 BASIC sheet, second is original identity reference.\nChange ONLY layout margin and complete cut-off feathers: keep all16 exact fullbody poses, face proportions, clothes, weapons, colors. Increase transparent margins within each of16 equal cells so every hat feather and sword tip has at least18px gap to cell and image edges. The first row feather tops are cut; paint complete natural long yellow-blue feathers matching source. Uniformly reduce ALL16 figures by same scale about .87 before arranging on clear regular4x4 grid. Same scale across all poses, never individually fit. No fairy, no text, no extra effects. Preserve actual alpha transparency.",
+  "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-69dcbeda-1995-4d08-aa2d-29a888248155.png",
+  "finalPath": "characters/elliot/assets/elliot-basic-v2.png"
+}

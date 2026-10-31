@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: stylized-concept\nAsset type: two ELLIOT wholebody poses on TRANSPARENT horizontal2cell sheet.\nReference1 approvedbasic is identity and neutral; reference2 originaldesign. Exactly TWO complete isolated figures in twoequal sidebyside cells, generousalpha margin, same body scale.\nLEFT: exact firstcellneutral from approvedbasic, fullhatfeather/sword/feet, same stance.\nRIGHT: NEW SWORDLIFT WINDUP for upward sword attack: facingright, kneesdeepbent, upperbodycoiled, RIGHT handholding FULLsilverstraightsword LOW BY RIGHT KNEE with blade diagonalforwarddown, LEFT armholdingblueroundshield nearleftshoulder. Torso lower thanneutral, visibleanatomicaltwoarms/twolegs. Low sword position distinctly differs from overheadcontact. Do not include fairy/effects/text/background/ground.\nPreserve same naturaladultmale proportions/headsize, redfeatherhat, light sandyhair, redscarf, graywhitecoat, darkboots. Entire swordtip/feather/boots inside transparentboundaries. HandpaintedJRPG sprite matchingreferences. Truealpha transparency.",
+  "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-5303f023-d88c-4b68-b9f0-4ca68a404ddd.png",
+  "finalPath": "characters/elliot/assets/elliot-windup-completion.png"
+}

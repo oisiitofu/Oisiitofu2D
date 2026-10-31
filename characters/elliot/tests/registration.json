@@ -1,0 +1,90 @@
+{
+  "definition": {
+    "id": "elliot",
+    "name": "エリオット",
+    "style": "冒険家エリオットの千年物語",
+    "number": "212",
+    "description": "地図目印と妖精フェイを連携。妖精の実際の位置から光の矢を放ち、支点への剣移動や呼び戻しての飛翔で戦う冒険家。",
+    "pose": 106
+  },
+  "after": "odio",
+  "anchorName": "オディオ",
+  "height": 98,
+  "tier": 3,
+  "weight": 88,
+  "physics": {
+    "weight": 88,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 7.1,
+    "airSpeed": 5.6,
+    "airAcceleration": 0.4,
+    "gravity": 0.56,
+    "fullHopVelocity": 14,
+    "ecb": {
+      "radius": 17,
+      "height": 91
+    },
+    "shieldSize": 47.04,
+    "shieldOffset": [
+      0,
+      -45.080000000000005
+    ],
+    "airMobility": null,
+    "ledgeGrip": [
+      -0.10300000000000001,
+      0.968
+    ]
+  },
+  "mask": "(r>green*1.3&&r>b*1.3&&r>65)",
+  "upperCurves": [
+    2
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      1,
+      0
+    ],
+    "2": [
+      0,
+      -1
+    ],
+    "3": [
+      0,
+      1
+    ],
+    "7": [
+      1,
+      0
+    ],
+    "9": [
+      1,
+      0
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 1,
+    "jab2": 1,
+    "jab3": 1,
+    "heavy": 0,
+    "up": 2,
+    "low": 0,
+    "dashAttack": 1,
+    "smash": 0,
+    "upsmash": 2,
+    "downsmash": 0,
+    "air": 11,
+    "fair": 1,
+    "bair": 0,
+    "uair": 2,
+    "dair": 3
+  }
+}

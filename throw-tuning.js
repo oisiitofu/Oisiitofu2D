@@ -6,14 +6,14 @@ const ThrowTuning=(()=>{
  const groups={
   balanced:'leanne nights ryuta mono felyne sackboy rayman quote battlecat ringfit qbby ryoku tails etna ratchet astro sam reimu zack presea hachiware tidus terra onionknight arthur sakura billy riesz edea narmaya wonder rena gran welch zoe ky alphen ash judas rion sol miyabi zero3 dana isaac ulgrim monokuma roxas twob zero lightning rean estelle noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian chef morphie human kitten elma goemon metabee nier dante leon charlotta twinbee edf arus maelle sumino frog tressa eve saki hanajk hanajd kisuke ray alain hinako megamanexe fiora krystal malenia alucard kurabe shizuna',
   rising:'dragoon gundam kosmos pawapuro horse bayleef piposaru pneuma odio laharl kasane greymon metalgreymon wargreymon omegamon hanajs c4621',
-  agile:'parappa octane jett viewtifuljoe ellen chibirobo octoling chiikawa chocobo riki rin makoto neku pokoa jibanyan zidane yuffie crash knight shadow moogle cojicoji hornet klonoa karateka aiai hayabusa',
+  agile:'yuma parappa octane jett viewtifuljoe ellen chibirobo octoling chiikawa chocobo riki rin makoto neku pokoa jibanyan zidane yuffie crash knight shadow moogle cojicoji hornet klonoa karateka aiai hayabusa',
   grappler:'agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby',
   caster:'mallow veronica ashley lip shionne genis viridi vivi nia colette will emma ryza midna bomberman sans headmaster sakuna miku naruhodo layton vincent mametchi aruru maruku dietrich rocbouquet deemo aerith donchan melia yuri toro katamari okami battlemage naegi'
  };
  // Weapon specialists keep useful positioning throws; supernatural and
  // power identities get the designated KO directions below.
- groups.blade='velvet shovelknight aloy io raguna anubis jehuty elza nahobino django enoch zack tidus arthur sakura edea narmaya gran ky alphen ash judas rion sol miyabi zero3 dana ulgrim roxas twob zero lightning rean noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian nier dante charlotta arus maelle frog eve saki hanajk hanajd kisuke ray alain hinako fiora malenia alucard shizuna knight hornet hayabusa';
- groups.psion='namine hydaelyn kasane neku midna emma pneuma laharl odio will melia battlemage reimu rocbouquet deemo';
+ groups.blade='elliot velvet shovelknight aloy io raguna anubis jehuty elza nahobino django enoch zack tidus arthur sakura edea narmaya gran ky alphen ash judas rion sol miyabi zero3 dana ulgrim roxas twob zero lightning rean noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian nier dante charlotta arus maelle frog eve saki hanajk hanajd kisuke ray alain hinako fiora malenia alucard shizuna knight hornet hayabusa';
+ groups.psion='magus namine hydaelyn kasane neku midna emma pneuma laharl odio will melia battlemage reimu rocbouquet deemo';
  groups.power='nargacuga nightraven estark agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby presea zoe greymon metalgreymon wargreymon omegamon';
  // Per-character selections, rather than roster-number/modulo assignments.
  const assignments=Object.fromEntries(Object.entries(groups).flatMap(([group,ids])=>ids.split(' ').map(id=>[id,group])));
@@ -49,6 +49,7 @@ const ThrowTuning=(()=>{
  // Launch coefficients are populated from real grab-release flight checks.
  const koGrowth={forwardThrow:.043,backThrow:.043,upThrow:.065,downThrow:.075};
  const koCalibration={
+  "yuma":{"backThrow":{"growth":0.047831,"percent":175}},
   "leanne":{"backThrow":{"growth":0.051591,"percent":160}},
   "reimu":{"upThrow":{"growth":0.062261,"percent":160}},
   "zack":{"downThrow":{"growth":0.083223,"percent":180}},

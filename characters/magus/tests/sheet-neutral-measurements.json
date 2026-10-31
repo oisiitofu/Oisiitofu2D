@@ -1,0 +1,74 @@
+{
+  "basic": {
+    "crown": 48,
+    "boots": 274,
+    "body": 226,
+    "crop": [
+      226,
+      279
+    ]
+  },
+  "attacks": {
+    "crown": 51,
+    "boots": 260,
+    "body": 209,
+    "crop": [
+      228,
+      265
+    ]
+  },
+  "specials": {
+    "crown": 45,
+    "boots": 295,
+    "body": 250,
+    "crop": [
+      276,
+      300
+    ]
+  },
+  "defense": {
+    "crown": 63,
+    "boots": 319,
+    "body": 256,
+    "crop": [
+      257,
+      323
+    ]
+  },
+  "extra": {
+    "crown": 51,
+    "boots": 281,
+    "body": 230,
+    "crop": [
+      244,
+      285
+    ]
+  },
+  "jab-correction": {
+    "crown": 132,
+    "boots": 818,
+    "body": 686,
+    "crop": [
+      656,
+      822
+    ]
+  },
+  "windup": {
+    "crown": 53,
+    "boots": 312,
+    "body": 259,
+    "crop": [
+      255,
+      316
+    ]
+  },
+  "recovery": {
+    "crown": 44,
+    "boots": 257,
+    "body": 213,
+    "crop": [
+      221,
+      263
+    ]
+  }
+}

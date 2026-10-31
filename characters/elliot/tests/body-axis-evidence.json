@@ -1,0 +1,1627 @@
+{
+  "method": "Visual marks on intact extracted full-body paintings. Waist/pelvis junction is used, excluding sword/shield/scarf/hat silhouette. Coordinates are normalized crop-local x-right/y-down; one uniform scale per source sheet, never per-pose fit.",
+  "poses": [
+    {
+      "frame": 0,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 0
+      },
+      "waist": [
+        0.5,
+        0.48
+      ],
+      "pixel": [
+        152,
+        165.12
+      ]
+    },
+    {
+      "frame": 1,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 1
+      },
+      "waist": [
+        0.51,
+        0.48
+      ],
+      "pixel": [
+        150.96,
+        161.28
+      ]
+    },
+    {
+      "frame": 2,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 2
+      },
+      "waist": [
+        0.48,
+        0.48
+      ],
+      "pixel": [
+        134.4,
+        162.72
+      ]
+    },
+    {
+      "frame": 3,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 3
+      },
+      "waist": [
+        0.55,
+        0.47
+      ],
+      "pixel": [
+        180.4,
+        138.65
+      ]
+    },
+    {
+      "frame": 4,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 4
+      },
+      "waist": [
+        0.52,
+        0.49
+      ],
+      "pixel": [
+        167.96,
+        124.95
+      ]
+    },
+    {
+      "frame": 5,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 5
+      },
+      "waist": [
+        0.52,
+        0.49
+      ],
+      "pixel": [
+        167.44,
+        131.32
+      ]
+    },
+    {
+      "frame": 6,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 6
+      },
+      "waist": [
+        0.52,
+        0.49
+      ],
+      "pixel": [
+        152.88,
+        123.48
+      ]
+    },
+    {
+      "frame": 7,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 7
+      },
+      "waist": [
+        0.58,
+        0.62
+      ],
+      "pixel": [
+        168.2,
+        118.42
+      ]
+    },
+    {
+      "frame": 8,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 8
+      },
+      "waist": [
+        0.52,
+        0.56
+      ],
+      "pixel": [
+        150.28,
+        120.96000000000001
+      ]
+    },
+    {
+      "frame": 9,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 9
+      },
+      "waist": [
+        0.48,
+        0.49
+      ],
+      "pixel": [
+        120.47999999999999,
+        147.49
+      ]
+    },
+    {
+      "frame": 10,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 10
+      },
+      "waist": [
+        0.49,
+        0.49
+      ],
+      "pixel": [
+        120.53999999999999,
+        149.45
+      ]
+    },
+    {
+      "frame": 11,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 11
+      },
+      "waist": [
+        0.56,
+        0.52
+      ],
+      "pixel": [
+        161.84,
+        134.16
+      ]
+    },
+    {
+      "frame": 12,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 12
+      },
+      "waist": [
+        0.53,
+        0.57
+      ],
+      "pixel": [
+        161.65,
+        130.53
+      ]
+    },
+    {
+      "frame": 13,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 13
+      },
+      "waist": [
+        0.43,
+        0.52
+      ],
+      "pixel": [
+        110.51,
+        157.56
+      ]
+    },
+    {
+      "frame": 14,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 14
+      },
+      "waist": [
+        0.48,
+        0.49
+      ],
+      "pixel": [
+        148.79999999999998,
+        149.45
+      ]
+    },
+    {
+      "frame": 15,
+      "source": {
+        "sheet": "basic-v2",
+        "cell": 15
+      },
+      "waist": [
+        0.52,
+        0.53
+      ],
+      "pixel": [
+        148.72,
+        162.18
+      ]
+    },
+    {
+      "frame": 16,
+      "source": {
+        "sheet": "attack-completion-alpha",
+        "cell": 1,
+        "scale": 0.756152125279642
+      },
+      "waist": [
+        0.51,
+        0.55
+      ],
+      "pixel": [
+        196.35,
+        209.00000000000003
+      ]
+    },
+    {
+      "frame": 17,
+      "source": {
+        "sheet": "attacks",
+        "cell": 2,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.44,
+        0.5
+      ],
+      "pixel": [
+        197.56,
+        137
+      ]
+    },
+    {
+      "frame": 18,
+      "source": {
+        "sheet": "attacks",
+        "cell": 3,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.43,
+        0.5
+      ],
+      "pixel": [
+        199.52,
+        120.5
+      ]
+    },
+    {
+      "frame": 19,
+      "source": {
+        "sheet": "attacks",
+        "cell": 4,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.52,
+        0.52
+      ],
+      "pixel": [
+        201.76000000000002,
+        135.72
+      ]
+    },
+    {
+      "frame": 20,
+      "source": {
+        "sheet": "attacks",
+        "cell": 5,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.305,
+        0.61
+      ],
+      "pixel": [
+        82.96,
+        233.63
+      ]
+    },
+    {
+      "frame": 21,
+      "source": {
+        "sheet": "attacks",
+        "cell": 6,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.5,
+        0.58
+      ],
+      "pixel": [
+        240.5,
+        117.16
+      ]
+    },
+    {
+      "frame": 22,
+      "source": {
+        "sheet": "attacks",
+        "cell": 7,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.55,
+        0.52
+      ],
+      "pixel": [
+        213.4,
+        112.84
+      ]
+    },
+    {
+      "frame": 23,
+      "source": {
+        "sheet": "attacks",
+        "cell": 8,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.52,
+        0.56
+      ],
+      "pixel": [
+        229.32000000000002,
+        159.04000000000002
+      ]
+    },
+    {
+      "frame": 24,
+      "source": {
+        "sheet": "attack-completion-alpha",
+        "cell": 2,
+        "scale": 0.756152125279642
+      },
+      "waist": [
+        0.268,
+        0.714
+      ],
+      "pixel": [
+        87.90400000000001,
+        337.008
+      ]
+    },
+    {
+      "frame": 25,
+      "source": {
+        "sheet": "attacks",
+        "cell": 10,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.52,
+        0.57
+      ],
+      "pixel": [
+        208.52,
+        111.14999999999999
+      ]
+    },
+    {
+      "frame": 26,
+      "source": {
+        "sheet": "attacks",
+        "cell": 11,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.48,
+        0.5
+      ],
+      "pixel": [
+        173.76,
+        126
+      ]
+    },
+    {
+      "frame": 27,
+      "source": {
+        "sheet": "attacks",
+        "cell": 12,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.41,
+        0.52
+      ],
+      "pixel": [
+        209.1,
+        132.08
+      ]
+    },
+    {
+      "frame": 28,
+      "source": {
+        "sheet": "attacks",
+        "cell": 13,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.56,
+        0.55
+      ],
+      "pixel": [
+        190.96,
+        150.70000000000002
+      ]
+    },
+    {
+      "frame": 29,
+      "source": {
+        "sheet": "attack-completion-alpha",
+        "cell": 3,
+        "scale": 0.756152125279642
+      },
+      "waist": [
+        0.625,
+        0.609
+      ],
+      "pixel": [
+        198.125,
+        319.116
+      ]
+    },
+    {
+      "frame": 30,
+      "source": {
+        "sheet": "attacks",
+        "cell": 15,
+        "scale": 1.1535836177474403
+      },
+      "waist": [
+        0.53,
+        0.43
+      ],
+      "pixel": [
+        154.23000000000002,
+        132.44
+      ]
+    },
+    {
+      "frame": 31,
+      "source": {
+        "sheet": "specials",
+        "cell": 1
+      },
+      "waist": [
+        0.42,
+        0.47
+      ],
+      "pixel": [
+        115.5,
+        158.39
+      ]
+    },
+    {
+      "frame": 32,
+      "source": {
+        "sheet": "specials",
+        "cell": 2
+      },
+      "waist": [
+        0.43,
+        0.47
+      ],
+      "pixel": [
+        109.22,
+        159.79999999999998
+      ]
+    },
+    {
+      "frame": 33,
+      "source": {
+        "sheet": "specials",
+        "cell": 0
+      },
+      "waist": [
+        0.49,
+        0.48
+      ],
+      "pixel": [
+        154.35,
+        165.12
+      ]
+    },
+    {
+      "frame": 34,
+      "source": {
+        "sheet": "specials",
+        "cell": 3
+      },
+      "waist": [
+        0.54,
+        0.48
+      ],
+      "pixel": [
+        168.48000000000002,
+        159.35999999999999
+      ]
+    },
+    {
+      "frame": 35,
+      "source": {
+        "sheet": "specials",
+        "cell": 4
+      },
+      "waist": [
+        0.42,
+        0.53
+      ],
+      "pixel": [
+        132.72,
+        163.77
+      ]
+    },
+    {
+      "frame": 36,
+      "source": {
+        "sheet": "specials",
+        "cell": 5
+      },
+      "waist": [
+        0.41,
+        0.56
+      ],
+      "pixel": [
+        168.92,
+        150.64000000000001
+      ]
+    },
+    {
+      "frame": 37,
+      "source": {
+        "sheet": "specials",
+        "cell": 6
+      },
+      "waist": [
+        0.4,
+        0.48
+      ],
+      "pixel": [
+        96.80000000000001,
+        162.72
+      ]
+    },
+    {
+      "frame": 38,
+      "source": {
+        "sheet": "specials",
+        "cell": 7
+      },
+      "waist": [
+        0.49,
+        0.53
+      ],
+      "pixel": [
+        125.44,
+        181.26000000000002
+      ]
+    },
+    {
+      "frame": 39,
+      "source": {
+        "sheet": "specials",
+        "cell": 8
+      },
+      "waist": [
+        0.51,
+        0.51
+      ],
+      "pixel": [
+        137.7,
+        162.69
+      ]
+    },
+    {
+      "frame": 40,
+      "source": {
+        "sheet": "specials",
+        "cell": 9
+      },
+      "waist": [
+        0.49,
+        0.55
+      ],
+      "pixel": [
+        152.39,
+        165.55
+      ]
+    },
+    {
+      "frame": 41,
+      "source": {
+        "sheet": "specials",
+        "cell": 10
+      },
+      "waist": [
+        0.43,
+        0.49
+      ],
+      "pixel": [
+        101.91,
+        160.72
+      ]
+    },
+    {
+      "frame": 42,
+      "source": {
+        "sheet": "specials",
+        "cell": 11
+      },
+      "waist": [
+        0.48,
+        0.49
+      ],
+      "pixel": [
+        136.79999999999998,
+        162.68
+      ]
+    },
+    {
+      "frame": 43,
+      "source": {
+        "sheet": "specials",
+        "cell": 12
+      },
+      "waist": [
+        0.46,
+        0.59
+      ],
+      "pixel": [
+        128.8,
+        119.77
+      ]
+    },
+    {
+      "frame": 44,
+      "source": {
+        "sheet": "specials",
+        "cell": 13
+      },
+      "waist": [
+        0.44,
+        0.52
+      ],
+      "pixel": [
+        111.76,
+        153.4
+      ]
+    },
+    {
+      "frame": 45,
+      "source": {
+        "sheet": "specials",
+        "cell": 14
+      },
+      "waist": [
+        0.46,
+        0.5
+      ],
+      "pixel": [
+        139.84,
+        147
+      ]
+    },
+    {
+      "frame": 46,
+      "source": {
+        "sheet": "defense",
+        "cell": 1
+      },
+      "waist": [
+        0.51,
+        0.51
+      ],
+      "pixel": [
+        161.67000000000002,
+        129.54
+      ]
+    },
+    {
+      "frame": 47,
+      "source": {
+        "sheet": "defense",
+        "cell": 2
+      },
+      "waist": [
+        0.41,
+        0.43
+      ],
+      "pixel": [
+        94.3,
+        81.7
+      ]
+    },
+    {
+      "frame": 48,
+      "source": {
+        "sheet": "defense",
+        "cell": 3
+      },
+      "waist": [
+        0.57,
+        0.53
+      ],
+      "pixel": [
+        164.16,
+        123.49000000000001
+      ]
+    },
+    {
+      "frame": 49,
+      "source": {
+        "sheet": "defense",
+        "cell": 4
+      },
+      "waist": [
+        0.52,
+        0.49
+      ],
+      "pixel": [
+        160.68,
+        136.22
+      ]
+    },
+    {
+      "frame": 50,
+      "source": {
+        "sheet": "defense",
+        "cell": 5
+      },
+      "waist": [
+        0.46,
+        0.5
+      ],
+      "pixel": [
+        152.26000000000002,
+        133.5
+      ]
+    },
+    {
+      "frame": 51,
+      "source": {
+        "sheet": "defense",
+        "cell": 6
+      },
+      "waist": [
+        0.55,
+        0.55
+      ],
+      "pixel": [
+        176.55,
+        129.25
+      ]
+    },
+    {
+      "frame": 52,
+      "source": {
+        "sheet": "defense",
+        "cell": 7
+      },
+      "waist": [
+        0.58,
+        0.53
+      ],
+      "pixel": [
+        173.42,
+        136.74
+      ]
+    },
+    {
+      "frame": 53,
+      "source": {
+        "sheet": "defense",
+        "cell": 8
+      },
+      "waist": [
+        0.38,
+        0.58
+      ],
+      "pixel": [
+        138.32,
+        58.58
+      ]
+    },
+    {
+      "frame": 54,
+      "source": {
+        "sheet": "defense",
+        "cell": 9
+      },
+      "waist": [
+        0.52,
+        0.56
+      ],
+      "pixel": [
+        145.08,
+        106.96000000000001
+      ]
+    },
+    {
+      "frame": 55,
+      "source": {
+        "sheet": "defense",
+        "cell": 10
+      },
+      "waist": [
+        0.27,
+        0.46
+      ],
+      "pixel": [
+        57.24,
+        164.22
+      ]
+    },
+    {
+      "frame": 56,
+      "source": {
+        "sheet": "defense",
+        "cell": 11
+      },
+      "waist": [
+        0.53,
+        0.52
+      ],
+      "pixel": [
+        139.92000000000002,
+        148.20000000000002
+      ]
+    },
+    {
+      "frame": 57,
+      "source": {
+        "sheet": "defense",
+        "cell": 12
+      },
+      "waist": [
+        0.42,
+        0.53
+      ],
+      "pixel": [
+        151.62,
+        141.51000000000002
+      ]
+    },
+    {
+      "frame": 58,
+      "source": {
+        "sheet": "defense",
+        "cell": 13
+      },
+      "waist": [
+        0.51,
+        0.51
+      ],
+      "pixel": [
+        143.31,
+        147.9
+      ]
+    },
+    {
+      "frame": 59,
+      "source": {
+        "sheet": "defense",
+        "cell": 14
+      },
+      "waist": [
+        0.44,
+        0.49
+      ],
+      "pixel": [
+        138.6,
+        126.42
+      ]
+    },
+    {
+      "frame": 60,
+      "source": {
+        "sheet": "defense",
+        "cell": 15
+      },
+      "waist": [
+        0.62,
+        0.49
+      ],
+      "pixel": [
+        174.22,
+        133.77
+      ]
+    },
+    {
+      "frame": 61,
+      "source": {
+        "sheet": "extra",
+        "cell": 1
+      },
+      "waist": [
+        0.38,
+        0.48
+      ],
+      "pixel": [
+        95,
+        169.92
+      ]
+    },
+    {
+      "frame": 62,
+      "source": {
+        "sheet": "extra",
+        "cell": 2
+      },
+      "waist": [
+        0.46,
+        0.55
+      ],
+      "pixel": [
+        141.22,
+        127.05000000000001
+      ]
+    },
+    {
+      "frame": 63,
+      "source": {
+        "sheet": "extra",
+        "cell": 3
+      },
+      "waist": [
+        0.35,
+        0.47
+      ],
+      "pixel": [
+        92.05,
+        161.67999999999998
+      ]
+    },
+    {
+      "frame": 64,
+      "source": {
+        "sheet": "extra",
+        "cell": 4
+      },
+      "waist": [
+        0.44,
+        0.5
+      ],
+      "pixel": [
+        135.96,
+        163
+      ]
+    },
+    {
+      "frame": 65,
+      "source": {
+        "sheet": "extra",
+        "cell": 5
+      },
+      "waist": [
+        0.45,
+        0.49
+      ],
+      "pixel": [
+        117.45,
+        163.66
+      ]
+    },
+    {
+      "frame": 66,
+      "source": {
+        "sheet": "extra",
+        "cell": 6
+      },
+      "waist": [
+        0.52,
+        0.52
+      ],
+      "pixel": [
+        174.20000000000002,
+        183.04000000000002
+      ]
+    },
+    {
+      "frame": 67,
+      "source": {
+        "sheet": "extra",
+        "cell": 7
+      },
+      "waist": [
+        0.45,
+        0.51
+      ],
+      "pixel": [
+        136.8,
+        165.75
+      ]
+    },
+    {
+      "frame": 68,
+      "source": {
+        "sheet": "extra",
+        "cell": 8
+      },
+      "waist": [
+        0.49,
+        0.47
+      ],
+      "pixel": [
+        146.02,
+        147.57999999999998
+      ]
+    },
+    {
+      "frame": 69,
+      "source": {
+        "sheet": "extra",
+        "cell": 9
+      },
+      "waist": [
+        0.55,
+        0.51
+      ],
+      "pixel": [
+        155.65,
+        140.25
+      ]
+    },
+    {
+      "frame": 70,
+      "source": {
+        "sheet": "extra",
+        "cell": 10
+      },
+      "waist": [
+        0.51,
+        0.57
+      ],
+      "pixel": [
+        154.02,
+        135.66
+      ]
+    },
+    {
+      "frame": 71,
+      "source": {
+        "sheet": "extra",
+        "cell": 11
+      },
+      "waist": [
+        0.45,
+        0.49
+      ],
+      "pixel": [
+        136.8,
+        149.94
+      ]
+    },
+    {
+      "frame": 72,
+      "source": {
+        "sheet": "extra",
+        "cell": 12
+      },
+      "waist": [
+        0.51,
+        0.5
+      ],
+      "pixel": [
+        163.2,
+        128.5
+      ]
+    },
+    {
+      "frame": 73,
+      "source": {
+        "sheet": "extra",
+        "cell": 13
+      },
+      "waist": [
+        0.45,
+        0.48
+      ],
+      "pixel": [
+        137.25,
+        139.68
+      ]
+    },
+    {
+      "frame": 74,
+      "source": {
+        "sheet": "extra",
+        "cell": 14
+      },
+      "waist": [
+        0.42,
+        0.55
+      ],
+      "pixel": [
+        173.88,
+        129.25
+      ]
+    },
+    {
+      "frame": 75,
+      "source": {
+        "sheet": "extra",
+        "cell": 15
+      },
+      "waist": [
+        0.4,
+        0.51
+      ],
+      "pixel": [
+        96.4,
+        140.76
+      ]
+    },
+    {
+      "frame": 76,
+      "source": {
+        "sheet": "windup",
+        "cell": 1
+      },
+      "waist": [
+        0.52,
+        0.55
+      ],
+      "pixel": [
+        155.48000000000002,
+        143.55
+      ]
+    },
+    {
+      "frame": 77,
+      "source": {
+        "sheet": "windup",
+        "cell": 2
+      },
+      "waist": [
+        0.35,
+        0.57
+      ],
+      "pixel": [
+        129.5,
+        178.41
+      ]
+    },
+    {
+      "frame": 78,
+      "source": {
+        "sheet": "windup",
+        "cell": 3
+      },
+      "waist": [
+        0.51,
+        0.49
+      ],
+      "pixel": [
+        132.09,
+        148.96
+      ]
+    },
+    {
+      "frame": 79,
+      "source": {
+        "sheet": "windup",
+        "cell": 4
+      },
+      "waist": [
+        0.46,
+        0.57
+      ],
+      "pixel": [
+        135.70000000000002,
+        148.76999999999998
+      ]
+    },
+    {
+      "frame": 80,
+      "source": {
+        "sheet": "windup-completion",
+        "cell": 1
+      },
+      "waist": [
+        0.55,
+        0.45
+      ],
+      "pixel": [
+        200.75000000000003,
+        128.70000000000002
+      ]
+    },
+    {
+      "frame": 81,
+      "source": {
+        "sheet": "windup",
+        "cell": 5
+      },
+      "waist": [
+        0.55,
+        0.58
+      ],
+      "pixel": [
+        179.85000000000002,
+        129.92
+      ]
+    },
+    {
+      "frame": 82,
+      "source": {
+        "sheet": "windup",
+        "cell": 6
+      },
+      "waist": [
+        0.51,
+        0.56
+      ],
+      "pixel": [
+        158.1,
+        113.68
+      ]
+    },
+    {
+      "frame": 83,
+      "source": {
+        "sheet": "windup",
+        "cell": 7
+      },
+      "waist": [
+        0.53,
+        0.57
+      ],
+      "pixel": [
+        166.95000000000002,
+        159.6
+      ]
+    },
+    {
+      "frame": 84,
+      "source": {
+        "sheet": "windup",
+        "cell": 8
+      },
+      "waist": [
+        0.5,
+        0.58
+      ],
+      "pixel": [
+        150.5,
+        160.07999999999998
+      ]
+    },
+    {
+      "frame": 85,
+      "source": {
+        "sheet": "windup",
+        "cell": 9
+      },
+      "waist": [
+        0.48,
+        0.58
+      ],
+      "pixel": [
+        154.07999999999998,
+        178.05999999999997
+      ]
+    },
+    {
+      "frame": 86,
+      "source": {
+        "sheet": "windup",
+        "cell": 10
+      },
+      "waist": [
+        0.54,
+        0.56
+      ],
+      "pixel": [
+        166.86,
+        154.56
+      ]
+    },
+    {
+      "frame": 87,
+      "source": {
+        "sheet": "windup",
+        "cell": 11
+      },
+      "waist": [
+        0.56,
+        0.56
+      ],
+      "pixel": [
+        164.08,
+        156.24
+      ]
+    },
+    {
+      "frame": 88,
+      "source": {
+        "sheet": "windup",
+        "cell": 12
+      },
+      "waist": [
+        0.52,
+        0.57
+      ],
+      "pixel": [
+        190.32,
+        153.89999999999998
+      ]
+    },
+    {
+      "frame": 89,
+      "source": {
+        "sheet": "windup",
+        "cell": 13
+      },
+      "waist": [
+        0.53,
+        0.53
+      ],
+      "pixel": [
+        167.48000000000002,
+        154.76000000000002
+      ]
+    },
+    {
+      "frame": 90,
+      "source": {
+        "sheet": "windup",
+        "cell": 14
+      },
+      "waist": [
+        0.47,
+        0.59
+      ],
+      "pixel": [
+        180.48,
+        204.14
+      ]
+    },
+    {
+      "frame": 91,
+      "source": {
+        "sheet": "recovery",
+        "cell": 1
+      },
+      "waist": [
+        0.45,
+        0.49
+      ],
+      "pixel": [
+        166.95000000000002,
+        159.25
+      ]
+    },
+    {
+      "frame": 92,
+      "source": {
+        "sheet": "recovery",
+        "cell": 2
+      },
+      "waist": [
+        0.43,
+        0.55
+      ],
+      "pixel": [
+        199.52,
+        144.65
+      ]
+    },
+    {
+      "frame": 93,
+      "source": {
+        "sheet": "recovery",
+        "cell": 3
+      },
+      "waist": [
+        0.52,
+        0.48
+      ],
+      "pixel": [
+        211.64000000000001,
+        157.44
+      ]
+    },
+    {
+      "frame": 94,
+      "source": {
+        "sheet": "recovery",
+        "cell": 4
+      },
+      "waist": [
+        0.48,
+        0.5
+      ],
+      "pixel": [
+        180,
+        146
+      ]
+    },
+    {
+      "frame": 95,
+      "source": {
+        "sheet": "recovery",
+        "cell": 5
+      },
+      "waist": [
+        0.52,
+        0.46
+      ],
+      "pixel": [
+        190.32,
+        135.70000000000002
+      ]
+    },
+    {
+      "frame": 96,
+      "source": {
+        "sheet": "recovery",
+        "cell": 6
+      },
+      "waist": [
+        0.46,
+        0.56
+      ],
+      "pixel": [
+        172.5,
+        146.72000000000003
+      ]
+    },
+    {
+      "frame": 97,
+      "source": {
+        "sheet": "recovery",
+        "cell": 7
+      },
+      "waist": [
+        0.48,
+        0.53
+      ],
+      "pixel": [
+        200.64,
+        129.85
+      ]
+    },
+    {
+      "frame": 98,
+      "source": {
+        "sheet": "recovery",
+        "cell": 8
+      },
+      "waist": [
+        0.47,
+        0.5
+      ],
+      "pixel": [
+        215.26,
+        133.5
+      ]
+    },
+    {
+      "frame": 99,
+      "source": {
+        "sheet": "recovery",
+        "cell": 9
+      },
+      "waist": [
+        0.5,
+        0.51
+      ],
+      "pixel": [
+        199,
+        156.06
+      ]
+    },
+    {
+      "frame": 100,
+      "source": {
+        "sheet": "recovery",
+        "cell": 10
+      },
+      "waist": [
+        0.48,
+        0.54
+      ],
+      "pixel": [
+        192.48,
+        164.16000000000003
+      ]
+    },
+    {
+      "frame": 101,
+      "source": {
+        "sheet": "recovery",
+        "cell": 11
+      },
+      "waist": [
+        0.52,
+        0.53
+      ],
+      "pixel": [
+        209.04000000000002,
+        140.45000000000002
+      ]
+    },
+    {
+      "frame": 102,
+      "source": {
+        "sheet": "recovery",
+        "cell": 12
+      },
+      "waist": [
+        0.46,
+        0.52
+      ],
+      "pixel": [
+        203.32000000000002,
+        156
+      ]
+    },
+    {
+      "frame": 103,
+      "source": {
+        "sheet": "recovery",
+        "cell": 13
+      },
+      "waist": [
+        0.52,
+        0.52
+      ],
+      "pixel": [
+        188.76000000000002,
+        144.04
+      ]
+    },
+    {
+      "frame": 104,
+      "source": {
+        "sheet": "recovery",
+        "cell": 14
+      },
+      "waist": [
+        0.5,
+        0.55
+      ],
+      "pixel": [
+        195,
+        188.10000000000002
+      ]
+    },
+    {
+      "frame": 105,
+      "source": {
+        "sheet": "recovery",
+        "cell": 15
+      },
+      "waist": [
+        0.5,
+        0.52
+      ],
+      "pixel": [
+        199,
+        171.08
+      ]
+    }
+  ],
+  "ledge": {
+    "frame": 55,
+    "normalized": [
+      0.167,
+      0.032
+    ],
+    "waistAnchor": 0.27,
+    "grip": [
+      -0.10300000000000001,
+      0.968
+    ]
+  },
+  "portrait": {
+    "frame": 106,
+    "headroom": 24,
+    "sourceSize": 576
+  }
+}

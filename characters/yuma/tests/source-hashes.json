@@ -1,0 +1,72 @@
+[
+  {
+    "file": "characters/yuma/assets/yuma-attacks.png",
+    "sha256": "520563a567dbe43300a9fbdd4b8d846e4f35cefe032ed08573be3c64bd145025",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true
+  },
+  {
+    "file": "characters/yuma/assets/yuma-basic.png",
+    "sha256": "5ebb65e7625959dc76ca67bca497090e2e0bcc7a5ec1b18d3102610ab97b52d4",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true
+  },
+  {
+    "file": "characters/yuma/assets/yuma-defense.png",
+    "sha256": "f9950eef07cff20e4a67f8c74abdf7809d7723439cc443db567a751afcd73218",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true
+  },
+  {
+    "file": "characters/yuma/assets/yuma-effects.png",
+    "sha256": "38b81cdfd4b6152e48ecf6ea9140b7170db44366fe8e31c0ddb6759f0e4f8d7d",
+    "width": 1671,
+    "height": 941,
+    "hasAlpha": true
+  },
+  {
+    "file": "characters/yuma/assets/yuma-extra.png",
+    "sha256": "6070c5a67a31ad57a3e17d068aaf457f5a9011dac5bc39077b4ca8d1247bd3fc",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true
+  },
+  {
+    "file": "characters/yuma/assets/yuma-recovery.png",
+    "sha256": "2110b1a52ec648e20dd34d7a567dfcfce845d326ff6ffe362aa6949201d8e8a7",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true
+  },
+  {
+    "file": "characters/yuma/assets/yuma-selection.png",
+    "sha256": "931ac4bbb0efdb392429e36ea7acee336db5bc606be4564c03424b6e9900fe1a",
+    "width": 1199,
+    "height": 1312,
+    "hasAlpha": true
+  },
+  {
+    "file": "characters/yuma/assets/yuma-specials.png",
+    "sha256": "2e7d49f7a40d214b2eaaeedb4f146179bd39d8f9023d30ca3ab6a5a8a29beb7d",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true
+  },
+  {
+    "file": "characters/yuma/assets/yuma-upair-correction.png",
+    "sha256": "97da0dad467cba8c5b77884fe70462210c8dc4e55a182ad47ea7934abe5fd5bc",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true
+  },
+  {
+    "file": "characters/yuma/assets/yuma-windup.png",
+    "sha256": "e8bc2d0ce252c1c35c381f84cc0ebdae09d928dc8350ea7fa918421168498e5a",
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true
+  }
+]

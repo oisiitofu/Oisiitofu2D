@@ -1,0 +1,108 @@
+{
+  "lockedAt": "2026-10-31T06:56:15.024Z",
+  "files": {
+    "characters/elliot/assets/elliot-neutral-locked.png": "bde73eef26e59213795c007d54a6f8545f55961b505a0ab893d24ce5f9998fc3",
+    "characters/elliot/assets/elliot-strike-01-locked.png": "8d5945c7c6c233ff6a4ee5998fd5e9554c9315cd756b83cdeca8c76925e400cc",
+    "characters/elliot/assets/elliot-strike-02-locked.png": "95810475727fae528025f3f4ec0d26ce1aab1fa5aac5c4fc891d106245ea1283",
+    "characters/elliot/assets/elliot-strike-03-locked.png": "cf03e492fe3a756010fe0295680038cafcad96ac060524be61f7a5a38f727ab4",
+    "characters/elliot/assets/elliot-strike-04-locked.png": "4c04a67fa3d261e3cc1626c9cd66a7029f5149f41cd6c03c22f823e5b6fd96a8",
+    "characters/elliot/assets/elliot-strike-05-locked.png": "f6d7647bdc14ae61c9b1c123cfae1be2147dfffd73bf0d3279c70348d4331458",
+    "characters/elliot/assets/elliot-strike-06-locked.png": "ad09d7394c812554126e86bc140e7dd892fb3aa5351562d2a84130e02dc7fc29",
+    "characters/elliot/assets/elliot-strike-07-locked.png": "3fe51eda52cf40469c4c923043ae87594cbd7e173161c379c60df1edccab1e34",
+    "characters/elliot/assets/elliot-strike-08-locked.png": "b73c62bb712ca76106c096e306a5164c83c087b87660a03b8207032a62b78c34",
+    "characters/elliot/assets/elliot-strike-09-locked.png": "cf1dc7b0d2ee937d0ceb3536d5e1b1128de4da75c68e3451bb7e8992c1fc8805",
+    "characters/elliot/assets/elliot-strike-10-locked.png": "cab6a9f77fc7e1c97383ea567d7f424e731bfdb1cf0f7e3c07c9e608f42d4bde",
+    "characters/elliot/assets/elliot-strike-11-locked.png": "daec44beb5bb8ad25b3b6ac25cffcb4eab1e01cdabd24fd15f0f0d1c7314b35b",
+    "characters/elliot/assets/elliot-strike-12-locked.png": "e1ac61d0ade57d77ac5d2ba3ed1b9555587bae24801b9db7928cbc15f07f3ef8",
+    "characters/elliot/assets/elliot-strike-13-locked.png": "d30a1b095ea6e549076ba6f341959c2071cbc003a53a9342d9ea885c1395f45c",
+    "characters/elliot/assets/elliot-strike-14-locked.png": "f7e8a3cd3344e985a6ea54957bc17b671e131eaf351bbebe9ebdcfb544163c31",
+    "characters/elliot/assets/elliot-strike-15-locked.png": "073b6801f7eda88ba77f5dd4964b78e6b7411381c79446aacdc49a57d5b9a256"
+  },
+  "sources": [
+    {
+      "sheet": "basic-v2",
+      "cell": 0,
+      "scale": 1
+    },
+    {
+      "sheet": "attack-completion-alpha",
+      "cell": 1,
+      "scale": 0.756152125279642
+    },
+    {
+      "sheet": "attacks",
+      "cell": 2,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attacks",
+      "cell": 3,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attacks",
+      "cell": 4,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attacks",
+      "cell": 5,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attacks",
+      "cell": 6,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attacks",
+      "cell": 7,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attacks",
+      "cell": 8,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attack-completion-alpha",
+      "cell": 2,
+      "scale": 0.756152125279642
+    },
+    {
+      "sheet": "attacks",
+      "cell": 10,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attacks",
+      "cell": 11,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attacks",
+      "cell": 12,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attacks",
+      "cell": 13,
+      "scale": 1.1535836177474403
+    },
+    {
+      "sheet": "attack-completion-alpha",
+      "cell": 3,
+      "scale": 0.756152125279642
+    },
+    {
+      "sheet": "attacks",
+      "cell": 15,
+      "scale": 1.1535836177474403
+    }
+  ],
+  "scales": {
+    "basic": 1,
+    "attacks": 1.1535836177474403,
+    "completion": 0.756152125279642
+  }
+}

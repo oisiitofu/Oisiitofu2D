@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: background-extraction\nAsset type: transparent completed fullbody sword poses.\nChange ONLY background: remove ALL dark background, ALL colored glow/haze and ALL ground. Keep the four complete drawn Elliot figures and their sword/shield/feather exactly intact. Produce true alpha transparency around all four figures, not checkerboard, not gray, not black matte. Arrange these SAME FOUR figures in one horizontal row of FOUR equal cells with large transparent gutters; do not change proportions or their pose. No other artwork or lighting. Fully preserve the two complete tall overhead sword blades. No retouch/relight figures.",
+  "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-38da5300-124a-41f8-9967-3beed59403ab.png",
+  "finalPath": "characters/elliot/assets/elliot-attack-completion-alpha.png"
+}

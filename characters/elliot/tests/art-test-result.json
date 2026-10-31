@@ -1,0 +1,22 @@
+{
+  "frames": 107,
+  "effects": 16,
+  "portrait": 106,
+  "atlas": [
+    2560,
+    6941
+  ],
+  "neutral": "exact locked RGBA",
+  "strikes": "15 individually distinct exact locked RGBA",
+  "intermediates": "30 separate intact wholebody paintings",
+  "fairy": "6 distinct complete independent Fei images at effects4..9",
+  "sourceRecords": 16,
+  "sourcePngBytes": "preserved",
+  "anchors": 106,
+  "ledgeGrip": [
+    -0.10300000000000001,
+    0.968
+  ],
+  "fxOrientation": "0 convex right;2 convex up;3 convex down;10 arrow right",
+  "mode": "built-in image_gen"
+}

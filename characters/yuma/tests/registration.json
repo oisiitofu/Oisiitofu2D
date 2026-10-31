@@ -1,0 +1,90 @@
+{
+  "definition": {
+    "id": "yuma",
+    "name": "ユーマ",
+    "style": "RAIN CODE",
+    "number": "211",
+    "description": "解刀と証拠の鍵、独立した死に神ちゃんを操作。呼び戻しの大鎌と三つの出口の謎迷宮を使い分ける探偵。",
+    "pose": 106
+  },
+  "after": "monokuma",
+  "anchorName": "モノクマ",
+  "height": 78,
+  "tier": 1,
+  "weight": 73,
+  "physics": {
+    "weight": 73,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 7.1,
+    "airSpeed": 5.5,
+    "airAcceleration": 0.4,
+    "gravity": 0.55,
+    "fullHopVelocity": 13.7,
+    "ecb": {
+      "radius": 13.53061224489796,
+      "height": 71
+    },
+    "shieldSize": 37.44,
+    "shieldOffset": [
+      0,
+      -35.88
+    ],
+    "airMobility": null,
+    "ledgeGrip": [
+      -0.08552631578947367,
+      0.9436619718309859
+    ]
+  },
+  "mask": "(b>r*1.2&&b>green*1.05&&b>35)",
+  "upperCurves": [
+    2
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      1,
+      0
+    ],
+    "2": [
+      0,
+      -1
+    ],
+    "3": [
+      0,
+      1
+    ],
+    "7": [
+      1,
+      0
+    ],
+    "9": [
+      1,
+      0
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 1,
+    "jab2": 1,
+    "jab3": 1,
+    "heavy": 0,
+    "up": 2,
+    "low": 0,
+    "dashAttack": 1,
+    "smash": 0,
+    "upsmash": 2,
+    "downsmash": 0,
+    "air": 11,
+    "fair": 1,
+    "bair": 0,
+    "uair": 2,
+    "dair": 3
+  }
+}

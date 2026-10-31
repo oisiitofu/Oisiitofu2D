@@ -1,0 +1,24 @@
+{
+  "frames": 107,
+  "effects": 16,
+  "portrait": 106,
+  "bodyHeight": 226,
+  "targetBodyHeight": 98,
+  "neutral": "exact RGBA",
+  "normalStrikes": "15 distinct locked exactRGBA",
+  "intermediates": "30 distinct separate wholebody paintings",
+  "anchors": "106 manually inspected waist/pelvis positions",
+  "ledge": "actual raised fist; relative body-anchor grip",
+  "sourceByteComparison": 12,
+  "fx": "0 convexright;2 vertically normalizedUP;3 convexDOWN;4lightning/5ice columns",
+  "scales": {
+    "basic": 1,
+    "attacks": 1.0813397129186604,
+    "specials": 0.904,
+    "defense": 0.8828125,
+    "extra": 0.9826086956521739,
+    "windup": 0.8725868725868726,
+    "recovery": 1.0610328638497653,
+    "jab-correction": 0.3294460641399417
+  }
+}

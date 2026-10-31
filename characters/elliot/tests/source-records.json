@@ -1,0 +1,167 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "C:/Users/haro_/Downloads/AI/eriotto.png",
+  "records": [
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: background-extraction\nAsset type: transparent completed fullbody sword poses.\nChange ONLY background: remove ALL dark background, ALL colored glow/haze and ALL ground. Keep the four complete drawn Elliot figures and their sword/shield/feather exactly intact. Produce true alpha transparency around all four figures, not checkerboard, not gray, not black matte. Arrange these SAME FOUR figures in one horizontal row of FOUR equal cells with large transparent gutters; do not change proportions or their pose. No other artwork or lighting. Fully preserve the two complete tall overhead sword blades. No retouch/relight figures.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-38da5300-124a-41f8-9967-3beed59403ab.png",
+      "finalPath": "characters/elliot/assets/elliot-attack-completion-alpha.png",
+      "promptFile": "characters/elliot/docs/generation-attack-completion-alpha.json",
+      "sha256": "2ecddcd066e7c2373136480ddc1dfe81ffa2df93fcdb5998800aa73e4225b278",
+      "generatedSha256": "2ecddcd066e7c2373136480ddc1dfe81ffa2df93fcdb5998800aa73e4225b278",
+      "bytes": 1276744
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit\nAsset type: ELLIOT completed source attack poses, transparent 2x2.\nReference1 original attacks; reference2 original design. Current two overhead poses have missing sword blades: COMPLETE them BEFORE animation lock. Four cells readingorder:\n0 exact same wholebody neutral as first cell reference1, sword lowered left and blue round shield.\n1 rising jab pose, full silver straight sword held diagonally UP AND RIGHT from right hand, front arm extended; blue shield leftforearm. Natural wide stance.\n2 grounded skyward sword slash, exact original attack reference cell9 (row3col2) raised right arm and bentknees, but COMPLETE full straight silver sword clearly continuing from hilt VERTICALLY ABOVE raisedhand, tip clearly visible with generous topmargin.\n3 aerial upward cut, exact original attack reference cell14(row4col3) knees curled and raisedrightarm, but COMPLETE long silver sword continuing from hilt straight UP; bothlegs/boots,shield,scarf fully retained.\nSame natural young adult male face/body/clothes, red featherhat, light hair/red scarf/white graycoat/darkboots. Whole figures at SAME physical scale across four cells. Leave generous transparent margins for overhead long blades. No effects/fairy/text/background. Complete twohands and twofeet each. Genuine transparent alpha.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-5129301e-a199-4be9-b4dc-2c95d7cdfd78.png",
+      "finalPath": "characters/elliot/assets/elliot-attack-completion.png",
+      "promptFile": "characters/elliot/docs/generation-attack-completion.json",
+      "sha256": "66e57cda3d738f1e71c7a68fac70038f50f6356e6b7d4bbe9e4f3285b4ddddf2",
+      "generatedSha256": "66e57cda3d738f1e71c7a68fac70038f50f6356e6b7d4bbe9e4f3285b4ddddf2",
+      "bytes": 2010620
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: ELLIOT sword fighting complete fullbody NORMAL ATTACKS transparent sprite sheet. Reference1 is approved BASIC sheet, Reference2 original character sheet. Faithful identical face, natural adult male proportions, red feather hat, blond hair, red scarf, white-gray adventure coat, dark boots, sword and blue round shield.\nRegular4columns4rows,16 complete figures, no text/effects/fairy/background/ground. Whole sword blade tips, limbs, feather,scarf within each cell with visible18px transparent gap. Equal physical scale across all cells; standing sharedneutral260px high on a1400px sheet; low or horizontal poses keep SAME body scale.\nCell0 row1col1 SAME neutral standing pose from basic reference first cell. Cells1..15 distinct attack CONTACT poses in readingorder:\n1 rising sword jab diagonally up/right (blade goes frontward shoulderheight);\n2 wide right horizontal sword sweep finishing extended right;\n3 straight forward sword thrust chestheight right;\n4 forward push with blue shield, sword pulled back;\n5 vertical skyward sword lifting strike, blade above head;\n6 low boot footsweep extended right, sword behind;\n7 low sliding shield ram right, crouched hips;\n8 large strong right horizontal sword slash legswide;\n9 skyward sword slash extended straight above;\n10 low shield slam against ground to right;\n11 airborne neutral individual sword sweep across front, bent knees (NO spinning ring);\n12 aerial forward sword thrust right with extended leading arm;\n13 aerial BACKWARD sword slash blade pointsLEFT while body looks right;\n14 aerial upward swordcut blade overhead pointedup;\n15 aerial downward swordcut blade straightbelow body.\nDetailed clean handpainted anime JRPG sprite finish matching source, consistent anatomy/twohands/twofeet, shield stays left forearm. Do not repeat same pose; make weightshift/limbs/sword differ recognizably by move. Genuine transparent alpha.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-3043e254-57af-4c3e-93fe-bb40254219e4.png",
+      "finalPath": "characters/elliot/assets/elliot-attacks.png",
+      "promptFile": "characters/elliot/docs/generation-attacks.json",
+      "sha256": "62782ca536c911279cf6ab3598442ad45c910cca1183337147126978ad934f24",
+      "generatedSha256": "62782ca536c911279cf6ab3598442ad45c910cca1183337147126978ad934f24",
+      "bytes": 2042116
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit\nAsset type: transparent basic animation sprite sheet correction.\nInput first image is the current 4x4 BASIC sheet, second is original identity reference.\nChange ONLY layout margin and complete cut-off feathers: keep all16 exact fullbody poses, face proportions, clothes, weapons, colors. Increase transparent margins within each of16 equal cells so every hat feather and sword tip has at least18px gap to cell and image edges. The first row feather tops are cut; paint complete natural long yellow-blue feathers matching source. Uniformly reduce ALL16 figures by same scale about .87 before arranging on clear regular4x4 grid. Same scale across all poses, never individually fit. No fairy, no text, no extra effects. Preserve actual alpha transparency.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-69dcbeda-1995-4d08-aa2d-29a888248155.png",
+      "finalPath": "characters/elliot/assets/elliot-basic-v2.png",
+      "promptFile": "characters/elliot/docs/generation-basic-v2.json",
+      "sha256": "48cb6a44d3ef863e12474e8bbb7bd38ee855665167068a658631328e51c707bd",
+      "generatedSha256": "48cb6a44d3ef863e12474e8bbb7bd38ee855665167068a658631328e51c707bd",
+      "bytes": 2287098
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: 10 isolated transparent game effect sprites ONLY, clean alpha channel.\nNO scene, NO fullsheetlighting, NO backgroundcolor, NO gradient, NO haze, NO matte, NO characters. Empty space mustbealpha0. Each crisp selfcontained effectsprite has edgepaint only within its own visible form. Exactly5columns2rows with at least40px transparentgutters:\n0 blue-white sword crescent RIGHT: ')' shape, curvedsolidconvexrightedge, openleft;\n1 blue-white thin thrust streakpointedRIGHT;\n2 blue-white sword arc shaped ∩, convexcuttingedgeUP, openDOWN;\n3 blue-white sword arc shaped U, convexcuttingedgeDOWN, openUP;\n4 golden lightarrowhorizontalRIGHT pointedtipright shaftleft;\n5 littlebluewhite impactstar;\n6 foldedancientparchment mapbeacon withcentralbluegem;\n7 bluegold magicglyphcircle thinring;\n8 bluegold featherflighttrailpointedRIGHT;\n9 golden radialimpactburst.\nDetailedhandpaintedJRPGgame graphicsonly. Show solidcrisp highlights and transparentfadingedges aroundEACHsprite; outside effects TRUE transparentalpha, no cinematic diffuseglow or environmental illumination. No gridlines,text,numbers,labels.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-3a3d6ea5-5262-4682-a765-9dd3aa8221e4.png",
+      "finalPath": "characters/elliot/assets/elliot-cleanFx.png",
+      "promptFile": "characters/elliot/docs/generation-cleanFx.json",
+      "sha256": "af8682cca9fd0f6ef4e48a4f1dc9ab28153ec2a619f8742d96a375354cd6be10",
+      "generatedSha256": "af8682cca9fd0f6ef4e48a4f1dc9ab28153ec2a619f8742d96a375354cd6be10",
+      "bytes": 1957464
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: ELLIOT ONLY complete fullbody defense/reactions/grab sprite sheet.\nReference approved basic and original design. Matching detailedhandpainted JRPG anime, natural youngadult male proportions, redwidebrimhat+FULLfeather, sandyblondhair, redscarf,palegraywhitecoat,darkboots,straightsword,blueroundshield.\nExactly4x4 equalcells 16 independent fullfigures at SAME physicalscale, generous transparent gutters and18px margins everyedge. No fairy/text/effects/ground/opponent. Twohands,twofeet complete weapons; sword can be sheathed when handsbusy.\nCell0 neutral standing same firstbasic for sharedscale.\nCells1..15 readingorder:\n1 guard crouchwith blue roundshield blockingfront;\n2 frontroll body curledlow rollingright;\n3 backroll curling left;\n4 spotdodge leaningback standingfeet;\n5 airdodge diagonally tilted body knees tucked;\n6 light hit recoil backward handat chest;\n7 stronghit tumbling back bothlegs raised;\n8 lyingdown prone sideon FULLbody including head andboots;\n9 rising getup pushinghand onground kneesbent;\n10 LEDGEHANG: completely suspended verticalwholebody, body BELOW one right glove raised at VERYTOP offigure, raisedrightarm extended straightoverhead gripping INVISIBLE ledge, leftarmandshielddown, feetdangling. Actual highest glove, hat BELOW glove, fullsprite margin. NO rock/ledge drawn.\n11 ledgeclimb kneel onehand pushingaboveground;\n12 grab reachingright with emptyrightglove opensword sheathed;\n13 pummel forward kneeup while leftshield tucked;\n14 forwardthrow pushing bothhandsright, swordsecured;\n15 backthrow twist left, emptyhands pulling then flinging behind.\nMaintain exact source identity, whole silhouette complete and onefigure per cell. Transparent genuinealpha.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-7528355f-aa17-45a5-b1af-a730751f5514.png",
+      "finalPath": "characters/elliot/assets/elliot-defense.png",
+      "promptFile": "characters/elliot/docs/generation-defense.json",
+      "sha256": "a4085db8e6fcdf7637f2af9c8bd4e8071e1989813096c2d01667de3af720bb6f",
+      "generatedSha256": "a4085db8e6fcdf7637f2af9c8bd4e8071e1989813096c2d01667de3af720bb6f",
+      "bytes": 2031413
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: background-extraction\nAsset type: 16-asset transparent game FX and fairy atlas.\nChange ONLY backdrop of supplied sheet. Remove ALL gray/blue/beige background, haze and large diffuse glow between16 assets; make those pixels true alpha zero. Preserve each of16 isolated assets exactly in readingorder 4x4: swordcrescentright,thrust,arcup,arcdown,Feiidle,Feiflap,Feibowaim,Feibowfire,Feilifting,Feitired,arrow,impact,map,glyph,feather,pulse. Keep allsix Fei complete head/hands/legs/feet/translucentwings and delicateedges. Keep genuine translucent edgepaint only immediately nexttoeachasset, not fullsheet matte. No otherdrawing, no ground/checkerboard/text. Generous transparentgutters. True alpha transparent output required.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-0f0d86ea-c512-43aa-abd7-fc515828b9b8.png",
+      "finalPath": "characters/elliot/assets/elliot-effects-alpha.png",
+      "promptFile": "characters/elliot/docs/generation-effects-alpha.json",
+      "sha256": "d646db2285bfa1b9d67cad3f1eb48f6c0cde0985195e56e78b0543db2a184026",
+      "generatedSha256": "d646db2285bfa1b9d67cad3f1eb48f6c0cde0985195e56e78b0543db2a184026",
+      "bytes": 2509030
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent ELLIOT/FEI independent game effect atlas. Reference original character sheet for fairy Fei appearance. Exactly16 separate assets on regular4x4 grid equalcells with largegaps. NO text/numbers/labels/ground/background. Actual transparentalpha, not checkerboard.\nReadingorder:\n0 BLUE SWORD CRESCENT: one broad curved slash, solidbright convex cutting edge on RIGHT like parenthesis ')' with concaveopen side and fine tails on LEFT. NO weapon/body.\n1 straight thinblue sword thrust streak movingRIGHT;\n2 ONE broad blue overhead arc shaped arch ∩, convexcuttingedge UP and concaveopen DOWN;\n3 ONE broad blue low slash U, convexcuttingedge DOWN and concaveopen UP.\n4 FEI fairy alone COMPLETE FULLBODY relaxedfloating wings halfopen;\n5 SAME FEI alone COMPLETEFULLBODY activewingbeat, wingsraised, feetextended;\n6 SAME FEI alone COMPLETEFULLBODY aiming little GOLD LIGHT BOW to RIGHT, armout and drawinghand bycheek, TWO legs/feetvisible;\n7 SAME FEI alone COMPLETEFULLBODY firing lightbowRIGHT, handrelease, bow fullyvisible;\n8 SAME FEI alone COMPLETEFULLBODY lifting pose BOTH HANDS raised ABOVEHEAD, wingsspread wide and legs pushingdown (NO Elliot);\n9 SAME FEI alone COMPLETEFULLBODY tiredreturning, smallcrouch inair, wingsfolded somewhat, handresting forehead, completefeet.\nFei identity for sixcells: tinyfairy youthfulfemale naturally styled palegold shortbob hair with tinyantennalike tuft, bluewhite shortpetal dress, barefeet, translucent paleBLUE butterfly wings, delicate animeface. Samephysicalsize acrosssixcells, NEVER crop head/feet/wings; same face/hair/dress as original reference's 'Partner Fei', highdetail complete smallperson not abstractglow. NO ELLIOT BODY in any fairyasset.\n10 goldenwhite light ARROW projectile facingRIGHT triangularpoint onright featherlike energytailleft;\n11 blueshield impact starburst;\n12 ancientparchment map beacon scroll with bluegem;\n13 map supportmagical glyph circle gentlebluegold;\n14 featherflighttrail movingRIGHT;\n15 golden impactpulse radialburst.\nCleanhandpainted JRPGgame art sharp isolatededges. Effects shouldeach fit itscell. No duplicatedfairies in onecell. Genuine transparentbackground.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-edd16045-7872-4cc5-9830-da8fd8ede5aa.png",
+      "finalPath": "characters/elliot/assets/elliot-effects.png",
+      "promptFile": "characters/elliot/docs/generation-effects.json",
+      "sha256": "520d9e19bce1ce3fed98b72ecc880b642e33dfecc5f3e39cfc66a994723770ad",
+      "generatedSha256": "520d9e19bce1ce3fed98b72ecc880b642e33dfecc5f3e39cfc66a994723770ad",
+      "bytes": 2497401
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: ELLIOT ONLY extra action sprite sheet, complete fullbody transparent4x4.\nReference matching exact source youngmale naturalproportions, red featherhat+complete longfeather, light sandyhair, redscarf, whitegray adventurercoat, darkboots, straightsword and blue roundshield. Detailedclean handpainted JRPG sprite art.\nExactly16 equalcells4columns4rows, all same physicalbodyscale, generous transparentedge margin. NO fairy, effects, shadows, background, text or opponent. No nativewings.\nCell0 exact neutralstanding sharedscale first approvedbasic.\nCells1..15:\n1 UPTHROW fullbody thrusting emptyrightarm skyward, shieldtucked swordsecured;\n2 DOWNTHROW kneeling body slamming rightpalm towardground, leftarmback;\n3 taunt touching hatbrim friendlysmile;\n4 taunt turntoward unseenfairy openhand beside shoulder;\n5 taunt readingfoldedmap;\n6 victory swordraised infront at diagonalright relaxedfeet;\n7 victory lookabove toward unseenfairy handatheart;\n8 victory handonhips scarfdrifting confident;\n9 airborne bodycarried by unseenfairy BOTHarms extended upward twohands high kneesrelaxed below torso, NOwings;\n10 deep softlanding bothkneesbent;\n11 distinct walk leftbootforward while shoulderlevel;\n12 distinct run rightbootforward swordtrailing;\n13 calmneutral breathing relaxed;\n14 dedicated weakledgeattack low rightward onehand swordsweep crouched;\n15 turnbody left face backover rightshoulder, shieldturns with leftarm.\nShow completehands/feet/hatfeather and swordtips. Keep same anatomy/headratio and clothing; low poses remain low height, no perpose enlargement. Actual alpha transparency.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-4506910a-4269-4d59-928f-655d8b9c4d8d.png",
+      "finalPath": "characters/elliot/assets/elliot-extra.png",
+      "promptFile": "characters/elliot/docs/generation-extra.json",
+      "sha256": "9eb30236c3d47847ba290b1a9dc186cb01e6a1c61aa72222feb90f85d73b386f",
+      "generatedSha256": "9eb30236c3d47847ba290b1a9dc186cb01e6a1c61aa72222feb90f85d73b386f",
+      "bytes": 2416471
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent sprite sheet of Fei fairy companion ALONE, six complete fullbody animationposes.\nReference firstimage original characterdesign, section 'PartnerFei', secondimage styleofcurrentgeneratedFei. EXACT6figures on3columns2rows. NO atmosphere,NO lights behindfigures,NO gradient,NO bloom,NO ground,NO drop shadow; GENUINE FULLALPHA background. Transparentempty gutters at least40px. A clean printlike character cutout sprite, same alpha treatment as inventorysprite.\nFei identity: delicate palegoldblondshortbob, bluewhitepetaldress, barefeet, bluewhitebutterflywings with palegoldveining. Same face/dress and naturalfairy proportions, not chibi. Twohands/twofeet and completewingsineach cell. Same physicalbodyscale.\nReadorder:\n0 idlefloating wingshalfopen relaxedarms;\n1 strongwingbeat wingsraisedwide smiling handout;\n2 aiminglittle GOLD BOW to RIGHT, leftarmextended and drawinghandbycheek, botheyesopenfocused;\n3 firinggoldbowRIGHT handreleasingbowstring, armout;\n4 lifting BOTHHANDS ABOVEHEAD, palmsopenup, wingsspreadwide, legsdown;\n5 tiredreturningonehandforehead, kneescurled, wingsfoldedslightly.\nNo Elliot, no extra fairies, no effectsorparticles outsidefigurines. HandpaintedJRPGanime outlines/shadingmatchingreference, crispcutout, true transparentalpha.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-a705d71c-a362-412e-8d2f-b5ec43954a9a.png",
+      "finalPath": "characters/elliot/assets/elliot-fei.png",
+      "promptFile": "characters/elliot/docs/generation-fei.json",
+      "sha256": "2f6289d2b41781f6bc5710441a79583e0135f94962985550189399eb77d14fe7",
+      "generatedSha256": "2f6289d2b41781f6bc5710441a79583e0135f94962985550189399eb77d14fe7",
+      "bytes": 2481717
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: ELLIOT wholebody RECOVERY intermediate animation sheet.\nReference1 LOCKED contactposes cell0neutral then15moves, reference2basic, reference3originaldesign. Originals unchanged; paint NEW complete wholebody POST CONTACT followthrough poses between each lockedstrike and neutral. Same exactsourceface/naturalproportions/headsize/redfeatherhat/lightblondhair/redscarf/whitegraycoat/darkboots/silverstraightsword/blue roundshield.\nTransparent regular4x4 equalcells16figures SAMEphysicalbody scale. Cell0 sharedneutralstanding for scale. Big18px transparentgutters+margin, completefeather/swordtips/hands/boots, nofairy/effects/text/ground.\nCells1..15 matchingmoveorder:\n1 risingjab elbowloosens swordsettling diagonallyright;\n2 widesweep swordfollows lowright while chestreturns;\n3 forwardthrust retracting swordhand towardsribs, bladepointstillright;\n4 shieldpush armretractsshield, weightback;\n5 swordlift swordrotatingdownright, straighteningknees;\n6 footsweep bootreturnunderhips, lowrisingbody;\n7 slidingram frictionstop backkneebent shieldlowering;\n8 largeswordsweep torsofollowsright swordlow acrossbody;\n9 skywardslash swordlowering diagonallyright shoulderrelaxes;\n10 shieldgroundslam risingfromone knee shieldhandliftingoffground;\n11 aerialneutralsweep sword followsacrossright hip kneesshifting;\n12 aerialforwardthrust retractingarm and bendingknees;\n13 aerialBACKslash swordfinishes LEFTLOW while chestlookright;\n14 aerialupcut swordcomingdownbehindshoulder, legsuncurl;\n15 aerialdowncut sworddrawnupfrombelowbody towardrighthip, legsseparatedforlanding.\nDistinct wholebody painted followthroughpose each, no jointpart rigs, no repeated images. Sourceidentity preserved, no ghost copies. Actual transparentalpha.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-30a3f4b6-e549-4f74-a3c1-10bd501b63fb.png",
+      "finalPath": "characters/elliot/assets/elliot-recovery.png",
+      "promptFile": "characters/elliot/docs/generation-recovery.json",
+      "sha256": "4842e39fc4a1c708a1b770e0fd1a9ee3bdce24d286c8af3c6f1cdcb578c1b316",
+      "generatedSha256": "4842e39fc4a1c708a1b770e0fd1a9ee3bdce24d286c8af3c6f1cdcb578c1b316",
+      "bytes": 2185231
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: dedicated HIGHRES characterselection face-and-shoulders portrait.\nReference image original Elliot model/portrait and Fei. Create polished detailedhandpainted JRPG anime illustration of SAME Elliot, naturalyoungadultmale face, sandyblondhair, bluegrayeyes, red widebrimmed adventurehat with yellow-blue longfeather, redscarf and whitegray adventurercoat. Keep source likeness and design. Beside his shoulder include ONE tiny complete Fei fairy: palegoldhair, bluewhitepetaldress, translucentblue butterflywings, friendlyexpressive face. Elliot is primary, fairy small.\nSquare portrait, tightly composed FACE THROUGH SHOULDERS only; Elliotsface occupies central~40%height and shoulders~80%width, no wholebody/waist/sword. COMPLETE hatbrim and fullfeather including tip with generous6%transparentheadroom and5%sidemargins. Feather can bend inward gracefully tofit without croppededge. Do not shrink Elliot to fullbody to fitfeather. Face centeredx.48, faceeyes y.48. Smallfairy floating at rightbeside shoulder x.82y.61, completewingsandfeet insideframe. Crispbeautifulface suitablefor smallfightercard. Confidentgentlesmile, even softwarm lighting, sourcepaintedoutline/shadingquality.\nActualalpha transparent background, no backdrop/glow/matte/ground/text/borders. Produce highresolution standaloneportrait, not upscale smallgamesprite.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-2501d528-7d07-4029-b4f2-faf24307da46.png",
+      "finalPath": "characters/elliot/assets/elliot-selection.png",
+      "promptFile": "characters/elliot/docs/generation-selection.json",
+      "sha256": "6c4dbb481492fb175d7b7be3f3d65d645a70b801e9c81e66fa875cad66cdaa65",
+      "generatedSha256": "6c4dbb481492fb175d7b7be3f3d65d645a70b801e9c81e66fa875cad66cdaa65",
+      "bytes": 2910215
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: ELLIOT ONLY special-move sprite sheet for separate fairy companion gameplay.\nReference original design and approvedbasic. Transparent regular4x4 16 complete fullbody figures same body physicalscale, generousmargin; no fairy in any cell, no attached wings, no text/effects.\nKeep red featherhat fullyvisible, sandy light hair, redscarf, whitegraycoat, darkboots, sword and blue roundshield, natural young adult male proportions, matching source. Include weapons sheathed/lowered where hands busy, never omit limbs. Cell0 neutral standing identical basicfirstcell for scale calibration.\nCells1..15 readingorder:\n1 standing point forward issuing fairy bowaim command;\n2 outward openhand arrowrelease command;\n3 command recovery hand lowering;\n4 sendcompanion command extended right hand pointing far right;\n5 guard shieldready waiting for fairy anchor, body upright;\n6 single tetherarrival swordslash extended horizontally RIGHT (fullblade);\n7 callfairy above with hand held up;\n8 upright body lifted by unseenfairy: knees bent down, raised hand gripped overhead (NO fairy/bodywings);\n9 directedcarriedflight leaning gently right with onehand stillheld overhead, legsdown;\n10 releasecarry spreadingarms and knees to airlanding;\n11 openancientmap/book held bothhands, sword sheathed/shield secured;\n12 point at map destination with onehand, mapotherhand;\n13 kneel and place rolled map on ground using right hand;\n14 knowledgegesture book held at chest and indexfinger up;\n15 returnneutral relaxed swordlowered shieldready.\nComplete wholebody everycell, dedicated distinct motions, no two figures overlap. Same headsize/clothingdimensions as reference, do not enlarge crouch/inair poses. Detailed crisp handpaintedJRPG sprite art. Transparent alpha.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-3be9e2f7-ed2e-4ef7-9d1c-84d33bc30ea9.png",
+      "finalPath": "characters/elliot/assets/elliot-specials.png",
+      "promptFile": "characters/elliot/docs/generation-specials.json",
+      "sha256": "d399dde25595e234b3cfcf73c5d113224084f09eb4919f532283801f4e03ae1e",
+      "generatedSha256": "d399dde25595e234b3cfcf73c5d113224084f09eb4919f532283801f4e03ae1e",
+      "bytes": 2119405
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: two ELLIOT wholebody poses on TRANSPARENT horizontal2cell sheet.\nReference1 approvedbasic is identity and neutral; reference2 originaldesign. Exactly TWO complete isolated figures in twoequal sidebyside cells, generousalpha margin, same body scale.\nLEFT: exact firstcellneutral from approvedbasic, fullhatfeather/sword/feet, same stance.\nRIGHT: NEW SWORDLIFT WINDUP for upward sword attack: facingright, kneesdeepbent, upperbodycoiled, RIGHT handholding FULLsilverstraightsword LOW BY RIGHT KNEE with blade diagonalforwarddown, LEFT armholdingblueroundshield nearleftshoulder. Torso lower thanneutral, visibleanatomicaltwoarms/twolegs. Low sword position distinctly differs from overheadcontact. Do not include fairy/effects/text/background/ground.\nPreserve same naturaladultmale proportions/headsize, redfeatherhat, light sandyhair, redscarf, graywhitecoat, darkboots. Entire swordtip/feather/boots inside transparentboundaries. HandpaintedJRPG sprite matchingreferences. Truealpha transparency.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-5303f023-d88c-4b68-b9f0-4ca68a404ddd.png",
+      "finalPath": "characters/elliot/assets/elliot-windup-completion.png",
+      "promptFile": "characters/elliot/docs/generation-windup-completion.json",
+      "sha256": "6bc1b95e368fd4c3c3f3342cd900881291748284c905b26521b98ed41f0ef3f9",
+      "generatedSha256": "6bc1b95e368fd4c3c3f3342cd900881291748284c905b26521b98ed41f0ef3f9",
+      "bytes": 1689942
+    },
+    {
+      "mode": "built-in image_gen",
+      "prompt": "Use case: stylized-concept\nAsset type: ELLIOT wholebody WINDUP intermediate animation sheet.\nReference1 is LOCKED contact poses16 images readingorder (cell0 neutral then15moves), reference2 approvedbasic, reference3 originaldesign. DO NOT recreate or modify originals. Paint NEW complete wholebody PREPARATION poses between neutral and each matching lockedcontact, preserving exactface/headratio/clothes/weapons.\nTransparent regular4x4 equalcells16figures same physicalbody scale, cell0 same sharedneutralstandingfor calibration. Wholelimbs/swordtips/feathers/scarf insidecell with18pxmargin; nofairy/effects/text/ground.\nCells1..15 NEW windups in matchingmoveorder:\n1 risingjab rightarm sworddrawn lowbefore rising;\n2 widesweep sword woundback behindleft shoulder;\n3 thrust rightelbowdrawnback bladehorizontalfront;\n4 shieldpush pulling shieldtoward chest leaningback;\n5 swordlift bendknees swordlowright;\n6 footsweep lowerhipwith rightfootcoiled;\n7 sliding shield ram deepcrouch shieldchest;\n8 strongswordsweep torso woundfarleft kneeswide swordbehindhead;\n9 skywardslash crouched deeply sworddiagonallyside beforeoverhead;\n10 shieldgroundslam shieldraised shoulderheight kneebent;\n11 aerialneutralsweep kneesbent bladeacrossleftside;\n12 aerialforwardthrust rightelbowback kneesopen;\n13 aerialBACKslash bodylookingright swordpulledfront before leftsweep;\n14 aerialupcut swordchestheight kneescoiled priorupwardextension;\n15 aerialdowncut BOTHhands with swordheldabovehead blade fullyvisible, kneesraised before downwardstab.\nHandpainted detailedJRPG anime wholefigures, naturalsourceyoungadultmale proportions, redfeatherhat/lightblondhair/redscarf/whitegraycoat/darkboots/blueroundshield/silver sword. Distinct silhouettes for all15 preparations, not color/size substitutions. Preserve unchanged originals in references. Alpha transparency.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-ccfa7e72-23ba-4adc-a995-70beaba7d3ef.png",
+      "finalPath": "characters/elliot/assets/elliot-windup.png",
+      "promptFile": "characters/elliot/docs/generation-windup.json",
+      "sha256": "956cdfe93a782df3a81ccfab7ad9dde2b41dbd409718a5e792d235a765898ce0",
+      "generatedSha256": "956cdfe93a782df3a81ccfab7ad9dde2b41dbd409718a5e792d235a765898ce0",
+      "bytes": 2428127
+    },
+    {
+      "name": "basic",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent 4x4 fullbody animation sprite sheet for platform fighting game, BASIC sheet.\nReference image eriotto.png specifies Elliot's exact identity and clothes. Create ELLIOT ALONE in every cell, no fairy (fairy is rendered independently later). Faithfully preserve red wide-brim feather hat with yellow blue feather, light sandy blond hair and natural young adult male proportions, red long scarf, pale white/gray tunic coat, belts, dark trousers and brown-black boots, straight silver sword in right hand and blue round shield left hand. Clean detailed handpainted JRPG anime sprite illustration matching source, crisp outlines and subtle watercolor shading, no chibi.\nExactly 16 separate complete whole figures in regular 4 columns 4 rows, equal cells, generous transparent gutter and margin, no text no effects no shadows no ground. Same physical body scale across ALL cells, neutral fullheight about 245px if sheet1024; do not fit crouch or jump to fill cells. All limbs/sword tips/scarf/hat/feather/shield fully inside own cell. Three-quarter facing right except turning.\nRow1: neutral standing sword lowered shield ready; gentle walking left foot forward; walking right foot forward; full running right.\nRow2: dash start leaning right; fast dash loop strides; dash braking; crouch low with sword forward.\nRow3: jump preparation crouch; upward jump legs extending; apex floating tucked knees with no wings; forward falling relaxed knees.\nRow4: landing knee bend; quick turn glance left; idle breathing slightly shifted stance; backward air drift facing right.\nTransparent background genuine alpha. One figure per cell only. Preserve two arms two legs and complete weapons.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-d8c6f6fa-f12b-4430-a230-0f56a43138ee.png",
+      "finalPath": "characters/elliot/assets/elliot-basic.png",
+      "mode": "built-in image_gen",
+      "promptFile": "characters/elliot/docs/asset-prompts.json",
+      "sha256": "00fe9ae01bb7a043d0fd354086dfcf4db89b69adeae85971618bca75e6d67fe5",
+      "generatedSha256": "00fe9ae01bb7a043d0fd354086dfcf4db89b69adeae85971618bca75e6d67fe5",
+      "bytes": 2230919
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "C:/Users/haro_/Downloads/AI/eriotto.png",
+  "generations": [
+    {
+      "name": "basic",
+      "prompt": "Use case: stylized-concept\nAsset type: transparent 4x4 fullbody animation sprite sheet for platform fighting game, BASIC sheet.\nReference image eriotto.png specifies Elliot's exact identity and clothes. Create ELLIOT ALONE in every cell, no fairy (fairy is rendered independently later). Faithfully preserve red wide-brim feather hat with yellow blue feather, light sandy blond hair and natural young adult male proportions, red long scarf, pale white/gray tunic coat, belts, dark trousers and brown-black boots, straight silver sword in right hand and blue round shield left hand. Clean detailed handpainted JRPG anime sprite illustration matching source, crisp outlines and subtle watercolor shading, no chibi.\nExactly 16 separate complete whole figures in regular 4 columns 4 rows, equal cells, generous transparent gutter and margin, no text no effects no shadows no ground. Same physical body scale across ALL cells, neutral fullheight about 245px if sheet1024; do not fit crouch or jump to fill cells. All limbs/sword tips/scarf/hat/feather/shield fully inside own cell. Three-quarter facing right except turning.\nRow1: neutral standing sword lowered shield ready; gentle walking left foot forward; walking right foot forward; full running right.\nRow2: dash start leaning right; fast dash loop strides; dash braking; crouch low with sword forward.\nRow3: jump preparation crouch; upward jump legs extending; apex floating tucked knees with no wings; forward falling relaxed knees.\nRow4: landing knee bend; quick turn glance left; idle breathing slightly shifted stance; backward air drift facing right.\nTransparent background genuine alpha. One figure per cell only. Preserve two arms two legs and complete weapons.",
+      "generatedPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a190b2-b58d-7bb2-8dbd-56c3c1b9cd4b\\exec-d8c6f6fa-f12b-4430-a230-0f56a43138ee.png",
+      "finalPath": "characters/elliot/assets/elliot-basic.png"
+    }
+  ]
+}

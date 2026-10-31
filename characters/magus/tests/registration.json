@@ -1,0 +1,93 @@
+{
+  "definition": {
+    "id": "magus",
+    "name": "魔王",
+    "style": "CHRONO TRIGGER",
+    "number": "210",
+    "description": "闇の核を設置し、爆弾で強化・下Bで起爆。操作する影と設置の位置交換、門の行き先で戦う魔法使い。",
+    "pose": 106
+  },
+  "after": "frog",
+  "anchorName": "カエル",
+  "height": 98,
+  "tier": 3,
+  "weight": 98,
+  "physics": {
+    "weight": 98,
+    "walkSpeed": 3.1,
+    "initialDashSpeed": 6.5,
+    "runSpeed": 6.8,
+    "airSpeed": 5.6,
+    "airAcceleration": 0.4,
+    "gravity": 0.54,
+    "fullHopVelocity": 14.2,
+    "ecb": {
+      "radius": 17,
+      "height": 91
+    },
+    "shieldSize": 47.04,
+    "shieldOffset": [
+      0,
+      -45.080000000000005
+    ],
+    "airMobility": {
+      "frames": 75,
+      "fallSpeed": 0.9
+    },
+    "ledgeGrip": [
+      -0.124,
+      0.963
+    ]
+  },
+  "mask": "(b>r*.96&&b>green*1.3&&b>45)",
+  "upperCurves": [
+    2
+  ],
+  "axes": {
+    "0": [
+      1,
+      0
+    ],
+    "1": [
+      1,
+      0
+    ],
+    "2": [
+      0,
+      -1
+    ],
+    "3": [
+      0,
+      1
+    ],
+    "7": [
+      1,
+      0
+    ],
+    "9": [
+      1,
+      0
+    ],
+    "11": [
+      1,
+      0
+    ]
+  },
+  "types": {
+    "jab": 1,
+    "jab2": 1,
+    "jab3": 1,
+    "heavy": 0,
+    "up": 2,
+    "low": 0,
+    "dashAttack": 1,
+    "smash": 0,
+    "upsmash": 2,
+    "downsmash": 0,
+    "air": 11,
+    "fair": 1,
+    "bair": 0,
+    "uair": 2,
+    "dair": 3
+  }
+}

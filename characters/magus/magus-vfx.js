@@ -1,0 +1,12 @@
+'use strict';
+const MagusVFX=(()=>{const k=CharacterVFXKit.create('magus'),{stamp}=k;
+ // Actual normalized paint:0 convexRIGHT,2 convexUP,3 convexDOWN.4/5 are columns.
+ function draw(f){if(f.respawn)return;const a=f.attack;if(!a)return;const e=k.envelope(f);if(e){if(a.type==='upsmash'){stamp(4,e.x-e.w*.2,e.y,e.w*.65,e.h,1,.9);stamp(5,e.x+e.w*.2,e.y,e.w*.65,e.h,1,.9);}else if(a.type==='downsmash')stamp(9,e.x,e.y,e.w,Math.max(40,e.h),1,.9);else if(e.upper)stamp(2,e.x,e.t+Math.min(40,e.h)/2,e.w,Math.min(40,e.h),1,.9);else if(a.type==='dair')stamp(3,e.x,e.y,e.w,Math.min(42,e.h),1,.9);else if(a.type==='air')stamp(8,e.x,e.y,e.w,Math.min(38,e.h),f.face,.8);else if(['jab','jab3'].includes(a.type))stamp(1,e.x,e.y,e.w,Math.min(36,e.h),f.face,.9);else stamp(0,e.x,e.y,e.w,Math.min(42,e.h),e.back?-f.face:f.face,.9);}
+ if(a.magusBomb&&!a.fired){const p=magusPoint(f,31,MagusContacts[31]?.hand||[.85,.4]),s=18+Math.min(30,f.timer);stamp(7,p.x,p.y,s,s,1,.85,0,true);}
+ if(a.magusShadow&&a.phase==='confirm'){const q=MagusRules.objects.find(q=>q.id===a.shadowId&&!q.dead),h=magusOwned(f,'hole')[0];if(q&&h&&Math.hypot(q.x-h.x,q.y-32-h.y)<125){ctx.save();ctx.strokeStyle='#da9effaa';ctx.setLineDash([5,7]);ctx.beginPath();ctx.moveTo(q.x,q.y-35);ctx.lineTo(h.x,h.y);ctx.stroke();ctx.restore();stamp(10,q.x,q.y-45,40,40,1,.6,0,true);}}
+ if(a.magusGate&&a.exit&&a.phase==='transit')stamp(12,a.exit.x,a.exit.y-50,70,120,1,.75,0,true);
+ }
+ function drawObjects(){for(const q of MagusRules.objects){if(q.dead)continue;const f=fighters[q.owner],fade=Math.min(1,(q.life-q.age)/10);if(q.kind==='hole'){stamp(8,q.x,q.y,q.radius*2.2,q.radius*1.6,1,.8*fade,frame*.03,true);stamp(15,q.x,q.y,26,26,1,.9*fade,0,true);if(q.age<q.delay)stamp(10,q.x,q.y,87,87,1,.4,0,true);}else if(q.kind==='gate')stamp(12,q.x,q.y-12,70,140,1,fade,0,true);else if(q.kind==='bomb')stamp(q.full?9:7,q.x,q.y,q.radius*2.6,q.radius*2.6,q.face,.95,0,true);else if(q.kind==='burst')stamp(9,q.x,q.y,q.radius*2,q.radius*2,1,fade,0,true);else if(q.kind==='shadow'){const n=q.phase==='strike'?36:35;drawSprite({...f,x:q.x,y:q.y,face:q.face,inv:0,grounded:false,ledge:null},.44*fade,n);stamp(13,q.x-q.face*25,q.y-42,76,40,q.face,.5*fade,0,true);if(q.phase==='strike')stamp(0,q.x+q.face*62,q.y-50,83,38,q.face,.85,0,true);}}}
+ function impact(v){stamp(11,v.x,v.y,28+v.power*2,28+v.power*2,1,v.life/v.max,0,true);}
+ function hud(f,x,y){k.bar(magusMP(f),'MAGIC',x,y,'#c37cff');if(magusOwned(f,'hole').length)text('核あり / 下Bで起爆',x+147,y+43,8,'#e1b7ff','left');}
+ return{draw,drawObjects,impact,hud};})();
