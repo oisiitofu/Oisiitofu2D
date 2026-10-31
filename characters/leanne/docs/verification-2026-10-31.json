@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-31",
+  "status": "implemented and locally verified",
+  "id": "leanne",
+  "mechanics": 110,
+  "throws": 27,
+  "cpuMatches": 2,
+  "normalVisuals": 30,
+  "specialVisuals": 12,
+  "continuousSamples": 42,
+  "selection": {
+    "id": "leanne",
+    "after": "kiryu",
+    "source": [
+      1254,
+      1254
+    ],
+    "colors": 5,
+    "viewports": 3,
+    "bounds": [
+      {
+        "width": 1280,
+        "color": 0,
+        "left": 9.072291666666665,
+        "top": 3.2866479925303453,
+        "right": 8.92295833333334,
+        "fit": "cover"
+      },
+      {
+        "width": 1280,
+        "color": 1,
+        "left": 9.072291666666665,
+        "top": 3.2866479925303453,
+        "right": 8.92295833333334,
+        "fit": "cover"
+      },
+      {
+        "width": 1280,
+        "color": 2,
+        "left": 9.072291666666665,
+        "top": 3.2866479925303453,
+        "right": 8.92295833333334,
+        "fit": "cover"
+      },
+      {
+        "width": 1280,
+        "color": 3,
+        "left": 9.072291666666665,
+        "top": 3.2866479925303453,
+        "right": 8.92295833333334,
+        "fit": "cover"
+      },
+      {
+        "width": 1280,
+        "color": 4,
+        "left": 9.072291666666665,
+        "top": 3.2866479925303453,
+        "right": 8.92295833333334,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 0,
+        "left": 11.588229166666668,
+        "top": 4.211017740429504,
+        "right": 11.396895833333332,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 1,
+        "left": 11.588229166666668,
+        "top": 4.211017740429504,
+        "right": 11.396895833333332,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 2,
+        "left": 11.588229166666668,
+        "top": 4.211017740429504,
+        "right": 11.396895833333332,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 3,
+        "left": 11.588229166666668,
+        "top": 4.211017740429504,
+        "right": 11.396895833333332,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 4,
+        "left": 11.588229166666668,
+        "top": 4.211017740429504,
+        "right": 11.396895833333332,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 0,
+        "left": 16.72057291666666,
+        "top": 5.6001515189409075,
+        "right": 16.46333333333334,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 1,
+        "left": 16.72057291666666,
+        "top": 5.6001515189409075,
+        "right": 16.46333333333334,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 2,
+        "left": 16.72057291666666,
+        "top": 5.6001515189409075,
+        "right": 16.46333333333334,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 3,
+        "left": 16.72057291666666,
+        "top": 5.6001515189409075,
+        "right": 16.46333333333334,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 4,
+        "left": 16.72057291666666,
+        "top": 5.6001515189409075,
+        "right": 16.46333333333334,
+        "fit": "cover"
+      }
+    ]
+  },
+  "online": {
+    "identicalFrames": 286,
+    "characters": [
+      "velvet",
+      "leanne"
+    ],
+    "kinds": [
+      "release",
+      "bullet",
+      "soul",
+      "grenade",
+      "blast"
+    ],
+    "errors": []
+  },
+  "readyArt": {
+    "poses": 107,
+    "effects": 16,
+    "costumeFrames": 535,
+    "mismatches": []
+  },
+  "source": {
+    "atlas": "characters/leanne/assets/leanne-native.png",
+    "atlasSHA256": "365582272482dc16a6ffcc952dd20487dfe1b0cf5248cdd6d694f15026c44e00",
+    "selection": "characters/leanne/assets/leanne-selection.png",
+    "selectionSHA256": "cf828ebb3c9c9c71bc49db38026d22d94410a2f4fa2cf0d11f4f5fd87aa884c0",
+    "anatomicalAnchors": true,
+    "rig": false
+  },
+  "catalog": {
+    "characters": 209,
+    "sha256": "3b81083d076a1e6e9b78d1a60ae2297a6ca548c39e059a09cff67a4ba3b1c922"
+  },
+  "artProvenance": "characters/leanne/docs/art-provenance.json"
+}

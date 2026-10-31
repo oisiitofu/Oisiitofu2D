@@ -2350,5 +2350,27 @@
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "velvet": {
+    "source": "characters/velvet/assets/velvet-selection.png",
+    "crop": [
+      300,
+      -60,
+      1350,
+      965
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
+  },
+  "leanne": {
+    "source": "characters/leanne/assets/leanne-selection.png",
+    "crop": [
+      -80,
+      -50,
+      1500,
+      1071
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution close head and shoulders"
   }
 }

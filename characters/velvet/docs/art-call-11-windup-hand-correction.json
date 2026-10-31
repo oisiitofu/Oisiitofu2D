@@ -1,0 +1,8 @@
+{
+  "file": "windup-hand-correction",
+  "usedCell": 5,
+  "prompt": "Precision correction of the FIRST reference wholebody4x4 sprite sheet. ONLY fix cell5 (second row,second column): Velvet's arm raised behind/above her head currently ends in an erroneous SECOND red claw. Replace that raised red claw with her ordinary RIGHT human hand in a small black fingerless glove, curled into a fist. Preserve the LEFT red-black Malak claw lowered in front of her right-facing torso. She has exactly TWO arms: right human hand raised, left Malak claw lowered and ready for upward attack. Same natural adult face, anatomy, head size, torso/legs/boots, hair, coat and pose as that existing cell. SECOND reference is the enlarged offending cell for clear inspection. Keep full4x4 arrangement with first neutral calibration unchanged; other fifteen figures unchanged in design/posture/scale. True transparent background, fullbody silhouettes, generous margins, no labels/VFX. Do not invent another arm or alter legs. Correct only the raised right fist.",
+  "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-5ae882f4-ddeb-4d0c-9f4c-aa206755c926.png",
+  "transparent_background": true,
+  "mode": "built-in image_gen"
+}

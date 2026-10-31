@@ -1,0 +1,57 @@
+{
+  "basic": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-fec1d7b8-36d5-4aa4-b1b6-d4a70cd83363.png",
+    "final": "assets/leanne-basic.png"
+  },
+  "attacks": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-86906ab5-2e2a-4152-8a96-e4be04a9b735.png",
+    "final": "assets/leanne-attacks-layout-draft.png",
+    "selected": false
+  },
+  "attacks-layout": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-102092aa-06c6-4ee9-a147-726e47a46912.png",
+    "final": "assets/leanne-attacks.png"
+  },
+  "specials": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-003eceb9-780d-45c5-a6ce-28cdb310a35d.png",
+    "final": "assets/leanne-specials.png"
+  },
+  "defense": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-7ea6789c-fc78-412d-a1a7-20dbb6215402.png",
+    "final": "assets/leanne-defense.png"
+  },
+  "extra": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-41e373cb-f358-4f25-b419-3e8341c64629.png",
+    "final": "assets/leanne-extra-completion-draft.png",
+    "selected": false
+  },
+  "extra-completion": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-a8a509ba-fd77-45bc-9bd9-af3d9ebd7690.png",
+    "final": "assets/leanne-extra.png"
+  },
+  "windup": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-fefe65db-564c-4ef5-9861-04eb08bcef33.png",
+    "final": "assets/leanne-windup.png"
+  },
+  "recovery": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-c55dc939-d008-462b-bbfd-ba2994651054.png",
+    "final": "assets/leanne-recovery.png"
+  },
+  "selection": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-fac6c65f-a49f-4f1f-bad7-9d48ee4204e5.png",
+    "final": "assets/leanne-selection-margin-draft.png",
+    "selected": false
+  },
+  "selection-margin": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-3dd7bd31-6c4c-489a-9cbe-cc232be64abd.png",
+    "final": "assets/leanne-selection.png"
+  },
+  "effects": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-f685afd1-fef8-42f8-b0b4-0544b748a4fc.png",
+    "final": "assets/leanne-effects.png"
+  },
+  "grenade": {
+    "source": "C:/Users/haro_/.codex/generated_images/01a19067-5000-7f60-acc2-97d91db7e222/exec-80a3f76f-3511-4613-b80b-145412ca56ba.png",
+    "final": "assets/leanne-grenade.png"
+  }
+}

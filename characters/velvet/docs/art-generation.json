@@ -1,0 +1,175 @@
+{
+  "mode": "built-in image_gen",
+  "contentRefusal": false,
+  "calls": [
+    {
+      "file": "basic",
+      "prompt": "Use case: stylized-concept. Create a game-animation sprite sheet of VELVET CROWE from Tales of Berseria using the supplied sheet as exact character DESIGN reference. Adult woman, natural slim tall proportions about seven heads high, amber eyes, very long flowing black hair with face-framing bangs, canonical torn black coat with red lining, layered black outfit with belts/straps/shorts, asymmetric legwear and black boots, anatomical LEFT arm with black-red Malak claw. Preserve her face, head-to-body ratio, outfit and colors; no chibi redesign. Exactly sixteen separate COMPLETE whole-body figures in a square 4-column x4-row invisible grid. Each figure only occupies central 65-70% of its cell, huge clear transparent gutters and outer margins. Same actual head/torso/limb dimensions in every pose; horizontal/crouched poses must not be enlarged to fill their cell. Complete hair tips, hands, fingers and boots in EVERY cell. Compact claw arm; long magical arm extension is a separate VFX, don't stretch it here. Polished detailed anime game painting, no labels, borders, enemies, scenery, floor, shadows or large VFX. Mainly faces RIGHT. Row1: (0) canonical calm upright neutral, feet planted, arms resting low, claw relaxed; (1) forward walking step; (2) forward run, hair/coat trailing; (3) low crouch. Row2: (4) relaxed airborne fall; (5) horizontal airborne dash posture with knees bent and hair trailing; (6) upward jumping posture; (7) controlled descending airborne posture. Row3: (8) dash preparation leaning forward, left claw drawn back; (9) alternate running stride; (10) banking airborne twist; (11) soft landing with knees bending. Row4: (12) quick sidestep preparation; (13) defensive forearm guard; (14) hurt recoil with torso tilted back; (15) recovering calmly toward neutral. True transparent background, no haze connecting figures, large margins.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-e48934e8-339e-43f1-aee2-2ee9589d3a31.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "attacks",
+      "prompt": "Use case: stylized-concept. ATTACK sheet of Velvet Crowe, using FIRST reference as exact adult face, natural tall body dimensions, long black hair, canonical torn black/red layered coat/outfit, straps, asymmetric legwear/boots, anatomical LEFT black-red Malak claw. SECOND reference gives original move ideas. Square4x4 invisible grid,16 COMPLETE isolated figures, SAME physical head/torso/limb size in every cell, large true transparent gutters and outer margins. Keep hair/claw compact enough to remain inside each cell; long magical arm extension is separate VFX, do not enlarge arms/body. No text, borders, enemies, floor, large effect ribbons or scenery. Every full head, hand, finger, coat and boot inside. Mostly facing RIGHT. Row1:(0) identical neutral calibration from first sheet cell0;(1) quick left-claw horizontal jab RIGHT;(2) compact RIGHT-fist straight punch RIGHT, left claw pulled back;(3) rising left-claw uppercut, knees extending. Row2:(4) wide left-claw backhand RIGHT with deeply twisted torso;(5) overhead left-claw lift, claws point straight UP;(6) crouched low claw slam, palm/claws near floor ahead;(7) shoulder tackle, claw tucked and shoulder leading RIGHT. Row3:(8) powerful Malak-claw side smash, broad forward lunge with bent rear leg;(9) upward smash scooping the claw from below to above head, body arched back;(10) down smash stomping and driving the claw down between widely planted feet;(11) airborne crossed claw/righthand diagonal cuts in front of torso, knees asymmetrically bent, NOT spinning body or somersault. Row4:(12) airborne forward left-claw thrust RIGHT with torso leaning forward;(13) BACK AERIAL: heel kick sharply LEFT behind body while head/torso mainly face right, claw held near front;(14) airborne upward claw stab, free arm/legs lowered;(15) downward claw dive, both claw and gaze directed DOWN, legs bent back. Fifteen visibly different whole-body strikes, not repeated poses with colors changed. Detailed polished anime game painting. True transparent background, no diffuse aura joining cells. HUGE clear margins; no parts clipped at canvas or grid boundaries.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-9b690bb3-b1d8-48b9-824a-7bd690e66fd8.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "uppercut-completion",
+      "frame": 18,
+      "prompt": "Precise missing-edge completion of the FIRST reference, one WHOLE-BODY Velvet Crowe uppercut sprite. Keep the exact existing adult face, torso proportions, hair, raised knee, boots, clothing, anatomical LEFT curled red-black Malak fist and attack gesture. Extend transparent canvas above the raised claw and complete ONLY its missing upper outline/finger tips at the old top edge. Do not change an uppercut into a different action, do not redesign the claw or face. SECOND reference confirms character identity. Include the entire original visible full body, hair, coat, hands and both boots unchanged in pose, with generous empty transparent margin above the now-complete raised claw and around all edges. Single complete whole-body figure, NOT extra poses, no captions, borders, scenery, background or large VFX. Same polished anime painting. Preserve the original visible anatomy and attack posture as closely as possible; only finish the clipped extremity and provide room around it.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-beab9381-1db4-4d31-9b9e-6b89a4e0dd1a.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "specials",
+      "prompt": "Velvet Crowe is an ADULT, slim natural tall-proportioned woman (about seven heads), amber eyes, very long black hair, torn black coat with red lining, black layered top/shorts/belts/straps, asymmetric long legwear/boots, anatomical LEFT red-black Malak claw hand. Match the FIRST generated basic reference's exact face, body proportions, outfit, boots and canonical neutral. Square 4x4 invisible grid with 16 isolated COMPLETE full-body painted sprites on TRUE TRANSPARENT background. Cell0 at top-left is identical standing neutral calibration. Other cells share the SAME PHYSICAL head, torso and limb dimensions, NOT independently enlarged to fill each cell. Leave HUGE transparent gutters and margins; crouches/flights remain naturally shorter. Keep entire head, hands/fingers, long hair, coat tails and feet inside each cell. Mostly face RIGHT. No text, grid, captions, enemies, floor, scenery or large surrounding effects. Compact ordinary claw, extended magical weapon separate VFX. Polished detailed anime game illustration. No articulated rigs. SPECIALS: row1 cell0 neutral, 1 gather power in left claw with torso drawn back, 2 cast left claw straight RIGHT with straightened arm (hand complete, compact range), 3 withdraw claw with elbow bent and weight shifting back. Row2:4 brace and cast a hooking left claw RIGHT while free hand braces elbow,5 reel captured prey toward chest with low braced stance,6 vault from capture airborne with bent knees and free arm raised,7 shadow-wing takeoff with BOTH feet lifted, narrow tattered red-black wing shadow behind body. Row3:8 suspended midair aiming left claw RIGHT with body angled upward,9 directional wing burst RIGHT with legs tucked and red-black feather-shadow (complete compact silhouette),10 ending glide with body horizontal and wings held back,11 low counter preparation with claw shielding front torso. Row4:12 intercept with claw across chest and weight back,13 soul release standing arched with two hands apart and hair raised,14 counter claw riposte with deep forward twist,15 quiet return toward canonical neutral. All 15 distinct complete whole-body gestures; no oversized detached magical arm or camera zoom.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-2d63868a-ebd7-4e50-b2d4-3181611cd176.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "defense",
+      "prompt": "Velvet Crowe is an ADULT, slim natural tall-proportioned woman (about seven heads), amber eyes, very long black hair, torn black coat with red lining, black layered top/shorts/belts/straps, asymmetric long legwear/boots, anatomical LEFT red-black Malak claw hand. Match the FIRST generated basic reference's exact face, body proportions, outfit, boots and canonical neutral. Square 4x4 invisible grid with 16 isolated COMPLETE full-body painted sprites on TRUE TRANSPARENT background. Cell0 at top-left is identical standing neutral calibration. Other cells share the SAME PHYSICAL head, torso and limb dimensions, NOT independently enlarged to fill each cell. Leave HUGE transparent gutters and margins; crouches/flights remain naturally shorter. Keep entire head, hands/fingers, long hair, coat tails and feet inside each cell. Mostly face RIGHT. No text, grid, captions, enemies, floor, scenery or large surrounding effects. Compact ordinary claw, extended magical weapon separate VFX. Polished detailed anime game illustration. No articulated rigs. Use only CENTRAL 70 percent of each cell for the complete figure, huge clear blank border at canvas edge and each cell. DEFENSE row1:0 neutral;1 guard standing with compact left claw across chest;2 forward dodge rolling RIGHT with body curled, fully visible head and boots;3 back dodge rolling LEFT with legs tucked. Row2:4 spot dodge leaning torso backward with feet planted;5 aerial dodge compact suspended twist;6 recoiling after hit head and torso snapped back;7 tumbling midair with legs above hips. Row3:8 lying on side after knockdown all limbs visible;9 getup push from floor into crouch;10 LEDGE HANG both palms HIGHEST ABOVE the top of hair, shoulders stretched upward, head/hair/coat/boots all BELOW palms, no props, complete lowered body;11 climbing ledge with one knee raised, hands near chest. Row4:12 grab forward with left claw half-open;13 pummel prey by compact right fist, braced left elbow;14 forward throw release RIGHT;15 backward throw twist and release LEFT. Distinct wholebody postures, human adult proportion maintained. No enemies or actual ledge drawn.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-ffe7fec1-3792-4e18-b639-87d36e591dcd.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "extra",
+      "prompt": "Velvet Crowe is an ADULT, slim natural tall-proportioned woman (about seven heads), amber eyes, very long black hair, torn black coat with red lining, black layered top/shorts/belts/straps, asymmetric long legwear/boots, anatomical LEFT red-black Malak claw hand. Match the FIRST generated basic reference's exact face, body proportions, outfit, boots and canonical neutral. Square 4x4 invisible grid with 16 isolated COMPLETE full-body painted sprites on TRUE TRANSPARENT background. Cell0 at top-left is identical standing neutral calibration. Other cells share the SAME PHYSICAL head, torso and limb dimensions, NOT independently enlarged to fill each cell. Leave HUGE transparent gutters and margins; crouches/flights remain naturally shorter. Keep entire head, hands/fingers, long hair, coat tails and feet inside each cell. Mostly face RIGHT. No text, grid, captions, enemies, floor, scenery or large surrounding effects. Compact ordinary claw, extended magical weapon separate VFX. Polished detailed anime game illustration. No articulated rigs. EXTRA: limit figures to CENTRAL70 percent each cell so no extremity touches edges. Row1:0 neutral;1 up throw releasing upward with left claw above brow and free arm extended;2 down throw slamming claw toward ground with deep kneel;3 taunt brush hair back using RIGHT human hand. Row2:4 taunt examine left Malak claw;5 taunt turn shoulder with cool determined face;6 victory both feet planted looking across shoulder;7 victory relaxed front three-quarter with right hand at hip. Row3:8 victory turn cloak and look to left;9 THERION FORM whole-body HOVER: original Velvet adult body/face/outfit with tattered red-black winged shadow spread modestly behind her, BOTH FEET off floor with knees slightly bent, not a detached monster, finite hovering posture;10 soft landing crouch;11 alternate walk right foot forward, natural body dimensions. Row4:12 alternate run left knee ahead and torso forward;13 idle variation shifting weight;14 low ledge attack sweeping claw RIGHT while rising;15 turn to face LEFT showing back three-quarter. Compact wings must remain completely within cell. Fifteen distinct fullbody poses.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-fb42f0f8-6a27-43d2-9a01-f79ca15c0b3c.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "windup",
+      "prompt": "Velvet Crowe is an ADULT, slim natural tall-proportioned woman (about seven heads), amber eyes, very long black hair, torn black coat with red lining, black layered top/shorts/belts/straps, asymmetric long legwear/boots, anatomical LEFT red-black Malak claw hand. Match the FIRST generated basic reference's exact face, body proportions, outfit, boots and canonical neutral. Square 4x4 invisible grid with 16 isolated COMPLETE full-body painted sprites on TRUE TRANSPARENT background. Cell0 at top-left is identical standing neutral calibration. Other cells share the SAME PHYSICAL head, torso and limb dimensions, NOT independently enlarged to fill each cell. Leave HUGE transparent gutters and margins; crouches/flights remain naturally shorter. Keep entire head, hands/fingers, long hair, coat tails and feet inside each cell. Mostly face RIGHT. No text, grid, captions, enemies, floor, scenery or large surrounding effects. Compact ordinary claw, extended magical weapon separate VFX. Polished detailed anime game illustration. No articulated rigs. This sheet is WINDUP in-between WHOLE-BODY paintings before the 15 LOCKED strikes in SECOND reference. Do NOT repaint or replace the accepted strikes; draw an earlier preparatory pose for each. Keep exact adult neutral identity and dimensions. Row1:0 same neutral calibration;1 before left horizontal claw jab draw claw close to chest with slight lean;2 before right straight punch draw right fist behind ribcage;3 before rising claw uppercut crouch with left fist near hip. Row2:4 before wide backhand twist left claw across abdomen;5 before overhead claw lift load claw behind shoulder;6 before low claw slam lower hips and fold arm above floor;7 before shoulder tackle brace with shoulder withdrawn and feet close. Row3:8 before side smash sink hips with claw pulled far back;9 before upward scoop bend knees with claw down by thigh;10 before downsmash raise left claw across body while feet spread;11 before CROSS-CUT AIR N bring both arms apart in asymmetrical suspended posture, NOT somersault or ring pose. Row4:12 before forward air claw thrust bend elbow near face while legs trail;13 before backward heel kick LEFT pull rear knee toward torso while facing right;14 before upward air claw stab lower claw near waist and gaze up;15 before downward air claw dive hover with knees tucked and claw drawn back. Natural small transitional movements, every distinct body gesture corresponds to the second reference's same cell. Generous outer margins; no large extended claw, no large VFX.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-2d75ba80-63b2-4e5e-86fb-982f7b98a886.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "recovery",
+      "prompt": "Velvet Crowe is an ADULT, slim natural tall-proportioned woman (about seven heads), amber eyes, very long black hair, torn black coat with red lining, black layered top/shorts/belts/straps, asymmetric long legwear/boots, anatomical LEFT red-black Malak claw hand. Match the FIRST generated basic reference's exact face, body proportions, outfit, boots and canonical neutral. Square 4x4 invisible grid with 16 isolated COMPLETE full-body painted sprites on TRUE TRANSPARENT background. Cell0 at top-left is identical standing neutral calibration. Other cells share the SAME PHYSICAL head, torso and limb dimensions, NOT independently enlarged to fill each cell. Leave HUGE transparent gutters and margins; crouches/flights remain naturally shorter. Keep entire head, hands/fingers, long hair, coat tails and feet inside each cell. Mostly face RIGHT. No text, grid, captions, enemies, floor, scenery or large surrounding effects. Compact ordinary claw, extended magical weapon separate VFX. Polished detailed anime game illustration. No articulated rigs. RECOVERY intermediate WHOLE-BODY paintings just AFTER the15 LOCKED strikes in SECOND reference, easing back toward first reference's neutral. Preserve accepted originals: this is separate newly painted return transitions, not replacement strikes. Row1:0 identical neutral calibration;1 left jab retracting claw a little with weight over front foot;2 right fist retracting toward ribs;3 uppercut arm lowered from high apex toward brow, raised knee relaxing. Row2:4 wide backhand ending across body with torso untwisting;5 overhead lift claw lowering beside shoulder;6 low slam crouch starting to rise with hand just off floor;7 shoulder tackle shoulder relaxing and rear foot catching balance. Row3:8 side smash claw pulling back from forward lunge with elbow bending;9 upward scoop claw descending beside head and knees straightening;10 downsmash claw held low while returning feet inward;11 crossed AIR-N cuts opening arms after X-shaped strike, asymmetric legs, no spinning/somersault. Row4:12 forward aerial thrust elbow bending while legs relax downward;13 backward heel kick recovering LEFT leg toward torso while facing right;14 upward aerial stab lowering claw from above head;15 downward aerial dive leveling torso and bringing claw up near chest. 15 individually recognizable returns corresponding same-cell attacks. Full hands/fingers and boots, enormous clear gutters/margins. All body physical dimensions identical across cells.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-a2c8cad3-e34e-4fcf-a3d9-9295c8bc51ce.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "effects",
+      "prompt": "Sixteen separate painted VFX sprites in a SQUARE4x4 invisible grid, TRUE TRANSPARENT background, HUGE transparent gutters, every effect complete within central65 percent of its cell. Matching Velvet Crowe's attached red-black Malak claw and soul power, sharp organic crimson tendrils, black negative internal masses, white-hot impact highlights. No character bodies, no text, no grid or borders. READ ORDER: row1 cell0 thin curved claw SLASH convex cutting edge bulges RIGHT, its open hollow and two trailing ends LEFT (like a right-facing parenthesis);cell1 narrow straight red-white RIGHT-fist streak;cell2 a single overhead CLAW ARCH, outer convex cutting edge UP and open underside DOWN, shaped like an inverted U;cell3 a single low claw arch convex cutting edge DOWN, open side UP, U shape. Row2:cell4 long fully visible extended Malak forearm with hooked complete open claw at RIGHT tip, hand points right and wrist/taper left;cell5 tiny red soul fragment cluster, crystalline angular particles;cell6 distinct glowing red prey target sigil with claw notches;cell7 tattered red-black rightward movement trail. Row3:cell8 radial ground claw burst, spikes erupt UP from base;cell9 broad heavy claw CRESCENT with convex cutting face RIGHT and open hollow/tails LEFT;cell10 soul-break expanding red flare;cell11 red-white impact star with multiple sharp rays. Row4:cell12 long curved claw tendril with hooked claw tip pointing RIGHT, whole length visible;cell13 winged Therion SHADOW SILHOUETTE, red-black tattered paired wings and dark abstract central shadow, no realistic person;cell14 counter sigil distinct from prey mark, layered red diamonds;cell15 wing recoil trail sweeping RIGHT. All sixteen isolated and distinct, clean alpha and preserved fine tips. Do NOT put crescents on wrong side, no duplicate circular rings for normal strikes.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-3cfaeae8-2dab-407c-a8a3-3929448e6aff.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "selection",
+      "prompt": "Freshly PAINTED high-resolution character-selection portrait of VELVET CROWE from Tales of Berseria, an ADULT slim woman. References define exact face and costume: amber/gold eyes, long layered black hair with uneven bangs, serious confident expression, torn black coat with dark red lining and strap details. FIRST reference gives full design and original illustrated face. SECOND reference shows current approved in-game identity. Create dedicated FACE, ENTIRE HEAD, BOTH SHOULDERS and upper chest close-up, not an enlarged full-body sprite. Face fills about45 percent of image height and shoulders about80 percent of width. Entire top and sides of hair/head COMPLETELY INSIDE canvas with clear transparent space above hair; flowing long hair can end below shoulders. Polished high-resolution anime game key art, clean fine face/eye detail, faithful adult natural proportions, face three-quarter turned slightly RIGHT, eyes look toward viewer. True transparent background, no scenery, no text, logos, frame, weapon or oversized claw obscuring face. Black/red outfit clearly recognizable, no pose redesign. Strong warm rim lighting on black hair to remain readable on dark game UI.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-dfc9b6c3-54e0-4797-b356-ed53eec45b0f.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "windup-hand-correction",
+      "usedCell": 5,
+      "prompt": "Precision correction of the FIRST reference wholebody4x4 sprite sheet. ONLY fix cell5 (second row,second column): Velvet's arm raised behind/above her head currently ends in an erroneous SECOND red claw. Replace that raised red claw with her ordinary RIGHT human hand in a small black fingerless glove, curled into a fist. Preserve the LEFT red-black Malak claw lowered in front of her right-facing torso. She has exactly TWO arms: right human hand raised, left Malak claw lowered and ready for upward attack. Same natural adult face, anatomy, head size, torso/legs/boots, hair, coat and pose as that existing cell. SECOND reference is the enlarged offending cell for clear inspection. Keep full4x4 arrangement with first neutral calibration unchanged; other fifteen figures unchanged in design/posture/scale. True transparent background, fullbody silhouettes, generous margins, no labels/VFX. Do not invent another arm or alter legs. Correct only the raised right fist.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-5ae882f4-ddeb-4d0c-9f4c-aa206755c926.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    },
+    {
+      "file": "selection-headroom",
+      "prompt": "Precise canvas/edge completion of this already approved Velvet Crowe character-selection portrait. Preserve her face, amber eyes, expression, hair shape, clothing, shoulder pose, painted quality and lighting exactly. Keep the same face/shoulders close-up. Add clear TRANSPARENT room above her head: the entire highest hair curl and both sides of her skull must be fully contained with at least8 percent empty transparent top margin. Gently zoom the entire original painting out only enough to give that headroom and finish the tiny upper hair-tip contact. No new expression, costume redesign, different face, weapon, text, frame or scenery. Dedicated high-resolution head-and-shoulders portrait, all of the head intact; flowing lower hair and chest may extend toward lower edge. True transparent background, no brown/red backdrop or vignette.",
+      "originalPath": "C:\\Users\\haro_\\.codex\\generated_images\\01a18fa7-6df7-7bd2-89e0-404b71ef6254\\exec-127a6356-ba84-4f56-985a-540713e0beb9.png",
+      "transparent_background": true,
+      "mode": "built-in image_gen"
+    }
+  ],
+  "selected": {
+    "basic": "art-call-01-basic.json",
+    "attacks": "art-call-02-attacks.json",
+    "specials": "art-call-04-specials.json",
+    "defense": "art-call-05-defense.json",
+    "extra": "art-call-06-extra.json",
+    "windup": "art-call-07-windup.json",
+    "recovery": "art-call-08-recovery.json",
+    "effects": "art-call-09-effects.json",
+    "selection": "art-call-12-selection-headroom.json",
+    "windup-hand-correction": "art-call-11-windup-hand-correction.json"
+  },
+  "unused": [
+    "uppercut-completion",
+    "selection-draft"
+  ],
+  "notes": [
+    "windup-hand-correction only cell5 is selected at frame80; remaining cells ignored",
+    "neutral/strike lock precedes windup/recovery; no accepted source pose repainted",
+    "portrait atlas adds transparent headroom only"
+  ],
+  "assets": {
+    "velvet-attacks.png": {
+      "sha256": "e419768ae1184a66ede098f96b9a5bda92fde657508d242c8891043ddedaff21",
+      "bytes": 2294059
+    },
+    "velvet-basic.png": {
+      "sha256": "26815747cdadd12f1dbf234c6260eb11a17a133f7f0b2b18746b1f4f087dcc04",
+      "bytes": 2028685
+    },
+    "velvet-defense.png": {
+      "sha256": "b6c68012ce4d9f5f6b6e162983fca18e7ad0095d71c036b93511e129b484b627",
+      "bytes": 1871653
+    },
+    "velvet-effects.png": {
+      "sha256": "b794ee1451151ada0723ab23320ad669ea76496ec7fc5e4c3a8e157b98267992",
+      "bytes": 2624557
+    },
+    "velvet-extra.png": {
+      "sha256": "b4653abe7a7ecc4501408bb1c00ef1c8d2e4dd5b55f29da26814bfa0ed18c6bf",
+      "bytes": 2064592
+    },
+    "velvet-native.png": {
+      "sha256": "5f5ec36b1a1f84463780b8d74abe65cc4b6f563331f304192ddad91f7e07ed28",
+      "bytes": 15477722
+    },
+    "velvet-neutral-locked.png": {
+      "sha256": "9a8c26a82287666962d019059cb3d65754af22cf4534e1525a2047b072b8a9e2",
+      "bytes": 108859
+    },
+    "velvet-recovery.png": {
+      "sha256": "8ea40362b861199e829b0aca02c320b6aa3c4d7f735360714c453f2edd7f91c6",
+      "bytes": 2011298
+    },
+    "velvet-reference.png": {
+      "sha256": "2a9b1ad81a002eebd561cf6b88802be97b86efd8719205e0a88ffa91a685527e",
+      "bytes": 2753208
+    },
+    "velvet-selection-draft.png": {
+      "sha256": "0a3aeb12a76c43d2b4ebd1354ebb77a31327b81fb60877befee751e9f49dbf8c",
+      "bytes": 2710258
+    },
+    "velvet-selection.png": {
+      "sha256": "6b8a2e0e5440640099e0c80707b0a76afaf0347308dc226001e06b392920f02b",
+      "bytes": 2576603
+    },
+    "velvet-specials.png": {
+      "sha256": "58b718482403ccdee7f5d4f74cffc6c01791f78be5a1d9ab09b10125f68be09b",
+      "bytes": 2166950
+    },
+    "velvet-uppercut-completion.png": {
+      "sha256": "fcb869394e28de6945c5c797a901d06ead7c07ea3866b9c2173208cba67efae6",
+      "bytes": 1452836
+    },
+    "velvet-windup-hand-correction.png": {
+      "sha256": "03a7dd7e77d9c8c267265e6cead83ce88905ac7a83cc15fb73d34b167d6b66f9",
+      "bytes": 1901235
+    },
+    "velvet-windup.png": {
+      "sha256": "ee69a96c81e3633f65eb3009cf0e549da8a6bb762b453b7d5f809362fc818a04",
+      "bytes": 1970863
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-31",
+  "status": "implemented and locally verified",
+  "id": "velvet",
+  "mechanics": 116,
+  "throws": 27,
+  "cpuMatches": 2,
+  "normalVisuals": 30,
+  "specialVisuals": 12,
+  "continuousSamples": 42,
+  "selection": {
+    "id": "velvet",
+    "after": "ash",
+    "source": [
+      1536,
+      1024
+    ],
+    "colors": 5,
+    "viewports": 3,
+    "bounds": [
+      {
+        "width": 1280,
+        "color": 0,
+        "left": 11.312291666666665,
+        "top": 2.221761658031088,
+        "right": 12.639699074074077,
+        "fit": "cover"
+      },
+      {
+        "width": 1280,
+        "color": 1,
+        "left": 11.312291666666665,
+        "top": 2.221761658031088,
+        "right": 12.639699074074077,
+        "fit": "cover"
+      },
+      {
+        "width": 1280,
+        "color": 2,
+        "left": 11.312291666666665,
+        "top": 2.221761658031088,
+        "right": 12.639699074074077,
+        "fit": "cover"
+      },
+      {
+        "width": 1280,
+        "color": 3,
+        "left": 11.312291666666665,
+        "top": 2.221761658031088,
+        "right": 12.639699074074077,
+        "fit": "cover"
+      },
+      {
+        "width": 1280,
+        "color": 4,
+        "left": 11.312291666666665,
+        "top": 2.221761658031088,
+        "right": 12.639699074074077,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 0,
+        "left": 14.458229166666667,
+        "top": 2.846632124352331,
+        "right": 16.15896990740741,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 1,
+        "left": 14.458229166666667,
+        "top": 2.846632124352331,
+        "right": 16.15896990740741,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 2,
+        "left": 14.458229166666667,
+        "top": 2.846632124352331,
+        "right": 16.15896990740741,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 3,
+        "left": 14.458229166666667,
+        "top": 2.846632124352331,
+        "right": 16.15896990740741,
+        "fit": "cover"
+      },
+      {
+        "width": 1440,
+        "color": 4,
+        "left": 14.458229166666667,
+        "top": 2.846632124352331,
+        "right": 16.15896990740741,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 0,
+        "left": 20.583333333333336,
+        "top": 3.7609872316802377,
+        "right": 22.870370370370374,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 1,
+        "left": 20.583333333333336,
+        "top": 3.7609872316802377,
+        "right": 22.870370370370374,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 2,
+        "left": 20.583333333333336,
+        "top": 3.7609872316802377,
+        "right": 22.870370370370374,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 3,
+        "left": 20.583333333333336,
+        "top": 3.7609872316802377,
+        "right": 22.870370370370374,
+        "fit": "cover"
+      },
+      {
+        "width": 1920,
+        "color": 4,
+        "left": 20.583333333333336,
+        "top": 3.7609872316802377,
+        "right": 22.870370370370374,
+        "fit": "cover"
+      }
+    ]
+  },
+  "online": {
+    "identicalFrames": 286,
+    "characters": [
+      "velvet",
+      "leanne"
+    ],
+    "kinds": [
+      "release",
+      "bullet",
+      "soul",
+      "grenade",
+      "blast"
+    ],
+    "errors": []
+  },
+  "readyArt": {
+    "poses": 107,
+    "effects": 16,
+    "costumeFrames": 535,
+    "mismatches": []
+  },
+  "source": {
+    "atlas": "characters/velvet/assets/velvet-native.png",
+    "atlasSHA256": "5f5ec36b1a1f84463780b8d74abe65cc4b6f563331f304192ddad91f7e07ed28",
+    "selection": "characters/velvet/assets/velvet-selection.png",
+    "selectionSHA256": "6b8a2e0e5440640099e0c80707b0a76afaf0347308dc226001e06b392920f02b",
+    "anatomicalAnchors": true,
+    "rig": false
+  },
+  "catalog": {
+    "characters": 209,
+    "sha256": "3b81083d076a1e6e9b78d1a60ae2297a6ca548c39e059a09cff67a4ba3b1c922"
+  },
+  "artProvenance": "characters/velvet/docs/art-generation.json"
+}

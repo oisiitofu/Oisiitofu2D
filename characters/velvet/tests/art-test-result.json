@@ -1,0 +1,23 @@
+{
+  "frames": 107,
+  "effects": 16,
+  "portrait": 106,
+  "neutral": "exact RGBA",
+  "normalStrikes": "15 locked and individually distinct",
+  "intermediates": "30 distinct whole-body paintings; frame80 human-right-fist correction",
+  "headroom": 40,
+  "grip": [
+    -0.23199999999999998,
+    0.957
+  ],
+  "scales": {
+    "basic": 1,
+    "attacks": 0.9611650485436893,
+    "specials": 0.9801980198019802,
+    "defense": 0.9966442953020134,
+    "extra": 0.9867109634551495,
+    "windup": 1.006779661016949,
+    "recovery": 0.9769736842105263,
+    "windup-hand-correction": 0.9933110367892977
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id":"velvet","name":"ベルベット","after":"ash","height":94,"tier":2,"weight":87,
+  "reference":"C:/Users/haro_/Downloads/AI/velvet.png",
+  "specialCells":["neutral","gather left claw","extend claw right","withdraw extended claw","brace and cast left claw","reel captured target","vault from captured target","shadow-wing takeoff","air aim with extended left claw","directional wing burst","ending glide","counter preparation","counter intercept","soul release","counter claw riposte","return neutral"],
+  "effects":["right convex red-black claw crescent","right red-white fist streak","up convex claw arch","down convex claw arch","extended Malak arm with claw pointing right","red soul fragment cluster","prey sigil","tattered red-black movement trail right","radial ground claw burst","broad convex claw sweep right","soul break expansion flare","red-white impact star","long hooked claw tendril pointing right","winged Therion shadow","counter sigil","wing recoil trail right"],
+  "normalNames":["left claw jab","right fist","rising left claw","wide claw backhand","overhead claw lift","low claw slam","shoulder tackle","extended Malak claw smash","upward claw scoop","ground claw stomp","crossed aerial claw slashes","forward claw thrust","backward heel kick","upward aerial claw","downward claw dive"]
+}
