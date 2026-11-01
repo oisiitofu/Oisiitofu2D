@@ -4,13 +4,13 @@ const ReanVFX=(()=>{
  function impact(v){const t=(v.max-v.life)/v.max,size=(75+v.power*38)*(1+t*.4);stamp(5,v.x,v.y,size,size,1,(1-t)**1.5);}
  function draw(f){
   for(const o of ReanRules.objects)if(o.owner===f.id){const s=1+o.tier*.3;for(let j=3;j>0;j--)stamp(1,o.x-o.vx*j*.65,o.y,83*s,86*s,o.face,.12/j);stamp(1,o.x,o.y,83*s,86*s,o.face,1);}
-  if(f.reanDemonTime>0){const pulse=1+Math.sin(frame*.16)*.055;stamp(4,f.x,f.y-47,112*pulse,147*pulse,1,.65);drawSprite(f);}
+  if(f.reanDemonTime>0){const pulse=1+Math.sin(frame*.16)*.055;stamp(4,f.x,f.y-47,112*pulse,147*pulse,1,.65);}
   const a=f.attack;if(!a)return;const t=f.timer;
   if(a.hold)stamp(a.type==='dragon'?1:0,f.x+f.face*28,f.y-36,42+a.charge*42,42+a.charge*42,f.face,.6);
-  if(a.type==='gale'){if(t>=a.activationFrame){stamp(4,f.x,f.y-47,165,180,1,Math.max(0,1-(t-a.activationFrame)/19));drawSprite(f);}return;}
+  if(a.type==='gale'){if(t>=a.activationFrame){stamp(4,f.x,f.y-47,165,180,1,Math.max(0,1-(t-a.activationFrame)/19));}return;}
   if(a.type==='dragon')return;
   if(a.type==='dash'&&t>=a.phaseStart&&t<=a.phaseEnd){stamp(6,f.x-f.face*65,f.y-27,170,70,f.face,.55);stamp(2,f.x-f.face*35,f.y-30,148,85,f.face,.7);}
-  if(a.type==='rise'&&t>=a.spiralStart&&t<=a.spiralEnd){stamp(3,f.x,f.y-38,132,174,1,.8);drawSprite(f);}
+  if(a.type==='rise'&&t>=a.spiralStart&&t<=a.spiralEnd){stamp(3,f.x,f.y-38,132,174,1,.8);}
   const w=CombatData.activeWindow(a,t)||a.activeFrames.filter(w=>w.end<t).at(-1);if(!w)return;
   const alpha=t<=w.end?1:Math.max(0,1-(t-w.end)/6)*.55;if(!alpha||['grab','pummel'].includes(a.type)||a.type.endsWith('Throw'))return;
   const up=w.shape==='up',back=w.shape==='back',down=w.shape==='down',spin=w.shape==='spin';

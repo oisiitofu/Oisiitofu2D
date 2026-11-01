@@ -8,7 +8,7 @@ const EstelleVFX=(()=>{
  }
  function draw(f){const a=f.attack;if(!a)return;const t=f.timer;
   if(a.hold)stamp(1,f.x+f.face*35,f.y-35,45+a.charge*45,45+a.charge*45,f.face,.5);
-  if(a.type==='rise'&&a.poleAnchor&&t<=a.poleEnd){pole(f,a);stamp(3,f.x,f.y-30,120,100,a.poleFace,.6);drawSprite(f);}
+  if(a.type==='rise'&&a.poleAnchor&&t<=a.poleEnd){pole(f,a);stamp(3,f.x,f.y-30,120,100,a.poleFace,.6);}
   if(a.type==='rise'&&a.poleReleased&&t<=a.poleReleaseFrame+8)stamp(3,f.x-f.vx*2,f.y+18,100,150,f.face,.8*(1-(t-a.poleReleaseFrame)/9));
   if(a.type==='dash'&&t>=a.rushStart&&t<=a.rushEnd)stamp(6,f.x-f.face*35,f.y-8,125,55,f.face,.65);
   if(a.type==='sideLift'&&t<=a.activeEnd+4)stamp(2,f.x,f.y-40,125,160,f.face,.6);

@@ -34,3 +34,6 @@ const ElliotRules=NewcomerCore.create('elliot',ElliotMoves,{
 function elliotPose(f){if(f.attack)return f.attack.special?f.attack.pose:CombatData.sample(f.attack,f.timer).pose;if(f.ledge||['LedgeCatch','LedgeHang'].includes(f.mode))return 55;if(f.mode==='LedgeGetup')return 56;if(f.mode==='ForwardRoll')return 47;if(f.mode==='BackwardRoll')return 48;if(f.mode==='SpotDodge')return 49;if(f.mode==='JumpSquat')return 8;return({idle:[0,73][Math.floor(frame/18)%2],walk:[1,71][Math.floor(frame/7)%2],run:[3,72][Math.floor(frame/5)%2],crouch:7,jump:9,double:10,fall:11,land:12,guard:46,dodge:50,hit:51,fly:52,down:53,getup:54,grab:57,caught:51,throw:59})[f.state]??0;}
 MoveMotion.define('elliot',Object.fromEntries(Object.entries(ElliotMotion).map(([k,p])=>[k,{windup:p[0],strike:[p[1]],recovery:p[2]}])));
 CharacterGuide.define('elliot',{strength:'妖精フェイは1体で追従。下Bで最大2つの地図目印を設置。NBは最新の目印へフェイが飛んでから光の矢を放ち、方向で狙える。横Bはフェイが支点に着いた後、必殺を離して押し直すとその点へ剣で移動。上Bはフェイを呼び戻し、保持中の方向で運んでもらう。',caution:'目印は攻撃で壊れる。横Bの準備中は本人が残る。相棒を遠くへ送るほど上Bの呼び戻しが遅い。運ぶ時間は同じ滞空で最大42F、離すか通常攻撃で終了。本人に通常の浮遊はない。'});
+
+// These intact idle/walk paintings face left in the source; canonical game art faces right.
+function elliotSourceSign(n){return [0,1,2,14,71,73].includes(n)?-1:1;}

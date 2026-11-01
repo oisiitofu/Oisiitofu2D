@@ -160,8 +160,8 @@ const Roster=(()=>{
   'sam', // サム
   'aloy', // アーロイ
   'monokuma', // モノクマ
-  'yuma', // ユーマ
   'naegi', // 苗木 誠
+  'yuma', // ユーマ
   'sumino', // 澄野拓海
   'shiren', // シレン
   'estelle', // エステル

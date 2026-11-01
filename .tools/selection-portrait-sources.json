@@ -2344,13 +2344,13 @@
   "namine": {
     "source": "characters/namine/assets/namine-selection.png",
     "crop": [
-      -140,
-      -50,
-      1750,
-      1250
+      340,
+      180,
+      840,
+      600
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Closer face and shoulders requested2026-11-01; forehead, eyes and chin visible"
   },
   "velvet": {
     "source": "characters/velvet/assets/velvet-selection.png",
