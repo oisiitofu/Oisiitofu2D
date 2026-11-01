@@ -1817,13 +1817,13 @@
   "zack": {
     "source": "characters/zack/assets/zack-selection.png",
     "crop": [
-      380,
-      20,
-      1120,
-      800
+      270,
+      145,
+      1008,
+      720
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "Dedicated high-resolution portrait; face moved up and right, slightly zoomed per 2026-11-01 request"
   },
   "reimu": {
     "source": "characters/reimu/assets/reimu-selection.png",
@@ -2201,13 +2201,13 @@
   "io": {
     "source": "characters/io/assets/io-selection.png",
     "crop": [
-      350,
-      20,
-      1008,
-      720
+      205,
+      160,
+      924,
+      660
     ],
     "mode": "built-in imagegen",
-    "framing": "Original dedicated portrait; face zoom per user request 2026-10-30"
+    "framing": "Dedicated high-resolution portrait; face moved up and right, slightly zoomed per 2026-11-01 request"
   },
   "battlecat": {
     "source": "characters/battlecat/assets/battlecat-selection.png",

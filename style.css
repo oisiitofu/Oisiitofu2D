@@ -376,3 +376,7 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
  #result:has(#result-readiness:not(.hidden)) #stats{font-size:10px;line-height:1.4;margin:8px 0}
  #result-readiness{margin:10px 0;padding:10px}
 }
+
+/* Work of origin stays with the selected name in the compact details panel. */
+.selection-banner .selected-character-origin{color:#e5edfa;font-size:11px;font-weight:500;line-height:1.4;letter-spacing:0;margin:4px 0 0;overflow-wrap:anywhere}
+.character-guide-intro .character-guide-origin{color:#dcecff;font-size:12px;line-height:1.6;margin:7px 0}

@@ -17,13 +17,13 @@ const CharacterGuide=(()=>{
  function introduction(id,definition){
   if(!CharacterData[id]||id==='random')return null;
   const kit=movesFor({characterId:id,id:Symbol('guide-only')}),commands=[['dragon','通常必殺','方向なし＋必殺'],['dash','横必殺','横＋必殺'],['rise','上必殺','上＋必殺'],['gale','下必殺','下＋必殺']];
-  return{id,name:definition.name,style:definition.style,description:definition.description,specials:commands.map(([key,label,command])=>({key,label,command,name:kit[key]?.name||'技名未設定'}))};
+  return{id,name:definition.name,origin:definition.origin||'',style:definition.style,description:definition.description,specials:commands.map(([key,label,command])=>({key,label,command,name:kit[key]?.name||'技名未設定'}))};
  }
  function appendIntroduction(content,manual=false){
   const{id,definition:d}=current,p=introduction(id,d),section=node('section',undefined,'character-guide-intro');
   section.append(node('h3',manual?'選択中のキャラ：'+d.name:'キャラ紹介・必殺技'));
   if(!p){section.append(node('p','おまかせは対戦開始時にキャラが決まります。キャラを選ぶと、ここで紹介と必殺技を確認できます。'));content.append(section);return;}
-  section.dataset.character=id;section.append(node('b',p.style,'character-guide-series'),node('p',p.description));
+  section.dataset.character=id;if(p.origin)section.append(node('p','登場作品：'+p.origin,'character-guide-origin'));section.append(node('b',p.style,'character-guide-series'),node('p',p.description));
   const list=node('dl',undefined,'character-guide-specials');
   for(const s of p.specials){const row=node('div');row.dataset.move=s.key;const term=node('dt');term.append(node('b',s.label),node('small',s.command));row.append(term,node('dd',s.name));list.append(row);}section.append(list);
   const binding=Controls.bindingLabels('special');section.append(node('p','現在の必殺ボタン：1Pキー '+binding.keyboard+' ／ パッド '+binding.pad,'character-guide-binding'));
