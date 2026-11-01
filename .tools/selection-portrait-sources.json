@@ -1817,10 +1817,10 @@
   "zack": {
     "source": "characters/zack/assets/zack-selection.png",
     "crop": [
-      0,
-      0,
-      1536,
-      1024
+      380,
+      20,
+      1120,
+      800
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"
@@ -2366,10 +2366,10 @@
   "leanne": {
     "source": "characters/leanne/assets/leanne-selection.png",
     "crop": [
-      -80,
-      -50,
-      1500,
-      1071
+      150,
+      45,
+      1176,
+      840
     ],
     "mode": "built-in imagegen",
     "framing": "dedicated high-resolution close head and shoulders"

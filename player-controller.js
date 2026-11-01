@@ -159,6 +159,23 @@ const PlayerController=(()=>{
   if(!is(f,'ShieldStart','ShieldHold','ShieldBreak','Stunned')&&!f.shieldStun)f.shield=Math.min(c.shieldHP,f.shield+c.shieldRegen);
   physics(f,i);
  }
+ // Descending movement can pass through the grab band in a single frame.
+ // Sweep only airborne descent; ground run-off keeps its outbound-side latch.
+ function ledgeGrabContact(f,l,oldX,oldY,wasAir){
+  const [rx,ry]=f.character.ledgeGrabRange;
+  const minX=l.x-Math.min(rx,l.face<0?35:rx),maxX=l.x+Math.min(rx,l.face>0?35:rx),minY=l.y+8,maxY=l.y+ry;
+  if(f.x>minX&&f.x<maxX&&f.y>minY&&f.y<maxY)return true;
+  if(!wasAir||f.y<=oldY)return false;
+  let enter=0,leave=1;
+  for(const [from,to,min,max] of [[oldX,f.x,minX,maxX],[oldY,f.y,minY,maxY]]){
+   const delta=to-from;
+   if(!delta){if(from<=min||from>=max)return false;continue;}
+   const a=(min-from)/delta,b=(max-from)/delta;
+   enter=Math.max(enter,Math.min(a,b));leave=Math.min(leave,Math.max(a,b));
+   if(enter>leave)return false;
+  }
+  return leave>=0&&enter<=1;
+ }
  function physics(f,i){let c=f.character,oldX=f.x,oldY=f.y,wasAir=!f.grounded,oldVx=f.vx,oldVy=f.vy,def=PlayerStates.defs[f.mode];
   const dodgeFloor=f.grounded&&is(f,'SpotDodge','ForwardRoll','BackwardRoll','TechRoll','GetupRoll','LedgeRoll')?platforms.find(p=>Math.abs(oldY-p.y)<6&&oldX>=p.x-9&&oldX<=p.x+p.w+9):null;
   if(def.gravity&&!f.gravityOff&&!BattleFeel.dodgeMotion(f)){let gravity=c.gravity*(f.attack?.gravityMultiplier??1);if(f.fastFall&&!f.tumbling&&!f.hitstun)gravity=Math.max(gravity,MovementTuning.fastFallAcceleration);let next=f.vy+gravity;f.vy=f.tumbling||f.hitstun?next:Math.min(f.attack?.glideStart&&f.timer>=f.attack.glideStart&&f.timer<=f.attack.glideEnd?f.attack.glideFallSpeed:f.attack?.diveSpeed&&f.timer>=f.attack.startupFrames?f.attack.diveSpeed:f.fastFall?c.fastFallSpeed:c.fallSpeed,next);}AirMobility.physics(f,i);f.x+=f.vx*(!f.hitstun&&!f.tumbling?(f.logicSlow??1)*JibanyanRules.hauntScale(f)*PiposaruRules.speed(f)*TwinbeeRules.speed(f):1);f.y+=f.vy;
@@ -189,11 +206,11 @@ const PlayerController=(()=>{
   // Re-enable grabs after clearing that ledge's grab region. Recovery moves
   // approaching from below can still grab while rising.
   if(f.grounded)f.ledgeExitSide=0;
-  else if(oldX>=p.x-9&&oldX<=p.x+p.w+9&&(f.x<p.x-9||f.x>p.x+p.w+9)&&oldY<=p.y+8)f.ledgeExitSide=f.x<p.x?1:-1;
+  else if(!wasAir&&oldX>=p.x-9&&oldX<=p.x+p.w+9&&(f.x<p.x-9||f.x>p.x+p.w+9)&&oldY<=p.y+8)f.ledgeExitSide=f.x<p.x?1:-1;
   const exited=StageRules.ledges.find(l=>l.face===f.ledgeExitSide);
   if(exited&&(Math.abs(f.x-exited.x)>c.ledgeGrabRange[0]+12||f.y>exited.y+c.ledgeGrabRange[1]+12))f.ledgeExitSide=0;
   let canLedge=!f.attack?.tether&&(PlayerStates.defs[f.mode].ledge||f.attack?.ledgeGrabStart&&f.timer>=f.attack.ledgeGrabStart);
-  if(!f.grounded&&canLedge&&!f.hitstun&&!f.ledgeCooldown&&i.y<.65)for(let l of StageRules.ledges)if(l.face!==f.ledgeExitSide&&Math.abs(f.x-l.x)<c.ledgeGrabRange[0]&&(f.x-l.x)*l.face<35&&f.y>l.y+8&&f.y<l.y+c.ledgeGrabRange[1]){catchLedge(f,l);break;}
+  if(!f.grounded&&canLedge&&!f.hitstun&&!f.ledgeCooldown&&i.y<.65)for(let l of StageRules.ledges)if(l.face!==f.ledgeExitSide&&ledgeGrabContact(f,l,oldX,oldY,wasAir)){catchLedge(f,l);break;}
   if(blastZoneSide(f))ko(f);
  }
  function land(f,i,landingSpeed=Math.abs(f.vy)){AirMobility.reset(f);if(NewcomerCore.ids.includes(f.characterId)&&NewcomerCore.land(f,i))return;if(f.characterId==='adol'&&AdolRules.land(f,i))return;let c=f.character,a=f.attack,wasFast=f.fastFall;BattleFeel.landing(f,Math.abs(landingSpeed),wasFast);f.shortHop=false;f.airJumps=c.airJumpCount;f.jumps=0;f.airDodged=false;f.ledgeGrabs=0;f.recovered=false;f.fastFall=false;f.helpless=false;

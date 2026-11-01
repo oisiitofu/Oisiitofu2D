@@ -93,7 +93,7 @@ const SukaponAnimation=(()=>{
   if(f.state==='down'){const q=key({head:[19,-16,.2],body:[-10,-14,.4],frontHand:[39,-8,0],backHand:[-35,-9,0],frontFoot:[5,-5,0],backFoot:[-18,-5,0]});return{parts:q,phase:'down',head:3};}
   if(f.state==='getup'||f.mode==='LedgeGetup')return{parts:mix(crouch,base,(t+1)/Math.max(1,f.stateDuration||18)),phase:'getup',head};
   if(f.state==='grab'||f.state==='throw')return{parts:mix(base,strike(f,f.state==='grab'?17:19),(t+1)/5),phase:f.state,head:2};
-  const breathe=Math.sin(t*Math.PI*2/100)*1.4;p.head[1]+=breathe;p.body[1]+=breathe*.5;p.frontHand[1]-=breathe*.5;p.backHand[1]-=breathe*.5;
+  // Keep the approved standing pose still while waiting for input.
   return{parts:p,phase:'idle',head};
  }
  function draw(f,alpha=1,scale=1){
