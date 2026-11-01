@@ -4,19 +4,19 @@ const BattleFeel=(()=>{
  const tuning=Object.freeze({diAngle:.17,shieldHitlag:.67,directionalDodgeBrake:.94,directionalDodgeFloat:22,neutralDodgeBrake:.88,neutralDodgeFloat:25});
  let trails=[],cameraKick=0;
  function reset(){trails=[];cameraKick=0;BattleReadability.reset();}
- function hitlag(a){const damage=a.damage??a.dmg??0,electric=a.element==='thunder'||a.element==='electric';return clamp(Math.floor((damage*.65+6)*(electric?1.5:1)*(a.hitlagMultiplier??1)),0,30);}
+ function hitlag(a,f=null,shield=false){if(!shield)return HitFeedback.hitlag(f,a);const damage=a.damage??a.dmg??0,electric=a.element==='thunder'||a.element==='electric';return clamp(Math.floor((damage*.65+6)*(electric?1.5:1)*(a.hitlagMultiplier??1)),0,30);}
  function shieldStun(a,damage){const custom=a.shieldstunMultiplier??1,mult=a.projectile?(custom!==1?custom:.29):custom*(a.aerial?.33:/smash/i.test(a.type)?.725:1);return Math.max(0,Math.floor(damage*.8*mult+3)-1);}
- function impact(f,o,a,damage,raw,lag,touch){
+ function impact(f,o,a,damage,raw,lag,touch,box){
   const x=touch?.x??o.x,y=touch?.y??o.y-o.character.ecb.height*.48,direction=a.launchDirection||f.face;
   const power=clamp((damage-3)/20,0,1),strong=raw>=120&&damage>=10;
-  CombatVFX.impact(x,y,f.characterId==='isaac'?4:f.color,damage,direction,f.characterId,lag);
-  shake=Math.max(shake,.8+power*7+(strong?3:0));
+  const feedback=HitFeedback.contact(f,a,damage,box);
+  CombatVFX.impact(x,y,f.characterId==='isaac'?4:f.color,damage,direction,f.characterId,lag,feedback);
+  shake=Math.max(shake,(.8+power*7+(strong?3:0))*feedback.shake);
   // Jabs and multi-hit links remain readable without a full-screen flash.
-  flash=Math.max(flash,damage>=12?.025+power*.07:0);
-  emit(x,y,colors[f.color],Math.round(5+power*16),2+power*7,lag);
-  if(damage>=9)ring(x,y,'#fff5d4',26+power*65,lag);
+  flash=Math.max(flash,damage>=12&&feedback.category!=='gun'?(.025+power*.07)*(feedback.category==='heavy'?1:.45):0);
+  // Contact sparks carry the material; avoid a shared large ring over every hit.
   if(training)label(o.x,o.y-o.character.ecb.height-16,`${Math.round(damage*10)/10}%`,colors[f.color]);
-  if(strong)cameraKick=Math.max(cameraKick,.04+power*.025);
+  if(strong)cameraKick=Math.max(cameraKick,(.04+power*.025)*feedback.camera);
   GameAudio.strike(f,a,damage);
  }
  function updateCamera(){

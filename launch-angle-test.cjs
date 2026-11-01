@@ -16,7 +16,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
    if(['downsmash','low','downThrow','upsmash','uair'].includes(type)||type==='dair'&&AerialLaunchTuning.meteor(strike)||strike.pull||strike.fixedKnockback||strike.cancel?.next||w.end<a.activeEnd)check(id+'/'+type+' authored exception preserved',t.angle===strike.angle);
   }}
   for(const id of ['dragoon','chiikawa','edelgard','fiora','hayabusa','malenia','metabee'])for(const type of ['smash','heavy','fair','bair','dashAttack','forwardThrow','downsmash','low','upsmash','dair'])for(const face of [-1,1])for(const grounded of [false,true]){
-   const[f,o]=pair(id,face,grounded),move=movesFor(f)[type],w=move.activeFrames.at(-1),a={...move,...w,type,launchDirection:face},lag=BattleFeel.hitlag(a),beforePercent=o.damage;
+   const[f,o]=pair(id,face,grounded),move=movesFor(f)[type],w=move.activeFrames.at(-1),a={...move,...w,type,launchDirection:face},lag=BattleFeel.hitlag(a,f),beforePercent=o.damage;
    const raw=CombatSystem.calculateKnockback(a,beforePercent+a.damage*1.05,o.character.weight,f.damage,a.damage*1.05),boost=/smash/i.test(type)&&Math.abs(Math.cos(a.angle))>=Math.SQRT1_2?1.5:1;
    CombatSystem.hit(f,o,a);check(id+'/'+type+' pending launch',!!o.pendingLaunch);if(!o.pendingLaunch)continue;
    check(id+'/'+type+' damage hitstun hitlag preserved',close(o.damage,beforePercent+a.damage*1.05)&&close(o.pendingLaunch.raw,raw)&&o.pendingLaunch.hitstun===Math.max(4,Math.floor(raw*.4)-1)&&o.hitlag===lag);

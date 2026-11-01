@@ -13,7 +13,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
     check(id+' dodge blocks reuse '+direction,f.airDodged&&f.mode==='DirectionalAirDodge');tick(f,{},15);check(id+' dodge resumes gravity '+direction,f.vy>0);
     [f,o]=reset(id);f.grounded=false;f.y=-200;f.vx=6;f.vy=4;PlayerController.beginDodge(f,emptyInput());tick(f,{},20);check(id+' neutral dodge suspends fall '+direction,f.vy<.5&&f.y<-160);
     f.tumbling=true;f.airJumps=1;PlayerController.launchJump(f);check(id+' jump exits tumble '+direction,!f.tumbling&&f.airJumps===0);
-    [f,o]=reset(id);const a={...movesFor(f).heavy,type:'heavy',staleMultiplier:1,launchDirection:direction};StageRules.oneOnOne=false;CombatSystem.hit(f,o,a);const lag=o.hitlag;check(id+' hitlag guide '+direction,lag===BattleFeel.hitlag(a));
+    [f,o]=reset(id);const a={...movesFor(f).heavy,type:'heavy',staleMultiplier:1,launchDirection:direction};StageRules.oneOnOne=false;CombatSystem.hit(f,o,a);const lag=o.hitlag;check(id+' hitlag guide '+direction,lag===BattleFeel.hitlag(a,f));
     const flashWeak=flash;check(id+' defender reacts during freeze '+direction,o.state==='hit');
     [f,o]=reset(id);PlayerStates.enter(o,'ShieldHold');CombatSystem.hit(f,o,a);const damage=a.damage*(id==='omegamon'?1.1:1);check(id+' reduced shield stop '+direction,o.hitlag<=lag&&o.shieldStun===BattleFeel.shieldStun(a,damage));
    }
