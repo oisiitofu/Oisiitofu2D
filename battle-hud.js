@@ -1,7 +1,9 @@
 'use strict';
 // Screen-space HUD layout only; character gauge extents are registered by their VFX.
 const BattleHud=(()=>{
- const panelTop=691,extents=new Map(),segmenter=typeof Intl.Segmenter==='function'?new Intl.Segmenter('ja',{granularity:'grapheme'}):null;let controlsKey='';
+ const panelTop=691,extents=new Map(),portraits=new Map(),segmenter=typeof Intl.Segmenter==='function'?new Intl.Segmenter('ja',{granularity:'grapheme'}):null;let controlsKey='';
+ // Bake only the fixed HUD crop, at the current display density. Source art stays untouched.
+ function portrait(context,img,x,y){if(!img)return;const m=context.getTransform(),scale=Math.max(1,Math.ceil(Math.hypot(m.a,m.b)*2)/2);let cached=portraits.get(img);if(!cached||cached.scale!==scale||cached.smooth!==context.imageSmoothingEnabled||cached.quality!==context.imageSmoothingQuality){const surface=document.createElement('canvas');surface.width=Math.ceil(90*scale);surface.height=Math.ceil(84*scale);const g=surface.getContext('2d');g.setTransform(scale,0,0,scale,0,0);g.imageSmoothingEnabled=context.imageSmoothingEnabled;g.imageSmoothingQuality=context.imageSmoothingQuality;const h=90*img.height/img.width;g.drawImage(img,0,(84-h)/2,90,h);cached={surface,scale,smooth:context.imageSmoothingEnabled,quality:context.imageSmoothingQuality};portraits.set(img,cached);}else{portraits.delete(img);portraits.set(img,cached);}while(portraits.size>16)portraits.delete(portraits.keys().next().value);context.drawImage(cached.surface,x,y,90,84);}
  function reserve(id,top){extents.set(id,Math.max(0,top));}
  const headerInset=f=>extents.get(f.characterId)||0;
  const font=size=>`700 ${size}px 'Noto Sans JP', sans-serif`;
@@ -27,5 +29,5 @@ const BattleHud=(()=>{
   // Keep stage/reset/pause controls above the complete HUD, including EDF ammo.
   bar.style.bottom=(((canvas.height-height*scale)/2+(height-header)*scale)/d+10)+'px';
  }
- return{panelTop,reserve,headerInset,fit,name,overhead,controls};
+ return{panelTop,reserve,headerInset,portrait,fit,name,overhead,controls,get diagnostics(){return{portraitSurfaces:portraits.size}}};
 })();
