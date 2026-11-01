@@ -8,7 +8,7 @@ const SquadRules=require('./squad-rules.js');
 const BingoRules=require('./bingo-rules.js');
 const characters=['elliot','yuma','magus','leanne','velvet','namine','hydaelyn','nights','ryuta','mono','nargacuga','felyne','sackboy','rayman','shovelknight','quote','aloy','battlecat','io','raguna','anubis','jehuty','nightraven','elza','ringfit','qbby','estark','mallow','veronica','ashley','lip','ryoku','nahobino','tails','etna','django','ratchet','astro','enoch','sam','parappa','octane','jett','reimu','zack','presea','hachiware','tidus','terra','onionknight','arthur','sakura','viewtifuljoe','shionne','genis','ellen','billy','narmaya','wonder','rena','gran','welch','zoe','ky','alphen','ash','judas','rion','sol','miyabi','zero3','dana','edea','riesz','viridi','octoling','chibirobo','dragoon','isaac','ulgrim','chiikawa','chocobo','monokuma','riki','roxas','twob','okami','gundam','vivi','zero','rin','nia','lightning','colette','rean','estelle','noctis','clive','makoto','neku','narukami','naegi','rex','luke','will','kosmos','fayt','emma','ryza','noah','midna','bomberman','sans','lloyd','shiren','pokoa','hunter','adol','terry','valkyrie','agumon','pawapuro','headmaster','sakuna','haseo','terrarian','horse','chef','akira','morphie','fei','human','kitten','elma','goemon','bayleef','metabee','nier','miku','naruhodo','jibanyan','layton','dante','leon','tifa','zidane','yuffie','vincent','kiryu','crash','charlotta','ryofu','mametchi','piposaru','twinbee','aruru','maruku','dietrich','edf','edelgard','guile','sukapon','pneuma','arus','knight','maelle','sumino','rocbouquet','frog','tressa','eve','odio','laharl','deemo','kasane','shadow','saki','aerith','doshin','moogle','greymon','metalgreymon','wargreymon','omegamon','donchan','shizuna','hanajs','hanajk','hanajd','kisuke','ray','alain','hinako','cojicoji','megamanexe','krystal','yuri','hornet','toro','melia','fiora','c4621','malenia','hayabusa','klonoa','katamari','kingbonby','alucard','kurabe','battlemage','karateka','aiai'];
 const selectableCharacters=characters.filter(id=>!['greymon','metalgreymon','wargreymon','omegamon','hanajk','hanajd'].includes(id));
-const edges=['shareStock','jump','jab','heavy','smash','special','grab','forceTilt'];
+const edges=['shareStock','jump','jab','heavy','smash','special','grab','forceTilt'],commandEdges=['jab','heavy','smash','special','grab'];
 function attachOnline(server){
  const wss=new WebSocketServer({server,path:'/online',maxPayload:4096}),rooms=new Map();
  const send=(ws,data)=>{if(ws?.readyState===WebSocket.OPEN&&ws.bufferedAmount<256000)ws.send(JSON.stringify(data));},all=(room,data)=>room.players.forEach(p=>p&&send(p.ws,data));
@@ -86,7 +86,12 @@ function attachOnline(server){
     const choice=BingoRules.pick(room.bingo,ws.slot,m.cell);if(!choice.ok){send(ws,{type:'error',message:choice.message});return;}
     p.character=room.bingo.picks[ws.slot].character;p.team=[p.character];p.color=Number.isInteger(m.color)&&m.color>=0&&m.color<5?m.color:0;p.settings={stage:StageCatalog.normalize(m.stage)};p.ready=true;room.notice='';room.touched=Date.now();status(room);beginMatch(room);return;
    }
-   if(m.type==='input'&&room.playing&&m.input&&typeof m.input==='object'){const input=InputCodec.decode(m.input);for(const k of edges)p.pending[k] ||= input[k];if(input.stickAttack)p.pending.stickAttack=input.stickAttack;p.input=input;p.lastInput=Date.now();return;}
+   if(m.type==='input'&&room.playing&&m.input&&typeof m.input==='object'){const input=InputCodec.decode(m.input);
+    // Neutral packets cannot erase an edge. A newer actual move replaces an
+    // older move in this server frame, with its own press-time aim. Jump and
+    // explicit stock sharing remain independent so their chords stay atomic.
+    if(commandEdges.some(k=>input[k])){for(const k of [...commandEdges,'forceTilt'])p.pending[k]=false;p.pending.stickAttack=input.stickAttack||{x:input.x,y:input.y};}
+    for(const k of edges)p.pending[k] ||= input[k];p.input=input;p.lastInput=Date.now();return;}
    if(m.type==='finished'&&room.playing){
     if(p.finished)return;
     if(room.bingo&&(!Number.isInteger(m.winner)||!(m.winner===-1||(room.format==='teams'?[0,1].includes(m.winner):m.winner>=0&&m.winner<room.players.length)))){send(ws,{type:'error',message:'対戦結果を確認できませんでした。'});return;}

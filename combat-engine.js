@@ -41,7 +41,7 @@ function attack(f,type,activationInput=null){
  if(!ProjectileCadence.ready(f,data))return false;
  // Keep the unsnapped horizontal stick for a turnaround up special. Apply it
  // only after the action is accepted, before character-specific launch setup.
- if(type==='rise'&&activationInput&&Math.abs(activationInput.x)>=.2)f.face=Math.sign(activationInput.x);
+ if(type==='rise'&&activationInput){const turnX=activationInput.stickAttack?.x??activationInput.x;if(Math.abs(turnX)>=.2)f.face=Math.sign(turnX);}
  // A recovery windup must not carry a full fast-fall into its charge/aim.
  // Only brake accepted actions; hitstun/hitstop inputs still cannot stop launch.
  if(type==='rise'&&!f.grounded){f.fastFall=false;f.vx*=.35;if(f.vy>0)f.vy=Math.min(2,f.vy*.15);}
@@ -100,14 +100,15 @@ function advanceAttack(f,i){
 function resolveCombat(){CombatSystem.resolve();}
 function hit(f,o,a){CombatSystem.hit(f,o,a);}
 function selectAttack(f,i){
- const specialTurnX=i.x;
+ const specialTurnX=i.stickAttack?.x??i.x;
  i=InputFrames.attackDirection(i);
+ if(i.smash&&i.forceTilt)i={...i,smash:false,heavy:true};
  const aerial=()=>i.y<0?'uair':i.y>0?'dair':i.x?(i.x*f.face<0?'bair':'fair'):'air';
  if(i.grab)return attack(f,'grab');
  if(f.grounded&&i.x&&(i.smash||i.jab||i.heavy))f.face=Math.sign(i.x);
  if(i.special){if(i.x&&Math.abs(i.y)<.5)f.face=Math.sign(i.x);return attack(f,i.y<0?'rise':i.y>0?'gale':i.x?'dash':'dragon',{x:specialTurnX});}
  if((i.smash||(i.jab||i.heavy)&&i.smashFlick&&!i.forceTilt)&&f.grounded)return attack(f,i.y<0?'upsmash':i.y>0?'downsmash':'smash');
- if(i.jab||i.heavy){if(!f.grounded)return attack(f,aerial());if(['Run','InitialDash'].includes(f.mode)&&(!f.dashAttackResumeUntil||frame>f.dashAttackResumeUntil)&&!i.forceTilt&&Math.abs(i.y)<.2)return attack(f,'dashAttack');return attack(f,i.heavy?(i.y<0?'up':i.y>0?'low':'heavy'):'jab');}
+ if(i.jab||i.heavy||i.smash&&!f.grounded){if(!f.grounded)return attack(f,aerial());if(['Run','InitialDash'].includes(f.mode)&&(!f.dashAttackResumeUntil||frame>f.dashAttackResumeUntil)&&!i.forceTilt&&Math.abs(i.y)<.2)return attack(f,'dashAttack');return attack(f,i.heavy?(i.y<0?'up':i.y>0?'low':'heavy'):'jab');}
  return false;
 }
 

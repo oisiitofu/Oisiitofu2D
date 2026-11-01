@@ -238,20 +238,25 @@ const PlayerStates=(()=>{
  return{defs,enter,visual};
 })();
 const InputFrames=(()=>{
- const priority={ground:['guard','grab','jump','smash','heavy','jab','special'],air:['guard','jump','jab','heavy','smash','special'],shield:['jump','grab','smash','special','guard','heavy','jab'],ledge:['guard','jab','heavy','smash','jump'],hit:['guard']};
- // Resolve attack sectors at 45 degrees; ties belong to the horizontal sector.
+ const priority={ground:['guard','grab','jump','special','smash','heavy','jab'],air:['guard','jump','special','smash','heavy','jab'],shield:['jump','grab','smash','special','guard','heavy','jab'],ledge:['guard','jab','heavy','smash','jump'],hit:['guard']};
+ // Start at 45 degrees (ties horizontal); retain the prior sector near the boundary.
  // Leave movement/aim axes intact so recovery steering and dodges stay analog.
- function attackDirection(i){const x=i.stickAttack?.x??i.x,y=i.stickAttack?.y??i.y;return Math.abs(x)>=Math.abs(y)?{...i,x,y:0}:{...i,x:0,y};}
+ function attackAxis(x,y,prior){const ax=Math.abs(x),ay=Math.abs(y);if(!ax&&!ay)return null;if(prior==='x'&&ax&&ay<=ax*1.12)return 'x';if(prior==='y'&&ay&&ax<=ay*1.12)return 'y';return ax>=ay?'x':'y';}
+ function attackDirection(i){const x=i.stickAttack?.x??i.x,y=i.stickAttack?.y??i.y;return (i.attackAxis||attackAxis(x,y))==='y'?{...i,x:0,y}:{...i,x,y:0};}
  function jumpAttack(i){return i.jab||i.heavy||i.smash?{...i,heavy:!!(i.heavy||i.smash),smash:false,guard:false,grab:false,special:false,jump:false}:null;}
  // Dodge gestures are independent of smash/fast-fall flicks. Slow pushes and
  // diagonal sticks work too; return near center before repeating a held roll.
  function dodgeDirection(i){if(Math.hypot(i.x,i.y)<.5)return null;return Math.abs(i.x)>=Math.abs(i.y)?{x:Math.sign(i.x),y:0}:i.y>0?{x:0,y:1}:null;}
  function sample(f,raw){let old=f.input||{x:0,y:0,rx:0,ry:0,buttons:{}},i={...emptyInput(),...raw},buttons={};
   for(let k of ['attack','special','jump','guard','grab','smash','heavy']){let aliases=k==='attack'?(raw.jab||raw.heavy):raw[k],held=raw[k+'Held']??(k==='guard'?raw.guard:k==='smash'?raw.charge:aliases)??false,prev=old.buttons?.[k];buttons[k]={value:!!held,previous:!!prev?.value,press:(k==='guard'?!!held&&!prev?.value:!!aliases||!!held&&!prev?.value),release:!held&&!!prev?.value,hold:held?(prev?.hold||0)+1:0};}
-  if(buttons.attack.press&&!i.jab&&!i.heavy){i.jab=!i.x&&!i.y;i.heavy=!!(i.x||i.y);}for(let k of ['jump','special','grab','smash','heavy'])if(buttons[k].press)i[k]=true;i.buttons=buttons;i.previous={x:old.x,y:old.y,rx:old.rx,ry:old.ry};i.flickX=Math.abs(i.x)>.8&&(Math.abs(old.x)<.4||Math.sign(i.x)!==Math.sign(old.x));i.flickY=Math.abs(i.y)>.8&&(Math.abs(old.y)<.4||Math.sign(i.y)!==Math.sign(old.y));i.downFlick=i.y>.8&&i.flickY;i.guardPressed=buttons.guard.press;i.guardReleased=buttons.guard.release;i.jumpHeld=buttons.jump.value;i.jumpReleased=buttons.jump.release;
+  if(buttons.attack.press&&!i.jab&&!i.heavy){i.jab=!i.x&&!i.y;i.heavy=!!(i.x||i.y);}for(let k of ['jump','special','grab','smash','heavy'])if(buttons[k].press)i[k]=true;if(i.smash&&(i.forceTilt||!f.grounded&&!f.ledge)){i.smash=false;i.heavy=true;i.forceTilt=true;}i.buttons=buttons;i.previous={x:old.x,y:old.y,rx:old.rx,ry:old.ry};i.flickX=Math.abs(i.x)>.8&&(Math.abs(old.x)<.4||Math.sign(i.x)!==Math.sign(old.x));i.flickY=Math.abs(i.y)>.8&&(Math.abs(old.y)<.4||Math.sign(i.y)!==Math.sign(old.y));i.downFlick=i.y>.8&&i.flickY;i.guardPressed=buttons.guard.press;i.guardReleased=buttons.guard.release;i.jumpHeld=buttons.jump.value;i.jumpReleased=buttons.jump.release;
   f.flickAge=i.flickX||i.flickY?0:(f.flickAge??99)+1;
   if(i.flickX&&!f.attack&&!f.hitstun&&!f.hitlag)f.dashAttackResumeUntil=0;
-  const strength=Math.hypot(i.x,i.y),previousStrength=Math.hypot(old.x,old.y);
+  const strength=Math.hypot(i.x,i.y),aim=i.stickAttack||i;
+  // Only the narrow diagonal boundary keeps the previous sector. Movement,
+  // aerial steering and dodge angles continue to use the untouched axes.
+  i.attackAxis=attackAxis(aim.x,aim.y,f.directionAxis);
+  f.directionAxis=attackAxis(i.x,i.y,f.directionAxis);
   if(strength<=.3)f.dodgeStickReady=true;
   const dodge=dodgeDirection(i),priorDodge=dodgeDirection(old);
   // Starting a shield with the running stick held is a brake, not a roll.
@@ -260,12 +265,15 @@ const InputFrames=(()=>{
   i.dodgePressed=!!(i.guard&&f.grounded&&dodge&&!dashGuard&&((f.dodgeStickReady??true)||i.guardPressed||!priorDodge||dodge.x!==priorDodge.x||dodge.y!==priorDodge.y));
   i.dodgeDirection=dodge;
   if(strength>=.5)f.dodgeStickReady=false;
-  f.smashNeutralAge=strength<=.35?0:previousStrength<=.35?1:(f.smashNeutralAge??99)+1;
-  const reversed=i.x*old.x<0&&Math.abs(i.x)>=.5&&Math.abs(old.x)>=.4||i.y*old.y<0&&Math.abs(i.y)>=.5&&Math.abs(old.y)>=.4;
-  const smashFlick=strength>=.7&&(previousStrength<.7&&(f.smashNeutralAge<=6||strength-previousStrength>=.25)||reversed);
-  f.smashFlickAge=smashFlick?0:(f.smashFlickAge??99)+1;i.smashFlick=f.smashFlickAge<=6&&strength>=.62;
-  const rightStrength=Math.hypot(i.rx||0,i.ry||0);if(rightStrength<=.35)f.rightStickReady=true;
-  if(rightStrength>=.65&&(f.rightStickReady??true)){f.rightStickReady=false;i.stickAttack={x:i.rx,y:i.ry};if(!f.grounded&&!f.ledge){i.heavy=true;i.forceTilt=true;}else if(raw.rightStickMode==='smash')i.smash=true;else{i.heavy=true;i.forceTilt=true;}}
+  // Each signed axis owns its own flick window: a side flick cannot promote
+  // an up tilt, and a fresh up flick works while the side stick was held.
+  f.smashAxes??={};
+  for(const axis of ['x','y'])for(const sign of [-1,1]){const key=axis+sign,s=f.smashAxes[key]??={age:99,neutralAge:99},v=i[axis]*sign,prev=old[axis]*sign;s.neutralAge=v<=.35?0:prev<=.35?1:s.neutralAge+1;const flick=v>=.7&&prev<.7&&(s.neutralAge<=4||v-prev>=.25);s.age=flick?0:s.age+1;}
+  const axis=i.attackAxis,key=axis+Math.sign(aim[axis]||0),axisAge=f.smashAxes[key]?.age??99;
+  const capturedFlick=!!i.stickAttack&&buttons.attack.press&&Math.abs(aim[axis]||0)>=.7&&(aim[axis]*old[axis]<=0||Math.abs(old[axis])<.4);
+  f.smashFlickAge=capturedFlick?0:axisAge;i.smashFlick=f.smashFlickAge<=6&&Math.abs(aim[axis]||0)>=.62;
+  const rightStrength=Math.max(Math.abs(i.rx||0),Math.abs(i.ry||0));if(rightStrength<=.35)f.rightStickReady=true;
+  if(rightStrength>=.65&&(f.rightStickReady??true)){f.rightStickReady=false;if(i.jump||!i.special&&!i.grab){i.stickAttack={x:i.rx,y:i.ry};i.attackAxis=attackAxis(i.rx,i.ry);if(!f.grounded&&!f.ledge){i.heavy=true;i.forceTilt=true;}else if(raw.rightStickMode==='smash')i.smash=true;else{i.heavy=true;i.forceTilt=true;}}}
   // Right-stick smash mode starts once per tilt, but holding it away from
   // center keeps the accepted smash charging. Returning to center releases.
   if(raw.rightStickMode==='smash'&&rightStrength>.35&&!f.rightStickReady&&(!f.attack&&i.smash||['smash','upsmash','downsmash'].includes(f.attack?.type))){i.smashHeld=true;i.charge=true;}
@@ -275,21 +283,21 @@ const InputFrames=(()=>{
   // Keep simultaneous jump/attack atomic through recovery and shield stun.
   i.jumpAerial=i.jump?jumpAttack(i):null;i.shortHopAttack=!!(f.grounded&&i.jumpAerial);
   const up=attackDirection(i).y<-.5;
-  i.shieldUpSmash=!!(f.grounded&&i.guard&&up&&(i.smash||(i.jab||i.heavy)&&i.smashFlick&&!i.forceTilt));
+  i.shieldUpSmash=!!(f.grounded&&i.guard&&up&&!i.special&&!i.grab&&(i.smash||(i.jab||i.heavy)&&i.smashFlick&&!i.forceTilt));
   if(i.shieldUpSmash&&!i.jumpAerial){i.smash=true;i.jab=i.heavy=false;}
-  if(f.grounded&&i.guard&&buttons.attack.press&&!i.jumpAerial&&!i.shieldUpSmash&&(['ShieldStart','ShieldHold'].includes(guardMode)||PlayerStates.defs[guardMode]?.shield)){i.grab=true;i.jab=i.heavy=false;}
+  if(f.grounded&&i.guard&&buttons.attack.press&&!i.special&&!i.smash&&!i.jumpAerial&&!i.shieldUpSmash&&(['ShieldStart','ShieldHold'].includes(guardMode)||PlayerStates.defs[guardMode]?.shield)){i.grab=true;i.jab=i.heavy=false;}
   i.mash=Object.values(buttons).filter(b=>b.press).length+(i.flickX||i.flickY?1:0);
   if(f.characterId==='sol')solCancelInput(f,i);
   if(f.characterId==='battlemage')battlemageChaserInput(f,i);
   if(f.characterId==='miyabi')miyabiFollowInput(f,i);
   f.input=i;f.inputHistory??=[];f.inputHistory.push({frame,x:i.x,y:i.y,rx:i.rx||0,ry:i.ry||0,buttons:Object.entries(buttons).filter(([,v])=>v.value).map(([k])=>k),bufferAge:f.lastBufferAge??0});if(f.inputHistory.length>120)f.inputHistory.shift();return i;
  }
- function queue(f,i){let group=f.ledge?'ledge':f.grounded?'ground':'air',key=i.jumpAerial?'jump':priority[group].find(k=>k!=='guard'&&i[k]);if(!f.grounded&&i.guardPressed&&!f.airDodged&&!i.jumpAerial)key='guard';else if(i.dodgePressed&&!key)key='dodge';if(key)f.buffer={key,x:['guard','dodge'].includes(key)?i.x:i.stickAttack?.x??i.x,y:['guard','dodge'].includes(key)?i.y:i.stickAttack?.y??i.y,age:0,smashFlick:i.smashFlick,forceTilt:i.forceTilt,jumpAerial:i.jumpAerial,shortHopAttack:i.shortHopAttack,twoJumps:i.twoJumps,shieldUpSmash:i.shieldUpSmash};else if(f.buffer&&++f.buffer.age>9)f.buffer=null;
+ function queue(f,i,frozen=false){let group=f.ledge?'ledge':f.grounded?'ground':'air',key=i.jumpAerial?'jump':priority[group].find(k=>k!=='guard'&&i[k]);if(!f.grounded&&i.guardPressed&&!f.airDodged&&!i.jumpAerial)key='guard';else if(i.dodgePressed&&!key)key='dodge';if(key)f.buffer={key,x:['guard','dodge'].includes(key)?i.x:i.stickAttack?.x??i.x,y:['guard','dodge'].includes(key)?i.y:i.stickAttack?.y??i.y,attackAxis:i.attackAxis,age:0,smashFlick:i.smashFlick,forceTilt:i.forceTilt,jumpAerial:i.jumpAerial,shortHopAttack:i.shortHopAttack,twoJumps:i.twoJumps,shieldUpSmash:i.shieldUpSmash};else if(f.buffer&&!frozen&&!f.hitlag&&++f.buffer.age>9)f.buffer=null;
  }
- function consume(f,i){if(!f.buffer)return i;let b=f.buffer;f.buffer=null;f.lastBufferAge=b.age;const next={...i,[b.key]:true,x:b.x,y:b.y,smashFlick:b.smashFlick,forceTilt:b.forceTilt,jumpAerial:b.jumpAerial,shortHopAttack:b.shortHopAttack,twoJumps:b.twoJumps,shieldUpSmash:b.shieldUpSmash};if(b.key==='guard')next.guardPressed=true;if(b.key==='dodge'){next.dodgePressed=true;next.dodgeDirection=dodgeDirection(next);}return next;}
+ function consume(f,i){if(!f.buffer)return i;let b=f.buffer;f.buffer=null;f.lastBufferAge=b.age;const next={...i,jump:false,grab:false,jab:false,heavy:false,smash:false,special:false,[b.key]:true,smashFlick:b.smashFlick,forceTilt:b.forceTilt,jumpAerial:b.jumpAerial,shortHopAttack:b.shortHopAttack,twoJumps:b.twoJumps,shieldUpSmash:b.shieldUpSmash,attackAxis:b.attackAxis};delete next.stickAttack;if(['guard','dodge'].includes(b.key)){next.x=b.x;next.y=b.y;}else if(['grab','jab','heavy','smash','special'].includes(b.key))next.stickAttack={x:b.x,y:b.y};if(b.key==='guard')next.guardPressed=true;if(b.key==='dodge'){next.dodgePressed=true;next.dodgeDirection=dodgeDirection(next);}return next;}
  return{sample,queue,consume,priority,attackDirection,dodgeDirection,jumpAttack};
 })();
-function prepareFighter(f){AirMobility.configure(CharacterData[f.characterId]||CharacterData.dragoon,f.characterId);f.character={...(CharacterData[f.characterId]||CharacterData.dragoon)};BattleSize.prepare(f);Object.assign(f,{mode:'Idle',stateFrame:1,stateDuration:Infinity,stateStart:frame,stateEnd:Infinity,faf:Infinity,shield:50,shieldStun:0,shieldHeldFrames:0,shieldOffset:[0,0],hitlag:0,frozen:null,pendingLaunch:null,launchDecay:.075,committedDrop:null,flickAge:99,dashAttackResumeUntil:0,smashFlickAge:99,smashNeutralAge:99,rightStickReady:true,dodgeStickReady:true,gravityOff:false,armorHits:0,input:null,dodge:null,ledge:null,ledgeExitSide:0,ledgeInvOnCatch:0,meteor:false,intangible:0,grabImmunity:0,techBuffer:0,techLock:0,dodgeStale:0,dodgeRest:0,ledgeGrabs:0,airJumps:f.character.airJumpCount,airHoverSpent:0,airHoverActive:false,fastFall:false,shortHopGrace:0,staleQueue:[],inputHistory:[],tumbling:false});return f;}
+function prepareFighter(f){AirMobility.configure(CharacterData[f.characterId]||CharacterData.dragoon,f.characterId);f.character={...(CharacterData[f.characterId]||CharacterData.dragoon)};BattleSize.prepare(f);Object.assign(f,{mode:'Idle',stateFrame:1,stateDuration:Infinity,stateStart:frame,stateEnd:Infinity,faf:Infinity,shield:50,shieldStun:0,shieldHeldFrames:0,shieldOffset:[0,0],hitlag:0,frozen:null,pendingLaunch:null,launchDecay:.075,committedDrop:null,flickAge:99,dashAttackResumeUntil:0,smashFlickAge:99,smashAxes:null,directionAxis:null,rightStickReady:true,dodgeStickReady:true,gravityOff:false,armorHits:0,input:null,dodge:null,ledge:null,ledgeExitSide:0,ledgeInvOnCatch:0,meteor:false,intangible:0,grabImmunity:0,techBuffer:0,techLock:0,dodgeStale:0,dodgeRest:0,ledgeGrabs:0,airJumps:f.character.airJumpCount,airHoverSpent:0,airHoverActive:false,fastFall:false,shortHopGrace:0,staleQueue:[],inputHistory:[],tumbling:false});return f;}
 function moveToward(value,target,amount){return value<target?Math.min(target,value+amount):Math.max(target,value-amount);}
 function baseHurtboxes(f){if(NewcomerCore.ids.includes(f.characterId))return NewcomerCore.registry[f.characterId].hurtboxes(f);if(f.characterId==='headmaster')return HeadmasterRules.hurtboxes(f);if(f.characterId==='pawapuro')return PawapuroRules.hurtboxes(f);if(f.characterId==='agumon')return AgumonRules.hurtboxes(f);if(f.characterId==='pokoa'){const form=PokoaRules.form(f);if(form==='ditto')return[{x:f.x,y:f.y-22,r:23,part:'torso'}];if(form==='lapras'||form==='dragonite')return[{x:f.x+f.face*23,y:f.y-62,r:19,part:'head'},{x:f.x,y:f.y-36,r:25,part:'torso'},{x:f.x-f.face*23,y:f.y-20,r:16,part:'legs'}];}let crouch=['Crouch','JumpSquat','SpotDodge','Knockdown'].includes(f.mode),poseData=f.attack?CombatData.sample(f.attack,f.timer):null,lean=poseData?.phase==='attack'?f.face*9:0,s=f.character?.hurtboxScale||1;
  if(f.characterId==='will'&&f.attack?.horse&&f.attack.mounted)return f.attack.riderHurtboxes.map(h=>({part:h.part,x:f.x+h.x*f.face,y:f.y+h.y,r:h.radius}));
