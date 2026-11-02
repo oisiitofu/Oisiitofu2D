@@ -47,6 +47,8 @@ html=require('./script-bundle.cjs').html(Buffer.from(html));
 html=html.replace(/<option value="online">[^<]*<\/option>/g,'');
 write('index.html',html);
 write('character-sizes.html',read('character-sizes.html'));
+write('game.webmanifest',read('game.webmanifest'));
+write('assets/app-icon.png',fs.readFileSync(path.join(root,'assets/app-icon.png')));
 for(const match of html.matchAll(/href="([^"?#]+\.css)"/g))write(match[1],read(match[1]));
 const manifest=JSON.parse(read('assets/ready/manifest.json'));write('assets/ready/manifest.json',JSON.stringify(manifest));
 const inputs=[],seen=new Set();

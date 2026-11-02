@@ -1,5 +1,15 @@
 /* Scoped to the saved/automatic touch mode; the desktop layout is unchanged. */
 #touch-controls[hidden]{display:none!important}
+/* Block double-tap zoom on blank areas too, while menus retain pan/pinch. */
+body.touch-mode #app,body.touch-mode dialog{touch-action:manipulation}
+body.touch-mode #game,body.touch-mode #touch-controls{touch-action:none}
+#exit-fullscreen[hidden]{display:none!important}
+#exit-fullscreen{position:absolute;top:max(4px,env(safe-area-inset-top));right:max(5px,env(safe-area-inset-right));z-index:7;min-width:44px;min-height:40px;padding:5px 10px;background:#0b1b2eef;color:#d9efff;font-size:11px;border:1px solid #7ba8ce;border-radius:8px;touch-action:manipulation}
+body.touch-mode.fullscreen-view{--touch-top:env(safe-area-inset-top,0px)}
+body.touch-mode.fullscreen-view .topbar{display:none}
+body.touch-mode.fullscreen-view #battlebar{right:100px}
+body.touch-mode.fullscreen-view .character-screen{padding-top:46px}
+body.touch-mode.fullscreen-view .home-screen{padding-top:46px}
 #touch-controls{position:absolute;inset:0;z-index:4;pointer-events:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
 #touch-controls button,#touch-stick{pointer-events:auto;touch-action:none;-webkit-tap-highlight-color:transparent}
 #touch-controls button{transition:none;font-size:11px;font-weight:700;letter-spacing:0;color:#edf5ff;background:#172c46;border:1px solid #7da7ca80;box-shadow:0 3px 0 #020813;padding:0;min-height:46px;border-radius:14px}
