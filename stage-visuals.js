@@ -4,7 +4,7 @@ const StageVisuals=(()=>{
  const images=new Map(),loading=new Map();let clock=0;
  function urls(id=activeStage){const d=StageArtData[StageCatalog.get(id).theme];return d?[d.background,d.main.image,d.small.image]:[];}
  function prepared(id=activeStage){return urls(id).every(url=>images.has(url));}
- async function load(id=activeStage){await Promise.all(urls(id).map(url=>{if(images.has(url))return;if(!loading.has(url))loading.set(url,(async()=>{const img=new Image();img.src=url;await img.decode();images.set(url,img);})().finally(()=>loading.delete(url)));return loading.get(url);}));}
+ async function load(id=activeStage){await Promise.all(urls(id).map(url=>{if(images.has(url))return;if(!loading.has(url))loading.set(url,(async()=>{const img=new Image();if(typeof TouchControls!=='undefined'&&TouchControls.enabled)img.fetchPriority='high';img.src=url;await img.decode();images.set(url,img);})().finally(()=>loading.delete(url)));return loading.get(url);}));}
  function retain(id=activeStage){const keep=new Set(urls(id));for(const url of images.keys())if(!keep.has(url))images.delete(url);}
  function background(){
   const stage=StageCatalog.get(activeStage),art=StageArtData[stage.theme];if(!art)return false;

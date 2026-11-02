@@ -4,16 +4,19 @@ const ArtLoader=(()=>{
  let manifest=null,initializing=null;
  const raw=new URLSearchParams(location.search).has('rawArt');
  const images=new Map(),decodedImages=new Map(),portraits=new Map(),hudImages=new Map(),pendingLoads=new Map(),resident=new Map();
+ const mobile=()=>typeof TouchControls!=='undefined'&&TouchControls.enabled;
  // Physics needs native pose dimensions before a fighter's textures are resident.
  // These records are deliberately not drawable and keep hitbox sizing stable.
  function describe(id){const e=manifest?.characters[id];if(!e)return;const frames=e.frames.map(([, ,width,height])=>({width,height}));characterArt[id]={pending:true,frames,tints:Array(5).fill(frames),effects:e.effects.map(([, ,width,height])=>({width,height}))};}
  function family(id){return ['agumon','greymon','metalgreymon','wargreymon','omegamon'].includes(id)?['agumon','greymon','metalgreymon','wargreymon','omegamon']:['hanajs','hanajk','hanajd'].includes(id)?['hanajs','hanajk','hanajd']:[id];}
  function requests(players){const wanted=new Map();for(const p of players)for(const root of[p.character,...(Array.isArray(p.team)?p.team:[])])for(const id of family(root)){if(!manifest?.characters[id])continue;if(!wanted.has(id))wanted.set(id,new Set());wanted.get(id).add(Number(p.color)||0);}return wanted;}
  function prepared(players){if(!manifest)return true;return [...requests(players)].every(([id,colors])=>resident.has(id)&&[...colors].every(c=>resident.get(id).warmed.has(c)));}
- async function prepare(players){if(!manifest)return;for(const[id,colors]of requests(players)){await load(id);const r=resident.get(id),a=characterArt[id];for(const color of colors){if(r.warmed.has(color))continue;for(let n=0;n<a.frames.length;n++){void a.tints[color][n];if(n%8===7)await new Promise(resolve=>setTimeout(resolve,0));}for(const im of a.effects)void im;for(const im of r.extra)void im;const e=manifest.characters[id],portrait=e.selectionPortraits?.[color]||e.portraits?.[color];if(portrait)hudImages.set(portrait,await image(portrait));r.warmed.add(color);}}}
+ async function prepare(players){if(!manifest)return;const jobs=[...requests(players)];async function warm([id,colors]){await load(id);const r=resident.get(id),a=characterArt[id];for(const color of colors){if(r.warmed.has(color))continue;for(let n=0;n<a.frames.length;n++){void a.tints[color][n];if(n%8===7)await new Promise(resolve=>setTimeout(resolve,0));}for(const im of a.effects)void im;for(const im of r.extra)void im;const e=manifest.characters[id],portrait=e.selectionPortraits?.[color]||e.portraits?.[color];if(portrait)hudImages.set(portrait,await image(portrait));r.warmed.add(color);}}
+  if(mobile()){await Promise.all(Array.from({length:Math.min(2,jobs.length)},async()=>{while(jobs.length)await warm(jobs.shift());}));}else for(const job of jobs)await warm(job);
+ }
  function retain(players){if(!manifest)return;const keep=requests(players);for(const[id,r]of resident){if(keep.has(id))continue;for(const c of r.surfaces){c.width=c.height=1;}for(const url of r.urls){images.delete(url);decodedImages.delete(url);}resident.delete(id);describe(id);if(id==='dragoon'){spriteFrames=[];tints=[];}if(id==='isaac')IsaacVFX.loadFrames([]);}}
  async function image(url){
-  if(!images.has(url))images.set(url,(async()=>{const img=new Image();img.src=url;await img.decode();decodedImages.set(url,img);return img;})().catch(e=>{images.delete(url);throw e;}));
+  if(!images.has(url))images.set(url,(async()=>{const img=new Image();if(mobile())img.fetchPriority='high';img.src=url;await img.decode();decodedImages.set(url,img);return img;})().catch(e=>{images.delete(url);throw e;}));
   return images.get(url);
  }
  function cropped(sheet,rect){const [x,y,w,h]=rect,c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(sheet,x,y,w,h,0,0,w,h);return c;}
@@ -44,6 +47,9 @@ const ArtLoader=(()=>{
    catch{manifest=null;return false;}
    for(const id of Object.keys(manifest.characters))describe(id);
    Roster.artReady();
+   // Mobile menus may show while offscreen thumbnails are still loading.
+   // The match's own textures remain behind prepare()/the online loaded barrier.
+   if(mobile())return true;
    // Give small selection portraits priority over full combat textures.
    try{await Promise.all(Roster.definitions.map(d=>thumbnail(d.id)?.src||portrait(d.id,0,d.pose,true)).filter(Boolean).map(url=>image(url)));}
    catch{/* A failed thumbnail must not trigger parsing every full source sheet. */}
