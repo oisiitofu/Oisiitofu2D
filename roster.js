@@ -296,6 +296,7 @@ const Roster=(()=>{
  }
  function fit(){
   const grid=document.querySelector('#fighter-grid'),width=grid.clientWidth,height=grid.clientHeight;if(!width||!height)return;
+  if(document.body.classList.contains('touch-mode')){grid.style.setProperty('--roster-columns',Math.max(3,Math.floor(width/90)));grid.style.setProperty('--roster-label-height','22px');grid.classList.remove('compact-cards');for(const el of grid.querySelectorAll('.fighter-card>b'))el.style.fontSize='11px';return;}
   const card=grid.querySelector('.fighter-card'),count=grid.querySelectorAll('.fighter-card').length,style=getComputedStyle(grid),border=parseFloat(getComputedStyle(card).borderTopWidth)*2,gapX=parseFloat(style.columnGap),gapY=parseFloat(style.rowGap),fontSize=parseFloat(style.getPropertyValue('--roster-name-size'))||12;
   const measure=document.createElement('canvas').getContext('2d'),family=getComputedStyle(card.querySelector('b')).fontFamily;measure.font=`900 ${fontSize}px ${family}`;
   // Fit every fighter at 100% zoom; choose the grid with the largest portraits.

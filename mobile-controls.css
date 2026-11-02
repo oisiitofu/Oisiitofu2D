@@ -1,0 +1,64 @@
+/* Scoped to the saved/automatic touch mode; the desktop layout is unchanged. */
+#touch-controls[hidden]{display:none!important}
+#touch-controls{position:absolute;inset:0;z-index:4;pointer-events:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+#touch-controls button,#touch-stick{pointer-events:auto;touch-action:none;-webkit-tap-highlight-color:transparent}
+#touch-controls button{transition:none;font-size:11px;font-weight:700;letter-spacing:0;color:#edf5ff;background:#172c46;border:1px solid #7da7ca80;box-shadow:0 3px 0 #020813;padding:0;min-height:46px;border-radius:14px}
+#touch-controls button.pressed{background:#81ccff;color:#071528;box-shadow:inset 0 2px 7px #0005;border-color:#c3eeff}
+.touch-left{position:absolute;left:max(10px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));width:122px;display:grid;justify-items:center;gap:7px}
+#touch-stick{position:relative;width:118px;height:118px;border-radius:50%;background:radial-gradient(circle,#203a57 0 35%,#0c1a2c 36% 65%,#314962 66% 68%,#0c1929 69%);border:1px solid #94bcdf80;box-shadow:inset 0 0 20px #0008}
+.touch-directions{position:absolute;inset:0;display:grid;place-items:center;font:100 90px Arial;color:#99c6e334;line-height:1}
+#touch-stick-knob{position:absolute;left:36px;top:36px;width:44px;height:44px;border-radius:50%;background:linear-gradient(140deg,#c0e8ff,#639bc8);border:2px solid #bfe8ff;box-shadow:0 4px 12px #0008;pointer-events:none}
+.touch-stick-label{font-size:10px;color:#9db7cf}#touch-controls #touch-help{min-height:36px;width:100px;font-size:10px;border-radius:8px;touch-action:manipulation}
+.touch-right{position:absolute;right:max(8px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));width:176px;display:grid;grid-template-columns:repeat(3,54px);grid-template-rows:46px 56px 60px;gap:7px}
+#touch-controls .touch-smash{font-size:9px;grid-column:1;grid-row:2}#touch-controls .touch-special{grid-column:2;grid-row:2;background:#50355b;border-color:#cc9be4}
+#touch-controls .touch-attack{grid-column:3;grid-row:2;background:#325579;border-color:#9bceff}#touch-controls .touch-jump{grid-column:2/4;grid-row:3;background:#28584f;border-color:#88d6c0}
+.touch-orientation-hint{display:none}.touch-settings{padding:12px 0;border-bottom:1px solid #68869d55}.touch-settings select{min-height:44px}.touch-instructions{font-size:13px;line-height:1.7}.touch-instructions dt{color:#88d4ff;font-weight:700;margin-top:14px}.touch-instructions dd{margin:4px 0;color:#c0cfe0}
+/* Training diagnostics stay one tap away without covering the fight. */
+#touch-training-toggle{display:none}
+body.touch-battle:has(#training-tools:not(.hidden)) #touch-training-toggle{display:block}
+body.touch-battle:not(.touch-training-open) #training-tools{display:none}
+body.touch-battle #battlelabel{display:none}
+body.touch-battle #training-reset{font-size:0!important}
+body.touch-battle #training-reset::after{content:'リセット';font-size:11px}
+body.touch-mode{overscroll-behavior:none;--touch-top:calc(50px + env(safe-area-inset-top))}body.touch-mode #app{height:100dvh;min-height:0}body.touch-mode button,body.touch-mode a,body.touch-mode select{touch-action:manipulation}
+body.touch-mode .topbar{height:var(--touch-top);padding:calc(5px + env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) 5px max(10px,env(safe-area-inset-left))}
+body.touch-mode .brand small,body.touch-mode .live{display:none}body.touch-mode .brand{font-size:12px;letter-spacing:0}body.touch-mode .brand .brand-icon{width:27px;height:27px}
+body.touch-mode .topbar button{min-width:40px;min-height:40px;padding:4px}body.touch-mode .master-volume input{width:65px}body.touch-mode .master-volume output{display:none}
+body.touch-mode .tofu-menu,body.touch-mode .tofu-menu:has(#character-screen:not(.hidden)){inset:var(--touch-top) 0 0}
+body.touch-mode .home-screen{min-height:calc(100dvh - var(--touch-top));height:auto;overflow:visible;padding:20px 5% 65px;gap:20px;grid-template-columns:1fr}
+body.touch-mode .home-copy h1{font-size:64px;margin:16px 0}body.touch-mode .home-actions{padding-top:100px}body.touch-mode .home-roster-art{height:100px;top:0}body.touch-mode .home-roster-art img{height:110px}body.touch-mode .home-roster-art img:nth-child(2){height:125px}
+body.touch-mode .home-utilities{flex-wrap:wrap}body.touch-mode .home-utilities button{min-height:44px;font-size:11px;padding:8px 12px}body.touch-mode .home-updates ol{max-height:120px}
+body.touch-mode .character-screen{height:calc(100dvh - var(--touch-top));padding:6px 10px 8px;grid-template-rows:112px minmax(0,1fr);gap:5px}
+body.touch-mode .roster-heading{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:48px 58px;gap:4px 6px;margin:0}body.touch-mode .roster-heading h2{font-size:17px}body.touch-mode .roster-heading small,body.touch-mode .roster-count{display:none}
+body.touch-mode .roster-toolbar{grid-row:1;grid-column:3;gap:5px}body.touch-mode .roster-toolbar>button,body.touch-mode .roster-match-actions>button{min-height:32px;font-size:10px;padding:6px}
+body.touch-mode .roster-toolbar #open-fighter-list{min-height:28px;font-size:10px}body.touch-mode .roster-heading>#back-home{min-height:40px;font-size:12px}
+body.touch-mode .stage-picker{grid-row:2;grid-column:1/-1}body.touch-mode .stage-controls{grid-template-columns:30px minmax(0,1fr) 30px}body.touch-mode .stage-controls>button{min-width:30px;padding:0}
+body.touch-mode .roster-layout{grid-template-rows:minmax(0,1fr) 90px;gap:5px}body.touch-mode .fighter-library{grid-template-rows:68px minmax(0,1fr);min-height:0;gap:5px}
+body.touch-mode .fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:68px 38px minmax(0,1fr)}
+body.touch-mode .fighter-grid{display:grid;grid-template-columns:repeat(var(--roster-columns,4),minmax(0,1fr));grid-template-rows:none;grid-auto-rows:94px;overflow:auto;align-content:start;overscroll-behavior:contain;touch-action:pan-y;padding:3px;scrollbar-gutter:stable}
+body.touch-mode .fighter-card{height:94px;min-height:94px}body.touch-mode .fighter-card>b{font-size:11px!important;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}body.touch-mode .fighter-card img{height:calc(100% - 28px)}
+body.touch-mode .roster-targets{display:flex;flex-wrap:wrap;gap:3px;align-content:start}body.touch-mode .roster-target{height:34px;flex:1;min-width:0;max-width:none;padding:3px;font-size:10px}body.touch-mode .roster-target b{font-size:10px}body.touch-mode .roster-target img{width:26px;height:26px}
+body.touch-mode .roster-targets .costume-row{height:30px;margin:0;justify-content:center;flex-basis:100%}body.touch-mode .roster-targets .costume-row #swatches button{width:28px;height:28px}body.touch-mode #roster-selection-hint{display:none}
+body.touch-mode .roster-footer{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px}body.touch-mode .roster-actions{grid-template-rows:18px minmax(44px,1fr);gap:3px}body.touch-mode .fight-actions>.primary{font-size:13px;min-height:44px}
+body.touch-mode .selection-banner b{font-size:13px}body.touch-mode .selection-banner .selection-origin{font-size:10px}body.touch-mode .selected-fighter-panel{min-height:0}body.touch-mode .roster-actions #match-summary{font-size:9px}
+body.touch-mode dialog{max-height:calc(100dvh - 24px);max-width:94vw;padding:18px;overflow:auto}body.touch-mode dialog select,body.touch-mode dialog input:not([type=checkbox]):not([type=range]){font-size:16px;min-height:44px}body.touch-mode dialog button{min-height:44px}body.touch-mode dialog .close{min-width:44px}
+body.touch-mode .modal{width:min(440px,92vw);max-height:94dvh;overflow:auto;padding:20px}body.touch-mode .modal h2{font-size:30px;margin:8px 0 14px}body.touch-mode .modal button{min-height:44px;margin:4px 0}
+body.touch-battle #game{position:absolute;left:0;top:var(--touch-top);width:100%;height:calc(100% - 230px - var(--touch-top))}
+body.touch-battle #battlebar{top:calc(var(--touch-top) + 2px);bottom:auto!important;left:8px;right:8px;z-index:4;pointer-events:none;font-size:0;justify-content:flex-end;gap:4px}
+body.touch-battle #battlebar button{pointer-events:auto;min-height:36px;padding:4px 10px;font-size:11px}body.touch-battle #battlebar kbd{display:none}
+body.touch-battle #training-tools{top:calc(var(--touch-top) + 42px);left:8px;max-width:calc(100% - 16px);max-height:130px;overflow:auto;padding:6px;z-index:3}body.touch-battle #training-tools:not(:focus-within):not(:hover){opacity:.85}
+body.touch-battle .touch-orientation-hint{display:block;position:absolute;bottom:202px;left:12px;right:12px;text-align:center;font-size:10px;color:#8dabc6}
+body.touch-battle .overlay{z-index:6}body.touch-battle .network-wait{z-index:5}
+@media(max-aspect-ratio:7/5){
+ body.touch-mode .home-screen{display:flex;flex-direction:column;align-items:stretch;gap:14px;padding-bottom:24px}
+ body.touch-mode .home-copy{display:contents}body.touch-mode .home-copy .edition{order:0}body.touch-mode .home-copy h1{order:1;font-size:54px;margin:0;line-height:.95}body.touch-mode .home-copy h1 em{margin-top:10px}body.touch-mode .home-copy p{display:none}
+ body.touch-mode .home-actions{order:2;padding-top:0;gap:8px}body.touch-mode .home-roster-art{display:none}body.touch-mode .mode-card{min-height:68px;padding:12px 16px}body.touch-mode .mode-card b{font-size:20px}
+ body.touch-mode .home-updates{order:3;width:100%;margin:8px 0}body.touch-mode .tofu-footer{order:4;position:static;font-size:8px}
+}
+@media(min-aspect-ratio:7/5){
+ body.touch-mode .home-screen{grid-template-columns:1fr 1fr;padding-top:16px;align-items:start}body.touch-mode .home-copy h1{font-size:60px}body.touch-mode .home-copy p{display:none}body.touch-mode .home-actions{padding-top:0}body.touch-mode .home-roster-art{display:none}body.touch-mode .mode-card{min-height:64px;padding:10px 14px}body.touch-mode .mode-card b{font-size:18px}body.touch-mode .mode-card em{font-size:9px}
+ body.touch-mode .character-screen{grid-template-rows:96px minmax(0,1fr)}body.touch-mode .roster-heading{grid-template-rows:42px 48px}body.touch-mode .roster-layout{grid-template-rows:minmax(0,1fr) 64px}body.touch-mode .fighter-library{grid-template-rows:36px minmax(0,1fr)}body.touch-mode .roster-targets{flex-wrap:nowrap}body.touch-mode .roster-targets .costume-row{flex-basis:auto;margin-left:auto}body.touch-mode .fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:36px 30px minmax(0,1fr)}
+ body.touch-battle #game{left:calc(138px + env(safe-area-inset-left));right:calc(190px + env(safe-area-inset-right));width:calc(100% - 328px - env(safe-area-inset-left) - env(safe-area-inset-right));top:var(--touch-top);height:calc(100% - var(--touch-top) - env(safe-area-inset-bottom))}
+ body.touch-battle #battlebar{left:calc(145px + env(safe-area-inset-left));right:calc(195px + env(safe-area-inset-right))}body.touch-battle #training-tools{left:145px;max-width:calc(100% - 340px);max-height:90px}
+ body.touch-battle .touch-orientation-hint{display:none}.touch-left,.touch-right{bottom:max(14px,env(safe-area-inset-bottom))}
+}
