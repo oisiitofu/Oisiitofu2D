@@ -30,10 +30,10 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
   for(const[width,height]of[[1280,720],[1440,900]]){
    await a.setViewportSize({width,height});await a.locator('#result .restart').scrollIntoViewIfNeeded();await a.screenshot({path:`previews/quality/result-ready-${tag}-${width}.png`});
    eq(await a.locator('#result-readiness').evaluate(e=>{const r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.top>=0&&r.bottom<=innerHeight;}),true,'readiness fits '+width);
-   eq(await a.locator('#result .modal').evaluate(e=>e.scrollHeight<=e.clientHeight+1),true,'whole result fits without scrolling '+width);
+   eq(await a.locator('#result .modal').evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&e.scrollWidth<=e.clientWidth+1;}),true,'result remains bounded with scrollable match analysis '+width);
    eq(await a.locator('#result-ready-players span').evaluateAll(es=>es.every(e=>e.scrollWidth<=e.clientWidth+1&&parseFloat(getComputedStyle(e).fontSize)>=12)),true,'long names wrap '+width);
   }
-  await b.click('#result .restart');await waitCount(a,2);await b.click('#result .back');await waitCount(a,1);eq(await b.evaluate(()=>state),'menu');await b.click('[data-id="isaac"]');
+  await b.click('#result .restart');await waitCount(a,2);await b.click('#result-room');await waitCount(a,1);eq(await b.evaluate(()=>state),'menu');eq(await b.evaluate(()=>Net.code),code,'room return preserves membership');eq(await b.locator('#online-room').evaluate(e=>e.open),true,'room return opens lobby');await b.click('#close-room');await b.click('[data-id="isaac"]');
   await d.evaluate(()=>Net.leave());await a.waitForFunction(()=>document.querySelector('#result-ready-count').textContent==='参加 3/4人');await waitCount(a,0);
   eq(await a.locator('#result-ready-players li').last().locator('b').textContent(),'参加待ち');eq(await d.locator('#result .restart').isDisabled(),false);
   await a.click('#result .restart');await waitCount(a,1);await d.click('#result .restart');eq(await d.locator('#result').isVisible(),false,'rejoin clears result overlay');eq(await d.locator('#online-room').evaluate(e=>e.open),true);

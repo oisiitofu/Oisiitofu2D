@@ -112,7 +112,7 @@ const TifaRasterAnimation=(()=>{
   const p=placement(f,n);ctx.save();ctx.globalAlpha*=alpha;ctx.imageSmoothingEnabled=true;
   ctx.translate(f.x,f.y);const unit=scale*FIGHTER_SCALE*MorphieRules.scale(f)*BattleSize.art('tifa')*p.unit;
   ctx.scale(f.face*unit,unit);
-  if(f.inv>0&&alpha===1)ctx.globalAlpha*=.64+Math.sin(frame*.5)*.24;
+  if(f.inv>0&&alpha===1)ctx.globalAlpha*=Accessibility.flash?.64+Math.sin(frame*.5)*.24*Accessibility.flash:.82;
   // A single intact raster, no rotation, squash, crossfade or body-part transform.
   ctx.drawImage(img,-img.width*p.root,-p.floor,img.width,img.height);ctx.restore();return true;
  }

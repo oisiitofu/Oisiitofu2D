@@ -20,7 +20,7 @@ async function save(name,data,webp=false){let bytes=Buffer.from(data.split(',')[
  try{
   const page=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];
   page.on('pageerror',e=>errors.push(e.message));
-  const portraitsOnly=process.env.ART_PORTRAITS_ONLY==='1',requested=process.env.ART_IDS?.split(',').filter(Boolean),began=Date.now();
+  const presentationOnly=process.env.ART_PRESENTATION_ONLY==='1',portraitsOnly=process.env.ART_PORTRAITS_ONLY==='1'||presentationOnly,requested=process.env.ART_IDS?.split(',').filter(Boolean),began=Date.now();
   // A framing-only bake copies the existing lossless native frames. It does not
   // need to parse source sheets or rebuild full-body portraits/combat textures.
   // Incremental bakes parse only the requested source art. Keep other fighters
@@ -34,7 +34,8 @@ async function save(name,data,webp=false){let bytes=Buffer.from(data.split(',')[
   const manifest=requested||portraitsOnly?JSON.parse(fs.readFileSync(path.join(out,'manifest.json'),'utf8')):{version:1,characters:{},baselineMs};
   if(manifest.version!==1)throw Error('Cannot incrementally bake an incompatible manifest');
   for(const id of requested||ids){
-   const entry=await page.evaluate(async ({id,portraitsOnly,selectionSource})=>{
+   const entry=await page.evaluate(async ({id,portraitsOnly,presentationOnly,selectionSource})=>{
+    if(presentationOnly){if(!selectionSource)throw Error('Missing dedicated portrait source');const image=new Image();image.src=selectionSource.source;await image.decode();return{presentationFocus:((selectionSource.crop?.[0]||0)+(selectionSource.crop?.[2]||image.width)/2)/image.width,presentationPortraits:Array.from({length:5},(_,color)=>(()=>{const c=document.createElement('canvas');c.width=image.width;c.height=image.height;c.getContext('2d').drawImage(ArtLoader.tint(image,id,color),0,0);return c.toDataURL();})())};}
     if(ArtLoader.enabled&&!await ArtLoader.load(id)){if(id==='dragoon')await loadRaw();else await loadIsaacArt(id);}
     const art=characterArt[id],items=[...art.frames,...(art.effects||[])];
     const pose=Roster.definitions.find(d=>d.id===id).pose;
@@ -48,7 +49,9 @@ async function save(name,data,webp=false){let bytes=Buffer.from(data.split(',')[
       const tinted=ArtLoader.tint(image,id,color),canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;
       canvas.getContext('2d').drawImage(tinted,-x,-y);return canvas.toDataURL();
      });
-     selectionMetadata={selectionKind:'dedicated',selectionSource:selectionSource.source};
+     if(selectionSource.presentation)selectionMetadata.presentationFocus=(x+w/2)/image.width;
+     if(selectionSource.presentation)selectionMetadata.presentationPortraits=Array.from({length:5},(_,color)=>(()=>{const c=document.createElement('canvas');c.width=image.width;c.height=image.height;c.getContext('2d').drawImage(ArtLoader.tint(image,id,color),0,0);return c.toDataURL();})());
+     selectionMetadata={...selectionMetadata,selectionKind:'dedicated',selectionSource:selectionSource.source};
     }else{
      selectionPortraits=art.tints.map(v=>ArtLoader.portraitCanvas(v[pose],id).toDataURL());
      selectionCrop=ArtLoader.selectionCrop(art.frames[pose],id);
@@ -80,8 +83,10 @@ async function save(name,data,webp=false){let bytes=Buffer.from(data.split(',')[
     // by canvas GPU premultiplication rounding without a change in the artwork.
     const checksum=c=>{const copy=document.createElement('canvas');copy.width=c.width;copy.height=c.height;const cg=copy.getContext('2d',{willReadFrequently:true});cg.drawImage(c,0,0);const bytes=cg.getImageData(0,0,c.width,c.height).data;let h=2166136261;for(let p=0;p<bytes.length;p+=4){h=Math.imul(h^bytes[p+3],16777619);if(bytes[p+3]===255)for(let k=0;k<3;k++)h=Math.imul(h^bytes[p+k],16777619);}return(h>>>0).toString(16);};
     return{portraitPose:pose,png:packed.toDataURL(),palettePng:id==='dragoon'?null:palette.toDataURL(),frames:rects.slice(0,art.frames.length),effects:rects.slice(art.frames.length,art.frames.length+(art.effects?.length||0)),isaacVfx:extra.length?rects.slice(-extra.length):[],portraits,selectionPortraits,selectionCrop,...selectionMetadata,checks:{frames:art.frames.map(checksum),effects:(art.effects||[]).map(checksum),tints:art.tints.map(v=>v.map(checksum))}};
-   },{id,portraitsOnly,selectionSource:selectionSources[id]||null});
-   const {png,palettePng,portraits,selectionPortraits,...info}=entry;
+   },{id,portraitsOnly,presentationOnly,selectionSource:selectionSources[id]||null});
+   const {png,palettePng,portraits,selectionPortraits,presentationPortraits,...info}=entry;
+   if(presentationPortraits)info.presentationPortraits=await Promise.all(presentationPortraits.map((data,n)=>save(id+'-presentation-'+n,data,true)));
+   if(presentationOnly){Object.assign(manifest.characters[id],info);console.log('Baked '+id+': presentation portraits');continue;}
    const selectionUrls=await Promise.all(selectionPortraits.map((data,n)=>save(id+'-selection-'+n,data,!!info.selectionSource)));
    if(portraitsOnly){Object.assign(manifest.characters[id],info,{selectionPortraits:selectionUrls});manifest.characters[id].selectionThumbnails=await bakeThumbnails(root,id,manifest.characters[id]);console.log('Baked '+id+': selection portraits');continue;}
    info.image=await save(id+'-atlas',png,true);

@@ -296,9 +296,10 @@ const Roster=(()=>{
   for(const [id,direction]of [['stage-prev',-1],['stage-next',1]])$roster(id).onclick=()=>strip.scrollBy({left:direction*strip.clientWidth*.8,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
  }
  function fit(){
-  const grid=document.querySelector('#fighter-grid'),width=grid.clientWidth,height=grid.clientHeight;if(!width||!height)return;
+  const grid=document.querySelector('#fighter-grid'),width=grid.clientWidth,height=grid.clientHeight;if(!width||!height||!grid.querySelector('.fighter-card:not([hidden])'))return;
+  if(typeof Accessibility!=='undefined'&&Accessibility.textScale>1&&!document.body.classList.contains('touch-mode')){grid.style.setProperty('--roster-columns',Math.max(3,Math.floor(width/(110*Accessibility.textScale))));return;}
   if(document.body.classList.contains('touch-mode')){grid.style.setProperty('--roster-columns',Math.max(3,Math.floor(width/90)));grid.style.setProperty('--roster-label-height','22px');grid.classList.remove('compact-cards');for(const el of grid.querySelectorAll('.fighter-card>b'))el.style.fontSize='11px';return;}
-  const card=grid.querySelector('.fighter-card'),count=grid.querySelectorAll('.fighter-card').length,style=getComputedStyle(grid),border=parseFloat(getComputedStyle(card).borderTopWidth)*2,gapX=parseFloat(style.columnGap),gapY=parseFloat(style.rowGap),fontSize=parseFloat(style.getPropertyValue('--roster-name-size'))||12;
+  const card=grid.querySelector('.fighter-card:not([hidden])'),count=grid.querySelectorAll('.fighter-card:not([hidden])').length,style=getComputedStyle(grid),border=parseFloat(getComputedStyle(card).borderTopWidth)*2,gapX=parseFloat(style.columnGap),gapY=parseFloat(style.rowGap),fontSize=parseFloat(style.getPropertyValue('--roster-name-size'))||12;
   const measure=document.createElement('canvas').getContext('2d'),family=getComputedStyle(card.querySelector('b')).fontFamily;measure.font=`900 ${fontSize}px ${family}`;
   // Fit every fighter at 100% zoom; choose the grid with the largest portraits.
   let columns=1,best=-Infinity,label=0,nameSize=fontSize;

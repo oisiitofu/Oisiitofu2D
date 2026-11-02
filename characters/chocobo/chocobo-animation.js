@@ -130,7 +130,7 @@ const ChocoboAnimation=(()=>{
   const s=sample(f),p=s.parts,identity=!s.rotation&&JSON.stringify(p)===JSON.stringify(base);
   if(identity&&s.phase==='idle'&&!assembleBase)return false;
   const images=art.tints[f.color||0],source=images[0],unit=FIGHTER_SCALE*BattleSize.art('chocobo')*BattleSize.native('chocobo',0)*MorphieRules.scale(f)*scale,sk=skeleton(p),b=sk.bones;
-  ctx.save();ctx.translate(f.x,f.y);ctx.scale(f.face*unit,unit);ctx.globalAlpha*=alpha;if(f.inv>0&&alpha===1)ctx.globalAlpha*=.64+Math.sin((f.stateFrame||0)*.5)*.24;
+  ctx.save();ctx.translate(f.x,f.y);ctx.scale(f.face*unit,unit);ctx.globalAlpha*=alpha;if(f.inv>0&&alpha===1)ctx.globalAlpha*=Accessibility.flash?.64+Math.sin((f.stateFrame||0)*.5)*.24*Accessibility.flash:.82;
   ctx.translate(-106.5,-236);
   if(s.groundAnchor){
    // Topple the connected body onto the floor, without sinking its tail or

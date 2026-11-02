@@ -3,7 +3,7 @@
 const ArtLoader=(()=>{
  let manifest=null,initializing=null;
  const raw=new URLSearchParams(location.search).has('rawArt');
- const images=new Map(),decodedImages=new Map(),portraits=new Map(),hudImages=new Map(),pendingLoads=new Map(),resident=new Map();
+ const images=new Map(),decodedImages=new Map(),portraits=new Map(),hudImages=new Map(),presentationImages=new Map(),pendingLoads=new Map(),resident=new Map();
  const mobile=()=>typeof TouchControls!=='undefined'&&TouchControls.enabled;
  // Physics needs native pose dimensions before a fighter's textures are resident.
  // These records are deliberately not drawable and keep hitbox sizing stable.
@@ -11,10 +11,10 @@ const ArtLoader=(()=>{
  function family(id){return ['agumon','greymon','metalgreymon','wargreymon','omegamon'].includes(id)?['agumon','greymon','metalgreymon','wargreymon','omegamon']:['hanajs','hanajk','hanajd'].includes(id)?['hanajs','hanajk','hanajd']:[id];}
  function requests(players){const wanted=new Map();for(const p of players)for(const root of[p.character,...(Array.isArray(p.team)?p.team:[])])for(const id of family(root)){if(!manifest?.characters[id])continue;if(!wanted.has(id))wanted.set(id,new Set());wanted.get(id).add(Number(p.color)||0);}return wanted;}
  function prepared(players){if(!manifest)return true;return [...requests(players)].every(([id,colors])=>resident.has(id)&&[...colors].every(c=>resident.get(id).warmed.has(c)));}
- async function prepare(players){if(!manifest)return;const jobs=[...requests(players)];async function warm([id,colors]){await load(id);const r=resident.get(id),a=characterArt[id];for(const color of colors){if(r.warmed.has(color))continue;for(let n=0;n<a.frames.length;n++){void a.tints[color][n];if(n%8===7)await new Promise(resolve=>setTimeout(resolve,0));}for(const im of a.effects)void im;for(const im of r.extra)void im;const e=manifest.characters[id],portrait=e.selectionPortraits?.[color]||e.portraits?.[color];if(portrait)hudImages.set(portrait,await image(portrait));r.warmed.add(color);}}
+ async function prepare(players){if(!manifest)return;const jobs=[...requests(players)];async function warm([id,colors]){await load(id);const r=resident.get(id),a=characterArt[id];for(const color of colors){if(r.warmed.has(color))continue;for(let n=0;n<a.frames.length;n++){void a.tints[color][n];if(n%8===7)await new Promise(resolve=>setTimeout(resolve,0));}for(const im of a.effects)void im;for(const im of r.extra)void im;const e=manifest.characters[id],portrait=e.selectionPortraits?.[color]||e.portraits?.[color];if(portrait)hudImages.set(portrait,await image(portrait));if(e.presentationPortraits?.[color])presentationImages.set(id+':'+color,await image(e.presentationPortraits[color]));r.warmed.add(color);}}
   if(mobile()){await Promise.all(Array.from({length:Math.min(2,jobs.length)},async()=>{while(jobs.length)await warm(jobs.shift());}));}else for(const job of jobs)await warm(job);
  }
- function retain(players){if(!manifest)return;const keep=requests(players);for(const[id,r]of resident){if(keep.has(id))continue;for(const c of r.surfaces){c.width=c.height=1;}for(const url of r.urls){images.delete(url);decodedImages.delete(url);}resident.delete(id);describe(id);if(id==='dragoon'){spriteFrames=[];tints=[];}if(id==='isaac')IsaacVFX.loadFrames([]);}}
+ function retain(players){if(!manifest)return;const keep=requests(players);for(const[id,r]of resident){if(keep.has(id))continue;for(const c of r.surfaces){c.width=c.height=1;}for(const[color,url]of (manifest.characters[id].presentationPortraits||[]).entries()){presentationImages.delete(id+':'+color);images.delete(url);decodedImages.delete(url);}for(const url of r.urls){images.delete(url);decodedImages.delete(url);}resident.delete(id);describe(id);if(id==='dragoon'){spriteFrames=[];tints=[];}if(id==='isaac')IsaacVFX.loadFrames([]);}}
  async function image(url){
   if(!images.has(url))images.set(url,(async()=>{const img=new Image();if(mobile())img.fetchPriority='high';img.src=url;await img.decode();decodedImages.set(url,img);return img;})().catch(e=>{images.delete(url);throw e;}));
   return images.get(url);
@@ -112,6 +112,11 @@ const ArtLoader=(()=>{
   const key=id+':'+color;if(!hudImages.has(key)){const img=spriteFor({characterId:id,color},entry?.portraitPose??0);if(img)hudImages.set(key,portraitCanvas(img,id));}return hudImages.get(key);
  }
  async function platform(){return manifest?.platform?image(manifest.platform):null;}
- function thumbnail(id,color=0){const levels=manifest?.characters[id]?.selectionThumbnails;if(!levels?.length)return null;return{src:levels[0].urls[color],srcset:levels.map(level=>level.urls[color]+' '+level.width+'w').join(', '),aspect:levels[0].width/levels[0].height};}
- return{init,load,prepare,prepared,retain,platform,portrait,hudPortrait,thumbnail,portraitCanvas,selectionCrop,tint,get enabled(){return!!manifest},get raw(){return raw},get diagnostics(){return{resident:[...resident.keys()],warmed:[...resident].map(([id,r])=>({id,colors:[...r.warmed]})),surfaces:[...resident.values()].reduce((n,r)=>n+r.surfaces.size,0)};}};
+ function thumbnail(id,color=0){const entry=manifest?.characters[id],levels=entry?.selectionThumbnails;if(!levels?.length)return null;
+  const candidates=levels.map(level=>level.urls[color]+' '+level.width+'w'),nativeWidth=entry.selectionCrop?.[2];
+  // Filtering can leave one or two large cards. Let the browser select the
+  // existing native portrait instead of stretching the 560px menu thumbnail.
+  if(nativeWidth>levels.at(-1).width&&entry.selectionPortraits?.[color])candidates.push(entry.selectionPortraits[color]+' '+nativeWidth+'w');
+  return{src:levels[0].urls[color],srcset:candidates.join(', '),aspect:levels[0].width/levels[0].height};}
+ return{init,load,prepare,prepared,retain,platform,portrait,hudPortrait,victoryFocus:id=>manifest?.characters[id]?.presentationFocus??.5,victoryPortrait:(id,color=0)=>presentationImages.get(id+':'+color)||hudPortrait(id,color),thumbnail,portraitCanvas,selectionCrop,tint,get enabled(){return!!manifest},get raw(){return raw},get diagnostics(){return{resident:[...resident.keys()],warmed:[...resident].map(([id,r])=>({id,colors:[...r.warmed]})),surfaces:[...resident.values()].reduce((n,r)=>n+r.surfaces.size,0)};}};
 })();

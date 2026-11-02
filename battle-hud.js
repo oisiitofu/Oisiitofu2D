@@ -9,7 +9,7 @@ const BattleHud=(()=>{
  const headerInset=f=>extents.get(f.characterId)||0;
  const font=size=>`700 ${size}px 'Noto Sans JP', sans-serif`;
  function fit(context,value,width,size=14,minSize=12){
-  const full=String(value);context.save();let label=full;
+  const full=String(value);size=Math.round(Accessibility.smallText(size));minSize=Math.round(Accessibility.smallText(minSize));context.save();let label=full;
   try{context.font=font(size);while(size>minSize&&context.measureText(full).width>width){size--;context.font=font(size);}
    if(context.measureText(full).width>width){const parts=segmenter?[...segmenter.segment(full)].map(p=>p.segment):Array.from(full);let low=0,high=parts.length;while(low<high){const mid=Math.ceil((low+high)/2);if(context.measureText(parts.slice(0,mid).join('')+'…').width<=width)low=mid;else high=mid-1;}label=context.measureText('…').width<=width?parts.slice(0,low).join('')+'…':'';}
    return{label,size,width:context.measureText(label).width,full};

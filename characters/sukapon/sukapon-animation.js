@@ -100,7 +100,7 @@ const SukaponAnimation=(()=>{
   const art=characterArt.sukapon;if(!art?.frames[60])return false;
   const s=sample(f),factor=MorphieRules.scale(f)*scale;
   ctx.save();ctx.translate(f.x,f.y);ctx.scale(f.face*factor,factor);ctx.globalAlpha*=alpha;
-  if(f.inv>0&&alpha===1)ctx.globalAlpha*=.64+Math.sin((f.stateFrame||0)*.5)*.24;
+  if(f.inv>0&&alpha===1)ctx.globalAlpha*=Accessibility.flash?.64+Math.sin((f.stateFrame||0)*.5)*.24*Accessibility.flash:.82;
   if(s.rotation){ctx.translate(0,-40);ctx.rotate(s.rotation);ctx.translate(0,40);}
   const parts={backFoot:[9,23],backHand:[6,20],body:[4,29],frontFoot:[8,23],head:[s.head,49],frontHand:[5,20]};
   for(const [name,[index,w]]of Object.entries(parts)){

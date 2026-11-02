@@ -870,7 +870,8 @@
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/dietrich-sword-final.json",
-    "framing": "head and shoulders; matched to roster 1-55"
+    "framing": "head and shoulders; matched to roster 1-55",
+    "presentation": true
   },
   "edf": {
     "source": "characters/edf/assets/edf-selection.png",
@@ -1026,7 +1027,8 @@
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/odio-prompts-final.json",
-    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame"
+    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame",
+    "presentation": true
   },
   "laharl": {
     "source": "characters/laharl/assets/laharl-selection.png",
@@ -1680,7 +1682,8 @@
       500
     ],
     "mode": "built-in imagegen",
-    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame"
+    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame",
+    "presentation": true
   },
   "billy": {
     "source": "characters/billy/assets/billy-selection.png",
@@ -2207,7 +2210,8 @@
       660
     ],
     "mode": "built-in imagegen",
-    "framing": "Dedicated high-resolution portrait; face moved up and right, slightly zoomed per 2026-11-01 request"
+    "framing": "Dedicated high-resolution portrait; face moved up and right, slightly zoomed per 2026-11-01 request",
+    "presentation": true
   },
   "battlecat": {
     "source": "characters/battlecat/assets/battlecat-selection.png",
@@ -2339,7 +2343,8 @@
       600
     ],
     "mode": "built-in imagegen",
-    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame"
+    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame",
+    "presentation": true
   },
   "namine": {
     "source": "characters/namine/assets/namine-selection.png",
@@ -2350,7 +2355,8 @@
       600
     ],
     "mode": "built-in imagegen",
-    "framing": "Closer face and shoulders requested2026-11-01; forehead, eyes and chin visible"
+    "framing": "Closer face and shoulders requested2026-11-01; forehead, eyes and chin visible",
+    "presentation": true
   },
   "velvet": {
     "source": "characters/velvet/assets/velvet-selection.png",
@@ -2361,7 +2367,8 @@
       600
     ],
     "mode": "built-in imagegen",
-    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame"
+    "framing": "Face-focused close crop requested2026-10-31; eyes/forehead/chin complete, outer hair/ornaments naturally outside frame",
+    "presentation": true
   },
   "leanne": {
     "source": "characters/leanne/assets/leanne-selection.png",
@@ -2383,7 +2390,8 @@
       550
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "framing": "dedicated high-resolution close head and shoulders",
+    "presentation": true
   },
   "yuma": {
     "source": "characters/yuma/assets/yuma-selection.png",
