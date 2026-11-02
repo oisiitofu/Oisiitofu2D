@@ -72,3 +72,71 @@ body.touch-battle .overlay{z-index:6}body.touch-battle .network-wait{z-index:5}
  body.touch-battle #battlebar{left:calc(145px + env(safe-area-inset-left));right:calc(195px + env(safe-area-inset-right))}body.touch-battle #training-tools{left:145px;max-width:calc(100% - 340px);max-height:90px}
  body.touch-battle .touch-orientation-hint{display:none}.touch-left,.touch-right{bottom:max(14px,env(safe-area-inset-bottom))}
 }
+
+/* Compact selection chrome only in touch mode, leaving desktop rules intact. */
+body.touch-mode:has(#menu:not(.hidden) #character-screen:not(.hidden)){--touch-top:calc(32px + env(safe-area-inset-top));--touch-card-height:clamp(72px,14dvh,94px)}
+body.touch-mode:has(#menu:not(.hidden) #character-screen:not(.hidden)) .topbar{height:var(--touch-top);min-height:0;padding-top:env(safe-area-inset-top);padding-bottom:0}
+body.touch-mode:has(#menu:not(.hidden) #character-screen:not(.hidden)) .topbar{padding-top:env(safe-area-inset-top);padding-bottom:0}
+body.touch-mode:has(#menu:not(.hidden) #character-screen:not(.hidden)) .topbar button{min-height:30px;min-width:32px}
+body.touch-mode:has(#menu:not(.hidden) #character-screen:not(.hidden)) .brand .brand-icon{height:22px;width:22px;font-size:14px}
+body.touch-mode .character-screen{padding:3px 6px 4px;grid-template-rows:60px minmax(0,1fr);gap:3px}
+body.touch-mode .roster-heading{grid-template-columns:minmax(0,1fr) 144px;grid-template-rows:25px 32px;gap:3px 6px}
+body.touch-mode .roster-heading>div:not(.roster-toolbar){display:none}
+body.touch-mode .roster-heading>#back-home{grid-row:1;grid-column:1;min-height:25px;width:max-content;padding:2px 7px;font-size:10px}
+body.touch-mode .roster-toolbar{grid-column:2;grid-row:1/3;grid-template-columns:1fr 1fr;grid-template-rows:29px 24px;gap:3px 4px;align-self:start}
+body.touch-mode .roster-toolbar>#open-match-settings,body.touch-mode .roster-toolbar>.open-settings{min-height:29px;min-width:0;padding:3px;font-size:10px;line-height:1.2}
+body.touch-mode .roster-toolbar>#open-fighter-list{min-height:24px;padding:2px;font-size:10px}
+body.touch-mode .stage-picker{grid-column:1;grid-row:2;grid-template-rows:1fr;gap:0}
+body.touch-mode .stage-picker-heading{display:none}
+body.touch-mode .stage-controls{grid-template-columns:22px minmax(0,1fr) 22px;gap:2px}
+body.touch-mode .stage-controls>button{min-width:22px;min-height:30px;font-size:18px}
+body.touch-mode .stage-strip .stage-card{flex-basis:112px;min-height:30px;padding:1px 3px;gap:3px}
+body.touch-mode .stage-card svg,body.touch-mode .stage-random{width:26px;height:22px;flex-basis:26px}
+body.touch-mode .stage-card b{font-size:9px;line-height:1.15}
+body.touch-mode .roster-layout{grid-template-rows:minmax(0,1fr) 48px;gap:3px}
+body.touch-mode .fighter-library{grid-template-rows:32px minmax(0,1fr);gap:3px}
+body.touch-mode .fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:32px 26px minmax(0,1fr)}
+body.touch-mode .roster-targets{display:flex;flex-wrap:nowrap;gap:3px;align-items:center;align-content:normal}
+body.touch-mode .roster-target{height:30px;min-width:0;flex:1 1 0;gap:3px;padding:2px}
+body.touch-mode .roster-target>span,body.touch-mode .roster-target b{font-size:9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body.touch-mode .roster-target img{width:18px;height:22px}
+body.touch-mode .roster-targets .costume-row{flex:0 0 auto;height:26px;margin:0;gap:3px}
+body.touch-mode .roster-targets .costume-row>b,body.touch-mode #costume-name{display:none}
+body.touch-mode .roster-targets .costume-row #swatches{gap:3px}
+body.touch-mode .roster-targets .costume-row #swatches button{width:20px;height:22px}
+body.touch-mode .fighter-grid{grid-auto-rows:var(--touch-card-height,80px);padding:1px;gap:3px}
+body.touch-mode .fighter-card{height:var(--touch-card-height,80px);min-height:var(--touch-card-height,80px)}
+body.touch-mode .roster-footer{padding-top:2px;gap:5px;grid-template-columns:minmax(0,1fr) minmax(130px,.8fr)}
+body.touch-mode .selection-banner{padding:2px 4px;gap:4px;min-height:0;display:flex;align-items:center}
+body.touch-mode .selection-banner>span,body.touch-mode .selection-banner small,body.touch-mode .selection-banner>img{display:none}
+body.touch-mode .selection-banner>div:nth-child(2){min-width:0;max-width:none;flex:1;padding:0}
+body.touch-mode .selection-banner b{font-size:11px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;margin:0}
+body.touch-mode .selection-banner .selected-character-origin{font-size:9px;line-height:1.2;margin:2px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.touch-mode #open-character-guide{position:static;transform:none;flex:0 0 44px;min-height:30px;padding:2px 3px;font-size:9px;line-height:1.2}
+body.touch-mode .roster-actions{grid-template-rows:12px minmax(0,1fr);gap:1px}
+body.touch-mode .roster-actions #match-summary{font-size:8px;line-height:12px}
+body.touch-mode .fight-actions>.primary{min-height:30px;padding:2px 5px;font-size:12px;letter-spacing:0}
+body.touch-mode .four-player-roster .fighter-library{grid-template-rows:54px minmax(0,1fr)}
+body.touch-mode .four-player-roster .roster-targets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:28px 23px;gap:2px}
+body.touch-mode .four-player-roster .roster-target{height:28px}
+body.touch-mode .four-player-roster .roster-targets .costume-row{grid-column:1/-1;justify-self:center;height:22px}
+body.touch-mode.fullscreen-view:has(#menu:not(.hidden) #character-screen:not(.hidden)){--touch-top:env(safe-area-inset-top,0px)}
+body.touch-mode.fullscreen-view .character-screen{padding-top:3px}
+body.touch-mode.fullscreen-view .roster-toolbar{margin-right:0}
+body.touch-mode.fullscreen-view:has(#menu:not(.hidden) #character-screen:not(.hidden)) #exit-fullscreen{left:90px;right:auto;top:max(3px,env(safe-area-inset-top));min-width:30px;min-height:26px;padding:0;font-size:0}
+body.touch-mode.fullscreen-view:has(#menu:not(.hidden) #character-screen:not(.hidden)) #exit-fullscreen::after{content:'⛶';font-size:16px}
+
+/* The battle fills the viewport; controls float over it with light opacity. */
+body.touch-mode.touch-battle{--touch-top:env(safe-area-inset-top,0px)}
+body.touch-mode.touch-battle #game{left:0;right:0;top:0;width:100%;height:100%}
+body.touch-mode.touch-battle .topbar{height:0;padding:0;background:none;pointer-events:none}
+body.touch-mode.touch-battle .topbar .brand,body.touch-mode.touch-battle .topbar .master-volume{display:none}
+body.touch-mode.touch-battle .topbar>div{position:absolute;right:max(5px,env(safe-area-inset-right));top:max(4px,env(safe-area-inset-top))}
+body.touch-mode.touch-battle .topbar #fullscreen{pointer-events:auto;opacity:.65;min-height:36px;min-width:40px}
+body.touch-mode.touch-battle #touch-controls .touch-left,body.touch-mode.touch-battle #touch-controls .touch-right{opacity:.45}
+body.touch-mode.touch-battle #touch-controls .touch-left:active,body.touch-mode.touch-battle #touch-controls .touch-right:has(.pressed){opacity:.8}
+body.touch-mode.touch-battle #battlebar{top:max(4px,env(safe-area-inset-top));left:auto;right:55px;gap:3px;opacity:.65}
+body.touch-mode.touch-battle.fullscreen-view #battlebar{right:105px}
+body.touch-mode.touch-battle #battlebar button{font-size:10px;min-height:32px;padding:3px 7px}
+body.touch-mode.touch-battle #training-tools{left:6px;top:42px;max-width:calc(100% - 12px);max-height:120px}
+body.touch-mode.touch-battle .touch-orientation-hint{display:none}
