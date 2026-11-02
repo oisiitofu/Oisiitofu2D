@@ -134,7 +134,6 @@ body.touch-mode.touch-battle .topbar .brand,body.touch-mode.touch-battle .topbar
 body.touch-mode.touch-battle .topbar>div{position:absolute;right:max(5px,env(safe-area-inset-right));top:max(4px,env(safe-area-inset-top))}
 body.touch-mode.touch-battle .topbar #fullscreen{pointer-events:auto;opacity:.65;min-height:36px;min-width:40px}
 body.touch-mode.touch-battle #touch-controls .touch-left,body.touch-mode.touch-battle #touch-controls .touch-right{opacity:.45}
-body.touch-mode.touch-battle #touch-controls .touch-left:active,body.touch-mode.touch-battle #touch-controls .touch-right:has(.pressed){opacity:.8}
 body.touch-mode.touch-battle #battlebar{top:max(4px,env(safe-area-inset-top));left:auto;right:55px;gap:3px;opacity:.65}
 body.touch-mode.touch-battle.fullscreen-view #battlebar{right:105px}
 body.touch-mode.touch-battle #battlebar button{font-size:10px;min-height:32px;padding:3px 7px}
