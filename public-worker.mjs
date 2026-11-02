@@ -52,8 +52,8 @@ export default {
   if(request.method==='GET'&&!range)try{const cached=await caches.default.match(cacheKey);if(cached)return cached;}catch{}
   const object=request.method==='HEAD'?await env.BUCKET.head(sha):await env.BUCKET.get(sha,range?{range:request.headers}:undefined);
   if(!object)return new Response('公開データを準備しています',{status:503,headers:{'Retry-After':'60'}});
-  const extension=name.split('.').pop(),types={html:'text/html; charset=utf-8',js:'text/javascript; charset=utf-8',css:'text/css; charset=utf-8',json:'application/json; charset=utf-8',png:'image/png',webp:'image/webp',wav:'audio/wav',mp3:'audio/mpeg',ogg:'audio/ogg',flac:'audio/flac'};
-  const headers=new Headers({'Content-Type':types[extension]||'application/octet-stream',ETag:etag,'Accept-Ranges':'bytes','X-Content-Type-Options':'nosniff','Cache-Control':name==='index.html'||name.endsWith('.json')||name.endsWith('.js')||name.endsWith('.css')?'public, max-age=0, must-revalidate':'public, max-age=31536000, immutable'});
+  const extension=name.split('.').pop(),types={html:'text/html; charset=utf-8',js:'text/javascript; charset=utf-8',css:'text/css; charset=utf-8',json:'application/json; charset=utf-8',webmanifest:'application/manifest+json',png:'image/png',webp:'image/webp',wav:'audio/wav',mp3:'audio/mpeg',ogg:'audio/ogg',flac:'audio/flac'};
+  const headers=new Headers({'Content-Type':types[extension]||'application/octet-stream',ETag:etag,'Accept-Ranges':'bytes','X-Content-Type-Options':'nosniff','Cache-Control':name==='index.html'||name.endsWith('.json')||name.endsWith('.webmanifest')||name.endsWith('.js')||name.endsWith('.css')?'public, max-age=0, must-revalidate':'public, max-age=31536000, immutable'});
   let status=200;
   if(range&&object.range){status=206;headers.set('Content-Range',`bytes ${object.range.offset}-${object.range.offset+object.range.length-1}/${object.size}`);headers.set('Content-Length',object.range.length);}
   else headers.set('Content-Length',object.size);
