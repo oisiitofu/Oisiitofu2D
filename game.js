@@ -131,11 +131,11 @@ function extractLightningPoses(sheet){
  const scale=265/frames[0].height;
  return frames.map(img=>{const c=document.createElement('canvas');c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);c.getContext('2d').drawImage(img,0,0,c.width,c.height);return c;});
 }
-function resize(){let d=Math.min(devicePixelRatio||1,1.5);const rect=canvas.getBoundingClientRect();canvas.width=Math.round(rect.width*d);canvas.height=Math.round(rect.height*d);lastRenderedBattleFrame=-1;
+function resize(){let d=Math.min(devicePixelRatio||1,1.5);const rect=canvas.getBoundingClientRect(),zoom=document.body.classList.contains('touch-zoom-recovery')?Math.max(1,window.visualViewport?.scale||1):1;canvas.width=Math.round(rect.width*zoom*d);canvas.height=Math.round(rect.height*zoom*d);lastRenderedBattleFrame=-1;
  // Convert the fixed header's actual height to letterboxed canvas coordinates.
  // Cache this on resize so the clock stays visible without layout reads each frame.
  const scale=Math.min(canvas.width/W,canvas.height/H),header=$('.topbar')?.getBoundingClientRect().bottom||0;
- matchClockTop=Math.max(23,((header-canvas.getBoundingClientRect().top+12)*d-(canvas.height-H*scale)/2)/scale);
+ matchClockTop=Math.max(23,(((header-rect.top)*zoom+12)*d-(canvas.height-H*scale)/2)/scale);
 }
 async function loadIsaacArt(characterId='isaac'){
  if(characterId==='haseo')return loadHaseoArt();
