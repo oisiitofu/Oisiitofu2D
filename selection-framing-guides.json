@@ -7530,6 +7530,64 @@
         1536,
         1024
       ]
+    },
+    "cubivore": {
+      "profile": "mascot",
+      "eye": [
+        994,
+        382
+      ],
+      "span": 590,
+      "top": 100,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        38,
+        1536,
+        960
+      ],
+      "source": "characters/cubivore/assets/cubivore-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "1d3d5471be0298053dbd75ece250440df3ecc678c9679f1bf5f9b29443c1c9bd",
+      "centerBasis": "元画像の横中心を維持",
+      "crop": [
+        0,
+        38,
+        1536,
+        960
+      ]
+    },
+    "diana": {
+      "profile": "chibi",
+      "eye": [
+        798.72,
+        440.32
+      ],
+      "span": 614,
+      "top": 82,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/diana/assets/diana-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "97f0ae342957f2e24f5a5f2d613f6d486262f3296269b2ff4577e03906e44e66",
+      "centerBasis": "元画像の横中心を維持",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ]
     }
   }
 }

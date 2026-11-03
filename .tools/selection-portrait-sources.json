@@ -3857,5 +3857,27 @@
       750
     ],
     "presentationFocus": 0.5
+  },
+  "cubivore": {
+    "source": "characters/cubivore/assets/cubivore-selection.png",
+    "crop": [
+      0,
+      38,
+      1536,
+      960
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution character portrait"
+  },
+  "diana": {
+    "source": "characters/diana/assets/diana-selection.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "mode": "built-in imagegen",
+    "framing": "dedicated high-resolution character portrait"
   }
 }

@@ -26,6 +26,8 @@ const CharacterOrigins=Object.freeze({
  "nightraven": "エースコンバット3 エレクトロスフィア",
  "elza": "ラストストーリー",
  "ringfit": "リングフィット アドベンチャー",
+ "cubivore": "動物番長",
+ "diana": "プラグマタ",
  "qbby": "ハコボーイ！",
  "estark": "ドラゴンクエスト",
  "mallow": "スーパーマリオRPG",

@@ -1,0 +1,10 @@
+'use strict';
+const DianaArtRects={"frames":[[2,2,98,240],[104,2,141,230],[249,2,148,228],[401,2,169,227],[574,2,148,176],[726,2,157,184],[887,2,121,239],[1012,2,131,237],[1147,2,106,244],[1257,2,124,177],[1385,2,190,236],[1579,2,179,205],[1762,2,199,207],[2,250,175,218],[181,250,100,212],[285,250,149,237],[438,250,166,250],[608,250,132,244],[744,250,142,231],[890,250,231,85],[1125,250,86,243],[1215,250,83,240],[1302,250,163,150],[1469,250,165,164],[1638,250,185,225],[1827,250,199,225],[2,504,191,218],[197,504,222,217],[423,504,163,233],[590,504,220,158],[814,504,220,129],[1038,504,202,200],[1244,504,162,243],[1410,504,178,153],[1592,504,186,192],[1782,504,218,187],[2,751,216,231],[222,751,156,243],[382,751,176,205],[562,751,174,159],[740,751,600,400]],"effects":[],"anchors":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"pads":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,0],"grip":[0.12,0.9],"portrait":40,"body":234,"height":78};
+async function loadDianaArt(){
+ if(ArtLoader.enabled&&await ArtLoader.load('diana'))return;
+ const sheet=new Image();sheet.src='characters/diana/assets/diana-native.png';await sheet.decode();
+ const crop=([x,y,w,h])=>{const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(sheet,x,y,w,h,0,0,w,h);return c;};
+ const frames=DianaArtRects.frames.map(crop),effects=DianaArtRects.effects.map(crop);
+ characterArt.diana={frames,effects,tints:Array.from({length:5},(_,ci)=>frames.map(img=>ArtLoader.tint(img,'diana',ci)))};
+}
+function dianaNativeScale(){return 78/(234*FIGHTER_SCALE);}
