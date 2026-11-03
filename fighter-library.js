@@ -10,7 +10,7 @@ const FighterLibrary=(()=>{
  function series(d){const title=d.origin||CharacterOrigins[d.id]||'作品未設定';return title.startsWith('テイルズ オブ')?'テイルズシリーズ':title;}
  function options(){const counts=new Map();for(const d of Roster.selectable){const key=series(d);counts.set(key,(counts.get(key)||0)+1);}return[...counts].sort(([a],[b])=>collator.compare(a,b));}
  function fill(select){select.replaceChildren(new Option('すべての作品',''),...options().map(([name,count])=>new Option(name==='ファイナルファンタジー'?'FF / ファイナルファンタジー（'+count+'）':name+'（'+count+'）',name)));}
- function matches(d,work='',kind='all'){return(!work||series(d)===work)&&(kind==='favorites'?favorites.includes(d.id):kind==='recent'?recent.includes(d.id):kind==='limit'?DragoonLimit.supports(d.id):true);}
+ function matches(d,work='',kind='all'){return(!work||series(d)===work)&&(kind==='favorites'?favorites.includes(d.id):kind==='recent'?recent.includes(d.id):kind==='limit'?LimitBreak.supports(d.id):true);}
  function changed(){apply();dispatchEvent(new Event('fighter-library-change'));}
  function toggleFavorite(id){if(!valid.has(id))return false;favorites=favorites.includes(id)?favorites.filter(v=>v!==id):[...favorites,id];const saved=write(favoriteKey,favorites);changed();return saved;}
  function record(ids){const clean=[...new Set(ids.filter(id=>valid.has(id)))];recent=[...clean,...recent.filter(id=>!clean.includes(id))].slice(0,12);write(recentKey,recent);changed();}

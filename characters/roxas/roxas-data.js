@@ -4,7 +4,7 @@ const RoxasMoves=(()=>{
  for(const[id,a]of Object.entries(UlgrimMoves))moves[id]={...a,animation:{...a.animation},timeline:a.timeline.map(e=>({...e})),activeFrames:a.activeFrames.map(v=>({...v}))};
  const names={jab:'二刀連撃・一閃',jab2:'二刀連撃・返し',jab3:'二刀連撃・クロス',heavy:'デュアルスラッシュ',up:'ライジングスラッシュ',low:'ロースイープ',dashAttack:'ダッシュクロス',smash:'デュアルブレイク',upsmash:'ライトバースト',downsmash:'トワイライトスピン',air:'エアスピン',fair:'エリアルクロス',bair:'リバーススラッシュ',uair:'ライトリフト',dair:'ストライクフォール'};
  for(const[id,name]of Object.entries(names))moves[id].name=name;
- moves.dragon=m('マジックアワー',18,[],15,12,{pose:13,chargeFrame:5,chargeButton:'special',chargeMaxFrames:60,spawnLight:'orbs',projectile:true,canClank:false});
+ moves.dragon=m('ライトオーブ',18,[],15,12,{pose:13,chargeFrame:5,chargeButton:'special',chargeMaxFrames:60,spawnLight:'orbs',projectile:true,canClank:false});
  moves.dash={...moves.dash,name:'スライドダッシュ',activeFrames:[w(16,19)],startupFrames:16,activeStart:16,activeEnd:19,totalFrames:32,FAF:33,recoveryFrames:13,pose:15,rushSpeed:15,bodyPassFrames:[[7,12]],intangibleFrames:[[7,12]],timeline:[{frame:7,type:'DisableGravity'},{frame:7,type:'SetVelocity',x:15,y:0},{frame:16,type:'EnableGravity'},{frame:20,type:'SetVelocity',x:3}]};
  moves.rise=m('アサルトアセンション',6,[w(6,9,'up',{damage:3,baseKnockback:1.2,knockbackGrowth:.01}),w(12,14,'up',{damage:3,baseKnockback:1.2,knockbackGrowth:.01}),w(17,20,'up',{damage:8})],12,18,{damage:8,reach:155,pose:16,angle:-1.45,verticalImpulse:-18.5,aerial:true,ledgeGrabStart:6,actionCancelFrame:21});
  moves.gale=m('ライトサークル',17,[],15,12,{pose:8,spawnLight:'circle',preserveVelocity:false});

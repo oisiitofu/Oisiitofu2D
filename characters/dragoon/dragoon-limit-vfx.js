@@ -25,7 +25,6 @@ const DragoonLimitVFX=(()=>{
    return layer;
   });
  }
- const needsArt=(players,enabled)=>enabled&&players.some(p=>DragoonLimit.supports(p.character)||p.team?.some(DragoonLimit.supports));
  // Source rectangles and body anchors are independent of the length of the lance.
  const poses=[
   [0,76,520,256,.43,.92,.84],[547,48,543,284,.39,.92,.93],
@@ -100,7 +99,7 @@ const DragoonLimitVFX=(()=>{
   ctx.restore();
  }
  function drawContact({x,y,face,time}){
-  const p=time/DragoonLimit.contactHold;
+  const p=time/DragoonLimitProfile.contactHold;
   ctx.save();ctx.translate(x,y);ctx.scale(face,1);
   stamp(0,0,0,110+p*42,73+p*32,1-p*.7,-.12);
   ctx.strokeStyle='#a9eaff';ctx.lineWidth=2.6;
@@ -145,7 +144,7 @@ const DragoonLimitVFX=(()=>{
   }
  }
  function draw({target,face,time}){
-  const t=DragoonLimit.shotTime(time);
+  const t=DragoonLimitProfile.shotTime(time);
   const [,x,y,tx,ty,cx,cy,z,roll,index]=cameraAt(t);
   const last=impacts.findLast(f=>f<=t)??-100,age=t-last,shock=clamp01(1-age/13);
   ctx.save();ctx.beginPath();ctx.rect(0,0,W,H);ctx.clip();backdrop(t);
@@ -179,20 +178,5 @@ const DragoonLimitVFX=(()=>{
   const exit=clamp01((t-226)/8);if(exit>0){ctx.fillStyle='rgba(6,14,30,'+(exit*.55)+')';ctx.fillRect(0,0,W,H);}
   ctx.restore();
  }
- function hud(f,x,y){
-  if(!DragoonLimit.enabled||!DragoonLimit.supports(f.characterId))return;
-  const m=DragoonLimit.meter(f),ready=DragoonLimit.ready(f);
-  ctx.fillStyle='#091427';ctx.fillRect(x+152,y+47,94,14);
-  if(ready){
-   ctx.save();
-   const gold=ctx.createLinearGradient(0,y+48,0,y+60);
-   gold.addColorStop(0,'#fff4aa');gold.addColorStop(.55,'#ffd258');gold.addColorStop(1,'#b96c17');
-   ctx.fillStyle=gold;ctx.shadowBlur=9;ctx.shadowColor='#ffcc4d';ctx.fillRect(x+153,y+48,92,12);
-   ctx.restore();
-  }else if(!m?.used){
-   ctx.fillStyle='#3968d4';ctx.fillRect(x+153,y+48,92*(m?.value||0)/DragoonLimit.threshold,12);
-  }
-  text(m?.used?'リミットブレイク 使用済み':ready?'MAX  攻撃＋必殺':'リミットブレイク',x+199,y+57,9,ready?'#2a1506':'#fff');
- }
- return {load,needsArt,draw,drawContact,hud,get prepared(){return assetNames.every(name=>!!art[name]);}};
+ return {load,draw,drawContact,get prepared(){return assetNames.every(name=>!!art[name]);}};
 })();

@@ -37,7 +37,7 @@ function attack(f,type,activationInput=null){
  if(f.characterId==='noctis'){if(type==='dash'&&NoctisRules.marker(f))type='warpStrike';if(!f.grounded&&['dash','warpStrike'].includes(type)&&f.noctisSideUsed)return false;}
  if(f.characterId==='rean'){if(type==='gale'&&f.reanDemonTime>0)type='demonFinish';if(type==='dash'&&!f.grounded&&f.reanSideUsed)return false;}
  if(f.characterId==='estelle'&&!f.grounded&&(type==='dash'&&f.estelleSideUsed||type==='gale'&&f.estelleWheelUsed))return false;
- const data=type==='limitBreak'?DragoonLimit.opener:type==='ledge'?LedgeAttackTuning.move(f):movesFor(f)[type];if(f.zidaneSilenced>0&&data?.special&&type!=='rise'&&!data.tether&&(data.projectile||['dragon','gale','airDrop'].includes(type)))return false;if(!data||type==='rise'&&f.recovered||type==='limitBreak'&&!DragoonLimit.ready(f))return false;
+ const data=type==='limitBreak'?LimitBreak.opener(f):type==='ledge'?LedgeAttackTuning.move(f):movesFor(f)[type];if(f.zidaneSilenced>0&&data?.special&&type!=='rise'&&!data.tether&&(data.projectile||['dragon','gale','airDrop'].includes(type)))return false;if(!data||type==='rise'&&f.recovered||type==='limitBreak'&&!LimitBreak.ready(f))return false;
  if(!ProjectileCadence.ready(f,data))return false;
  // Keep the unsnapped horizontal stick for a turnaround up special. Apply it
  // only after the action is accepted, before character-specific launch setup.
