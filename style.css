@@ -416,3 +416,7 @@ body:not([data-text-size="1"]) .fighter-discovery :is(button,select){font-size:c
 #result #stats{max-height:32dvh;overflow:auto;padding-right:5px}#result:has(#result-readiness:not(.hidden)) #stats{max-height:18dvh}#result .result-actions{position:sticky;bottom:0;background:#0b1628;padding:8px 0;z-index:1}#result #stats:focus-visible{outline:2px solid #86d7ff;outline-offset:2px}
 
 body[data-text-size="1.2"] #result-ready-players :is(span,b){font-size:14px}body[data-text-size="1.4"] #result-ready-players :is(span,b){font-size:16px}
+
+#game.limit-cinematic~#battlebar #battlelabel{visibility:hidden}
+#game.limit-cinematic~#battlebar button{opacity:.42}
+#game.limit-cinematic~#touch-controls{visibility:hidden}

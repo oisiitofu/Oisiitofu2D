@@ -21,6 +21,7 @@ const BattlePlayers=(()=>{
   document.querySelector('#online-team-setting').classList.toggle('hidden',!online||document.querySelector('#battle-format').value!=='teams');
   document.querySelector('#team-attack-setting').classList.toggle('hidden',!allowed||document.querySelector('#battle-format').value!=='teams');
   document.querySelector('#team-attack').disabled=joined&&Net.slot!==0;
+  document.querySelector('#limit-break').disabled=joined&&Net.slot!==0;
   document.querySelector('#random-local-teams').classList.toggle('hidden',online||!allowed||document.querySelector('#battle-format').value!=='teams'||n<3);
   document.querySelector('#character-screen').classList.toggle('four-player-roster',!online&&n>2);
   for(let slot=0;slot<4;slot++){
@@ -45,7 +46,7 @@ const BattlePlayers=(()=>{
  const stockCount=()=>clamp(Number(document.querySelector('#stock-count').value)||3,1,10);
  const timeLimit=()=>MatchRules.time(document.querySelector('#time-limit').value);
  const teamAttack=()=>MatchRules.teamAttack(document.querySelector('#team-attack').value);
- function config(){return{timeLimit:timeLimit(),teamAttack:teamAttack(),stocks:stockCount(),playerCount:SquadBattle.size()>1?2:count(),format:document.querySelector('#battle-format').value,players:seats.slice(0,SquadBattle.size()>1?2:count()).map((s,n)=>({...s,character:Roster.resolve(n===0?Roster.selected:n===1?document.querySelector('#cpu-character').value:s.character),color:n===0?selected:n===1?+document.querySelector('#color2').value:s.color}))};}
+ function config(){return{limitBreak:document.querySelector('#limit-break').checked,timeLimit:timeLimit(),teamAttack:teamAttack(),stocks:stockCount(),playerCount:SquadBattle.size()>1?2:count(),format:document.querySelector('#battle-format').value,players:seats.slice(0,SquadBattle.size()>1?2:count()).map((s,n)=>({...s,character:Roster.resolve(n===0?Roster.selected:n===1?document.querySelector('#cpu-character').value:s.character),color:n===0?selected:n===1?+document.querySelector('#color2').value:s.color}))};}
  function start(config){
   teams=config.format==='teams'&&config.players.length>2;friendlyFire=MatchRules.teamAttack(config.teamAttack);initialStocks=clamp(config.stocks||3,1,10);
   if(teams&&new Set(config.players.map(s=>s.battleTeam??s.team)).size<2)return false;

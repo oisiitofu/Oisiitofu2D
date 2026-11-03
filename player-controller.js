@@ -106,7 +106,7 @@ const PlayerController=(()=>{
   }return false;
  }
  function breakShield(f){f.shield=0;f.hitstun=0;f.attack=null;f.grounded=false;f.vy=-9;f.vx=0;enter(f,'ShieldBreak');label(f.x,f.y-90,'SHIELD BREAK');}
- function ready(f,i){i=InputFrames.consume(f,i);stopLaunchOnPress(f,i);const order=InputFrames.priority[f.grounded?'ground':'air'];
+ function ready(f,i){if(DragoonLimit.tryStart(f,i)){advanceAttack(f,i);return;}i=InputFrames.consume(f,i);stopLaunchOnPress(f,i);const order=InputFrames.priority[f.grounded?'ground':'air'];
   if(i.jump&&i.jumpAerial){beginJump(f,i);return;}
   if(f.grounded&&i.shieldUpSmash&&i.smash&&InputFrames.attackDirection(i).y<-.5){attack(f,'upsmash');return;}
   // A held down-special remains a special command even when its first press
@@ -128,7 +128,7 @@ const PlayerController=(()=>{
   if(f.respawn>0){enterIf(f,'Dead');if(f.squad&&f.stocks<=0)return;if(--f.respawn===0){let oldStocks=f.stocks,stats=f.stats,color=f.color,id=f.id,team=f.team,control=f.control,evolution=AgumonEvolution.preserve(f);if(!SquadBattle.respawn(f))Object.assign(f,prepareFighter(makeFighterBase(id,color,f.characterId)),evolution);f.stocks=oldStocks;f.stats=stats;f.team=team;f.control=control;f.x=BattlePlayers.spawnX(f);f.y=120;f.grounded=false;f.intangible=150;enter(f,'Respawn',1);}return;}
   if(f.mode==='Respawn')enter(f,'Fall');
   if(f.mode==='Grabbed'){f.vx=f.vy=0;f.grabEscape-=1+i.mash*7;if(f.grabEscape<=0&&f.grabOwner)releaseGrab(f.grabOwner);return;}
-  if(is(f,'GrabHold','Pummel')){let o=f.grabbed;if(!o){enter(f,'Idle');return;}o.x=f.x+f.face*35;o.y=f.y-8;if(f.mode==='Pummel'){if(f.stateFrame===2){o.damage+=movesFor(f).pummel.damage;f.stats.damage+=movesFor(f).pummel.damage;f.stats.hits++;BattleReport.hit(f,o,{...movesFor(f).pummel,type:'pummel'},movesFor(f).pummel.damage,false);CombatVFX.impact(o.x,o.y-35,f.color,2,f.face);}if(f.stateFrame>movesFor(f).pummel.totalFrames)enter(f,'GrabHold');return;}if(i.jab||i.heavy){enter(f,'Pummel',movesFor(f).pummel.totalFrames);return;}if(f.stateFrame>=5&&(Math.abs(i.x)>.4||Math.abs(i.y)>.4||i.grab)){throwTarget(f,i);o.grabImmunity=60;o.grabOwner=null;return;}return;}
+  if(is(f,'GrabHold','Pummel')){let o=f.grabbed;if(!o){enter(f,'Idle');return;}o.x=f.x+f.face*35;o.y=f.y-8;if(f.mode==='Pummel'){if(f.stateFrame===2){o.damage+=movesFor(f).pummel.damage;DragoonLimit.charge(o,movesFor(f).pummel.damage);f.stats.damage+=movesFor(f).pummel.damage;f.stats.hits++;BattleReport.hit(f,o,{...movesFor(f).pummel,type:'pummel'},movesFor(f).pummel.damage,false);CombatVFX.impact(o.x,o.y-35,f.color,2,f.face);}if(f.stateFrame>movesFor(f).pummel.totalFrames)enter(f,'GrabHold');return;}if(i.jab||i.heavy){enter(f,'Pummel',movesFor(f).pummel.totalFrames);return;}if(f.stateFrame>=5&&(Math.abs(i.x)>.4||Math.abs(i.y)>.4||i.grab)){throwTarget(f,i);o.grabImmunity=60;o.grabOwner=null;return;}return;}
   if(is(f,'LedgeCatch','LedgeHang')){ledgeAction(f,i);return;}
   if(f.attack&&f.timer>f.attack.totalFrames){let helpless=f.attack.helpless&&!f.grounded;finishNormalAttack(f);f.attack=null;f.gravityOff=false;f.helpless=!!helpless;enter(f,helpless?'Helpless':f.grounded?'Idle':'Fall');}
   // Accept a brief release just after takeoff without delaying full hops.
@@ -145,6 +145,7 @@ const PlayerController=(()=>{
   if(!f.grounded&&(f.vy>=0||reachesApex)&&i.downFlick&&!downSpecial&&!f.fastFall&&!f.hitstun&&!f.tumbling){f.fastFall=true;ring(f.x,f.y,colors[f.color],26);}
   if(f.hitstun>0){f.hitstun--;f.vx=moveToward(f.vx,0,f.launchDecay??.075);if(!f.hitstun)enter(f,f.grounded?'Idle':f.tumbling?'Tumble':'Fall');}
   else if(f.mode==='JumpSquat'){f.jumpShort ||= i.jumpReleased||i.twoJumps;if(f.buffer?.key==='jump'&&f.buffer.shortHopAttack){f.jumpAerial=InputFrames.consume(f,i).jumpAerial;f.jumpShort=true;}else if(!f.jumpAerial&&['jab','heavy','smash'].includes(f.buffer?.key))f.jumpAerial=InputFrames.jumpAttack(InputFrames.consume(f,i));if(f.stateFrame>c.jumpSquatFrames){let aerial=f.jumpAerial;f.jumpAerial=null;launchJump(f,f.jumpShort);if(aerial)selectAttack(f,aerial);}}
+  else if(f.attack&&DragoonLimit.tryStart(f,i)){advanceAttack(f,i);}
   else if(f.attack){const driftVx=f.vx;if(f.grounded){if(!f.attack.horse)f.vx=moveToward(f.vx,0,c.groundFriction*DashAttackTuning.friction(f));}else if(!helplessDrift(f))airControl(f,i,f.attack.airControlMultiplier);const pending=f.buffer;advanceAttack(f,i);DashAttackTuning.motion(f);if(helplessDrift(f)){f.vx=driftVx;airControl(f,i);}if(CombatData.finishedMotion(f)){finishNormalAttack(f);f.attack=null;f.gravityOff=false;f.buffer??=pending;enter(f,f.grounded?'Idle':'Fall');ready(f,i);}}
   else if(shield(f,i)){}
   else if(f.mode==='ShieldBreak'){}

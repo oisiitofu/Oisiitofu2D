@@ -62,22 +62,32 @@ const CombatSystem=(()=>{
   // Closely spaced projectiles can arrive during shield hitlag. The saved
   // shield state still blocks them until its hitlag has finished.
   if(['ShieldStart','ShieldHold'].includes(o.mode==='Hitlag'?o.frozen?.mode:o.mode)&&(!box||shieldCovers(o,box))){o.shield=Math.max(0,o.shield-dmg-(a.shieldDamage||0));if(a.damageOnly){if(o.shield<=0)PlayerController.breakShield(o);ring(o.x,o.y-36,'#9affff',18,3);sound('shield-hit',.3,o);return;}o.shieldStun=BattleFeel.shieldStun(a,dmg);o.vx=(a.launchDirection||f.face)*Math.min(3,dmg*.12);if(o.shield<=0)PlayerController.breakShield(o);let shieldLag=BattleFeel.hitlag({...a,hitlagMultiplier:Math.max(1,a.hitlagMultiplier??1)*BattleFeel.tuning.shieldHitlag},f,true);if(!a.projectile)freeze(f,shieldLag);freeze(o,shieldLag);ring(o.x,o.y-36,'#9affff',45,shieldLag);sound('shield-hit',.8,o);return;}
+  if(a.type==='limitBreak'){if(touch&&!o.grabbed)DragoonLimit.capture(f,o);return;}
   // Rifle chip damage must not launch, interrupt attacks, or pin the victim in hitlag.
-  if(a.damageOnly){o.damage=Math.min(999,o.damage+dmg);f.stats.damage+=dmg;f.stats.hits++;o.lastHit=f.id;BattleReport.hit(f,o,a,dmg,false);CombatVFX.impact(touch?.x??o.x,touch?.y??o.y-40,f.color,dmg,f.face,f.characterId,0,HitFeedback.contact(f,a,dmg,box));GameAudio.strike(f,a,dmg);return;}
+  if(a.damageOnly){DragoonLimit.charge(o,dmg);o.damage=Math.min(999,o.damage+dmg);f.stats.damage+=dmg;f.stats.hits++;o.lastHit=f.id;BattleReport.hit(f,o,a,dmg,false);CombatVFX.impact(touch?.x??o.x,touch?.y??o.y-40,f.color,dmg,f.face,f.characterId,0,HitFeedback.contact(f,a,dmg,box));GameAudio.strike(f,a,dmg);return;}
   let raw=calculateKnockback(a,o.damage+dmg,o.character.weight,f.damage,dmg)*(o.characterId==='edea'?edeaDefaultReduction(o):1)*(o.characterId==='presea'?preseaBraceReduction(o):1),crouch=o.mode==='Crouch';if(crouch){raw*=o.character.crouchKnockback;lag=Math.floor(lag*o.character.crouchHitlag);}
-  o.damage=Math.min(999,o.damage+dmg);f.stats.damage+=dmg;f.stats.hits++;o.lastHit=f.id;let armored=protect.armor&&((protect.armor.damageThreshold??Infinity)>=dmg)&&((protect.armor.knockbackThreshold??Infinity)>=raw)&&((protect.armor.hitCount??Infinity)>(o.armorHits||0));
+  DragoonLimit.charge(o,dmg);o.damage=Math.min(999,o.damage+dmg);f.stats.damage+=dmg;f.stats.hits++;o.lastHit=f.id;let armored=protect.armor&&((protect.armor.damageThreshold??Infinity)>=dmg)&&((protect.armor.knockbackThreshold??Infinity)>=raw)&&((protect.armor.hitCount??Infinity)>(o.armorHits||0));
   BattleReport.hit(f,o,a,dmg,!armored);
   if(a.healOnHit&&f.characterId==='nia')NiaRules.heal(f,a.healOnHit);
   if(NewcomerCore.ids.includes(f.characterId)&&(!armored||f.characterId==='leanne'||f.characterId==='jibanyan'&&a.ghostRush))NewcomerCore.registry[f.characterId].onHit(f,o,a);if(f.characterId==='adol')AdolRules.onHit(f,o,a);if(f.characterId==='valkyrie')ValkyrieRules.onHit(f,o,a);if(f.characterId==='hunter'&&!armored)HunterRules.onHit(f,o,a);if(f.characterId==='lloyd'&&!armored)LloydRules.onHit(f,o,a);if(f.characterId==='shiren'&&!armored)ShirenRules.onHit(f,o,a);if(f.characterId==='sans'&&!armored)SansRules.onHit(f,o,a);if(f.characterId==='bomberman'&&!armored)BombermanRules.onHit(f,o,a);if(f.characterId==='midna'&&!armored)MidnaRules.onHit(f,o,a);if(f.characterId==='noah'&&!armored)NoahRules.onHit(f,o,a);if(f.characterId==='emma'&&!armored)EmmaRules.onHit(f,o,a);if(f.characterId==='fayt'&&!armored)FaytRules.onHit(f,o,a);if(f.characterId==='kosmos'&&!armored)KosmosRules.onHit(f,o,a);if(f.characterId==='rex'&&!armored)RexRules.onHit(f,o,a);if(f.characterId==='narukami'&&!armored)NarukamiRules.onHit(f,o,a);if(f.characterId==='neku'&&!armored)NekuRules.onHit(f,o,a);if(f.characterId==='clive'&&!armored)CliveRules.onHit(f,o,a);if(f.characterId==='colette')ColetteRules.onHit(f,o,a);if(f.characterId==='estelle'&&!armored)EstelleRules.onHit(f,o,a);
   if(armored){GameAudio.cue('shield-hit',.7,o);o.armorHits=(o.armorHits||0)+1;freeze(o,lag);if(!a.projectile)freeze(f,lag);return;}
   if(NewcomerCore.ids.includes(f.characterId)&&NewcomerCore.capture(f,o,a,armored)){freeze(f,6);CombatVFX.impact(o.x,o.y-32,f.color,dmg,f.face,f.characterId,0,HitFeedback.contact(f,a,dmg,box));GameAudio.strike(f,a,dmg);return;}
   if(f.characterId==='agumon'&&AgumonRules.capture(f,o,a,armored)){freeze(f,6);CombatVFX.impact(o.x,o.y-32,f.color,dmg,f.face,f.characterId,0,HitFeedback.contact(f,a,dmg,box));GameAudio.strike(f,a,dmg);return;}
+  launchHit(f,o,a,dmg,raw,lag,touch,box);
+ }
+ function launchHit(f,o,a,dmg,raw,lag,touch=null,box=null){
   releaseOnHit(o);let direction=a.launchDirection||f.face,trajectory=launchTrajectory(a),angle=direction<0?Math.PI-trajectory.angle:trajectory.angle;
   o.pendingLaunch={raw,speed:launchSpeed(a,raw),angle,decayAngle:direction<0?Math.PI-a.angle:a.angle,horizontalScale:trajectory.horizontalScale,velocityScale:trajectory.velocityScale,hitstun:Math.max(4,a.throwHitstun||0,Math.floor(raw*.4)-1),SDIMultiplier:a.SDIMultiplier??1,smash:isSmash(a)};o.meteor=!!a.isMeteor;o.hitstun=0;
   if(a.bounceOnHit&&!f.grounded){f.vy=a.bounceOnHit;f.fastFall=false;}
   if(a.pull){o.pendingLaunch.speed=clamp((Math.abs(o.x-f.x)-40)/8,2,16);o.pendingLaunch.angle=direction<0?Math.PI+.08:-.08;o.pendingLaunch.hitstun=19;}
   if(!a.projectile)freeze(f,lag);freeze(o,lag);if(a.element)RikiRules.onHit(f,o,a);
   if(o.pendingLaunch){o.state='hit';if(!lag){o.hitlag=1;hitlag(o,emptyInput());}}BattleFeel.impact(f,o,a,dmg,raw,lag,touch,box);
+ }
+ function limitFinisher(f,o,a){
+  const dmg=a.damage,raw=calculateKnockback(a,o.damage+dmg,o.character.weight,f.damage,dmg);
+  o.frozen=null;o.hitlag=0;o.damage=Math.min(999,o.damage+dmg);o.lastHit=f.id;
+  f.stats.damage+=dmg;f.stats.hits++;DragoonLimit.charge(o,dmg);BattleReport.hit(f,o,a,dmg);
+  launchHit(f,o,a,dmg,raw,7);
  }
  function overlap(a,b){let proxy={x:(b.x1+b.x2)/2,y:(b.y1+b.y2)/2};const dx=a.x2-a.x1,dy=a.y2-a.y1;for(let t of [0,.25,.5,.75,1]){let x=lerp(b.x1,b.x2,t),y=lerp(b.y1,b.y2,t),q=clamp(((x-a.x1)*dx+(y-a.y1)*dy)/Math.max(1,dx*dx+dy*dy),0,1);if(Math.hypot(x-a.x1-q*dx,y-a.y1-q*dy)<=a.radius+b.radius)return true;}return false;}
  function resolve(){
@@ -101,9 +111,9 @@ const CombatSystem=(()=>{
     }
    }
   }
-  for(const c of contacts){const counter=c.o.attack;if(c.a.type!=='grab'&&counter?.counterWindow&&c.o.timer>=counter.counterWindow[0]&&c.o.timer<=counter.counterWindow[1]){c.o.face=Math.sign(c.f.x-c.o.x)||c.o.face;attack(c.o,counter.counterMove);c.o.attack.damage=Math.max(c.o.attack.damage,c.a.damage*1.2);c.o.inv=c.o.attack.totalFrames;ring(c.o.x,c.o.y-35,colors[c.o.color],90);label(c.o.x,c.o.y-90,'COUNTER');sound('parry',1,c.o);continue;}hit(c.f,c.o,c.a,c.box,c.touch);}
+  for(const c of contacts){if(DragoonLimit.active)break;const counter=c.o.attack;if(c.a.type!=='grab'&&counter?.counterWindow&&c.o.timer>=counter.counterWindow[0]&&c.o.timer<=counter.counterWindow[1]){c.o.face=Math.sign(c.f.x-c.o.x)||c.o.face;attack(c.o,counter.counterMove);c.o.attack.damage=Math.max(c.o.attack.damage,c.a.damage*1.2);c.o.inv=c.o.attack.totalFrames;ring(c.o.x,c.o.y-35,colors[c.o.color],90);label(c.o.x,c.o.y-90,'COUNTER');sound('parry',1,c.o);continue;}hit(c.f,c.o,c.a,c.box,c.touch);}
  }
  function timeline(f){let a=f.attack;if(!a)return;for(let e of a.timeline){if(e.frame!==f.timer||a.eventsDone.has(e))continue;a.eventsDone.add(e);switch(e.type){case 'SetVelocity':if(e.x!==undefined)f.vx=e.x*f.face;if(e.y!==undefined)f.vy=e.y;break;case 'AddVelocity':f.vx+=(e.x||0)*f.face;f.vy+=e.y||0;break;case 'EnableGravity':f.gravityOff=false;break;case 'DisableGravity':f.gravityOff=true;break;case 'SetIntangible':f.intangible=e.frames;break;case 'ClearIntangible':f.intangible=0;break;case 'EnableHitbox':a.extraHitboxes.push(e.hitbox);break;case 'DisableHitbox':a.extraHitboxes=a.extraHitboxes.filter(h=>h.id!==e.id);break;case 'ChangeHitbox':Object.assign(a.extraHitboxes.find(h=>h.id===e.id)||{},e.values);break;case 'EnableArmor':a.armorFrames=[{start:f.timer,end:e.end||a.totalFrames,...e.armor}];break;case 'DisableArmor':a.armorFrames=[];break;case 'EnableLandingFlag':a.autoCancelWindow=[];break;case 'DisableLandingFlag':a.autoCancelWindow=[[f.timer,Infinity]];break;case 'PlaySFX':sound(e.sound||'swing',1,f);break;case 'SpawnVFX':ring(f.x,f.y-32,colors[f.color],e.size||70);break;case 'CameraShake':shake=e.amount||5;break;}}
  }
- return{stale,calculateKnockback,launchSpeed,launchTrajectory,influence,freeze,hitlag,protection,contact,shieldCovers,hit,resolve,timeline,inWindow};
+ return{stale,calculateKnockback,launchSpeed,launchTrajectory,influence,freeze,hitlag,protection,contact,shieldCovers,hit,limitFinisher,resolve,timeline,inWindow};
 })();
