@@ -70,7 +70,7 @@ const CombatSystem=(()=>{
   // Closely spaced projectiles can arrive during shield hitlag. The saved
   // shield state still blocks them until its hitlag has finished.
   if(['ShieldStart','ShieldHold'].includes(o.mode==='Hitlag'?o.frozen?.mode:o.mode)&&(!box||shieldCovers(o,box))){o.shield=Math.max(0,o.shield-dmg-(a.shieldDamage||0));if(a.damageOnly){if(o.shield<=0)PlayerController.breakShield(o);ring(o.x,o.y-36,'#9affff',18,3);sound('shield-hit',.3,o);return;}o.shieldStun=BattleFeel.shieldStun(a,dmg);o.vx=(a.launchDirection||f.face)*Math.min(3,dmg*.12);if(o.shield<=0)PlayerController.breakShield(o);let shieldLag=BattleFeel.hitlag({...a,hitlagMultiplier:Math.max(1,a.hitlagMultiplier??1)*BattleFeel.tuning.shieldHitlag},f,true);if(!a.projectile)freeze(f,shieldLag);freeze(o,shieldLag);ring(o.x,o.y-36,'#9affff',45,shieldLag);sound('shield-hit',.8,o);return;}
-  if(a.type==='limitBreak'){if(touch&&!o.grabbed)DragoonLimit.capture(f,o);return;}
+  if(a.type==='limitBreak'){if(touch&&!o.grabbed)DragoonLimit.capture(f,o,touch);return;}
   // Rifle chip damage must not launch, interrupt attacks, or pin the victim in hitlag.
   if(a.damageOnly){DragoonLimit.charge(o,dmg);o.damage=Math.min(999,o.damage+dmg);f.stats.damage+=dmg;f.stats.hits++;o.lastHit=f.id;BattleReport.hit(f,o,a,dmg,false);CombatVFX.impact(touch?.x??o.x,touch?.y??o.y-40,f.color,dmg,f.face,f.characterId,0,HitFeedback.contact(f,a,dmg,box));GameAudio.strike(f,a,dmg);return;}
   let raw=calculateKnockback(a,o.damage+dmg,o.character.weight,f.damage,dmg)*(o.characterId==='edea'?edeaDefaultReduction(o):1)*(o.characterId==='presea'?preseaBraceReduction(o):1),crouch=o.mode==='Crouch';if(crouch){raw*=o.character.crouchKnockback;lag=Math.floor(lag*o.character.crouchHitlag);}

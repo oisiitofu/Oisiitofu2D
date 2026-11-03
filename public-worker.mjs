@@ -1,8 +1,26 @@
 // The build prepends FILES: pathname -> immutable SHA-256 object key.
 const ONLINE_KEY='online/current-v1.json',ONLINE_LEASE_MS=180000;
+const STATS_KEY='online/stats-v1.json',STATS_LIMIT=2*1024*1024;
 const onlineHeaders={'Cache-Control':'no-store, max-age=0','X-Content-Type-Options':'nosniff'};
 function tunnelOrigin(value){try{const u=new URL(value);return u.protocol==='https:'&&/^[a-z0-9-]+\.trycloudflare\.com$/.test(u.hostname)&&!u.port&&!u.username&&!u.password&&u.pathname==='/'&&!u.search&&!u.hash?u.origin:null;}catch{return null;}}
 const onlineJson=(value,status=200)=>Response.json(value,{status,headers:onlineHeaders});
+export async function onlineStats(request,env){
+ if(request.method==='GET'||request.method==='HEAD'){
+  const object=await env.BUCKET.get(STATS_KEY);
+  const headers={...onlineHeaders,'Content-Type':'application/json; charset=utf-8'};
+  return new Response(request.method==='HEAD'?null:object?.body??'{"matches":0,"updatedAt":null,"players":[],"characters":[]}',{headers});
+ }
+ if(request.method!=='PUT')return new Response('Method not allowed',{status:405,headers:onlineHeaders});
+ if(!env.ONLINE_ROUTE_TOKEN||request.headers.get('Authorization')!=='Bearer '+env.ONLINE_ROUTE_TOKEN)return new Response('Unauthorized',{status:401,headers:onlineHeaders});
+ if(Number(request.headers.get('Content-Length'))>STATS_LIMIT)return onlineJson({error:'Request too large'},413);
+ const raw=await request.text();if(new TextEncoder().encode(raw).length>STATS_LIMIT)return onlineJson({error:'Request too large'},413);
+ let data;try{data=JSON.parse(raw);}catch{return onlineJson({error:'Invalid JSON'},400);}
+ if(!Number.isInteger(data?.matches)||data.matches<=0||!Number.isFinite(Date.parse(data.updatedAt))||!Array.isArray(data.players)||!Array.isArray(data.characters))return onlineJson({error:'Invalid statistics'},400);
+ const previous=await env.BUCKET.head(STATS_KEY);
+ if(Date.parse(previous?.customMetadata?.updatedAt)>Date.parse(data.updatedAt))return new Response(null,{status:204});
+ await env.BUCKET.put(STATS_KEY,raw,{customMetadata:{updatedAt:data.updatedAt}});
+ return new Response(null,{status:204});
+}
 function waitingPage(){return new Response(`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>オンライン対戦｜TOFU BROS.</title><style>body{margin:0;background:#0b1422;color:#e8f4ff;font:16px system-ui;display:grid;place-items:center;min-height:100vh}main{max-width:540px;margin:24px;padding:40px;border:1px solid #294660;border-radius:16px}small{color:#88cfff;letter-spacing:.15em}h1{font-size:28px}p{line-height:1.9;color:#b9c9dc}button,a{display:inline-block;padding:12px 18px;background:#76bdff;color:#07121f;border:0;border-radius:8px;font:inherit;text-decoration:none;cursor:pointer}a{background:#20364b;color:#d8ebff}#status{font-size:13px}</style><main><small>TOFU BROS. / ONLINE</small><h1>対戦サーバーは起動待ちです</h1><p>公開側のPCで「start-online.bat」を起動すると接続できます。このページのURLは変わりません。</p><p id="status">起動を確認したら自動でキャラ選択画面へ進みます。</p><button onclick="location.reload()">接続を確認</button> <a href="/">メニューへ戻る</a></main><script>setInterval(async()=>{try{const r=await fetch('/api/online-route',{cache:'no-store'}),s=await r.json();if(s.online)location.reload();}catch{}},10000);</script></html>`,{status:503,headers:{...onlineHeaders,'Content-Type':'text/html; charset=utf-8','Retry-After':'10'}});}
 export async function onlineRoute(request,env){
  const url=new URL(request.url),entry=url.pathname==='/online'||url.pathname==='/online/';
@@ -29,6 +47,7 @@ export async function onlineRoute(request,env){
 }
 export default {
  async fetch(request,env,ctx){
+  if(new URL(request.url).pathname==='/api/online-stats')return onlineStats(request,env);
   const online=await onlineRoute(request,env);if(online)return online;
   const url=new URL(request.url);let pathname;try{pathname=decodeURIComponent(url.pathname);}catch{return new Response('Bad path',{status:400});}
   if(pathname.startsWith('/_asset-upload/')){

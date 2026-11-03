@@ -99,6 +99,19 @@ const DragoonLimitVFX=(()=>{
   ctx.drawImage(art.impact[index],-w/2,-h/2,w,h);
   ctx.restore();
  }
+ function drawContact({x,y,face,time}){
+  const p=time/DragoonLimit.contactHold;
+  ctx.save();ctx.translate(x,y);ctx.scale(face,1);
+  stamp(0,0,0,110+p*42,73+p*32,1-p*.7,-.12);
+  ctx.strokeStyle='#a9eaff';ctx.lineWidth=2.6;
+  ctx.globalAlpha=(1-p)*.9;
+  for(let i=0;i<8;i++){
+   const a=i*Math.PI/4, r=12+p*35;
+   ctx.beginPath();ctx.moveTo(Math.cos(a)*r,Math.sin(a)*r);
+   ctx.lineTo(Math.cos(a)*(r+15),Math.sin(a)*(r+15));ctx.stroke();
+  }
+  ctx.restore();
+ }
  function embers(t,x,y,strength){
   ctx.save();ctx.globalCompositeOperation='screen';
   for(let n=0;n<48;n++){
@@ -181,5 +194,5 @@ const DragoonLimitVFX=(()=>{
   }
   text(m?.used?'リミットブレイク 使用済み':ready?'MAX  攻撃＋必殺':'リミットブレイク',x+199,y+57,9,ready?'#2a1506':'#fff');
  }
- return {load,needsArt,draw,hud,get prepared(){return assetNames.every(name=>!!art[name]);}};
+ return {load,needsArt,draw,drawContact,hud,get prepared(){return assetNames.every(name=>!!art[name]);}};
 })();

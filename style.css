@@ -424,3 +424,9 @@ body[data-text-size="1.2"] #result-ready-players :is(span,b){font-size:14px}body
 #game.limit-cinematic~#battlebar #battlelabel{visibility:hidden}
 #game.limit-cinematic~#battlebar button{opacity:.42}
 #game.limit-cinematic~#touch-controls{visibility:hidden}
+
+#online-stats{width:min(650px,92vw);max-height:85dvh;overflow:auto}
+.online-stats-tools{display:flex;gap:12px;align-items:end}.online-stats-tools label{flex:1;min-width:0}
+#online-stats table{width:100%;border-collapse:collapse;text-align:right;font-variant-numeric:tabular-nums}
+#online-stats :is(th,td){padding:8px 5px;border-bottom:1px solid #89b8e933}
+#online-stats :is(th,td):first-child{text-align:left;overflow-wrap:anywhere}

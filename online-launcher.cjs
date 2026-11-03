@@ -40,9 +40,20 @@ async function daemon(){
  }
  const instance=crypto.randomUUID();fs.writeFileSync(fd,JSON.stringify({pid:process.pid,instance}));fs.closeSync(fd);
  const entry=new URL('/online',publicConfig.publicUrl).href,endpoint=new URL('/api/online-route',publicConfig.publicUrl).href;
+ const statsEndpoint=new URL('/api/online-stats',publicConfig.publicUrl);
+ let publishedStatsAt=null;
  const exe=path.join(dir,'cloudflared.exe'),port=4173,local='http://127.0.0.1:'+port;let stopping=false;
  const status=data=>save(stateFile,{...read(stateFile),pid:process.pid,instance,entry,updatedAt:Date.now(),error:null,...data});
  const log=message=>process.stdout.write(new Date().toISOString()+' '+message+'\n');status({phase:'starting'});
+ async function publishStats(){
+  const response=await fetch(local+'/api/online-stats',{signal:AbortSignal.timeout(2500)});
+  if(!response.ok)throw Error('Online statistics are unavailable.');
+  const raw=await response.text(),data=JSON.parse(raw);
+  if(!data.matches||data.updatedAt===publishedStatsAt)return;
+  const result=await fetch(statsEndpoint,{method:'PUT',headers:{Authorization:'Bearer '+privateConfig.token,'Content-Type':'application/json'},body:raw,signal:AbortSignal.timeout(5000)});
+  if(result.status!==204)throw Error('Online statistics update failed (HTTP '+result.status+').');
+  publishedStatsAt=data.updatedAt;
+ }
  const supervisor=new TunnelSupervisor({
   alive,healthy:health,
   async ensureServer(){if(await health(local,2500))return;const out=fs.openSync(path.join(dir,'online-server.log'),'a');const child=spawn(process.execPath,[path.join(root,'server.cjs')],{cwd:root,windowsHide:true,detached:true,stdio:['ignore',out,out]});child.unref();fs.closeSync(out);for(let n=0;n<20;n++){await sleep(500);if(await health(local,1000))return;}throw Error('Local game server did not start. Check .tools/online-server.log.');},
@@ -58,7 +69,7 @@ async function daemon(){
    if(processes(child.pid).some(p=>quickProcess(p,exe,port)))process.kill(child.pid);throw Error('Tunnel did not become ready.');
   },
   async internet(){try{return(await fetch(new URL('/api/online-route',publicConfig.publicUrl),{signal:AbortSignal.timeout(6000)})).ok;}catch{return false;}},
-  async publish(url){if(!privateConfig?.token)throw Error('Launcher registration key is missing. See ONLINE.md.');const r=await fetch(endpoint,{method:'PUT',headers:{Authorization:'Bearer '+privateConfig.token,'Content-Type':'application/json'},body:JSON.stringify({url,instance}),signal:AbortSignal.timeout(12000)});if(r.status!==204)throw Error('Fixed entry registration failed (HTTP '+r.status+').');},
+  async publish(url){if(!privateConfig?.token)throw Error('Launcher registration key is missing. See ONLINE.md.');const r=await fetch(endpoint,{method:'PUT',headers:{Authorization:'Bearer '+privateConfig.token,'Content-Type':'application/json'},body:JSON.stringify({url,instance}),signal:AbortSignal.timeout(12000)});if(r.status!==204)throw Error('Fixed entry registration failed (HTTP '+r.status+').');await publishStats().catch(error=>log(error.message));},
   async stopTunnel(tunnel){if(processes(tunnel.pid).some(p=>quickProcess(p,exe,port)))process.kill(tunnel.pid);},status
  });
  process.on('SIGTERM',()=>stopping=true);process.on('SIGINT',()=>stopping=true);

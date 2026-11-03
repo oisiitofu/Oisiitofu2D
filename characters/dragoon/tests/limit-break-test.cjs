@@ -47,7 +47,10 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    for(let n=0;n<13&&!DragoonLimit.active;n++){step(a);resolveCombat();}
    check(DragoonLimit.active&&DragoonLimit.scene.target===b&&DragoonLimit.meter(a).used,'real capsule contact captures one victim and marks it used');
    const elapsed=frame,clock=matchTime,others=JSON.stringify([c,d]);
-   for(let n=1;n<DragoonLimit.duration;n++)update(true);
+   render();check(!canvas.classList.contains('limit-cinematic'),'initial contact remains visible on the original stage');
+   for(let n=0;n<DragoonLimit.contactHold;n++)update(true);
+   render();check(canvas.classList.contains('limit-cinematic'),'cut-in follows the contact freeze');
+   for(let n=DragoonLimit.contactHold+1;n<DragoonLimit.duration;n++)update(true);
    check(frame===elapsed&&matchTime===clock&&JSON.stringify([c,d])===others,'cinematic freezes other players and clock');
    update(true);
    check(!DragoonLimit.active&&b.damage===98&&b.pendingLaunch,'finisher damage and launch once');

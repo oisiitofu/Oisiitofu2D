@@ -9,7 +9,7 @@ const BingoRules=require('./bingo-rules.js');
 const characters=['elliot','yuma','magus','leanne','velvet','namine','hydaelyn','nights','ryuta','mono','nargacuga','felyne','sackboy','rayman','shovelknight','quote','aloy','battlecat','io','raguna','anubis','jehuty','nightraven','elza','ringfit','qbby','estark','mallow','veronica','ashley','lip','ryoku','nahobino','tails','etna','django','ratchet','astro','enoch','sam','parappa','octane','jett','reimu','zack','presea','hachiware','tidus','terra','onionknight','arthur','sakura','viewtifuljoe','shionne','genis','ellen','billy','narmaya','wonder','rena','gran','welch','zoe','ky','alphen','ash','judas','rion','sol','miyabi','zero3','dana','edea','riesz','viridi','octoling','chibirobo','dragoon','isaac','ulgrim','chiikawa','chocobo','monokuma','riki','roxas','twob','okami','gundam','vivi','zero','rin','nia','lightning','colette','rean','estelle','noctis','clive','makoto','neku','narukami','naegi','rex','luke','will','kosmos','fayt','emma','ryza','noah','midna','bomberman','sans','lloyd','shiren','pokoa','hunter','adol','terry','valkyrie','agumon','pawapuro','headmaster','sakuna','haseo','terrarian','horse','chef','akira','morphie','fei','human','kitten','elma','goemon','bayleef','metabee','nier','miku','naruhodo','jibanyan','layton','dante','leon','tifa','zidane','yuffie','vincent','kiryu','crash','charlotta','ryofu','mametchi','piposaru','twinbee','aruru','maruku','dietrich','edf','edelgard','guile','sukapon','pneuma','arus','knight','maelle','sumino','rocbouquet','frog','tressa','eve','odio','laharl','deemo','kasane','shadow','saki','aerith','doshin','moogle','greymon','metalgreymon','wargreymon','omegamon','donchan','shizuna','hanajs','hanajk','hanajd','kisuke','ray','alain','hinako','cojicoji','megamanexe','krystal','yuri','hornet','toro','melia','fiora','c4621','malenia','hayabusa','klonoa','katamari','kingbonby','alucard','kurabe','battlemage','karateka','aiai'];
 const selectableCharacters=characters.filter(id=>!['greymon','metalgreymon','wargreymon','omegamon','hanajk','hanajd'].includes(id));
 const edges=['shareStock','jump','jab','heavy','smash','special','grab','forceTilt'],commandEdges=['jab','heavy','smash','special','grab'];
-function attachOnline(server){
+function attachOnline(server,{stats}={}){
  const wss=new WebSocketServer({server,path:'/online',maxPayload:4096}),rooms=new Map();
  const send=(ws,data)=>{if(ws?.readyState===WebSocket.OPEN&&ws.bufferedAmount<256000)ws.send(JSON.stringify(data));},all=(room,data)=>room.players.forEach(p=>p&&send(p.ws,data));
  const roomList=()=>({type:'rooms',rooms:[...rooms.values()].map(r=>({code:r.code,playerCount:r.players.length,members:r.players.filter(Boolean).length,playing:!!(r.playing||r.preparing),format:r.format,teamAttack:r.teamAttack,stocks:r.stocks,timeLimit:r.timeLimit,squadSize:r.squadSize,limitBreak:r.limitBreak,ruleSet:r.ruleSet}))});
@@ -35,7 +35,7 @@ function attachOnline(server){
    return{name:p.name,battleTeam:p.battleTeam,color:p.color,character:room.squadSize>1?team[0]:draw(p.character),team};
   })};room.revealedConfig=room.squadSize>1||room.bingo?room.pendingConfig:null;status(room);all(room,{type:'prepare',config:room.pendingConfig});
  }
- const resetLobby=room=>{room.playing=room.preparing=false;room.pendingConfig=room.revealedConfig=null;room.touched=Date.now();room.players.forEach(p=>{if(p){p.ready=p.artReady=false;p.input=neutral();p.pending={};}});};
+ const resetLobby=room=>{room.playing=room.preparing=false;room.pendingConfig=room.revealedConfig=room.liveConfig=null;room.touched=Date.now();room.players.forEach(p=>{if(p){p.ready=p.artReady=false;p.input=neutral();p.pending={};}});};
  function hostRules(room,m){
   if(room.bingo&&!room.bingo.result&&room.bingo.picks.some(Boolean)){send(room.players[0].ws,{type:'error',message:'ビンゴの選択確定後はルールを変更できません。カードを配り直すと解除できます。'});return false;}
   const oldIdentity=JSON.stringify([room.players.length,room.format,room.players.map((p,n)=>p?.battleTeam??n%2),room.ruleSet]);
@@ -72,7 +72,7 @@ function attachOnline(server){
    if(m.type==='profile'&&!room.playing&&!room.preparing){p.name=PlayerNames.normalize(m.name,p.name);status(room);return;}
    if(m.type==='lobby'){if(room.bingo&&room.playing&&p.finished){send(ws,{type:'error',message:'全員の対戦結果を集計しています。完了までお待ちください。'});return;}if(room.playing||room.preparing){cancelBingo(room);resetLobby(room);all(room,{type:'ended',message:'キャラクター選択へ戻りました。同じ部屋で再戦できます。'});}if(room.bingo?.result&&!room.bingo.champion){BingoRules.next(room.bingo);resetLobby(room);}if(!room.bingo?.picks[ws.slot])p.ready=false;status(room);return;}
    if(m.type==='load-error'&&room.preparing&&m.matchId===room.matchId){cancelBingo(room);resetLobby(room);all(room,{type:'error',message:'画像を準備できませんでした。準備完了を押して再試行してください。'});status(room);return;}
-   if(m.type==='loaded'&&room.preparing&&m.matchId===room.matchId){p.artReady=true;if(room.players.every(q=>q?.artReady)){room.preparing=false;room.playing=true;room.frame=0;room.started=room.touched=Date.now();room.players.forEach(q=>{q.input=neutral();q.pending={};q.lastInput=room.started;});all(room,{type:'start',config:room.pendingConfig});room.pendingConfig=null;publishRooms();}return;}
+   if(m.type==='loaded'&&room.preparing&&m.matchId===room.matchId){p.artReady=true;if(room.players.every(q=>q?.artReady)){room.preparing=false;room.playing=true;room.frame=0;room.started=room.touched=Date.now();room.players.forEach(q=>{q.input=neutral();q.pending={};q.lastInput=room.started;});room.liveConfig=room.pendingConfig;all(room,{type:'start',config:room.liveConfig});room.pendingConfig=null;publishRooms();}return;}
    if(m.type==='settings'&&!room.playing&&!room.preparing&&ws.slot===0){hostRules(room,m);status(room);return;}
    if(m.type==='unready'&&!room.playing&&!room.preparing){if(room.bingo?.picks[ws.slot])return;p.ready=false;status(room);return;}
    if(m.type==='ready'&&!room.playing&&!room.preparing){if(room.bingo){send(ws,{type:'error',message:'ビンゴカードのマスを選んでください。'});return;}p.color=Number.isInteger(m.color)&&m.color>=0&&m.color<5?m.color:0;p.character=m.character==='random'||selectableCharacters.includes(m.character)?m.character:'dragoon';const team=Array.from({length:5},(_,n)=>m.team?.[n]==='random'||selectableCharacters.includes(m.team?.[n])?m.team[n]:'random');if(room.squadSize>1&&SquadRules.duplicate(team.slice(0,room.squadSize))){p.ready=false;send(ws,{type:'error',message:'編成内で同じキャラは選べません。出場順を変更してください。'});status(room);return;}p.ready=true;p.team=team;p.settings={stage:StageCatalog.normalize(m.stage)};status(room);
@@ -96,8 +96,15 @@ function attachOnline(server){
     if(p.finished)return;
     if(room.bingo&&(!Number.isInteger(m.winner)||!(m.winner===-1||(room.format==='teams'?[0,1].includes(m.winner):m.winner>=0&&m.winner<room.players.length)))){send(ws,{type:'error',message:'対戦結果を確認できませんでした。'});return;}
     p.finished=true;p.reportedWinner=m.winner;
+    p.resultVerified=m.matchId===room.matchId;
+    p.reportedPlayed=Array.isArray(m.played)&&m.played.length===room.players.length&&m.played.every(n=>Number.isInteger(n)&&n>=1&&n<=room.squadSize)?m.played:null;
     if(room.players.every(q=>q?.finished)){
-     if(room.bingo){if(new Set(room.players.map(q=>q.reportedWinner)).size===1)BingoRules.settle(room.bingo,m.winner);else{BingoRules.cancel(room.bingo);all(room,{type:'error',message:'対戦結果が一致しなかったため、マスを開かず同じ試合をやり直します。'});}}
+     const agreement=new Set(room.players.map(q=>q.reportedWinner)).size===1;
+     const played=room.players[0].reportedPlayed;
+     const verified=room.players.every(q=>q.resultVerified)&&(room.squadSize===1||played&&room.players.every(q=>q.reportedPlayed?.every((n,i)=>n===played[i])));
+     const winnerValid=Number.isInteger(m.winner)&&m.winner>=-1&&m.winner<(room.format==='teams'?2:room.players.length);
+     if(stats&&room.liveConfig&&agreement&&verified&&winnerValid)stats.record(room.liveConfig,m.winner,played).catch(error=>console.error('Online statistics save failed',error.message));
+     if(room.bingo){if(agreement)BingoRules.settle(room.bingo,m.winner);else{BingoRules.cancel(room.bingo);all(room,{type:'error',message:'対戦結果が一致しなかったため、マスを開かず同じ試合をやり直します。'});}}
      if(room.bingo?.result&&!room.bingo.champion)BingoRules.next(room.bingo);
      resetLobby(room);status(room);
     }return;
