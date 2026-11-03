@@ -384,14 +384,18 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 
 /* Fast character discovery, retaining roster display numbers and selection ownership. */
 .fighter-discovery{display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px;min-width:0;color:#c8daef;font-size:11px}.fighter-discovery label{display:flex;align-items:center;gap:5px;min-width:0}.fighter-discovery select{margin:0;padding:4px;width:180px;max-width:25vw;min-height:28px;background:#101e30;color:#eef5ff;border:1px solid #4d6985;border-radius:5px;font-size:11px}.library-scopes{display:flex;gap:3px}.fighter-discovery button{padding:4px 8px;min-height:28px;font-size:11px;white-space:nowrap;color:#dcecff;background:#182c43;border:1px solid #49647f;border-radius:5px}.fighter-discovery button[aria-pressed=true]{background:#305276;border-color:#87d6ff;color:#fff}.fighter-discovery #library-count{white-space:nowrap;color:#b6cde1}@media (601px <= width <= 1280px){
- .roster-targets .roster-target{width:auto;flex-basis:105px;min-width:0}
+ .roster-targets .roster-target{width:auto;flex-basis:91px;min-width:0}
+ .roster-targets .roster-target b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
  #roster-selection-hint{display:none}
  .roster-targets .costume-row{margin-left:0}
- .fighter-discovery select{width:140px}
- .fighter-discovery button{padding-inline:5px}
+ .fighter-discovery select{width:116px}
+ .fighter-discovery button{padding-inline:5px;font-size:10px}
+}
+@media (1281px <= width <= 1500px){
+ .roster-targets .roster-target{width:auto;flex-basis:150px;min-width:0}
 }
 @media (601px <= width <= 950px){
- .roster-targets .roster-target{flex-basis:85px}
+ .roster-targets .roster-target{flex-basis:72px}
  .roster-targets .roster-target img{display:none}
  .roster-targets .costume-row>b,.roster-targets #costume-name,.fighter-discovery #library-count{display:none}
  .roster-targets .costume-row #swatches{gap:4px}

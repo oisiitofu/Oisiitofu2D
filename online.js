@@ -62,7 +62,7 @@ const Net=(()=>{
  function showBrowser(){
   state='menu';$('menu').classList.remove('hidden');$('result').classList.add('hidden');$('pause').classList.add('hidden');$('home-screen').classList.remove('hidden');$('character-screen').classList.add('hidden');browse();
  }
- function ruleLabel(m){return(m.ruleSet==='bingo'?'ビンゴ対戦 · 2ビンゴ優勝 · '+m.stocks+'ストック':m.squadSize>1?m.squadSize+'キャラ団体戦 · 各1ストック':'通常対戦 · '+m.stocks+'ストック')+' / '+m.playerCount+'人 / '+(m.format==='teams'?'チーム戦 · チームアタック'+(MatchRules.teamAttack(m.teamAttack)?'あり':'なし'):'個人戦')+' / '+MatchRules.timeLabel(m.timeLimit)+(m.limitBreak?' / 切り札あり':'');}
+ function ruleLabel(m){return(m.ruleSet==='bingo'?'ビンゴ対戦 · 2ビンゴ優勝 · '+m.stocks+'ストック':m.squadSize>1?m.squadSize+'キャラ団体戦 · 各1ストック':'通常対戦 · '+m.stocks+'ストック')+' / '+m.playerCount+'人 / '+(m.format==='teams'?'チーム戦 · チームアタック'+(MatchRules.teamAttack(m.teamAttack)?'あり':'なし'):'個人戦')+' / '+MatchRules.timeLabel(m.timeLimit)+(m.limitBreak?' / リミットブレイクあり':'');}
  function renderRooms(rooms){
   const list=$('room-list');list.replaceChildren();
   for(const room of rooms){
@@ -100,7 +100,7 @@ const Net=(()=>{
   refreshResult();
  }
  function init(){PlayerNames.init();addEventListener('online-name-change',()=>{if(code&&!roomPlaying)send({type:'profile',matchId,name:PlayerNames.current});Roster.refreshSelection();});
-  const labels={'match-kind':'対戦ルール','player-count':'対戦人数','battle-format':'対戦形式','stock-count':'ストック数','time-limit':'制限時間','squad-size':'編成','team-attack':'チームアタック','one-on-one':'1対1ダメージ補正（1.2倍）','limit-break':'切り札（試験版）'};
+  const labels={'match-kind':'対戦ルール','player-count':'対戦人数','battle-format':'対戦形式','stock-count':'ストック数','time-limit':'制限時間','squad-size':'編成','team-attack':'チームアタック','one-on-one':'1対1ダメージ補正（1.2倍）','limit-break':'リミットブレイク（試験版）'};
   for(const id of ruleIds){const label=document.createElement('label');label.textContent=labels[id];const field=$(id).cloneNode(true);field.id='create-'+id;field.disabled=false;label.append(field);if(field.type==='checkbox')label.className='check-row';$('room-create-fields').append(label);}
   const updateCreate=()=>{const bingo=$('create-match-kind').value==='bingo';if(bingo)$('create-squad-size').value='1';$('create-squad-size').disabled=bingo;const teams=$('create-battle-format').value==='teams';if(teams&&+$('create-player-count').value<3)$('create-player-count').value='4';$('create-team-attack').closest('label').classList.toggle('hidden',!teams);$('create-stock-count').disabled=+$('create-squad-size').value>1;};
   for(const id of ruleIds)$('create-'+id).addEventListener('change',updateCreate);updateCreate();

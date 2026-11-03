@@ -25,7 +25,7 @@ const DragoonLimitVFX=(()=>{
    return layer;
   });
  }
- const needsArt=(players,enabled)=>enabled&&players.some(p=>p.character==='dragoon'||p.team?.includes('dragoon'));
+ const needsArt=(players,enabled)=>enabled&&players.some(p=>DragoonLimit.supports(p.character)||p.team?.some(DragoonLimit.supports));
  // Source rectangles and body anchors are independent of the length of the lance.
  const poses=[
   [0,76,520,256,.43,.92,.84],[547,48,543,284,.39,.92,.93],
@@ -120,25 +120,19 @@ const DragoonLimitVFX=(()=>{
   }
   ctx.restore();
  }
- function titles(t){
-  const intro=t<26,final=t>=176,phase=intro?'槍の一閃':t<78?'槍の連撃':t<104?'ジャンプ':t<132?'ハイジャンプ':t<162?'スターダイバー':final?DragoonLimit.name:'竜気解放';
+ function cutIn(t,time){
   const bar=36*smooth(clamp01(t/8));
   ctx.fillStyle='#020711';ctx.fillRect(0,0,W,bar);ctx.fillRect(0,H-bar,W,bar);
-  if(intro){
+  if(t<26){
    const opacity=smooth(clamp01(t/7))*clamp01((27-t)/6);
    ctx.save();ctx.globalAlpha*=opacity;ctx.fillStyle='#060d23b8';ctx.fillRect(0,107,W,560);
-   bitmap('cutin',85+(26-t)*11,95,1335,580);
+   const scale=1+clamp01(time/45)*.05;
+   bitmap('cutin',85+(26-t)*11-45*(scale-1),95,1335*scale,580*scale);
    ctx.restore();
   }
-  const x=82,y=final?649:686, rule=ctx.createLinearGradient(x,y,x+580,y);
-  rule.addColorStop(0,'#a0dcff');rule.addColorStop(1,'#397cde00');
-  ctx.fillStyle='#07152cd9';ctx.fillRect(x-22,y-34,final?625:350,final?99:74);
-  ctx.fillStyle=rule;ctx.fillRect(x-22,y-36,580,2);
-  text(final?'LIMIT BREAK III':'DRAGOON  /  LIMIT BREAK',x,y-11,16,'#9fdbff','left');
-  text(phase,x,y+(final?39:25),final?42:27,'#f4f8ff','left');
-  ctx.fillStyle='#294c88';ctx.fillRect(0,H-bar,W,2);ctx.fillStyle='#8bdbff';ctx.fillRect(0,H-bar,W*t/234,2);
  }
- function draw({attacker,target,face,time:t}){
+ function draw({target,face,time}){
+  const t=DragoonLimit.shotTime(time);
   const [,x,y,tx,ty,cx,cy,z,roll,index]=cameraAt(t);
   const last=impacts.findLast(f=>f<=t)??-100,age=t-last,shock=clamp01(1-age/13);
   ctx.save();ctx.beginPath();ctx.rect(0,0,W,H);ctx.clip();backdrop(t);
@@ -168,17 +162,24 @@ const DragoonLimitVFX=(()=>{
   if(shock>0||t>=175)embers(t,t>=203?1004:tx,t>=203?606:ty-91,shock);
   ctx.restore();
   if(shock>0&&Accessibility.flash){ctx.fillStyle='rgba(164,219,255,'+(shock*.22*Accessibility.flash)+')';ctx.fillRect(0,0,W,H);}
-  titles(t);
+  cutIn(t,time);
   const exit=clamp01((t-226)/8);if(exit>0){ctx.fillStyle='rgba(6,14,30,'+(exit*.55)+')';ctx.fillRect(0,0,W,H);}
   ctx.restore();
  }
  function hud(f,x,y){
-  if(!DragoonLimit.enabled||f.characterId!=='dragoon')return;
+  if(!DragoonLimit.enabled||!DragoonLimit.supports(f.characterId))return;
   const m=DragoonLimit.meter(f),ready=DragoonLimit.ready(f);
   ctx.fillStyle='#091427';ctx.fillRect(x+152,y+47,94,14);
-  ctx.fillStyle=m?.used?'#53607b':ready?'#8ae4ff':'#3968d4';
-  if(!m?.used)ctx.fillRect(x+153,y+48,92*(m?.value||0)/DragoonLimit.threshold,12);
-  text(m?.used?'切り札 使用済み':ready?'攻撃＋必殺':'LIMIT BREAK',x+199,y+57,9,'#fff');
+  if(ready){
+   ctx.save();
+   const gold=ctx.createLinearGradient(0,y+48,0,y+60);
+   gold.addColorStop(0,'#fff4aa');gold.addColorStop(.55,'#ffd258');gold.addColorStop(1,'#b96c17');
+   ctx.fillStyle=gold;ctx.shadowBlur=9;ctx.shadowColor='#ffcc4d';ctx.fillRect(x+153,y+48,92,12);
+   ctx.restore();
+  }else if(!m?.used){
+   ctx.fillStyle='#3968d4';ctx.fillRect(x+153,y+48,92*(m?.value||0)/DragoonLimit.threshold,12);
+  }
+  text(m?.used?'リミットブレイク 使用済み':ready?'MAX  攻撃＋必殺':'リミットブレイク',x+199,y+57,9,ready?'#2a1506':'#fff');
  }
  return {load,needsArt,draw,hud,get prepared(){return assetNames.every(name=>!!art[name]);}};
 })();

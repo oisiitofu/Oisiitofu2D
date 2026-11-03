@@ -7,8 +7,11 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
   page.on('pageerror',error=>errors.push(error.message));
   await page.goto(process.env.GAME_URL||'http://localhost:4181');
   await page.waitForFunction(()=>AstralEdge.assetsLoaded);
-  assert.equal(await page.locator('#limit-break').isChecked(),false);
+  assert.equal(await page.locator('#limit-break').isChecked(),true);
   await page.click('#enter-roster');
+  await page.click('[data-library-scope="limit"]');
+  assert.deepEqual(await page.locator('.fighter-card:visible').evaluateAll(cards=>cards.map(card=>card.dataset.id)),['dragoon']);
+  await page.click('[data-library-scope="all"]');
   await page.evaluate(async()=>{
    const players=Array.from({length:4},(_,n)=>({character:'dragoon',color:n,control:'primary'}));
    await start({artPrepared:true,participants:{players,format:'free',stocks:3,timeLimit:240,limitBreak:true},squads:{size:1},stage:'0'});
@@ -40,11 +43,11 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    CombatSystem.hit(b,a,chip);check(DragoonLimit.ready(a),'meter caps at 100');
    step(a,{...emptyInput(),jab:true,attackHeld:true});step(a,chord);
    check(a.attack?.type==='limitBreak','slightly staggered input enters opener');
-   check(DragoonLimit.meter(a).used&&!DragoonLimit.ready(a),'attempt consumes meter once');
+   check(DragoonLimit.meter(a).value===0&&!DragoonLimit.meter(a).used,'attempt spends gauge without using the match entitlement');
    for(let n=0;n<13&&!DragoonLimit.active;n++){step(a);resolveCombat();}
-   check(DragoonLimit.active&&DragoonLimit.scene.target===b,'real capsule contact captures one victim');
+   check(DragoonLimit.active&&DragoonLimit.scene.target===b&&DragoonLimit.meter(a).used,'real capsule contact captures one victim and marks it used');
    const elapsed=frame,clock=matchTime,others=JSON.stringify([c,d]);
-   for(let n=0;n<233;n++)update(true);
+   for(let n=1;n<DragoonLimit.duration;n++)update(true);
    check(frame===elapsed&&matchTime===clock&&JSON.stringify([c,d])===others,'cinematic freezes other players and clock');
    update(true);
    check(!DragoonLimit.active&&b.damage===98&&b.pendingLaunch,'finisher damage and launch once');
@@ -55,10 +58,21 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
    raise(a);check(!DragoonLimit.ready(a),'remaining stocks cannot recharge');
    [a,b]=reset(true,430);raise(a);step(a,chord);
    for(let n=0;n<60;n++){step(a);resolveCombat();}
-   check(!DragoonLimit.active&&DragoonLimit.meter(a).used,'miss does not start a movie');
+   check(!DragoonLimit.active&&!DragoonLimit.meter(a).used&&DragoonLimit.meter(a).value===0,'miss spends only the gauge');
+   for(let n=0;n<4;n++)CombatSystem.hit(b,a,chip);
+   check(DragoonLimit.ready(a),'real damage recharges the gauge after a whiff');
+   step(a,chord);
+   check(CombatSystem.protection(a).intangible,'opener is invulnerable from frame one');
+   CombatSystem.hit(b,a,chip);
+   check(a.damage===100&&DragoonLimit.meter(a).value===0,'opener immunity prevents damage and charging');
+   while(a.timer<22){step(a);resolveCombat();}
+   b.x=a.x+135;
+   step(a);resolveCombat();
+   check(DragoonLimit.active&&DragoonLimit.scene.target===b,'wider opener reaches on the final active frame after a retry');
    [a,b]=reset(true,65);raise(a);PlayerStates.enter(b,'ShieldHold');step(a,chord);
-   for(let n=0;n<15;n++){step(a);resolveCombat();}
+   for(let n=0;n<24;n++){step(a);resolveCombat();}
    check(!DragoonLimit.active&&b.damage===70&&b.shield<b.character.shieldHP,'shield blocks opener');
+   check(!DragoonLimit.meter(a).used,'guard preserves the match entitlement');
    [a,b]=reset(true,65);raise(a);b.inv=60;step(a,chord);
    for(let n=0;n<15;n++){step(a);resolveCombat();}
    check(!DragoonLimit.active&&b.damage===70,'invincible victim is protected');
@@ -68,7 +82,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
   });
   if(process.argv.includes('--review')){
    fs.mkdirSync('characters/dragoon/previews/limit-break',{recursive:true});
-   for(const frame of [16,37,95,112,148,188,205,217]){
+   for(const frame of [16,37,57,115,132,168,208,225,237]){
     await page.evaluate(t=>{DragoonLimit.scene.time=t;render();},frame);
     await page.locator('#game').screenshot({path:'characters/dragoon/previews/limit-break/'+frame+'.png'});
    }

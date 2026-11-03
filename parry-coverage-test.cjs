@@ -8,6 +8,11 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
  for(const face of[-1,1]){
   let[f,o]=reset(face);o.parryEligible=false;CombatSystem.hit(f,o,strike(f),box(o,true));check('attack-cancelled shield drop cannot parry '+face,o.damage===8&&!!o.pendingLaunch);
   [f,o]=reset(face);CombatSystem.hit(f,o,strike(f));check('null-box scripted contact compatibility '+face,o.mode==='Idle'&&o.damage===0&&f.hitlag>0);
+  check('parry gives the defender a 24-frame opening against an 8% hit '+face,f.hitlag===24&&o.hitlag===0);
+  o.face=-face;f.x=o.x+o.face*44;
+  tick(o,{jab:true,attackHeld:true});
+  for(let n=0;n<12&&!f.damage;n++){resolveCombat();if(f.damage)break;tick(f);tick(o);}
+  check('close-range jab punishes before the attacker can act '+face,f.damage>0&&!!f.pendingLaunch);
   [f,o]=reset(face);CombatSystem.hit(f,o,{...movesFor(f).grab,type:'grab'},box(o,true));check('grab bypasses release parry '+face,o.mode==='Grabbed'&&f.grabbed===o&&o.grabOwner===f);
   for(const covered of[true,false]){[f,o]=reset(face);PlayerStates.enter(o,'ShieldHold');const hp=o.shield,b=box(o,covered);CombatSystem.hit(f,o,strike(f),b);check('held shield coverage unchanged '+face+'/'+covered,covered?o.damage===0&&o.shield<hp&&o.frozen?.mode==='ShieldHold':o.damage===8&&o.shield===hp);}
   [f,o]=reset(face);PlayerStates.enter(o,'ShieldHold');o.shield=o.character.shieldHP*.8;const b=box(o,true),hp=o.shield;CombatSystem.hit(f,o,strike(f,true),b);CombatSystem.hit(f,o,strike(f,true),b);check('consecutive projectiles remain blocked during shield hitlag '+face,o.damage===0&&o.shield===hp-16&&o.frozen?.mode==='ShieldHold');

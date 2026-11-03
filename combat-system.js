@@ -48,7 +48,15 @@ const CombatSystem=(()=>{
   let protect=protection(o,touch?.part);if(protect.intangible)return;if(protect.invincible){ring(o.x,o.y-35,'#fff4ba',35);return;}
   // Releasing a shield keeps its coverage, including its HP and tilt. A body
   // contact outside that circle cannot gain full-body protection by parrying.
-  if(o.mode==='ShieldDrop'&&o.parryEligible&&o.stateFrame<=5&&(!box||shieldCovers(o,box))){PlayerStates.enter(o,'Idle');o.buffer=null;freeze(f,Math.min(30,Math.floor(a.damage*.65+12)));ring(o.x,o.y-36,'#fff1a1',95);CombatVFX.impact(o.x,o.y-36,4,12,1);label(o.x,o.y-100,'PARRY');sound('parry',1,o);return;}
+  if(o.mode==='ShieldDrop'&&o.parryEligible&&o.stateFrame<=5&&(!box||shieldCovers(o,box))){
+   PlayerStates.enter(o,'Idle');o.buffer=null;
+   freeze(f,Math.min(37,Math.floor(a.damage*.65+19)));
+   const direction=Math.sign(f.x-o.x)||o.face;
+   CombatVFX.parry(touch?.x??o.x+direction*12,touch?.y??o.y-36,direction);
+   GameAudio.cue('parry',1.14,o,{impact:true,duck:true,rate:.94});
+   GameAudio.cue('light-hit',.5,o,{rate:1.22});
+   return;
+  }
   if(TwinbeeRules.barrier(o,a))return;
   if(HunterRules.guard(f,o,a,box))return;
   if(PawapuroRules.field(f,o,a,box,touch))return;

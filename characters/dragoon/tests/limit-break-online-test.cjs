@@ -12,7 +12,7 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
    await page.click('#enter-online');
   }
   const [host,guest]=pages;
-  await host.click('#open-room-create');assert.equal(await host.locator('#create-limit-break').isChecked(),false);
+  await host.click('#open-room-create');assert.equal(await host.locator('#create-limit-break').isChecked(),true);
   await host.check('#create-limit-break');await host.click('#create-room');
   await host.waitForFunction(()=>Net.code.length===6);
   const code=await host.evaluate(()=>Net.code);
@@ -47,7 +47,7 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
   },moment);
   await Promise.all(pages.map(page=>page.waitForFunction(()=>Object.values(limitResults).some(r=>r[3]===98))));
   const snapshots=await Promise.all(pages.map(page=>page.evaluate(()=>Object.fromEntries(Object.entries(limitResults).filter(([,v])=>v[2]!==null)))));
-  assert.deepEqual(snapshots[0],snapshots[1]);assert.equal(Object.keys(snapshots[0]).length,234);
+  assert.deepEqual(snapshots[0],snapshots[1]);assert.equal(Object.keys(snapshots[0]).length,await host.evaluate(()=>DragoonLimit.duration));
   assert.deepEqual(errors,[]);
   console.log(JSON.stringify({matchingCinematicFrames:Object.keys(snapshots[0]).length,hostSettingSynced:true,errors}));
  }finally{for(const page of pages)await page.evaluate(()=>Net.leave()).catch(()=>{});await browser.close();}
