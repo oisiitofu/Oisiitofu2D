@@ -9,7 +9,10 @@ const DragoonLimit=(()=>{
  const finalStrike={name,type:'limitFinisher',damage:28,angle:-.55,baseKnockback:4.2,knockbackGrowth:.04,element:'thunder',projectile:true};
  const cues=new Map([[1,['parry',.85]],[29,['spear-thrust',1]],[36,['spear-hit',.9]],[51,['sword-hit',1]],[67,['spear-hit-heavy',1.15]],[78,['jump',.9]],[104,['wind-cast',1.2]],[139,['wind-cast',1.25]],[153,['light-hit-heavy',1.35]],[178,['light-cast',1]],[197,['thunder-cast',1.2]],[204,['explosion',1.2]]]);
  let enabled=false, meters=new Map(), scene=null, visualRevision=0, drawnRevision=0;
- function begin(on){enabled=on;meters=new Map();scene=null;visualRevision++;}
+ function begin(on){
+  enabled=on;meters=new Map();scene=null;visualRevision++;
+  document.getElementById('training-limit-max').classList.toggle('hidden',!training||!enabled||fighters[0]?.characterId!=='dragoon');
+ }
  function meter(f){return meters.get(f.id);}
  function ready(f){const m=meter(f);return enabled&&f.characterId==='dragoon'&&!f.respawn&&!BattlePlayers.out(f)&&m?.value>=threshold&&!m.used;}
  function charge(f,damage){
@@ -46,5 +49,19 @@ const DragoonLimit=(()=>{
   CombatSystem.limitFinisher(attacker,target,{...finalStrike,launchDirection:face});
  }
  function visualChanged(){if(drawnRevision===visualRevision)return false;drawnRevision=visualRevision;return true;}
+ addEventListener('DOMContentLoaded',()=>{
+  const button=document.createElement('button');
+  button.id='training-limit-max';
+  button.type='button';
+  button.className='hidden';
+  button.textContent='LIMIT BREAK 最大';
+  button.onclick=()=>{
+   const fighter=fighters[0];
+   if(!training||!enabled||Net.active||scene||fighter?.characterId!=='dragoon'||fighter.attack?.type==='limitBreak')return;
+   meters.set(fighter.id,{value:threshold,used:false});
+   visualRevision++;
+  };
+  document.querySelector('#training-tools .debug-buttons').append(button);
+ });
  return {name,threshold,opener,begin,meter,ready,charge,tryStart,capture,tick,visualChanged,get enabled(){return enabled;},get active(){return !!scene;},get scene(){return scene;}};
 })();
