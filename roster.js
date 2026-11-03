@@ -301,15 +301,15 @@ const Roster=(()=>{
   if(document.body.classList.contains('touch-mode')){grid.style.setProperty('--roster-columns',Math.max(3,Math.floor(width/90)));grid.style.setProperty('--roster-label-height','22px');grid.classList.remove('compact-cards');for(const el of grid.querySelectorAll('.fighter-card>b'))el.style.fontSize='11px';return;}
   const card=grid.querySelector('.fighter-card:not([hidden])'),count=grid.querySelectorAll('.fighter-card:not([hidden])').length,style=getComputedStyle(grid),border=parseFloat(getComputedStyle(card).borderTopWidth)*2,gapX=parseFloat(style.columnGap),gapY=parseFloat(style.rowGap),fontSize=parseFloat(style.getPropertyValue('--roster-name-size'))||12;
   const measure=document.createElement('canvas').getContext('2d'),family=getComputedStyle(card.querySelector('b')).fontFamily;measure.font=`900 ${fontSize}px ${family}`;
-  // Fit every fighter using the largest square tiles the grid can hold.
+  // Fit every fighter at 100% zoom; choose the grid with the largest portraits.
   let columns=1,best=-Infinity,label=0,nameSize=fontSize;
   for(let n=1;n<=count;n++){
-   const rows=Math.ceil(count/n),side=Math.floor(Math.min((width-gapX*(n-1))/n,(height-gapY*(rows-1))/rows)),inner=side-border;
-   if(inner<=6)continue;
-   const size=Math.min(fontSize,(inner-6)/7,inner*.22),labelHeight=Math.ceil(size*1.35)+2,score=side;
+   const rows=Math.ceil(count/n),w=(width-gapX*(n-1))/n-border,h=(height-gapY*(rows-1))/rows-border;
+   if(w<=6||h<=6)continue;
+   const size=Math.min(fontSize,(w-6)/7,h*.22),labelHeight=Math.ceil(size*1.35)+2,score=Math.min(w/1.4,h-labelHeight);
    if(score>best){best=score;columns=n;label=labelHeight;nameSize=size;}
   }
-  grid.style.setProperty('--roster-card-size',Math.max(0,best)+'px');grid.style.setProperty('--roster-label-height',label+'px');grid.style.setProperty('--roster-columns',columns);grid.style.setProperty('--roster-rows',Math.ceil(count/columns));grid.classList.toggle('compact-cards',best-label-border<35);
+  grid.style.setProperty('--roster-min-card-height','0px');grid.style.setProperty('--roster-label-height',label+'px');grid.style.setProperty('--roster-columns',columns);grid.style.setProperty('--roster-rows',Math.ceil(count/columns));grid.classList.toggle('compact-cards',best<35);
   for(const el of grid.querySelectorAll('.fighter-card>b')){const available=Math.max(0,el.clientWidth-8),fullWidth=measure.measureText(el.textContent).width;el.style.fontSize=(Math.floor(Math.min(nameSize,fontSize*available/fullWidth)*10)/10)+'px';el.parentElement.title=el.textContent;}
   for(const d of definitions){const thumb=ArtLoader.thumbnail(d.id),img=grid.querySelector(`[data-id="${d.id}"] img`);if(thumb&&img)thumbnailSize(img,thumb.aspect);}
  }
