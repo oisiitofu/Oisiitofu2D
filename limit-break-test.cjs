@@ -9,7 +9,9 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
   await p.waitForFunction(()=>window.AstralEdge?.assetsLoaded,null,{polling:100,timeout:60000});
   await p.click('#enter-roster');
   await p.click('[data-library-scope="limit"]');
-  assert.deepEqual(await p.locator('.fighter-card:visible').evaluateAll(cs=>cs.map(c=>c.dataset.id)),['dragoon','roxas']);
+  const filtered=await p.locator('.fighter-card:visible').evaluateAll(cards=>cards.map(card=>card.dataset.id));
+  assert.deepEqual(filtered,await p.evaluate(()=>Roster.selectable.filter(d=>LimitBreak.hasCinematic(d.id)).map(d=>d.id)));
+  assert.ok(['dragoon','roxas'].every(id=>filtered.includes(id)));
   const checked=await p.evaluate(async()=>{
    await ArtLoader.prepare([{character:'vivi'},{character:'cubivore'},{character:'diana'},{character:'nargacuga'},{character:'nightraven'}]);
    const check=(ok,message)=>{if(!ok)throw Error(message);};
@@ -68,6 +70,6 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
    return n;
   });
   assert.deepEqual(errors,[]);
-  console.log(JSON.stringify({standardGroundAndAirChecks:checked,filtered:['dragoon','roxas'],errors}));
+  console.log(JSON.stringify({standardGroundAndAirChecks:checked,filtered,errors}));
  }finally{await b.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

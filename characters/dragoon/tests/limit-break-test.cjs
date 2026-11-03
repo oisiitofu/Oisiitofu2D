@@ -11,7 +11,9 @@ const fighter=process.env.LIMIT_FIGHTER||'dragoon';
   assert.equal(await page.locator('#limit-break').isChecked(),true);
   await page.click('#enter-roster');
   await page.click('[data-library-scope="limit"]');
-  assert.deepEqual(await page.locator('.fighter-card:visible').evaluateAll(cards=>cards.map(card=>card.dataset.id)),['dragoon','roxas']);
+  const filtered=await page.locator('.fighter-card:visible').evaluateAll(cards=>cards.map(card=>card.dataset.id));
+  assert.deepEqual(filtered,await page.evaluate(()=>Roster.selectable.filter(d=>LimitBreak.hasCinematic(d.id)).map(d=>d.id)));
+  assert.ok(['dragoon','roxas'].every(id=>filtered.includes(id)));
   await page.click('[data-library-scope="all"]');
   await page.evaluate(async fighter=>{
    const players=Array.from({length:4},(_,n)=>({character:fighter,color:n,control:'primary'}));
@@ -91,8 +93,8 @@ const fighter=process.env.LIMIT_FIGHTER||'dragoon';
   },fighter);
   if(process.argv.includes('--review')){
    const directory='previews/'+fighter+'/limit-break';fs.mkdirSync(directory,{recursive:true});
-   for(const frame of [0,28,52,71,95,120,149,178,222,251]){
-    await page.evaluate(t=>{LimitBreak.scene.time=t;render();},frame);
+   for(const frame of [0,28,52,71,95,120,149,178,193,222,233,251,270]){
+    await page.evaluate(t=>{LimitBreak.scene.time=Math.min(t,LimitBreak.scene.profile.duration-1);render();},frame);
     await page.locator('#game').screenshot({path:directory+'/'+frame+'.png'});
    }
   }

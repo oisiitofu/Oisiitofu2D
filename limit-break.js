@@ -117,3 +117,63 @@ const LimitBreak=(()=>{
  }
  return {define,profile,hasCinematic,threshold,opener,standardBoxes,canConnect,prepareArt,artPrepared,draw,drawOpeners,drawContact,hud,begin,meter,ready,charge,tryStart,capture,tick,visualChanged,get enabled(){return enabled;},get active(){return !!scene;},get scene(){return scene;}};
 })();
+
+// Layers and camera helpers shared by the separately choreographed cinematics.
+const LimitCinematic=(()=>{
+ const unit=n=>Math.max(0,Math.min(1,n));
+ const ease=n=>{const p=unit(n);return p*p*(3-2*p);};
+ const mix=(a,b,n)=>a+(b-a)*n;
+ function assets(id,names){
+  const images={};let pending;
+  const load=()=>pending??=Promise.all(names.map(async name=>{
+   const image=new Image();image.src='characters/'+id+'/assets/limit-'+name+'.webp';
+   await image.decode();images[name]=image;
+  })).catch(error=>{pending=null;throw error;});
+  function image(name,x,y,w,h,alpha=1){
+   if(!images[name]||alpha<=0)return;
+   ctx.save();ctx.globalAlpha*=alpha;ctx.drawImage(images[name],x,y,w,h);ctx.restore();
+  }
+  function grid(name,n,cols,rows,x,y,height,{anchorX=.5,anchorY=.96,alpha=1,face=1}={}){
+   const src=images[name];if(!src||alpha<=0)return;
+   const sw=src.width/cols,sh=src.height/rows,w=height*sw/sh;
+   ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;
+   ctx.drawImage(src,(n%cols)*sw,Math.floor(n/cols)*sh,sw,sh,-w*anchorX,-height*anchorY,w,height);ctx.restore();
+  }
+  function effect(n,x,y,w,h,alpha=1,angle=0,face=1){
+   const src=images.effects;if(!src||alpha<=0)return;
+   const sw=src.width/2,sh=src.height/2;
+   ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.scale(face,1);ctx.globalAlpha*=alpha;
+   ctx.globalCompositeOperation='screen';
+   ctx.drawImage(src,n%2*sw+2,Math.floor(n/2)*sh+2,sw-4,sh-4,-w/2,-h/2,w,h);ctx.restore();
+  }
+  return {load,image,grid,effect,get prepared(){return names.every(name=>!!images[name]);}};
+ }
+ function camera(shots,t){
+  const next=shots.findIndex(s=>s[0]>t);
+  if(next<=0)return shots[next===0?0:shots.length-1].slice(1);
+  const a=shots[next-1],b=shots[next],p=ease((t-a[0])/(b[0]-a[0]));
+  return [...a.slice(1,-1).map((n,i)=>mix(n,b[i+1],p)),p<.55?a.at(-1):b.at(-1)];
+ }
+ function frameClip(){
+  ctx.save();ctx.beginPath();ctx.rect(0,0,W,H);ctx.clip();
+ }
+ function world(cx,cy,z,roll,face,t,shock){
+  const shake=Accessibility.shake;
+  ctx.save();ctx.translate(W*.5+Math.sin(t*2.13)*shock*14*shake,H*.51+Math.cos(t*1.9)*shock*10*shake);
+  ctx.rotate(roll*(.5+.5*shake));ctx.scale(z*face,z);ctx.translate(-cx,-cy);
+ }
+ function target(fighter,x,y,tilt,scale=1.85){
+  const sprite={...fighter,x,y,face:-1,attack:null,mode:'Tumble',state:'hit',inv:0,intangible:0,grounded:false};
+  ctx.save();ctx.translate(x,y-66);ctx.rotate(tilt);ctx.translate(-x,66-y);
+  drawSprite(sprite,1,pose(sprite),scale);ctx.restore();
+ }
+ function bands(t,color='#080611'){
+  const h=32*ease(t/7);
+  ctx.fillStyle=color;ctx.fillRect(0,0,W,h);ctx.fillRect(0,H-h,W,h);
+ }
+ function flash(rgb,strength){
+  if(!Accessibility.flash||strength<=0)return;
+  ctx.fillStyle='rgba('+rgb+','+unit(strength)*Accessibility.flash+')';ctx.fillRect(0,0,W,H);
+ }
+ return {unit,ease,mix,assets,camera,frameClip,world,target,bands,flash};
+})();
