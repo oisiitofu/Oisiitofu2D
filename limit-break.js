@@ -3,13 +3,33 @@
 const LimitBreak=(()=>{
  const threshold=100,profiles=new Map();
  let enabled=false, meters=new Map(), scene=null, visualRevision=0, drawnRevision=0;
- const supports=id=>profiles.has(id);
+ const hasCinematic=id=>profiles.has(id);
+ const standardOpener=CombatData.createMove('リミットブレイク',8,[CombatData.window(8,23)],30,22,{
+  damage:5,pose:0,aerial:true,canClank:false,velocityMultiplier:.28,intangibleFrames:[[1,23]]
+ });
+ const standardFinisher={name:'リミットブレイク',type:'limitFinisher',damage:28,angle:-.55,
+  baseKnockback:3.8,knockbackGrowth:.075,launchPercentOffset:13,projectile:true};
+ function opener(f){
+  const authored=profile(f.characterId);
+  if(authored)return authored.opener;
+  const jab=movesFor(f)?.jab,neutral=0,strike=jab?.activeFrames?.[0]?.pose??jab?.pose??neutral;
+  return {...standardOpener,standardLimit:true,pose:strike,soundFamily:jab?.soundFamily,
+   animation:{...standardOpener.animation,anticipationPose:neutral,accelerationPose:strike,recoveryPose:neutral}};
+ }
+ function standardBoxes(f,a,t){
+  const window=CombatData.activeWindow(a,t);
+  if(!window||meter(f)?.used)return [];
+  const {height,radius}=f.character.ecb,y=f.y-Math.max(23,Math.min(62,height*.47));
+  return [{x1:f.x,y1:y,x2:f.x+f.face*(Math.max(15,radius)+91),y2:y,radius:Math.max(26,Math.min(43,height*.34)),window}];
+ }
+ const canConnect=f=>f.attack?.type==='limitBreak'&&!meter(f)?.used&&!f.hitlag&&!f.hitstun&&!f.pendingLaunch;
+
  function define(id,profile,visual){profiles.set(id,{...profile,visual});}
  function profile(id){return profiles.get(id);}
  function matchProfiles(players,enabled){
   if(!enabled)return [];
   const ids=new Set(players.flatMap(p=>[p.character,...(p.team||[])]));
-  return [...ids].filter(supports).map(profile);
+  return [...ids].filter(hasCinematic).map(profile);
  }
  function prepareArt(players,enabled){return Promise.all(matchProfiles(players,enabled).map(p=>p.visual().load()));}
  function artPrepared(players,enabled){return matchProfiles(players,enabled).every(p=>p.visual().prepared);}
@@ -19,12 +39,12 @@ const LimitBreak=(()=>{
 
  function begin(on){
   enabled=on;meters=new Map();scene=null;visualRevision++;
-  document.getElementById('training-limit-max').classList.toggle('hidden',!training||!enabled||!supports(fighters[0]?.characterId));
+  document.getElementById('training-limit-max').classList.toggle('hidden',!training||!enabled||!fighters[0]);
  }
  function meter(f){return meters.get(f.id);}
- function ready(f){const m=meter(f);return enabled&&supports(f.characterId)&&!f.respawn&&!BattlePlayers.out(f)&&m?.value>=threshold&&!m.used;}
+ function ready(f){const m=meter(f);return enabled&&!f.respawn&&!BattlePlayers.out(f)&&m?.value>=threshold&&!m.used;}
  function charge(f,damage){
-  if(!enabled||!supports(f.characterId)||damage<=0)return;
+  if(!enabled||damage<=0)return;
   const m=meter(f)||{value:0,used:false};
   if(!m.used)m.value=Math.min(threshold,m.value+damage);
   meters.set(f.id,m);
@@ -40,9 +60,13 @@ const LimitBreak=(()=>{
   return true;
  }
  function capture(attacker,target,touch){
-  if(scene||attacker.attack?.type!=='limitBreak'||attacker.hitlag||attacker.hitstun||attacker.pendingLaunch)return;
+  if(scene||!canConnect(attacker))return;
   meter(attacker).used=true;
   const config=profile(attacker.characterId);
+  if(!config){
+   CombatSystem.limitFinisher(attacker,target,{...standardFinisher,launchDirection:attacker.face},touch);
+   return;
+  }
   scene={attacker,target,profile:config,face:attacker.face,x:touch.x,y:touch.y,time:0};
   sound(...config.contactCue,attacker);
   visualRevision++;
@@ -69,26 +93,27 @@ const LimitBreak=(()=>{
   button.textContent='リミットブレイク 最大';
   button.onclick=()=>{
    const fighter=fighters[0];
-   if(!training||!enabled||Net.active||scene||!supports(fighter?.characterId)||fighter.attack?.type==='limitBreak')return;
+   if(!training||!enabled||Net.active||scene||!fighter||fighter.attack?.type==='limitBreak')return;
    meters.set(fighter.id,{value:threshold,used:false});
    visualRevision++;
   };
   document.querySelector('#training-tools .debug-buttons').append(button);
  });
  function hud(f,x,y){
-  if(!LimitBreak.enabled||!LimitBreak.supports(f.characterId))return;
-  const m=LimitBreak.meter(f),ready=LimitBreak.ready(f);
+  if(!enabled)return;
+  if(!hasCinematic(f.characterId))y+=33;
+  const m=meter(f),isReady=ready(f);
   ctx.fillStyle='#091427';ctx.fillRect(x+152,y+47,94,14);
-  if(ready){
+  if(isReady){
    ctx.save();
    const gold=ctx.createLinearGradient(0,y+48,0,y+60);
    gold.addColorStop(0,'#fff4aa');gold.addColorStop(.55,'#ffd258');gold.addColorStop(1,'#b96c17');
    ctx.fillStyle=gold;ctx.shadowBlur=9;ctx.shadowColor='#ffcc4d';ctx.fillRect(x+153,y+48,92,12);
    ctx.restore();
   }else if(!m?.used){
-   ctx.fillStyle='#3968d4';ctx.fillRect(x+153,y+48,92*(m?.value||0)/LimitBreak.threshold,12);
+   ctx.fillStyle='#3968d4';ctx.fillRect(x+153,y+48,92*(m?.value||0)/threshold,12);
   }
-  text(m?.used?'リミットブレイク 使用済み':ready?'MAX  攻撃＋必殺':'リミットブレイク',x+199,y+57,9,ready?'#2a1506':'#fff');
+  text(m?.used?'リミットブレイク 使用済み':isReady?'MAX  攻撃＋必殺':'リミットブレイク',x+199,y+57,9,isReady?'#2a1506':'#fff');
  }
- return {define,profile,supports,threshold,opener:f=>profile(f.characterId)?.opener,prepareArt,artPrepared,draw,drawOpeners,drawContact,hud,begin,meter,ready,charge,tryStart,capture,tick,visualChanged,get enabled(){return enabled;},get active(){return !!scene;},get scene(){return scene;}};
+ return {define,profile,hasCinematic,threshold,opener,standardBoxes,canConnect,prepareArt,artPrepared,draw,drawOpeners,drawContact,hud,begin,meter,ready,charge,tryStart,capture,tick,visualChanged,get enabled(){return enabled;},get active(){return !!scene;},get scene(){return scene;}};
 })();

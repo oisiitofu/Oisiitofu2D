@@ -91,11 +91,11 @@ const CombatSystem=(()=>{
   if(!a.projectile)freeze(f,lag);freeze(o,lag);if(a.element)RikiRules.onHit(f,o,a);
   if(o.pendingLaunch){o.state='hit';if(!lag){o.hitlag=1;hitlag(o,emptyInput());}}BattleFeel.impact(f,o,a,dmg,raw,lag,touch,box);
  }
- function limitFinisher(f,o,a){
+ function limitFinisher(f,o,a,touch=null){
   const dmg=a.damage,raw=calculateKnockback(a,o.damage+dmg,o.character.weight,f.damage,dmg);
   o.frozen=null;o.hitlag=0;o.damage=Math.min(999,o.damage+dmg);o.lastHit=f.id;
   f.stats.damage+=dmg;f.stats.hits++;LimitBreak.charge(o,dmg);BattleReport.hit(f,o,a,dmg);
-  launchHit(f,o,a,dmg,raw,7);
+  launchHit(f,o,a,dmg,raw,7,touch);
  }
  function overlap(a,b){let proxy={x:(b.x1+b.x2)/2,y:(b.y1+b.y2)/2};const dx=a.x2-a.x1,dy=a.y2-a.y1;for(let t of [0,.25,.5,.75,1]){let x=lerp(b.x1,b.x2,t),y=lerp(b.y1,b.y2,t),q=clamp(((x-a.x1)*dx+(y-a.y1)*dy)/Math.max(1,dx*dx+dy*dy),0,1);if(Math.hypot(x-a.x1-q*dx,y-a.y1-q*dy)<=a.radius+b.radius)return true;}return false;}
  function resolve(){
@@ -119,7 +119,7 @@ const CombatSystem=(()=>{
     }
    }
   }
-  for(const c of contacts){if(LimitBreak.active)break;const counter=c.o.attack;if(c.a.type!=='grab'&&counter?.counterWindow&&c.o.timer>=counter.counterWindow[0]&&c.o.timer<=counter.counterWindow[1]){c.o.face=Math.sign(c.f.x-c.o.x)||c.o.face;attack(c.o,counter.counterMove);c.o.attack.damage=Math.max(c.o.attack.damage,c.a.damage*1.2);c.o.inv=c.o.attack.totalFrames;ring(c.o.x,c.o.y-35,colors[c.o.color],90);label(c.o.x,c.o.y-90,'COUNTER');sound('parry',1,c.o);continue;}hit(c.f,c.o,c.a,c.box,c.touch);}
+  for(const c of contacts){if(LimitBreak.active)break;if(c.a.type==='limitBreak'&&!LimitBreak.canConnect(c.f))continue;const counter=c.o.attack;if(c.a.type!=='grab'&&counter?.counterWindow&&c.o.timer>=counter.counterWindow[0]&&c.o.timer<=counter.counterWindow[1]){c.o.face=Math.sign(c.f.x-c.o.x)||c.o.face;attack(c.o,counter.counterMove);c.o.attack.damage=Math.max(c.o.attack.damage,c.a.damage*1.2);c.o.inv=c.o.attack.totalFrames;ring(c.o.x,c.o.y-35,colors[c.o.color],90);label(c.o.x,c.o.y-90,'COUNTER');sound('parry',1,c.o);continue;}hit(c.f,c.o,c.a,c.box,c.touch);}
  }
  function timeline(f){let a=f.attack;if(!a)return;for(let e of a.timeline){if(e.frame!==f.timer||a.eventsDone.has(e))continue;a.eventsDone.add(e);switch(e.type){case 'SetVelocity':if(e.x!==undefined)f.vx=e.x*f.face;if(e.y!==undefined)f.vy=e.y;break;case 'AddVelocity':f.vx+=(e.x||0)*f.face;f.vy+=e.y||0;break;case 'EnableGravity':f.gravityOff=false;break;case 'DisableGravity':f.gravityOff=true;break;case 'SetIntangible':f.intangible=e.frames;break;case 'ClearIntangible':f.intangible=0;break;case 'EnableHitbox':a.extraHitboxes.push(e.hitbox);break;case 'DisableHitbox':a.extraHitboxes=a.extraHitboxes.filter(h=>h.id!==e.id);break;case 'ChangeHitbox':Object.assign(a.extraHitboxes.find(h=>h.id===e.id)||{},e.values);break;case 'EnableArmor':a.armorFrames=[{start:f.timer,end:e.end||a.totalFrames,...e.armor}];break;case 'DisableArmor':a.armorFrames=[];break;case 'EnableLandingFlag':a.autoCancelWindow=[];break;case 'DisableLandingFlag':a.autoCancelWindow=[[f.timer,Infinity]];break;case 'PlaySFX':sound(e.sound||'swing',1,f);break;case 'SpawnVFX':ring(f.x,f.y-32,colors[f.color],e.size||70);break;case 'CameraShake':shake=e.amount||5;break;}}
  }

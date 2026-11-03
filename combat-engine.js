@@ -47,6 +47,7 @@ function attack(f,type,activationInput=null){
  if(type==='rise'&&!f.grounded){f.fastFall=false;f.vx*=.35;if(f.vy>0)f.vy=Math.min(2,f.vy*.15);}
  if(data.aerial&&!data.verticalImpulse)f.specialLandingLag=0;
  let special=data.special||['rise','dragon','dash','gale','counter'].includes(type)||type.startsWith('side');PlayerStates.enter(f,type==='grab'?'Grab':special?(f.grounded?'GroundSpecial':'AirSpecial'):(f.grounded?'GroundAttack':'AerialAttack'),data.totalFrames);f.timer=1;f.attack={...data,type,hits:new Set(),hitTimes:new Map(),eventsDone:new Set(),extraHitboxes:[],staleMultiplier:CombatSystem.stale(f,type),shortHopMultiplier:f.shortHop&&!f.grounded?.85:1,charge:0,chargeFrames:0,hold:false,hauntDelay:f.jibanyanHaunt>0?6:0};if(!data.preserveVelocity)f.vx=f.vy=0;f.vx*=data.velocityMultiplier;if(data.velocityXOverride!==null)f.vx=data.velocityXOverride*f.face;if(data.velocityYOverride!==null)f.vy=data.velocityYOverride;f.buffer=null;f.tumbling=false;if(data.targetedMeteor){f.attack.targetOffset=145;f.attack.meteorTarget=ChocoboRules.target(f);}
+ if(data.standardLimit)return true;
  if(f.characterId==='lightning')LightningRules.prepare(f);if(f.characterId==='rean')ReanRules.prepare(f);if(f.characterId==='estelle')EstelleRules.prepare(f);if(f.characterId==='noctis')NoctisRules.prepare(f);if(f.characterId==='clive')CliveRules.prepare(f);if(f.characterId==='makoto')MakotoRules.prepare(f);if(f.characterId==='neku')NekuRules.prepare(f);if(f.characterId==='narukami')NarukamiRules.prepare(f);if(f.characterId==='naegi')NaegiRules.prepare(f);if(f.characterId==='rex')RexRules.prepare(f);if(f.characterId==='luke')LukeRules.prepare(f);if(f.characterId==='will')WillRules.prepare(f);if(f.characterId==='kosmos')KosmosRules.prepare(f);if(f.characterId==='fayt')FaytRules.prepare(f);if(f.characterId==='emma')EmmaRules.prepare(f);if(f.characterId==='ryza')RyzaRules.prepare(f);if(f.characterId==='noah')NoahRules.prepare(f);if(f.characterId==='midna')MidnaRules.prepare(f);if(f.characterId==='bomberman')BombermanRules.prepare(f);if(f.characterId==='sans')SansRules.prepare(f);if(f.characterId==='shiren')ShirenRules.prepare(f);if(f.characterId==='pokoa')PokoaRules.prepare(f);if(f.characterId==='hunter')HunterRules.prepare(f);if(f.characterId==='adol')AdolRules.prepare(f);if(f.characterId==='valkyrie')ValkyrieRules.prepare(f);if(f.characterId==='terry')TerryRules.prepare(f);if(f.characterId==='agumon')AgumonRules.prepare(f);if(f.characterId==='pawapuro')PawapuroRules.prepare(f);if(f.characterId==='headmaster')HeadmasterRules.prepare(f);if(NewcomerCore.ids.includes(f.characterId))NewcomerCore.registry[f.characterId].prepare(f);if(f.characterId==='lloyd')LloydRules.prepare(f);
  if(downSpecialInput){f.attack.downSpecialInput=true;f.fastFall=false;}
  ProjectileCadence.begin(f,f.attack);
@@ -83,7 +84,7 @@ function bufferInput(f,i){
 }
 function consumeBuffered(f,i){if(!f.buffer)return i;let b=f.buffer;f.buffer=null;return{...i,[b.key]:true,x:b.x,y:b.y};}
 function advanceAttack(f,i){
- let a=f.attack;if(!a||a.hauntDelay>0)return;ProjectileCadence.advance(f,a);if(f.characterId==='pawapuro')PawapuroRules.aim(f,i);if(f.characterId==='hunter')HunterRules.aim(f,i);if(f.characterId==='ryza'&&RyzaRules.holding(f,i))return;if(f.characterId==='chocobo')ChocoboRules.tick(f,i);
+ let a=f.attack;if(!a||a.hauntDelay>0)return;if(a.standardLimit){GameAudio.attackTick(f);return;}ProjectileCadence.advance(f,a);if(f.characterId==='pawapuro')PawapuroRules.aim(f,i);if(f.characterId==='hunter')HunterRules.aim(f,i);if(f.characterId==='ryza'&&RyzaRules.holding(f,i))return;if(f.characterId==='chocobo')ChocoboRules.tick(f,i);
  // Run before charge's early return. Authored upward impulses and movement
  // applied by character rules below retain their direction and timing.
  if(a.type==='rise'&&f.timer<a.startupFrames){f.fastFall=false;if(f.vy>0)f.vy*=.5;}
@@ -115,6 +116,7 @@ function selectAttack(f,i){
 function updateFighter(f,i){PlayerController.tick(f,i);}
 
 function attackBoxes(f,a=f.attack,t=f.timer){
+ if(a?.standardLimit)return LimitBreak.standardBoxes(f,a,t);
  const morph=MorphieRules.scale(f),body=a?.type==='grab'?1:BattleSize.geometry(f),boxes=NativeStrikes.boxes(f,a,t,()=>baseAttackBoxes(f,a,t)),y=BattleSize.originY(f);
  // Keep special-move coverage while moving its center with the resized body.
  // Ordinary weapon segments shrink with the sprite; grab reach has its own tuning.

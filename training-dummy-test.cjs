@@ -4,6 +4,24 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
  try{for(const[width,height]of[[1280,720],[1440,900]]){
   const page=await browser.newPage({viewport:{width,height}});page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>{window.requestAnimationFrame=()=>0;navigator.getGamepads=()=>[];});await page.goto(process.env.TEST_URL||'http://localhost:4179');await page.waitForFunction(()=>AstralEdge.assetsLoaded,null,{polling:100,timeout:60000});await page.click('#enter-training');await page.locator('#fighter-grid [data-id="dragoon"]').click();await page.evaluate(()=>{document.getElementById('cpu-character').value='dragoon';document.getElementById('stage').value='0';});await page.click('#start');await page.waitForFunction(()=>state==='battle',null,{polling:100,timeout:60000});
   const base=await page.evaluate(()=>{const data=JSON.stringify([CharacterData,CombatData.moves]),saved=JSON.stringify({...localStorage});window.dummyBaseline={data,saved};for(let n=0;n<120;n++)update();const f=fighters[1];return{idle:document.getElementById('dummy-behavior').value==='idle'&&!f.attack&&f.mode==='Idle'&&f.damage===0&&f.x===940,input:!BattlePlayers.localInput(f).guard};});check('default dummy is still idle '+width,base.idle&&base.input,base);
+  const recovery=await page.evaluate(()=>{
+   const results=[];
+   for(const side of [-1,1]){
+    resetTraining();const f=fighters[1],p=platforms.find(v=>v.main);
+    Object.assign(f,{x:side<0?p.x-106:p.x+p.w+106,y:p.y+90,vx:0,vy:3,grounded:false,inv:0,ledgeCooldown:0,airJumps:0,face:-side});
+    PlayerStates.enter(f,'Fall');
+    const stock=f.stocks;let special=false,landed=false;
+    for(let n=0;n<180&&!f.respawn;n++){
+     const raw=BattlePlayers.localInput(f);special||=raw.special&&raw.y<0;
+     update();
+     if(f.grounded){landed=true;break;}
+    }
+    const raw=BattlePlayers.localInput(f);
+    results.push({side,special,landed,sameStock:f.stocks===stock,neutral:!raw.x&&!raw.jab&&!raw.special});
+   }
+   resetTraining();return results;
+  });
+  check('idle dummy recovers from both ledges then returns to neutral '+width,recovery.every(r=>r.special&&r.landed&&r.sameStock&&r.neutral),recovery);
   await page.selectOption('#dummy-behavior','guard');
   const guard=await page.evaluate(()=>{const f=fighters[1],hp=f.shield;for(let n=0;n<8;n++)update();render();return{guard:['ShieldStart','ShieldHold'].includes(f.mode)&&f.shield<hp&&f.damage===0,input:BattlePlayers.localInput(f).guard===true&&BattlePlayers.localInput(f).guardHeld===true,player:!BattlePlayers.localInput(fighters[0]).guard,shield:f.shield};});check('guard uses ordinary finite shield '+width,guard.guard&&guard.input&&guard.player,guard);
   await page.screenshot({path:`previews/quality/dummy-${tag}-${width}-guard.png`});

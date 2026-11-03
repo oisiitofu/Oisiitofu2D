@@ -2,14 +2,14 @@
 // Generic intentions precede each character's authored CPU rules. Read the
 // current resources; the legacy jumps flag cannot represent extra air jumps.
 const CPUControl=(()=>{
+ const offstage=(f,floor)=>!!floor&&!f.grounded&&(f.x<floor.x||f.x>floor.x+floor.w||f.y>floor.y+8);
  function base(f,o,floor,at,difficulty='normal',random=Math.random){
   const i=emptyInput();if(!floor||!o)return i;
   const dx=o.x-f.x,dist=Math.abs(dx),center=floor.x+floor.w/2,right=floor.x+floor.w;
   const rate=difficulty==='hard'?10:difficulty==='easy'?34:20;
   // Crossing the lip horizontally is not a completed recovery while the
   // feet are still below its catch height.
-  const outside=f.x<floor.x||f.x>right,below=f.y>floor.y+8;
-  const recovering=!f.grounded&&(outside||below),locked=f.hitstun>0||f.hitlag>0||!!f.pendingLaunch||f.respawn>0;
+  const recovering=offstage(f,floor),locked=f.hitstun>0||f.hitlag>0||!!f.pendingLaunch||f.respawn>0;
   const helpless=f.helpless||f.mode==='Helpless';
   if(recovering){
    i.x=Math.sign(center-f.x);
@@ -37,5 +37,5 @@ const CPUControl=(()=>{
   if(f.state==='grab')i.y=dist<60?-1:0;
   return i;
  }
- return{base};
+ return{base,offstage};
 })();
