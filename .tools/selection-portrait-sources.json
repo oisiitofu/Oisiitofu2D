@@ -163,7 +163,7 @@
     "source": "characters/twob/assets/twob-selection.png",
     "crop": [
       208,
-      145,
+      109,
       1120,
       800
     ],
@@ -1955,7 +1955,7 @@
     "source": "characters/kisuke/assets/kisuke-selection.png",
     "crop": [
       259,
-      237,
+      203,
       1018,
       727
     ],
@@ -1968,7 +1968,7 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "ray": {
     "source": "characters/ray/assets/ray-selection-framed-v3.png",
@@ -2950,10 +2950,10 @@
   "reimu": {
     "source": "characters/reimu/assets/reimu-selection.png",
     "crop": [
-      176,
-      257,
-      960,
-      686
+      128,
+      226,
+      1056,
+      754
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
@@ -3696,10 +3696,10 @@
   "mono": {
     "source": "characters/mono/assets/mono-selection-v2.png",
     "crop": [
-      148,
-      0,
-      1240,
-      886
+      180,
+      44,
+      1176,
+      840
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
