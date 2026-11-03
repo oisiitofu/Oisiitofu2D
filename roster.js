@@ -263,12 +263,7 @@ const Roster=(()=>{
  function select(id){if(!definitionFor(id))return;if(BattlePlayers.setCharacter(id))return;if(!SquadBattle.choose(id))return;if(target==='cpu'){$roster('cpu-character').value=id;$roster('cpu-character').dispatchEvent(new Event('change'));}else{chosen=id;refreshSelection();}}
  function setTarget(value,preserveSeat=false){if(!preserveSeat)return BattlePlayers.setSelection(value==='cpu'?1:0);target=value==='cpu'&&$roster('battle-mode').value!=='online'?'cpu':'player';refreshSelection();}
  function setColor(value){if(BattlePlayers.setColor(value))return;if(target==='cpu'){$roster('color2').value=String(value);$roster('color2').dispatchEvent(new Event('change'));}else{selected=value;artReady();}}
- function thumbnailSize(img,aspect){
-  img.sizes=Math.ceil(Math.max(img.clientWidth||140,img.clientHeight*aspect))+'px';
-  // Filtering can make a card much wider/taller than its authored portrait.
-  // Keep the reviewed face rather than cutting off its forehead or cheeks.
-  if(img.clientWidth&&img.clientHeight){const ratio=img.clientWidth/img.clientHeight,contain=(ratio<1.2||ratio>1.8)&&(ratio>aspect*1.08||ratio<aspect/1.08);img.style.objectFit=contain?'contain':'';img.style.objectPosition=contain?'50% 100%':'';}
- }
+ function thumbnailSize(img,aspect){img.sizes=Math.ceil(Math.max(img.clientWidth||140,img.clientHeight*aspect))+'px';}
  function artReady(){
   const id=activeId(),color=activeColor(),d=definitionFor(id),url=id==='random'?randomPortrait:ArtLoader.portrait(id,color,d.pose,true),portrait=document.querySelector('#selected-portrait');if(url&&portrait.getAttribute('src')!==url)portrait.src=url;
   for(const d of definitions){
@@ -306,15 +301,15 @@ const Roster=(()=>{
   if(document.body.classList.contains('touch-mode')){grid.style.setProperty('--roster-columns',Math.max(3,Math.floor(width/90)));grid.style.setProperty('--roster-label-height','22px');grid.classList.remove('compact-cards');for(const el of grid.querySelectorAll('.fighter-card>b'))el.style.fontSize='11px';return;}
   const card=grid.querySelector('.fighter-card:not([hidden])'),count=grid.querySelectorAll('.fighter-card:not([hidden])').length,style=getComputedStyle(grid),border=parseFloat(getComputedStyle(card).borderTopWidth)*2,gapX=parseFloat(style.columnGap),gapY=parseFloat(style.rowGap),fontSize=parseFloat(style.getPropertyValue('--roster-name-size'))||12;
   const measure=document.createElement('canvas').getContext('2d'),family=getComputedStyle(card.querySelector('b')).fontFamily;measure.font=`900 ${fontSize}px ${family}`;
-  // Fit every fighter at 100% zoom; choose the grid with the largest portraits.
+  // Fit every fighter using the largest square tiles the grid can hold.
   let columns=1,best=-Infinity,label=0,nameSize=fontSize;
   for(let n=1;n<=count;n++){
-   const rows=Math.ceil(count/n),w=(width-gapX*(n-1))/n-border,h=(height-gapY*(rows-1))/rows-border;
-   if(w<=6||h<=6)continue;
-   const size=Math.min(fontSize,(w-6)/7,h*.22),labelHeight=Math.ceil(size*1.35)+2,score=Math.min(w/1.4,h-labelHeight);
+   const rows=Math.ceil(count/n),side=Math.floor(Math.min((width-gapX*(n-1))/n,(height-gapY*(rows-1))/rows)),inner=side-border;
+   if(inner<=6)continue;
+   const size=Math.min(fontSize,(inner-6)/7,inner*.22),labelHeight=Math.ceil(size*1.35)+2,score=side;
    if(score>best){best=score;columns=n;label=labelHeight;nameSize=size;}
   }
-  grid.style.setProperty('--roster-min-card-height','0px');grid.style.setProperty('--roster-label-height',label+'px');grid.style.setProperty('--roster-columns',columns);grid.style.setProperty('--roster-rows',Math.ceil(count/columns));grid.classList.toggle('compact-cards',best<35);
+  grid.style.setProperty('--roster-card-size',Math.max(0,best)+'px');grid.style.setProperty('--roster-label-height',label+'px');grid.style.setProperty('--roster-columns',columns);grid.style.setProperty('--roster-rows',Math.ceil(count/columns));grid.classList.toggle('compact-cards',best-label-border<35);
   for(const el of grid.querySelectorAll('.fighter-card>b')){const available=Math.max(0,el.clientWidth-8),fullWidth=measure.measureText(el.textContent).width;el.style.fontSize=(Math.floor(Math.min(nameSize,fontSize*available/fullWidth)*10)/10)+'px';el.parentElement.title=el.textContent;}
   for(const d of definitions){const thumb=ArtLoader.thumbnail(d.id),img=grid.querySelector(`[data-id="${d.id}"] img`);if(thumb&&img)thumbnailSize(img,thumb.aspect);}
  }
