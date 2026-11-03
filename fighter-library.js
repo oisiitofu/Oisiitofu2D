@@ -25,7 +25,8 @@ const FighterLibrary=(()=>{
  function selected(){const b=document.getElementById('library-favorite'),id=Roster.selectionContext().characterId;if(!b)return;b.disabled=!valid.has(id);b.textContent=favorites.includes(id)?'★ 登録済み':'☆ 登録';b.setAttribute('aria-pressed',String(favorites.includes(id)));b.setAttribute('aria-label',(Roster.selectionContext().characterName||'選択キャラ')+'のお気に入り');}
  function init(){
   load();const bar=document.createElement('div');bar.className='fighter-discovery';bar.innerHTML='<label>作品<select id="library-origin" aria-label="カードを登場作品で絞り込み"></select></label><div class="library-scopes" role="group" aria-label="キャラの表示範囲"><button type="button" data-library-scope="all" aria-pressed="true">すべて</button><button type="button" data-library-scope="favorites" aria-pressed="false">★ お気に入り</button><button type="button" data-library-scope="recent" aria-pressed="false">最近使った</button></div><button type="button" id="library-favorite">☆ 登録</button><span id="library-count" role="status"></span>';
-  const grid=document.getElementById('fighter-grid');grid.before(bar);const empty=document.createElement('p');empty.id='library-empty';empty.hidden=true;empty.textContent='該当するキャラがいません。作品や表示範囲を変更してください。';grid.append(empty);
+  document.querySelector('.roster-targets .costume-row').after(bar);
+  const grid=document.getElementById('fighter-grid');const empty=document.createElement('p');empty.id='library-empty';empty.hidden=true;empty.textContent='該当するキャラがいません。作品や表示範囲を変更してください。';grid.append(empty);
   fill(document.getElementById('library-origin'));document.getElementById('library-origin').onchange=e=>{origin=e.target.value;apply();};
   for(const b of bar.querySelectorAll('[data-library-scope]'))b.onclick=()=>{scope=b.dataset.libraryScope;apply();};document.getElementById('library-favorite').onclick=()=>toggleFavorite(Roster.selectionContext().characterId);apply();
  }

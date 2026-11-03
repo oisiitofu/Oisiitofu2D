@@ -172,11 +172,11 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 .random-fighter .random-symbol{font-size:clamp(12px,4vw,64px)}
 .compact-cards .selected-mark{display:none!important}
 .compact-cards .fighter-number{font-size:8px;padding:1px 3px}
-.fighter-library{grid-template-rows:40px minmax(0,1fr);gap:7px}
-.roster-targets{align-items:center}
-.roster-target{height:100%;width:200px;flex:0 1 200px;padding:2px 8px}
+.fighter-library{grid-template-rows:minmax(40px,auto) minmax(0,1fr);gap:7px}
+.roster-targets{align-items:center;flex-wrap:wrap}
+.roster-target{height:40px;width:200px;flex:0 1 200px;padding:2px 8px}
 .roster-target img{height:32px;width:32px}
-.roster-targets .costume-row{height:100%;gap:8px;margin-left:8px;flex-shrink:0}
+.roster-targets .costume-row{gap:8px;margin-left:8px;flex-shrink:0}
 .roster-targets .costume-row>b{display:block;font-size:9px;letter-spacing:1px}
 .roster-targets .costume-row #swatches{gap:6px}
 .roster-targets .costume-row #swatches button{width:24px;height:24px}
@@ -195,8 +195,8 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 @media(max-width:1000px){#roster-selection-hint{display:none}.roster-target{width:180px;flex-basis:180px}.roster-targets .costume-row{margin-left:auto}}
 @media(max-width:600px){
  .roster-layout{grid-template-rows:minmax(0,1fr) 54px;gap:5px}
- .fighter-library{grid-template-rows:64px minmax(0,1fr);gap:5px}
- .roster-targets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:34px 26px;gap:4px 5px}
+ .fighter-library{grid-template-rows:auto minmax(0,1fr);gap:5px}
+ .roster-targets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:34px 26px auto;gap:4px 5px}
  .roster-target{width:100%;height:34px;padding:1px 4px;gap:4px}
  .roster-target img{width:24px;height:28px}
  .roster-targets .costume-row{grid-column:1/-1;justify-self:center;height:24px;margin:0;gap:8px}
@@ -218,7 +218,7 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 }
 @media(max-height:480px) and (min-width:601px){
  .roster-layout{grid-template-rows:minmax(0,1fr) 48px;gap:4px}
- .fighter-library{grid-template-rows:30px minmax(0,1fr);gap:4px}
+ .fighter-library{grid-template-rows:minmax(30px,auto) minmax(0,1fr);gap:4px}
  .roster-target{height:30px;flex-basis:170px}.roster-target img{height:25px;width:25px}
  .roster-targets .costume-row #swatches button{height:20px;width:20px}
  .roster-footer{padding-top:3px}.selection-banner small{display:none}.selection-banner b{font-size:14px}
@@ -229,7 +229,7 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 /* The lineup shares the library's fixed height; the full roster still fits. */
 .squad-lineup{display:flex;gap:5px;flex:0 0 42px;min-height:0;padding:3px 0}.squad-lineup.hidden{display:none}.squad-slot{display:flex;align-items:center;gap:4px;min-width:0;flex:1;background:#172739;border:1px solid #456077;border-radius:5px;padding:2px;color:#c5d8e9}.squad-slot img{width:38px;height:27px;object-fit:contain}.squad-slot span{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.squad-slot.active{border-color:#93d9ff;background:#284b68}.mode-card.squad{border-color:#a4a4e555}.online-squad-size small{font-size:10px;color:#aabccd}.home-actions{gap:8px}.mode-card{min-height:75px}@media(max-width:600px){.squad-lineup{flex-basis:34px}.squad-slot{padding:1px}.squad-slot img{display:none}.squad-slot span{font-size:8px}.mode-card{min-height:60px}}
 
-.fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:40px 42px minmax(0,1fr)}@media(max-width:600px){.fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:64px 34px minmax(0,1fr)}}@media(max-height:480px) and (min-width:601px){.fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:30px 30px minmax(0,1fr)}}
+.fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:minmax(40px,auto) 42px minmax(0,1fr)}@media(max-width:600px){.fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:auto 34px minmax(0,1fr)}}@media(max-height:480px) and (min-width:601px){.fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:minmax(30px,auto) 30px minmax(0,1fr)}}
 
 /* Keep online lineup selection next to the player's character and colors. */
 .online-lineup-controls{display:flex;align-items:center;gap:10px;margin-left:auto;min-width:0}
@@ -382,14 +382,35 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 .character-guide-intro .character-guide-origin{color:#dcecff;font-size:12px;line-height:1.6;margin:7px 0}
 
 /* Fast character discovery, retaining roster display numbers and selection ownership. */
-.fighter-discovery{display:flex;align-items:center;gap:6px;min-width:0;color:#c8daef;font-size:11px}.fighter-discovery label{display:flex;align-items:center;gap:5px;min-width:0}.fighter-discovery select{width:180px;max-width:25vw;min-height:28px;background:#101e30;color:#eef5ff;border:1px solid #4d6985;border-radius:5px;font-size:11px}.library-scopes{display:flex;gap:3px}.fighter-discovery button{padding:4px 8px;min-height:28px;font-size:11px;white-space:nowrap;color:#dcecff;background:#182c43;border:1px solid #49647f;border-radius:5px}.fighter-discovery button[aria-pressed=true]{background:#305276;border-color:#87d6ff;color:#fff}.fighter-discovery #library-favorite{margin-left:auto}.fighter-discovery #library-count{white-space:nowrap;color:#b6cde1}.fighter-library{grid-template-rows:40px 30px minmax(0,1fr)}.fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:40px 42px 30px minmax(0,1fr)}.fighter-card[hidden]{display:none!important}#library-empty{grid-column:1/-1;color:#e0eafa;font-size:14px;text-align:center}#fighter-list-dialog .fighter-list-tools{flex-wrap:wrap}#fighter-list-dialog #fighter-list-origin{max-width:235px}.fighter-list-tools label{min-width:0}
+.fighter-discovery{display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px;min-width:0;color:#c8daef;font-size:11px}.fighter-discovery label{display:flex;align-items:center;gap:5px;min-width:0}.fighter-discovery select{margin:0;padding:4px;width:180px;max-width:25vw;min-height:28px;background:#101e30;color:#eef5ff;border:1px solid #4d6985;border-radius:5px;font-size:11px}.library-scopes{display:flex;gap:3px}.fighter-discovery button{padding:4px 8px;min-height:28px;font-size:11px;white-space:nowrap;color:#dcecff;background:#182c43;border:1px solid #49647f;border-radius:5px}.fighter-discovery button[aria-pressed=true]{background:#305276;border-color:#87d6ff;color:#fff}.fighter-discovery #library-count{white-space:nowrap;color:#b6cde1}@media (601px <= width <= 1280px){
+ .roster-targets .roster-target{width:auto;flex-basis:105px;min-width:0}
+ #roster-selection-hint{display:none}
+ .roster-targets .costume-row{margin-left:0}
+ .fighter-discovery select{width:140px}
+ .fighter-discovery button{padding-inline:5px}
+}
+@media (601px <= width <= 950px){
+ .roster-targets .roster-target{flex-basis:85px}
+ .roster-targets .roster-target img{display:none}
+ .roster-targets .costume-row>b,.roster-targets #costume-name,.fighter-discovery #library-count{display:none}
+ .roster-targets .costume-row #swatches{gap:4px}
+ .roster-targets .costume-row #swatches button{width:20px;height:20px}
+ .fighter-discovery select{width:118px}
+}
+@media(max-width:600px){
+ .fighter-discovery{grid-column:1/-1}
+ .fighter-discovery select{width:120px;max-width:29vw}
+ .fighter-discovery :is(button,select){font-size:10px}
+ .fighter-discovery button{padding:3px 5px}
+}
+.fighter-card[hidden]{display:none!important}#library-empty{grid-column:1/-1;color:#e0eafa;font-size:14px;text-align:center}#fighter-list-dialog .fighter-list-tools{flex-wrap:wrap}#fighter-list-dialog #fighter-list-origin{max-width:235px}.fighter-list-tools label{min-width:0}
 
 .accessibility-settings{padding:0 0 18px;border-bottom:1px solid #49617d;margin-bottom:18px}.accessibility-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.accessibility-options label{display:grid;gap:5px;color:#dceaff}.accessibility-options select{background:#13243b;color:#f4f8ff;min-height:34px;border:1px solid #6b88a7}.access-symbols{display:flex;gap:7px;align-items:center;margin-top:14px}.accessibility-settings p,.accessibility-settings a{font-size:12px;line-height:1.65;color:#bcd2e9}.accessibility-settings a{display:inline-block;margin:10px}.result-player-stat{border-top:1px solid #647b9444;padding:10px 0}.result-player-stat h3{color:#e7f2ff;margin:0 0 7px;font-size:13px}.result-player-stat p{font-size:11px;margin:4px 0;color:#d1e2f7}.result-player-stat dl{display:grid;grid-template-columns:100px minmax(0,1fr);gap:4px 8px;margin:8px 0;font-size:11px;line-height:1.55}.result-player-stat dt{color:#9ebad7}.result-player-stat dd{margin:0;color:#f0f5fd;overflow-wrap:anywhere}.result-stat-note{font-size:10px!important;line-height:1.6;color:#a5bad3!important}.result-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}.result-actions .primary{grid-column:1/-1}.result-actions button{width:100%;margin:0!important;min-height:42px}#result-room[hidden]{display:none!important}#result-actions-help{font-size:11px;line-height:1.6;color:#bbd2eb}.result-actions button:focus-visible{outline:3px solid #ffe7a3;outline-offset:2px}
 body:not([data-text-size="1"]) #settings,body:not([data-text-size="1"]) #fighter-list-dialog{width:min(900px,94vw);max-width:94vw}body[data-text-size="1.2"] :is(dialog p,dialog label,dialog button,dialog select,dialog input,.result p,.result button,.result dl,.fighter-name-choice,.fighter-list-count,.selected-fighter-panel p){font-size:14px!important;line-height:1.6}body[data-text-size="1.4"] :is(dialog p,dialog label,dialog button,dialog select,dialog input,.result p,.result button,.result dl,.fighter-name-choice,.fighter-list-count,.selected-fighter-panel p){font-size:16px!important;line-height:1.65}body:not([data-text-size="1"]) .fighter-name-choice{white-space:normal;height:auto;min-height:44px}body:not([data-text-size="1"]) #result.presentation-result .result{width:min(560px,42vw)}body:not([data-text-size="1"]) .result-player-stat dl{grid-template-columns:1fr}body:not([data-text-size="1"]) .result-player-stat dd{margin-bottom:5px}
 
 #settings label.access-symbols{display:flex;justify-content:flex-start;gap:8px}#settings .access-symbols input{width:18px;min-width:18px;height:18px;margin:0;flex:0 0 auto}#settings .accessibility-settings a{color:#bfe8ff}
 
-body:not([data-text-size="1"]) .fighter-discovery{flex-wrap:wrap}body:not([data-text-size="1"]) .fighter-discovery :is(button,select){font-size:calc(11px * var(--readable-scale));min-height:32px}body:not([data-text-size="1"]) .fighter-library{grid-template-rows:40px auto minmax(0,1fr)}body:not([data-text-size="1"]) .fighter-library:has(.squad-lineup:not(.hidden)){grid-template-rows:40px 42px auto minmax(0,1fr)}body:not([data-text-size="1"]) .fighter-grid{grid-template-rows:none!important;grid-auto-rows:calc(86px * var(--readable-scale));overflow:auto}body:not([data-text-size="1"]) .fighter-card>b{font-size:calc(11px * var(--readable-scale))!important;line-height:1.5;min-height:24px}body:not([data-text-size="1"]) .fighter-card img{bottom:24px;height:calc(100% - 24px)}
+body:not([data-text-size="1"]) .fighter-discovery :is(button,select){font-size:calc(11px * var(--readable-scale));min-height:32px}body:not([data-text-size="1"]) .fighter-grid{grid-template-rows:none!important;grid-auto-rows:calc(86px * var(--readable-scale));overflow:auto}body:not([data-text-size="1"]) .fighter-card>b{font-size:calc(11px * var(--readable-scale))!important;line-height:1.5;min-height:24px}body:not([data-text-size="1"]) .fighter-card img{bottom:24px;height:calc(100% - 24px)}
 
 #result #stats{max-height:32dvh;overflow:auto;padding-right:5px}#result:has(#result-readiness:not(.hidden)) #stats{max-height:18dvh}#result .result-actions{position:sticky;bottom:0;background:#0b1628;padding:8px 0;z-index:1}#result #stats:focus-visible{outline:2px solid #86d7ff;outline-offset:2px}
 
