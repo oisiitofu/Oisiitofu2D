@@ -258,21 +258,33 @@ const Roster=(()=>{
    c.setAttribute('aria-pressed',String(c.dataset.id===id));
    c.setAttribute('aria-label',d.name===c.querySelector('b').textContent?`${d.name}（${target==='cpu'?'CPU':'1P'} 選択中）`:c.querySelector('b').textContent);
   });
-  artReady();summary();SquadBattle.refresh();BattlePlayers.refresh();dispatchEvent(new Event('roster-context-change'));
+  selectionArt();summary();SquadBattle.refresh();BattlePlayers.refresh();dispatchEvent(new Event('roster-context-change'));
  }
  function select(id){if(!definitionFor(id))return;if(BattlePlayers.setCharacter(id))return;if(!SquadBattle.choose(id))return;if(target==='cpu'){$roster('cpu-character').value=id;$roster('cpu-character').dispatchEvent(new Event('change'));}else{chosen=id;refreshSelection();}}
  function setTarget(value,preserveSeat=false){if(!preserveSeat)return BattlePlayers.setSelection(value==='cpu'?1:0);target=value==='cpu'&&$roster('battle-mode').value!=='online'?'cpu':'player';refreshSelection();}
- function setColor(value){if(BattlePlayers.setColor(value))return;if(target==='cpu'){$roster('color2').value=String(value);$roster('color2').dispatchEvent(new Event('change'));}else{selected=value;artReady();}}
- function thumbnailSize(img,aspect){img.sizes=Math.ceil(Math.max(img.clientWidth||140,img.clientHeight*aspect))+'px';}
- function artReady(){
-  const id=activeId(),color=activeColor(),d=definitionFor(id),url=id==='random'?randomPortrait:ArtLoader.portrait(id,color,d.pose,true),portrait=document.querySelector('#selected-portrait');if(url&&portrait.getAttribute('src')!==url)portrait.src=url;
-  for(const d of definitions){
-   const el=document.querySelector(`[data-id="${d.id}"] img`);if(!el)continue;
-   const thumb=ArtLoader.thumbnail(d.id);let url;if(typeof TouchControls!=='undefined'&&TouchControls.enabled){el.loading='lazy';el.decoding='async';el.fetchPriority='low';}
-   if(thumb){thumbnailSize(el,thumb.aspect);if(el.getAttribute('srcset')!==thumb.srcset)el.srcset=thumb.srcset;url=thumb.src;}
-   else{el.removeAttribute('srcset');el.removeAttribute('sizes');url=ArtLoader.portrait(d.id,0,d.pose,true);}
-   if(url&&el.getAttribute('src')!==url)el.src=url;
+ function setColor(value){if(BattlePlayers.setColor(value))return;if(target==='cpu'){$roster('color2').value=String(value);$roster('color2').dispatchEvent(new Event('change'));}else{selected=value;selectionArt();}}
+ function cardArt(grid=$roster('fighter-grid'),cards=grid.querySelectorAll('.fighter-card:not([hidden])')){
+  const single=cards.length===1;
+  grid.classList.toggle('single-fighter',single);
+  for(const card of cards){
+   const img=card.querySelector('img');if(!img)continue;
+   const d=definitionFor(card.dataset.id),thumb=single?null:ArtLoader.thumbnail(d.id);
+   if(typeof TouchControls!=='undefined'&&TouchControls.enabled){img.loading='lazy';img.decoding='async';img.fetchPriority='low';}
+   if(thumb){
+    const sizes=Math.ceil(Math.max(img.clientWidth||140,img.clientHeight*thumb.aspect))+'px';
+    if(img.sizes!==sizes)img.sizes=sizes;
+    if(img.srcset!==thumb.srcset)img.srcset=thumb.srcset;
+   }else{
+    if(img.hasAttribute('srcset'))img.removeAttribute('srcset');
+    if(img.hasAttribute('sizes'))img.removeAttribute('sizes');
+   }
+   const url=thumb?.src||ArtLoader.portrait(d.id,0,d.pose,!single);
+   if(url&&img.getAttribute('src')!==url)img.src=url;
   }
+ }
+ function artReady(){cardArt();selectionArt();}
+ function selectionArt(){
+  const id=activeId(),color=activeColor(),d=definitionFor(id),url=id==='random'?randomPortrait:ArtLoader.portrait(id,color,d.pose,true),portrait=document.querySelector('#selected-portrait');if(url&&portrait.getAttribute('src')!==url)portrait.src=url;
   document.querySelectorAll('[data-home-fighter]').forEach(el=>{if(typeof TouchControls!=='undefined'&&TouchControls.enabled){el.loading='lazy';el.decoding='async';el.fetchPriority='low';}const url=ArtLoader.portrait(el.dataset.homeFighter,0,0);if(url&&el.getAttribute('src')!==url)el.src=url;});document.querySelector('#costume-name').textContent=names[color];document.querySelectorAll('#swatches button').forEach((b,i)=>{b.classList.toggle('selected',i===color);b.setAttribute('aria-pressed',String(i===color));});for(const slot of ['player','cpu']){const id=slot==='player'?chosen:$roster('cpu-character').value,url=id==='random'?randomPortrait:ArtLoader.portrait(id,slot==='player'?selected:+$roster('color2').value,0,true),img=$roster('select-'+slot).querySelector('img');if(url&&img.getAttribute('src')!==url)img.src=url;}
  }
  function summary(){const bingo=document.querySelector('#match-kind').value==='bingo'&&document.querySelector('#battle-mode').value==='online',startButton=document.querySelector('#start');if(startButton.dataset.bingo!==String(bingo)){startButton.dataset.bingo=String(bingo);startButton.innerHTML=bingo?'ビンゴカードから選ぶ <span>→</span>':'READY TO FIGHT <span>→</span>';}const online=document.querySelector('#battle-mode').value==='online',mode=document.querySelector('#battle-mode').selectedOptions[0].textContent,stage=document.querySelector('#stage').selectedOptions[0].textContent,cpu=document.querySelector('#cpu-character').selectedOptions[0].textContent;document.querySelector('#match-summary').textContent=mode+(document.querySelector('#match-kind').value==='bingo'&&document.querySelector('#battle-mode').value==='online'?' · ビンゴ対戦':'')+' · '+(SquadBattle.size()>1?(online?BattlePlayers.count()+'人 / ':'')+SquadBattle.size()+'キャラ団体戦':BattlePlayers.count()+'人 / '+($roster('battle-format').value==='teams'?'チーム戦・チームアタック'+(BattlePlayers.teamAttack()?'あり':'なし')+' / ':'')+BattlePlayers.stockCount()+'ストック')+(online||BattlePlayers.count()>2?'':' / '+cpu)+' / '+MatchRules.timeLabel(BattlePlayers.timeLimit())+' · '+stage;document.querySelector('#open-room').textContent=Net.code?'ROOM '+Net.code+(bingo?' · ビンゴカードを選ぶ →':' · 準備完了 / 参加者 →'):'ルームをつくる / 参加する →';refreshStages();}
@@ -296,10 +308,11 @@ const Roster=(()=>{
   for(const [id,direction]of [['stage-prev',-1],['stage-next',1]])$roster(id).onclick=()=>strip.scrollBy({left:direction*strip.clientWidth*.8,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
  }
  function fit(){
-  const grid=document.querySelector('#fighter-grid'),width=grid.clientWidth,height=grid.clientHeight;if(!width||!height||!grid.querySelector('.fighter-card:not([hidden])'))return;
-  if(typeof Accessibility!=='undefined'&&Accessibility.textScale>1&&!document.body.classList.contains('touch-mode')){grid.style.setProperty('--roster-columns',Math.max(3,Math.floor(width/(110*Accessibility.textScale))));return;}
-  if(document.body.classList.contains('touch-mode')){grid.style.setProperty('--roster-columns',Math.max(3,Math.floor(width/90)));grid.style.setProperty('--roster-label-height','22px');grid.classList.remove('compact-cards');for(const el of grid.querySelectorAll('.fighter-card>b'))el.style.fontSize='11px';return;}
-  const card=grid.querySelector('.fighter-card:not([hidden])'),count=grid.querySelectorAll('.fighter-card:not([hidden])').length,style=getComputedStyle(grid),border=parseFloat(getComputedStyle(card).borderTopWidth)*2,gapX=parseFloat(style.columnGap),gapY=parseFloat(style.rowGap),fontSize=parseFloat(style.getPropertyValue('--roster-name-size'))||12;
+  const grid=$roster('fighter-grid'),width=grid.clientWidth,height=grid.clientHeight,cards=grid.querySelectorAll('.fighter-card:not([hidden])');
+  if(!width||!height||!cards.length){cardArt(grid,cards);return;}
+  if(typeof Accessibility!=='undefined'&&Accessibility.textScale>1&&!document.body.classList.contains('touch-mode')){grid.style.setProperty('--roster-columns',Math.max(3,Math.floor(width/(110*Accessibility.textScale))));cardArt(grid,cards);return;}
+  if(document.body.classList.contains('touch-mode')){grid.style.setProperty('--roster-columns',Math.max(3,Math.floor(width/90)));grid.style.setProperty('--roster-label-height','22px');grid.classList.remove('compact-cards');for(const el of grid.querySelectorAll('.fighter-card>b'))el.style.fontSize='11px';cardArt(grid,cards);return;}
+  const card=cards[0],count=cards.length,style=getComputedStyle(grid),border=parseFloat(getComputedStyle(card).borderTopWidth)*2,gapX=parseFloat(style.columnGap),gapY=parseFloat(style.rowGap),fontSize=parseFloat(style.getPropertyValue('--roster-name-size'))||12;
   const measure=document.createElement('canvas').getContext('2d'),family=getComputedStyle(card.querySelector('b')).fontFamily;measure.font=`900 ${fontSize}px ${family}`;
   // Fit every fighter at 100% zoom; choose the grid with the largest portraits.
   let columns=1,best=-Infinity,label=0,nameSize=fontSize;
@@ -311,7 +324,7 @@ const Roster=(()=>{
   }
   grid.style.setProperty('--roster-min-card-height','0px');grid.style.setProperty('--roster-label-height',label+'px');grid.style.setProperty('--roster-columns',columns);grid.style.setProperty('--roster-rows',Math.ceil(count/columns));grid.classList.toggle('compact-cards',best<35);
   for(const el of grid.querySelectorAll('.fighter-card>b')){const available=Math.max(0,el.clientWidth-8),fullWidth=measure.measureText(el.textContent).width;el.style.fontSize=(Math.floor(Math.min(nameSize,fontSize*available/fullWidth)*10)/10)+'px';el.parentElement.title=el.textContent;}
-  for(const d of definitions){const thumb=ArtLoader.thumbnail(d.id),img=grid.querySelector(`[data-id="${d.id}"] img`);if(thumb&&img)thumbnailSize(img,thumb.aspect);}
+  cardArt(grid,cards);
  }
  function closePanels(){BingoBattle.close();for(const id of ['match-settings','online-room','settings','fighter-list-dialog','character-guide-dialog']){const dialog=document.getElementById(id);if(dialog.open)dialog.close();}}
  function mode(){const online=document.querySelector('#battle-mode').value==='online';if(!online)document.querySelector('#match-kind').value='normal';document.querySelector('#online-panel').classList.toggle('hidden',!online);document.querySelector('.online-squad-size').classList.toggle('hidden',!online);document.querySelector('#online-lineup-controls').classList.toggle('hidden',!online);document.querySelector('#start').classList.toggle('hidden',online);document.querySelector('#open-room').classList.toggle('hidden',!online);document.querySelector('#roster-online-status').classList.toggle('hidden',!online);document.querySelector('#cpu-options').classList.toggle('hidden',online);if(!online&&Net.code)Net.leave();$roster('select-cpu').classList.toggle('hidden',online);if(online)target='player';refreshSelection();fit();SquadBattle.refresh();BattlePlayers.refresh();}

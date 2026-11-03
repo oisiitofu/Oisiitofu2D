@@ -31,6 +31,27 @@ const ids=process.env.ART_IDS?.split(',').filter(Boolean)||Object.keys(policy.ch
    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
    await checkRosterGrid(Object.keys(policy.characters).length+1);
   }
+  const ash=page.locator('.fighter-card[data-id="ash"]');
+  const thumbnail=await ash.locator('img').evaluate(async img=>{await img.decode();return img.currentSrc;});
+  await page.evaluate(()=>{
+   window.rosterImageWrites=0;
+   const observer=new MutationObserver(records=>{window.rosterImageWrites+=records.filter(record=>record.target instanceof HTMLImageElement).length;});
+   observer.observe(document.querySelector('#fighter-grid'),{subtree:true,attributes:true,attributeFilter:['src','srcset','sizes']});
+  });
+  await ash.click();
+  assert.equal(await ash.locator('img').evaluate(img=>img.currentSrc),thumbnail,'selecting a card keeps the displayed thumbnail');
+  assert.equal(await page.evaluate(()=>window.rosterImageWrites),0,'selecting does not rewrite any card image');
+  const origin=await page.evaluate(()=>FighterLibrary.series(Roster.selectable.find(fighter=>fighter.id==='sumino')));
+  await page.selectOption('#library-origin',origin);
+  const sumino=page.locator('.fighter-card[data-id="sumino"] img');
+  assert.equal(await page.locator('.fighter-card:not([hidden])').count(),1);
+  assert.deepEqual(await sumino.evaluate(async img=>{
+   await img.decode();
+   return {full:img.getAttribute('src')===ArtLoader.portrait('sumino',0,0),fit:getComputedStyle(img).objectFit,srcset:img.srcset};
+  }),{full:true,fit:'scale-down',srcset:''},'a single result shows the complete art within the frame');
+  await page.selectOption('#library-origin','');
+  assert.equal(await sumino.evaluate(img=>getComputedStyle(img).objectFit),'cover');
+  assert.ok(await sumino.getAttribute('srcset'),'clearing the filter restores the thumbnail candidates');
   if(!process.env.ART_IDS)assert.deepEqual((await page.evaluate(()=>Roster.selectable.map(v=>v.id))).sort(),ids.slice().sort(),'each selectable character has a reviewed face guide');
   const rows=await page.evaluate(({ids,paths})=>ids.map(id=>{const el=document.querySelector('.fighter-card[data-id="'+id+'"] img'),r=el.getBoundingClientRect(),style=getComputedStyle(el),d=Roster.selectable.find(v=>v.id===id);return{id,name:d.name,number:d.displayNumber,ratio:r.width/r.height,fit:style.objectFit,position:style.objectPosition,src:paths[id]};}),{ids,paths:Object.fromEntries(ids.map(id=>[id,manifest.characters[id].selectionPortraits[0]]))});
   for(const row of rows){
