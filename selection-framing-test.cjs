@@ -14,7 +14,7 @@ const ids=process.env.ART_IDS?.split(',').filter(Boolean)||Object.keys(policy.ch
     const r=card.getBoundingClientRect(),img=card.querySelector('img');
     const art=img&&getComputedStyle(img);
     return {id:card.dataset.id,inside:r.width>0&&r.height>0&&r.right<=bounds.right+1&&r.bottom<=bounds.bottom+1,
-     imageAtTop:!img||(img.offsetTop===0&&parseFloat(art.objectPosition.split(' ')[1])<=20&&art.objectFit==='cover')};
+     imageAtTop:!img||(img.offsetTop===0&&parseFloat(art.objectPosition.split(' ')[1])<=20&&art.objectFit===(card.dataset.id==='katamari'?'contain':'cover'))};
    });
    return {cards,scroll:grid.scrollHeight>grid.clientHeight+1};
   });

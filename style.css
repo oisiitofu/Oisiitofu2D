@@ -98,6 +98,7 @@ dialog,.setup-dialog{background:linear-gradient(150deg,#172437fa,#0c1524fc);bord
 @media(max-width:600px),(max-height:480px){.fighter-grid{--roster-name-size:10px}}
 /* Roster tiles show a close-up of the face and shoulders. */
 .fighter-card img{left:0;top:0;width:100%;height:calc(100% - var(--roster-label-height,21px));object-fit:cover;object-position:50% 20%;filter:none;image-rendering:auto}
+.fighter-grid:not(.single-fighter) .fighter-card[data-id="katamari"] img{object-fit:contain;object-position:50% 0}
 .single-fighter .fighter-card img{object-fit:scale-down;object-position:center}
 .fighter-card .fighter-number{left:0;top:0;background:#080f1ad9;padding:2px 4px;border-radius:0 0 3px 0;text-shadow:0 1px 2px #000}
 .fighter-card>b{z-index:2}
