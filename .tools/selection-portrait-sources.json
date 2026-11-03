@@ -3859,7 +3859,7 @@
     "presentationFocus": 0.5
   },
   "cubivore": {
-    "source": "characters/cubivore/assets/cubivore-selection.png",
+    "source": "characters/cubivore/assets/cubivore-selection-cutout.png",
     "crop": [
       0,
       38,
@@ -3867,10 +3867,17 @@
       960
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution character portrait"
+    "framing": "dedicated high-resolution character portrait",
+    "presentationSource": "characters/cubivore/assets/cubivore-selection.png",
+    "presentationCrop": [
+      0,
+      38,
+      1536,
+      960
+    ]
   },
   "diana": {
-    "source": "characters/diana/assets/diana-selection.png",
+    "source": "characters/diana/assets/diana-selection-cutout.png",
     "crop": [
       0,
       0,
@@ -3878,6 +3885,13 @@
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution character portrait"
+    "framing": "dedicated high-resolution character portrait",
+    "presentationSource": "characters/diana/assets/diana-selection.png",
+    "presentationCrop": [
+      0,
+      0,
+      1536,
+      1024
+    ]
   }
 }

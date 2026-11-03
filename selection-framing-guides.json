@@ -7546,28 +7546,34 @@
         1536,
         960
       ],
-      "source": "characters/cubivore/assets/cubivore-selection.png",
+      "source": "characters/cubivore/assets/cubivore-selection-cutout.png",
       "sourceSize": [
         1536,
         1024
       ],
-      "sourceSha256": "1d3d5471be0298053dbd75ece250440df3ecc678c9679f1bf5f9b29443c1c9bd",
+      "sourceSha256": "f8d87638a0f3ff560cf4827d4e8fa87c43d67dc523d4710280ef5b7693fe18c0",
       "centerBasis": "元画像の横中心を維持",
       "crop": [
         0,
         38,
         1536,
         960
+      ],
+      "faceBounds": [
+        704,
+        113,
+        1244,
+        695
       ]
     },
     "diana": {
       "profile": "chibi",
       "eye": [
-        798.72,
-        440.32
+        800,
+        300
       ],
-      "span": 614,
-      "top": 82,
+      "span": 454,
+      "top": 0,
       "reviewed": "2026-11-03",
       "referenceCrop": [
         0,
@@ -7575,18 +7581,24 @@
         1536,
         1024
       ],
-      "source": "characters/diana/assets/diana-selection.png",
+      "source": "characters/diana/assets/diana-selection-cutout.png",
       "sourceSize": [
         1536,
         1024
       ],
-      "sourceSha256": "97f0ae342957f2e24f5a5f2d613f6d486262f3296269b2ff4577e03906e44e66",
+      "sourceSha256": "6ab0abc5d7ac4d24ac78f001a8c8e9001276851d028f9d4422f6545350c1bf37",
       "centerBasis": "元画像の横中心を維持",
       "crop": [
         0,
         0,
         1536,
         1024
+      ],
+      "faceBounds": [
+        558,
+        105,
+        1012,
+        610
       ]
     }
   }
