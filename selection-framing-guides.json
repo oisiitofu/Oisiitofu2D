@@ -1,0 +1,7521 @@
+{
+  "version": 1,
+  "canonicalAspect": 1.4930875576036866,
+  "targets": {
+    "human": {
+      "span": 0.33,
+      "minSpan": 0.25,
+      "maxSpan": 0.45,
+      "eye": 0.48,
+      "minEye": 0.34,
+      "maxEye": 0.63
+    },
+    "chibi": {
+      "span": 0.37,
+      "minSpan": 0.27,
+      "maxSpan": 0.5,
+      "eye": 0.5,
+      "minEye": 0.35,
+      "maxEye": 0.66
+    },
+    "mascot": {
+      "span": 0.55,
+      "minSpan": 0.34,
+      "maxSpan": 1,
+      "eye": 0.48,
+      "minEye": 0.3,
+      "maxEye": 0.68
+    },
+    "tall": {
+      "span": 0.38,
+      "minSpan": 0.26,
+      "maxSpan": 0.82,
+      "eye": 0.56,
+      "minEye": 0.3,
+      "maxEye": 0.73
+    },
+    "mecha": {
+      "span": 0.43,
+      "minSpan": 0.26,
+      "maxSpan": 0.75,
+      "eye": 0.5,
+      "minEye": 0.3,
+      "maxEye": 0.7
+    },
+    "pixel": {
+      "span": 0.36,
+      "minSpan": 0.26,
+      "maxSpan": 0.6,
+      "eye": 0.5,
+      "minEye": 0.34,
+      "maxEye": 0.66
+    }
+  },
+  "characters": {
+    "chocobo": {
+      "profile": "mascot",
+      "eye": [
+        983,
+        397
+      ],
+      "span": 746,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        323,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/chocobo/assets/chocobo-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        670,
+        99,
+        1296,
+        807
+      ],
+      "sourceSha256": "bc89f3100c58c6a2221bed5032e177883d3d3a9f233311496d6ec3301d13d27f",
+      "faceCenterX": 1040,
+      "crop": [
+        323,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "moogle": {
+      "profile": "mascot",
+      "eye": [
+        768,
+        697
+      ],
+      "span": 674,
+      "top": 237,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        95,
+        205,
+        1347,
+        962
+      ],
+      "source": "characters/moogle/assets/moogle-selection.png",
+      "sourceSize": [
+        1347,
+        1167
+      ],
+      "faceBounds": [
+        485,
+        427,
+        1051,
+        1068
+      ],
+      "sourceSha256": "b859252712eab6e6740f21bac21e27e06f6733ab5830bd4cacc4fa26eae2c231",
+      "faceCenterX": 769,
+      "crop": [
+        95,
+        205,
+        1347,
+        962
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "onionknight": {
+      "profile": "chibi",
+      "eye": [
+        1042,
+        569
+      ],
+      "span": 383,
+      "top": 221,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        566,
+        213,
+        1035,
+        739
+      ],
+      "source": "characters/onionknight/assets/onionknight-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        881,
+        416,
+        1203,
+        780
+      ],
+      "sourceSha256": "7793162886483d22083086d06b9f1a6a469adb9a633a3c8e9c86931c53259cc7",
+      "faceCenterX": 1084,
+      "crop": [
+        566,
+        213,
+        1035,
+        739
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "terra": {
+      "profile": "human",
+      "eye": [
+        921,
+        512
+      ],
+      "span": 382,
+      "top": 359,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        342,
+        141,
+        1158,
+        772
+      ],
+      "source": "characters/terra/assets/terra-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        761,
+        359,
+        1081,
+        722
+      ],
+      "sourceSha256": "c5182c893f6c240ddb47dadbba77326c2de6e0a9987f7effe62324b7b78ee9df",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 921,
+      "crop": [
+        342,
+        141,
+        1158,
+        772
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "tifa": {
+      "profile": "human",
+      "eye": [
+        916,
+        403
+      ],
+      "span": 433,
+      "top": 230,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        280,
+        -5,
+        1273,
+        849
+      ],
+      "source": "characters/tifa/assets/tifa-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        734,
+        230,
+        1098,
+        641
+      ],
+      "sourceSha256": "c9647b8ded3a4ddebfc1e1c3aa8a8eb762378be8d4e263ac93e6137f80b569e3",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 917,
+      "crop": [
+        280,
+        -5,
+        1273,
+        849
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "zack": {
+      "profile": "human",
+      "eye": [
+        915,
+        471
+      ],
+      "span": 353,
+      "top": 195,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        431,
+        145,
+        1008,
+        720
+      ],
+      "source": "characters/zack/assets/zack-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        767,
+        330,
+        1063,
+        665
+      ],
+      "sourceSha256": "7d6bd4dbd6e13c91a2e56c27d338a679647b90a9da633ef39d372872347f02ab",
+      "faceCenterX": 872,
+      "crop": [
+        368,
+        145,
+        1008,
+        720
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "aerith": {
+      "profile": "human",
+      "eye": [
+        983,
+        406
+      ],
+      "span": 330,
+      "top": 128,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        513,
+        76,
+        1000,
+        714
+      ],
+      "source": "characters/aerith/assets/aerith-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        844,
+        274,
+        1122,
+        588
+      ],
+      "sourceSha256": "036f3842b3cdfe13fe6f657402a504d7ab80459fc2c6635be946eff6c2a6a1b2",
+      "faceCenterX": 1013,
+      "crop": [
+        513,
+        76,
+        1000,
+        714
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "yuffie": {
+      "profile": "human",
+      "eye": [
+        791,
+        543
+      ],
+      "span": 453,
+      "top": 105,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        105,
+        89,
+        1373,
+        981
+      ],
+      "source": "characters/yuffie/assets/yuffie-selection.png",
+      "sourceSize": [
+        1312,
+        1199
+      ],
+      "faceBounds": [
+        601,
+        362,
+        981,
+        792
+      ],
+      "sourceSha256": "881cdd71a9df1a1953c02d039dc9f584ff1fe6c7853b493038e615b7e61803fc",
+      "faceCenterX": 792,
+      "crop": [
+        105,
+        89,
+        1373,
+        981
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "vincent": {
+      "profile": "human",
+      "eye": [
+        860,
+        512
+      ],
+      "span": 352,
+      "top": 371,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        327,
+        171,
+        1067,
+        711
+      ],
+      "source": "characters/vincent/assets/vincent-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        712,
+        371,
+        1008,
+        706
+      ],
+      "sourceSha256": "caf2ed4925ccdce828c005b6935413b94159a4477c9b7dcbf4a250a4232c0e7b",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 861,
+      "crop": [
+        327,
+        171,
+        1067,
+        711
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "zidane": {
+      "profile": "human",
+      "eye": [
+        797,
+        545
+      ],
+      "span": 550,
+      "top": 44,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        -12,
+        0,
+        1527,
+        1091
+      ],
+      "source": "characters/zidane/assets/zidane-selection.png",
+      "sourceSize": [
+        1442,
+        1091
+      ],
+      "faceBounds": [
+        566,
+        325,
+        1028,
+        848
+      ],
+      "sourceSha256": "f71fd7111ac3e76ff92291fbb53371089d33f8cbeae8fe79c546ae77ea1226cf",
+      "faceCenterX": 751,
+      "crop": [
+        -12,
+        0,
+        1527,
+        1091
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "vivi": {
+      "profile": "tall",
+      "eye": [
+        1069,
+        675
+      ],
+      "span": 660,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        335,
+        204,
+        1150,
+        820
+      ],
+      "source": "characters/vivi/assets/vivi-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        650,
+        450,
+        1140,
+        830
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "522990825ca567832990c2890308c0459e38a4feabe887e10c63b6cbf3e134d1",
+      "faceCenterX": 910,
+      "crop": [
+        335,
+        204,
+        1150,
+        820
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "tidus": {
+      "profile": "human",
+      "eye": [
+        824,
+        540
+      ],
+      "span": 412,
+      "top": 126,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        178,
+        0,
+        1374,
+        981
+      ],
+      "source": "characters/tidus/assets/tidus-selection-final.png",
+      "sourceSize": [
+        1374,
+        1181
+      ],
+      "faceBounds": [
+        651,
+        375,
+        997,
+        767
+      ],
+      "sourceSha256": "655f6ee4d92779e70c37474a8b7fd01a83c955d9e0edf3123ebcd3eb7ce350d4",
+      "faceCenterX": 865,
+      "crop": [
+        178,
+        0,
+        1374,
+        981
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "lightning": {
+      "profile": "human",
+      "eye": [
+        983,
+        522
+      ],
+      "span": 344,
+      "top": 138,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        405,
+        103,
+        1250,
+        894
+      ],
+      "source": "characters/lightning/assets/lightning-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        839,
+        384,
+        1127,
+        711
+      ],
+      "sourceSha256": "ae7bd72aa111727005e981677595e855f85b28cccfa3c4dac933b59b3c540b57",
+      "faceCenterX": 1030,
+      "crop": [
+        405,
+        103,
+        1250,
+        894
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "dragoon": {
+      "profile": "chibi",
+      "eye": [
+        868,
+        512
+      ],
+      "span": 445,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        267,
+        99,
+        1203,
+        859
+      ],
+      "source": "characters/dragoon/assets/dragoon-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        681,
+        334,
+        1055,
+        757
+      ],
+      "sourceSha256": "c72a3f984b18ff8c21f181558cfb271e568ef2fce9970077bb01eeb3d1c749a4",
+      "faceCenterX": 869,
+      "crop": [
+        267,
+        99,
+        1203,
+        859
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "hydaelyn": {
+      "profile": "human",
+      "eye": [
+        814,
+        512
+      ],
+      "span": 398,
+      "top": 353,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        211,
+        126,
+        1206,
+        804
+      ],
+      "source": "characters/hydaelyn/assets/hydaelyn-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        647,
+        353,
+        981,
+        731
+      ],
+      "sourceSha256": "388d9bbf870996424be681351eeee173d99d447efe629445964fd271786e3025",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 814,
+      "crop": [
+        211,
+        126,
+        1206,
+        804
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "noctis": {
+      "profile": "human",
+      "eye": [
+        911,
+        464
+      ],
+      "span": 301,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        473,
+        162,
+        912,
+        652
+      ],
+      "source": "characters/noctis/assets/noctis-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        785,
+        344,
+        1037,
+        630
+      ],
+      "sourceSha256": "a96374fd74a856896ad5f98bf4af246ae0b5749c03057d3d3da3df5eeb39cf5b",
+      "faceCenterX": 884,
+      "crop": [
+        428,
+        162,
+        912,
+        652
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "clive": {
+      "profile": "human",
+      "eye": [
+        997,
+        416
+      ],
+      "span": 315,
+      "top": 128,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        549,
+        101,
+        955,
+        682
+      ],
+      "source": "characters/clive/assets/clive-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        865,
+        290,
+        1129,
+        589
+      ],
+      "sourceSha256": "c9c408f5cff552db2f9d04c81f5f40cadd509a77643aa1eb21adc52e5f473ffa",
+      "faceCenterX": 975.5,
+      "crop": [
+        498,
+        101,
+        955,
+        682
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "terry": {
+      "profile": "chibi",
+      "eye": [
+        969,
+        579
+      ],
+      "span": 602,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        266,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/terry/assets/terry-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        716,
+        338,
+        1222,
+        910
+      ],
+      "sourceSha256": "3d4b6f48fca8651cfa9165fcfed7f7399e1db9c8e07408e60b8e27933dcd4689",
+      "faceCenterX": 983,
+      "crop": [
+        266,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "arus": {
+      "profile": "chibi",
+      "eye": [
+        926,
+        397
+      ],
+      "span": 402,
+      "top": 99,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        383,
+        24,
+        1086,
+        776
+      ],
+      "source": "characters/arus/assets/arus-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        757,
+        236,
+        1095,
+        618
+      ],
+      "sourceSha256": "c61fb3f593f4f880622017c12994dd44871495ab722703b38cbad44f96b747a6",
+      "faceCenterX": 926,
+      "crop": [
+        383,
+        24,
+        1086,
+        776
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "veronica": {
+      "profile": "chibi",
+      "eye": [
+        740,
+        595
+      ],
+      "span": 489,
+      "top": 226,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        126,
+        20,
+        1254,
+        896
+      ],
+      "source": "characters/veronica/assets/veronica-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        535,
+        399,
+        945,
+        864
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "crop": [
+        126,
+        20,
+        1254,
+        896
+      ],
+      "sourceSha256": "9ea1b3b4aed998b8e66bfaf0aace4091385aafea920ce5a41fc13d3685d3a62d",
+      "faceCenterX": 753,
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "estark": {
+      "profile": "tall",
+      "eye": [
+        803,
+        696
+      ],
+      "span": 539,
+      "top": 150,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        176,
+        214,
+        1254,
+        896
+      ],
+      "source": "characters/estark/assets/estark-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        577,
+        480,
+        1029,
+        992
+      ],
+      "sourceSha256": "086c2fad6b5ff67acce4fe45b848c74bc72bc0ebfea6cae796f27b8481012f02",
+      "faceCenterX": 803,
+      "crop": [
+        176,
+        214,
+        1254,
+        896
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "nier": {
+      "profile": "human",
+      "eye": [
+        997,
+        430
+      ],
+      "span": 336,
+      "top": 123,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        529,
+        94,
+        1018,
+        727
+      ],
+      "source": "characters/nier/assets/nier-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        856,
+        296,
+        1138,
+        615
+      ],
+      "sourceSha256": "ccd40689a67a6ba46ff4a27dca8b001c79b1e509794527d356a562f026c51d09",
+      "faceCenterX": 1038,
+      "crop": [
+        529,
+        94,
+        1018,
+        727
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "twob": {
+      "profile": "human",
+      "eye": [
+        911,
+        522
+      ],
+      "span": 402,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        278,
+        120,
+        1218,
+        870
+      ],
+      "source": "characters/twob/assets/twob-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        742,
+        361,
+        1080,
+        743
+      ],
+      "sourceSha256": "a172569b4bb3c8f1ba307c83fb6feb357da5de9311ab2a9afd9d76b477defc60",
+      "faceCenterX": 887,
+      "crop": [
+        278,
+        120,
+        1218,
+        870
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "zero3": {
+      "profile": "human",
+      "eye": [
+        892,
+        420
+      ],
+      "span": 366,
+      "top": 274,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        338,
+        65,
+        1109,
+        739
+      ],
+      "source": "characters/zero3/assets/zero3-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        738,
+        274,
+        1046,
+        621
+      ],
+      "sourceSha256": "56447edd1df8cbfe9f1f6df3c821ffbd195c2bb75cf44699be7d820b10f611b4",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 893,
+      "crop": [
+        338,
+        65,
+        1109,
+        739
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "roxas": {
+      "profile": "human",
+      "eye": [
+        811,
+        464
+      ],
+      "span": 445,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/roxas/assets/roxas-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        624,
+        286,
+        998,
+        709
+      ],
+      "sourceSha256": "4f2f9f3e49c679dc94695ce6924a210e1bf4d31e4aafcc3b5a26fb6c039ac15a",
+      "faceCenterX": 768,
+      "crop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "namine": {
+      "profile": "human",
+      "eye": [
+        743,
+        497
+      ],
+      "span": 353,
+      "top": 216,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        210,
+        105,
+        1050,
+        750
+      ],
+      "source": "characters/namine/assets/namine-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        595,
+        356,
+        891,
+        691
+      ],
+      "sourceSha256": "f78dabc759051c43f88a58ab64a433828a383f709c3014953989c970fa62469e",
+      "faceCenterX": 735,
+      "crop": [
+        210,
+        105,
+        1050,
+        750
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "neku": {
+      "profile": "human",
+      "eye": [
+        768,
+        532
+      ],
+      "span": 489,
+      "top": 336,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        27,
+        36,
+        1482,
+        988
+      ],
+      "source": "characters/neku/assets/neku-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        563,
+        336,
+        973,
+        801
+      ],
+      "sourceSha256": "7526aced27cbde984c2897b626aaf48e990cbef77531031658bbb00fef731b97",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "crop": [
+        27,
+        36,
+        1482,
+        988
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "riesz": {
+      "profile": "human",
+      "eye": [
+        926,
+        464
+      ],
+      "span": 301,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        470,
+        162,
+        912,
+        652
+      ],
+      "source": "characters/riesz/assets/riesz-selection-closeup.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        800,
+        344,
+        1052,
+        630
+      ],
+      "sourceSha256": "c5124d3c5d09b33bc9e7c6ffb1b5a643df6afb7064590e1f427e4f238cbc20cf",
+      "faceCenterX": 926,
+      "crop": [
+        470,
+        162,
+        912,
+        652
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "rocbouquet": {
+      "profile": "human",
+      "eye": [
+        814,
+        604
+      ],
+      "span": 367,
+      "top": 457,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        258,
+        248,
+        1112,
+        741
+      ],
+      "source": "characters/rocbouquet/assets/rocbouquet-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        660,
+        457,
+        968,
+        806
+      ],
+      "sourceSha256": "d4dcc9e9db1c14984d0182c42ad3026be203c9846dd8ad16ed4f687a79b85819",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 814,
+      "crop": [
+        258,
+        248,
+        1112,
+        741
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "frog": {
+      "profile": "mascot",
+      "eye": [
+        926,
+        397
+      ],
+      "span": 860,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        223,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/frog/assets/frog-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        565,
+        53,
+        1287,
+        870
+      ],
+      "sourceSha256": "be9d60e8f04d8c719ad1428b8a33c56f212e6ec7419ebb58e01dd5474986f508",
+      "faceCenterX": 940,
+      "crop": [
+        223,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "magus": {
+      "profile": "human",
+      "eye": [
+        902,
+        445
+      ],
+      "span": 262,
+      "top": 193,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        479,
+        155,
+        770,
+        550
+      ],
+      "source": "characters/magus/assets/magus-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        792,
+        340,
+        1012,
+        589
+      ],
+      "sourceSha256": "8892dcc107ee78ac771a302c2651c53ccb95e4e28147a43b21003e5e59040845",
+      "faceCenterX": 864,
+      "crop": [
+        479,
+        155,
+        770,
+        550
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "tressa": {
+      "profile": "human",
+      "eye": [
+        883,
+        598
+      ],
+      "span": 488,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        223,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/tressa/assets/tressa-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        678,
+        403,
+        1088,
+        866
+      ],
+      "sourceSha256": "b6608d8e4bea67ad0bea558756f671d4d5eac68366132a42160055451b9301de",
+      "faceCenterX": 940,
+      "crop": [
+        223,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "edea": {
+      "profile": "human",
+      "eye": [
+        854,
+        455
+      ],
+      "span": 373,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        312,
+        82,
+        1130,
+        807
+      ],
+      "source": "characters/edea/assets/edea-selection-closeup.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        697,
+        306,
+        1011,
+        660
+      ],
+      "sourceSha256": "256f0393e7fe85c8ca951de63b3853f16c25d756eea931d67125511a8dbc6540",
+      "faceCenterX": 877,
+      "crop": [
+        312,
+        82,
+        1130,
+        807
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "odio": {
+      "profile": "human",
+      "eye": [
+        768,
+        614
+      ],
+      "span": 413,
+      "top": 449,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        142,
+        189,
+        1252,
+        835
+      ],
+      "source": "characters/odio/assets/odio-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        595,
+        449,
+        941,
+        841
+      ],
+      "sourceSha256": "5f57ea5e32aae291c5a9fcc9106d2303e60deabbc3c657a8e43f4764b3acce36",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "crop": [
+        142,
+        189,
+        1252,
+        835
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "elliot": {
+      "profile": "human",
+      "eye": [
+        520,
+        550
+      ],
+      "span": 370,
+      "top": 100,
+      "reviewed": "2026-11-03",
+      "crop": [
+        -133,
+        75,
+        1180,
+        843
+      ],
+      "note": "主人公の顔を中心とし、フェイも右側に残す。",
+      "referenceCrop": [
+        -133,
+        75,
+        1180,
+        843
+      ],
+      "source": "characters/elliot/assets/elliot-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        365,
+        402,
+        675,
+        754
+      ],
+      "sourceSha256": "6c4dbb481492fb175d7b7be3f3d65d645a70b801e9c81e66fa875cad66cdaa65",
+      "faceCenterX": 457,
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "welch": {
+      "profile": "human",
+      "eye": [
+        768,
+        512
+      ],
+      "span": 474,
+      "top": 322,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        50,
+        53,
+        1436,
+        957
+      ],
+      "source": "characters/welch/assets/welch-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        569,
+        322,
+        967,
+        773
+      ],
+      "sourceSha256": "d473fae4348a34a13393cff52715ec0c3a4eabbe7a325e441bb647365721f748",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "crop": [
+        50,
+        53,
+        1436,
+        957
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "rena": {
+      "profile": "human",
+      "eye": [
+        676,
+        410
+      ],
+      "span": 367,
+      "top": 72,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        120,
+        43,
+        1112,
+        794
+      ],
+      "source": "characters/rena/assets/rena-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        522,
+        263,
+        830,
+        612
+      ],
+      "sourceSha256": "8e2b554375ad0c22207d0d7ed2d194c82cd7df3dbe1d601e04b5cdf869341023",
+      "faceCenterX": 676,
+      "crop": [
+        120,
+        43,
+        1112,
+        794
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "fayt": {
+      "profile": "human",
+      "eye": [
+        883,
+        445
+      ],
+      "span": 402,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        274,
+        43,
+        1218,
+        870
+      ],
+      "source": "characters/fayt/assets/fayt-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        714,
+        284,
+        1052,
+        666
+      ],
+      "sourceSha256": "bb6915c207b23cc32d4669c82c84aebe68f31adaca0bf59a41621c704023ba65",
+      "faceCenterX": 883,
+      "crop": [
+        274,
+        43,
+        1218,
+        870
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "valkyrie": {
+      "profile": "human",
+      "eye": [
+        954,
+        416
+      ],
+      "span": 359,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        475,
+        57,
+        1088,
+        777
+      ],
+      "source": "characters/valkyrie/assets/valkyrie-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        803,
+        272,
+        1105,
+        613
+      ],
+      "sourceSha256": "2e4e07ddcc163bbf4fb06940b3f6cb9a3ff46151282b3b86504742a4765270bf",
+      "faceCenterX": 1019,
+      "crop": [
+        475,
+        57,
+        1088,
+        777
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "fei": {
+      "profile": "human",
+      "eye": [
+        1055,
+        339
+      ],
+      "span": 344,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        555,
+        -6,
+        1042,
+        745
+      ],
+      "source": "characters/fei/assets/fei-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        911,
+        201,
+        1199,
+        528
+      ],
+      "sourceSha256": "a17b43030c247365df0302ec8eaeeb6c9c0394537d11bfdd281ee05455487c84",
+      "faceCenterX": 1076,
+      "crop": [
+        555,
+        -6,
+        1042,
+        745
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "kosmos": {
+      "profile": "human",
+      "eye": [
+        883,
+        397
+      ],
+      "span": 344,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        383,
+        52,
+        1042,
+        745
+      ],
+      "source": "characters/kosmos/assets/kosmos-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        739,
+        259,
+        1027,
+        586
+      ],
+      "sourceSha256": "35a6567f54649bd42dacba3344c6500142486ff9d9d2689ce9faaa913046fe95",
+      "faceCenterX": 904,
+      "crop": [
+        383,
+        52,
+        1042,
+        745
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "fiora": {
+      "profile": "human",
+      "eye": [
+        799,
+        451
+      ],
+      "span": 459,
+      "top": 72,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        46,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/fiora/assets/fiora-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        606,
+        267,
+        992,
+        703
+      ],
+      "sourceSha256": "22dde7c6cf5009cbe29f91084c17a5a165249aa12dfed1377600827a54ea5ef0",
+      "faceCenterX": 814,
+      "crop": [
+        46,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "riki": {
+      "profile": "tall",
+      "eye": [
+        969,
+        608
+      ],
+      "span": 430,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        252,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/riki/assets/riki-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        788,
+        436,
+        1150,
+        845
+      ],
+      "sourceSha256": "1b18d19d045d1030dcfb3347dcdeca1559dbfe9ddf2752418e7513ee34af883a",
+      "faceCenterX": 969,
+      "crop": [
+        252,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "melia": {
+      "profile": "human",
+      "eye": [
+        898,
+        476
+      ],
+      "span": 339,
+      "top": 340,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        385,
+        147,
+        1027,
+        685
+      ],
+      "source": "characters/melia/assets/melia-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        756,
+        340,
+        1040,
+        662
+      ],
+      "sourceSha256": "0ff9d783242c3333f184aaf37b11db9adb1f01ae889aac7ba0c8a93adc20175c",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 899,
+      "crop": [
+        385,
+        147,
+        1027,
+        685
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "rex": {
+      "profile": "human",
+      "eye": [
+        854,
+        435
+      ],
+      "span": 387,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        280,
+        47,
+        1173,
+        838
+      ],
+      "source": "characters/rex/assets/rex-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        691,
+        280,
+        1017,
+        648
+      ],
+      "sourceSha256": "fcc22408ca8ad217fe6ac1b401fe2481739eea28dd27a8a74deefe3e7bee6c13",
+      "faceCenterX": 866,
+      "crop": [
+        280,
+        47,
+        1173,
+        838
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "nia": {
+      "profile": "human",
+      "eye": [
+        811,
+        454
+      ],
+      "span": 430,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/nia/assets/nia-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        630,
+        282,
+        992,
+        691
+      ],
+      "sourceSha256": "4a37366fc114e2884250fb4d6b3ec53fee54a1d916b3e9862190fd2843d12b5d",
+      "faceCenterX": 768,
+      "crop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "hanajs": {
+      "profile": "chibi",
+      "eye": [
+        816,
+        520
+      ],
+      "span": 430,
+      "top": 83,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        247,
+        121,
+        1162,
+        830
+      ],
+      "source": "characters/hanajs/assets/hanajs-selection.png",
+      "sourceSize": [
+        1484,
+        1060
+      ],
+      "faceBounds": [
+        635,
+        348,
+        997,
+        757
+      ],
+      "sourceSha256": "c209782b17e66cf9ec8b9f999225680e30f3b5b6d745d1fdf06591277acbbce1",
+      "faceCenterX": 828,
+      "crop": [
+        247,
+        121,
+        1162,
+        830
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "pneuma": {
+      "profile": "human",
+      "eye": [
+        768,
+        502
+      ],
+      "span": 489,
+      "top": 306,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        27,
+        28,
+        1482,
+        988
+      ],
+      "source": "characters/pneuma/assets/pneuma-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        563,
+        306,
+        973,
+        771
+      ],
+      "sourceSha256": "f0ccb5ca035c1c5dc4b568dc8d4e431f8a16e98c985ab2634b91226e2245a894",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "crop": [
+        27,
+        28,
+        1482,
+        988
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "noah": {
+      "profile": "human",
+      "eye": [
+        897,
+        464
+      ],
+      "span": 387,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        323,
+        76,
+        1173,
+        838
+      ],
+      "source": "characters/noah/assets/noah-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        734,
+        309,
+        1060,
+        677
+      ],
+      "sourceSha256": "ffe04d517423eeb64d1003bdde565f66f5655ae40227ba7f0d42e902dc9c5250",
+      "faceCenterX": 909,
+      "crop": [
+        323,
+        76,
+        1173,
+        838
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "elma": {
+      "profile": "human",
+      "eye": [
+        921,
+        379
+      ],
+      "span": 398,
+      "top": 82,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        354,
+        -19,
+        1206,
+        861
+      ],
+      "source": "characters/elma/assets/elma-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        754,
+        220,
+        1088,
+        598
+      ],
+      "sourceSha256": "5cb73d58ac165bd774f85ff1b390013676757f3e0d12d63d82b92e545432d4ae",
+      "faceCenterX": 957,
+      "crop": [
+        354,
+        -19,
+        1206,
+        861
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "rin": {
+      "profile": "human",
+      "eye": [
+        897,
+        406
+      ],
+      "span": 344,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        397,
+        61,
+        1042,
+        745
+      ],
+      "source": "characters/rin/assets/rin-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        753,
+        268,
+        1041,
+        595
+      ],
+      "sourceSha256": "c2607611c432bebf39150636f41d7e73e8c88d46e4ff6d444ac67f5be10127d6",
+      "faceCenterX": 918,
+      "crop": [
+        397,
+        61,
+        1042,
+        745
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "edelgard": {
+      "profile": "human",
+      "eye": [
+        890,
+        430
+      ],
+      "span": 275,
+      "top": 102,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        499,
+        155,
+        833,
+        595
+      ],
+      "source": "characters/edelgard/assets/edelgard-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        775,
+        320,
+        1006,
+        581
+      ],
+      "sourceSha256": "92bc19655b30ccd56e3979b22fe8bac40ee786daa05b3c72f58f4be946b2fb5c",
+      "faceCenterX": 915,
+      "crop": [
+        499,
+        155,
+        833,
+        595
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "dietrich": {
+      "profile": "human",
+      "eye": [
+        768,
+        532
+      ],
+      "span": 413,
+      "top": 367,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        142,
+        131,
+        1252,
+        835
+      ],
+      "source": "characters/dietrich/assets/dietrich-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        595,
+        367,
+        941,
+        759
+      ],
+      "sourceSha256": "042d08b198763bbb9ca15eccd4fcae9cd8c79288e62c0d9ca8467b376fbb3aa8",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "crop": [
+        142,
+        131,
+        1252,
+        835
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "mallow": {
+      "profile": "mascot",
+      "eye": [
+        990,
+        450
+      ],
+      "span": 1000,
+      "top": 68,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        226,
+        -68,
+        1529,
+        1092
+      ],
+      "source": "characters/mallow/assets/mallow-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "sourceSha256": "d76fb0abab4b990162c8e1fdcb0a946cce475417c3f28365298a1dffa04442eb",
+      "crop": [
+        226,
+        -68,
+        1529,
+        1092
+      ],
+      "faceBounds": [
+        300,
+        150,
+        1290,
+        820
+      ],
+      "faceCenterX": 991,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "midna": {
+      "profile": "tall",
+      "eye": [
+        1040,
+        637
+      ],
+      "span": 574,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        323,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/midna/assets/midna-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        799,
+        407,
+        1281,
+        953
+      ],
+      "sourceSha256": "94148762dd18b67f84d12831815b3baf0276bc2fc44fb816181a96852974a9b4",
+      "faceCenterX": 1040,
+      "crop": [
+        323,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "maruku": {
+      "profile": "tall",
+      "eye": [
+        823,
+        602
+      ],
+      "span": 660,
+      "top": 68,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        94,
+        0,
+        1376,
+        983
+      ],
+      "source": "characters/maruku/assets/maruku-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        650,
+        510,
+        1100,
+        910
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "da15039af143c3aeb2a2eed32398ff6eb361c1a73763f7cf6e393df45b9ddb46",
+      "faceCenterX": 782,
+      "crop": [
+        94,
+        0,
+        1376,
+        983
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "krystal": {
+      "profile": "human",
+      "eye": [
+        936,
+        420
+      ],
+      "span": 413,
+      "top": 82,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        323,
+        6,
+        1252,
+        894
+      ],
+      "source": "characters/krystal/assets/krystal-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        763,
+        255,
+        1109,
+        647
+      ],
+      "sourceSha256": "af30587b15cbffa180a780ffc475a83a8a1a8d304f81a0325ad00ca95d7965db",
+      "faceCenterX": 949,
+      "crop": [
+        323,
+        6,
+        1252,
+        894
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "viridi": {
+      "profile": "human",
+      "eye": [
+        844,
+        512
+      ],
+      "span": 489,
+      "top": 316,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        103,
+        36,
+        1482,
+        988
+      ],
+      "source": "characters/viridi/assets/viridi-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        639,
+        316,
+        1049,
+        781
+      ],
+      "sourceSha256": "2ef17690f829a2ffd21b35ab867dc5b85134061db3a8b7404872adb96811ed62",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 844,
+      "crop": [
+        103,
+        36,
+        1482,
+        988
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "octoling": {
+      "profile": "human",
+      "eye": [
+        911,
+        445
+      ],
+      "span": 445,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        208,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/octoling/assets/octoling-selection-closeup.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        724,
+        267,
+        1098,
+        690
+      ],
+      "sourceSha256": "2c9fad34befbb969cf43388705ba31c0cd2dc7a537162cf819744b31323897de",
+      "faceCenterX": 925,
+      "crop": [
+        208,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "isaac": {
+      "profile": "human",
+      "eye": [
+        969,
+        426
+      ],
+      "span": 315,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        492,
+        111,
+        955,
+        682
+      ],
+      "source": "characters/isaac/assets/isaac-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        837,
+        300,
+        1101,
+        599
+      ],
+      "sourceSha256": "5204b3ea77226579b03818ccab9c3f24df7f021f03f47d46528e5d02066ba5b9",
+      "faceCenterX": 970,
+      "crop": [
+        492,
+        111,
+        955,
+        682
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "akira": {
+      "profile": "human",
+      "eye": [
+        854,
+        445
+      ],
+      "span": 359,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        310,
+        86,
+        1088,
+        777
+      ],
+      "source": "characters/akira/assets/akira-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        703,
+        301,
+        1005,
+        642
+      ],
+      "sourceSha256": "048f90ec5cf339c353306f17f37235c8b86eec02ef75585541402a2e48553fe0",
+      "faceCenterX": 854,
+      "crop": [
+        310,
+        86,
+        1088,
+        777
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "elza": {
+      "profile": "human",
+      "eye": [
+        828,
+        436
+      ],
+      "span": 276,
+      "top": 184,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        418,
+        160,
+        836,
+        597
+      ],
+      "source": "characters/elza/assets/elza-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        712,
+        326,
+        944,
+        588
+      ],
+      "sourceSha256": "a41c7ed1dec1ecb8ccc7578b52b85bc4eaf99f59c4fb34f3fd35dd69c77c304a",
+      "faceCenterX": 836,
+      "crop": [
+        418,
+        160,
+        836,
+        597
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "headmaster": {
+      "profile": "tall",
+      "eye": [
+        768,
+        454
+      ],
+      "span": 645,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/headmaster/assets/headmaster-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        497,
+        196,
+        1039,
+        809
+      ],
+      "sourceSha256": "c04265760004666927c464aedc71dfc5fd85033ac688508a131de243cb83bc43",
+      "faceCenterX": 768,
+      "crop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "sukapon": {
+      "profile": "mascot",
+      "eye": [
+        983,
+        339
+      ],
+      "span": 889,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        266,
+        -135,
+        1434,
+        1024
+      ],
+      "source": "characters/sukapon/assets/sukapon-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        610,
+        -17,
+        1356,
+        828
+      ],
+      "sourceSha256": "736f516ce87a836097d0fd96c95c43089afd84d8f13e06f7f39e16aa0a516da7",
+      "faceCenterX": 983,
+      "crop": [
+        266,
+        -135,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "lip": {
+      "profile": "tall",
+      "eye": [
+        799,
+        655
+      ],
+      "span": 505,
+      "top": 453,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        135,
+        138,
+        1329,
+        886
+      ],
+      "source": "characters/lip/assets/lip-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        587,
+        453,
+        1011,
+        933
+      ],
+      "sourceSha256": "0e81e553bd76c91552e40b82861afcb9949004729e7975ea0e1aca0ae9b52310",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 800,
+      "crop": [
+        135,
+        138,
+        1329,
+        886
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "ashley": {
+      "profile": "tall",
+      "eye": [
+        799,
+        635
+      ],
+      "span": 520,
+      "top": 427,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        115,
+        112,
+        1368,
+        912
+      ],
+      "source": "characters/ashley/assets/ashley-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        581,
+        427,
+        1017,
+        921
+      ],
+      "sourceSha256": "3b3e452c937eedd63bcb0b905f628fe17e44e60b5c1b13e80f7ede8ed68b68b7",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 799,
+      "crop": [
+        115,
+        112,
+        1368,
+        912
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "ringfit": {
+      "profile": "human",
+      "eye": [
+        803,
+        461
+      ],
+      "span": 401,
+      "top": 133,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        214,
+        0,
+        1254,
+        896
+      ],
+      "source": "characters/ringfit/assets/ringfit-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        635,
+        301,
+        971,
+        682
+      ],
+      "sourceSha256": "220baed29853bd8a73c8e830cd78a25b67845f0f7f1331944bf057f90ced989d",
+      "faceCenterX": 841,
+      "crop": [
+        214,
+        0,
+        1254,
+        896
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "karateka": {
+      "profile": "tall",
+      "eye": [
+        770,
+        382
+      ],
+      "span": 350,
+      "top": 119,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        350,
+        130,
+        700,
+        500
+      ],
+      "source": "characters/karateka/assets/karateka-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        623,
+        242,
+        917,
+        575
+      ],
+      "crop": [
+        350,
+        130,
+        700,
+        500
+      ],
+      "sourceSha256": "d97d84187ba00c0082b75ff7becff58e17003f3175dc8ee5f1a0ee5d208ec70b",
+      "faceCenterX": 700,
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "qbby": {
+      "profile": "tall",
+      "eye": [
+        640,
+        578
+      ],
+      "span": 1003,
+      "top": 150,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        -225,
+        50,
+        1700,
+        1133
+      ],
+      "source": "characters/qbby/assets/qbby-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        219,
+        177,
+        1061,
+        1130
+      ],
+      "crop": [
+        -225,
+        50,
+        1700,
+        1133
+      ],
+      "sourceSha256": "c71eeda5582bef3434109392ff0c5b02c727ca2edeeec54194ec46739a140235",
+      "faceCenterX": 625,
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "ryuta": {
+      "profile": "chibi",
+      "eye": [
+        646,
+        563
+      ],
+      "span": 505,
+      "top": 361,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        -36,
+        108,
+        1365,
+        910
+      ],
+      "source": "characters/ryuta/assets/ryuta-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        434,
+        361,
+        858,
+        841
+      ],
+      "sourceSha256": "5647247e9ce928799f4f4a3b8f2c9762c959137f23b54e6a1d22e3f5e9c64e1b",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 647,
+      "crop": [
+        -36,
+        108,
+        1365,
+        910
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "saki": {
+      "profile": "human",
+      "eye": [
+        875,
+        543
+      ],
+      "span": 443,
+      "top": 366,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        204,
+        113,
+        1342,
+        895
+      ],
+      "source": "characters/saki/assets/saki-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        689,
+        366,
+        1061,
+        787
+      ],
+      "sourceSha256": "ed5b7eeda6462e5116bc390a9c7cb2851462fd1f03d6dc6b43c1fba291246dc3",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 875,
+      "crop": [
+        204,
+        113,
+        1342,
+        895
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "doshin": {
+      "profile": "mascot",
+      "eye": [
+        854,
+        498
+      ],
+      "span": 434,
+      "top": 158,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        460,
+        237,
+        789,
+        564
+      ],
+      "source": "characters/doshin/assets/doshin-selection.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "faceBounds": [
+        672,
+        324,
+        1036,
+        737
+      ],
+      "sourceSha256": "82be4fbf92bc04edc4fbb913dd2540479b5004b1df8fd20a9a5a2164fad65303",
+      "faceCenterX": 855,
+      "crop": [
+        460,
+        237,
+        789,
+        564
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "chibirobo": {
+      "profile": "mecha",
+      "eye": [
+        911,
+        406
+      ],
+      "span": 645,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        22,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/chibirobo/assets/chibirobo-selection-closeup.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        640,
+        148,
+        1182,
+        761
+      ],
+      "sourceSha256": "ffa45b61fe32b91303478f7453b2a00c9517c2b13235358d2dfc4ef1d0c9f96d",
+      "faceCenterX": 739,
+      "crop": [
+        22,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "ray": {
+      "profile": "mecha",
+      "eye": [
+        768,
+        491.52
+      ],
+      "span": 552.96,
+      "top": 257,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/ray/assets/ray-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "sourceSha256": "4249184d2375b4ecbfed471e471137db17b3430d891e292ac43ea9fb019d5172",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "faceCenterX": 768,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "pokoa": {
+      "profile": "mascot",
+      "eye": [
+        768,
+        618
+      ],
+      "span": 545,
+      "top": 138,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/pokoa/assets/pokoa-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        539,
+        400,
+        997,
+        918
+      ],
+      "sourceSha256": "e66843b77213b58e2fadcda1def9e3e58424eacf0c0a20ded089d0d8eb54c086",
+      "faceCenterX": 768,
+      "crop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "bayleef": {
+      "profile": "mascot",
+      "eye": [
+        983,
+        474
+      ],
+      "span": 803,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        280,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/bayleef/assets/bayleef-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        646,
+        153,
+        1320,
+        916
+      ],
+      "sourceSha256": "7709fd8fa00e3c79bd51deb1cf0c809ce17b98480222aa7a31b74dd9bf7311b6",
+      "faceCenterX": 1112,
+      "crop": [
+        395,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "emma": {
+      "profile": "human",
+      "eye": [
+        860,
+        563
+      ],
+      "span": 398,
+      "top": 404,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        257,
+        177,
+        1206,
+        804
+      ],
+      "source": "characters/emma/assets/emma-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        693,
+        404,
+        1027,
+        782
+      ],
+      "sourceSha256": "ea81bb7689b3b2676319832cc84fac980a6e76d557a7309f7836be6a877ca1c9",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 860,
+      "crop": [
+        257,
+        177,
+        1206,
+        804
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "rion": {
+      "profile": "human",
+      "eye": [
+        943,
+        458
+      ],
+      "span": 304,
+      "top": 208,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        492,
+        154,
+        921,
+        658
+      ],
+      "source": "characters/rion/assets/rion-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        815,
+        336,
+        1071,
+        625
+      ],
+      "sourceSha256": "1c27dc7835e57cf05a1a2edf7621cadcf62103413dc923c6bbbbb10f9029002b",
+      "faceCenterX": 849.5,
+      "crop": [
+        389,
+        154,
+        921,
+        658
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "judas": {
+      "profile": "human",
+      "eye": [
+        1132,
+        629
+      ],
+      "span": 371,
+      "top": 66,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        478,
+        142,
+        1235,
+        882
+      ],
+      "source": "characters/judas/assets/judas-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        976,
+        481,
+        1288,
+        833
+      ],
+      "sourceSha256": "93864f054f942611150fae4032a6b13b6d81677c5d0a78a3f8bce2fb6fd03c93",
+      "faceCenterX": 1095,
+      "crop": [
+        478,
+        142,
+        1235,
+        882
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "lloyd": {
+      "profile": "human",
+      "eye": [
+        814,
+        522
+      ],
+      "span": 535,
+      "top": 308,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        50,
+        5,
+        1529,
+        1019
+      ],
+      "source": "characters/lloyd/assets/lloyd-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        589,
+        308,
+        1039,
+        816
+      ],
+      "sourceSha256": "ead92d383bca918199bc5fe209f237e21d11fe617bdd382fd5792218f4e234ac",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 815,
+      "crop": [
+        50,
+        5,
+        1529,
+        1019
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "colette": {
+      "profile": "human",
+      "eye": [
+        997,
+        320
+      ],
+      "span": 402,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        388,
+        -82,
+        1218,
+        870
+      ],
+      "source": "characters/colette/assets/colette-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        828,
+        159,
+        1166,
+        541
+      ],
+      "sourceSha256": "406b83dc45f6ca89c90f8fa7b56da51432d13258e64d690e6f1cf007b74b6e64",
+      "faceCenterX": 997,
+      "crop": [
+        388,
+        -82,
+        1218,
+        870
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "presea": {
+      "profile": "chibi",
+      "eye": [
+        983,
+        592
+      ],
+      "span": 483,
+      "top": 399,
+      "reviewed": "2026-11-03",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "referenceCrop": [
+        348,
+        169,
+        1270,
+        847
+      ],
+      "source": "characters/presea/assets/presea-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        780,
+        399,
+        1186,
+        858
+      ],
+      "sourceSha256": "90d2718b41527fbe7c40b39cd0e44c1e5fa32e0f1ddbf8b23fc6c9b37b9696af",
+      "faceCenterX": 983,
+      "crop": [
+        348,
+        169,
+        1270,
+        847
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "genis": {
+      "profile": "human",
+      "eye": [
+        918,
+        548
+      ],
+      "span": 474,
+      "top": 59,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        291,
+        0,
+        1280,
+        914
+      ],
+      "source": "characters/genis/assets/genis-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        719,
+        358,
+        1117,
+        809
+      ],
+      "sourceSha256": "b4d53cbf245fd1fd473c227249f01d8c30195c5613fdfa7ee13455fbf9f01d66",
+      "faceCenterX": 931,
+      "crop": [
+        291,
+        0,
+        1280,
+        914
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "luke": {
+      "profile": "human",
+      "eye": [
+        814,
+        512
+      ],
+      "span": 520,
+      "top": 304,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        50,
+        5,
+        1529,
+        1019
+      ],
+      "source": "characters/luke/assets/luke-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        596,
+        304,
+        1032,
+        798
+      ],
+      "sourceSha256": "771626a0a2aa4f84d24b8e97d24bd789551a89efac1789ade245e532a92c2704",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 815,
+      "crop": [
+        50,
+        5,
+        1529,
+        1019
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "ash": {
+      "profile": "human",
+      "eye": [
+        830,
+        424
+      ],
+      "span": 334,
+      "top": 88,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        304,
+        90,
+        1012,
+        723
+      ],
+      "source": "characters/ash/assets/ash-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        690,
+        290,
+        970,
+        608
+      ],
+      "sourceSha256": "6f343aa89308f4002dbb931d0b969e804e40117f8e17dc2800e73e6d4e0c0130",
+      "faceCenterX": 810,
+      "crop": [
+        304,
+        90,
+        1012,
+        723
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "velvet": {
+      "profile": "human",
+      "eye": [
+        1003,
+        411
+      ],
+      "span": 361,
+      "top": 174,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        600,
+        150,
+        840,
+        600
+      ],
+      "source": "characters/velvet/assets/velvet-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        851,
+        267,
+        1155,
+        610
+      ],
+      "sourceSha256": "6b8a2e0e5440640099e0c80707b0a76afaf0347308dc226001e06b392920f02b",
+      "faceCenterX": 960,
+      "crop": [
+        540,
+        150,
+        840,
+        600
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "alphen": {
+      "profile": "human",
+      "eye": [
+        704,
+        512
+      ],
+      "span": 358,
+      "top": 120,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        80,
+        40,
+        1200,
+        800
+      ],
+      "source": "characters/alphen/assets/alphen-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        554,
+        369,
+        854,
+        709
+      ],
+      "sourceSha256": "eb1dffe1b4e4fe559b40518f3e5ac707ed40273ba732befed4499499f8226759",
+      "faceCenterX": 680,
+      "crop": [
+        80,
+        40,
+        1200,
+        800
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "shionne": {
+      "profile": "human",
+      "eye": [
+        928,
+        485
+      ],
+      "span": 317,
+      "top": 112,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        458,
+        168,
+        961,
+        686
+      ],
+      "source": "characters/shionne/assets/shionne-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        795,
+        358,
+        1061,
+        659
+      ],
+      "sourceSha256": "27e7d5f9913c90842fefddeced5b2644738ed5ba097d58293c1f63f5784b5264",
+      "faceCenterX": 938,
+      "crop": [
+        458,
+        168,
+        961,
+        686
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "kasane": {
+      "profile": "human",
+      "eye": [
+        797,
+        474
+      ],
+      "span": 387,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        211,
+        86,
+        1173,
+        838
+      ],
+      "source": "characters/kasane/assets/kasane-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        634,
+        319,
+        960,
+        687
+      ],
+      "sourceSha256": "ebe515e3e2a1b85f11563eac0d063b58593ea8465da5224bc6f6990f44465289",
+      "faceCenterX": 798,
+      "crop": [
+        211,
+        86,
+        1173,
+        838
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "io": {
+      "profile": "human",
+      "eye": [
+        685,
+        416
+      ],
+      "span": 296,
+      "top": 193,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        233,
+        160,
+        924,
+        660
+      ],
+      "source": "characters/io/assets/io-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        561,
+        298,
+        809,
+        579
+      ],
+      "sourceSha256": "4180dd3d1249b8c623b650c9b10a8b7436ca7c9c91212efcb3d8da1b3d3257a5",
+      "faceCenterX": 695,
+      "crop": [
+        233,
+        160,
+        924,
+        660
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "donchan": {
+      "profile": "mascot",
+      "eye": [
+        754,
+        502
+      ],
+      "span": 1061,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/donchan/assets/donchan-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        308,
+        78,
+        1200,
+        990
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "sourceSha256": "8b052272efffb50bafe001f11033488d8bab6fb617f3562e4cfc1b73d573e7b5",
+      "faceCenterX": 768,
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "gundam": {
+      "profile": "mecha",
+      "eye": [
+        969,
+        522
+      ],
+      "span": 660,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        252,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/gundam/assets/gundam-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        692,
+        258,
+        1246,
+        885
+      ],
+      "sourceSha256": "657eed229065aeea077bb4e6667b9875035981150eaa354ede3e49f01e3f2313",
+      "faceCenterX": 969,
+      "crop": [
+        252,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "agumon": {
+      "profile": "mascot",
+      "eye": [
+        926,
+        339
+      ],
+      "span": 860,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        266,
+        -135,
+        1434,
+        1024
+      ],
+      "source": "characters/agumon/assets/agumon-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        565,
+        -5,
+        1287,
+        812
+      ],
+      "sourceSha256": "98328515f4513ca483fa7cf2fefab1ff8a4cd8e0852f57b79b28b68396c6bfbe",
+      "faceCenterX": 983,
+      "crop": [
+        266,
+        -135,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "mametchi": {
+      "profile": "tall",
+      "eye": [
+        911,
+        627
+      ],
+      "span": 918,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/mametchi/assets/mametchi-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        525,
+        260,
+        1297,
+        990
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "sourceSha256": "b46d9fdf429f81acdec7b9685dd77d6cb60c9c058c1222851e9cf219737a68b3",
+      "faceCenterX": 768,
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "edf": {
+      "profile": "mecha",
+      "eye": [
+        773,
+        313
+      ],
+      "span": 365,
+      "top": 62,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        235,
+        15,
+        960,
+        686
+      ],
+      "source": "characters/edf/assets/edf-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        620,
+        167,
+        926,
+        514
+      ],
+      "sourceSha256": "240969ab028fadd41523dd85ce86bf623ef0fe2bb721ef1b77e7cfdbad096779",
+      "faceCenterX": 715,
+      "crop": [
+        235,
+        15,
+        960,
+        686
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "nightraven": {
+      "profile": "silhouette",
+      "eye": [
+        930,
+        550
+      ],
+      "span": 1350,
+      "top": -38,
+      "reviewed": "2026-11-03",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/nightraven/assets/nightraven-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "sourceSha256": "4e95b11ac47373301755755aaa24f8dbfbfdecd0886b47edf2962f665a90a38f",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "faceCenterX": 768,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "katamari": {
+      "profile": "mascot",
+      "eye": [
+        880,
+        460
+      ],
+      "span": 1380,
+      "top": 64,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/katamari/assets/katamari-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "sourceSha256": "fe414b1bf4a468ef9734f7ba60b1178597c5bfc983ec28e210e6147137f2caa0",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        80,
+        270,
+        1480,
+        910
+      ],
+      "faceCenterX": 768,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "klonoa": {
+      "profile": "mascot",
+      "eye": [
+        627,
+        436
+      ],
+      "span": 552,
+      "top": 116,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        25,
+        0,
+        1254,
+        1254
+      ],
+      "source": "characters/klonoa/assets/klonoa-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        395,
+        215,
+        859,
+        740
+      ],
+      "sourceSha256": "967c89fe15ecd2e33d3da846775199b63957416d5083bd53eb6cf20c5173e729",
+      "faceCenterX": 652,
+      "crop": [
+        25,
+        0,
+        1254,
+        1254
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "okami": {
+      "profile": "mascot",
+      "eye": [
+        868,
+        406
+      ],
+      "span": 660,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        108,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/okami/assets/okami-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        591,
+        142,
+        1145,
+        769
+      ],
+      "sourceSha256": "548fa124751b74c8639783687a6e983647bf1040033d97246d1930109cd3e8fb",
+      "faceCenterX": 825,
+      "crop": [
+        108,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "megamanexe": {
+      "profile": "mecha",
+      "eye": [
+        768,
+        573
+      ],
+      "span": 535,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        31,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/megamanexe/assets/megamanexe-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        543,
+        359,
+        993,
+        867
+      ],
+      "sourceSha256": "355de3055a01f1920258779984d371b4ac421328c175c4634f6b5bc65bfd7a45",
+      "faceCenterX": 799,
+      "crop": [
+        31,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "zero": {
+      "profile": "mecha",
+      "eye": [
+        811,
+        464
+      ],
+      "span": 502,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        80,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/zero/assets/zero-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        600,
+        263,
+        1022,
+        740
+      ],
+      "sourceSha256": "1725b15c824557c80501fe39153eff091125a1eeaa782ee0f4893a8de5a96935",
+      "faceCenterX": 797,
+      "crop": [
+        80,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "hunter": {
+      "profile": "mecha",
+      "eye": [
+        868,
+        445
+      ],
+      "span": 545,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/hunter/assets/hunter-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        639,
+        227,
+        1097,
+        745
+      ],
+      "sourceSha256": "339ee29c64993235f9afad050dd37a168ee23a4207ecd33a0509a1e556534d48",
+      "faceCenterX": 768,
+      "crop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "felyne": {
+      "profile": "mascot",
+      "eye": [
+        829,
+        522
+      ],
+      "span": 703,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        15,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/felyne/assets/felyne-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        534,
+        241,
+        1124,
+        909
+      ],
+      "sourceSha256": "b7f61769bced8bdc72713f377eb4226ebf560a5e98a0ee97972919d37657b5ba",
+      "faceCenterX": 783,
+      "crop": [
+        15,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "nargacuga": {
+      "profile": "mecha",
+      "eye": [
+        1150,
+        590
+      ],
+      "span": 820,
+      "top": 203,
+      "reviewed": "2026-11-03",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "referenceCrop": [
+        386,
+        -68,
+        1529,
+        1092
+      ],
+      "source": "characters/nargacuga/assets/nargacuga-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "sourceSha256": "1f5b49bf23b56887dd8ef4e4be11047a7417d180a272111ba7fa283553b3e1ba",
+      "crop": [
+        386,
+        -68,
+        1529,
+        1092
+      ],
+      "faceBounds": [
+        806,
+        262,
+        1450,
+        915
+      ],
+      "faceCenterX": 1151,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "naruhodo": {
+      "profile": "human",
+      "eye": [
+        1013,
+        348
+      ],
+      "span": 428,
+      "top": 72,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        404,
+        -80,
+        1297,
+        926
+      ],
+      "source": "characters/naruhodo/assets/naruhodo-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        833,
+        177,
+        1193,
+        583
+      ],
+      "sourceSha256": "e1b54b651ae5bff6d55ddd7bc23992a18ffdf533337cee38970d7c7d2250b064",
+      "faceCenterX": 977.5,
+      "crop": [
+        329,
+        -80,
+        1297,
+        926
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "arthur": {
+      "profile": "human",
+      "eye": [
+        969,
+        488
+      ],
+      "span": 435,
+      "top": 76,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        329,
+        0,
+        1280,
+        914
+      ],
+      "source": "characters/arthur/assets/arthur-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        786,
+        314,
+        1152,
+        727
+      ],
+      "sourceSha256": "81cb7c168996efdbce97433e15fca3b8d5b50c5b0caa3523c9c8b514121fd163",
+      "faceCenterX": 969,
+      "crop": [
+        329,
+        0,
+        1280,
+        914
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "viewtifuljoe": {
+      "profile": "mecha",
+      "eye": [
+        864,
+        628
+      ],
+      "span": 546,
+      "top": 164,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        257,
+        211,
+        1214,
+        867
+      ],
+      "source": "characters/viewtifuljoe/assets/viewtifuljoe-selection.png",
+      "sourceSize": [
+        1374,
+        1145
+      ],
+      "faceBounds": [
+        635,
+        410,
+        1093,
+        928
+      ],
+      "sourceSha256": "af6e5c4d445c9b12d10cf54572c1b2854f3f697cbd75b30cf3f78299071f0631",
+      "faceCenterX": 864,
+      "crop": [
+        257,
+        211,
+        1214,
+        867
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "dante": {
+      "profile": "human",
+      "eye": [
+        891,
+        373
+      ],
+      "span": 400,
+      "top": 58,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        362,
+        0,
+        1176,
+        840
+      ],
+      "source": "characters/dante/assets/dante-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        723,
+        213,
+        1059,
+        593
+      ],
+      "sourceSha256": "ac20b2623c70dc13e4280d9eaa042a2a71e06d89d0788c45ca38199f6de482c0",
+      "faceCenterX": 950,
+      "crop": [
+        362,
+        0,
+        1176,
+        840
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "leon": {
+      "profile": "human",
+      "eye": [
+        883,
+        474
+      ],
+      "span": 402,
+      "top": 99,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        286,
+        72,
+        1218,
+        870
+      ],
+      "source": "characters/leon/assets/leon-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        714,
+        313,
+        1052,
+        695
+      ],
+      "sourceSha256": "d01aa39861a6f2d07493718044b0135f2d469faac64cf30480aed1923c04f0c6",
+      "faceCenterX": 895,
+      "crop": [
+        286,
+        72,
+        1218,
+        870
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "guile": {
+      "profile": "human",
+      "eye": [
+        997,
+        426
+      ],
+      "span": 344,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        476,
+        81,
+        1042,
+        745
+      ],
+      "source": "characters/guile/assets/guile-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        853,
+        288,
+        1141,
+        615
+      ],
+      "sourceSha256": "42c69177409a429f629b96a9c2373c64dba8b4219c1d2546caf2f78bfa295e46",
+      "faceCenterX": 997,
+      "crop": [
+        476,
+        81,
+        1042,
+        745
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "sol": {
+      "profile": "human",
+      "eye": [
+        768,
+        563
+      ],
+      "span": 443,
+      "top": 386,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        97,
+        129,
+        1342,
+        895
+      ],
+      "source": "characters/sol/assets/sol-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        582,
+        386,
+        954,
+        807
+      ],
+      "sourceSha256": "e77872accefe576b0f3b064e28980966dbd8bf061a59f266ac57ecc5aefec5f3",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "crop": [
+        97,
+        129,
+        1342,
+        895
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "ky": {
+      "profile": "human",
+      "eye": [
+        830,
+        534
+      ],
+      "span": 322,
+      "top": 166,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        342,
+        212,
+        976,
+        697
+      ],
+      "source": "characters/ky/assets/ky-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        695,
+        405,
+        965,
+        711
+      ],
+      "sourceSha256": "32521c06ab7995eec7ef2ef40141bb972eac2866fc8f4fef19d7adec2044d761",
+      "faceCenterX": 830,
+      "crop": [
+        342,
+        212,
+        976,
+        697
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "bomberman": {
+      "profile": "mascot",
+      "eye": [
+        969,
+        455
+      ],
+      "span": 789,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        252,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/bomberman/assets/bomberman-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        638,
+        139,
+        1300,
+        889
+      ],
+      "sourceSha256": "0db2bbe3b977ace0ca2c7bb4752bb1eaa197c66e8e4b2c95423589747ebafb15",
+      "faceCenterX": 873,
+      "crop": [
+        156,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "pawapuro": {
+      "profile": "mascot",
+      "eye": [
+        969,
+        445
+      ],
+      "span": 932,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        281,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/pawapuro/assets/pawapuro-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        578,
+        72,
+        1360,
+        958
+      ],
+      "sourceSha256": "8df39ea00bf983ab8b32e3d88a5e4693b4385733ee2f6fa941134bb2498dc242",
+      "faceCenterX": 928,
+      "crop": [
+        211,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "goemon": {
+      "profile": "chibi",
+      "eye": [
+        921,
+        604
+      ],
+      "span": 489,
+      "top": 41,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        157,
+        -68,
+        1529,
+        1092
+      ],
+      "source": "characters/goemon/assets/goemon-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        716,
+        408,
+        1126,
+        873
+      ],
+      "sourceSha256": "7b2faa8b651a7b6fb22dfadc3b40665dbb770996771738a551f4795bf1fecd21",
+      "faceCenterX": 839.5,
+      "crop": [
+        75,
+        -68,
+        1529,
+        1092
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "django": {
+      "profile": "chibi",
+      "eye": [
+        1013,
+        502
+      ],
+      "span": 550,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        280,
+        -68,
+        1529,
+        1092
+      ],
+      "source": "characters/django/assets/django-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        782,
+        282,
+        1244,
+        805
+      ],
+      "sourceSha256": "88330da225ede962b782745d1c3bc71ae19502a07cf0ef8923fad8705336170f",
+      "faceCenterX": 1044,
+      "crop": [
+        280,
+        -68,
+        1529,
+        1092
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "twinbee": {
+      "profile": "mascot",
+      "eye": [
+        933,
+        444
+      ],
+      "span": 762,
+      "top": 101,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        302,
+        51,
+        1190,
+        850
+      ],
+      "source": "characters/twinbee/assets/twinbee-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        613,
+        139,
+        1253,
+        863
+      ],
+      "sourceSha256": "9f366147ae71b68e7b2f290384b28b7c26c5c4184535d4232009affbc1297f6f",
+      "faceCenterX": 987,
+      "crop": [
+        392,
+        51,
+        1190,
+        850
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "hinako": {
+      "profile": "human",
+      "eye": [
+        676,
+        399
+      ],
+      "span": 336,
+      "top": 72,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        177,
+        63,
+        1018,
+        727
+      ],
+      "source": "characters/hinako/assets/hinako-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        535,
+        265,
+        817,
+        584
+      ],
+      "sourceSha256": "93f9a8b4f7388d3e9b4e94bd0dac1dc78c98908a15e0313fb59b01b27eea33d6",
+      "faceCenterX": 686,
+      "crop": [
+        177,
+        63,
+        1018,
+        727
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "hayabusa": {
+      "profile": "mecha",
+      "eye": [
+        768,
+        491.52
+      ],
+      "span": 552.96,
+      "top": 359,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/hayabusa/assets/hayabusa-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "sourceSha256": "26fc4829297e3b3bef114c137de7f18c5f50c686070b78e3af34eb0ac2800d85",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "faceCenterX": 768,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "alucard": {
+      "profile": "human",
+      "eye": [
+        778,
+        256
+      ],
+      "span": 168,
+      "top": 67,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        534,
+        88,
+        509,
+        364
+      ],
+      "source": "characters/alucard/assets/alucard-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        707,
+        189,
+        849,
+        348
+      ],
+      "sourceSha256": "188b87f5d8665c7f31ac62607e369f6d9452d4ccac0bd5fa7570e8d6047bd8e7",
+      "faceCenterX": 743.5,
+      "crop": [
+        489,
+        88,
+        509,
+        364
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "kingbonby": {
+      "profile": "mascot",
+      "eye": [
+        864,
+        412
+      ],
+      "span": 373,
+      "top": 134,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        346,
+        0,
+        1036,
+        740
+      ],
+      "source": "characters/kingbonby/assets/kingbonby-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        707,
+        263,
+        1021,
+        617
+      ],
+      "sourceSha256": "ae24c4dd837c8c410aedc02b9cf312542b4c803641aea9285c6861e110d28919",
+      "faceCenterX": 864,
+      "crop": [
+        346,
+        0,
+        1036,
+        740
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "jehuty": {
+      "profile": "mecha",
+      "eye": [
+        768,
+        491.52
+      ],
+      "span": 552.96,
+      "top": 296,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/jehuty/assets/jehuty-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "sourceSha256": "33cf3af8d36fb333db4fa74a1f2eb860e268acf38b1b3656587365c28cee8062",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "faceCenterX": 768,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "anubis": {
+      "profile": "mecha",
+      "eye": [
+        768,
+        491.52
+      ],
+      "span": 552.96,
+      "top": 255,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/anubis/assets/anubis-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "sourceSha256": "ca4cc9898f129cc72f22ce030d6a5bcb71284d3eb5c0fc9b7601f843f4325c79",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "faceCenterX": 768,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "ryza": {
+      "profile": "human",
+      "eye": [
+        868,
+        455
+      ],
+      "span": 402,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        271,
+        53,
+        1218,
+        870
+      ],
+      "source": "characters/ryza/assets/ryza-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        699,
+        294,
+        1037,
+        676
+      ],
+      "sourceSha256": "94d34199dbbfcdf144944616cccf4a83e3be3202b9186715f6615686c8e098aa",
+      "faceCenterX": 880,
+      "crop": [
+        271,
+        53,
+        1218,
+        870
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "yuri": {
+      "profile": "human",
+      "eye": [
+        768,
+        512
+      ],
+      "span": 443,
+      "top": 335,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        97,
+        82,
+        1342,
+        895
+      ],
+      "source": "characters/yuri/assets/yuri-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        582,
+        335,
+        954,
+        756
+      ],
+      "sourceSha256": "6d04390758ecc47c57f3ec3dcef20cab1d1516d848e25bb5b93988b330452f3d",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "crop": [
+        97,
+        82,
+        1342,
+        895
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "ryofu": {
+      "profile": "human",
+      "eye": [
+        860,
+        553
+      ],
+      "span": 474,
+      "top": 363,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        142,
+        67,
+        1436,
+        957
+      ],
+      "source": "characters/ryofu/assets/ryofu-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        661,
+        363,
+        1059,
+        814
+      ],
+      "sourceSha256": "412ca8197df845e651b3bf38bc1953ac41975002189da6ea95e77a66876d53f2",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 860,
+      "crop": [
+        142,
+        67,
+        1436,
+        957
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "makoto": {
+      "profile": "human",
+      "eye": [
+        926,
+        474
+      ],
+      "span": 402,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        329,
+        72,
+        1218,
+        870
+      ],
+      "source": "characters/makoto/assets/makoto-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        757,
+        313,
+        1095,
+        695
+      ],
+      "sourceSha256": "36871beca03ccc0058486dd83a926ebf9695d83c43036a5e5f969a37ac5918c6",
+      "faceCenterX": 938,
+      "crop": [
+        329,
+        72,
+        1218,
+        870
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "narukami": {
+      "profile": "human",
+      "eye": [
+        883,
+        445
+      ],
+      "span": 373,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        352,
+        72,
+        1130,
+        807
+      ],
+      "source": "characters/narukami/assets/narukami-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        726,
+        296,
+        1040,
+        650
+      ],
+      "sourceSha256": "2b8ad64dd601d759a7cfbc6c958bf2b12353080a54bb32d3b057321e54e46049",
+      "faceCenterX": 917,
+      "crop": [
+        352,
+        72,
+        1130,
+        807
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "wonder": {
+      "profile": "human",
+      "eye": [
+        981,
+        508
+      ],
+      "span": 372,
+      "top": 89,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        418,
+        136,
+        1127,
+        805
+      ],
+      "source": "characters/wonder/assets/wonder-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        825,
+        359,
+        1137,
+        713
+      ],
+      "sourceSha256": "990463bba461aff302740f295b7249c7043a1c36f9723c28a66e2a8185809729",
+      "faceCenterX": 840.5,
+      "crop": [
+        277,
+        136,
+        1127,
+        805
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "nahobino": {
+      "profile": "human",
+      "eye": [
+        1090,
+        459
+      ],
+      "span": 424,
+      "top": 85,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        543,
+        0,
+        1116,
+        797
+      ],
+      "source": "characters/nahobino/assets/nahobino-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        912,
+        289,
+        1268,
+        692
+      ],
+      "sourceSha256": "c7bff9cec4b5b3345368d07db32694fe7c47b4f53085ea686806f66b21bc0ef0",
+      "faceCenterX": 1101,
+      "crop": [
+        543,
+        0,
+        1116,
+        797
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "will": {
+      "profile": "human",
+      "eye": [
+        825,
+        464
+      ],
+      "span": 387,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        239,
+        76,
+        1173,
+        838
+      ],
+      "source": "characters/will/assets/will-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        662,
+        309,
+        988,
+        677
+      ],
+      "sourceSha256": "e23c65af05b26ef70bd0e97a67ed361e4ec6b84d82ae986a376d9942aae290cc",
+      "faceCenterX": 826,
+      "crop": [
+        239,
+        76,
+        1173,
+        838
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "alain": {
+      "profile": "human",
+      "eye": [
+        830,
+        409
+      ],
+      "span": 333,
+      "top": 48,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        340,
+        85,
+        980,
+        700
+      ],
+      "source": "characters/alain/assets/alain-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        690,
+        276,
+        970,
+        592
+      ],
+      "sourceSha256": "fb82c51eeda4be03ec0e11ab1e1e7c78bb26e95bc710ec9e62ea70c5172e82d0",
+      "faceCenterX": 830,
+      "crop": [
+        340,
+        85,
+        980,
+        700
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "kurabe": {
+      "profile": "human",
+      "eye": [
+        707,
+        584
+      ],
+      "span": 413,
+      "top": 419,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        81,
+        183,
+        1252,
+        835
+      ],
+      "source": "characters/kurabe/assets/kurabe-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        534,
+        419,
+        880,
+        811
+      ],
+      "sourceSha256": "cdc91eaea462769a8e07e2b9c28b559fe6c8437a9a0044274eb80ba99c4724eb",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 707,
+      "crop": [
+        81,
+        183,
+        1252,
+        835
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "shadow": {
+      "profile": "mascot",
+      "eye": [
+        911,
+        599
+      ],
+      "span": 660,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        194,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/shadow/assets/shadow-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        634,
+        335,
+        1188,
+        962
+      ],
+      "sourceSha256": "970d57a15e7863c860760ed491af641c64edd18f2f34c5b97fd71f9599a6341c",
+      "faceCenterX": 911,
+      "crop": [
+        194,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "tails": {
+      "profile": "mascot",
+      "eye": [
+        724,
+        527
+      ],
+      "span": 637,
+      "top": 72,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        14,
+        0,
+        1448,
+        1086
+      ],
+      "source": "characters/tails/assets/tails-selection.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "faceBounds": [
+        456,
+        272,
+        992,
+        877
+      ],
+      "sourceSha256": "e1ffacd5bb4cadb6fe61b117dc8bceec4b828efe45d7715ffbb78c5a178fbc2d",
+      "faceCenterX": 738,
+      "crop": [
+        14,
+        0,
+        1448,
+        1086
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "nights": {
+      "profile": "chibi",
+      "eye": [
+        867,
+        475
+      ],
+      "span": 524,
+      "top": 69,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        -34,
+        -55,
+        1638,
+        1170
+      ],
+      "source": "characters/nights/assets/nights-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        647,
+        265,
+        1087,
+        763
+      ],
+      "sourceSha256": "fecd499c373831090c2ac6dd2cd1ebe9916e8c07d20516cd0eb1dc7e019eb6c3",
+      "faceCenterX": 931,
+      "crop": [
+        112,
+        -55,
+        1638,
+        1170
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "miku": {
+      "profile": "human",
+      "eye": [
+        799,
+        522
+      ],
+      "span": 505,
+      "top": 320,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        35,
+        5,
+        1529,
+        1019
+      ],
+      "source": "characters/miku/assets/miku-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        587,
+        320,
+        1011,
+        800
+      ],
+      "sourceSha256": "e44b5b0c75f203419ed445cb58ce9dc9142eda440c4a4dc4ca088006b1fa5e2a",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 800,
+      "crop": [
+        35,
+        5,
+        1529,
+        1019
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "kiryu": {
+      "profile": "human",
+      "eye": [
+        778,
+        430
+      ],
+      "span": 381,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        162,
+        0,
+        1120,
+        800
+      ],
+      "source": "characters/kiryu/assets/kiryu-selection.png",
+      "sourceSize": [
+        1420,
+        1108
+      ],
+      "faceBounds": [
+        618,
+        278,
+        938,
+        640
+      ],
+      "sourceSha256": "7c9aa0fbd12fa2b3664c844c1254538e32cdd42514fdcf75e433e805b5f2670c",
+      "faceCenterX": 817,
+      "crop": [
+        257,
+        0,
+        1120,
+        800
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "leanne": {
+      "profile": "human",
+      "eye": [
+        738,
+        607
+      ],
+      "span": 388,
+      "top": 95,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        150,
+        218,
+        1176,
+        840
+      ],
+      "source": "characters/leanne/assets/leanne-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        575,
+        452,
+        901,
+        820
+      ],
+      "sourceSha256": "cf828ebb3c9c9c71bc49db38026d22d94410a2f4fa2cf0d11f4f5fd87aa884c0",
+      "faceCenterX": 738,
+      "crop": [
+        150,
+        218,
+        1176,
+        840
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "aruru": {
+      "profile": "chibi",
+      "eye": [
+        799,
+        573
+      ],
+      "span": 658,
+      "top": 310,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        35,
+        5,
+        1529,
+        1019
+      ],
+      "source": "characters/aruru/assets/aruru-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        523,
+        310,
+        1075,
+        935
+      ],
+      "sourceSha256": "0d555dbf8e7ebbe7848ca99e06b60bf62db229c1b0caf015aef2f38ade774279",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 800,
+      "crop": [
+        35,
+        5,
+        1529,
+        1019
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "sakura": {
+      "profile": "human",
+      "eye": [
+        799,
+        563
+      ],
+      "span": 443,
+      "top": 386,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        128,
+        129,
+        1342,
+        895
+      ],
+      "source": "characters/sakura/assets/sakura-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        613,
+        386,
+        985,
+        807
+      ],
+      "sourceSha256": "57fc3bc54f48b2b5854d0a912e64ae12a433d9e84064ee3394f8e23817aa880a",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 799,
+      "crop": [
+        128,
+        129,
+        1342,
+        895
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "aiai": {
+      "profile": "mascot",
+      "eye": [
+        577,
+        595
+      ],
+      "span": 502,
+      "top": 251,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "source": "characters/aiai/assets/aiai-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        366,
+        394,
+        788,
+        871
+      ],
+      "sourceSha256": "1c2502255d241877e54a22447189e12c6693b58af1c80a053f64ea62cdb61116",
+      "faceCenterX": 627,
+      "crop": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "toro": {
+      "profile": "mascot",
+      "eye": [
+        768,
+        492
+      ],
+      "span": 948,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/toro/assets/toro-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        370,
+        113,
+        1166,
+        1013
+      ],
+      "sourceSha256": "64c6971db8102fb941a139660213404096a3a1f2817bc917fe818a13093a45f1",
+      "faceCenterX": 768,
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "astro": {
+      "profile": "mecha",
+      "eye": [
+        980,
+        590
+      ],
+      "span": 900,
+      "top": 207,
+      "reviewed": "2026-11-03",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "referenceCrop": [
+        216,
+        -68,
+        1529,
+        1092
+      ],
+      "source": "characters/astro/assets/astro-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "sourceSha256": "b708e2e50b67e5c8f1d66ea9592a6f7058ba3af37339fe9bb480413c5a5ebf7a",
+      "crop": [
+        216,
+        -68,
+        1529,
+        1092
+      ],
+      "faceBounds": [
+        350,
+        200,
+        1290,
+        885
+      ],
+      "faceCenterX": 981,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "parappa": {
+      "profile": "mascot",
+      "eye": [
+        714,
+        616
+      ],
+      "span": 605,
+      "top": 137,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        27,
+        162,
+        1374,
+        981
+      ],
+      "source": "characters/parappa/assets/parappa-selection-v2.png",
+      "sourceSize": [
+        1374,
+        1145
+      ],
+      "faceBounds": [
+        460,
+        374,
+        968,
+        949
+      ],
+      "sourceSha256": "7799a0bd6c6636c92654864b39bea4971eec65bdf21532b70d71ea75d68faf8f",
+      "faceCenterX": 714,
+      "crop": [
+        27,
+        162,
+        1374,
+        981
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "kitten": {
+      "profile": "human",
+      "eye": [
+        814,
+        553
+      ],
+      "span": 444,
+      "top": 375,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        142,
+        122,
+        1345,
+        897
+      ],
+      "source": "characters/kitten/assets/kitten-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        628,
+        375,
+        1000,
+        797
+      ],
+      "sourceSha256": "a7fd4809936e56f67ed71e480db23b6d2164fd8acc0cf62e345761794d865869",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 815,
+      "crop": [
+        142,
+        122,
+        1345,
+        897
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "crash": {
+      "profile": "mascot",
+      "eye": [
+        849,
+        396
+      ],
+      "span": 575,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        125,
+        0,
+        1249,
+        892
+      ],
+      "source": "characters/crash/assets/crash-selection.png",
+      "sourceSize": [
+        1420,
+        1108
+      ],
+      "faceBounds": [
+        608,
+        166,
+        1091,
+        712
+      ],
+      "sourceSha256": "c8858e5f3b05a54499ee842398386b706808307dce1136f9768387bf74525624",
+      "faceCenterX": 749,
+      "crop": [
+        125,
+        0,
+        1249,
+        892
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "ratchet": {
+      "profile": "mascot",
+      "eye": [
+        768,
+        491.52
+      ],
+      "span": 552.96,
+      "top": 123,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/ratchet/assets/ratchet-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "sourceSha256": "073aedcd7bbd00969f776cb443d06b3e7c756b29628a17aea59c64c3eef18285",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "faceCenterX": 768,
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "sackboy": {
+      "profile": "mascot",
+      "eye": [
+        799,
+        389
+      ],
+      "span": 918,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/sackboy/assets/sackboy-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        413,
+        22,
+        1185,
+        894
+      ],
+      "sourceSha256": "305aca9f4bba18101762dfe9d3e2e90b8ed0409f07adfccc6f61a59115f32b91",
+      "faceCenterX": 768,
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "piposaru": {
+      "profile": "mascot",
+      "eye": [
+        1037,
+        445
+      ],
+      "span": 580,
+      "top": 74,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        418,
+        0,
+        1319,
+        942
+      ],
+      "source": "characters/piposaru/assets/piposaru-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        793,
+        213,
+        1281,
+        764
+      ],
+      "sourceSha256": "d57de34622d136c87d38141a9f818a9ab7b25cba7a0911f463fbedd4fea3bbfb",
+      "faceCenterX": 1077,
+      "crop": [
+        418,
+        0,
+        1319,
+        942
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "sam": {
+      "profile": "human",
+      "eye": [
+        852,
+        404
+      ],
+      "span": 400,
+      "top": 0,
+      "reviewed": "2026-11-03",
+      "crop": [
+        244,
+        -30,
+        1200,
+        857
+      ],
+      "referenceCrop": [
+        244,
+        -30,
+        1200,
+        857
+      ],
+      "source": "characters/sam/assets/sam-selection.png",
+      "sourceSize": [
+        1374,
+        1145
+      ],
+      "faceBounds": [
+        684,
+        244,
+        1020,
+        624
+      ],
+      "sourceSha256": "08e8e27237911db1d92f247149d3ba8c3893b33a9d03ec967ea185b225b6a496",
+      "faceCenterX": 844,
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "aloy": {
+      "profile": "human",
+      "eye": [
+        1028,
+        431
+      ],
+      "span": 309,
+      "top": 138,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        573,
+        75,
+        910,
+        650
+      ],
+      "source": "characters/aloy/assets/aloy-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        898,
+        307,
+        1158,
+        601
+      ],
+      "sourceSha256": "d4c5f6595a74060c6daaa6b151aebd3fed7e34d8c173a4cef10f63a71f8b0155",
+      "faceCenterX": 967,
+      "crop": [
+        512,
+        75,
+        910,
+        650
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "monokuma": {
+      "profile": "mascot",
+      "eye": [
+        825,
+        464
+      ],
+      "span": 932,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/monokuma/assets/monokuma-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        434,
+        91,
+        1216,
+        977
+      ],
+      "sourceSha256": "cb9bc5e5ed4fcb1553e15350c5bce76d7848c508be7a8993986f63f190f3a266",
+      "faceCenterX": 698,
+      "crop": [
+        -19,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "naegi": {
+      "profile": "human",
+      "eye": [
+        868,
+        493
+      ],
+      "span": 430,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/naegi/assets/naegi-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        687,
+        321,
+        1049,
+        730
+      ],
+      "sourceSha256": "8bd0a5a2bbb7da6487b83cfbd02f33968c05c122ca3dd3d2e9fb3c1449a2449d",
+      "faceCenterX": 768,
+      "crop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "yuma": {
+      "profile": "human",
+      "eye": [
+        660,
+        644
+      ],
+      "span": 410,
+      "top": 357,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        260,
+        325,
+        910,
+        650
+      ],
+      "source": "characters/yuma/assets/yuma-selection.png",
+      "sourceSize": [
+        1199,
+        1312
+      ],
+      "faceBounds": [
+        488,
+        480,
+        832,
+        870
+      ],
+      "sourceSha256": "931ac4bbb0efdb392429e36ea7acee336db5bc606be4564c03424b6e9900fe1a",
+      "faceCenterX": 674,
+      "crop": [
+        219,
+        325,
+        910,
+        650
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "sumino": {
+      "profile": "human",
+      "eye": [
+        768,
+        483
+      ],
+      "span": 315,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        291,
+        168,
+        955,
+        682
+      ],
+      "source": "characters/sumino/assets/sumino-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        636,
+        357,
+        900,
+        656
+      ],
+      "sourceSha256": "17c9a74fa6a61fe6902e31949252fc8abcf6f998f3eb0839859b7eaed359dc3b",
+      "faceCenterX": 769,
+      "crop": [
+        291,
+        168,
+        955,
+        682
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "shiren": {
+      "profile": "human",
+      "eye": [
+        926,
+        503
+      ],
+      "span": 459,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        209,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/shiren/assets/shiren-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        733,
+        319,
+        1119,
+        755
+      ],
+      "sourceSha256": "a63fbe97f01c22fd884111d52184d0efd4ea2626f9d3250f5c72c315e30eb6e7",
+      "faceCenterX": 926,
+      "crop": [
+        209,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "estelle": {
+      "profile": "human",
+      "eye": [
+        897,
+        445
+      ],
+      "span": 459,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        180,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/estelle/assets/estelle-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        704,
+        261,
+        1090,
+        697
+      ],
+      "sourceSha256": "3316d60b4b560a2af831115951db21d6b55421bbe6147265eb95b4ad632e2a88",
+      "faceCenterX": 897,
+      "crop": [
+        180,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "rean": {
+      "profile": "human",
+      "eye": [
+        969,
+        397
+      ],
+      "span": 287,
+      "top": 99,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        418,
+        48,
+        1044,
+        746
+      ],
+      "source": "characters/rean/assets/rean-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        848,
+        282,
+        1090,
+        555
+      ],
+      "sourceSha256": "e9482a4055b0b81be648a36b6502c8e2c48d94f6d25b1a6e158202733c80decf",
+      "faceCenterX": 940,
+      "crop": [
+        418,
+        48,
+        1044,
+        746
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "shizuna": {
+      "profile": "human",
+      "eye": [
+        854,
+        349
+      ],
+      "span": 272,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        450,
+        77,
+        824,
+        589
+      ],
+      "source": "characters/shizuna/assets/shizuna-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        740,
+        240,
+        968,
+        499
+      ],
+      "sourceSha256": "18729bb5ff203b3657d27d944cb7e87b82761acbc02c37b6b55669dce77d8ed0",
+      "faceCenterX": 862,
+      "crop": [
+        450,
+        77,
+        824,
+        589
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "adol": {
+      "profile": "human",
+      "eye": [
+        969,
+        387
+      ],
+      "span": 330,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        479,
+        57,
+        1000,
+        714
+      ],
+      "source": "characters/adol/assets/adol-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        830,
+        255,
+        1108,
+        569
+      ],
+      "sourceSha256": "c4b928c243cb2e8bf9eab0e631815983554351ab3951096f2e9bcf499849f587",
+      "faceCenterX": 979,
+      "crop": [
+        479,
+        57,
+        1000,
+        714
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "dana": {
+      "profile": "human",
+      "eye": [
+        799,
+        543
+      ],
+      "span": 474,
+      "top": 353,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        81,
+        67,
+        1436,
+        957
+      ],
+      "source": "characters/dana/assets/dana-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        600,
+        353,
+        998,
+        804
+      ],
+      "sourceSha256": "841e8f9ca49fe1716f2e7c6647a95a1f5e3651b21d298562c4e0f63d2db5dc16",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 799,
+      "crop": [
+        81,
+        67,
+        1436,
+        957
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "malenia": {
+      "profile": "mecha",
+      "eye": [
+        832,
+        278
+      ],
+      "span": 240,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        400,
+        0,
+        800,
+        800
+      ],
+      "source": "characters/malenia/assets/malenia-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        731,
+        182,
+        933,
+        410
+      ],
+      "sourceSha256": "a4b653b4ea2d34a9f9a2c875e682f6d45e13af18a14640002b741ccbca9321df",
+      "faceCenterX": 800,
+      "crop": [
+        400,
+        0,
+        800,
+        800
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "c4621": {
+      "profile": "silhouette",
+      "eye": [
+        525,
+        185
+      ],
+      "span": 325,
+      "top": 33,
+      "reviewed": "2026-11-03",
+      "note": "顔だけへ寄せず、固有のシルエットを保持。",
+      "referenceCrop": [
+        265,
+        5,
+        650,
+        465
+      ],
+      "source": "characters/c4621/assets/c4621-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "88f4ae114ef74bd02ef0ff04cb6a237e0854e57a99c941a4c391852e008f9477",
+      "faceCenterX": 590,
+      "crop": [
+        265,
+        5,
+        650,
+        465
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "jibanyan": {
+      "profile": "mascot",
+      "eye": [
+        814,
+        399
+      ],
+      "span": 918,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/jibanyan/assets/jibanyan-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        428,
+        32,
+        1200,
+        904
+      ],
+      "sourceSha256": "9b096efc98bbc6b5b80e6f87954cb8465f3f15fef5eff990fe853fd414d0ac30",
+      "faceCenterX": 768,
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "layton": {
+      "profile": "tall",
+      "eye": [
+        737,
+        573
+      ],
+      "span": 627,
+      "top": 322,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        -27,
+        2,
+        1529,
+        1019
+      ],
+      "source": "characters/layton/assets/layton-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        474,
+        322,
+        1000,
+        918
+      ],
+      "sourceSha256": "68a6b9fd5bd431c749739ce909337cefc3d0702dcccefd687d09373eee766033",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 669.5,
+      "crop": [
+        -95,
+        2,
+        1529,
+        1019
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "laharl": {
+      "profile": "human",
+      "eye": [
+        799,
+        543
+      ],
+      "span": 489,
+      "top": 347,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        58,
+        36,
+        1482,
+        988
+      ],
+      "source": "characters/laharl/assets/laharl-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        594,
+        347,
+        1004,
+        812
+      ],
+      "sourceSha256": "28866bbd3224522877c3cdf14b9f8e72e43d80af911bfc6bdde71021b0bd744c",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 799,
+      "crop": [
+        58,
+        36,
+        1482,
+        988
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "etna": {
+      "profile": "tall",
+      "eye": [
+        789,
+        654
+      ],
+      "span": 500,
+      "top": -48,
+      "reviewed": "2026-11-03",
+      "locked": true,
+      "note": "既存の頭全体を見せる構図を保持。大きな髪のため目線が低い例外。",
+      "referenceCrop": [
+        -15,
+        -48,
+        1512,
+        1080
+      ],
+      "source": "characters/etna/assets/etna-selection.png",
+      "sourceSize": [
+        1223,
+        1286
+      ],
+      "sourceSha256": "d39992345d127e07a9d1ff605213cfd3b19d315bfb0828f8247a6bcadae3b52c",
+      "faceCenterX": 741,
+      "crop": [
+        -15,
+        -48,
+        1512,
+        1080
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "kisuke": {
+      "profile": "human",
+      "eye": [
+        768,
+        573
+      ],
+      "span": 336,
+      "top": 102,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        259,
+        237,
+        1018,
+        727
+      ],
+      "source": "characters/kisuke/assets/kisuke-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        627,
+        439,
+        909,
+        758
+      ],
+      "sourceSha256": "5966e59a254e8e97fffae3ec242bea38c82eb9884d976044fdc425f4cea56a03",
+      "faceCenterX": 768,
+      "crop": [
+        259,
+        237,
+        1018,
+        727
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "raguna": {
+      "profile": "human",
+      "eye": [
+        753,
+        430
+      ],
+      "span": 444,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        31,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/raguna/assets/raguna-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        567,
+        252,
+        939,
+        674
+      ],
+      "sourceSha256": "ef8de48564004daea27a80f93539a09bdf3db9a28a1278ff126f1418a2d19f66",
+      "faceCenterX": 799,
+      "crop": [
+        31,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "sakuna": {
+      "profile": "chibi",
+      "eye": [
+        799,
+        625
+      ],
+      "span": 612,
+      "top": 380,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        35,
+        5,
+        1529,
+        1019
+      ],
+      "source": "characters/sakuna/assets/sakuna-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        542,
+        380,
+        1056,
+        962
+      ],
+      "sourceSha256": "485267e0dfd04741a7c50fd525b7bfbb5d1d4ceeed815ba4aaf11d89cd0b6b87",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 800,
+      "crop": [
+        35,
+        5,
+        1529,
+        1019
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "gran": {
+      "profile": "human",
+      "eye": [
+        827,
+        342
+      ],
+      "span": 252,
+      "top": 106,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        398,
+        70,
+        840,
+        600
+      ],
+      "source": "characters/gran/assets/gran-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        721,
+        241,
+        933,
+        481
+      ],
+      "sourceSha256": "d0e367cf2d1bb4a68b2c5796bf24385d177cb2fa23906c0115e85264fa29c6c0",
+      "faceCenterX": 818,
+      "crop": [
+        398,
+        70,
+        840,
+        600
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "charlotta": {
+      "profile": "tall",
+      "eye": [
+        783,
+        625
+      ],
+      "span": 612,
+      "top": 380,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        19,
+        5,
+        1529,
+        1019
+      ],
+      "source": "characters/charlotta/assets/charlotta-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        526,
+        380,
+        1040,
+        962
+      ],
+      "sourceSha256": "004ef0a34f8d2e71920c7cf09656e673ff68763a31fb28c8d5daea06b23b8fbb",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 784,
+      "crop": [
+        19,
+        5,
+        1529,
+        1019
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "narmaya": {
+      "profile": "human",
+      "eye": [
+        815,
+        272
+      ],
+      "span": 245,
+      "top": 85,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        507,
+        60,
+        700,
+        500
+      ],
+      "source": "characters/narmaya/assets/narmaya-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        712,
+        174,
+        918,
+        407
+      ],
+      "sourceSha256": "d296bdaf44fe3394bb78e5b59c2b9cd7cc611b9922690171fc4caa223672ba42",
+      "faceCenterX": 820,
+      "crop": [
+        470,
+        60,
+        700,
+        500
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "haseo": {
+      "profile": "human",
+      "eye": [
+        768,
+        584
+      ],
+      "span": 444,
+      "top": 406,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        96,
+        127,
+        1345,
+        897
+      ],
+      "source": "characters/haseo/assets/haseo-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        582,
+        406,
+        954,
+        828
+      ],
+      "sourceSha256": "03136fe935ac3311399a40ce3918f11af0e97051e593bf4a60bf320698321d11",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 769,
+      "crop": [
+        96,
+        127,
+        1345,
+        897
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "metabee": {
+      "profile": "mecha",
+      "eye": [
+        737,
+        614
+      ],
+      "span": 642,
+      "top": 102,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/metabee/assets/metabee-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        467,
+        357,
+        1007,
+        967
+      ],
+      "sourceSha256": "63fcd10774f6d17783a77864623b089af03bbfa8bff6134304e1ee4ae709bdaa",
+      "faceCenterX": 768,
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "mono": {
+      "profile": "chibi",
+      "eye": [
+        840,
+        465
+      ],
+      "span": 430,
+      "top": 55,
+      "reviewed": "2026-11-03",
+      "crop": [
+        192,
+        0,
+        1240,
+        886
+      ],
+      "referenceCrop": [
+        192,
+        0,
+        1240,
+        886
+      ],
+      "source": "characters/mono/assets/mono-selection-v2.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        659,
+        293,
+        1021,
+        702
+      ],
+      "sourceSha256": "d338a55ea22385ded49ef4684253e376663daeaaad8ff835323ccb21fe4df32c",
+      "faceCenterX": 812,
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "rayman": {
+      "profile": "mascot",
+      "eye": [
+        768,
+        481
+      ],
+      "span": 703,
+      "top": 82,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        15,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/rayman/assets/rayman-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        473,
+        200,
+        1063,
+        868
+      ],
+      "sourceSha256": "9736d0886a602f6a8afbeb964284bb131af50ac5544e61ebe072a05bfe6da724",
+      "faceCenterX": 783,
+      "crop": [
+        15,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "enoch": {
+      "profile": "human",
+      "eye": [
+        829,
+        573
+      ],
+      "span": 444,
+      "top": 395,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        157,
+        127,
+        1345,
+        897
+      ],
+      "source": "characters/enoch/assets/enoch-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        643,
+        395,
+        1015,
+        817
+      ],
+      "sourceSha256": "2961f5c2d4708f18db09420b0e6cd014a93099b546af67dd8c828bb9c6d12a42",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 830,
+      "crop": [
+        157,
+        127,
+        1345,
+        897
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "jett": {
+      "profile": "human",
+      "eye": [
+        829,
+        553
+      ],
+      "span": 489,
+      "top": 357,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        88,
+        36,
+        1482,
+        988
+      ],
+      "source": "characters/jett/assets/jett-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        624,
+        357,
+        1034,
+        822
+      ],
+      "sourceSha256": "84ad535270e8c5315d42a2464013c534d32344024b3b23f08a1513e51471452a",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 922,
+      "crop": [
+        181,
+        36,
+        1482,
+        988
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "octane": {
+      "profile": "mecha",
+      "eye": [
+        906,
+        389
+      ],
+      "span": 489,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/octane/assets/octane-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        701,
+        193,
+        1111,
+        658
+      ],
+      "sourceSha256": "22cf39b81dd3f72eaf3ee870009966418ab24d79879c7151d2a42d0a843593b6",
+      "faceCenterX": 926,
+      "crop": [
+        158,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "ulgrim": {
+      "profile": "human",
+      "eye": [
+        911,
+        406
+      ],
+      "span": 359,
+      "top": 99,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        367,
+        47,
+        1088,
+        777
+      ],
+      "source": "characters/ulgrim/assets/ulgrim-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        760,
+        262,
+        1062,
+        603
+      ],
+      "sourceSha256": "6ad24a285b5d58250375fb809af1be4c519b975d5d5050fed7153933ee65ace9",
+      "faceCenterX": 862,
+      "crop": [
+        318,
+        47,
+        1088,
+        777
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "shovelknight": {
+      "profile": "tall",
+      "eye": [
+        951,
+        604
+      ],
+      "span": 734,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        187,
+        -68,
+        1529,
+        1092
+      ],
+      "source": "characters/shovelknight/assets/shovelknight-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        700,
+        310,
+        1259,
+        920
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "eed4947e74b0f2fc3c0ff1f813d3f357728bf17fad6a7eec5b9793e12bf8c83b",
+      "faceCenterX": 952,
+      "crop": [
+        187,
+        -68,
+        1529,
+        1092
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "battlemage": {
+      "profile": "human",
+      "eye": [
+        844,
+        522
+      ],
+      "span": 459,
+      "top": 338,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        149,
+        77,
+        1391,
+        927
+      ],
+      "source": "characters/battlemage/assets/battlemage-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        651,
+        338,
+        1037,
+        774
+      ],
+      "sourceSha256": "68a5f42da5a7638d882317e0d521421f749c6a6b51b26ff1e9894ced86d159c2",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 845,
+      "crop": [
+        149,
+        77,
+        1391,
+        927
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "miyabi": {
+      "profile": "human",
+      "eye": [
+        768,
+        641
+      ],
+      "span": 531,
+      "top": 199,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        50,
+        90,
+        1436,
+        1024
+      ],
+      "source": "characters/miyabi/assets/miyabi-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        545,
+        429,
+        991,
+        933
+      ],
+      "sourceSha256": "5db66b3004d211d2c647d0dbf34e1ecaf96183e29535c576592c2378e7718317",
+      "faceCenterX": 768,
+      "crop": [
+        50,
+        90,
+        1436,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "ellen": {
+      "profile": "human",
+      "eye": [
+        818,
+        545
+      ],
+      "span": 460,
+      "top": 140,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        213,
+        145,
+        1210,
+        864
+      ],
+      "source": "characters/ellen/assets/ellen-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        625,
+        361,
+        1011,
+        798
+      ],
+      "sourceSha256": "55f8fd5d7ea460a40006031f8a91f39f43655634cbeb22bf56f9de8e8787a397",
+      "faceCenterX": 818,
+      "crop": [
+        213,
+        145,
+        1210,
+        864
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "billy": {
+      "profile": "mecha",
+      "eye": [
+        898,
+        495
+      ],
+      "span": 447,
+      "top": 85,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        260,
+        0,
+        1276,
+        1024
+      ],
+      "source": "characters/billy/assets/billy-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        710,
+        316,
+        1086,
+        741
+      ],
+      "sourceSha256": "7f7fb17f3337950ef6b2d03f9eae71d6b80ef6edf246862c5c389d5231e5fd85",
+      "faceCenterX": 898,
+      "crop": [
+        260,
+        0,
+        1276,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "zoe": {
+      "profile": "duo",
+      "eye": [
+        584,
+        635
+      ],
+      "span": 229,
+      "top": 184,
+      "reviewed": "2026-11-03",
+      "note": "二人組の構図を保持。",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/zoe/assets/zoe-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "238467ced4312c98269b95b3dce682e632876afd4490604113327141ac03f252",
+      "faceCenterX": 768,
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "eve": {
+      "profile": "human",
+      "eye": [
+        814,
+        573
+      ],
+      "span": 444,
+      "top": 395,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        142,
+        127,
+        1345,
+        897
+      ],
+      "source": "characters/eve/assets/eve-selection-framed-v3.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "regenerated": true,
+      "faceBounds": [
+        628,
+        395,
+        1000,
+        817
+      ],
+      "sourceSha256": "b23de10907e4975e3b52e59b5e6ef91b9afb9509bbf1ec0623070a39d6f40634",
+      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 815,
+      "crop": [
+        142,
+        127,
+        1345,
+        897
+      ],
+      "centerBasis": "承認済みの参照画像による構図"
+    },
+    "deemo": {
+      "profile": "mascot",
+      "eye": [
+        911,
+        358
+      ],
+      "span": 602,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/deemo/assets/deemo-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        658,
+        117,
+        1164,
+        689
+      ],
+      "sourceSha256": "d3fd1c5a20c80f8f38ba9fd98865d827058a9b38e5ece4949eb74cb408481d12",
+      "faceCenterX": 768,
+      "crop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "maelle": {
+      "profile": "human",
+      "eye": [
+        969,
+        339
+      ],
+      "span": 258,
+      "top": 99,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        594,
+        81,
+        782,
+        558
+      ],
+      "source": "characters/maelle/assets/maelle-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        861,
+        236,
+        1077,
+        481
+      ],
+      "sourceSha256": "c8fe6b67eb0202a3c5d8536c81026a58e33eeefd8a5e11cd158eaa01e85b5a73",
+      "faceCenterX": 985,
+      "crop": [
+        594,
+        81,
+        782,
+        558
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "sans": {
+      "profile": "mascot",
+      "eye": [
+        911,
+        464
+      ],
+      "span": 889,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/sans/assets/sans-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        538,
+        108,
+        1284,
+        953
+      ],
+      "sourceSha256": "7e90a0b428c65dbe6049f32bddb7c213cf95fe27f6b21a518f38b145075f52df",
+      "faceCenterX": 838,
+      "crop": [
+        121,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "terrarian": {
+      "profile": "pixel",
+      "eye": [
+        868,
+        618
+      ],
+      "span": 631,
+      "top": 90,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        165,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/terrarian/assets/terrarian-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        603,
+        366,
+        1133,
+        965
+      ],
+      "sourceSha256": "f27281256256ffea4c2ece9d7152cb3f5b1b4ca0086fb940eea119d3f6352af9",
+      "faceCenterX": 882,
+      "crop": [
+        165,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "horse": {
+      "profile": "silhouette",
+      "eye": [
+        954,
+        349
+      ],
+      "span": 789,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "note": "顔だけへ寄せず、固有のシルエットを保持。",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/horse/assets/horse-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "83d0c8a5f8e482ffe00c5418bdc596cfb57d240e421d401e64719ca8b28fd7c6",
+      "faceCenterX": 768,
+      "crop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "chef": {
+      "profile": "chibi",
+      "eye": [
+        797,
+        656
+      ],
+      "span": 488,
+      "top": 109,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        80,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/chef/assets/chef-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        592,
+        461,
+        1002,
+        924
+      ],
+      "sourceSha256": "f7449606cf32703b8778f752511582dbb7876d612a137bc016d0e07c4b3dfa30",
+      "faceCenterX": 797,
+      "crop": [
+        80,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "morphie": {
+      "profile": "mascot",
+      "eye": [
+        954,
+        406
+      ],
+      "span": 717,
+      "top": 80,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        237,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/morphie/assets/morphie-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        653,
+        119,
+        1255,
+        800
+      ],
+      "sourceSha256": "424410d499b35140df8f32db7f7376812faa939c74af93dea859fab58e436514",
+      "faceCenterX": 877,
+      "crop": [
+        160,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "human": {
+      "profile": "silhouette",
+      "eye": [
+        782,
+        464
+      ],
+      "span": 789,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "note": "顔だけへ寄せず、固有のシルエットを保持。",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/human/assets/human-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "a08c762483039e534fd4a34a379e29336c9555ec9727854c52be808aaa0872f3",
+      "faceCenterX": 768,
+      "crop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "knight": {
+      "profile": "tall",
+      "eye": [
+        883,
+        550
+      ],
+      "span": 774,
+      "top": 70,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/knight/assets/knight-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        558,
+        240,
+        1208,
+        976
+      ],
+      "sourceSha256": "e3c34ca4c2b4b636aaeab11377841a4cd88c3fc37a5e1b037b2c611bc744e60b",
+      "faceCenterX": 864,
+      "crop": [
+        147,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "hornet": {
+      "profile": "tall",
+      "eye": [
+        911,
+        627
+      ],
+      "span": 602,
+      "top": 41,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        65,
+        -20,
+        1434,
+        1024
+      ],
+      "source": "characters/hornet/assets/hornet-selection-closeup.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        658,
+        386,
+        1164,
+        958
+      ],
+      "sourceSha256": "77cee082cf4e9d988132373f4128a6ce1b4f7779b3778d508bde462281646dfa",
+      "faceCenterX": 916,
+      "crop": [
+        199,
+        -20,
+        1434,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "reimu": {
+      "profile": "chibi",
+      "eye": [
+        897,
+        587
+      ],
+      "span": 384,
+      "top": 176,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        417,
+        257,
+        960,
+        686
+      ],
+      "source": "characters/reimu/assets/reimu-selection.png",
+      "sourceSize": [
+        1312,
+        1199
+      ],
+      "faceBounds": [
+        736,
+        433,
+        1058,
+        798
+      ],
+      "sourceSha256": "9065565e5510e8b1f9dcaf4eb7a1fb4e1f831897b9c36c1ff7843f902556164c",
+      "faceCenterX": 897,
+      "crop": [
+        417,
+        257,
+        960,
+        686
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "quote": {
+      "profile": "pixel",
+      "eye": [
+        844,
+        543
+      ],
+      "span": 459,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        207,
+        105,
+        1275,
+        911
+      ],
+      "source": "characters/quote/assets/quote-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        651,
+        359,
+        1037,
+        795
+      ],
+      "sourceSha256": "fb6e3b5dec4e96a6fe5b9cbd5df7cbff8783350cf8c765e239075521fd820e7b",
+      "faceCenterX": 845,
+      "crop": [
+        207,
+        105,
+        1275,
+        911
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "battlecat": {
+      "profile": "mascot",
+      "eye": [
+        783,
+        492
+      ],
+      "span": 994,
+      "top": 41,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/battlecat/assets/battlecat-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        430,
+        120,
+        1140,
+        990
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "8350a8336fdad11d9a387bc8ac21add94d53fba82768dc8add1ae95a4509b31e",
+      "faceCenterX": 768,
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "chiikawa": {
+      "profile": "mascot",
+      "eye": [
+        711,
+        541
+      ],
+      "span": 860,
+      "top": 61,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        51,
+        0,
+        1434,
+        1024
+      ],
+      "source": "characters/chiikawa/assets/chiikawa-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        420,
+        250,
+        1050,
+        960
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "ca7b5e063a9bd6eb2ac7afeb051da49fa55cbbca73ea8f699ef11556c68ff750",
+      "faceCenterX": 691,
+      "crop": [
+        -26,
+        0,
+        1434,
+        1024
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "hachiware": {
+      "profile": "mascot",
+      "eye": [
+        866,
+        600
+      ],
+      "span": 945,
+      "top": 108,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        -230,
+        0,
+        1800,
+        1200
+      ],
+      "source": "characters/hachiware/assets/hachiware-selection.png",
+      "sourceSize": [
+        1312,
+        1199
+      ],
+      "faceBounds": [
+        469,
+        222,
+        1263,
+        1120
+      ],
+      "crop": [
+        -230,
+        0,
+        1800,
+        1200
+      ],
+      "sourceSha256": "f0b5d5ceb8f448f0a309f64bcdff78bebaeab3a93e4fc51cce55220d1c4b4698",
+      "faceCenterX": 670,
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    },
+    "ryoku": {
+      "profile": "mascot",
+      "eye": [
+        952,
+        481
+      ],
+      "span": 994,
+      "top": 72,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        203,
+        -68,
+        1529,
+        1092
+      ],
+      "source": "characters/ryoku/assets/ryoku-selection.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        650,
+        350,
+        1250,
+        900
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "765e61ca60d0e25f5bd5f1b4b35602bbfb8378e87b6d80a0538276e592096ffe",
+      "faceCenterX": 885.5,
+      "crop": [
+        121,
+        -68,
+        1529,
+        1092
+      ],
+      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+    },
+    "cojicoji": {
+      "profile": "mascot",
+      "eye": [
+        844,
+        512
+      ],
+      "span": 979,
+      "top": 51,
+      "reviewed": "2026-11-03",
+      "referenceCrop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "source": "characters/cojicoji/assets/cojicoji-presentation-portrait.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "faceBounds": [
+        480,
+        260,
+        1210,
+        955
+      ],
+      "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "44c099852e26484755cc6b3d78fdf797c369f80109107aaaea01381a6a82fd52",
+      "faceCenterX": 768,
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+    }
+  }
+}

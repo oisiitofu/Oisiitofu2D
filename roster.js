@@ -263,7 +263,12 @@ const Roster=(()=>{
  function select(id){if(!definitionFor(id))return;if(BattlePlayers.setCharacter(id))return;if(!SquadBattle.choose(id))return;if(target==='cpu'){$roster('cpu-character').value=id;$roster('cpu-character').dispatchEvent(new Event('change'));}else{chosen=id;refreshSelection();}}
  function setTarget(value,preserveSeat=false){if(!preserveSeat)return BattlePlayers.setSelection(value==='cpu'?1:0);target=value==='cpu'&&$roster('battle-mode').value!=='online'?'cpu':'player';refreshSelection();}
  function setColor(value){if(BattlePlayers.setColor(value))return;if(target==='cpu'){$roster('color2').value=String(value);$roster('color2').dispatchEvent(new Event('change'));}else{selected=value;artReady();}}
- function thumbnailSize(img,aspect){img.sizes=Math.ceil(Math.max(img.clientWidth||140,img.clientHeight*aspect))+'px';}
+ function thumbnailSize(img,aspect){
+  img.sizes=Math.ceil(Math.max(img.clientWidth||140,img.clientHeight*aspect))+'px';
+  // Filtering can make a card much wider/taller than its authored portrait.
+  // Keep the reviewed face rather than cutting off its forehead or cheeks.
+  if(img.clientWidth&&img.clientHeight){const ratio=img.clientWidth/img.clientHeight,contain=(ratio<1.2||ratio>1.8)&&(ratio>aspect*1.08||ratio<aspect/1.08);img.style.objectFit=contain?'contain':'';img.style.objectPosition=contain?'50% 100%':'';}
+ }
  function artReady(){
   const id=activeId(),color=activeColor(),d=definitionFor(id),url=id==='random'?randomPortrait:ArtLoader.portrait(id,color,d.pose,true),portrait=document.querySelector('#selected-portrait');if(url&&portrait.getAttribute('src')!==url)portrait.src=url;
   for(const d of definitions){

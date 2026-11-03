@@ -35,7 +35,16 @@ async function save(name,data,webp=false){let bytes=Buffer.from(data.split(',')[
   if(manifest.version!==1)throw Error('Cannot incrementally bake an incompatible manifest');
   for(const id of requested||ids){
    const entry=await page.evaluate(async ({id,portraitsOnly,presentationOnly,selectionSource})=>{
-    if(presentationOnly){if(!selectionSource)throw Error('Missing dedicated portrait source');const image=new Image();image.src=selectionSource.source;await image.decode();return{presentationFocus:((selectionSource.crop?.[0]||0)+(selectionSource.crop?.[2]||image.width)/2)/image.width,presentationPortraits:Array.from({length:5},(_,color)=>(()=>{const c=document.createElement('canvas');c.width=image.width;c.height=image.height;c.getContext('2d').drawImage(ArtLoader.tint(image,id,color),0,0);return c.toDataURL();})())};}
+    if(presentationOnly){
+     if(!selectionSource)throw Error('Missing dedicated portrait source');
+     const image=new Image();image.src=selectionSource.presentationSource||selectionSource.source;await image.decode();
+     return{presentationFocus:selectionSource.presentationFocus??(selectionSource.presentationCrop ? .5 : ((selectionSource.crop?.[0]||0)+(selectionSource.crop?.[2]||image.width)/2)/image.width),presentationPortraits:Array.from({length:5},(_,color)=>(()=>{const [px,py,pw,ph]=selectionSource.presentationCrop||[0,0,image.width,image.height],c=document.createElement('canvas');c.width=pw;c.height=ph;c.getContext('2d').drawImage(ArtLoader.tint(image,id,color),-px,-py);return c.toDataURL();})())};
+    }
+    if(portraitsOnly&&selectionSource){
+     const image=new Image();image.src=selectionSource.source;await image.decode();const crop=selectionSource.crop||[0,0,image.width,image.height], [x,y,w,h]=crop;
+     const selectionPortraits=Array.from({length:5},(_,color)=>{const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(ArtLoader.tint(image,id,color),-x,-y);return c.toDataURL();});
+     return{selectionPortraits,selectionCrop:crop,selectionKind:'dedicated',selectionSource:selectionSource.source};
+    }
     if(ArtLoader.enabled&&!await ArtLoader.load(id)){if(id==='dragoon')await loadRaw();else await loadIsaacArt(id);}
     const art=characterArt[id],items=[...art.frames,...(art.effects||[])];
     const pose=Roster.definitions.find(d=>d.id===id).pose;
@@ -49,8 +58,11 @@ async function save(name,data,webp=false){let bytes=Buffer.from(data.split(',')[
       const tinted=ArtLoader.tint(image,id,color),canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;
       canvas.getContext('2d').drawImage(tinted,-x,-y);return canvas.toDataURL();
      });
-     if(selectionSource.presentation)selectionMetadata.presentationFocus=(x+w/2)/image.width;
-     if(selectionSource.presentation)selectionMetadata.presentationPortraits=Array.from({length:5},(_,color)=>(()=>{const c=document.createElement('canvas');c.width=image.width;c.height=image.height;c.getContext('2d').drawImage(ArtLoader.tint(image,id,color),0,0);return c.toDataURL();})());
+     if(selectionSource.presentation||selectionSource.presentationCrop){
+      const victory=new Image();victory.src=selectionSource.presentationSource||selectionSource.source;await victory.decode();
+      selectionMetadata.presentationFocus=selectionSource.presentationFocus??(selectionSource.presentationCrop ? .5 : (x+w/2)/victory.width);
+      selectionMetadata.presentationPortraits=Array.from({length:5},(_,color)=>(()=>{const [px,py,pw,ph]=selectionSource.presentationCrop||[0,0,victory.width,victory.height],c=document.createElement('canvas');c.width=pw;c.height=ph;c.getContext('2d').drawImage(ArtLoader.tint(victory,id,color),-px,-py);return c.toDataURL();})());
+     }
      selectionMetadata={...selectionMetadata,selectionKind:'dedicated',selectionSource:selectionSource.source};
     }else{
      selectionPortraits=art.tints.map(v=>ArtLoader.portraitCanvas(v[pose],id).toDataURL());
@@ -88,7 +100,7 @@ async function save(name,data,webp=false){let bytes=Buffer.from(data.split(',')[
    if(presentationPortraits)info.presentationPortraits=await Promise.all(presentationPortraits.map((data,n)=>save(id+'-presentation-'+n,data,true)));
    if(presentationOnly){Object.assign(manifest.characters[id],info);console.log('Baked '+id+': presentation portraits');continue;}
    const selectionUrls=await Promise.all(selectionPortraits.map((data,n)=>save(id+'-selection-'+n,data,!!info.selectionSource)));
-   if(portraitsOnly){Object.assign(manifest.characters[id],info,{selectionPortraits:selectionUrls});manifest.characters[id].selectionThumbnails=await bakeThumbnails(root,id,manifest.characters[id]);console.log('Baked '+id+': selection portraits');continue;}
+   if(portraitsOnly){const previous=manifest.characters[id];info.presentationPortraits=previous.presentationPortraits||previous.selectionPortraits;info.presentationFocus=previous.presentationFocus??.5;Object.assign(previous,info,{selectionPortraits:selectionUrls});manifest.characters[id].selectionThumbnails=await bakeThumbnails(root,id,manifest.characters[id]);console.log('Baked '+id+': selection portraits');continue;}
    info.image=await save(id+'-atlas',png,true);
    info.portraits=await Promise.all(portraits.map((data,n)=>save(id+'-portrait-'+n,data)));
    info.selectionPortraits=selectionUrls;
