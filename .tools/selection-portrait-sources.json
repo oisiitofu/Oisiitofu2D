@@ -142,22 +142,30 @@
   "roxas": {
     "source": "characters/roxas/assets/roxas-selection.png",
     "crop": [
+      128,
+      40,
+      1280,
+      914
+    ],
+    "mode": "built-in imagegen",
+    "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-a6faf2a6-75f3-4dac-9460-ae7047a662ed.png",
+    "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art. Input image 1 is identity, palette and costume reference, not an image to upscale. Subject: Roxas / ロクサス from Kingdom Hearts. Match reference's blonde spiky hair, youthful face and vivid blue eyes, black hooded Organization XIII coat with high neckline, silver zipper and twin silver chain details. Confident gentle expression. Head and upper chest only; no keyblade. Composition: landscape 3:2, large centered face and head, three-quarter angle slightly toward viewer's right, face readily readable in a tiny roster card. Head occupies 70% of image height, small top margin with complete hair/ears/hat, upper chest cut at bottom. Polished detailed anime game illustration, crisp outlines and fine shading, at least reference quality. True transparent background, clean silhouette, no ambient glow or backdrop. No legs or full-body, extra characters, lettering, logos, borders, scenery or watermarks.",
+    "presentationCrop": [
       51,
       0,
       1434,
       1024
     ],
-    "mode": "built-in imagegen",
-    "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-a6faf2a6-75f3-4dac-9460-ae7047a662ed.png",
-    "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art. Input image 1 is identity, palette and costume reference, not an image to upscale. Subject: Roxas / ロクサス from Kingdom Hearts. Match reference's blonde spiky hair, youthful face and vivid blue eyes, black hooded Organization XIII coat with high neckline, silver zipper and twin silver chain details. Confident gentle expression. Head and upper chest only; no keyblade. Composition: landscape 3:2, large centered face and head, three-quarter angle slightly toward viewer's right, face readily readable in a tiny roster card. Head occupies 70% of image height, small top margin with complete hair/ears/hat, upper chest cut at bottom. Polished detailed anime game illustration, crisp outlines and fine shading, at least reference quality. True transparent background, clean silhouette, no ambient glow or backdrop. No legs or full-body, extra characters, lettering, logos, borders, scenery or watermarks."
+    "presentationFocus": 0.5,
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "twob": {
     "source": "characters/twob/assets/twob-selection.png",
     "crop": [
-      159,
-      120,
-      1218,
-      870
+      208,
+      145,
+      1120,
+      800
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-6a8fa459-0e65-4a13-8728-76825c5e8f64.png",
@@ -1215,10 +1223,10 @@
   "kiryu": {
     "source": "characters/kiryu/assets/kiryu-selection.png",
     "crop": [
-      150,
-      0,
-      1120,
-      800
+      220,
+      85,
+      980,
+      700
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/kiryu-prompts.json",
@@ -1576,10 +1584,10 @@
   "rocbouquet": {
     "source": "characters/rocbouquet/assets/rocbouquet-selection-framed-v3.png",
     "crop": [
-      212,
-      224,
-      1112,
-      794
+      143,
+      131,
+      1250,
+      893
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/rocbouquet-prompts-final.json",
@@ -2407,10 +2415,10 @@
   "riesz": {
     "source": "characters/riesz/assets/riesz-selection-closeup.png",
     "crop": [
-      312,
-      162,
-      912,
-      651
+      251,
+      135,
+      1034,
+      739
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
@@ -2481,10 +2489,10 @@
   "miyabi": {
     "source": "characters/miyabi/assets/miyabi-selection.png",
     "crop": [
-      50,
-      0,
-      1436,
-      1024
+      163,
+      160,
+      1210,
+      864
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
@@ -2869,10 +2877,10 @@
   "tidus": {
     "source": "characters/tidus/assets/tidus-selection-final.png",
     "crop": [
-      0,
-      0,
-      1374,
-      981
+      87,
+      104,
+      1200,
+      857
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
@@ -3015,10 +3023,10 @@
   "sam": {
     "source": "characters/sam/assets/sam-selection.png",
     "crop": [
-      87,
-      0,
-      1200,
-      857
+      142,
+      35,
+      1090,
+      779
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
@@ -3144,10 +3152,10 @@
   "nahobino": {
     "source": "characters/nahobino/assets/nahobino-selection.png",
     "crop": [
-      210,
+      128,
       0,
-      1116,
-      797
+      1280,
+      914
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
@@ -3568,10 +3576,10 @@
   "aloy": {
     "source": "characters/aloy/assets/aloy-selection.png",
     "crop": [
-      313,
-      75,
-      910,
-      650
+      340,
+      131,
+      856,
+      611
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
