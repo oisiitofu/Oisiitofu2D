@@ -2,7 +2,7 @@
   "dragoon": {
     "source": "characters/dragoon/assets/dragoon-selection.png",
     "crop": [
-      267,
+      167,
       99,
       1203,
       859
@@ -17,15 +17,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "isaac": {
     "source": "characters/isaac/assets/isaac-selection.png",
     "crop": [
-      492,
-      111,
-      955,
-      682
+      208,
+      58,
+      1120,
+      800
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-593f25ac-92b5-49d0-a67a-44d33431432c.png",
@@ -37,12 +37,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "ulgrim": {
     "source": "characters/ulgrim/assets/ulgrim-selection.png",
     "crop": [
-      318,
+      224,
       47,
       1088,
       777
@@ -57,12 +57,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "chiikawa": {
     "source": "characters/chiikawa/assets/chiikawa-selection.png",
     "crop": [
-      -26,
+      51,
       0,
       1434,
       1024
@@ -77,12 +77,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "chocobo": {
     "source": "characters/chocobo/assets/chocobo-selection.png",
     "crop": [
-      323,
+      51,
       0,
       1434,
       1024
@@ -97,12 +97,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "monokuma": {
     "source": "characters/monokuma/assets/monokuma-selection.png",
     "crop": [
-      -19,
+      51,
       0,
       1434,
       1024
@@ -117,15 +117,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "riki": {
     "source": "characters/riki/assets/riki-selection.png",
     "crop": [
-      252,
-      0,
-      1434,
-      1024
+      202,
+      97,
+      1132,
+      809
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-5fe2595b-6bbd-407a-ae37-9ad8ad91e0ab.png",
@@ -137,7 +137,7 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "roxas": {
     "source": "characters/roxas/assets/roxas-selection.png",
@@ -154,7 +154,7 @@
   "twob": {
     "source": "characters/twob/assets/twob-selection.png",
     "crop": [
-      278,
+      159,
       120,
       1218,
       870
@@ -169,15 +169,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "okami": {
     "source": "characters/okami/assets/okami-selection.png",
     "crop": [
-      108,
-      0,
-      1434,
-      1024
+      73,
+      14,
+      1390,
+      993
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-2fd315bc-5403-4d20-b458-1ed99677bb6a.png",
@@ -189,12 +189,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "gundam": {
     "source": "characters/gundam/assets/gundam-selection.png",
     "crop": [
-      252,
+      51,
       0,
       1434,
       1024
@@ -209,15 +209,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "vivi": {
     "source": "characters/vivi/assets/vivi-selection.png",
     "crop": [
-      335,
-      204,
+      193,
+      203,
       1150,
-      820
+      821
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-9bbcfd6f-34e9-4619-b709-1df118fa12e7.png",
@@ -229,15 +229,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "zero": {
     "source": "characters/zero/assets/zero-selection.png",
     "crop": [
-      80,
-      0,
-      1434,
-      1024
+      185,
+      86,
+      1167,
+      834
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-474cf53f-3b76-41c1-b437-6e9294a31de6.png",
@@ -249,15 +249,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "rin": {
     "source": "characters/rin/assets/rin-selection.png",
     "crop": [
-      397,
+      247,
       61,
       1042,
-      745
+      744
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-68d95860-c9ba-415c-bfdf-a1521aa6a702.png",
@@ -269,7 +269,7 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "nia": {
     "source": "characters/nia/assets/nia-selection.png",
@@ -286,10 +286,10 @@
   "lightning": {
     "source": "characters/lightning/assets/lightning-selection.png",
     "crop": [
-      405,
-      103,
-      1250,
-      894
+      80,
+      41,
+      1376,
+      983
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-0ab1948b-a923-4aa1-b729-04770310bee1.png",
@@ -301,13 +301,13 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "colette": {
     "source": "characters/colette/assets/colette-selection.png",
     "crop": [
-      388,
-      -82,
+      159,
+      0,
       1218,
       870
     ],
@@ -321,15 +321,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "rean": {
     "source": "characters/rean/assets/rean-selection.png",
     "crop": [
-      418,
-      48,
-      1044,
-      746
+      158,
+      0,
+      1220,
+      871
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-1d1aad78-aba7-42d0-a449-2bf6dea0a4b8.png",
@@ -341,15 +341,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "estelle": {
     "source": "characters/estelle/assets/estelle-selection.png",
     "crop": [
       180,
-      0,
-      1434,
-      1024
+      83,
+      1176,
+      840
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-7f8acab6-b829-4cfd-a0ee-dfa02bc9d6f4.png",
@@ -361,15 +361,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "noctis": {
     "source": "characters/noctis/assets/noctis-selection.png",
     "crop": [
-      428,
-      162,
-      912,
-      652
+      258,
+      127,
+      1020,
+      729
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-ae9fd304-ffe9-46b0-843d-b39bb95694e9.png",
@@ -381,15 +381,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "clive": {
     "source": "characters/clive/assets/clive-selection.png",
     "crop": [
-      498,
-      101,
-      955,
-      682
+      238,
+      67,
+      1060,
+      757
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-9b1f9f4d-edd2-425f-84c7-c92a63c69180.png",
@@ -401,12 +401,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "makoto": {
     "source": "characters/makoto/assets/makoto-selection.png",
     "crop": [
-      329,
+      159,
       72,
       1218,
       870
@@ -421,15 +421,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "neku": {
     "source": "characters/neku/assets/neku-selection-framed-v3.png",
     "crop": [
       27,
-      36,
+      0,
       1482,
-      988
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-c42c9b00-fb0b-4edb-9b54-3326e305c855.png",
@@ -441,13 +441,13 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/neku/assets/neku-selection.png"
   },
   "narukami": {
     "source": "characters/narukami/assets/narukami-selection.png",
     "crop": [
-      352,
+      203,
       72,
       1130,
       807
@@ -462,24 +462,32 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "naegi": {
     "source": "characters/naegi/assets/naegi-selection.png",
     "crop": [
+      180,
+      83,
+      1176,
+      840
+    ],
+    "mode": "built-in imagegen",
+    "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-cd4d5f6b-966d-4716-891a-cae2007ce222.png",
+    "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Makoto Naegi / 苗木 誠 from Danganronpa. Match messy ash-brown hair with one distinctive thin upward ahoge, soft green-gray eyes, young male face, black jacket over an olive-green hoodie with red drawcord and zipper accents. Gentle determined smile, head and upper chest only, no props. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks.",
+    "presentationCrop": [
       51,
       0,
       1434,
       1024
     ],
-    "mode": "built-in imagegen",
-    "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-cd4d5f6b-966d-4716-891a-cae2007ce222.png",
-    "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: Makoto Naegi / 苗木 誠 from Danganronpa. Match messy ash-brown hair with one distinctive thin upward ahoge, soft green-gray eyes, young male face, black jacket over an olive-green hoodie with red drawcord and zipper accents. Gentle determined smile, head and upper chest only, no props. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
+    "presentationFocus": 0.5,
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "rex": {
     "source": "characters/rex/assets/rex-selection.png",
     "crop": [
-      280,
+      182,
       47,
       1173,
       838
@@ -494,15 +502,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "luke": {
     "source": "characters/luke/assets/luke-selection-framed-v3.png",
     "crop": [
-      50,
-      5,
+      4,
+      0,
       1529,
-      1019
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-f36e4181-09bd-4096-ba40-7243139702f0.png",
@@ -514,13 +522,13 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/luke/assets/luke-selection.png"
   },
   "will": {
     "source": "characters/will/assets/will-selection.png",
     "crop": [
-      239,
+      182,
       76,
       1173,
       838
@@ -535,15 +543,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "kosmos": {
     "source": "characters/kosmos/assets/kosmos-selection.png",
     "crop": [
-      383,
+      247,
       52,
       1042,
-      745
+      744
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-097cd60b-dd48-4c0d-8eca-d3a1621a53e5.png",
@@ -555,12 +563,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "fayt": {
     "source": "characters/fayt/assets/fayt-selection.png",
     "crop": [
-      274,
+      159,
       43,
       1218,
       870
@@ -575,15 +583,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "emma": {
     "source": "characters/emma/assets/emma-selection-framed-v3.png",
     "crop": [
-      257,
-      177,
+      165,
+      151,
       1206,
-      804
+      861
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-a82cd5fe-e042-4e0a-a5a5-2696f80bb056.png",
@@ -595,13 +603,13 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/emma/assets/emma-selection.png"
   },
   "ryza": {
     "source": "characters/ryza/assets/ryza-selection.png",
     "crop": [
-      271,
+      159,
       53,
       1218,
       870
@@ -616,12 +624,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "noah": {
     "source": "characters/noah/assets/noah-selection.png",
     "crop": [
-      323,
+      182,
       76,
       1173,
       838
@@ -636,12 +644,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "midna": {
     "source": "characters/midna/assets/midna-selection.png",
     "crop": [
-      323,
+      51,
       0,
       1434,
       1024
@@ -656,12 +664,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "bomberman": {
     "source": "characters/bomberman/assets/bomberman-selection.png",
     "crop": [
-      156,
+      51,
       0,
       1434,
       1024
@@ -676,12 +684,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "sans": {
     "source": "characters/sans/assets/sans-selection.png",
     "crop": [
-      121,
+      51,
       0,
       1434,
       1024
@@ -696,15 +704,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "lloyd": {
     "source": "characters/lloyd/assets/lloyd-selection-framed-v3.png",
     "crop": [
-      50,
-      5,
+      4,
+      0,
       1529,
-      1019
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-e20809aa-564b-4f09-ac57-9e069ba53338.png",
@@ -716,13 +724,13 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/lloyd/assets/lloyd-selection.png"
   },
   "shiren": {
     "source": "characters/shiren/assets/shiren-selection.png",
     "crop": [
-      209,
+      51,
       0,
       1434,
       1024
@@ -737,7 +745,7 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "pokoa": {
     "source": "characters/pokoa/assets/pokoa-selection.png",
@@ -749,7 +757,15 @@
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-2d591939-6f60-410c-9bf8-d39ea269ce84.png",
-    "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: ぽこあメタモン / Pokoa as depicted in reference. Preserve the unusual simplified cartoon face: tiny black dot eyes, broad flat red smiling mouth, brown floppy shoulder-length hair with oversized sweeping bangs, white rounded cap with purple and yellow trim, purple short-sleeved hoodie with white drawstrings, yellow backpack straps. Cheerful portrait, head and upper chest only. Keep simplified face, do not turn it into a realistic face, no companion. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks."
+    "prompt": "Use case: stylized-concept. Asset type: dedicated fighting-game character selection portrait. Create fresh high-resolution portrait art faithfully matching image 1 as identity, costume and palette reference, not an image to upscale. Subject: ぽこあメタモン / Pokoa as depicted in reference. Preserve the unusual simplified cartoon face: tiny black dot eyes, broad flat red smiling mouth, brown floppy shoulder-length hair with oversized sweeping bangs, white rounded cap with purple and yellow trim, purple short-sleeved hoodie with white drawstrings, yellow backpack straps. Cheerful portrait, head and upper chest only. Keep simplified face, do not turn it into a realistic face, no companion. Composition: landscape 3:2, very large centered face and head in three-quarter view slightly right; face immediately readable in tiny roster tile. Head fills 70% of height with small top margin, shoulders and upper chest cut at bottom. Premium detailed anime game illustration, crisp clean outlines and polished cel shading. True transparent background, clean silhouette with no ambient glow or backdrop. No legs/full-body, extra characters, lettering, logos, borders, scenery or watermarks.",
+    "presentationCrop": [
+      51,
+      0,
+      1434,
+      1024
+    ],
+    "presentationFocus": 0.5,
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "hunter": {
     "source": "characters/hunter/assets/hunter-selection.png",
@@ -766,7 +782,7 @@
   "adol": {
     "source": "characters/adol/assets/adol-selection.png",
     "crop": [
-      479,
+      268,
       57,
       1000,
       714
@@ -781,12 +797,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "terry": {
     "source": "characters/terry/assets/terry-selection.png",
     "crop": [
-      266,
+      51,
       0,
       1434,
       1024
@@ -801,15 +817,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "valkyrie": {
     "source": "characters/valkyrie/assets/valkyrie-selection.png",
     "crop": [
-      475,
-      57,
-      1088,
-      777
+      178,
+      27,
+      1180,
+      843
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-5c4887ba-575a-4c8c-ba3b-8b0c6f62ef79.png",
@@ -821,15 +837,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "agumon": {
     "source": "characters/agumon/assets/agumon-selection.png",
     "crop": [
-      266,
-      -135,
+      51,
+      0,
       1434,
-      1024
+      960
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-fa4ef7b6-d531-442f-ba48-d7a05370f96c.png",
@@ -841,12 +857,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "pawapuro": {
     "source": "characters/pawapuro/assets/pawapuro-selection.png",
     "crop": [
-      211,
+      51,
       0,
       1434,
       1024
@@ -861,7 +877,7 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "headmaster": {
     "source": "characters/headmaster/assets/headmaster-selection.png",
@@ -878,10 +894,10 @@
   "sakuna": {
     "source": "characters/sakuna/assets/sakuna-selection-framed-v3.png",
     "crop": [
-      35,
-      5,
+      4,
+      0,
       1529,
-      1019
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-1318a6b6-b48a-4dbc-b8c7-cd519e3e6ed8.png",
@@ -893,16 +909,16 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/sakuna/assets/sakuna-selection.png"
   },
   "haseo": {
     "source": "characters/haseo/assets/haseo-selection-framed-v3.png",
     "crop": [
       96,
-      127,
+      63,
       1345,
-      897
+      961
     ],
     "mode": "built-in imagegen",
     "original": "see .tools/haseo-design-generation.json",
@@ -913,13 +929,13 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/haseo/assets/haseo-selection.png"
   },
   "terrarian": {
     "source": "characters/terrarian/assets/terrarian-selection.png",
     "crop": [
-      165,
+      51,
       0,
       1434,
       1024
@@ -934,7 +950,7 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "horse": {
     "source": "characters/horse/assets/horse-selection.png",
@@ -951,7 +967,7 @@
   "chef": {
     "source": "characters/chef/assets/chef-selection.png",
     "crop": [
-      80,
+      51,
       0,
       1434,
       1024
@@ -966,12 +982,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "akira": {
     "source": "characters/akira/assets/akira-selection.png",
     "crop": [
-      310,
+      224,
       86,
       1088,
       777
@@ -986,12 +1002,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "morphie": {
     "source": "characters/morphie/assets/morphie-selection.png",
     "crop": [
-      160,
+      51,
       0,
       1434,
       1024
@@ -1006,15 +1022,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "fei": {
     "source": "characters/fei/assets/fei-selection.png",
     "crop": [
-      555,
-      -6,
-      1042,
-      745
+      178,
+      0,
+      1180,
+      843
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-76531ee1-6c59-4dbd-9c9b-3596e509489c.png",
@@ -1026,7 +1042,7 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "human": {
     "source": "characters/human/assets/human-selection.png",
@@ -1043,7 +1059,7 @@
   "bayleef": {
     "source": "characters/bayleef/assets/bayleef-selection.png",
     "crop": [
-      395,
+      51,
       0,
       1434,
       1024
@@ -1058,15 +1074,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "layton": {
     "source": "characters/layton/assets/layton-selection-framed-v3.png",
     "crop": [
-      -95,
-      2,
-      1529,
-      1019
+      141,
+      67,
+      1254,
+      896
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-dd057298-7635-42b7-8517-73525c79df4f.png",
@@ -1078,19 +1094,19 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "dante": {
     "source": "characters/dante/assets/dante-selection.png",
     "crop": [
-      362,
+      180,
       0,
       1176,
       840
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-3f2889b3-28fa-4dc2-b909-495919e00628.png",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       303,
       0,
@@ -1102,14 +1118,14 @@
   "leon": {
     "source": "characters/leon/assets/leon-selection.png",
     "crop": [
-      286,
+      159,
       72,
       1218,
       870
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-09b66d6f-8bd8-427c-9f59-8b6ec1bf33ef.png",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       51,
       0,
@@ -1121,14 +1137,14 @@
   "tifa": {
     "source": "characters/tifa/assets/tifa-selection-framed-v3.png",
     "crop": [
-      280,
-      -5,
+      132,
+      0,
       1273,
-      849
+      909
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/tifa-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       51,
       0,
@@ -1141,14 +1157,14 @@
   "zidane": {
     "source": "characters/zidane/assets/zidane-selection.png",
     "crop": [
-      -12,
       0,
-      1527,
-      1091
+      27,
+      1442,
+      1030
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/zidane-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       -43,
       0,
@@ -1160,14 +1176,14 @@
   "yuffie": {
     "source": "characters/yuffie/assets/yuffie-selection.png",
     "crop": [
-      105,
-      89,
-      1373,
-      981
+      0,
+      109,
+      1312,
+      937
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/yuffie-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       -183,
       0,
@@ -1179,14 +1195,14 @@
   "vincent": {
     "source": "characters/vincent/assets/vincent-selection-framed-v3.png",
     "crop": [
-      327,
-      171,
+      235,
+      148,
       1067,
-      711
+      762
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/vincent-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       140,
       0,
@@ -1199,14 +1215,14 @@
   "kiryu": {
     "source": "characters/kiryu/assets/kiryu-selection.png",
     "crop": [
-      257,
+      150,
       0,
       1120,
       800
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/kiryu-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       140,
       0,
@@ -1218,14 +1234,14 @@
   "crash": {
     "source": "characters/crash/assets/crash-selection.png",
     "crop": [
-      125,
+      86,
       0,
       1249,
       892
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/crash-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       100,
       0,
@@ -1237,14 +1253,14 @@
   "charlotta": {
     "source": "characters/charlotta/assets/charlotta-selection-framed-v3.png",
     "crop": [
-      19,
-      5,
+      4,
+      0,
       1529,
-      1019
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/charlotta-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       249,
       20,
@@ -1257,14 +1273,14 @@
   "ryofu": {
     "source": "characters/ryofu/assets/ryofu-selection-framed-v3.png",
     "crop": [
-      142,
-      67,
+      50,
+      0,
       1436,
-      957
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/ryofu-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       310,
       15,
@@ -1296,14 +1312,14 @@
   "piposaru": {
     "source": "characters/piposaru/assets/piposaru-selection.png",
     "crop": [
-      418,
+      108,
       0,
-      1319,
-      942
+      1320,
+      943
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/piposaru-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       166,
       0,
@@ -1315,14 +1331,14 @@
   "twinbee": {
     "source": "characters/twinbee/assets/twinbee-selection.png",
     "crop": [
-      392,
-      51,
+      173,
+      55,
       1190,
       850
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/twinbee-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       302,
       51,
@@ -1334,14 +1350,14 @@
   "aruru": {
     "source": "characters/aruru/assets/aruru-selection-framed-v3.png",
     "crop": [
-      35,
-      5,
+      4,
+      0,
       1529,
-      1019
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/aruru-prompts.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       173,
       15,
@@ -1354,26 +1370,33 @@
   "maruku": {
     "source": "characters/maruku/assets/maruku-selection.png",
     "crop": [
-      94,
+      80,
       0,
       1376,
       983
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/maruku-prompts.json",
-    "framing": "head and shoulders; matched to roster 1-55"
+    "framing": "元画像の横中心を維持した選択用のズーム。",
+    "presentationCrop": [
+      94,
+      0,
+      1376,
+      983
+    ],
+    "presentationFocus": 0.5
   },
   "dietrich": {
     "source": "characters/dietrich/assets/dietrich-selection-framed-v3.png",
     "crop": [
-      142,
-      131,
-      1252,
-      835
+      0,
+      0,
+      1536,
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/dietrich-sword-final.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentation": true,
     "presentationFocus": 0.4254557291666667,
     "presentationSource": "characters/dietrich/assets/dietrich-sword-selection.png"
@@ -1381,14 +1404,14 @@
   "edf": {
     "source": "characters/edf/assets/edf-selection.png",
     "crop": [
-      235,
+      288,
       15,
       960,
       686
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/edf-prompts-final.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       245,
       15,
@@ -1400,10 +1423,10 @@
   "edelgard": {
     "source": "characters/edelgard/assets/edelgard-selection.png",
     "crop": [
-      499,
-      155,
-      833,
-      595
+      301,
+      123,
+      934,
+      667
     ],
     "mode": "built-in imagegen",
     "original": "see .tools/edelgard-design-generation.json",
@@ -1414,15 +1437,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "guile": {
     "source": "characters/guile/assets/guile-selection.png",
     "crop": [
-      476,
+      247,
       81,
       1042,
-      745
+      744
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/guile-prompts-final.json",
@@ -1433,15 +1456,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "sukapon": {
     "source": "characters/sukapon/assets/sukapon-selection.png",
     "crop": [
-      266,
-      -135,
+      51,
+      0,
       1434,
-      1024
+      960
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/sukapon-prompts-final.json",
@@ -1452,15 +1475,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "pneuma": {
     "source": "characters/pneuma/assets/pneuma-selection-framed-v3.png",
     "crop": [
       27,
-      28,
+      0,
       1482,
-      988
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/pneuma-prompts-final.json",
@@ -1471,16 +1494,16 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/pneuma/assets/pneuma-selection.png"
   },
   "arus": {
     "source": "characters/arus/assets/arus-selection.png",
     "crop": [
-      383,
-      24,
-      1086,
-      776
+      188,
+      0,
+      1160,
+      829
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/arus-prompts-final.json",
@@ -1491,12 +1514,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "knight": {
     "source": "characters/knight/assets/knight-selection.png",
     "crop": [
-      147,
+      51,
       0,
       1434,
       1024
@@ -1510,15 +1533,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "maelle": {
     "source": "characters/maelle/assets/maelle-selection.png",
     "crop": [
-      594,
+      377,
       81,
       782,
-      558
+      559
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/maelle-prompts-final.json",
@@ -1529,7 +1552,7 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "sumino": {
     "source": "characters/sumino/assets/sumino-selection.png",
@@ -1553,10 +1576,10 @@
   "rocbouquet": {
     "source": "characters/rocbouquet/assets/rocbouquet-selection-framed-v3.png",
     "crop": [
-      258,
-      248,
+      212,
+      224,
       1112,
-      741
+      794
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/rocbouquet-prompts-final.json",
@@ -1567,13 +1590,13 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/rocbouquet/assets/rocbouquet-selection.png"
   },
   "frog": {
     "source": "characters/frog/assets/frog-selection.png",
     "crop": [
-      223,
+      51,
       0,
       1434,
       1024
@@ -1587,12 +1610,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "tressa": {
     "source": "characters/tressa/assets/tressa-selection.png",
     "crop": [
-      223,
+      51,
       0,
       1434,
       1024
@@ -1606,15 +1629,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "eve": {
     "source": "characters/eve/assets/eve-selection-framed-v3.png",
     "crop": [
-      142,
-      127,
+      96,
+      63,
       1345,
-      897
+      961
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/eve-prompts-final.json",
@@ -1625,20 +1648,20 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/eve/assets/eve-selection.png"
   },
   "odio": {
     "source": "characters/odio/assets/odio-selection-framed-v3.png",
     "crop": [
       142,
-      189,
+      130,
       1252,
-      835
+      894
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/odio-prompts-final.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentation": true,
     "presentationFocus": 0.5338541666666666,
     "presentationSource": "characters/odio/assets/odio-selection.png"
@@ -1646,14 +1669,14 @@
   "laharl": {
     "source": "characters/laharl/assets/laharl-selection-framed-v3.png",
     "crop": [
-      58,
-      36,
+      27,
+      0,
       1482,
-      988
+      1024
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/laharl-prompts-final.json",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       420,
       80,
@@ -1666,18 +1689,26 @@
   "deemo": {
     "source": "characters/deemo/assets/deemo-selection.png",
     "crop": [
+      221,
+      107,
+      1095,
+      782
+    ],
+    "mode": "built-in imagegen",
+    "original": "built-in imagegen; see .tools/deemo-prompts-final.json",
+    "presentationCrop": [
       51,
       0,
       1434,
       1024
     ],
-    "mode": "built-in imagegen",
-    "original": "built-in imagegen; see .tools/deemo-prompts-final.json"
+    "presentationFocus": 0.5,
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "kasane": {
     "source": "characters/kasane/assets/kasane-selection.png",
     "crop": [
-      211,
+      182,
       86,
       1173,
       838
@@ -1691,15 +1722,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "shadow": {
     "source": "characters/shadow/assets/shadow-selection.png",
     "crop": [
-      194,
-      0,
-      1434,
-      1024
+      168,
+      148,
+      1200,
+      857
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/shadow-prompts-final.json",
@@ -1710,15 +1741,15 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "saki": {
     "source": "characters/saki/assets/saki-selection-framed-v3.png",
     "crop": [
-      204,
-      113,
+      97,
+      65,
       1342,
-      895
+      959
     ],
     "mode": "built-in imagegen",
     "original": "built-in imagegen; see .tools/saki-prompts-final.json",
@@ -1729,13 +1760,13 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/saki/assets/saki-selection.png"
   },
   "aerith": {
     "source": "characters/aerith/assets/aerith-selection.png",
     "crop": [
-      513,
+      268,
       76,
       1000,
       714
@@ -1749,12 +1780,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "doshin": {
     "source": "characters/doshin/assets/doshin-selection.png",
     "crop": [
-      460,
+      330,
       237,
       789,
       564
@@ -1768,12 +1799,12 @@
       1034
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "moogle": {
     "source": "characters/moogle/assets/moogle-selection.png",
     "crop": [
-      95,
+      0,
       205,
       1347,
       962
@@ -1787,7 +1818,7 @@
       962
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "greymon": {
     "source": "characters/greymon/assets/greymon-selection.png",
@@ -1855,7 +1886,7 @@
   "shizuna": {
     "source": "characters/shizuna/assets/shizuna-selection.png",
     "crop": [
-      450,
+      356,
       77,
       824,
       589
@@ -1869,12 +1900,12 @@
       1024
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "hanajs": {
     "source": "characters/hanajs/assets/hanajs-selection.png",
     "crop": [
-      247,
+      161,
       121,
       1162,
       830
@@ -1888,7 +1919,7 @@
       1060
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "hanajk": {
     "source": "characters/hanajk/assets/hanajk-selection.png",
@@ -1940,7 +1971,7 @@
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of CUSTOM ROBOのレイ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Compact red, blue, white robot with red spiked helmet and swept red fins, sharp yellow V-shaped crest, narrow red mechanical eyes, white mechanical face mask, blue shoulder armor. NOT a human or an alternative Gundam. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -1954,13 +1985,13 @@
   "alain": {
     "source": "characters/alain/assets/alain-selection.png",
     "crop": [
-      340,
+      278,
       85,
       980,
       700
     ],
     "mode": "existing approved high-resolution portrait",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       350,
       -20,
@@ -1972,13 +2003,13 @@
   "hinako": {
     "source": "characters/hinako/assets/hinako-presentation-portrait.png",
     "crop": [
-      177,
+      259,
       63,
       1018,
       727
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of SILENT HILL f の深水雛子, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Japanese teenage schoolgirl, short straight black bob with warm reddish ends and wispy bangs, brown eyes, serious calm face, dark sailor school uniform with red sailor scarf and thin white collar trim. Moody detailed anime painted style, fully opaque skin, transparent background. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -2003,13 +2034,13 @@
   "megamanexe": {
     "source": "characters/megamanexe/assets/megamanexe-presentation-portrait.png",
     "crop": [
-      31,
-      0,
-      1536,
-      1024
+      146,
+      61,
+      1244,
+      889
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ロックマンエグゼ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Green-eyed boy robot with round blue helmet, yellow central forehead stripe, red circular ear discs in yellow housings, blue bodysuit, shoulder armor and red/yellow chest emblem. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -2022,13 +2053,13 @@
   "melia": {
     "source": "characters/melia/assets/melia-selection-framed-v3.png",
     "crop": [
-      385,
-      147,
+      255,
+      125,
       1027,
-      685
+      734
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ゼノブレイドのメリア, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Silver-lavender hair with fine wing-shaped feather head ornaments and blue/gold jewelry, blue eyes, regal purple and gold embroidered costume, pale skin. Keep exact existing elaborate outfit and graceful expression. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -2042,13 +2073,13 @@
   "fiora": {
     "source": "characters/fiora/assets/fiora-presentation-portrait.png",
     "crop": [
-      46,
+      0,
       0,
       1536,
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ゼノブレイドのフィオルン, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Blonde-haired blue-eyed young woman in the reference's black/silver/gold mechanical armor, silver angular ear/head machinery and rounded silver shoulder plates. Preserve the exact armored form, short tousled blonde hair and warm confident expression. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -2061,13 +2092,13 @@
   "krystal": {
     "source": "characters/krystal/assets/krystal-presentation-portrait.png",
     "crop": [
-      323,
+      142,
       6,
       1252,
       894
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of スターフォックスのクリスタル, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Anthropomorphic blue-furred vixen, white muzzle and chest fur, green eyes, long blue hair, pointed fox ears, small dark nose, purple and gold circlet and gold/blue shoulder ornament. Preserve clear fox identity and muzzle. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -2081,12 +2112,12 @@
     "source": "characters/yuri/assets/yuri-selection-framed-v3.png",
     "crop": [
       97,
-      82,
+      53,
       1342,
-      895
+      959
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of 零の不来方夕莉, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Young Japanese woman with long straight black hair and bangs, dark brown eyes, light skin, white blouse under dark waistcoat, serious gentle expression. Detailed painted anime realism. Do not add a camera in front of the face. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -2100,13 +2131,13 @@
   "hornet": {
     "source": "characters/hornet/assets/hornet-selection-closeup.png",
     "crop": [
-      199,
-      -20,
+      51,
+      0,
       1434,
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       51,
       -20,
@@ -2130,21 +2161,36 @@
   "c4621": {
     "source": "characters/c4621/assets/c4621-selection.png",
     "crop": [
+      302,
+      5,
+      650,
+      464
+    ],
+    "framing": "元画像の横中心を維持した選択用のズーム。",
+    "presentationCrop": [
       265,
       5,
       650,
       465
     ],
-    "framing": "close head and upper core, existing dedicated artwork"
+    "presentationFocus": 0.5
   },
   "malenia": {
     "source": "characters/malenia/assets/malenia-selection.png",
     "crop": [
+      299,
+      65,
+      656,
+      469
+    ],
+    "presentationCrop": [
       400,
       0,
       800,
       800
-    ]
+    ],
+    "presentationFocus": 0.5,
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "hayabusa": {
     "source": "characters/hayabusa/assets/hayabusa-selection-framed-v3.png",
@@ -2154,7 +2200,7 @@
       1536,
       1024
     ],
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       260,
       0,
@@ -2167,10 +2213,10 @@
   "klonoa": {
     "source": "characters/klonoa/assets/klonoa-selection.png",
     "crop": [
-      25,
-      0,
-      1254,
-      1254
+      125,
+      206,
+      1004,
+      717
     ],
     "presentationCrop": [
       0,
@@ -2179,7 +2225,7 @@
       1254
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "katamari": {
     "source": "characters/katamari/assets/katamari-selection-framed-v3.png",
@@ -2202,12 +2248,12 @@
   "kingbonby": {
     "source": "characters/kingbonby/assets/kingbonby-selection.png",
     "crop": [
-      346,
-      0,
-      1036,
-      740
+      202,
+      60,
+      850,
+      607
     ],
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       180,
       0,
@@ -2219,12 +2265,12 @@
   "alucard": {
     "source": "characters/alucard/assets/alucard-selection.png",
     "crop": [
-      489,
-      88,
-      509,
-      364
+      269,
+      22,
+      716,
+      511
     ],
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       240,
       0,
@@ -2236,12 +2282,12 @@
   "kurabe": {
     "source": "characters/kurabe/assets/kurabe-selection-framed-v3.png",
     "crop": [
-      81,
-      183,
+      142,
+      130,
       1252,
-      835
+      894
     ],
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       140,
       0,
@@ -2254,12 +2300,12 @@
   "battlemage": {
     "source": "characters/battlemage/assets/battlemage-selection-framed-v3.png",
     "crop": [
-      149,
-      77,
+      73,
+      30,
       1391,
-      927
+      994
     ],
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       350,
       0,
@@ -2272,7 +2318,7 @@
   "karateka": {
     "source": "characters/karateka/assets/karateka-selection.png",
     "crop": [
-      350,
+      277,
       130,
       700,
       500
@@ -2284,27 +2330,35 @@
       750
     ],
     "presentationFocus": 0.5,
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。"
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "aiai": {
     "source": "characters/aiai/assets/aiai-selection.png",
     "crop": [
       0,
+      161,
+      1254,
+      896
+    ],
+    "presentationCrop": [
+      0,
       0,
       1254,
       1254
-    ]
+    ],
+    "presentationFocus": 0.5,
+    "framing": "元画像の横中心を維持した選択用のズーム。"
   },
   "chibirobo": {
     "source": "characters/chibirobo/assets/chibirobo-selection-closeup.png",
     "crop": [
-      22,
+      51,
       0,
       1434,
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       51,
       0,
@@ -2316,13 +2370,13 @@
   "octoling": {
     "source": "characters/octoling/assets/octoling-selection-closeup.png",
     "crop": [
-      208,
+      51,
       0,
       1434,
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       51,
       0,
@@ -2334,13 +2388,13 @@
   "viridi": {
     "source": "characters/viridi/assets/viridi-selection-framed-v3.png",
     "crop": [
-      103,
-      36,
+      27,
+      0,
       1482,
-      988
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       51,
       0,
@@ -2353,13 +2407,13 @@
   "riesz": {
     "source": "characters/riesz/assets/riesz-selection-closeup.png",
     "crop": [
-      470,
+      312,
       162,
       912,
-      652
+      651
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       51,
       0,
@@ -2371,13 +2425,13 @@
   "edea": {
     "source": "characters/edea/assets/edea-selection-closeup.png",
     "crop": [
-      312,
+      203,
       82,
       1130,
       807
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       51,
       0,
@@ -2389,13 +2443,13 @@
   "dana": {
     "source": "characters/dana/assets/dana-selection-framed-v3.png",
     "crop": [
-      81,
-      67,
+      50,
+      0,
       1436,
-      957
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       51,
       0,
@@ -2408,13 +2462,13 @@
   "zero3": {
     "source": "characters/zero3/assets/zero3-selection-framed-v3.png",
     "crop": [
-      338,
-      65,
+      214,
+      41,
       1109,
-      739
+      792
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/zero3/assets/zero3-selection.png",
     "presentationCrop": [
       51,
@@ -2428,23 +2482,30 @@
     "source": "characters/miyabi/assets/miyabi-selection.png",
     "crop": [
       50,
-      90,
+      0,
       1436,
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "Original dedicated portrait; raise face per user request 2026-10-30"
+    "framing": "元画像の横中心を維持した選択用のズーム。",
+    "presentationCrop": [
+      50,
+      90,
+      1436,
+      1024
+    ],
+    "presentationFocus": 0.5
   },
   "sol": {
     "source": "characters/sol/assets/sol-selection-framed-v3.png",
     "crop": [
       97,
-      129,
+      65,
       1342,
-      895
+      959
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -2457,13 +2518,13 @@
   "rion": {
     "source": "characters/rion/assets/rion-selection.png",
     "crop": [
-      389,
+      308,
       154,
       921,
       658
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       180,
       145,
@@ -2475,13 +2536,13 @@
   "judas": {
     "source": "characters/judas/assets/judas-selection.png",
     "crop": [
-      478,
+      151,
       142,
       1235,
       882
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       290,
       0,
@@ -2493,13 +2554,13 @@
   "ash": {
     "source": "characters/ash/assets/ash-selection.png",
     "crop": [
-      304,
+      262,
       90,
       1012,
       723
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       170,
       40,
@@ -2511,24 +2572,31 @@
   "alphen": {
     "source": "characters/alphen/assets/alphen-selection.png",
     "crop": [
+      276,
+      84,
+      984,
+      703
+    ],
+    "mode": "built-in imagegen",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
+    "presentationCrop": [
       80,
       40,
       1200,
       800
     ],
-    "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "presentationFocus": 0.5
   },
   "ky": {
     "source": "characters/ky/assets/ky-selection.png",
     "crop": [
-      342,
+      280,
       212,
       976,
       697
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       170,
       110,
@@ -2552,12 +2620,12 @@
     "source": "characters/welch/assets/welch-selection-framed-v3.png",
     "crop": [
       50,
-      53,
+      0,
       1436,
-      957
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       380,
       -12,
@@ -2570,13 +2638,13 @@
   "gran": {
     "source": "characters/gran/assets/gran-selection.png",
     "crop": [
-      398,
+      348,
       70,
       840,
       600
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       390,
       70,
@@ -2588,13 +2656,13 @@
   "rena": {
     "source": "characters/rena/assets/rena-selection.png",
     "crop": [
-      120,
+      212,
       43,
       1112,
       794
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -2606,13 +2674,13 @@
   "wonder": {
     "source": "characters/wonder/assets/wonder-selection.png",
     "crop": [
-      277,
+      205,
       136,
       1127,
       805
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       100,
       0,
@@ -2624,37 +2692,44 @@
   "narmaya": {
     "source": "characters/narmaya/assets/narmaya-selection.png",
     "crop": [
-      470,
+      418,
       60,
       700,
       500
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentation": true,
     "presentationFocus": 0.5533854166666666
   },
   "billy": {
     "source": "characters/billy/assets/billy-selection.png",
     "crop": [
+      248,
+      126,
+      1040,
+      743
+    ],
+    "mode": "built-in imagegen",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
+    "presentationCrop": [
       260,
       0,
       1276,
       1024
     ],
-    "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution close head and shoulders"
+    "presentationFocus": 0.5
   },
   "ellen": {
     "source": "characters/ellen/assets/ellen-selection.png",
     "crop": [
-      213,
+      163,
       145,
       1210,
       864
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       165,
       0,
@@ -2666,13 +2741,13 @@
   "genis": {
     "source": "characters/genis/assets/genis-selection.png",
     "crop": [
-      291,
-      0,
-      1280,
-      914
+      243,
+      96,
+      1050,
+      750
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       150,
       0,
@@ -2684,13 +2759,13 @@
   "shionne": {
     "source": "characters/shionne/assets/shionne-selection.png",
     "crop": [
-      458,
+      288,
       168,
       961,
       686
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       270,
       0,
@@ -2702,13 +2777,13 @@
   "viewtifuljoe": {
     "source": "characters/viewtifuljoe/assets/viewtifuljoe-selection.png",
     "crop": [
-      257,
+      80,
       211,
       1214,
       867
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       160,
       0,
@@ -2720,13 +2795,13 @@
   "sakura": {
     "source": "characters/sakura/assets/sakura-selection-framed-v3.png",
     "crop": [
-      128,
-      129,
+      97,
+      65,
       1342,
-      895
+      959
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       150,
       0,
@@ -2739,13 +2814,13 @@
   "arthur": {
     "source": "characters/arthur/assets/arthur-selection.png",
     "crop": [
-      329,
+      128,
       0,
       1280,
       914
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       150,
       0,
@@ -2757,13 +2832,13 @@
   "onionknight": {
     "source": "characters/onionknight/assets/onionknight-selection.png",
     "crop": [
-      566,
-      213,
-      1035,
-      739
+      193,
+      176,
+      1150,
+      821
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       300,
       0,
@@ -2775,13 +2850,13 @@
   "terra": {
     "source": "characters/terra/assets/terra-selection-framed-v3.png",
     "crop": [
-      342,
-      141,
+      189,
+      116,
       1158,
-      772
+      827
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       560,
       0,
@@ -2794,13 +2869,13 @@
   "tidus": {
     "source": "characters/tidus/assets/tidus-selection-final.png",
     "crop": [
-      178,
+      0,
       0,
       1374,
       981
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -2812,13 +2887,13 @@
   "hachiware": {
     "source": "characters/hachiware/assets/hachiware-selection.png",
     "crop": [
-      -230,
+      -244,
       0,
       1800,
       1200
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -2830,13 +2905,13 @@
   "presea": {
     "source": "characters/presea/assets/presea-selection-framed-v3.png",
     "crop": [
-      348,
-      169,
+      133,
+      117,
       1270,
-      847
+      907
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       450,
       0,
@@ -2849,13 +2924,13 @@
   "zack": {
     "source": "characters/zack/assets/zack-selection.png",
     "crop": [
-      368,
+      264,
       145,
       1008,
       720
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       270,
       145,
@@ -2867,13 +2942,13 @@
   "reimu": {
     "source": "characters/reimu/assets/reimu-selection.png",
     "crop": [
-      417,
+      176,
       257,
       960,
       686
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       350,
       0,
@@ -2885,13 +2960,13 @@
   "jett": {
     "source": "characters/jett/assets/jett-selection-framed-v3.png",
     "crop": [
-      181,
-      36,
+      27,
+      0,
       1482,
-      988
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -2904,13 +2979,13 @@
   "octane": {
     "source": "characters/octane/assets/octane-selection.png",
     "crop": [
-      158,
-      0,
-      1536,
-      1024
+      200,
+      95,
+      1137,
+      812
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -2922,13 +2997,13 @@
   "parappa": {
     "source": "characters/parappa/assets/parappa-selection-v2.png",
     "crop": [
-      27,
-      162,
-      1374,
-      981
+      137,
+      250,
+      1100,
+      786
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -2940,13 +3015,13 @@
   "sam": {
     "source": "characters/sam/assets/sam-selection.png",
     "crop": [
-      244,
-      -30,
+      87,
+      0,
       1200,
       857
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -2958,13 +3033,13 @@
   "enoch": {
     "source": "characters/enoch/assets/enoch-selection-framed-v3.png",
     "crop": [
-      157,
-      127,
+      96,
+      63,
       1345,
-      897
+      961
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -2977,13 +3052,13 @@
   "astro": {
     "source": "characters/astro/assets/astro-selection-framed-v3.png",
     "crop": [
-      216,
-      -68,
+      4,
+      0,
       1529,
-      1092
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3002,7 +3077,7 @@
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3015,13 +3090,13 @@
   "django": {
     "source": "characters/django/assets/django-selection.png",
     "crop": [
-      280,
-      -68,
+      4,
+      0,
       1529,
-      1092
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3033,13 +3108,13 @@
   "etna": {
     "source": "characters/etna/assets/etna-selection.png",
     "crop": [
-      -15,
-      -48,
-      1512,
-      1080
+      0,
+      143,
+      1223,
+      874
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       -144,
       -48,
@@ -3051,13 +3126,13 @@
   "tails": {
     "source": "characters/tails/assets/tails-selection.png",
     "crop": [
-      14,
       0,
+      23,
       1448,
-      1086
+      1034
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3069,13 +3144,13 @@
   "nahobino": {
     "source": "characters/nahobino/assets/nahobino-selection.png",
     "crop": [
-      543,
+      210,
       0,
       1116,
       797
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       420,
       0,
@@ -3087,13 +3162,13 @@
   "ryoku": {
     "source": "characters/ryoku/assets/ryoku-selection.png",
     "crop": [
-      121,
-      -68,
+      4,
+      0,
       1529,
-      1092
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3105,13 +3180,13 @@
   "lip": {
     "source": "characters/lip/assets/lip-selection-framed-v3.png",
     "crop": [
-      135,
-      138,
+      104,
+      75,
       1329,
-      886
+      949
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3124,13 +3199,13 @@
   "ashley": {
     "source": "characters/ashley/assets/ashley-selection-framed-v3.png",
     "crop": [
-      115,
-      112,
+      84,
+      47,
       1368,
-      912
+      977
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationSource": "characters/ashley/assets/ashley-selection.png",
     "presentationCrop": [
       0,
@@ -3143,13 +3218,13 @@
   "veronica": {
     "source": "characters/veronica/assets/veronica-selection.png",
     "crop": [
-      126,
+      0,
       20,
       1254,
       896
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3161,13 +3236,13 @@
   "mallow": {
     "source": "characters/mallow/assets/mallow-selection-framed-v3.png",
     "crop": [
-      226,
-      -68,
+      4,
+      0,
       1529,
-      1092
+      1024
     ],
     "mode": "user-authorized game sprite crop",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "cropSource": "characters/mallow/assets/mallow-basic.png",
     "cropCell": 0,
     "presentationCrop": [
@@ -3182,13 +3257,13 @@
   "estark": {
     "source": "characters/estark/assets/estark-selection.png",
     "crop": [
-      176,
+      0,
       214,
       1254,
       896
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3200,13 +3275,13 @@
   "qbby": {
     "source": "characters/qbby/assets/qbby-selection.png",
     "crop": [
-      -225,
+      -223,
       50,
       1700,
       1133
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3218,13 +3293,13 @@
   "ringfit": {
     "source": "characters/ringfit/assets/ringfit-selection.png",
     "crop": [
-      214,
+      -3,
       0,
-      1254,
-      896
+      1260,
+      900
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3236,13 +3311,13 @@
   "elza": {
     "source": "characters/elza/assets/elza-selection.png",
     "crop": [
-      418,
-      160,
-      836,
-      597
+      167,
+      133,
+      920,
+      657
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3279,7 +3354,7 @@
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       130,
@@ -3298,7 +3373,7 @@
       1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       130,
@@ -3335,13 +3410,13 @@
   "kitten": {
     "source": "characters/kitten/assets/kitten-selection-framed-v3.png",
     "crop": [
-      142,
-      122,
+      96,
+      63,
       1345,
-      897
+      961
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of GRAVITY DAZEのキトゥン, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Young dark-tan woman with wavy shoulder-length blonde hair, red eyes, black headband, black-and-gold high-collared gravity shifter outfit and ornate gold trim. Preserve skin tone and face, confident gentle expression. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -3355,13 +3430,13 @@
   "elma": {
     "source": "characters/elma/assets/elma-presentation-portrait.png",
     "crop": [
-      354,
-      -19,
-      1206,
-      861
+      108,
+      0,
+      1320,
+      943
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ゼノブレイドクロスのエルマ, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Dark-tan woman, long flowing silver-white hair, bright blue eyes, red and black futuristic armored suit with silver details and high black collar. Calm experienced expression. Preserve reference's exact armor and skin tone. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -3374,13 +3449,13 @@
   "goemon": {
     "source": "characters/goemon/assets/goemon-presentation-portrait.png",
     "crop": [
-      75,
-      -68,
-      1529,
-      1092
+      23,
+      0,
+      1490,
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of がんばれゴエモンのゴエモン, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Bold blue spiky-haired young Japanese cartoon hero, large expressive blue eyes, red kimono with yellow trim over patterned undershirt. Upbeat determined grin. Preserve stylized youthful face and huge spiky blue hair. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -3393,13 +3468,13 @@
   "nier": {
     "source": "characters/nier/assets/nier-presentation-portrait.png",
     "crop": [
-      529,
-      94,
-      1018,
-      727
+      168,
+      36,
+      1200,
+      857
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of ニーア レプリカントのニーア, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Silver-white short tousled-haired young man, light pale eyes, black headband, dark gray ornate high-neck leather outfit with lacing and metal ornaments. Detailed Japanese fantasy anime painting, calm determined expression. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -3412,13 +3487,13 @@
   "miku": {
     "source": "characters/miku/assets/miku-selection-framed-v3.png",
     "crop": [
-      35,
-      5,
-      1529,
-      1019
+      0,
+      0,
+      1536,
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of 初音ミク, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Teal-eyed virtual singer with very long aqua twin tails, black and magenta hair ornaments/headphones, pale skin, gray sleeveless top with teal necktie and trim. Friendly energetic smile. Include top of head and twin-tail attachments. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -3432,13 +3507,13 @@
   "naruhodo": {
     "source": "characters/naruhodo/assets/naruhodo-presentation-portrait.png",
     "crop": [
-      329,
-      -80,
+      120,
+      0,
       1297,
       926
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "prompt": "Use case: stylized-concept. Create a fresh high-resolution dedicated head-and-shoulders portrait of 逆転裁判の成歩堂龍一, using the input only as the exact character identity, costume, style and palette reference. This replaces an undersized portrait in a fighting game's full-screen victory presentation. Young Japanese male defense attorney with swept-back sharply spiked black hair, thick eyebrows, blue suit, white shirt, red tie, small round gold attorney lapel pin. Confident focused expression, crisp anime game illustration. Keep the same character identity, face proportions and costume from the reference. Draw clean refined linework and newly resolved fine detail; no pixelation, artificial sharpening, blurry upscale or redesigned identity. Landscape 3:2 canvas approximately 1536x1024. Entire head including hair/ears/crest with a small top margin; centered face and both shoulders, upper chest cut by bottom edge. Three-quarter view slightly toward screen right, face immediately readable. Head occupies about 65 percent of image height, shoulders reach bottom edge, no floating isolated face. True transparent background, no scenery, text, logos, watermark, border, checkerboard or ambient backdrop. Only one character. Do not copy source raster pixels; illustrate the same approved design at high resolution.",
     "presentationCrop": [
       0,
@@ -3451,13 +3526,13 @@
   "raguna": {
     "source": "characters/raguna/assets/raguna-selection.png",
     "crop": [
-      31,
-      0,
-      1536,
-      1024
+      138,
+      56,
+      1260,
+      900
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3469,13 +3544,13 @@
   "io": {
     "source": "characters/io/assets/io-selection.png",
     "crop": [
-      233,
+      306,
       160,
       924,
       660
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentation": true,
     "presentationFocus": 0.4342447916666667
   },
@@ -3493,13 +3568,13 @@
   "aloy": {
     "source": "characters/aloy/assets/aloy-selection.png",
     "crop": [
-      512,
+      313,
       75,
       910,
       650
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       500,
       75,
@@ -3511,13 +3586,13 @@
   "quote": {
     "source": "characters/quote/assets/quote-selection.png",
     "crop": [
-      207,
+      131,
       105,
       1275,
       911
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3529,13 +3604,13 @@
   "shovelknight": {
     "source": "characters/shovelknight/assets/shovelknight-selection.png",
     "crop": [
-      187,
-      -68,
+      4,
+      0,
       1529,
-      1092
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3547,13 +3622,13 @@
   "rayman": {
     "source": "characters/rayman/assets/rayman-selection.png",
     "crop": [
-      15,
-      0,
-      1536,
-      1024
+      129,
+      50,
+      1278,
+      913
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3576,13 +3651,13 @@
   "felyne": {
     "source": "characters/felyne/assets/felyne-selection.png",
     "crop": [
-      15,
-      0,
-      1536,
-      1024
+      129,
+      50,
+      1278,
+      913
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3594,13 +3669,13 @@
   "nargacuga": {
     "source": "characters/nargacuga/assets/nargacuga-selection-framed-v3.png",
     "crop": [
-      386,
-      -68,
+      4,
+      0,
       1529,
-      1092
+      1024
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3613,13 +3688,13 @@
   "mono": {
     "source": "characters/mono/assets/mono-selection-v2.png",
     "crop": [
-      192,
+      148,
       0,
       1240,
       886
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3631,13 +3706,13 @@
   "ryuta": {
     "source": "characters/ryuta/assets/ryuta-selection-framed-v3.png",
     "crop": [
-      -36,
-      108,
+      86,
+      49,
       1365,
-      910
+      975
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       0,
       0,
@@ -3650,13 +3725,13 @@
   "nights": {
     "source": "characters/nights/assets/nights-selection.png",
     "crop": [
-      112,
-      -55,
-      1638,
-      1170
+      60,
+      13,
+      1416,
+      1011
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       -50,
       -55,
@@ -3668,13 +3743,13 @@
   "hydaelyn": {
     "source": "characters/hydaelyn/assets/hydaelyn-selection-framed-v3.png",
     "crop": [
-      211,
-      126,
+      165,
+      100,
       1206,
-      804
+      861
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentation": true,
     "presentationFocus": 0.56640625,
     "presentationSource": "characters/hydaelyn/assets/hydaelyn-selection.png"
@@ -3682,39 +3757,39 @@
   "namine": {
     "source": "characters/namine/assets/namine-selection.png",
     "crop": [
-      210,
+      102,
       105,
       1050,
       750
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentation": true,
     "presentationFocus": 0.6060606060606061
   },
   "velvet": {
     "source": "characters/velvet/assets/velvet-selection.png",
     "crop": [
-      540,
-      150,
-      840,
-      600
+      308,
+      124,
+      920,
+      657
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentation": true,
     "presentationFocus": 0.6640625
   },
   "leanne": {
     "source": "characters/leanne/assets/leanne-selection.png",
     "crop": [
-      150,
+      39,
       218,
       1176,
       840
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       150,
       45,
@@ -3726,26 +3801,26 @@
   "magus": {
     "source": "characters/magus/assets/magus-selection.png",
     "crop": [
-      479,
-      155,
-      770,
-      550
+      147,
+      94,
+      960,
+      686
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentation": true,
     "presentationFocus": 0.6698564593301436
   },
   "yuma": {
     "source": "characters/yuma/assets/yuma-selection.png",
     "crop": [
-      219,
-      325,
-      910,
-      650
+      0,
+      232,
+      1199,
+      856
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       260,
       325,
@@ -3757,13 +3832,13 @@
   "elliot": {
     "source": "characters/elliot/assets/elliot-selection.png",
     "crop": [
-      -133,
+      37,
       75,
       1180,
       843
     ],
     "mode": "built-in imagegen",
-    "framing": "顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。",
+    "framing": "元画像の横中心を維持した選択用のズーム。",
     "presentationCrop": [
       176,
       350,

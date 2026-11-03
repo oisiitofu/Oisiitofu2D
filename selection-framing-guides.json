@@ -80,13 +80,13 @@
       ],
       "sourceSha256": "bc89f3100c58c6a2221bed5032e177883d3d3a9f233311496d6ec3301d13d27f",
       "faceCenterX": 1040,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        323,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "moogle": {
       "profile": "mascot",
@@ -116,13 +116,13 @@
       ],
       "sourceSha256": "b859252712eab6e6740f21bac21e27e06f6733ab5830bd4cacc4fa26eae2c231",
       "faceCenterX": 769,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        95,
+        0,
         205,
         1347,
         962
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "onionknight": {
       "profile": "chibi",
@@ -152,13 +152,13 @@
       ],
       "sourceSha256": "7793162886483d22083086d06b9f1a6a469adb9a633a3c8e9c86931c53259cc7",
       "faceCenterX": 1084,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        566,
-        213,
-        1035,
-        739
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        193,
+        176,
+        1150,
+        821
+      ]
     },
     "terra": {
       "profile": "human",
@@ -190,13 +190,13 @@
       "sourceSha256": "c5182c893f6c240ddb47dadbba77326c2de6e0a9987f7effe62324b7b78ee9df",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 921,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        342,
-        141,
+        189,
+        116,
         1158,
-        772
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        827
+      ]
     },
     "tifa": {
       "profile": "human",
@@ -228,13 +228,13 @@
       "sourceSha256": "c9647b8ded3a4ddebfc1e1c3aa8a8eb762378be8d4e263ac93e6137f80b569e3",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 917,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        280,
-        -5,
+        132,
+        0,
         1273,
-        849
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        909
+      ]
     },
     "zack": {
       "profile": "human",
@@ -246,7 +246,7 @@
       "top": 195,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        431,
+        368,
         145,
         1008,
         720
@@ -264,13 +264,13 @@
       ],
       "sourceSha256": "7d6bd4dbd6e13c91a2e56c27d338a679647b90a9da633ef39d372872347f02ab",
       "faceCenterX": 872,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        368,
+        264,
         145,
         1008,
         720
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "aerith": {
       "profile": "human",
@@ -300,13 +300,13 @@
       ],
       "sourceSha256": "036f3842b3cdfe13fe6f657402a504d7ab80459fc2c6635be946eff6c2a6a1b2",
       "faceCenterX": 1013,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        513,
+        268,
         76,
         1000,
         714
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "yuffie": {
       "profile": "human",
@@ -336,13 +336,13 @@
       ],
       "sourceSha256": "881cdd71a9df1a1953c02d039dc9f584ff1fe6c7853b493038e615b7e61803fc",
       "faceCenterX": 792,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        105,
-        89,
-        1373,
-        981
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        0,
+        109,
+        1312,
+        937
+      ]
     },
     "vincent": {
       "profile": "human",
@@ -374,13 +374,13 @@
       "sourceSha256": "caf2ed4925ccdce828c005b6935413b94159a4477c9b7dcbf4a250a4232c0e7b",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 861,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        327,
-        171,
+        235,
+        148,
         1067,
-        711
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        762
+      ]
     },
     "zidane": {
       "profile": "human",
@@ -410,13 +410,13 @@
       ],
       "sourceSha256": "f71fd7111ac3e76ff92291fbb53371089d33f8cbeae8fe79c546ae77ea1226cf",
       "faceCenterX": 751,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        -12,
         0,
-        1527,
-        1091
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        27,
+        1442,
+        1030
+      ]
     },
     "vivi": {
       "profile": "tall",
@@ -447,13 +447,13 @@
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
       "sourceSha256": "522990825ca567832990c2890308c0459e38a4feabe887e10c63b6cbf3e134d1",
       "faceCenterX": 910,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        335,
-        204,
+        193,
+        203,
         1150,
-        820
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        821
+      ]
     },
     "tidus": {
       "profile": "human",
@@ -483,13 +483,13 @@
       ],
       "sourceSha256": "655f6ee4d92779e70c37474a8b7fd01a83c955d9e0edf3123ebcd3eb7ce350d4",
       "faceCenterX": 865,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        178,
+        0,
         0,
         1374,
         981
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "lightning": {
       "profile": "human",
@@ -519,13 +519,13 @@
       ],
       "sourceSha256": "ae7bd72aa111727005e981677595e855f85b28cccfa3c4dac933b59b3c540b57",
       "faceCenterX": 1030,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        405,
-        103,
-        1250,
-        894
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        80,
+        41,
+        1376,
+        983
+      ]
     },
     "dragoon": {
       "profile": "chibi",
@@ -555,13 +555,13 @@
       ],
       "sourceSha256": "c72a3f984b18ff8c21f181558cfb271e568ef2fce9970077bb01eeb3d1c749a4",
       "faceCenterX": 869,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        267,
+        167,
         99,
         1203,
         859
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "hydaelyn": {
       "profile": "human",
@@ -593,13 +593,13 @@
       "sourceSha256": "388d9bbf870996424be681351eeee173d99d447efe629445964fd271786e3025",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 814,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        211,
-        126,
+        165,
+        100,
         1206,
-        804
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        861
+      ]
     },
     "noctis": {
       "profile": "human",
@@ -611,7 +611,7 @@
       "top": 109,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        473,
+        428,
         162,
         912,
         652
@@ -629,13 +629,13 @@
       ],
       "sourceSha256": "a96374fd74a856896ad5f98bf4af246ae0b5749c03057d3d3da3df5eeb39cf5b",
       "faceCenterX": 884,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        428,
-        162,
-        912,
-        652
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        258,
+        127,
+        1020,
+        729
+      ]
     },
     "clive": {
       "profile": "human",
@@ -647,7 +647,7 @@
       "top": 128,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        549,
+        498,
         101,
         955,
         682
@@ -665,13 +665,13 @@
       ],
       "sourceSha256": "c9c408f5cff552db2f9d04c81f5f40cadd509a77643aa1eb21adc52e5f473ffa",
       "faceCenterX": 975.5,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        498,
-        101,
-        955,
-        682
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        238,
+        67,
+        1060,
+        757
+      ]
     },
     "terry": {
       "profile": "chibi",
@@ -701,13 +701,13 @@
       ],
       "sourceSha256": "3d4b6f48fca8651cfa9165fcfed7f7399e1db9c8e07408e60b8e27933dcd4689",
       "faceCenterX": 983,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        266,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "arus": {
       "profile": "chibi",
@@ -737,13 +737,13 @@
       ],
       "sourceSha256": "c61fb3f593f4f880622017c12994dd44871495ab722703b38cbad44f96b747a6",
       "faceCenterX": 926,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        383,
-        24,
-        1086,
-        776
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        188,
+        0,
+        1160,
+        829
+      ]
     },
     "veronica": {
       "profile": "chibi",
@@ -772,15 +772,15 @@
         864
       ],
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "9ea1b3b4aed998b8e66bfaf0aace4091385aafea920ce5a41fc13d3685d3a62d",
+      "faceCenterX": 753,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        126,
+        0,
         20,
         1254,
         896
-      ],
-      "sourceSha256": "9ea1b3b4aed998b8e66bfaf0aace4091385aafea920ce5a41fc13d3685d3a62d",
-      "faceCenterX": 753,
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "estark": {
       "profile": "tall",
@@ -810,13 +810,13 @@
       ],
       "sourceSha256": "086c2fad6b5ff67acce4fe45b848c74bc72bc0ebfea6cae796f27b8481012f02",
       "faceCenterX": 803,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        176,
+        0,
         214,
         1254,
         896
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "nier": {
       "profile": "human",
@@ -846,13 +846,13 @@
       ],
       "sourceSha256": "ccd40689a67a6ba46ff4a27dca8b001c79b1e509794527d356a562f026c51d09",
       "faceCenterX": 1038,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        529,
-        94,
-        1018,
-        727
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        168,
+        36,
+        1200,
+        857
+      ]
     },
     "twob": {
       "profile": "human",
@@ -882,13 +882,13 @@
       ],
       "sourceSha256": "a172569b4bb3c8f1ba307c83fb6feb357da5de9311ab2a9afd9d76b477defc60",
       "faceCenterX": 887,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        278,
+        159,
         120,
         1218,
         870
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "zero3": {
       "profile": "human",
@@ -920,13 +920,13 @@
       "sourceSha256": "56447edd1df8cbfe9f1f6df3c821ffbd195c2bb75cf44699be7d820b10f611b4",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 893,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        338,
-        65,
+        214,
+        41,
         1109,
-        739
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        792
+      ]
     },
     "roxas": {
       "profile": "human",
@@ -956,13 +956,13 @@
       ],
       "sourceSha256": "4f2f9f3e49c679dc94695ce6924a210e1bf4d31e4aafcc3b5a26fb6c039ac15a",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "namine": {
       "profile": "human",
@@ -992,13 +992,13 @@
       ],
       "sourceSha256": "f78dabc759051c43f88a58ab64a433828a383f709c3014953989c970fa62469e",
       "faceCenterX": 735,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        210,
+        102,
         105,
         1050,
         750
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "neku": {
       "profile": "human",
@@ -1030,13 +1030,13 @@
       "sourceSha256": "7526aced27cbde984c2897b626aaf48e990cbef77531031658bbb00fef731b97",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         27,
-        36,
+        0,
         1482,
-        988
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "riesz": {
       "profile": "human",
@@ -1066,13 +1066,13 @@
       ],
       "sourceSha256": "c5124d3c5d09b33bc9e7c6ffb1b5a643df6afb7064590e1f427e4f238cbc20cf",
       "faceCenterX": 926,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        470,
+        312,
         162,
         912,
-        652
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        651
+      ]
     },
     "rocbouquet": {
       "profile": "human",
@@ -1104,13 +1104,13 @@
       "sourceSha256": "d4dcc9e9db1c14984d0182c42ad3026be203c9846dd8ad16ed4f687a79b85819",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 814,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        258,
-        248,
+        212,
+        224,
         1112,
-        741
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        794
+      ]
     },
     "frog": {
       "profile": "mascot",
@@ -1140,13 +1140,13 @@
       ],
       "sourceSha256": "be9d60e8f04d8c719ad1428b8a33c56f212e6ec7419ebb58e01dd5474986f508",
       "faceCenterX": 940,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        223,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "magus": {
       "profile": "human",
@@ -1176,13 +1176,13 @@
       ],
       "sourceSha256": "8892dcc107ee78ac771a302c2651c53ccb95e4e28147a43b21003e5e59040845",
       "faceCenterX": 864,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        479,
-        155,
-        770,
-        550
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        147,
+        94,
+        960,
+        686
+      ]
     },
     "tressa": {
       "profile": "human",
@@ -1212,13 +1212,13 @@
       ],
       "sourceSha256": "b6608d8e4bea67ad0bea558756f671d4d5eac68366132a42160055451b9301de",
       "faceCenterX": 940,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        223,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "edea": {
       "profile": "human",
@@ -1248,13 +1248,13 @@
       ],
       "sourceSha256": "256f0393e7fe85c8ca951de63b3853f16c25d756eea931d67125511a8dbc6540",
       "faceCenterX": 877,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        312,
+        203,
         82,
         1130,
         807
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "odio": {
       "profile": "human",
@@ -1286,13 +1286,13 @@
       "sourceSha256": "5f57ea5e32aae291c5a9fcc9106d2303e60deabbc3c657a8e43f4764b3acce36",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         142,
-        189,
+        130,
         1252,
-        835
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        894
+      ]
     },
     "elliot": {
       "profile": "human",
@@ -1303,12 +1303,6 @@
       "span": 370,
       "top": 100,
       "reviewed": "2026-11-03",
-      "crop": [
-        -133,
-        75,
-        1180,
-        843
-      ],
       "note": "主人公の顔を中心とし、フェイも右側に残す。",
       "referenceCrop": [
         -133,
@@ -1329,7 +1323,13 @@
       ],
       "sourceSha256": "6c4dbb481492fb175d7b7be3f3d65d645a70b801e9c81e66fa875cad66cdaa65",
       "faceCenterX": 457,
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "crop": [
+        37,
+        75,
+        1180,
+        843
+      ]
     },
     "welch": {
       "profile": "human",
@@ -1361,13 +1361,13 @@
       "sourceSha256": "d473fae4348a34a13393cff52715ec0c3a4eabbe7a325e441bb647365721f748",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         50,
-        53,
+        0,
         1436,
-        957
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "rena": {
       "profile": "human",
@@ -1397,13 +1397,13 @@
       ],
       "sourceSha256": "8e2b554375ad0c22207d0d7ed2d194c82cd7df3dbe1d601e04b5cdf869341023",
       "faceCenterX": 676,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        120,
+        212,
         43,
         1112,
         794
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "fayt": {
       "profile": "human",
@@ -1433,13 +1433,13 @@
       ],
       "sourceSha256": "bb6915c207b23cc32d4669c82c84aebe68f31adaca0bf59a41621c704023ba65",
       "faceCenterX": 883,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        274,
+        159,
         43,
         1218,
         870
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "valkyrie": {
       "profile": "human",
@@ -1469,13 +1469,13 @@
       ],
       "sourceSha256": "2e4e07ddcc163bbf4fb06940b3f6cb9a3ff46151282b3b86504742a4765270bf",
       "faceCenterX": 1019,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        475,
-        57,
-        1088,
-        777
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        178,
+        27,
+        1180,
+        843
+      ]
     },
     "fei": {
       "profile": "human",
@@ -1505,13 +1505,13 @@
       ],
       "sourceSha256": "a17b43030c247365df0302ec8eaeeb6c9c0394537d11bfdd281ee05455487c84",
       "faceCenterX": 1076,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        555,
-        -6,
-        1042,
-        745
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        178,
+        0,
+        1180,
+        843
+      ]
     },
     "kosmos": {
       "profile": "human",
@@ -1541,13 +1541,13 @@
       ],
       "sourceSha256": "35a6567f54649bd42dacba3344c6500142486ff9d9d2689ce9faaa913046fe95",
       "faceCenterX": 904,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        383,
+        247,
         52,
         1042,
-        745
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        744
+      ]
     },
     "fiora": {
       "profile": "human",
@@ -1577,13 +1577,13 @@
       ],
       "sourceSha256": "22dde7c6cf5009cbe29f91084c17a5a165249aa12dfed1377600827a54ea5ef0",
       "faceCenterX": 814,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        46,
+        0,
         0,
         1536,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "riki": {
       "profile": "tall",
@@ -1613,13 +1613,13 @@
       ],
       "sourceSha256": "1b18d19d045d1030dcfb3347dcdeca1559dbfe9ddf2752418e7513ee34af883a",
       "faceCenterX": 969,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        252,
-        0,
-        1434,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        202,
+        97,
+        1132,
+        809
+      ]
     },
     "melia": {
       "profile": "human",
@@ -1651,13 +1651,13 @@
       "sourceSha256": "0ff9d783242c3333f184aaf37b11db9adb1f01ae889aac7ba0c8a93adc20175c",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 899,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        385,
-        147,
+        255,
+        125,
         1027,
-        685
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        734
+      ]
     },
     "rex": {
       "profile": "human",
@@ -1687,13 +1687,13 @@
       ],
       "sourceSha256": "fcc22408ca8ad217fe6ac1b401fe2481739eea28dd27a8a74deefe3e7bee6c13",
       "faceCenterX": 866,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        280,
+        182,
         47,
         1173,
         838
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "nia": {
       "profile": "human",
@@ -1723,13 +1723,13 @@
       ],
       "sourceSha256": "4a37366fc114e2884250fb4d6b3ec53fee54a1d916b3e9862190fd2843d12b5d",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "hanajs": {
       "profile": "chibi",
@@ -1759,13 +1759,13 @@
       ],
       "sourceSha256": "c209782b17e66cf9ec8b9f999225680e30f3b5b6d745d1fdf06591277acbbce1",
       "faceCenterX": 828,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        247,
+        161,
         121,
         1162,
         830
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "pneuma": {
       "profile": "human",
@@ -1797,13 +1797,13 @@
       "sourceSha256": "f0ccb5ca035c1c5dc4b568dc8d4e431f8a16e98c985ab2634b91226e2245a894",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         27,
-        28,
+        0,
         1482,
-        988
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "noah": {
       "profile": "human",
@@ -1833,13 +1833,13 @@
       ],
       "sourceSha256": "ffe04d517423eeb64d1003bdde565f66f5655ae40227ba7f0d42e902dc9c5250",
       "faceCenterX": 909,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        323,
+        182,
         76,
         1173,
         838
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "elma": {
       "profile": "human",
@@ -1869,13 +1869,13 @@
       ],
       "sourceSha256": "5cb73d58ac165bd774f85ff1b390013676757f3e0d12d63d82b92e545432d4ae",
       "faceCenterX": 957,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        354,
-        -19,
-        1206,
-        861
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        108,
+        0,
+        1320,
+        943
+      ]
     },
     "rin": {
       "profile": "human",
@@ -1905,13 +1905,13 @@
       ],
       "sourceSha256": "c2607611c432bebf39150636f41d7e73e8c88d46e4ff6d444ac67f5be10127d6",
       "faceCenterX": 918,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        397,
+        247,
         61,
         1042,
-        745
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        744
+      ]
     },
     "edelgard": {
       "profile": "human",
@@ -1941,13 +1941,13 @@
       ],
       "sourceSha256": "92bc19655b30ccd56e3979b22fe8bac40ee786daa05b3c72f58f4be946b2fb5c",
       "faceCenterX": 915,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        499,
-        155,
-        833,
-        595
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        301,
+        123,
+        934,
+        667
+      ]
     },
     "dietrich": {
       "profile": "human",
@@ -1979,13 +1979,13 @@
       "sourceSha256": "042d08b198763bbb9ca15eccd4fcae9cd8c79288e62c0d9ca8467b376fbb3aa8",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        142,
-        131,
-        1252,
-        835
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        0,
+        0,
+        1536,
+        1024
+      ]
     },
     "mallow": {
       "profile": "mascot",
@@ -2010,12 +2010,6 @@
       "regenerated": true,
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "sourceSha256": "d76fb0abab4b990162c8e1fdcb0a946cce475417c3f28365298a1dffa04442eb",
-      "crop": [
-        226,
-        -68,
-        1529,
-        1092
-      ],
       "faceBounds": [
         300,
         150,
@@ -2023,7 +2017,13 @@
         820
       ],
       "faceCenterX": 991,
-      "centerBasis": "承認済みの参照画像による構図"
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "crop": [
+        4,
+        0,
+        1529,
+        1024
+      ]
     },
     "midna": {
       "profile": "tall",
@@ -2053,13 +2053,13 @@
       ],
       "sourceSha256": "94148762dd18b67f84d12831815b3baf0276bc2fc44fb816181a96852974a9b4",
       "faceCenterX": 1040,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        323,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "maruku": {
       "profile": "tall",
@@ -2090,13 +2090,13 @@
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
       "sourceSha256": "da15039af143c3aeb2a2eed32398ff6eb361c1a73763f7cf6e393df45b9ddb46",
       "faceCenterX": 782,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        94,
+        80,
         0,
         1376,
         983
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "krystal": {
       "profile": "human",
@@ -2126,13 +2126,13 @@
       ],
       "sourceSha256": "af30587b15cbffa180a780ffc475a83a8a1a8d304f81a0325ad00ca95d7965db",
       "faceCenterX": 949,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        323,
+        142,
         6,
         1252,
         894
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "viridi": {
       "profile": "human",
@@ -2164,13 +2164,13 @@
       "sourceSha256": "2ef17690f829a2ffd21b35ab867dc5b85134061db3a8b7404872adb96811ed62",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 844,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        103,
-        36,
+        27,
+        0,
         1482,
-        988
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "octoling": {
       "profile": "human",
@@ -2200,13 +2200,13 @@
       ],
       "sourceSha256": "2c9fad34befbb969cf43388705ba31c0cd2dc7a537162cf819744b31323897de",
       "faceCenterX": 925,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        208,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "isaac": {
       "profile": "human",
@@ -2236,13 +2236,13 @@
       ],
       "sourceSha256": "5204b3ea77226579b03818ccab9c3f24df7f021f03f47d46528e5d02066ba5b9",
       "faceCenterX": 970,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        492,
-        111,
-        955,
-        682
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        208,
+        58,
+        1120,
+        800
+      ]
     },
     "akira": {
       "profile": "human",
@@ -2272,13 +2272,13 @@
       ],
       "sourceSha256": "048f90ec5cf339c353306f17f37235c8b86eec02ef75585541402a2e48553fe0",
       "faceCenterX": 854,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        310,
+        224,
         86,
         1088,
         777
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "elza": {
       "profile": "human",
@@ -2308,13 +2308,13 @@
       ],
       "sourceSha256": "a41c7ed1dec1ecb8ccc7578b52b85bc4eaf99f59c4fb34f3fd35dd69c77c304a",
       "faceCenterX": 836,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        418,
-        160,
-        836,
-        597
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        167,
+        133,
+        920,
+        657
+      ]
     },
     "headmaster": {
       "profile": "tall",
@@ -2344,13 +2344,13 @@
       ],
       "sourceSha256": "c04265760004666927c464aedc71dfc5fd85033ac688508a131de243cb83bc43",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "sukapon": {
       "profile": "mascot",
@@ -2374,19 +2374,19 @@
       ],
       "faceBounds": [
         610,
-        -17,
+        0,
         1356,
         828
       ],
       "sourceSha256": "736f516ce87a836097d0fd96c95c43089afd84d8f13e06f7f39e16aa0a516da7",
       "faceCenterX": 983,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        266,
-        -135,
+        51,
+        0,
         1434,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        960
+      ]
     },
     "lip": {
       "profile": "tall",
@@ -2418,13 +2418,13 @@
       "sourceSha256": "0e81e553bd76c91552e40b82861afcb9949004729e7975ea0e1aca0ae9b52310",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 800,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        135,
-        138,
+        104,
+        75,
         1329,
-        886
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        949
+      ]
     },
     "ashley": {
       "profile": "tall",
@@ -2456,13 +2456,13 @@
       "sourceSha256": "3b3e452c937eedd63bcb0b905f628fe17e44e60b5c1b13e80f7ede8ed68b68b7",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 799,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        115,
-        112,
+        84,
+        47,
         1368,
-        912
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        977
+      ]
     },
     "ringfit": {
       "profile": "human",
@@ -2492,13 +2492,13 @@
       ],
       "sourceSha256": "220baed29853bd8a73c8e830cd78a25b67845f0f7f1331944bf057f90ced989d",
       "faceCenterX": 841,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        214,
+        -3,
         0,
-        1254,
-        896
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        1260,
+        900
+      ]
     },
     "karateka": {
       "profile": "tall",
@@ -2526,15 +2526,15 @@
         917,
         575
       ],
+      "sourceSha256": "d97d84187ba00c0082b75ff7becff58e17003f3175dc8ee5f1a0ee5d208ec70b",
+      "faceCenterX": 700,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        350,
+        277,
         130,
         700,
         500
-      ],
-      "sourceSha256": "d97d84187ba00c0082b75ff7becff58e17003f3175dc8ee5f1a0ee5d208ec70b",
-      "faceCenterX": 700,
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "qbby": {
       "profile": "tall",
@@ -2562,15 +2562,15 @@
         1061,
         1130
       ],
+      "sourceSha256": "c71eeda5582bef3434109392ff0c5b02c727ca2edeeec54194ec46739a140235",
+      "faceCenterX": 625,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        -225,
+        -223,
         50,
         1700,
         1133
-      ],
-      "sourceSha256": "c71eeda5582bef3434109392ff0c5b02c727ca2edeeec54194ec46739a140235",
-      "faceCenterX": 625,
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "ryuta": {
       "profile": "chibi",
@@ -2602,13 +2602,13 @@
       "sourceSha256": "5647247e9ce928799f4f4a3b8f2c9762c959137f23b54e6a1d22e3f5e9c64e1b",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 647,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        -36,
-        108,
+        86,
+        49,
         1365,
-        910
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        975
+      ]
     },
     "saki": {
       "profile": "human",
@@ -2640,13 +2640,13 @@
       "sourceSha256": "ed5b7eeda6462e5116bc390a9c7cb2851462fd1f03d6dc6b43c1fba291246dc3",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 875,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        204,
-        113,
+        97,
+        65,
         1342,
-        895
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        959
+      ]
     },
     "doshin": {
       "profile": "mascot",
@@ -2676,13 +2676,13 @@
       ],
       "sourceSha256": "82be4fbf92bc04edc4fbb913dd2540479b5004b1df8fd20a9a5a2164fad65303",
       "faceCenterX": 855,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        460,
+        330,
         237,
         789,
         564
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "chibirobo": {
       "profile": "mecha",
@@ -2712,13 +2712,13 @@
       ],
       "sourceSha256": "ffa45b61fe32b91303478f7453b2a00c9517c2b13235358d2dfc4ef1d0c9f96d",
       "faceCenterX": 739,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        22,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "ray": {
       "profile": "mecha",
@@ -2743,14 +2743,14 @@
       "regenerated": true,
       "sourceSha256": "4249184d2375b4ecbfed471e471137db17b3430d891e292ac43ea9fb019d5172",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "faceCenterX": 768,
-      "centerBasis": "承認済みの参照画像による構図"
+      ]
     },
     "pokoa": {
       "profile": "mascot",
@@ -2780,13 +2780,13 @@
       ],
       "sourceSha256": "e66843b77213b58e2fadcda1def9e3e58424eacf0c0a20ded089d0d8eb54c086",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "bayleef": {
       "profile": "mascot",
@@ -2798,7 +2798,7 @@
       "top": 51,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        280,
+        395,
         0,
         1434,
         1024
@@ -2816,13 +2816,13 @@
       ],
       "sourceSha256": "7709fd8fa00e3c79bd51deb1cf0c809ce17b98480222aa7a31b74dd9bf7311b6",
       "faceCenterX": 1112,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        395,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "emma": {
       "profile": "human",
@@ -2854,13 +2854,13 @@
       "sourceSha256": "ea81bb7689b3b2676319832cc84fac980a6e76d557a7309f7836be6a877ca1c9",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 860,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        257,
-        177,
+        165,
+        151,
         1206,
-        804
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        861
+      ]
     },
     "rion": {
       "profile": "human",
@@ -2872,7 +2872,7 @@
       "top": 208,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        492,
+        389,
         154,
         921,
         658
@@ -2890,13 +2890,13 @@
       ],
       "sourceSha256": "1c27dc7835e57cf05a1a2edf7621cadcf62103413dc923c6bbbbb10f9029002b",
       "faceCenterX": 849.5,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        389,
+        308,
         154,
         921,
         658
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "judas": {
       "profile": "human",
@@ -2926,13 +2926,13 @@
       ],
       "sourceSha256": "93864f054f942611150fae4032a6b13b6d81677c5d0a78a3f8bce2fb6fd03c93",
       "faceCenterX": 1095,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        478,
+        151,
         142,
         1235,
         882
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "lloyd": {
       "profile": "human",
@@ -2964,13 +2964,13 @@
       "sourceSha256": "ead92d383bca918199bc5fe209f237e21d11fe617bdd382fd5792218f4e234ac",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 815,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        50,
-        5,
+        4,
+        0,
         1529,
-        1019
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "colette": {
       "profile": "human",
@@ -3000,13 +3000,13 @@
       ],
       "sourceSha256": "406b83dc45f6ca89c90f8fa7b56da51432d13258e64d690e6f1cf007b74b6e64",
       "faceCenterX": 997,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        388,
-        -82,
+        159,
+        0,
         1218,
         870
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "presea": {
       "profile": "chibi",
@@ -3038,13 +3038,13 @@
       ],
       "sourceSha256": "90d2718b41527fbe7c40b39cd0e44c1e5fa32e0f1ddbf8b23fc6c9b37b9696af",
       "faceCenterX": 983,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        348,
-        169,
+        133,
+        117,
         1270,
-        847
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        907
+      ]
     },
     "genis": {
       "profile": "human",
@@ -3074,13 +3074,14 @@
       ],
       "sourceSha256": "b4d53cbf245fd1fd473c227249f01d8c30195c5613fdfa7ee13455fbf9f01d66",
       "faceCenterX": 931,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "zoomFactor": 0.82,
       "crop": [
-        291,
-        0,
-        1280,
-        914
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        243,
+        96,
+        1050,
+        750
+      ]
     },
     "luke": {
       "profile": "human",
@@ -3112,13 +3113,13 @@
       "sourceSha256": "771626a0a2aa4f84d24b8e97d24bd789551a89efac1789ade245e532a92c2704",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 815,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        50,
-        5,
+        4,
+        0,
         1529,
-        1019
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "ash": {
       "profile": "human",
@@ -3148,13 +3149,13 @@
       ],
       "sourceSha256": "6f343aa89308f4002dbb931d0b969e804e40117f8e17dc2800e73e6d4e0c0130",
       "faceCenterX": 810,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        304,
+        262,
         90,
         1012,
         723
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "velvet": {
       "profile": "human",
@@ -3166,7 +3167,7 @@
       "top": 174,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        600,
+        540,
         150,
         840,
         600
@@ -3184,13 +3185,13 @@
       ],
       "sourceSha256": "6b8a2e0e5440640099e0c80707b0a76afaf0347308dc226001e06b392920f02b",
       "faceCenterX": 960,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        540,
-        150,
-        840,
-        600
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        308,
+        124,
+        920,
+        657
+      ]
     },
     "alphen": {
       "profile": "human",
@@ -3220,13 +3221,14 @@
       ],
       "sourceSha256": "eb1dffe1b4e4fe559b40518f3e5ac707ed40273ba732befed4499499f8226759",
       "faceCenterX": 680,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "zoomFactor": 0.82,
       "crop": [
-        80,
-        40,
-        1200,
-        800
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        276,
+        84,
+        984,
+        703
+      ]
     },
     "shionne": {
       "profile": "human",
@@ -3256,13 +3258,13 @@
       ],
       "sourceSha256": "27e7d5f9913c90842fefddeced5b2644738ed5ba097d58293c1f63f5784b5264",
       "faceCenterX": 938,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        458,
+        288,
         168,
         961,
         686
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "kasane": {
       "profile": "human",
@@ -3292,13 +3294,13 @@
       ],
       "sourceSha256": "ebe515e3e2a1b85f11563eac0d063b58593ea8465da5224bc6f6990f44465289",
       "faceCenterX": 798,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        211,
+        182,
         86,
         1173,
         838
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "io": {
       "profile": "human",
@@ -3328,13 +3330,13 @@
       ],
       "sourceSha256": "4180dd3d1249b8c623b650c9b10a8b7436ca7c9c91212efcb3d8da1b3d3257a5",
       "faceCenterX": 695,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        233,
+        306,
         160,
         924,
         660
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "donchan": {
       "profile": "mascot",
@@ -3363,15 +3365,15 @@
         990
       ],
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "8b052272efffb50bafe001f11033488d8bab6fb617f3562e4cfc1b73d573e7b5",
+      "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "sourceSha256": "8b052272efffb50bafe001f11033488d8bab6fb617f3562e4cfc1b73d573e7b5",
-      "faceCenterX": 768,
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "gundam": {
       "profile": "mecha",
@@ -3401,13 +3403,13 @@
       ],
       "sourceSha256": "657eed229065aeea077bb4e6667b9875035981150eaa354ede3e49f01e3f2313",
       "faceCenterX": 969,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        252,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "agumon": {
       "profile": "mascot",
@@ -3431,19 +3433,19 @@
       ],
       "faceBounds": [
         565,
-        -5,
+        0,
         1287,
         812
       ],
       "sourceSha256": "98328515f4513ca483fa7cf2fefab1ff8a4cd8e0852f57b79b28b68396c6bfbe",
       "faceCenterX": 983,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        266,
-        -135,
+        51,
+        0,
         1434,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        960
+      ]
     },
     "mametchi": {
       "profile": "tall",
@@ -3472,15 +3474,15 @@
         990
       ],
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
+      "sourceSha256": "b46d9fdf429f81acdec7b9685dd77d6cb60c9c058c1222851e9cf219737a68b3",
+      "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "sourceSha256": "b46d9fdf429f81acdec7b9685dd77d6cb60c9c058c1222851e9cf219737a68b3",
-      "faceCenterX": 768,
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "edf": {
       "profile": "mecha",
@@ -3510,13 +3512,13 @@
       ],
       "sourceSha256": "240969ab028fadd41523dd85ce86bf623ef0fe2bb721ef1b77e7cfdbad096779",
       "faceCenterX": 715,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        235,
+        288,
         15,
         960,
         686
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "nightraven": {
       "profile": "silhouette",
@@ -3541,14 +3543,14 @@
       ],
       "regenerated": true,
       "sourceSha256": "4e95b11ac47373301755755aaa24f8dbfbfdecd0886b47edf2962f665a90a38f",
+      "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "faceCenterX": 768,
-      "centerBasis": "承認済みの参照画像による構図"
+      ]
     },
     "katamari": {
       "profile": "mascot",
@@ -3573,12 +3575,6 @@
       "regenerated": true,
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "sourceSha256": "fe414b1bf4a468ef9734f7ba60b1178597c5bfc983ec28e210e6147137f2caa0",
-      "crop": [
-        0,
-        0,
-        1536,
-        1024
-      ],
       "faceBounds": [
         80,
         270,
@@ -3586,7 +3582,13 @@
         910
       ],
       "faceCenterX": 768,
-      "centerBasis": "承認済みの参照画像による構図"
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "crop": [
+        0,
+        0,
+        1536,
+        1024
+      ]
     },
     "klonoa": {
       "profile": "mascot",
@@ -3616,13 +3618,13 @@
       ],
       "sourceSha256": "967c89fe15ecd2e33d3da846775199b63957416d5083bd53eb6cf20c5173e729",
       "faceCenterX": 652,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        25,
-        0,
-        1254,
-        1254
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        125,
+        206,
+        1004,
+        717
+      ]
     },
     "okami": {
       "profile": "mascot",
@@ -3652,13 +3654,13 @@
       ],
       "sourceSha256": "548fa124751b74c8639783687a6e983647bf1040033d97246d1930109cd3e8fb",
       "faceCenterX": 825,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        108,
-        0,
-        1434,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        73,
+        14,
+        1390,
+        993
+      ]
     },
     "megamanexe": {
       "profile": "mecha",
@@ -3688,13 +3690,13 @@
       ],
       "sourceSha256": "355de3055a01f1920258779984d371b4ac421328c175c4634f6b5bc65bfd7a45",
       "faceCenterX": 799,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        31,
-        0,
-        1536,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        146,
+        61,
+        1244,
+        889
+      ]
     },
     "zero": {
       "profile": "mecha",
@@ -3724,13 +3726,13 @@
       ],
       "sourceSha256": "1725b15c824557c80501fe39153eff091125a1eeaa782ee0f4893a8de5a96935",
       "faceCenterX": 797,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        80,
-        0,
-        1434,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        185,
+        86,
+        1167,
+        834
+      ]
     },
     "hunter": {
       "profile": "mecha",
@@ -3760,13 +3762,13 @@
       ],
       "sourceSha256": "339ee29c64993235f9afad050dd37a168ee23a4207ecd33a0509a1e556534d48",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "felyne": {
       "profile": "mascot",
@@ -3796,13 +3798,13 @@
       ],
       "sourceSha256": "b7f61769bced8bdc72713f377eb4226ebf560a5e98a0ee97972919d37657b5ba",
       "faceCenterX": 783,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        15,
-        0,
-        1536,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        129,
+        50,
+        1278,
+        913
+      ]
     },
     "nargacuga": {
       "profile": "mecha",
@@ -3827,12 +3829,6 @@
       ],
       "regenerated": true,
       "sourceSha256": "1f5b49bf23b56887dd8ef4e4be11047a7417d180a272111ba7fa283553b3e1ba",
-      "crop": [
-        386,
-        -68,
-        1529,
-        1092
-      ],
       "faceBounds": [
         806,
         262,
@@ -3840,7 +3836,13 @@
         915
       ],
       "faceCenterX": 1151,
-      "centerBasis": "承認済みの参照画像による構図"
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "crop": [
+        4,
+        0,
+        1529,
+        1024
+      ]
     },
     "naruhodo": {
       "profile": "human",
@@ -3852,7 +3854,7 @@
       "top": 72,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        404,
+        329,
         -80,
         1297,
         926
@@ -3870,13 +3872,13 @@
       ],
       "sourceSha256": "e1b54b651ae5bff6d55ddd7bc23992a18ffdf533337cee38970d7c7d2250b064",
       "faceCenterX": 977.5,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        329,
-        -80,
+        120,
+        0,
         1297,
         926
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "arthur": {
       "profile": "human",
@@ -3906,13 +3908,13 @@
       ],
       "sourceSha256": "81cb7c168996efdbce97433e15fca3b8d5b50c5b0caa3523c9c8b514121fd163",
       "faceCenterX": 969,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        329,
+        128,
         0,
         1280,
         914
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "viewtifuljoe": {
       "profile": "mecha",
@@ -3942,13 +3944,13 @@
       ],
       "sourceSha256": "af6e5c4d445c9b12d10cf54572c1b2854f3f697cbd75b30cf3f78299071f0631",
       "faceCenterX": 864,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        257,
+        80,
         211,
         1214,
         867
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "dante": {
       "profile": "human",
@@ -3978,13 +3980,13 @@
       ],
       "sourceSha256": "ac20b2623c70dc13e4280d9eaa042a2a71e06d89d0788c45ca38199f6de482c0",
       "faceCenterX": 950,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        362,
+        180,
         0,
         1176,
         840
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "leon": {
       "profile": "human",
@@ -4014,13 +4016,13 @@
       ],
       "sourceSha256": "d01aa39861a6f2d07493718044b0135f2d469faac64cf30480aed1923c04f0c6",
       "faceCenterX": 895,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        286,
+        159,
         72,
         1218,
         870
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "guile": {
       "profile": "human",
@@ -4050,13 +4052,13 @@
       ],
       "sourceSha256": "42c69177409a429f629b96a9c2373c64dba8b4219c1d2546caf2f78bfa295e46",
       "faceCenterX": 997,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        476,
+        247,
         81,
         1042,
-        745
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        744
+      ]
     },
     "sol": {
       "profile": "human",
@@ -4088,13 +4090,13 @@
       "sourceSha256": "e77872accefe576b0f3b064e28980966dbd8bf061a59f266ac57ecc5aefec5f3",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         97,
-        129,
+        65,
         1342,
-        895
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        959
+      ]
     },
     "ky": {
       "profile": "human",
@@ -4124,13 +4126,13 @@
       ],
       "sourceSha256": "32521c06ab7995eec7ef2ef40141bb972eac2866fc8f4fef19d7adec2044d761",
       "faceCenterX": 830,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        342,
+        280,
         212,
         976,
         697
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "bomberman": {
       "profile": "mascot",
@@ -4142,7 +4144,7 @@
       "top": 61,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        252,
+        156,
         0,
         1434,
         1024
@@ -4160,13 +4162,13 @@
       ],
       "sourceSha256": "0db2bbe3b977ace0ca2c7bb4752bb1eaa197c66e8e4b2c95423589747ebafb15",
       "faceCenterX": 873,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        156,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "pawapuro": {
       "profile": "mascot",
@@ -4178,7 +4180,7 @@
       "top": 90,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        281,
+        211,
         0,
         1434,
         1024
@@ -4196,13 +4198,13 @@
       ],
       "sourceSha256": "8df39ea00bf983ab8b32e3d88a5e4693b4385733ee2f6fa941134bb2498dc242",
       "faceCenterX": 928,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        211,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "goemon": {
       "profile": "chibi",
@@ -4214,7 +4216,7 @@
       "top": 41,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        157,
+        75,
         -68,
         1529,
         1092
@@ -4232,13 +4234,13 @@
       ],
       "sourceSha256": "7b2faa8b651a7b6fb22dfadc3b40665dbb770996771738a551f4795bf1fecd21",
       "faceCenterX": 839.5,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        75,
-        -68,
-        1529,
-        1092
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        23,
+        0,
+        1490,
+        1024
+      ]
     },
     "django": {
       "profile": "chibi",
@@ -4268,13 +4270,13 @@
       ],
       "sourceSha256": "88330da225ede962b782745d1c3bc71ae19502a07cf0ef8923fad8705336170f",
       "faceCenterX": 1044,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        280,
-        -68,
+        4,
+        0,
         1529,
-        1092
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        1024
+      ]
     },
     "twinbee": {
       "profile": "mascot",
@@ -4286,7 +4288,7 @@
       "top": 101,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        302,
+        392,
         51,
         1190,
         850
@@ -4304,13 +4306,13 @@
       ],
       "sourceSha256": "9f366147ae71b68e7b2f290384b28b7c26c5c4184535d4232009affbc1297f6f",
       "faceCenterX": 987,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        392,
-        51,
+        173,
+        55,
         1190,
         850
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "hinako": {
       "profile": "human",
@@ -4340,13 +4342,13 @@
       ],
       "sourceSha256": "93f9a8b4f7388d3e9b4e94bd0dac1dc78c98908a15e0313fb59b01b27eea33d6",
       "faceCenterX": 686,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        177,
+        259,
         63,
         1018,
         727
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "hayabusa": {
       "profile": "mecha",
@@ -4371,14 +4373,14 @@
       "regenerated": true,
       "sourceSha256": "26fc4829297e3b3bef114c137de7f18c5f50c686070b78e3af34eb0ac2800d85",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "faceCenterX": 768,
-      "centerBasis": "承認済みの参照画像による構図"
+      ]
     },
     "alucard": {
       "profile": "human",
@@ -4390,7 +4392,7 @@
       "top": 67,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        534,
+        489,
         88,
         509,
         364
@@ -4408,13 +4410,13 @@
       ],
       "sourceSha256": "188b87f5d8665c7f31ac62607e369f6d9452d4ccac0bd5fa7570e8d6047bd8e7",
       "faceCenterX": 743.5,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        489,
-        88,
-        509,
-        364
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        269,
+        22,
+        716,
+        511
+      ]
     },
     "kingbonby": {
       "profile": "mascot",
@@ -4444,13 +4446,14 @@
       ],
       "sourceSha256": "ae24c4dd837c8c410aedc02b9cf312542b4c803641aea9285c6861e110d28919",
       "faceCenterX": 864,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "zoomFactor": 0.82,
       "crop": [
-        346,
-        0,
-        1036,
-        740
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        202,
+        60,
+        850,
+        607
+      ]
     },
     "jehuty": {
       "profile": "mecha",
@@ -4475,14 +4478,14 @@
       "regenerated": true,
       "sourceSha256": "33cf3af8d36fb333db4fa74a1f2eb860e268acf38b1b3656587365c28cee8062",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "faceCenterX": 768,
-      "centerBasis": "承認済みの参照画像による構図"
+      ]
     },
     "anubis": {
       "profile": "mecha",
@@ -4507,14 +4510,14 @@
       "regenerated": true,
       "sourceSha256": "ca4cc9898f129cc72f22ce030d6a5bcb71284d3eb5c0fc9b7601f843f4325c79",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "faceCenterX": 768,
-      "centerBasis": "承認済みの参照画像による構図"
+      ]
     },
     "ryza": {
       "profile": "human",
@@ -4544,13 +4547,13 @@
       ],
       "sourceSha256": "94d34199dbbfcdf144944616cccf4a83e3be3202b9186715f6615686c8e098aa",
       "faceCenterX": 880,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        271,
+        159,
         53,
         1218,
         870
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "yuri": {
       "profile": "human",
@@ -4582,13 +4585,13 @@
       "sourceSha256": "6d04390758ecc47c57f3ec3dcef20cab1d1516d848e25bb5b93988b330452f3d",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         97,
-        82,
+        53,
         1342,
-        895
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        959
+      ]
     },
     "ryofu": {
       "profile": "human",
@@ -4620,13 +4623,13 @@
       "sourceSha256": "412ca8197df845e651b3bf38bc1953ac41975002189da6ea95e77a66876d53f2",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 860,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        142,
-        67,
+        50,
+        0,
         1436,
-        957
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "makoto": {
       "profile": "human",
@@ -4656,13 +4659,13 @@
       ],
       "sourceSha256": "36871beca03ccc0058486dd83a926ebf9695d83c43036a5e5f969a37ac5918c6",
       "faceCenterX": 938,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        329,
+        159,
         72,
         1218,
         870
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "narukami": {
       "profile": "human",
@@ -4692,13 +4695,13 @@
       ],
       "sourceSha256": "2b8ad64dd601d759a7cfbc6c958bf2b12353080a54bb32d3b057321e54e46049",
       "faceCenterX": 917,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        352,
+        203,
         72,
         1130,
         807
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "wonder": {
       "profile": "human",
@@ -4710,7 +4713,7 @@
       "top": 89,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        418,
+        277,
         136,
         1127,
         805
@@ -4728,13 +4731,13 @@
       ],
       "sourceSha256": "990463bba461aff302740f295b7249c7043a1c36f9723c28a66e2a8185809729",
       "faceCenterX": 840.5,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        277,
+        205,
         136,
         1127,
         805
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "nahobino": {
       "profile": "human",
@@ -4764,13 +4767,13 @@
       ],
       "sourceSha256": "c7bff9cec4b5b3345368d07db32694fe7c47b4f53085ea686806f66b21bc0ef0",
       "faceCenterX": 1101,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        543,
+        210,
         0,
         1116,
         797
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "will": {
       "profile": "human",
@@ -4800,13 +4803,13 @@
       ],
       "sourceSha256": "e23c65af05b26ef70bd0e97a67ed361e4ec6b84d82ae986a376d9942aae290cc",
       "faceCenterX": 826,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        239,
+        182,
         76,
         1173,
         838
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "alain": {
       "profile": "human",
@@ -4836,13 +4839,13 @@
       ],
       "sourceSha256": "fb82c51eeda4be03ec0e11ab1e1e7c78bb26e95bc710ec9e62ea70c5172e82d0",
       "faceCenterX": 830,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        340,
+        278,
         85,
         980,
         700
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "kurabe": {
       "profile": "human",
@@ -4874,13 +4877,13 @@
       "sourceSha256": "cdc91eaea462769a8e07e2b9c28b559fe6c8437a9a0044274eb80ba99c4724eb",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 707,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        81,
-        183,
+        142,
+        130,
         1252,
-        835
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        894
+      ]
     },
     "shadow": {
       "profile": "mascot",
@@ -4910,13 +4913,13 @@
       ],
       "sourceSha256": "970d57a15e7863c860760ed491af641c64edd18f2f34c5b97fd71f9599a6341c",
       "faceCenterX": 911,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        194,
-        0,
-        1434,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        168,
+        148,
+        1200,
+        857
+      ]
     },
     "tails": {
       "profile": "mascot",
@@ -4946,13 +4949,13 @@
       ],
       "sourceSha256": "e1ffacd5bb4cadb6fe61b117dc8bceec4b828efe45d7715ffbb78c5a178fbc2d",
       "faceCenterX": 738,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        14,
         0,
+        23,
         1448,
-        1086
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        1034
+      ]
     },
     "nights": {
       "profile": "chibi",
@@ -4964,7 +4967,7 @@
       "top": 69,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        -34,
+        112,
         -55,
         1638,
         1170
@@ -4982,13 +4985,13 @@
       ],
       "sourceSha256": "fecd499c373831090c2ac6dd2cd1ebe9916e8c07d20516cd0eb1dc7e019eb6c3",
       "faceCenterX": 931,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        112,
-        -55,
-        1638,
-        1170
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        60,
+        13,
+        1416,
+        1011
+      ]
     },
     "miku": {
       "profile": "human",
@@ -5020,13 +5023,13 @@
       "sourceSha256": "e44b5b0c75f203419ed445cb58ce9dc9142eda440c4a4dc4ca088006b1fa5e2a",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 800,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        35,
-        5,
-        1529,
-        1019
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        0,
+        0,
+        1536,
+        1024
+      ]
     },
     "kiryu": {
       "profile": "human",
@@ -5038,7 +5041,7 @@
       "top": 70,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        162,
+        257,
         0,
         1120,
         800
@@ -5056,13 +5059,13 @@
       ],
       "sourceSha256": "7c9aa0fbd12fa2b3664c844c1254538e32cdd42514fdcf75e433e805b5f2670c",
       "faceCenterX": 817,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        257,
+        150,
         0,
         1120,
         800
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "leanne": {
       "profile": "human",
@@ -5092,13 +5095,13 @@
       ],
       "sourceSha256": "cf828ebb3c9c9c71bc49db38026d22d94410a2f4fa2cf0d11f4f5fd87aa884c0",
       "faceCenterX": 738,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        150,
+        39,
         218,
         1176,
         840
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "aruru": {
       "profile": "chibi",
@@ -5130,13 +5133,13 @@
       "sourceSha256": "0d555dbf8e7ebbe7848ca99e06b60bf62db229c1b0caf015aef2f38ade774279",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 800,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        35,
-        5,
+        4,
+        0,
         1529,
-        1019
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "sakura": {
       "profile": "human",
@@ -5168,13 +5171,13 @@
       "sourceSha256": "57fc3bc54f48b2b5854d0a912e64ae12a433d9e84064ee3394f8e23817aa880a",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 799,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        128,
-        129,
+        97,
+        65,
         1342,
-        895
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        959
+      ]
     },
     "aiai": {
       "profile": "mascot",
@@ -5204,13 +5207,13 @@
       ],
       "sourceSha256": "1c2502255d241877e54a22447189e12c6693b58af1c80a053f64ea62cdb61116",
       "faceCenterX": 627,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
-        0,
+        161,
         1254,
-        1254
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        896
+      ]
     },
     "toro": {
       "profile": "mascot",
@@ -5240,13 +5243,13 @@
       ],
       "sourceSha256": "64c6971db8102fb941a139660213404096a3a1f2817bc917fe818a13093a45f1",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "astro": {
       "profile": "mecha",
@@ -5271,12 +5274,6 @@
       ],
       "regenerated": true,
       "sourceSha256": "b708e2e50b67e5c8f1d66ea9592a6f7058ba3af37339fe9bb480413c5a5ebf7a",
-      "crop": [
-        216,
-        -68,
-        1529,
-        1092
-      ],
       "faceBounds": [
         350,
         200,
@@ -5284,7 +5281,13 @@
         885
       ],
       "faceCenterX": 981,
-      "centerBasis": "承認済みの参照画像による構図"
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "crop": [
+        4,
+        0,
+        1529,
+        1024
+      ]
     },
     "parappa": {
       "profile": "mascot",
@@ -5314,13 +5317,13 @@
       ],
       "sourceSha256": "7799a0bd6c6636c92654864b39bea4971eec65bdf21532b70d71ea75d68faf8f",
       "faceCenterX": 714,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        27,
-        162,
-        1374,
-        981
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        137,
+        250,
+        1100,
+        786
+      ]
     },
     "kitten": {
       "profile": "human",
@@ -5352,13 +5355,13 @@
       "sourceSha256": "a7fd4809936e56f67ed71e480db23b6d2164fd8acc0cf62e345761794d865869",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 815,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        142,
-        122,
+        96,
+        63,
         1345,
-        897
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        961
+      ]
     },
     "crash": {
       "profile": "mascot",
@@ -5388,13 +5391,13 @@
       ],
       "sourceSha256": "c8858e5f3b05a54499ee842398386b706808307dce1136f9768387bf74525624",
       "faceCenterX": 749,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        125,
+        86,
         0,
         1249,
         892
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "ratchet": {
       "profile": "mascot",
@@ -5419,14 +5422,14 @@
       "regenerated": true,
       "sourceSha256": "073aedcd7bbd00969f776cb443d06b3e7c756b29628a17aea59c64c3eef18285",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "faceCenterX": 768,
-      "centerBasis": "承認済みの参照画像による構図"
+      ]
     },
     "sackboy": {
       "profile": "mascot",
@@ -5456,13 +5459,13 @@
       ],
       "sourceSha256": "305aca9f4bba18101762dfe9d3e2e90b8ed0409f07adfccc6f61a59115f32b91",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "piposaru": {
       "profile": "mascot",
@@ -5492,13 +5495,13 @@
       ],
       "sourceSha256": "d57de34622d136c87d38141a9f818a9ab7b25cba7a0911f463fbedd4fea3bbfb",
       "faceCenterX": 1077,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        418,
+        108,
         0,
-        1319,
-        942
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        1320,
+        943
+      ]
     },
     "sam": {
       "profile": "human",
@@ -5509,12 +5512,6 @@
       "span": 400,
       "top": 0,
       "reviewed": "2026-11-03",
-      "crop": [
-        244,
-        -30,
-        1200,
-        857
-      ],
       "referenceCrop": [
         244,
         -30,
@@ -5534,7 +5531,13 @@
       ],
       "sourceSha256": "08e8e27237911db1d92f247149d3ba8c3893b33a9d03ec967ea185b225b6a496",
       "faceCenterX": 844,
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "crop": [
+        87,
+        0,
+        1200,
+        857
+      ]
     },
     "aloy": {
       "profile": "human",
@@ -5546,7 +5549,7 @@
       "top": 138,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        573,
+        512,
         75,
         910,
         650
@@ -5564,13 +5567,13 @@
       ],
       "sourceSha256": "d4c5f6595a74060c6daaa6b151aebd3fed7e34d8c173a4cef10f63a71f8b0155",
       "faceCenterX": 967,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        512,
+        313,
         75,
         910,
         650
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "monokuma": {
       "profile": "mascot",
@@ -5582,7 +5585,7 @@
       "top": 61,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        51,
+        -19,
         0,
         1434,
         1024
@@ -5600,13 +5603,13 @@
       ],
       "sourceSha256": "cb9bc5e5ed4fcb1553e15350c5bce76d7848c508be7a8993986f63f190f3a266",
       "faceCenterX": 698,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        -19,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "naegi": {
       "profile": "human",
@@ -5636,13 +5639,14 @@
       ],
       "sourceSha256": "8bd0a5a2bbb7da6487b83cfbd02f33968c05c122ca3dd3d2e9fb3c1449a2449d",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "zoomFactor": 0.82,
       "crop": [
-        51,
-        0,
-        1434,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        180,
+        83,
+        1176,
+        840
+      ]
     },
     "yuma": {
       "profile": "human",
@@ -5654,7 +5658,7 @@
       "top": 357,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        260,
+        219,
         325,
         910,
         650
@@ -5672,13 +5676,13 @@
       ],
       "sourceSha256": "931ac4bbb0efdb392429e36ea7acee336db5bc606be4564c03424b6e9900fe1a",
       "faceCenterX": 674,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        219,
-        325,
-        910,
-        650
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        0,
+        232,
+        1199,
+        856
+      ]
     },
     "sumino": {
       "profile": "human",
@@ -5708,13 +5712,13 @@
       ],
       "sourceSha256": "17c9a74fa6a61fe6902e31949252fc8abcf6f998f3eb0839859b7eaed359dc3b",
       "faceCenterX": 769,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         291,
         168,
         955,
         682
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "shiren": {
       "profile": "human",
@@ -5744,13 +5748,13 @@
       ],
       "sourceSha256": "a63fbe97f01c22fd884111d52184d0efd4ea2626f9d3250f5c72c315e30eb6e7",
       "faceCenterX": 926,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        209,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "estelle": {
       "profile": "human",
@@ -5780,13 +5784,14 @@
       ],
       "sourceSha256": "3316d60b4b560a2af831115951db21d6b55421bbe6147265eb95b4ad632e2a88",
       "faceCenterX": 897,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "zoomFactor": 0.82,
       "crop": [
         180,
-        0,
-        1434,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        83,
+        1176,
+        840
+      ]
     },
     "rean": {
       "profile": "human",
@@ -5816,13 +5821,13 @@
       ],
       "sourceSha256": "e9482a4055b0b81be648a36b6502c8e2c48d94f6d25b1a6e158202733c80decf",
       "faceCenterX": 940,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        418,
-        48,
-        1044,
-        746
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        158,
+        0,
+        1220,
+        871
+      ]
     },
     "shizuna": {
       "profile": "human",
@@ -5852,13 +5857,13 @@
       ],
       "sourceSha256": "18729bb5ff203b3657d27d944cb7e87b82761acbc02c37b6b55669dce77d8ed0",
       "faceCenterX": 862,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        450,
+        356,
         77,
         824,
         589
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "adol": {
       "profile": "human",
@@ -5888,13 +5893,13 @@
       ],
       "sourceSha256": "c4b928c243cb2e8bf9eab0e631815983554351ab3951096f2e9bcf499849f587",
       "faceCenterX": 979,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        479,
+        268,
         57,
         1000,
         714
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "dana": {
       "profile": "human",
@@ -5926,13 +5931,13 @@
       "sourceSha256": "841e8f9ca49fe1716f2e7c6647a95a1f5e3651b21d298562c4e0f63d2db5dc16",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 799,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        81,
-        67,
+        50,
+        0,
         1436,
-        957
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "malenia": {
       "profile": "mecha",
@@ -5962,13 +5967,14 @@
       ],
       "sourceSha256": "a4b653b4ea2d34a9f9a2c875e682f6d45e13af18a14640002b741ccbca9321df",
       "faceCenterX": 800,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "zoomFactor": 0.82,
       "crop": [
-        400,
-        0,
-        800,
-        800
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        299,
+        65,
+        656,
+        469
+      ]
     },
     "c4621": {
       "profile": "silhouette",
@@ -5993,13 +5999,13 @@
       ],
       "sourceSha256": "88f4ae114ef74bd02ef0ff04cb6a237e0854e57a99c941a4c391852e008f9477",
       "faceCenterX": 590,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        265,
+        302,
         5,
         650,
-        465
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        464
+      ]
     },
     "jibanyan": {
       "profile": "mascot",
@@ -6029,13 +6035,13 @@
       ],
       "sourceSha256": "9b096efc98bbc6b5b80e6f87954cb8465f3f15fef5eff990fe853fd414d0ac30",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "layton": {
       "profile": "tall",
@@ -6047,7 +6053,7 @@
       "top": 322,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        -27,
+        -95,
         2,
         1529,
         1019
@@ -6067,13 +6073,14 @@
       "sourceSha256": "68a6b9fd5bd431c749739ce909337cefc3d0702dcccefd687d09373eee766033",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 669.5,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "zoomFactor": 0.82,
       "crop": [
-        -95,
-        2,
-        1529,
-        1019
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        141,
+        67,
+        1254,
+        896
+      ]
     },
     "laharl": {
       "profile": "human",
@@ -6105,13 +6112,13 @@
       "sourceSha256": "28866bbd3224522877c3cdf14b9f8e72e43d80af911bfc6bdde71021b0bd744c",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 799,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        58,
-        36,
+        27,
+        0,
         1482,
-        988
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "etna": {
       "profile": "tall",
@@ -6137,13 +6144,20 @@
       ],
       "sourceSha256": "d39992345d127e07a9d1ff605213cfd3b19d315bfb0828f8247a6bcadae3b52c",
       "faceCenterX": 741,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "zoomFactor": 0.82,
       "crop": [
-        -15,
-        -48,
-        1512,
-        1080
+        0,
+        143,
+        1223,
+        874
       ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      "faceBounds": [
+        596,
+        505,
+        981,
+        895
+      ]
     },
     "kisuke": {
       "profile": "human",
@@ -6173,13 +6187,13 @@
       ],
       "sourceSha256": "5966e59a254e8e97fffae3ec242bea38c82eb9884d976044fdc425f4cea56a03",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         259,
         237,
         1018,
         727
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "raguna": {
       "profile": "human",
@@ -6209,13 +6223,14 @@
       ],
       "sourceSha256": "ef8de48564004daea27a80f93539a09bdf3db9a28a1278ff126f1418a2d19f66",
       "faceCenterX": 799,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "zoomFactor": 0.82,
       "crop": [
-        31,
-        0,
-        1536,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        138,
+        56,
+        1260,
+        900
+      ]
     },
     "sakuna": {
       "profile": "chibi",
@@ -6247,13 +6262,13 @@
       "sourceSha256": "485267e0dfd04741a7c50fd525b7bfbb5d1d4ceeed815ba4aaf11d89cd0b6b87",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 800,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        35,
-        5,
+        4,
+        0,
         1529,
-        1019
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "gran": {
       "profile": "human",
@@ -6283,13 +6298,13 @@
       ],
       "sourceSha256": "d0e367cf2d1bb4a68b2c5796bf24385d177cb2fa23906c0115e85264fa29c6c0",
       "faceCenterX": 818,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        398,
+        348,
         70,
         840,
         600
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "charlotta": {
       "profile": "tall",
@@ -6321,13 +6336,13 @@
       "sourceSha256": "004ef0a34f8d2e71920c7cf09656e673ff68763a31fb28c8d5daea06b23b8fbb",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 784,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        19,
-        5,
+        4,
+        0,
         1529,
-        1019
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        1024
+      ]
     },
     "narmaya": {
       "profile": "human",
@@ -6339,7 +6354,7 @@
       "top": 85,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        507,
+        470,
         60,
         700,
         500
@@ -6357,13 +6372,13 @@
       ],
       "sourceSha256": "d296bdaf44fe3394bb78e5b59c2b9cd7cc611b9922690171fc4caa223672ba42",
       "faceCenterX": 820,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        470,
+        418,
         60,
         700,
         500
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "haseo": {
       "profile": "human",
@@ -6395,13 +6410,13 @@
       "sourceSha256": "03136fe935ac3311399a40ce3918f11af0e97051e593bf4a60bf320698321d11",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 769,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         96,
-        127,
+        63,
         1345,
-        897
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        961
+      ]
     },
     "metabee": {
       "profile": "mecha",
@@ -6431,13 +6446,13 @@
       ],
       "sourceSha256": "63fcd10774f6d17783a77864623b089af03bbfa8bff6134304e1ee4ae709bdaa",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "mono": {
       "profile": "chibi",
@@ -6448,12 +6463,6 @@
       "span": 430,
       "top": 55,
       "reviewed": "2026-11-03",
-      "crop": [
-        192,
-        0,
-        1240,
-        886
-      ],
       "referenceCrop": [
         192,
         0,
@@ -6473,7 +6482,13 @@
       ],
       "sourceSha256": "d338a55ea22385ded49ef4684253e376663daeaaad8ff835323ccb21fe4df32c",
       "faceCenterX": 812,
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
+      "crop": [
+        148,
+        0,
+        1240,
+        886
+      ]
     },
     "rayman": {
       "profile": "mascot",
@@ -6503,13 +6518,13 @@
       ],
       "sourceSha256": "9736d0886a602f6a8afbeb964284bb131af50ac5544e61ebe072a05bfe6da724",
       "faceCenterX": 783,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        15,
-        0,
-        1536,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        129,
+        50,
+        1278,
+        913
+      ]
     },
     "enoch": {
       "profile": "human",
@@ -6541,13 +6556,13 @@
       "sourceSha256": "2961f5c2d4708f18db09420b0e6cd014a93099b546af67dd8c828bb9c6d12a42",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 830,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        157,
-        127,
+        96,
+        63,
         1345,
-        897
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        961
+      ]
     },
     "jett": {
       "profile": "human",
@@ -6559,7 +6574,7 @@
       "top": 357,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        88,
+        181,
         36,
         1482,
         988
@@ -6579,13 +6594,13 @@
       "sourceSha256": "84ad535270e8c5315d42a2464013c534d32344024b3b23f08a1513e51471452a",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 922,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        181,
-        36,
+        27,
+        0,
         1482,
-        988
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        1024
+      ]
     },
     "octane": {
       "profile": "mecha",
@@ -6597,7 +6612,7 @@
       "top": 61,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        0,
+        158,
         0,
         1536,
         1024
@@ -6615,13 +6630,13 @@
       ],
       "sourceSha256": "22cf39b81dd3f72eaf3ee870009966418ab24d79879c7151d2a42d0a843593b6",
       "faceCenterX": 926,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        158,
-        0,
-        1536,
-        1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        200,
+        95,
+        1137,
+        812
+      ]
     },
     "ulgrim": {
       "profile": "human",
@@ -6633,7 +6648,7 @@
       "top": 99,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        367,
+        318,
         47,
         1088,
         777
@@ -6651,13 +6666,13 @@
       ],
       "sourceSha256": "6ad24a285b5d58250375fb809af1be4c519b975d5d5050fed7153933ee65ace9",
       "faceCenterX": 862,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        318,
+        224,
         47,
         1088,
         777
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "shovelknight": {
       "profile": "tall",
@@ -6688,13 +6703,13 @@
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
       "sourceSha256": "eed4947e74b0f2fc3c0ff1f813d3f357728bf17fad6a7eec5b9793e12bf8c83b",
       "faceCenterX": 952,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        187,
-        -68,
+        4,
+        0,
         1529,
-        1092
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        1024
+      ]
     },
     "battlemage": {
       "profile": "human",
@@ -6726,13 +6741,13 @@
       "sourceSha256": "68a5f42da5a7638d882317e0d521421f749c6a6b51b26ff1e9894ced86d159c2",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 845,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        149,
-        77,
+        73,
+        30,
         1391,
-        927
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        994
+      ]
     },
     "miyabi": {
       "profile": "human",
@@ -6762,13 +6777,13 @@
       ],
       "sourceSha256": "5db66b3004d211d2c647d0dbf34e1ecaf96183e29535c576592c2378e7718317",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         50,
-        90,
+        0,
         1436,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "ellen": {
       "profile": "human",
@@ -6798,13 +6813,13 @@
       ],
       "sourceSha256": "55f8fd5d7ea460a40006031f8a91f39f43655634cbeb22bf56f9de8e8787a397",
       "faceCenterX": 818,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        213,
+        163,
         145,
         1210,
         864
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "billy": {
       "profile": "mecha",
@@ -6834,13 +6849,13 @@
       ],
       "sourceSha256": "7f7fb17f3337950ef6b2d03f9eae71d6b80ef6edf246862c5c389d5231e5fd85",
       "faceCenterX": 898,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        260,
-        0,
-        1276,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        248,
+        126,
+        1040,
+        743
+      ]
     },
     "zoe": {
       "profile": "duo",
@@ -6865,13 +6880,13 @@
       ],
       "sourceSha256": "238467ced4312c98269b95b3dce682e632876afd4490604113327141ac03f252",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "eve": {
       "profile": "human",
@@ -6903,13 +6918,13 @@
       "sourceSha256": "b23de10907e4975e3b52e59b5e6ef91b9afb9509bbf1ec0623070a39d6f40634",
       "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
       "faceCenterX": 815,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        142,
-        127,
+        96,
+        63,
         1345,
-        897
-      ],
-      "centerBasis": "承認済みの参照画像による構図"
+        961
+      ]
     },
     "deemo": {
       "profile": "mascot",
@@ -6939,13 +6954,13 @@
       ],
       "sourceSha256": "d3fd1c5a20c80f8f38ba9fd98865d827058a9b38e5ece4949eb74cb408481d12",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        51,
-        0,
-        1434,
-        1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        221,
+        107,
+        1095,
+        782
+      ]
     },
     "maelle": {
       "profile": "human",
@@ -6975,13 +6990,13 @@
       ],
       "sourceSha256": "c8fe6b67eb0202a3c5d8536c81026a58e33eeefd8a5e11cd158eaa01e85b5a73",
       "faceCenterX": 985,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        594,
+        377,
         81,
         782,
-        558
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+        559
+      ]
     },
     "sans": {
       "profile": "mascot",
@@ -6993,7 +7008,7 @@
       "top": 61,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        51,
+        121,
         0,
         1434,
         1024
@@ -7011,13 +7026,13 @@
       ],
       "sourceSha256": "7e90a0b428c65dbe6049f32bddb7c213cf95fe27f6b21a518f38b145075f52df",
       "faceCenterX": 838,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        121,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "terrarian": {
       "profile": "pixel",
@@ -7047,13 +7062,13 @@
       ],
       "sourceSha256": "f27281256256ffea4c2ece9d7152cb3f5b1b4ca0086fb940eea119d3f6352af9",
       "faceCenterX": 882,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        165,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "horse": {
       "profile": "silhouette",
@@ -7078,13 +7093,13 @@
       ],
       "sourceSha256": "83d0c8a5f8e482ffe00c5418bdc596cfb57d240e421d401e64719ca8b28fd7c6",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "chef": {
       "profile": "chibi",
@@ -7114,13 +7129,13 @@
       ],
       "sourceSha256": "f7449606cf32703b8778f752511582dbb7876d612a137bc016d0e07c4b3dfa30",
       "faceCenterX": 797,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        80,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "morphie": {
       "profile": "mascot",
@@ -7132,7 +7147,7 @@
       "top": 80,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        237,
+        160,
         0,
         1434,
         1024
@@ -7150,13 +7165,13 @@
       ],
       "sourceSha256": "424410d499b35140df8f32db7f7376812faa939c74af93dea859fab58e436514",
       "faceCenterX": 877,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        160,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "human": {
       "profile": "silhouette",
@@ -7181,13 +7196,13 @@
       ],
       "sourceSha256": "a08c762483039e534fd4a34a379e29336c9555ec9727854c52be808aaa0872f3",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "knight": {
       "profile": "tall",
@@ -7199,7 +7214,7 @@
       "top": 70,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        51,
+        147,
         0,
         1434,
         1024
@@ -7217,13 +7232,13 @@
       ],
       "sourceSha256": "e3c34ca4c2b4b636aaeab11377841a4cd88c3fc37a5e1b037b2c611bc744e60b",
       "faceCenterX": 864,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        147,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "hornet": {
       "profile": "tall",
@@ -7235,7 +7250,7 @@
       "top": 41,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        65,
+        199,
         -20,
         1434,
         1024
@@ -7253,13 +7268,13 @@
       ],
       "sourceSha256": "77cee082cf4e9d988132373f4128a6ce1b4f7779b3778d508bde462281646dfa",
       "faceCenterX": 916,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        199,
-        -20,
+        51,
+        0,
         1434,
         1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "reimu": {
       "profile": "chibi",
@@ -7289,13 +7304,13 @@
       ],
       "sourceSha256": "9065565e5510e8b1f9dcaf4eb7a1fb4e1f831897b9c36c1ff7843f902556164c",
       "faceCenterX": 897,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        417,
+        176,
         257,
         960,
         686
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "quote": {
       "profile": "pixel",
@@ -7325,13 +7340,13 @@
       ],
       "sourceSha256": "fb6e3b5dec4e96a6fe5b9cbd5df7cbff8783350cf8c765e239075521fd820e7b",
       "faceCenterX": 845,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        207,
+        131,
         105,
         1275,
         911
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "battlecat": {
       "profile": "mascot",
@@ -7362,13 +7377,13 @@
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
       "sourceSha256": "8350a8336fdad11d9a387bc8ac21add94d53fba82768dc8add1ae95a4509b31e",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "chiikawa": {
       "profile": "mascot",
@@ -7380,7 +7395,7 @@
       "top": 61,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        51,
+        -26,
         0,
         1434,
         1024
@@ -7399,13 +7414,13 @@
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
       "sourceSha256": "ca7b5e063a9bd6eb2ac7afeb051da49fa55cbbca73ea8f699ef11556c68ff750",
       "faceCenterX": 691,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        -26,
+        51,
         0,
         1434,
         1024
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+      ]
     },
     "hachiware": {
       "profile": "mascot",
@@ -7433,15 +7448,15 @@
         1263,
         1120
       ],
+      "sourceSha256": "f0b5d5ceb8f448f0a309f64bcdff78bebaeab3a93e4fc51cce55220d1c4b4698",
+      "faceCenterX": 670,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        -230,
+        -244,
         0,
         1800,
         1200
-      ],
-      "sourceSha256": "f0b5d5ceb8f448f0a309f64bcdff78bebaeab3a93e4fc51cce55220d1c4b4698",
-      "faceCenterX": 670,
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     },
     "ryoku": {
       "profile": "mascot",
@@ -7453,7 +7468,7 @@
       "top": 72,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        203,
+        121,
         -68,
         1529,
         1092
@@ -7472,13 +7487,13 @@
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
       "sourceSha256": "765e61ca60d0e25f5bd5f1b4b35602bbfb8378e87b6d80a0538276e592096ffe",
       "faceCenterX": 885.5,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        121,
-        -68,
+        4,
+        0,
         1529,
-        1092
-      ],
-      "centerBasis": "カード実描画で比較した顔の輪郭中心"
+        1024
+      ]
     },
     "cojicoji": {
       "profile": "mascot",
@@ -7509,13 +7524,13 @@
       "note": " 顔の保護範囲は髪・肩・胸元を含めない。",
       "sourceSha256": "44c099852e26484755cc6b3d78fdf797c369f80109107aaaea01381a6a82fd52",
       "faceCenterX": 768,
+      "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
         0,
         0,
         1536,
         1024
-      ],
-      "centerBasis": "顔の輪郭全体の中心（眼球位置・髪全体・帽子の中心ではない）"
+      ]
     }
   }
 }

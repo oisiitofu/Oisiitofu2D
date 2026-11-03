@@ -8,7 +8,7 @@ for(const id of ids){const guide=policy.characters[id],source=sources[id];if(!gu
   // Selection framing must not silently reframe a previously approved victory.
   if(!source.presentation&&!source.presentationCrop)source.presentationCrop=source.crop.slice();
   source.presentationFocus??=manifest.characters[id]?.presentationFocus??.5;
-  source.crop=result.crop;source.framing='顔位置ガイドに基づく選択用の切り抜き。原画・配色・勝利用の構図を維持。';
+  source.crop=result.crop;source.framing='元画像の横中心を維持した選択用のズーム。';
  }
 }
 fs.mkdirSync('previews/selection-framing',{recursive:true});fs.writeFileSync('previews/selection-framing/changes.json',JSON.stringify(changes,null,2));if(process.argv.includes('--apply'))fs.writeFileSync(sourceFile,JSON.stringify(sources,null,2)+'\n');console.log(JSON.stringify({applied:process.argv.includes('--apply'),count:changes.length,ids:changes.map(d=>d.id)}));
