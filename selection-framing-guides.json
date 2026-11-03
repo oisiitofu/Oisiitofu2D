@@ -1887,10 +1887,10 @@
       "top": 109,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        397,
+        247,
         61,
         1042,
-        745
+        744
       ],
       "source": "characters/rin/assets/rin-selection.png",
       "sourceSize": [
@@ -1907,10 +1907,10 @@
       "faceCenterX": 918,
       "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        247,
-        61,
-        1042,
-        744
+        193,
+        26,
+        1150,
+        821
       ]
     },
     "edelgard": {
@@ -3809,38 +3809,38 @@
     "nargacuga": {
       "profile": "mecha",
       "eye": [
-        1150,
-        590
+        1110,
+        628
       ],
-      "span": 820,
-      "top": 203,
+      "span": 580,
+      "top": 72,
       "reviewed": "2026-11-03",
-      "note": "実カードで顔の中心と幅を確認。髪の先などの枠外へのはみ出しは許容。",
+      "note": "同じ配色と横向きの構図で、鼻先に余白がある既存の原画を採用。",
       "referenceCrop": [
-        386,
-        -68,
-        1529,
-        1092
+        0,
+        0,
+        1536,
+        1024
       ],
-      "source": "characters/nargacuga/assets/nargacuga-selection-framed-v3.png",
+      "source": "characters/nargacuga/assets/nargacuga-selection-v2.png",
       "sourceSize": [
         1536,
         1024
       ],
       "regenerated": true,
-      "sourceSha256": "1f5b49bf23b56887dd8ef4e4be11047a7417d180a272111ba7fa283553b3e1ba",
+      "sourceSha256": "eb4b6b7d65e48d624b65f5386d87f958e5d3e836adc893a39d8867eade67a1ca",
       "faceBounds": [
-        806,
-        262,
-        1450,
-        915
+        760,
+        220,
+        1310,
+        867
       ],
-      "faceCenterX": 1151,
+      "faceCenterX": 1085,
       "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        4,
         0,
-        1529,
+        0,
+        1536,
         1024
       ]
     },
@@ -4749,10 +4749,10 @@
       "top": 85,
       "reviewed": "2026-11-03",
       "referenceCrop": [
-        543,
+        128,
         0,
-        1116,
-        797
+        1280,
+        914
       ],
       "source": "characters/nahobino/assets/nahobino-selection.png",
       "sourceSize": [
@@ -4769,10 +4769,10 @@
       "faceCenterX": 1101,
       "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
       "crop": [
-        128,
+        73,
         0,
-        1280,
-        914
+        1390,
+        993
       ]
     },
     "will": {
@@ -6121,43 +6121,42 @@
       ]
     },
     "etna": {
-      "profile": "tall",
+      "profile": "chibi",
       "eye": [
-        789,
-        654
+        846,
+        501
       ],
-      "span": 500,
-      "top": -48,
+      "span": 433,
+      "top": 0,
       "reviewed": "2026-11-03",
-      "locked": true,
-      "note": "既存の頭全体を見せる構図を保持。大きな髪のため目線が低い例外。",
+      "note": "顔と両頬を大きく見せ、胸元の描画を画像下端までつなげた選択用の原画。",
       "referenceCrop": [
-        -15,
-        -48,
-        1512,
-        1080
+        0,
+        0,
+        1536,
+        1024
       ],
-      "source": "characters/etna/assets/etna-selection.png",
+      "source": "characters/etna/assets/etna-selection-framed-v4.png",
       "sourceSize": [
-        1223,
-        1286
+        1536,
+        1024
       ],
-      "sourceSha256": "d39992345d127e07a9d1ff605213cfd3b19d315bfb0828f8247a6bcadae3b52c",
-      "faceCenterX": 741,
+      "sourceSha256": "6561af93b225d8bd330e2b2c1c497ef25870478d5eab048c8fee811705bbf955",
+      "faceCenterX": 843,
       "centerBasis": "元画像の横中心を維持し、顔の大きさと上下の余白を調整",
-      "zoomFactor": 0.82,
       "crop": [
         0,
-        143,
-        1223,
-        874
+        0,
+        1536,
+        1024
       ],
       "faceBounds": [
-        596,
-        505,
-        981,
-        895
-      ]
+        650,
+        310,
+        1035,
+        715
+      ],
+      "regenerated": true
     },
     "kisuke": {
       "profile": "human",

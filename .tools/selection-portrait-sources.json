@@ -262,10 +262,10 @@
   "rin": {
     "source": "characters/rin/assets/rin-selection.png",
     "crop": [
-      247,
-      61,
-      1042,
-      744
+      193,
+      26,
+      1150,
+      821
     ],
     "mode": "built-in imagegen",
     "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-68d95860-c9ba-415c-bfdf-a1521aa6a702.png",
@@ -3114,12 +3114,12 @@
     "presentationFocus": 0.5
   },
   "etna": {
-    "source": "characters/etna/assets/etna-selection.png",
+    "source": "characters/etna/assets/etna-selection-framed-v4.png",
     "crop": [
       0,
-      143,
-      1223,
-      874
+      0,
+      1536,
+      1024
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
@@ -3129,7 +3129,10 @@
       1512,
       1080
     ],
-    "presentationFocus": 0.5
+    "presentationFocus": 0.5,
+    "presentationSource": "characters/etna/assets/etna-selection.png",
+    "original": "C:/Users/haro_/.codex/generated_images/01a0d8c0-ef4f-7271-8889-854f000c1ba9/exec-e9be5644-5c0b-4b05-88be-24ef48b382f8.png",
+    "prompt": "Create a fresh, high-resolution landscape 3:2 character-select portrait of Etna from Disgaea, using the supplied image as the reference for character identity and illustration style. Retain the vivid red high twin-tails, red eyes, pointed ears, mischievous smile, dark purple bat wings, and black-and-red fantasy armor with silver ring details. Use a neutral game UI head-and-upper-torso pose with a dark armored upper bodice; focus on the face, collar and shoulder armor. Compose the new artwork natively for a landscape fighter card: face large, near horizontal center, eyes around 43% down the image, both cheeks and chin fully visible, and the red hair silhouette easy to read. Small tips of hair can meet the canvas edges. The shoulders and upper torso must extend THROUGH the bottom edge at the middle of the frame. No visible cutoff line suspended above the bottom, no floating bust, and no empty strip under the body. Slight 3/4 angle. Crisp line art and polished cel shading matching the reference. True transparent alpha background outside the silhouette. No text, framing, background glow, props, extra characters, or border."
   },
   "tails": {
     "source": "characters/tails/assets/tails-selection.png",
@@ -3152,10 +3155,10 @@
   "nahobino": {
     "source": "characters/nahobino/assets/nahobino-selection.png",
     "crop": [
-      128,
+      73,
       0,
-      1280,
-      914
+      1390,
+      993
     ],
     "mode": "built-in imagegen",
     "framing": "元画像の横中心を維持した選択用のズーム。",
@@ -3675,11 +3678,11 @@
     "presentationFocus": 0.5
   },
   "nargacuga": {
-    "source": "characters/nargacuga/assets/nargacuga-selection-framed-v3.png",
+    "source": "characters/nargacuga/assets/nargacuga-selection-v2.png",
     "crop": [
-      4,
       0,
-      1529,
+      0,
+      1536,
       1024
     ],
     "mode": "built-in imagegen",
