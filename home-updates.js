@@ -2,6 +2,7 @@
 // Add completed releases here with their actual date/time; newest is rendered first.
 const HomeUpdates=(()=>{
  const entries=[
+ {"at":"2026-11-04T13:56:15+09:00","items":["ノアとエルマに専用リミットブレイク演出を追加しました。"]},
  {"at":"2026-11-04T13:32:21+09:00","items":["KOS-MOSとフィオルンに専用リミットブレイク演出を追加しました。"]},
  {"at":"2026-11-04T13:13:03+09:00","items":["ヴァルキリーとフェイに専用リミットブレイク演出を追加しました。"]},
  {"at":"2026-11-04T12:51:23+09:00","items":["レナとフェイトに専用リミットブレイク演出を追加しました。"]},
