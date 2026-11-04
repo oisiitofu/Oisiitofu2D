@@ -72,10 +72,13 @@ const LimitBreak=(()=>{
   visualRevision++;
  }
  function tick(){
-  const current=scene,{shotTime,cues,duration,finalStrike}=current.profile;
+  const current=scene,{shotTime,cues,duration,finalStrike,combo}=current.profile;
   const time=shotTime(++current.time);
-  const cue=time!==shotTime(current.time-1)&&cues.get(time);
-  if(cue)sound(...cue,current.attacker);
+  if(time!==shotTime(current.time-1)){
+   const cue=cues.get(time),damage=combo?.get(time);
+   if(cue)sound(...cue,current.attacker);
+   if(damage)CombatSystem.limitHit(current.attacker,current.target,{...finalStrike,damage});
+  }
   visualRevision++;
   if(current.time<duration)return;
   scene=null;

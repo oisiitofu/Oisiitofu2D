@@ -26,8 +26,13 @@ const fighter=process.env.LIMIT_FIGHTER||'dragoon';
   }
   await Promise.all(pages.map(page=>page.waitForFunction(id=>Net.active&&countdown===0&&LimitBreak.artPrepared([{character:id}],true),fighter)));
   const moment=Math.max(...await Promise.all(pages.map(page=>page.evaluate(()=>frame))))+100;
-  for(const page of pages)await page.evaluate(({moment,fighter})=>{
-   const damage=70+(LimitBreak.profile(fighter)?.finalStrike.damage??28);
+  const expected=await host.evaluate(id=>{
+   const profile=LimitBreak.profile(id),damageSteps=[];
+   let damage=70;
+   for(const hit of profile?.combo?.values()??[]){damage+=hit;damageSteps.push(damage);}
+   return {damageSteps,damage:damage+(profile?.finalStrike.damage??28)};
+  },fighter);
+  for(const page of pages)await page.evaluate(({moment,damage})=>{
    window.limitResults={};const base=updateFighter;
    updateFighter=(f,raw)=>{
     if(frame===moment&&f.id===0){
@@ -46,12 +51,16 @@ const fighter=process.env.LIMIT_FIGHTER||'dragoon';
      limitResults[e.detail]=[frame,matchTime,LimitBreak.scene?.time??null,fighters[1].damage,fighters[1].pendingLaunch?.speed??null];
     }
    });
-  },{moment,fighter});
-  await Promise.all(pages.map(page=>page.waitForFunction(id=>Object.values(limitResults).some(r=>r[3]===70+(LimitBreak.profile(id)?.finalStrike.damage??28)),fighter)));
+  },{moment,damage:expected.damage});
+  await Promise.all(pages.map(page=>page.waitForFunction(damage=>Object.values(limitResults).some(r=>r[3]===damage),expected.damage)));
   const duration=await host.evaluate(id=>LimitBreak.profile(id)?.duration??0,fighter);
   const snapshots=await Promise.all(pages.map(page=>page.evaluate(cinematic=>Object.fromEntries(Object.entries(limitResults).filter(([,v])=>cinematic?v[2]!==null:v[4]!==null)),duration>0)));
   assert.deepEqual(snapshots[0],snapshots[1]);
-  if(duration)assert.equal(Object.keys(snapshots[0]).length,duration);
+  if(duration){
+   assert.equal(Object.keys(snapshots[0]).length,duration);
+   assert.deepEqual([...new Set(Object.values(snapshots[0]).map(v=>v[3]))],[70,...expected.damageSteps]);
+   assert.ok(Object.values(snapshots[0]).every(v=>v[4]===null),'cinematic hits keep launch reserved for the finisher');
+  }
   else assert.ok(Object.values(snapshots[0]).some(v=>v[2]===null&&v[4]>0),'instant launch without a cinematic');
   assert.deepEqual(errors,[]);
   console.log(JSON.stringify({fighter,matchingFrames:Object.keys(snapshots[0]).length,hostSettingSynced:true,errors}));

@@ -13,7 +13,7 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
   assert.deepEqual(filtered,await p.evaluate(()=>Roster.selectable.filter(d=>LimitBreak.hasCinematic(d.id)).map(d=>d.id)));
   assert.ok(['dragoon','roxas'].every(id=>filtered.includes(id)));
   const checked=await p.evaluate(async()=>{
-   await ArtLoader.prepare([{character:'vivi'},{character:'cubivore'},{character:'diana'},{character:'nargacuga'},{character:'nightraven'}]);
+   await ArtLoader.prepare([{character:'vivi'},{character:'nargacuga'},{character:'diana'},{character:'nightraven'}]);
    const check=(ok,message)=>{if(!ok)throw Error(message);};
    state='pause';training=false;setupStage('0');
    const floor=platforms.find(p=>p.main);
@@ -31,7 +31,7 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
    const chord={...emptyInput(),shareStock:true,jab:true,special:true,attackHeld:true,specialHeld:true};
    function attempt(f){LimitBreak.charge(f,100);frame++;updateFighter(f,chord);check(f.attack?.standardLimit,f.characterId+' activated standard move');}
    function resolve(f){f.timer=f.attack.activeStart;resolveCombat();}
-   check(LimitBreak.artPrepared([{character:'vivi',team:['diana','cubivore']}],true),'standard roster requests no cinematic assets');
+   check(LimitBreak.artPrepared([{character:'vivi',team:['diana','nargacuga']}],true),'standard roster requests no cinematic assets');
    let n=0;
    for(const {id} of Roster.definitions){
     if(LimitBreak.hasCinematic(id))continue;
@@ -44,7 +44,7 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
     }
    }
    {
-    const [a,b,c]=reset('cubivore',40,true);
+    const [a,b,c]=reset('nargacuga',40,true);
     attempt(a);resolve(a);
     check(b.damage===98&&c.damage===70&&!c.pendingLaunch,'first connected opponent only');
    }
