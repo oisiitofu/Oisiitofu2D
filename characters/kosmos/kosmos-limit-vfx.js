@@ -43,7 +43,7 @@ const KosmosLimitVFX=(()=>{
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,103);ctx.lineTo(W,151);ctx.lineTo(W,720);ctx.lineTo(0,672);
   ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=KosmosLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -55,21 +55,21 @@ const KosmosLimitVFX=(()=>{
   art.grid('poses',index,3,2,x,y,384);
   const emitter=ease((t-100)/25)*(1-ease((t-183)/20));
   const recoil=ease((t-155)/15),bx=x+mix(71,45,recoil),by=y-mix(207,190,recoil);
-  art.effect(0,bx,by,76+emitter*27,97+emitter*27,emitter*.77,t*.032);
+  art.glow(0,bx,by,76+emitter*27,97+emitter*27,emitter*.77,t*.032);
   const fan=ease((t-142)/5)*(1-ease((t-160)/17));
-  art.effect(2,bx+294,by+32,674,411,fan*.68);
+  art.strike(2,bx+294,by+32,674,411,fan*.68);
   const discharge=ease((t-159)/5)*(1-ease((t-178)/8));
-  art.effect(1,bx+278,by+48,588,196,discharge*.78,.16);
+  art.strike(1,bx+278,by+48,588,196,discharge*.78,.16);
   volley(t,bx+38,by+9,1077,449);
-  art.effect(3,1080,443,439+shock*651,360+shock*286,shock*.90);
+  art.strike(3,1080,443,439+shock*651,360+shock*286,shock*.90);
   const echo=ease((t-183)/6)*(1-ease((t-197)/31));
-  art.effect(0,1080,443,520+ease((t-183)/36)*578,329+echo*95,echo*.48,-t*.013);
+  art.glow(0,1080,443,520+ease((t-183)/36)*578,329+echo*95,echo*.48,-t*.013);
   ctx.restore();flash('175,221,255',shock*.20);
   bands(t,'#0a1326');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/KosmosLimitProfile.contactHold;
-  art.effect(3,x,y,141+52*p,134,1-p*.52,0,face);
+  art.strike(3,x,y,141+52*p,134,1-p*.52,0,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

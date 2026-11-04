@@ -43,7 +43,7 @@ const MarukuLimitVFX=(()=>{
   const s=1.038+time*.001,opacity=ease(t/4)*(1-ease((t-23)/10));
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,150);ctx.lineTo(W,76);ctx.lineTo(W,658);ctx.lineTo(0,730);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=MarukuLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -53,28 +53,28 @@ const MarukuLimitVFX=(()=>{
   frameClip();ctx.fillStyle='#100c2c';ctx.fillRect(0,0,W,H);
   art.image('court',-180-t*.20,-106+ease((t-56)/61)*63,W+306,H+165);
   world(cx,cy,z,roll,face,t,Math.max(burst,hole*.27));
-  art.effect(0,x,y-156,344+wish*368,350+wish*318,wish*.82,t*.022);
+  art.glow(0,x,y-156,344+wish*368,350+wish*318,wish*.82,t*.022);
   halves(t,x,y,index);
   const hx=802,hy=435,r=275*hole;
   if(r>0){
    ctx.save();ctx.globalAlpha=hole*.92;ctx.fillStyle='#080418';
    ctx.beginPath();ctx.ellipse(hx,hy,r*.72,r*.64,0,0,TAU);ctx.fill();ctx.restore();
   }
-  art.effect(1,hx,hy,119+hole*602,105+hole*538,hole*.95,-t*.092);
+  art.glow(1,hx,hy,119+hole*602,105+hole*538,hole*.95,-t*.092);
   orbit(t,hx,hy,hole);
   const scale=mix(1.85,.68,hole);
   ctx.save();ctx.globalAlpha=1-hole*.61;
   target(opponent,tx,ty-mix(0,20,hole),-.09+hole*t*.047-ease((t-191)/29)*1.54,scale);
   ctx.restore();
   const beam=ease((t-106)/7)*(1-ease((t-116)/14));
-  art.effect(2,x+395,y-88,860,195+beam*54,beam*.92,.084);
-  art.effect(3,873,430,474+burst*699,398+burst*336,burst*.90);
+  art.strike(2,x+395,y-88,860,195+beam*54,beam*.92,.084);
+  art.strike(3,873,430,474+burst*699,398+burst*336,burst*.90);
   ctx.restore();flash('236,186,255',Math.max(burst*.21,wish*.12));
   bands(t,'#130d2e');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/MarukuLimitProfile.contactHold;
-  art.effect(3,x,y,155+55*p,137,1-p*.56,0,face);
+  art.strike(3,x,y,155+55*p,137,1-p*.56,0,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

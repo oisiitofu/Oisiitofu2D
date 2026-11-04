@@ -6,7 +6,7 @@ const RoxasLimitVFX=(()=>{
  function load(){
   return pending??=Promise.all(assets.map(async name=>{
    const image=new Image();image.src='characters/roxas/assets/limit-'+name+'.webp';
-   await image.decode();art[name]=image;
+   await image.decode();art[name]=name==='impact'?LimitCinematic.keyImpactAtlas(image):image;
   })).catch(error=>{pending=null;throw error;});
  }
  const cap=t=>Math.min(1,Math.max(0,t)),smooth=t=>{const p=cap(t);return p*p*(3-2*p);};
@@ -44,10 +44,12 @@ const RoxasLimitVFX=(()=>{
   if(alpha<=0||!art[name])return;
   ctx.save();ctx.globalAlpha*=alpha;ctx.drawImage(art[name],x,y,w,h);ctx.restore();
  }
- function stamp(n,x,y,w,h,alpha,angle=0){
+ function stamp(n,x,y,w,h,alpha,angle=0,glow=false){
   const im=art.impact;if(!im||alpha<=0)return;
   const iw=im.width/2,ih=im.height/2;
-  ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha*=alpha;ctx.globalCompositeOperation='screen';
+  ctx.save();ctx.translate(x,y);ctx.rotate(angle);
+  ctx.globalAlpha*=glow?alpha:LimitCinematic.impactOpacity(alpha);
+  ctx.globalCompositeOperation=glow?'screen':'source-over';
   ctx.drawImage(im,n%2*iw+2,Math.floor(n/2)*ih+2,iw-4,ih-4,-w/2,-h/2,w,h);ctx.restore();
  }
  function hero(x,y,pose,opacity=1){
@@ -83,7 +85,7 @@ const RoxasLimitVFX=(()=>{
   }
   const height=last?940:740;
   stamp(1,x,y-height*.46,width*2.5,height,p*(last?1:.82));
-  ctx.save();ctx.globalCompositeOperation='screen';ctx.globalAlpha=p*.91;
+  ctx.save();ctx.globalAlpha=LimitCinematic.impactOpacity(p);
   const ray=ctx.createLinearGradient(x-width*.43,0,x+width*.43,0);
   ray.addColorStop(0,'#ffb95800');ray.addColorStop(.34,'#ffc87a66');ray.addColorStop(.49,'#fff9dc');ray.addColorStop(.56,'#ffffff');ray.addColorStop(.78,'#ffd59466');ray.addColorStop(1,'#ffb95800');
   ctx.fillStyle=ray;ctx.fillRect(x-width*.43,y-height,width*.86,height);
@@ -129,7 +131,8 @@ const RoxasLimitVFX=(()=>{
   const k=1+cap(time/51)*.07;
   ctx.save();ctx.globalAlpha*=fade;ctx.beginPath();
   ctx.moveTo(-20,232);ctx.lineTo(W+20,77);ctx.lineTo(W+20,640);ctx.lineTo(-20,747);ctx.closePath();
-  ctx.clip();ctx.fillStyle='#220f2f';ctx.fillRect(0,0,W,H);image('cutin',W*.5-W*k/2-22+t*1.4,H*.5-H*k/2,W*k,H*k);ctx.restore();
+  ctx.clip();ctx.fillStyle='#220f2f';ctx.fillRect(0,0,W,H);
+  LimitCinematic.cutIn(art.cutin,W/2-22+t*1.4,H/2,W*k,710*k);ctx.restore();
  }
  function draw({target,face,time}){
   const t=RoxasLimitProfile.shotTime(time);
@@ -142,7 +145,7 @@ const RoxasLimitVFX=(()=>{
   seal(t,923,622,ring*.63);
   if(t>=61&&t<=179){
    const glow=smooth((t-61)/32)*(1-smooth((t-170)/10));
-   stamp(3,x,y-120,290+18*Math.sin(t*.08),113,glow*.64,t*.012);
+   stamp(3,x,y-120,290+18*Math.sin(t*.08),113,glow*.64,t*.012,true);
    sparks(t,x,y-147,glow*.54);
   }
   if(t>=23&&t<39)hero(x-52,y+3,index,.22);

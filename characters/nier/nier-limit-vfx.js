@@ -1,7 +1,7 @@
 'use strict';
 const NierLimitVFX=(()=>{
  const {assets,unit,ease,camera,frameClip,world,target,bands,flash}=LimitCinematic;
- const art=assets('nier',['cutin','poses','court','effects','book','shadow']);
+ const art=assets('nier',['cutin','poses','court','effects','book','shadow'],{blackMatte:true});
  const shots=[
   [0,480,648,831,632,680,487,1.13,-.016,0],
   [26,536,649,838,626,711,477,1.23,.018,1],
@@ -48,7 +48,7 @@ const NierLimitVFX=(()=>{
   if(t>=29)return;
   const p=ease(t/7)*unit((29-t)/6),s=1+Math.min(time,55)*.0011;
   ctx.save();ctx.beginPath();ctx.rect(0,103,W,598);ctx.clip();
-  art.image('cutin',W*(1-s)*.5,H*(1-s)*.5,W*s,H*s,p);
+  art.portrait(s,p);
   ctx.restore();
  }
  function dust(t,opacity){
@@ -74,16 +74,16 @@ const NierLimitVFX=(()=>{
   if(t>=25&&t<94)art.grid('book',0,1,1,x-59,y-208-lift*109,142,{alpha:lift*(1-leave),anchorY:.5});
   if(t>=35&&t<87){
    const aura=ease((t-35)/18)*(1-ease((t-74)/13));
-   art.effect(2,x,y-98,368,390,aura*.82,t*.025);
+   art.glow(2,x,y-98,368,390,aura*.82,t*.025);
    sigils(t,x,y-140,aura*.8);
   }
   if(seal){
    spiral(t,926,626,seal*.74);
    for(let i=0;i<4;i++){
     const rise=ease((t-158-i*4)/9)*(1-ease((t-207)/19));
-    if(rise>0)art.effect(1,790+i*85,638-rise*147,171,321,rise*.83,(i-1.5)*.16);
+    if(rise>0)art.strike(1,790+i*85,638-rise*147,171,321,rise*.83,(i-1.5)*.16);
    }
-   if(t<178)art.effect(0,tx-58,ty-109,291,227,ease((t-149)/10)*(1-ease((t-170)/8)),.13);
+   if(t<178)art.strike(0,tx-58,ty-109,291,227,ease((t-149)/10)*(1-ease((t-170)/8)),.13);
   }
   target(opponent,tx,ty,-.18+shock*.48-(t>=207?.64:0));
   if(changing<1)normal(t<29?index:t<48?1:2,x,y,1-changing);
@@ -93,9 +93,9 @@ const NierLimitVFX=(()=>{
   }
   if(hit&&age<17){
    const [,hx,hy,angle,direction]=hit,weight=unit(1-age/17),final=hit[0]===206;
-   art.effect(3,hx,hy,final?760:498,final?285:161,weight,angle,direction);
+   art.strike(3,hx,hy,final?760:498,final?285:161,weight,angle,direction);
    sigils(t,hx,hy,weight*.65);
-   if(final)art.effect(2,tx,ty-97,490+age*13,390+age*9,weight*.91,angle-t*.013);
+   if(final)art.strike(2,tx,ty-97,490+age*13,390+age*9,weight*.91,angle-t*.013);
   }
   ctx.restore();
   flash('255,142,149',shock*.16);bands(t,'#070507');cutin(t,time);
@@ -105,7 +105,7 @@ const NierLimitVFX=(()=>{
  }
  function drawContact({x,y,time,face}){
   const p=time/NierLimitProfile.contactHold;
-  art.effect(3,x,y,150+55*p,88+22*p,1-p*.54,-.12,face);
+  art.strike(3,x,y,150+55*p,88+22*p,1-p*.54,-.12,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

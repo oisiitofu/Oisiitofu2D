@@ -25,7 +25,7 @@ const FioraLimitVFX=(()=>{
    const px=x+Math.cos(theta)*257,py=y-118+Math.sin(theta)*164;
    const heading=Math.atan2(Math.cos(theta)*164,-Math.sin(theta)*257);
    const flare=ease((t-119)/14)*(1-ease((t-171)/13));
-   art.effect(2,px-38*Math.cos(heading),py-38*Math.sin(heading),316,107,flare*show*.70,heading);
+   art.glow(2,px-38*Math.cos(heading),py-38*Math.sin(heading),316,107,flare*show*.70,heading);
    ctx.save();ctx.translate(px,py);ctx.rotate(heading);
    art.image('drones',-72,-44,144,88,show);ctx.restore();
   }
@@ -34,7 +34,7 @@ const FioraLimitVFX=(()=>{
   const s=1.04+time*.001,opacity=ease(t/4)*(1-ease((t-22)/10));
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,151);ctx.lineTo(W,73);ctx.lineTo(W,655);ctx.lineTo(0,733);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=FioraLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -45,22 +45,22 @@ const FioraLimitVFX=(()=>{
   const heading=t>=85&&t<138?-1:1;
   target(opponent,tx,ty,-.08+Math.sin(t*.171)*.16-ease((t-181)/28)*1.46);
   const trail=ease((t-121)/7)*(1-ease((t-142)/13));
-  art.effect(2,x+197,y-131,566,171,trail*.81,.17,-1);
+  art.glow(2,x+197,y-131,566,171,trail*.81,.17,-1);
   art.grid('poses',index,3,2,x,y,381,{face:heading});
   drones(t,991,530);
   for(const [at,kind,angle,dir] of [[43,0,-.27,1],[64,1,.37,1],[88,0,-.62,-1],[128,1,.22,-1],[143,0,-.64,1],[166,1,.55,1]]){
    const slash=ease((t-at)/4)*(1-ease((t-at-3)/12));
-   art.effect(kind,tx-dir*52,ty-103,392,251,slash*.90,angle,dir);
+   art.strike(kind,tx-dir*52,ty-103,392,251,slash*.90,angle,dir);
   }
-  art.effect(3,1006,463,397+finish*561,324+finish*405,finish*.92);
+  art.strike(3,1006,463,397+finish*561,324+finish*405,finish*.92);
   const imprint=ease((t-180)/10)*(1-ease((t-198)/31));
-  art.effect(3,1006,570,607+imprint*423,166+imprint*60,imprint*.61,-.08);
+  art.glow(3,1006,570,607+imprint*423,166+imprint*60,imprint*.61,-.08);
   ctx.restore();flash('255,214,161',finish*.17);
   bands(t,'#131b23');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/FioraLimitProfile.contactHold;
-  art.effect(0,x,y,162+43*p,132,1-p*.52,-.29,face);
+  art.strike(0,x,y,162+43*p,132,1-p*.52,-.29,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

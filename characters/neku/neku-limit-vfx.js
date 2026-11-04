@@ -85,7 +85,7 @@ const NekuLimitVFX=(()=>{
   if(t>=31)return;
   const a=ease(t/5)*(1-ease((t-24)/7)),s=1+time*.001;
   ctx.save();ctx.beginPath();ctx.moveTo(0,97);ctx.lineTo(W,59);ctx.lineTo(W,688);ctx.lineTo(0,750);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,a);ctx.restore();
+  art.portrait(s,a);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=NekuLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -100,14 +100,14 @@ const NekuLimitVFX=(()=>{
   art.grid('poses',index,3,2,x,y,350);
   badges(t,x+145,y-161);
   const psychic=ease((t-43)/7)*(1-ease((t-58)/16));
-  art.effect(0,793,484,790,246,psychic,-.13);
+  art.strike(0,793,484,790,246,psychic,-.13);
   const lightning=Math.max(ease((t-61)/7)*(1-ease((t-73)/14)),ease((t-113)/9)*(1-ease((t-126)/13)));
-  art.effect(1,841,478,654,244,lightning);
+  art.strike(1,841,478,654,244,lightning);
   const punch=ease((t-94)/7)*(1-ease((t-101)/17));
-  art.effect(2,tx,ty-120,493,322,punch,-.13,-1);
+  art.strike(2,tx,ty-120,493,322,punch,-.13,-1);
   if(fusion>0){
-   art.effect(1,921,484,1100,323,fusion*.70);
-   art.effect(3,1015,485,811+fusion*400,500+fusion*245,fusion*.80);
+   art.glow(1,921,484,1100,323,fusion*.70);
+   art.strike(3,1015,485,811+fusion*400,500+fusion*245,fusion*.80);
    speedInk(t,1003,492,fusion*.98);
   }
   ctx.restore();flash('255,219,176',hit*.22+fusion*.10);
@@ -115,7 +115,7 @@ const NekuLimitVFX=(()=>{
  }
  function drawContact({x,y,time,face}){
   const p=time/NekuLimitProfile.contactHold;
-  art.effect(0,x,y,163+52*p,99,1-p*.62,-.12,face);
+  art.strike(0,x,y,163+52*p,99,1-p*.62,-.12,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

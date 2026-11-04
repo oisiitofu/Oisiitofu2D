@@ -123,11 +123,31 @@ const LimitCinematic=(()=>{
  const unit=n=>Math.max(0,Math.min(1,n));
  const ease=n=>{const p=unit(n);return p*p*(3-2*p);};
  const mix=(a,b,n)=>a+(b-a)*n;
- function assets(id,names){
-  const images={};let pending;
+ function cutIn(image,x,y,minWidth,minHeight,alpha=1){
+  if(!image||alpha<=0)return;
+  const scale=Math.max(minWidth/image.naturalWidth,minHeight/image.naturalHeight);
+  const w=image.naturalWidth*scale,h=image.naturalHeight*scale;
+  ctx.save();ctx.globalAlpha*=alpha;ctx.drawImage(image,x-w/2,y-h/2,w,h);ctx.restore();
+ }
+ const impactOpacity=strength=>unit(strength*1.65);
+ // Some early atlases use black as their transparent backdrop.
+ function keyImpactAtlas(image){
+  const layer=document.createElement('canvas');layer.width=image.width;layer.height=image.height;
+  const paint=layer.getContext('2d',{willReadFrequently:true});paint.drawImage(image,0,0);
+  const pixels=paint.getImageData(0,0,layer.width,layer.height),{data}=pixels;
+  for(let i=0;i<data.length;i+=4){
+   const light=Math.max(data[i],data[i+1],data[i+2]);
+   data[i+3]=Math.min(255,Math.max(0,(light-14)*2.4));
+  }
+  paint.putImageData(pixels,0,0);return layer;
+ }
+ function assets(id,names,{blackMatte=false}={}){
+  const images={};let pending,impactAtlas;
   const load=()=>pending??=Promise.all(names.map(async name=>{
    const image=new Image();image.src='characters/'+id+'/assets/limit-'+name+'.webp';
-   await image.decode();images[name]=image;
+   await image.decode();
+   if(name==='effects')impactAtlas=blackMatte?keyImpactAtlas(image):image;
+   images[name]=image;
   })).catch(error=>{pending=null;throw error;});
   function image(name,x,y,w,h,alpha=1){
    if(!images[name]||alpha<=0)return;
@@ -139,14 +159,17 @@ const LimitCinematic=(()=>{
    ctx.save();ctx.translate(x,y);ctx.scale(face,1);ctx.globalAlpha*=alpha;
    ctx.drawImage(src,(n%cols)*sw,Math.floor(n/cols)*sh,sw,sh,-w*anchorX,-height*anchorY,w,height);ctx.restore();
   }
-  function effect(n,x,y,w,h,alpha=1,angle=0,face=1){
-   const src=images.effects;if(!src||alpha<=0)return;
+  function drawEffect(src,blend,n,x,y,w,h,alpha,angle,face){
+   if(!src||alpha<=0)return;
    const sw=src.width/2,sh=src.height/2;
    ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.scale(face,1);ctx.globalAlpha*=alpha;
-   ctx.globalCompositeOperation='screen';
+   ctx.globalCompositeOperation=blend;
    ctx.drawImage(src,n%2*sw+2,Math.floor(n/2)*sh+2,sw-4,sh-4,-w/2,-h/2,w,h);ctx.restore();
   }
-  return {load,image,grid,effect,get prepared(){return names.every(name=>!!images[name]);}};
+  const strike=(n,x,y,w,h,strength=1,angle=0,face=1)=>drawEffect(impactAtlas,'source-over',n,x,y,w,h,impactOpacity(strength),angle,face);
+  const glow=(n,x,y,w,h,alpha=1,angle=0,face=1)=>drawEffect(images.effects,'screen',n,x,y,w,h,alpha,angle,face);
+  const portrait=(zoom,alpha)=>cutIn(images.cutin,W/2,H/2,W*zoom,710*zoom,alpha);
+  return {load,image,grid,strike,glow,portrait,get prepared(){return names.every(name=>!!images[name]);}};
  }
  function camera(shots,t){
   const next=shots.findIndex(s=>s[0]>t);
@@ -175,5 +198,5 @@ const LimitCinematic=(()=>{
   if(!Accessibility.flash||strength<=0)return;
   ctx.fillStyle='rgba('+rgb+','+unit(strength)*Accessibility.flash+')';ctx.fillRect(0,0,W,H);
  }
- return {unit,ease,mix,assets,camera,frameClip,world,target,bands,flash};
+ return {unit,ease,mix,assets,camera,frameClip,world,target,bands,flash,cutIn,impactOpacity,keyImpactAtlas};
 })();

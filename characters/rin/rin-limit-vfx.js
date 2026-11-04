@@ -40,7 +40,7 @@ const RinLimitVFX=(()=>{
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,152);ctx.lineTo(W,86);ctx.lineTo(W,652);ctx.lineTo(0,725);
   ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=RinLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -51,22 +51,22 @@ const RinLimitVFX=(()=>{
   art.image('court',-105-ease((t-124)/46)*103,-100+ease((t-48)/78)*43,W+315,H+161);
   world(cx,cy,z,roll,face,t,cut);
   const grass=ease((t-95)/37)*(1-ease((t-178)/29));
-  art.effect(2,699,581,1312,271,grass*.75,.03);
+  art.glow(2,699,581,1312,271,grass*.75,.03);
   target(opponent,tx,ty,-.06+Math.sin(t*.14)*.08-ease((t-156)/29)*1.36);
   wake(t,sprint);art.grid('poses',index,3,2,x,y,386);
   const early=ease((t-39)/4)*(1-ease((t-45)/13));
-  art.effect(0,859,484,340,226,early*.87,-.23);
-  art.effect(1,x-154,y-140,537,152,sprint*.91,.01);
-  art.effect(0,1167,456,444+cut*197,315+cut*75,cut*.78,-.18);
-  art.effect(3,1148,443,388+cut*376,334+cut*213,cut*.76);
+  art.strike(0,859,484,340,226,early*.87,-.23);
+  art.glow(1,x-154,y-140,537,152,sprint*.91,.01);
+  art.strike(0,1167,456,444+cut*197,315+cut*75,cut*.78,-.18);
+  art.strike(3,1148,443,388+cut*376,334+cut*213,cut*.76);
   const edge=ease((t-154)/6)*(1-ease((t-169)/30));
-  art.effect(1,1168,446,767+edge*419,125+edge*31,edge*.84,-.05);
+  art.glow(1,1168,446,767+edge*419,125+edge*31,edge*.84,-.05);
   petals(t,breeze*.69);
   ctx.restore();flash('220,246,159',cut*.15);bands(t,'#18241d');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/RinLimitProfile.contactHold;
-  art.effect(0,x,y,150+48*p,134,1-p*.52,-.25,face);
+  art.strike(0,x,y,150+48*p,134,1-p*.52,-.25,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

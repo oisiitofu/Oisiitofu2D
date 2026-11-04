@@ -26,7 +26,7 @@ const MidnaLimitVFX=(()=>{
   const phase=ease((t-63)/43),s=1-phase;
   for(let i=0;i<3;i++){
    const angle=t*.072+i*TAU/3;
-   art.effect(0,x+Math.cos(angle)*(30+s*230),y-141+Math.sin(angle)*(18+s*155),
+   art.glow(0,x+Math.cos(angle)*(30+s*230),y-141+Math.sin(angle)*(18+s*155),
     89+s*47,92+s*51,alpha*(.80+i*.08),angle);
   }
  }
@@ -47,7 +47,7 @@ const MidnaLimitVFX=(()=>{
   const s=1.032+time*.0011,opacity=ease(t/4)*(1-ease((t-23)/9));
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,100);ctx.lineTo(W,151);ctx.lineTo(W,715);ctx.lineTo(0,664);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=MidnaLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -59,20 +59,20 @@ const MidnaLimitVFX=(()=>{
   world(cx,cy,z,roll,face,t,Math.max(strike,transform*.40));
   target(opponent,tx,ty,-.11+Math.sin(t*.13)*.13-ease((t-179)/32)*1.26);
   const rise=ease((t-104)/17),revert=ease((t-207)/25);
-  art.effect(1,481,376,490+transform*331,449+transform*249,transform*.84,-t*.012);
+  art.glow(1,481,376,490+transform*331,449+transform*249,transform*.84,-t*.012);
   art.grid('poses',index,3,2,x,y,330,{alpha:1-rise+revert});
   art.grid('beast',beastIndex,2,2,bx,by,height,{alpha:rise*(1-revert)});
   fragments(t,x,y);
   const sweep=ease((t-163)/7)*(1-ease((t-176)/17));
-  art.effect(2,937,457,513+sweep*446,233+sweep*118,sweep*.93,.032);
-  art.effect(3,1066,467,464+strike*635,345+strike*276,strike*.87);
+  art.strike(2,937,457,513+sweep*446,233+sweep*118,sweep*.93,.032);
+  art.strike(3,1066,467,464+strike*635,345+strike*276,strike*.87);
   blocks(t,1066,461,ease((t-177)/5)*(1-ease((t-187)/37)));
   ctx.restore();flash('163,241,204',Math.max(strike*.17,transform*.15));
   bands(t,'#131522');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/MidnaLimitProfile.contactHold;
-  art.effect(2,x,y,171+56*p,128,1-p*.56,.10,face);
+  art.strike(2,x,y,171+56*p,128,1-p*.56,.10,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

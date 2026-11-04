@@ -53,22 +53,22 @@ const RieszLimitVFX=(()=>{
    const lateral=Math.sin(n*2.39996)*360,px=x+lateral*(1-p*.68),py=y-730+735*p*p;
    if(p<1){
     stone(n,px,py,61+n%4*27,n+t*.052);
-    art.effect(0,px-lateral*.10,py-105,212,51,unit(p*3)*.57,Math.PI*.46);
-   }else art.effect(3,x+lateral*.32,y-22,245,113,unit((1.28-p)/.28)*.73);
+    art.glow(0,px-lateral*.10,py-105,212,51,unit(p*3)*.57,Math.PI*.46);
+   }else art.glow(3,x+lateral*.32,y-22,245,113,unit((1.28-p)/.28)*.73);
   }
  }
  function lastMeteor(t,x,y){
   const p=(t-165)/23;
   if(p<0||p>=1)return;
   const px=x+245*(1-p),py=y-940*(1-p*p);
-  art.effect(0,px+43,py-145,470,96,ease(p*2)*.82,1.27);
+  art.glow(0,px+43,py-145,470,96,ease(p*2)*.82,1.27);
   stone(1,px,py,200+130*p,-.31+p*1.39);
  }
  function cutin(t,time){
   if(t>=31)return;
   const s=1+time*.001,alpha=ease(t/5)*(1-ease((t-24)/7));
   ctx.save();ctx.beginPath();ctx.moveTo(0,117);ctx.lineTo(W,55);ctx.lineTo(W,691);ctx.lineTo(0,752);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,alpha);ctx.restore();
+  art.portrait(s,alpha);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=RieszLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -81,20 +81,20 @@ const RieszLimitVFX=(()=>{
   art.image('sky',-87,-38+(1-sky)*57,W+180,H+95,sky);
   ctx.fillStyle='rgba(12,34,67,'+(strike*.23)+')';ctx.fillRect(0,0,W,H);
   world(cx,cy,z,roll,face,t,Math.max(impact,strike*.57));
-  art.effect(1,912,344,370+gust*380,420+gust*375,gust*.68);
+  art.glow(1,912,344,370+gust*380,420+gust*375,gust*.68);
   swirl(t,914,628,gust);lift(t,913,627);
   target(opponent,tx,ty,.15+gust*.34-impact*.73-ease((t-198)/23));
   art.grid('poses',index,3,2,x,y,346);
   fall(t,1000,628);lastMeteor(t,996,550);
   const thrust=ease((t-48)/6)*(1-ease((t-56)/14));
-  art.effect(0,tx-59,ty-125,600,190,thrust,.03);
-  art.effect(2,996,375,576+strike*310,529+strike*321,strike*.82,.02);
-  art.effect(3,997,632,773+strike*460,228+strike*110,strike*.86);
+  art.strike(0,tx-59,ty-125,600,190,thrust,.03);
+  art.strike(2,996,375,576+strike*310,529+strike*321,strike*.82,.02);
+  art.strike(3,997,632,773+strike*460,228+strike*110,strike*.86);
   ctx.restore();flash('231,252,197',impact*.23);bands(t,'#101e2e');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/RieszLimitProfile.contactHold;
-  art.effect(0,x,y,165+50*p,87,1-p*.56,-.09,face);
+  art.strike(0,x,y,165+50*p,87,1-p*.56,-.09,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

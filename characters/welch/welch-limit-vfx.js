@@ -25,7 +25,7 @@ const WelchLimitVFX=(()=>{
   const x=mix(648,994,ease((t-90)/43))-impact*59;
   const y=fall>0?-508+fall*fall*711-impact*38:443-tossed*966;
   const opacity=1-ease((t-195)/12);
-  art.effect(2,x,y-147,324+fall*164,730,fall*(1-impact)*.7);
+  art.glow(2,x,y-147,324+fall*164,730,fall*(1-impact)*.7);
   ctx.save();ctx.translate(x,y);ctx.rotate(rotation);
   art.image('prop',-width/2,-height/2,width,height,opacity);ctx.restore();
  }
@@ -50,7 +50,7 @@ const WelchLimitVFX=(()=>{
   if(t>=30)return;
   const s=1+time*.001,a=ease(t/5)*(1-ease((t-23)/7));
   ctx.save();ctx.beginPath();ctx.moveTo(0,101);ctx.lineTo(W,67);ctx.lineTo(W,687);ctx.lineTo(0,751);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,a);ctx.restore();
+  art.portrait(s,a);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=WelchLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -69,19 +69,19 @@ const WelchLimitVFX=(()=>{
   art.grid('poses',t>=178&&t<207?4:index,3,2,x,y,356);
   for(const [i,at] of [34,49,66].entries()){
    const strength=ease((t-at)/4)*(1-ease((t-at-6)/13));
-   art.effect(0,tx-34,ty-121,249+i*54,192+i*45,strength*.90,(i-1)*.34);
+   art.strike(0,tx-34,ty-121,249+i*54,192+i*45,strength*.90,(i-1)*.34);
   }
   const launch=ease((t-87)/11)*(1-ease((t-106)/17));
-  art.effect(1,698,362,592,222,launch*.76,-.78);
+  art.strike(1,698,362,592,222,launch*.76,-.78);
   fallingProp(t);
-  art.effect(3,991,595,760+blast*441,406+blast*203,blast*.81);
+  art.strike(3,991,595,760+blast*441,406+blast*203,blast*.81);
   stars(t,993,579,blast);
   ctx.restore();flash('255,215,223',hit*.22);
   bands(t,'#15172b');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/WelchLimitProfile.contactHold;
-  art.effect(0,x,y,154+43*p,112,1-p*.59,-.09,face);
+  art.strike(0,x,y,154+43*p,112,1-p*.59,-.09,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

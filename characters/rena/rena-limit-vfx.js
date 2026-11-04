@@ -18,7 +18,7 @@ const RenaLimitVFX=(()=>{
   const p=unit((t-start)/(end-start));
   if(p<=0||p>=1)return;
   const path=p*p,opacity=ease(p*8);
-  art.effect(1,mix(sx,ex,path),mix(sy,ey,path),size,size*.66,opacity,
+  art.strike(1,mix(sx,ex,path),mix(sy,ey,path),size,size*.66,opacity,
    Math.atan2(ey-sy,ex-sx)-.78);
  }
  function fragments(t,x,y){
@@ -42,7 +42,7 @@ const RenaLimitVFX=(()=>{
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,143);ctx.lineTo(W,72);ctx.lineTo(W,662);ctx.lineTo(0,733);
   ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=RenaLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -51,26 +51,26 @@ const RenaLimitVFX=(()=>{
   art.image('court',-115-t*.19,-108+ease((t-85)/63)*65,W+290,H+150);
   world(cx,cy,z,roll,face,t,hit);
   const circle=ease((t-48)/24)*(1-ease((t-178)/33));
-  art.effect(0,958,545,440+circle*235,190+circle*106,circle*.84,t*.002);
-  art.effect(0,470,172,420,244,circle*.76,-t*.006);
+  art.glow(0,958,545,440+circle*235,190+circle*106,circle*.84,t*.002);
+  art.glow(0,470,172,420,244,circle*.76,-t*.006);
   target(opponent,tx,ty,-.07+Math.sin(t*.19)*circle*.11-ease((t-173)/28)*1.12);
   art.grid('poses',index,3,2,x,y,347);
   const falls=[[73,105,653,-96,908,554,262],[94,117,1130,-73,987,538,214],[106,131,756,-92,927,562,280],[129,172,923,-345,961,560,747]];
   for(const [start,end,sx,sy,ex,ey,size] of falls){
    fallingStar(t,start,end,sx,sy,ex,ey,size);
    const splash=ease((t-end)/4)*(1-ease((t-end-4)/14));
-   if(end!==172)art.effect(2,ex,ey-62,225,242,splash*.72);
+   if(end!==172)art.strike(2,ex,ey-62,225,242,splash*.72);
   }
   const flare=ease((t-166)/8)*(1-ease((t-184)/28));
   const ring=ease((t-171)/10)*(1-ease((t-182)/36));
-  art.effect(2,954,325,455+flare*188,602+flare*255,flare*.93);
-  art.effect(3,963,595,452+ease((t-171)/34)*1020,166+ring*197,ring*.86);
+  art.strike(2,954,325,455+flare*188,602+flare*255,flare*.93);
+  art.glow(3,963,595,452+ease((t-171)/34)*1020,166+ring*197,ring*.86);
   fragments(t,963,554);
   ctx.restore();flash('255,228,168',hit*.23);bands(t,'#0b1226');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/RenaLimitProfile.contactHold;
-  art.effect(2,x,y,124+46*p,144,1-p*.55,.12,face);
+  art.strike(2,x,y,124+46*p,144,1-p*.55,.12,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

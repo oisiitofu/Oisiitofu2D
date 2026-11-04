@@ -39,7 +39,7 @@ const FaytLimitVFX=(()=>{
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,107);ctx.lineTo(W,145);ctx.lineTo(W,720);ctx.lineTo(0,669);
   ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=FaytLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -52,20 +52,20 @@ const FaytLimitVFX=(()=>{
   art.image('court',-110-t*.16,-102+ease((t-43)/81)*46,W+284,H+162);
   world(cx,cy,z,roll,face,t,shock);
   const spread=ease((t-52)/33),pulse=Math.sin(t*.14)*.035;
-  art.effect(0,x-25,y-198,(285+spread*380)*(1+pulse),196+spread*186,wings*.90,-.08);
+  art.glow(0,x-25,y-198,(285+spread*380)*(1+pulse),196+spread*186,wings*.90,-.08);
   target(opponent,tx,ty,-.17-beam*.30-ease((t-181)/22)*1.08);
   art.grid('poses',index,3,2,x,y,369);
   const bx=x+110+beam*46,by=y-178,extension=ease((t-149)/11),length=178+extension*1280;
   filaments(t,bx,by,charge,beam);
-  art.effect(2,bx,by,117+charge*145,106+charge*136,charge*.96,t*.07);
-  art.effect(1,bx+length*.43,by,length,134+beam*188,beam*.99);
-  art.effect(3,1161,363,415+blast*747,255+blast*309,blast*.84);
+  art.glow(2,bx,by,117+charge*145,106+charge*136,charge*.96,t*.07);
+  art.strike(1,bx+length*.43,by,length,134+beam*188,beam*.99);
+  art.strike(3,1161,363,415+blast*747,255+blast*309,blast*.84);
   ctx.restore();flash('175,214,255',shock*.19);
   bands(t,'#081122');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/FaytLimitProfile.contactHold;
-  art.effect(3,x,y,155+64*p,129,1-p*.64,-.22,face);
+  art.strike(3,x,y,155+64*p,129,1-p*.64,-.22,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

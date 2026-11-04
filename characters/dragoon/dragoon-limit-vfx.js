@@ -94,7 +94,7 @@ const DragoonLimitVFX=(()=>{
  }
  function stamp(index,x,y,w,h,alpha,angle=0){
   if(!art.impact||alpha<=0)return;
-  ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha*=alpha;ctx.globalCompositeOperation='screen';
+  ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha*=LimitCinematic.impactOpacity(alpha);
   ctx.drawImage(art.impact[index],-w/2,-h/2,w,h);
   ctx.restore();
  }
@@ -139,7 +139,7 @@ const DragoonLimitVFX=(()=>{
    const opacity=smooth(clamp01(t/7))*clamp01((27-t)/6);
    ctx.save();ctx.globalAlpha*=opacity;ctx.fillStyle='#060d23b8';ctx.fillRect(0,107,W,560);
    const scale=1+clamp01(time/45)*.05;
-   bitmap('cutin',85+(26-t)*11-45*(scale-1),95,1335*scale,580*scale);
+   LimitCinematic.cutIn(art.cutin,85+(26-t)*11-45*(scale-1)+1335*scale/2,385,1335*scale,0);
    ctx.restore();
   }
  }

@@ -40,8 +40,8 @@ const TwoBLimitVFX=(()=>{
    const spread=Math.sin(n*2.39)*103;
    const px=mix(x,tx+spread*.4,progress),py=mix(y,ty+spread,progress);
    const angle=Math.atan2(ty+spread-y,tx-x);
-   art.effect(0,px,py,134+n%4*14,24,unit(1.42-progress),angle);
-   if(progress>=.96)art.effect(1,tx+spread*.39,ty+spread,174,120,unit((1.42-progress)/.42),angle);
+   art.strike(0,px,py,134+n%4*14,24,unit(1.42-progress),angle);
+   if(progress>=.96)art.strike(1,tx+spread*.39,ty+spread,174,120,unit((1.42-progress)/.42),angle);
   }
   ctx.restore();
  }
@@ -49,7 +49,7 @@ const TwoBLimitVFX=(()=>{
   if(weight<=0)return;
   for(const offset of [-22,28]){
    const length=295+Math.sin(t*.88+offset)*40;
-   art.effect(0,x-length*.37,y+offset,length,41,weight*.85,-.13,-1);
+   art.glow(0,x-length*.37,y+offset,length,41,weight*.85,-.13,-1);
   }
  }
  function fragments(t,x,y,weight){
@@ -80,7 +80,7 @@ const TwoBLimitVFX=(()=>{
   if(t>=30)return;
   const alpha=ease(t/5)*(1-ease((t-23)/7)),s=1+time*.00095;
   ctx.save();ctx.beginPath();ctx.moveTo(0,115);ctx.lineTo(W,63);ctx.lineTo(W,676);ctx.lineTo(0,755);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,alpha);
+  art.portrait(s,alpha);
   ctx.fillStyle='rgba(255,148,83,'+(alpha*.12)+')';ctx.fillRect(0,115,W,3);
   ctx.restore();
  }
@@ -108,15 +108,15 @@ const TwoBLimitVFX=(()=>{
   reticle(tx,ty-110,t,signal);
   const laser=ease((t-126)/5)*(1-ease((t-144)/14));
   const dx=tx-px,dy=ty-105-py;
-  art.effect(0,px+dx*.5,py+dy*.5,Math.hypot(dx,dy)*1.23,134,laser,Math.atan2(dy,dx));
-  art.effect(1,tx,ty-92,261,183,laser*.9);
+  art.strike(0,px+dx*.5,py+dy*.5,Math.hypot(dx,dy)*1.23,134,laser,Math.atan2(dy,dx));
+  art.strike(1,tx,ty-92,261,183,laser*.9);
   const pilot=1-ease((t-54)/10)+ease((t-143)/10);
   art.grid('poses',index,3,2,x,y,338,{alpha:unit(pilot)});
   if(t>=175&&t<207){
    const slash=ease((t-175)/7)*(1-ease((t-187)/20));
-   art.effect(2,978,474,1350+slash*110,432,slash,-.26);
+   art.strike(2,978,474,1350+slash*110,432,slash,-.26);
   }
-  art.effect(3,1066,588,692+blast*450,458+blast*208,blast);
+  art.strike(3,1066,588,692+blast*450,458+blast*208,blast);
   fragments(t,1051,586,unit(1-(t-195)/43)*blast);
   ctx.restore();
   bladeWake(t,face);
@@ -125,7 +125,7 @@ const TwoBLimitVFX=(()=>{
  }
  function drawContact({x,y,time,face}){
   const p=time/TwoBLimitProfile.contactHold;
-  art.effect(2,x,y,156+62*p,109,1-p*.60,-.1,face);
+  art.strike(2,x,y,156+62*p,109,1-p*.60,-.1,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

@@ -1,7 +1,7 @@
 'use strict';
 const TerryLimitVFX=(()=>{
  const {assets,ease,unit,camera,frameClip,world,target,bands,flash}=LimitCinematic;
- const art=assets('terry',['cutin','poses','court','effects','boss']);
+ const art=assets('terry',['cutin','poses','court','effects','boss'],{blackMatte:true});
  // Time, Terry, opponent, camera center, lens, roll, and Terry pose.
  const shots=[
   [0,463,639,843,629,673,482,1.12,-.03,0],
@@ -52,7 +52,7 @@ const TerryLimitVFX=(()=>{
   if(t>=28)return;
   const opacity=ease(t/7)*unit((28-t)/7),s=1+time*.0013;
   ctx.save();ctx.beginPath();ctx.moveTo(0,138);ctx.lineTo(W,65);ctx.lineTo(W,647);ctx.lineTo(0,759);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=TerryLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -65,8 +65,8 @@ const TerryLimitVFX=(()=>{
   if(t>=43&&t<100){
    const field=ease((t-43)/27)*(1-ease((t-91)/9));
    summoning(t,842,640,field*.82);crack(t,842,637,field*.9);
-   art.effect(0,842,630,435,139,field*.94);
-   if(t>=73)art.effect(1,843,226,280,816,unit(1-(t-73)/26));
+   art.glow(0,842,630,435,139,field*.94);
+   if(t>=73)art.strike(1,843,226,280,816,unit(1-(t-73)/26));
   }
   if(t>=96){
    const appears=ease((t-96)/29)*(1-ease((t-218)/24));
@@ -76,16 +76,16 @@ const TerryLimitVFX=(()=>{
   }
   target(opponent,tx,ty,shock*.38-(t>=197?.66:.12));
   boy(index,x,y);
-  if(t>=25&&t<43)art.effect(2,tx-47,ty-91,277,153,unit(1-(t-25)/18));
+  if(t>=25&&t<43)art.strike(2,tx-47,ty-91,277,153,unit(1-(t-25)/18));
   if(t>=153&&t<181){
    const hit=unit(1-(t-153)/28);
-   art.effect(3,tx+9,ty-65,303,235,hit*.88);
+   art.strike(3,tx+9,ty-65,303,235,hit*.88);
    crack(t,tx,ty+15,hit*.62);
   }
   if(t>=198){
    const power=unit(1-(t-198)/42);
-   art.effect(3,951,604,490+(t-198)*13,354,power);
-   art.effect(0,949,626,535+(t-198)*15,165,power);
+   art.strike(3,951,604,490+(t-198)*13,354,power);
+   art.glow(0,949,626,535+(t-198)*15,165,power);
    crack(t,950,628,power);rubble(t,950,630,power);
   }
   ctx.restore();
@@ -96,7 +96,7 @@ const TerryLimitVFX=(()=>{
  }
  function drawContact({x,y,time,face}){
   const p=time/TerryLimitProfile.contactHold;
-  art.effect(2,x,y,112+52*p,74+23*p,1-p*.55,-.08,face);
+  art.strike(2,x,y,112+52*p,74+23*p,1-p*.55,-.08,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

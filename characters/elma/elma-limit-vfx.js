@@ -36,14 +36,14 @@ const ElmaLimitVFX=(()=>{
   const arch=heavy?104:19;
   const px=mix(x,tx,p),py=mix(y,ty,p)-Math.sin(p*Math.PI)*arch;
   const slope=ty-y-Math.cos(p*Math.PI)*Math.PI*arch,angle=Math.atan2(slope,tx-x);
-  art.effect(2,px-32*Math.cos(angle),py-32*Math.sin(angle),heavy?346:208,heavy?102:65,1,angle);
+  art.strike(2,px-32*Math.cos(angle),py-32*Math.sin(angle),heavy?346:208,heavy?102:65,1,angle);
  }
  function cutin(t,time){
   const s=1.035+time*.001,opacity=ease(t/4)*(1-ease((t-23)/10));
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,140);ctx.lineTo(W,81);ctx.lineTo(W,659);ctx.lineTo(0,718);
   ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=ElmaLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -56,30 +56,30 @@ const ElmaLimitVFX=(()=>{
   target(opponent,tx,ty,-.11+Math.sin(t*.17)*.14-ease((t-186)/32)*1.30);
   const boarding=ease((t-92)/17),departure=ease((t-231)/25),skellOpacity=ease((t-83)/13)*(1-departure);
   const thrust=ease((t-81)/10)*(1-ease((t-101)/15))+ease((t-207)/12)*(1-departure);
-  art.effect(1,sx-50,sy+12,354,402,thrust*.86);
+  art.glow(1,sx-50,sy+12,354,402,thrust*.86);
   art.grid('skell',skellIndex,2,2,sx,sy,height,{alpha:skellOpacity});
   art.grid('poses',index,3,2,x,y,380,{alpha:1-boarding+departure});
-  art.effect(3,sx,651,486,163,touchdown*.48);
+  art.glow(3,sx,651,486,163,touchdown*.48);
   reticle(tx,ty-105,t);
   for(const at of [40,54]){
    const shot=ease((t-at)/2)*(1-ease((t-at-2)/7));
-   art.effect(0,x+142,y-166,265,132,shot*.91);
+   art.strike(0,x+142,y-166,265,132,shot*.91);
   }
   for(const at of [144,153,162,176]){
    const heavy=at===176;
    const shot=ease((t-at)/2)*(1-ease((t-at-2)/7));
    const muzzleX=sx+(heavy?208:235),muzzleY=sy-(heavy?439:215);
-   art.effect(0,muzzleX+52,muzzleY,heavy?390:252,heavy?234:134,shot*.93,heavy?-.24:.14);
+   art.strike(0,muzzleX+52,muzzleY,heavy?390:252,heavy?234:134,shot*.93,heavy?-.24:.14);
    shell(t,at,muzzleX,muzzleY,1094,482,heavy);
    const hit=ease((t-at-8)/3)*(1-ease((t-at-11)/11));
-   if(!heavy)art.effect(3,1065,487,240,229,hit*.74);
+   if(!heavy)art.strike(3,1065,487,240,229,hit*.74);
   }
-  art.effect(3,1093,507,432+blast*741,331+blast*300,blast*.91);
+  art.strike(3,1093,507,432+blast*741,331+blast*300,blast*.91);
   ctx.restore();flash('255,191,133',blast*.20);bands(t,'#12151e');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/ElmaLimitProfile.contactHold;
-  art.effect(0,x,y,147+44*p,128,1-p*.55,-.21,face);
+  art.strike(0,x,y,147+44*p,128,1-p*.55,-.21,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

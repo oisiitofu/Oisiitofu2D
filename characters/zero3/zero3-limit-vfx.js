@@ -46,7 +46,7 @@ const Zero3LimitVFX=(()=>{
   if(t>=30)return;
   const s=1+time*.0011,alpha=ease(t/6)*(1-ease((t-23)/7));
   ctx.save();ctx.beginPath();ctx.moveTo(0,112);ctx.lineTo(W,69);ctx.lineTo(W,704);ctx.lineTo(0,758);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,alpha);ctx.restore();
+  art.portrait(s,alpha);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=Zero3LimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -65,16 +65,16 @@ const Zero3LimitVFX=(()=>{
   if(breath>0){
    const fromX=drX+197,fromY=drY-213;
    const dx=tx-fromX,dy=ty-88-fromY;
-   art.effect(1,fromX+dx*.54,fromY+dy*.54,Math.hypot(dx,dy)*1.53,264,breath,Math.atan2(dy,dx));
-   art.effect(3,tx,ty-45,340,264,breath*.64);
+   art.strike(1,fromX+dx*.54,fromY+dy*.54,Math.hypot(dx,dy)*1.53,264,breath,Math.atan2(dy,dx));
+   art.strike(3,tx,ty-45,340,264,breath*.64);
   }
   art.grid('poses',index,3,2,x,y,345);
   if(t>=176&&t<218){
    const slash=ease((t-176)/12)*(1-ease((t-195)/23));
-   art.effect(0,tx-45,ty-105,1040+slash*380,462,slash,.72);
+   art.strike(0,tx-45,ty-105,1040+slash*380,462,slash,.72);
   }
-  art.effect(2,1040,480,745+bloom*320,596+bloom*210,bloom*.88);
-  art.effect(3,1041,615,899+bloom*230,294+bloom*170,bloom*.91);
+  art.strike(2,1040,480,745+bloom*320,596+bloom*210,bloom*.88);
+  art.glow(3,1041,615,899+bloom*230,294+bloom*170,bloom*.91);
   petals(t,1018,655,bloom*.93+breath*.23);
   ctx.restore();
   flash('255,200,178',impact*.29+bloom*.12);
@@ -82,7 +82,7 @@ const Zero3LimitVFX=(()=>{
  }
  function drawContact({x,y,time,face}){
   const p=time/Zero3LimitProfile.contactHold;
-  art.effect(0,x,y,162+55*p,89,1-p*.58,-.2,face);
+  art.strike(0,x,y,162+55*p,89,1-p*.58,-.2,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

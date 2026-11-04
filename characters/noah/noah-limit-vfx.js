@@ -29,7 +29,7 @@ const NoahLimitVFX=(()=>{
    ctx.lineTo(W,sign>0?-400:H+400);ctx.lineTo(0,sign>0?-400:H+400);ctx.closePath();ctx.clip();
    art.image('court',x+18*sign*rift,y-38*sign*rift,width,height);ctx.restore();
   }
-  art.effect(3,W*.5,383,W*1.11,147+rift*98,edge*.87,-.07);
+  art.glow(3,W*.5,383,W*1.11,147+rift*98,edge*.87,-.07);
  }
  function shards(t){
   const age=t-183,opacity=1-ease(age/54);
@@ -50,7 +50,7 @@ const NoahLimitVFX=(()=>{
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,105);ctx.lineTo(W,154);ctx.lineTo(W,722);ctx.lineTo(0,673);
   ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=NoahLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -63,18 +63,18 @@ const NoahLimitVFX=(()=>{
   target(opponent,tx,ty,-.10+Math.sin(t*.15)*.14-ease((t-183)/31)*1.24);
   art.grid('poses',index,3,2,x,y,383);
   const drawBlade=ease((t-55)/7)*(1-ease((t-62)/15));
-  art.effect(1,x+44,y-153,384,126,drawBlade*.82,-.41,-1);
+  art.glow(1,x+44,y-153,384,126,drawBlade*.82,-.41,-1);
   for(const [at,angle] of [[81,-.35],[102,.29],[144,-.85]]){
    const slash=ease((t-at)/4)*(1-ease((t-at-4)/13));
-   art.effect(0,tx-76,ty-112,434,280,slash*.91,angle);
+   art.strike(0,tx-76,ty-112,434,280,slash*.91,angle);
   }
-  art.effect(2,1167,396,398+hit*375,325+hit*317,hit*.87,-.08);
+  art.strike(2,1167,396,398+hit*375,325+hit*317,hit*.87,-.08);
   shards(t);
   ctx.restore();flash('175,225,255',hit*.19);bands(t,'#081124');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/NoahLimitProfile.contactHold;
-  art.effect(0,x,y,156+42*p,130,1-p*.54,-.29,face);
+  art.strike(0,x,y,156+42*p,130,1-p*.54,-.29,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

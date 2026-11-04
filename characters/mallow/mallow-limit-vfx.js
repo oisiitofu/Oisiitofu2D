@@ -51,7 +51,7 @@ const MallowLimitVFX=(()=>{
   const s=1.036+time*.001,opacity=ease(t/4)*(1-ease((t-23)/10));
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,102);ctx.lineTo(W,141);ctx.lineTo(W,718);ctx.lineTo(0,680);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=MallowLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -63,21 +63,21 @@ const MallowLimitVFX=(()=>{
   const hop=[113,133,154].reduce((sum,at)=>sum+Math.sin(Math.PI*unit((t-at)/15))*54,0);
   target(opponent,tx,ty-hop,-.08+Math.sin(t*.15)*.11-ease((t-180)/30)*1.43);
   art.grid('poses',index,3,2,x,y,319);
-  art.effect(0,973,351,339+thunder*138,405+thunder*176,thunder*.90);
+  art.strike(0,973,351,339+thunder*138,405+thunder*176,thunder*.90);
   bouncingStar(t);
   for(const [,at,,,ex,ey,,size] of landings){
    const rebound=ease((t-at)/3)*(1-ease((t-at-4)/13));
-   art.effect(1,ex,ey+67,212+size*.6,146,rebound*.91);
-   art.effect(2,ex,ey+142,208+size*.51,97,rebound*.63);
+   art.strike(1,ex,ey+67,212+size*.6,146,rebound*.91);
+   art.glow(2,ex,ey+142,208+size*.51,97,rebound*.63);
   }
-  art.effect(3,1033,476,443+burst*620,334+burst*268,burst*.92);
+  art.strike(3,1033,476,443+burst*620,334+burst*268,burst*.92);
   sparkle(t,1033,478,ease((t-179)/5)*(1-ease((t-196)/32)));
   ctx.restore();flash('255,226,159',Math.max(burst*.20,thunder*.09));
   bands(t,'#251e43');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/MallowLimitProfile.contactHold;
-  art.effect(3,x,y,138+48*p,133,1-p*.55,0,face);
+  art.strike(3,x,y,138+48*p,133,1-p*.55,0,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

@@ -22,8 +22,8 @@ const ValkyrieLimitVFX=(()=>{
   const sx=mix(fromX,901,throwProgress),sy=mix(fromY,365,throwProgress);
   const angle=mix(-1.36,.479,ease((t-142)/21));
   const opacity=conjure*(1-ease((t-178)/11));
-  art.effect(2,sx-130*Math.cos(angle),sy-130*Math.sin(angle),684,125,opacity*ease((t-162)/6)*.94,angle);
-  art.effect(1,sx,sy,322+conjure*151,128,opacity,angle);
+  art.strike(2,sx-130*Math.cos(angle),sy-130*Math.sin(angle),684,125,opacity*ease((t-162)/6)*.94,angle);
+  art.glow(1,sx,sy,322+conjure*151,128,opacity,angle);
  }
  function feathers(t,x,y){
   const appear=ease((t-90)/27)*(1-ease((t-182)/45));
@@ -42,7 +42,7 @@ const ValkyrieLimitVFX=(()=>{
   const s=1.03+time*.0011,opacity=ease(t/4)*(1-ease((t-24)/10));
   if(!opacity)return;
   ctx.save();ctx.beginPath();ctx.moveTo(0,92);ctx.lineTo(W,143);ctx.lineTo(W,724);ctx.lineTo(0,673);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=ValkyrieLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -55,18 +55,18 @@ const ValkyrieLimitVFX=(()=>{
   art.grid('poses',index,3,2,x,y,379);
   for(const [at,angle] of [[46,-.61],[66,.42],[84,-.83]]){
    const slash=ease((t-at)/4)*(1-ease((t-at-5)/13));
-   art.effect(0,tx-90,ty-99,370,264,slash*.90,angle);
+   art.strike(0,tx-90,ty-99,370,264,slash*.90,angle);
   }
   spear(t,x,y);
-  art.effect(3,1091,460,439+strike*742,305+strike*316,strike*.91);
+  art.strike(3,1091,460,439+strike*742,305+strike*316,strike*.91);
   const shock=ease((t-184)/7)*(1-ease((t-199)/34));
-  art.effect(3,1075,594,470+ease((t-185)/29)*694,156+shock*66,shock*.64);
+  art.glow(3,1075,594,470+ease((t-185)/29)*694,156+shock*66,shock*.64);
   ctx.restore();flash('251,215,152',strike*.22);
   bands(t,'#100e1e');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/ValkyrieLimitProfile.contactHold;
-  art.effect(0,x,y,157+44*p,138,1-p*.52,-.28,face);
+  art.strike(0,x,y,157+44*p,138,1-p*.52,-.28,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

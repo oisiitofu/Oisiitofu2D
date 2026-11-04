@@ -48,7 +48,7 @@ const EdeaLimitVFX=(()=>{
   if(t>=30)return;
   const s=1+time*.00095,alpha=ease(t/5)*(1-ease((t-23)/7));
   ctx.save();ctx.beginPath();ctx.moveTo(0,108);ctx.lineTo(W,56);ctx.lineTo(W,681);ctx.lineTo(0,748);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,alpha);ctx.restore();
+  art.portrait(s,alpha);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=EdeaLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -62,19 +62,19 @@ const EdeaLimitVFX=(()=>{
   trail(t);
   target(opponent,tx,ty,-.12+beat*.54-ease((t-188)/26)*1.08);
   drawFighter(index,x,y,t>=116&&t<157?-1:1);
-  art.effect(0,x+95,y-166,340,362,guard*.72,-.08);
+  art.glow(0,x+95,y-166,340,362,guard*.72,-.08);
   reserve(t,x,y);
   for(const {at,duration,cell,angle,face:direction,y:height,w,h} of cuts){
    const strength=ease((t-at)/6)*(1-ease((t-at-7)/(duration-7)));
-   art.effect(cell,cell===3?994:tx-31,cell===3?487:ty+height,w,h,strength*(cell===3?.76:.9),angle,direction);
+   art.strike(cell,cell===3?994:tx-31,cell===3?487:ty+height,w,h,strength*(cell===3?.76:.9),angle,direction);
   }
-  art.effect(1,1067,545,1160,292,final*.74,.15);
+  art.strike(1,1067,545,1160,292,final*.74,.15);
   ctx.restore();flash('255,225,197',beat*.12+final*.12);
   bands(t,'#131824');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/EdeaLimitProfile.contactHold;
-  art.effect(1,x,y,156+52*p,97,1-p*.61,-.10,face);
+  art.strike(1,x,y,156+52*p,97,1-p*.61,-.10,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

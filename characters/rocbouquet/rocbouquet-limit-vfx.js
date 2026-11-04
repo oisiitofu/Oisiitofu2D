@@ -62,14 +62,14 @@ const RocbouquetLimitVFX=(()=>{
   for(let i=0;i<bolts.length;i++){
    const [offset,angle,width]=bolts[i],delay=i===2?0:i+3;
    const strength=power*ease((t-183-delay)/5)*(i===2?1:.61);
-   art.effect(1,tx+offset,ty-329,width+strength*112,710,strength,angle);
+   art.strike(1,tx+offset,ty-329,width+strength*112,710,strength,angle);
   }
  }
  function cutin(t,time){
   if(t>=31)return;
   const a=ease(t/5)*(1-ease((t-24)/7)),s=1+time*.0009;
   ctx.save();ctx.beginPath();ctx.moveTo(0,101);ctx.lineTo(W,55);ctx.lineTo(W,684);ctx.lineTo(0,752);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,a);ctx.restore();
+  art.portrait(s,a);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=RocbouquetLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -82,20 +82,20 @@ const RocbouquetLimitVFX=(()=>{
   world(cx,cy,z,roll,face,t,Math.max(shock*.75,hit));
   reflection(index,x,y);
   current(t,tx,655,pull*.62+shock*.38);
-  art.effect(2,tx,ty-190,530+storm*324,419+storm*235,storm*.80,-t*.023);
+  art.glow(2,tx,ty-190,530+storm*324,419+storm*235,storm*.80,-t*.023);
   feathers(t,tx,ty-185,storm*.91);
   target(opponent,tx,ty,-.06-pull*.23+hit*.64-ease((t-197)/25)*.89);
   wing(index,x,y);
   weave(t,x+106,y-186,tx,ty-141,pull*.84);
-  art.effect(0,tx,ty-130,270+pull*183,251+pull*143,pull*.81);
+  art.glow(0,tx,ty-130,270+pull*183,251+pull*143,pull*.81);
   lightning(t,908,615,shock);
-  art.effect(3,909,599,755+shock*378,347+shock*177,shock*.88);
+  art.strike(3,909,599,755+shock*378,347+shock*177,shock*.88);
   ctx.restore();flash('226,201,255',hit*.27+shock*.11);
   bands(t,'#0f1020');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/RocbouquetLimitProfile.contactHold;
-  art.effect(0,x,y,138+42*p,110,1-p*.57,-.10,face);
+  art.strike(0,x,y,138+42*p,110,1-p*.57,-.10,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

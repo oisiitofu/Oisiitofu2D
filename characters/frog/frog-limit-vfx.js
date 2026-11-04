@@ -41,7 +41,7 @@ const FrogLimitVFX=(()=>{
   if(t>=30)return;
   const s=1+time*.001,opacity=ease(t/5)*(1-ease((t-23)/7));
   ctx.save();ctx.beginPath();ctx.moveTo(0,102);ctx.lineTo(W,67);ctx.lineTo(W,690);ctx.lineTo(0,747);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,opacity);ctx.restore();
+  art.portrait(s,opacity);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=FrogLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -52,22 +52,22 @@ const FrogLimitVFX=(()=>{
   art.image('court',-119-t*.18,-85,W+291,H+166);
   world(cx,cy,z,roll,face,t,Math.max(split*.7,hit));
   cliffs(t);
-  art.effect(1,889,340,330+split*146,749+split*183,split*.92);
-  art.effect(3,896,603,850,294,split*.78);
+  art.strike(1,889,340,330+split*146,749+split*183,split*.92);
+  art.glow(3,896,603,850,294,split*.78);
   fragments(t,894,519,ease((t-108)/9)*(1-ease((t-132)/33)));
   target(opponent,tx,ty,-.13+hit*.53-ease((t-194)/25)*.91);
   art.grid('poses',index,3,2,x,y,347);
   const glow=ease((t-55)/29)*(1-ease((t-100)/13));
-  art.effect(1,x+17,y-285,106+glow*96,245+glow*122,glow*.59);
-  art.effect(0,734,504,827,345,split*.84,.16);
-  art.effect(2,1004,489,1210+final*392,408+final*93,final*.75,-.15);
-  art.effect(3,1007,628,711+final*377,262+final*65,final*.57);
+  art.glow(1,x+17,y-285,106+glow*96,245+glow*122,glow*.59);
+  art.strike(0,734,504,827,345,split*.84,.16);
+  art.strike(2,1004,489,1210+final*392,408+final*93,final*.75,-.15);
+  art.glow(3,1007,628,711+final*377,262+final*65,final*.57);
   ctx.restore();flash('243,255,198',split*.13+hit*.25);
   bands(t,'#0e1818');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/FrogLimitProfile.contactHold;
-  art.effect(0,x,y,160+57*p,98,1-p*.60,-.11,face);
+  art.strike(0,x,y,160+57*p,98,1-p*.60,-.11,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();

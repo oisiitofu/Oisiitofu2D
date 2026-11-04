@@ -45,7 +45,7 @@ const TressaLimitVFX=(()=>{
   const p=(t-35)/38;if(p<0||p>=1)return;
   const px=x+77+p*266,py=y-158-Math.sin(p*Math.PI)*164;
   coin(px,py,23,t*.21,unit((1-p)*6));
-  art.effect(0,px,py,131,117,ease((t-49)/9)*(1-ease((t-61)/12)));
+  art.glow(0,px,py,131,117,ease((t-49)/9)*(1-ease((t-61)/12)));
  }
  function payout(t,x,y,weight){
   if(weight<=0)return;
@@ -60,7 +60,7 @@ const TressaLimitVFX=(()=>{
   if(t>=31)return;
   const s=1+time*.001,alpha=ease(t/5)*(1-ease((t-24)/7));
   ctx.save();ctx.beginPath();ctx.moveTo(0,114);ctx.lineTo(W,63);ctx.lineTo(W,683);ctx.lineTo(0,758);ctx.closePath();ctx.clip();
-  art.image('cutin',W*(1-s)/2,H*(1-s)/2,W*s,H*s,alpha);ctx.restore();
+  art.portrait(s,alpha);ctx.restore();
  }
  function draw({target:opponent,face,time}){
   const t=TressaLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
@@ -77,18 +77,18 @@ const TressaLimitVFX=(()=>{
   coinToss(t,x,y);
   for(const [i,at] of [76,102,130].entries()){
    const beat=ease((t-at)/5)*(1-ease((t-at-6)/13));
-   art.effect(1,tx-24,ty-111,536,174,beat*.88,i===1?.31:-.15,i===1?-1:1);
+   art.strike(1,tx-24,ty-111,536,174,beat*.88,i===1?.31:-.15,i===1?-1:1);
   }
-  art.effect(2,tx,ty-151,380+charge*260,368+charge*240,charge*.89,t*.023);
-  art.effect(1,969,479,984+strike*400,233+strike*165,strike*.73,-.12);
-  art.effect(3,1027,521,661+strike*486,397+strike*218,strike*.74);
+  art.glow(2,tx,ty-151,380+charge*260,368+charge*240,charge*.89,t*.023);
+  art.strike(1,969,479,984+strike*400,233+strike*165,strike*.73,-.12);
+  art.strike(3,1027,521,661+strike*486,397+strike*218,strike*.74);
   payout(t,1000,527,ease((t-189)/8)*(1-ease((t-214)/25)));
   ctx.restore();flash('255,231,168',hit*.25);
   bands(t,'#1e1719');cutin(t,time);ctx.restore();
  }
  function drawContact({x,y,time,face}){
   const p=time/TressaLimitProfile.contactHold;
-  art.effect(1,x,y,165+51*p,92,1-p*.58,-.08,face);
+  art.strike(1,x,y,165+51*p,92,1-p*.58,-.08,face);
  }
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();
