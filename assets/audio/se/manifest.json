@@ -510,6 +510,18 @@
     ],
     "django-limit-purify": [
       "/assets/audio/se/django-limit-purify.wav"
+    ],
+    "twinbee-limit-volley": [
+      "/assets/audio/se/twinbee-limit-volley.wav"
+    ],
+    "twinbee-limit-bigshot": [
+      "/assets/audio/se/twinbee-limit-bigshot.wav"
+    ],
+    "hayabusa-limit-blade": [
+      "/assets/audio/se/hayabusa-limit-blade.wav"
+    ],
+    "hayabusa-limit-inferno": [
+      "/assets/audio/se/hayabusa-limit-inferno.wav"
     ]
   },
   "impactDesign": {

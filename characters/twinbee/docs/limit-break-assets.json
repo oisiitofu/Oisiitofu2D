@@ -1,0 +1,47 @@
+{
+  "mode": "built-in imagegen",
+  "id": "twinbee",
+  "assets": [
+    {
+      "path": "characters/twinbee/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-6e56c06d-9674-4863-b8ea-e51543aedb7a.png",
+      "prompt": "Use case: stylized-concept. Premium high quality anime fighting-game cinematic artwork, richly painted, crisp silhouette and clean linework, dramatic readable lighting, no text/logos/watermarks. Preserve exact character design and proportions from references. Wide 16:9 heroic cut-in of TwinBee, cute glossy blue spherical aircraft robot, large featureless yellow round canopy (NO eyes or face), blue upward oval lobes, white glove hands and white side wings, pink boots. Exact ref1 design. Dynamic diagonal forward flying attack with both hands stretched toward screen RIGHT, collecting a gleaming golden bell above palm. Brilliant cyan and pink shot trails, three small blue duplicates receding into distance, fantastical floating islands with fluffy clouds and distant candycolored fortress. Main body large foreground detailed same cartoon style, rich blue/pink/gold, sharp readable contours.",
+      "references": [
+        "characters/twinbee/assets/twinbee-selection.png",
+        "characters/twinbee/assets/twinbee-arsenal.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/twinbee/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-14d2c99d-c16d-426d-9e9e-a9aaeecfd3fa.png",
+      "prompt": "undefinedWide panoramic fantastical floating islands high above clouds, colorful blue/pink domed candy fortress far in distance, blue sky pink clouds, waterfalls falling to cloud sea, flower covered grassy platforms on far sides only. Vast OPEN center blue sky for airborne combat, no foreground ground, no characters or weapons/attack effects, no text. Detailed anime painted environment, clear bright air with strong depth.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/twinbee/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-fed7fe30-e2a3-423b-8dd9-6a180b53fc7f.png",
+      "prompt": "Use case: precise-object-edit. Change ONLY bottom-right quadrant of this 2x2 sprite sheet: REMOVE the golden projectile, every golden light streak, glow and star sparkle in front of TwinBee's hands, leaving complete white glove hands thrust forward and clear transparent air ahead. Keep the exact existing blue round robot, yellow featureless canopy, white wings/gloves, pink feet, original body proportions and all other three poses EXACTLY unchanged. No painted replacement background; true alpha transparency everywhere outside the 4 robot sprites. No text, shadows, haze or checkerboard. All poses completely inside their own equal quadrant. These are character sprites only, NO attack effects embedded anywhere.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-953c2192-842f-4462-aacf-3da7b93cf71e.png"
+      ],
+      "bounds": [
+        "0,0,768,512",
+        "768,0,1536,512",
+        "0,512,680,1024",
+        "700,512,1536,1024"
+      ]
+    },
+    {
+      "path": "characters/twinbee/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-05a3c4e6-e4a4-44a7-899e-31bb8ffe7fa4.png",
+      "prompt": "Use case: precise-object-edit. Keep these exact four detailed colorful shooting effects but fix atlas spacing. EQUAL 2x2 grid, each effect completely isolated with 100px transparent margin on ALL sides of its own quadrant; shrink each until no tips cut, no overlap. Top left twin cyan pellets flying RIGHT long left tails. Top right complete pink gold starburst. Bottom left perfect ROUND gold charge orb rainbow halo and short left trail. Bottom right complete ROUND huge golden white Big Shot orb with all cyan pink spiraling ribbons and long LEFT trail, round head on RIGHT, restore missing right edge. Dense opaque cores, strong colored outlines, soft transparent perimeters. Actual transparent background no panels/text/characters. 1536x1536.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-ecddb5d5-c878-455b-ba39-7d526428358c.png"
+      ],
+      "bounds": []
+    }
+  ],
+  "invariants": "既存のキャラ本体・待機・通常技・必殺技・選択画像は変更しない。専用全身ポーズと素材の比率・透過を保持。"
+}

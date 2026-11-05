@@ -1,0 +1,47 @@
+{
+  "mode": "built-in imagegen",
+  "id": "hayabusa",
+  "assets": [
+    {
+      "path": "characters/hayabusa/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-0dff979f-52ad-4231-ae7f-0c8785da1883.png",
+      "prompt": "Use case: stylized-concept. Premium high quality anime fighting-game cinematic artwork, richly painted, crisp silhouette and clean linework, dramatic readable lighting, no text/logos/watermarks. Preserve exact character design and proportions from references. Wide 16:9 dramatic Ryu Hayabusa cut-in. Exact silver pointed forehead headguard with central black diamond, black face mask revealing intense brown eyes, black swept hair, black scarf long torn tails, sleeveless black leather ninja armor muscular arms armored black bracers, black gloves. Same mature face from portrait, NO redesign. Dragon Sword sharp silver katana gold circular guard black/red wrapped hilt held diagonally before body, red ultimate-technique aura flowing around blade. Fierce focused eyes clearly visible. Ancient ruined Japanese temple at stormy moonlit night, fiery embers and vivid red slash streaks, detailed cinematic high quality, face never obscured.",
+      "references": [
+        "characters/hayabusa/assets/hayabusa-selection.png",
+        "characters/hayabusa/assets/hayabusa-reference.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/hayabusa/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-c1584cee-83e2-4b41-a0a8-31c4dd9495ef.png",
+      "prompt": "undefinedWide panoramic ruined Japanese mountain temple courtyard at midnight, wet dark stone ground foreground with broken tiles, roof silhouettes and shattered torii gate far behind, large moon through stormclouds, misty mountain pines and ember flecks. Detailed richly painted anime cinematic environment, deep blue gray low value empty central arena for ninja combat, restrained warm red embers. No people/creatures/weapons/attack effects/text.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/hayabusa/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-3e6926cc-cf93-4ffd-b930-618696a72d32.png",
+      "prompt": "Use case: precise-object-edit. Correct only weapon design and atlas spacing. Preserve this EXACT Ryu Hayabusa face costume and adult body proportions, all 4 poses and exact black scarf silver foreheadguard. The Dragon Sword must be a LONG elegant Japanese katana, narrow gently curved silver blade, gold circular guard, long red/black wrapped hilt; NOT a short broad machete or dagger. Blade length should equal roughly 65% of standing full body height. Top-left: blade down and back diagonal. Top-right: fully extended katana across RIGHT direction, entire long tip visible. Bottom-left: full long blade UP RIGHT. Bottom-right: casting ninpo open hand right, long sword sheathed behind back. Rearrange poses within an EQUAL 2x2 grid to keep EVERY sword tip, scarf and boot fully inside its own quadrant with clear 80px transparent margins. Bodies same scale and height in every cell, no pose overlapping cells. Wide high resolution atlas 2048x1536. Genuine transparent background, NO effects or labels, no extra figures.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-ba88dd2e-1316-49a7-912d-12cfa66889e8.png"
+      ],
+      "bounds": [
+        "0,0,720,464",
+        "720,0,1440,464",
+        "0,465,720,1080",
+        "720,465,1440,1080"
+      ]
+    },
+    {
+      "path": "characters/hayabusa/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-4e6ee259-dbe6-45e0-94da-fbfb3149fde4.png",
+      "prompt": "Use case: precise-object-edit. Keep exact four red ninja attack effects, fix ONLY spacing/uncut tips. Put them in equal 2x2 grid on genuine transparent background. SHRINK EVERY effect to occupy at most 70% of width AND 70% of height of its own quadrant, leaving wide fully transparent margins all around, so no points or flames touch image edges or other cells. Top-left rightward convex red white crescent, top-right complete upward crescent with restored upper tip, bottom-left full rightward fiery round projectile with entire left flame tail, bottom-right complete round gold orange inferno burst. Keep dense fully opaque cores with crisp dark colored rims, and naturally transparent outer glow. No text or borders or characters. All four fully inside individual cells, 1536x1536.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-79c15a1c-677a-4878-850e-b4f815a824d0.png"
+      ],
+      "bounds": []
+    }
+  ],
+  "invariants": "既存のキャラ本体・待機・通常技・必殺技・選択画像は変更しない。専用全身ポーズと素材の比率・透過を保持。"
+}
