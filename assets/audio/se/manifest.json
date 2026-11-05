@@ -582,6 +582,18 @@
     ],
     "narukami-limit-truth": [
       "/assets/audio/se/narukami-limit-truth.wav"
+    ],
+    "wonder-limit-volley": [
+      "/assets/audio/se/wonder-limit-volley.wav"
+    ],
+    "wonder-limit-highlight": [
+      "/assets/audio/se/wonder-limit-highlight.wav"
+    ],
+    "nahobino-limit-tempest": [
+      "/assets/audio/se/nahobino-limit-tempest.wav"
+    ],
+    "nahobino-limit-murakumo": [
+      "/assets/audio/se/nahobino-limit-murakumo.wav"
     ]
   },
   "impactDesign": {

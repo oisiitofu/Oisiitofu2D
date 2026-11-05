@@ -1,0 +1,60 @@
+{
+  "mode": "built-in imagegen",
+  "id": "wonder",
+  "status": "専用素材・コード・専用音・ローカル検証済み、未公開",
+  "assets": [
+    {
+      "path": "characters/wonder/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-3ca754c9-3a54-4e79-9d91-5c53174d4595.png",
+      "prompt": "Use case: identity-preserve premium anime cinematic game raster art. EXACT Wonder from the approved references: slim youthful male, tousled reddish brown hair, vivid red eye mask, crimson eyes, navy-black high-collared long thief trench coat with silver buttons and blue-purple lining, red gloves, fitted dark pants, black boots. Short straight silver dagger with black grip in RIGHT hand, compact black pistol when specified. Same face, outfit and body proportions in every pose. Rich painted anime detail, no redesign, no chibi. ONE square transparent EQUAL2x2 atlas, EXACTLY FOUR distinct COMPLETE FULL-BODY poses facing RIGHT. Each entire figure, hair, coat and complete weapon tip fits central60% of OWN quadrant width AND height; at least100px EMPTY alpha margins on all sides and center boundaries. Same character scale across corresponding poses. No cropping, overlapping quadrants, scene, ground, shadow, attack VFX, text, labels, lines, logo or watermark. True alpha. TL ready low dagger in right hand and left hand poised; TR forward sprint RIGHT, long forward stride, dagger trails LEFT, coat flying left; BL deep sliding knife slash RIGHT, front knee bent, rear leg fully extended, RIGHT dagger arm extends FORWARD-RIGHT at chest height; BR vaulting leap RIGHT, LEFT hand raised holding a thin black grappling wire handle overhead, RIGHT hand holds dagger forward-right at shoulder height, knees tucked, a very short clean cable extends up but stays well inside cell. Distinct active acrobatic movement.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/wonder/assets/wonder-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/wonder/assets/wonder-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/wonder/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-eaa2dc64-60c9-40ef-94df-25df668e7d9b.png",
+      "prompt": "Use case: identity-preserve premium anime cinematic game raster art. EXACT Wonder from the approved references: slim youthful male, tousled reddish brown hair, vivid red eye mask, crimson eyes, navy-black high-collared long thief trench coat with silver buttons and blue-purple lining, red gloves, fitted dark pants, black boots. Short straight silver dagger with black grip in RIGHT hand, compact black pistol when specified. Same face, outfit and body proportions in every pose. Rich painted anime detail, no redesign, no chibi. ONE square transparent EQUAL2x2 atlas, EXACTLY FOUR distinct COMPLETE FULL-BODY poses facing RIGHT. Each entire figure, hair, coat and complete weapon tip fits central60% of OWN quadrant width AND height; at least100px EMPTY alpha margins on all sides and center boundaries. Same character scale across corresponding poses. No cropping, overlapping quadrants, scene, ground, shadow, attack VFX, text, labels, lines, logo or watermark. True alpha. TL reverse pivot dagger strike facing RIGHT, back three-quarter torso, long lateral stance, right hand blade extended RIGHT; TR airborne twisting shot, compact black pistol in LEFT hand aimed horizontal RIGHT, RIGHT hand holds dagger downward safely away, both bent legs trail LEFT; BL low grounded slide firing compact black pistol RIGHT in LEFT hand, RIGHT dagger held low behind hip, one knee tucked and other leg extended forward; BR final stylish braced double-pistol shot, BOTH red gloved hands hold compact black pistols extended FORWARD-RIGHT at shoulder height, legs planted wide, coat tails swept left. No muzzle flash, no wire here.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/wonder/assets/wonder-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/wonder/assets/wonder-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/wonder/assets/limit-avatars.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-80525da4-d7fa-4e79-b164-a61e84fd5e5f.png",
+      "prompt": "Use case: identity-preserve. Premium richly detailed painted anime game cinematic summon sprites. EXACT JANOSIK from official reference, NOT the blue armored fighter from older game sheets: very tall slender mechanical white-armored phantom thief with a huge pointed white triangular hood/hat, angular mostly hidden face with gold mask plate, smooth white long-limbed armored coat, wide white hip shells and shoulder pauldrons, gold breast details and dark brown segmented waist, enormous sweeping dark crimson-lined cape, white pointed boots and gloves. Holds TWO distinct GOLD AXE-SHAPED PISTOLS from reference: long gold barrel and triangular hatchet head at muzzle; NOT swords, no oversized modern rifles. ONE EQUAL2x2 transparent square atlas, exactly4 separate FULL-BODY poses: TL floating ready crosses both gold axe-pistols in an X before chest; TR forward aerial shooting lunge facing RIGHT, both arms fully extended FORWARD-RIGHT at chest height, both gold axe-pistol MUZZLES point RIGHT and stay clearly visible, bent legs trail left; BL dynamic descending airborne shot facing RIGHT, one arm aims gold axe-pistol DOWN-RIGHT at30degrees while other gold axe-pistol held back near shoulder, legs scissor and crimson cape curls behind; BR powerful final volley stance facing RIGHT, both gold axe-pistols extend parallel FORWARD-RIGHT in both hands at shoulder height, legs spread, torso braced, huge crimson cape blown LEFT. Same design/proportions, never a blue knight. Complete white hat, cape, all limbs and gold weapon tips each inside central60% of OWN quadrant width AND height,100px empty alpha margins at every side and center. No scene, floor, shadows, muzzle flash, aura, text, labels, logos, grid or watermark. Real transparency.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/wonder/limit-break/references/janosik-official.webp"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/wonder/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-60436822-7a33-4aa0-b1cd-32b934396f1f.png",
+      "prompt": "Use case: identity-preserve premium anime cinematic game raster art. EXACT Wonder from the approved references: slim youthful male, tousled reddish brown hair, vivid red eye mask, crimson eyes, navy-black high-collared long thief trench coat with silver buttons and blue-purple lining, red gloves, fitted dark pants, black boots. Short straight silver dagger with black grip in RIGHT hand, compact black pistol when specified. Same face, outfit and body proportions in every pose. Rich painted anime detail, no redesign, no chibi. Ultra high resolution wide16:9 dramatic cinematic CUT-IN, chest-up closeup on LEFT half, face eyes cheeks and chin fully readable, determined gaze RIGHT. One red-gloved hand holds the silver dagger low across the composition, other hand aims a compact black pistol toward RIGHT away from camera, navy coat flares; ruined subway arches and distant rails in crimson-black cognitive world, white/red glass-like streaks. Keep approved face, hairstyle, colors, costume and body design exactly; premium richly painted anime detail, dramatic rim lighting, bold readable silhouette and luminous attack atmosphere without covering face. Complete edge-to-edge opaque painting. No text, UI, frame, logo or watermark.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/wonder/assets/wonder-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/wonder/assets/wonder-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/wonder/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-cedf9bae-a291-4b16-ad77-c7397dc87107.png",
+      "prompt": "Use case: stylized-concept. Premium anime cinematic game background, wide16:9. Mementos-inspired surreal abandoned underground subway station, warped dark steel arches and broken distant rails, crimson mist, black and deep burgundy tiled floor, distant white illuminated doorway and minimal broken train silhouettes. Broad EMPTY dark foreground and midground platform for fast sword fighting; horizon upper third, highlights restrained so attack cores and silhouettes stay readable. Strong depth and richly detailed atmospheric painting, no close props blocking action. Opaque full image. No people, creatures, weapons, attack effects, text, logos, UI or watermark.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/wonder/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-ab6aacf8-03fd-4af5-afb6-32000b9b75fc.png",
+      "prompt": "Use case: stylized-concept. Premium richly painted anime game attack effects, ONE EQUAL2x2 transparent atlas EXACT4 independent complete VFX. TL sharp thick WHITE SILVER dagger crescent with crimson-black rim, convex cutting face RIGHT, tails and opening LEFT; TR brilliant thick GOLD-WHITE gunshot streak pointing RIGHT from small star muzzle burst at LEFT origin, visible solid white-hot bullet trail and defined gold sparks, not a thin faint laser; BL crossed pair of enormous gold-white bullet trails moving RIGHT from two separate left origins and converging at right impact, dense solid cores, crimson-gold shards; BR huge crimson-gold gunfire impact star with thick white central core and radial sharp metallic light shards, powerful compact burst, dense dark red outer contour. Each entire effect fits central70% of OWN quadrant width AND height,80px transparent padding on all sides and center. Solid bright saturated attack cores with readable dark contour; only outer fringe fades. True alpha around shapes. No characters, weapons, scenes, floor, text, numbers, symbols, grid, logos, watermark or black backdrop.",
+      "references": [],
+      "bounds": []
+    }
+  ]
+}

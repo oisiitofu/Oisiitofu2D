@@ -1,0 +1,52 @@
+{
+  "mode": "built-in imagegen",
+  "id": "nahobino",
+  "status": "専用素材・コード・専用音・ローカル検証済み、未公開",
+  "assets": [
+    {
+      "path": "characters/nahobino/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-5ec4ca81-4d71-437f-b167-afc33ed6b4bd.png",
+      "prompt": "Use case: identity-preserve premium anime cinematic game raster art. EXACT approved BLUE Nahobino: slender youthful androgynous male face, gold eyes, very long vivid cobalt blue hair flowing past waist, fitted black/navy segmented bodysuit with bright thin electric-blue circuit channels, gold circular shoulder/hip/knee fittings and gold-edged blue ear/cheek armor, fitted black boots and gloves. Thin straight BLUE energy sword with dark small hilt in RIGHT hand as in approved game attack sheet. Preserve face, original body proportions, suit pattern and blue form. Rich painted anime detail; no white alternate form, no armor redesign or chibi. ONE square transparent EQUAL2x2 atlas, EXACTLY FOUR distinct COMPLETE FULL-BODY poses facing RIGHT. Each entire figure, hair, coat and complete weapon tip fits central60% of OWN quadrant width AND height; at least100px EMPTY alpha margins on all sides and center boundaries. Same character scale across corresponding poses. No cropping, overlapping quadrants, scene, ground, shadow, attack VFX, text, labels, lines, logo or watermark. True alpha. TL ready stance with sword angled down-right; TR very fast forward sprint RIGHT, torso leans forward, sword trailing LEFT, long blue hair flowing left; BL strong long-step horizontal sword cut RIGHT at waist, right arm fully extended FORWARD, rear leg straight; BR ACTIVE forward-rising aerial cut RIGHT, torso leaning FORWARD, sword hand extends FORWARD-RIGHT at shoulder height BELOW face, blade points RIGHT at shallow20-degree upward angle, both bent legs trail LEFT. NOT overhead windup; full blade just above head level.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nahobino/assets/nahobino-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nahobino/assets/nahobino-attacks.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/nahobino/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-d6e1b29b-8697-4b70-ab00-f48ceb909344.png",
+      "prompt": "Use case: identity-preserve premium anime cinematic game raster art. EXACT approved BLUE Nahobino: slender youthful androgynous male face, gold eyes, very long vivid cobalt blue hair flowing past waist, fitted black/navy segmented bodysuit with bright thin electric-blue circuit channels, gold circular shoulder/hip/knee fittings and gold-edged blue ear/cheek armor, fitted black boots and gloves. Thin straight BLUE energy sword with dark small hilt in RIGHT hand as in approved game attack sheet. Preserve face, original body proportions, suit pattern and blue form. Rich painted anime detail; no white alternate form, no armor redesign or chibi. ONE square transparent EQUAL2x2 atlas, EXACTLY FOUR distinct COMPLETE FULL-BODY poses facing RIGHT. Each entire figure, hair, coat and complete weapon tip fits central60% of OWN quadrant width AND height; at least100px EMPTY alpha margins on all sides and center boundaries. Same character scale across corresponding poses. No cropping, overlapping quadrants, scene, ground, shadow, attack VFX, text, labels, lines, logo or watermark. True alpha. TL low pivot reverse horizontal cut facing RIGHT, back three-quarter torso, sword fully extended RIGHT at chest height; TR high jumping overhead PREPARATION, sword held above shoulder and blade points up-right, knees tucked, this is windup only; BL forceful landing downward cleave, deep bent front knee, right sword blade strikes DOWN-RIGHT before body, left hand spreads behind for balance; BR final heavenly sword ACTIVE downward diagonal cut, torso twists RIGHT, front foot stamps forward, RIGHT arm extends forward-right in powerful followthrough, much longer broad silver-blue energy sword aimed25degrees DOWN-RIGHT. Entire enormous blade including end remains inside cell, long hair flowing LEFT. Keep same suit and face; do not replace blade with detached beam.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nahobino/assets/nahobino-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nahobino/assets/nahobino-attacks.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/nahobino/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-b7fb8e6e-a2f0-4459-96d8-b7031acab3e5.png",
+      "prompt": "Use case: identity-preserve premium anime cinematic game raster art. EXACT approved BLUE Nahobino: slender youthful androgynous male face, gold eyes, very long vivid cobalt blue hair flowing past waist, fitted black/navy segmented bodysuit with bright thin electric-blue circuit channels, gold circular shoulder/hip/knee fittings and gold-edged blue ear/cheek armor, fitted black boots and gloves. Thin straight BLUE energy sword with dark small hilt in RIGHT hand as in approved game attack sheet. Preserve face, original body proportions, suit pattern and blue form. Rich painted anime detail; no white alternate form, no armor redesign or chibi. Ultra high resolution wide16:9 dramatic cinematic CUT-IN, chest-up closeup on LEFT half, face eyes cheeks and chin fully readable, determined gaze RIGHT. Right hand swings blue energy sword diagonally toward RIGHT, long cobalt hair streams LEFT, gold eye and circuit lines sharp; shattered Tokyo skyscrapers and sand under monumental dark distant throne, divine blue-white light cutting violet clouds. Keep approved face, hairstyle, colors, costume and body design exactly; premium richly painted anime detail, dramatic rim lighting, bold readable silhouette and luminous attack atmosphere without covering face. Complete edge-to-edge opaque painting. No text, UI, frame, logo or watermark.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nahobino/assets/nahobino-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nahobino/assets/nahobino-attacks.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/nahobino/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-d85048a1-2eab-4940-b762-dbf932ada5d3.png",
+      "prompt": "Use case: stylized-concept. Premium anime cinematic game background, wide16:9. Da'at-inspired ruined Tokyo, collapsed distant skyscrapers rising from windblown golden sand, monumental very distant dark divine throne/platform silhouetted beneath violet storm sky and thin blue-white heavenly light. Broad EMPTY dark foreground and midground platform for fast sword fighting; horizon upper third, highlights restrained so attack cores and silhouettes stay readable. Strong depth and richly detailed atmospheric painting, no close props blocking action. Opaque full image. No people, creatures, weapons, attack effects, text, logos, UI or watermark.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/nahobino/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-9936b973-e37b-4743-809b-4cf37fb2fd4e.png",
+      "prompt": "Use case: stylized-concept. Premium richly painted anime game attack effects, ONE EQUAL2x2 transparent atlas EXACT4 independent complete VFX. TL thick CYAN-WHITE sword crescent, cobalt-blue rim, convex cutting face RIGHT, open tails LEFT; TR stronger broad blue-white and deep violet heavenly sword crescent with extra long forward cutting edge, convex RIGHT and opening/tails LEFT, thick solid bright core; BL sharp EIGHT-RAY blue-white star of intersecting slash paths, individually visible bright short cutting streaks and deep violet rim, dense central impact; BR colossal diagonal divine silver-blue cutting cleft from TOP-LEFT to BOTTOM-RIGHT, long wide white central blade-shaped core bordered deep blue and violet, concentrated crystal/stone-like blue fragments at bottom-right impact point. Each entire effect fits central70% of OWN quadrant width AND height,80px transparent padding on all sides and center. Solid bright saturated attack cores with readable dark contour; only outer fringe fades. True alpha around shapes. No characters, weapons, scenes, floor, text, numbers, symbols, grid, logos, watermark or black backdrop.",
+      "references": [],
+      "bounds": [],
+      "normalization": "Only cell1 (top right) is mirrored horizontally: generated convex edge faced LEFT; normalize to RIGHT before cinematic rotation/face. Cell0 and other assets untouched."
+    }
+  ]
+}
