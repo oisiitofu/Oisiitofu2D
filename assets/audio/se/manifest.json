@@ -2,6 +2,18 @@
   "sampleRate": 48000,
   "variants": 3,
   "sounds": {
+    "edf-limit-radio": [
+      "/assets/audio/se/edf-limit-radio.wav"
+    ],
+    "edf-limit-barga": [
+      "/assets/audio/se/edf-limit-barga.wav"
+    ],
+    "nightraven-limit-lock": [
+      "/assets/audio/se/nightraven-limit-lock.wav"
+    ],
+    "nightraven-limit-tls": [
+      "/assets/audio/se/nightraven-limit-tls.wav"
+    ],
     "agumon-limit-cannon": [
       "/assets/audio/se/agumon-limit-cannon.wav"
     ],
