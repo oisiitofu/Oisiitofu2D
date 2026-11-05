@@ -1,0 +1,63 @@
+{
+  "mode": "built-in imagegen",
+  "id": "django",
+  "assets": [
+    {
+      "path": "characters/django/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-50077ef9-04fa-4a68-a030-fd87f8943135.png",
+      "prompt": "Use case: stylized-concept. Premium Japanese anime game cinematic raster art, crisp expressive linework, rich detailed paint, clean facial anatomy, dramatic readable light. Preserve character identity and exact costume from references. No text, UI, logos or watermark. Wide 16:9 cinematic close up Django Solar Boy with EXACT cute face from first image and costume from second. Blonde spiky hair goggles on forehead amber eyes red scarf tan short shirt leather straps gloves, his detailed brass and silver Gun del Sol aimed toward screen RIGHT, courageous focused expression. Behind him friendly small orange sunflower Otenko with smiling face green leaves as in reference2, radiant dawn breaking across gothic sun temple. Golden sun sigil and luminous shot trails, face and gun crisp, dramatic high quality matching existing portrait.",
+      "references": [
+        "characters/django/assets/django-selection.png",
+        "characters/django/assets/django-reference.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/django/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-894ec86a-19b3-40f6-a5db-04b4d64c2598.png",
+      "prompt": "Use case: stylized-concept. Premium Japanese anime game cinematic raster art, crisp expressive linework, rich detailed paint, clean facial anatomy, dramatic readable light. Preserve character identity and exact costume from references. No text, UI, logos or watermark. Wide panoramic sun temple purification courtyard at dawn, weathered gothic stone arches and sun-carved pillars, distant cathedral and rose golden sun through thinning dark violet clouds. Broad empty circular flat stone arena across foreground, low perspective. Blue violet shaded ground with gold dawn rim light, cinematic richly painted environment, empty center for actors and devices. NO characters, props, magical circles, attack effects, text or UI.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/django/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-36441488-3d3f-4024-b843-b81ec0fd69d0.png",
+      "prompt": "Use case: stylized-concept. Premium Japanese anime game cinematic raster art, crisp expressive linework, rich detailed paint, clean facial anatomy, dramatic readable light. Preserve character identity and exact costume from references. No text, UI, logos or watermark. 2x2 grid of FOUR isolated FULL BODY Django poses. Exact small cute boy proportions of ref1, face ref2, blonde spiky hair forehead goggles, red scarf, tan shirt brown straps dark brown shorts tall brown boots gloves, brass/silver solar gun. All face RIGHT. Top left: braced low stance aiming solar gun horizontally right with both arms straight. Top right: distinct rightward shooting recoil, bent rear leg, front arm still aiming gun right, scarf lifted behind. Bottom left: kneeling solar charge holding gun upward, left hand raised to sun. Bottom right: strong standing victory command pointing gun UP RIGHT, other fist raised, scarf behind. No other characters/effects/ground. Entire hair, boots and gun inside each quadrant with 60px transparent margins, equal scale. Transparent background 1536x1536.",
+      "references": [
+        "characters/django/assets/django-reference.png",
+        "characters/django/assets/django-selection.png"
+      ],
+      "bounds": [
+        "0,0,640,575",
+        "640,0,1280,575",
+        "0,575,550,1280",
+        "555,575,1280,1280"
+      ]
+    },
+    {
+      "path": "characters/django/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-c8f2c2bb-a11b-4edb-9f40-856c77cb271e.png",
+      "prompt": "Use case: precise-object-edit. Fix only atlas spacing and restore COMPLETE uncut effect outlines of this exact four-effect solar VFX sheet. Keep same detailed gold/amber palette dense opaque cores and transparent edges. Make a 2x2 equal square grid of exactly four separate effects, each SHRUNK to fit INSIDE its own quadrant with a generous 100px clear transparent margin ON ALL FOUR SIDES. Top left: complete rightward solar orb with leftward tail, all tail tips fit. Top right: complete round sun ritual circle with all upper and lower points restored. Bottom left: complete horizontal rightward solar beam with origin at left, narrow origin, flared right endpoint, no cut flared edge. Bottom right: complete vertical purification column with whole upper and lower light blooms and all rays, none cut by image edge. Do not overlap quadrant boundaries. Transparent background, no text or panel grid. 1536x1536.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-31578e73-8327-4173-a241-a1cac7a52b35.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/django/assets/limit-devices.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-45a0176c-d9ae-4c38-8ce0-48a171e4608e.png",
+      "prompt": "Use case: stylized-concept. Premium Japanese anime game cinematic raster art, crisp expressive linework, rich detailed paint, clean facial anatomy, dramatic readable light. Preserve character identity and exact costume from references. No text, UI, logos or watermark. 2x2 transparent GAME PROP atlas, exactly four separate objects, NO text. Top left: enlarged detailed Pile Driver solar purifier emitter from reference1: short green copper weathered cylindrical column on round pedestal, mechanical green upper head with large round white/silver reflector dish on side aimed screen RIGHT, brass fittings. 3/4 side view, no light beam yet. Top right: SAME emitter dish aimed screen LEFT, not different machine. Bottom left: same black long rectangular solar coffin gold edging and gold sun emblem from equipment in reference2, slight overhead perspective, lid OPEN, inner dark violet padded rectangular cavity clearly visible, no person. Bottom right: Otenko tiny friendly floating orange sunflower sun spirit from reference2, smiling face round center, pointed orange petals, two green leaves, no body. Each fully isolated, no overlap, generous margins, clean genuine transparent background. Premium painted game sprite props, not pixel art. ",
+      "references": [
+        ".tools/limit-references/boktai04.png",
+        "characters/django/assets/django-reference.png"
+      ],
+      "bounds": [
+        "0,0,768,512",
+        "768,0,1536,512",
+        "0,512,820,1024",
+        "840,512,1536,1024"
+      ]
+    }
+  ],
+  "invariants": "既存の待機・通常技・必殺技・選択画像を保持。顔・衣装・頭身を参照に合わせた新しい全身ポーズ。カットインは共通LimitCinematic.portrait、攻撃はart.strike。"
+}

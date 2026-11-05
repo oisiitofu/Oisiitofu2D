@@ -1,0 +1,59 @@
+{
+  "mode": "built-in imagegen",
+  "id": "goemon",
+  "assets": [
+    {
+      "path": "characters/goemon/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-8b69dd24-8748-4801-8e67-0eccb6326ad5.png",
+      "prompt": "Use case: stylized-concept. Premium Japanese anime game cinematic raster art, crisp expressive linework, rich detailed paint, clean facial anatomy, dramatic readable light. Preserve character identity and exact costume from references. No text, UI, logos or watermark. Wide 16:9 epic cut-in. Foreground same cute blue-haired Goemon boy from reference1, huge blue eyes and thick brows, red tunic yellow trim, patterned red sleeves white sash, head and shoulders with golden kiseru in hand, fierce joyful grin. Behind him towers Goemon Impact, robot based ONLY on sprite on right of reference2, not lettering or deskmat. Robot huge dark blue pompadour, orange tan comic face, round nose broad grin, red armor vest, silver circular joints, dark black metal limbs and tan boxing fists. Sweeping golden punch trails in midnight Edo skyline, red lanterns and distant Fuji. Boy face unobscured, no stretching. Full cinematic not sprite.",
+      "references": [
+        "characters/goemon/assets/goemon-presentation-portrait.png",
+        ".tools/limit-references/impact-official.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/goemon/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-ee9e6562-640e-4321-9047-8f4a464821b6.png",
+      "prompt": "Use case: stylized-concept. Premium Japanese anime game cinematic raster art, crisp expressive linework, rich detailed paint, clean facial anatomy, dramatic readable light. Preserve character identity and exact costume from references. No text, UI, logos or watermark. Wide panoramic nighttime Edo riverbank giant robot battle arena, Japanese castle and lantern-lined bridges far background, huge full moon and distant Mount Fuji, sakura petals. Foreground broad dark empty stone river embankment at bottom, horizon low at 60 percent height. Deep navy with warm red lanterns, strong depth, cinematic anime painted background, NO characters, robots, attack effects, lettering or UI. Clear open center for combat.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/goemon/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-2795e8d3-c623-4aa0-921b-e23e943e19cc.png",
+      "prompt": "Use case: stylized-concept. Premium Japanese anime game cinematic raster art, crisp expressive linework, rich detailed paint, clean facial anatomy, dramatic readable light. Preserve character identity and exact costume from references. No text, UI, logos or watermark. 2x2 isolated full-body Goemon boy poses. Maintain EXACT cute round face blue eyes thick eyebrows huge blue spiky hair and red/yellow tunic red mesh sleeves white sash red baggy trousers red white shoes. Short stylized boy proportions. Long golden kiseru. All screen RIGHT. Top left braced ready stance pipe beside waist. Top right broad rightward sweeping kiseru strike, golden pipe pointing right, whole body follows. Bottom left jumping command pose left fist raised pipe in other hand, knees tucked. Bottom right victorious planted stance pointing right with pipe, grin. Four complete isolated figures all tips and feet inside own quadrant generous 60px padding, equal scale. Actual transparent background no effects or extra characters.",
+      "references": [
+        "characters/goemon/assets/goemon-presentation-portrait.png"
+      ],
+      "bounds": [
+        "0,0,520,590",
+        "530,0,1280,590",
+        "0,590,530,1280",
+        "540,590,1280,1280"
+      ]
+    },
+    {
+      "path": "characters/goemon/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-96c1212e-a2ee-4562-bbd1-d34b9a6fa5f2.png",
+      "prompt": "Use case: stylized-concept. Premium Japanese anime game cinematic raster art, crisp expressive linework, rich detailed paint, clean facial anatomy, dramatic readable light. Preserve character identity and exact costume from references. No text, UI, logos or watermark. 2x2 transparent isolated attack VFX atlas, bold saturated dense opaque core with crisp contour and soft transparent perimeter, NOT thin white outlines. Top left: curved gold orange kiseru slash crescent, convex leading edge points RIGHT, open tail left. Top right: straight rightward heavy PUNCH sonic shock streak orange red with gold thick pointed head on RIGHT and long tapered trailing streaks left, no actual fist. Bottom left: bright orange gold explosive star impact with thick sharp rays, dense yellow core dark red edges, no smoke. Bottom right: horizontal mouth laser beam firing RIGHT: narrow cyan white core enclosed thick electric blue layer, dark blue rim, golden electrical spirals, wider RIGHT impact end, narrow LEFT origin. Each complete effect centered isolated in equal cell generous 60px blank margin, true transparent background no grid/text.",
+      "references": [],
+      "bounds": [
+        "0,0,750,403",
+        "750,0,1776,403",
+        "0,403,750,888",
+        "750,403,1776,888"
+      ]
+    },
+    {
+      "path": "characters/goemon/assets/limit-robot.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-dc6b2043-9421-4ebf-bc9d-e0ce915c13c6.png",
+      "prompt": "Use case: stylized-concept. Premium Japanese anime game cinematic raster art, crisp expressive linework, rich detailed paint, clean facial anatomy, dramatic readable light. Preserve character identity and exact costume from references. No text, UI, logos or watermark. Make 2x2 grid of FOUR isolated full-body poses of Goemon Impact giant comedy robot based exactly on the sprite at right of reference, not its deskmat, logo, or background. Every pose faces SCREEN RIGHT, 3/4 side view suitable for fighting game. Same huge dark navy pompadour, orange tan comic face, long round nose broad grin, silver side ears and circular shoulder/elbow joints, red vest torso, dark articulated mechanical arms/legs, tan round boxing fists, black/red/gold shins and small roller feet. Keep squat mechanical cartoon proportions. Top left: fists drawn back charging. Top right: rightward straight punch fully extended, fist ahead of face. Bottom left: upward/rightward rising uppercut, other fist near waist. Bottom right: planted feet, mouth OPEN FACING RIGHT for mouth laser, both fists below head, mouth clearly visible. No laser yet. Exactly four complete robots, each feet, hair and fists fully inside its own quadrant with generous 60px empty margin, equal scale. Genuinely transparent background, no shadows, trails, glow, borders, labels or added human. High resolution 1536x1536 atlas.",
+      "references": [
+        ".tools/limit-references/impact-official.png"
+      ],
+      "bounds": []
+    }
+  ],
+  "invariants": "既存の待機・通常技・必殺技・選択画像を保持。顔・衣装・頭身を参照に合わせた新しい全身ポーズ。カットインは共通LimitCinematic.portrait、攻撃はart.strike。"
+}

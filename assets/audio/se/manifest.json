@@ -498,6 +498,18 @@
     ],
     "pawapuro-limit-homer": [
       "/assets/audio/se/pawapuro-limit-homer.wav"
+    ],
+    "goemon-limit-servo": [
+      "/assets/audio/se/goemon-limit-servo.wav"
+    ],
+    "goemon-limit-laser": [
+      "/assets/audio/se/goemon-limit-laser.wav"
+    ],
+    "django-limit-solar": [
+      "/assets/audio/se/django-limit-solar.wav"
+    ],
+    "django-limit-purify": [
+      "/assets/audio/se/django-limit-purify.wav"
     ]
   },
   "impactDesign": {
