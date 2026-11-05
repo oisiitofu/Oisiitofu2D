@@ -1,0 +1,56 @@
+{
+  "mode": "built-in imagegen",
+  "id": "hinako",
+  "status": "ローカル対戦・トレモ・CPU・379フレーム同期・連続描画を確認、未公開",
+  "assets": [
+    {
+      "path": "characters/hinako/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-a6e17868-3284-4cb2-8a83-9042d44b0ad1.png",
+      "prompt": "Use case: stylized-concept. Premium detailed hand-painted anime game cinematic art, exact same Hinako identity as approved references: short BLACK bob with subtle warm red tips, brown eyes, navy Japanese sailor uniform with white thin collar stripes and RED neck scarf, dark knee-length pleated skirt, dark knee socks and black school shoes. Preserve youthful face, head/body proportions and costume, modest naturally covered action poses. Reference1 fixes face rendering; reference2 fixes normal wholebody and weapons; reference3 fixes transformed form: weathered gray FOX half-mask covering upper face and huge gray bark/stone-textured RIGHT arm with long clawed fingers, natural left arm. Fantasy non-graphic action, no wounds or blood. No text, logo, watermark or UI. ONE transparent equal2x2 square animation atlas, FOUR complete full-body NORMAL unmasked Hinako poses, all facing RIGHT, wielding long Japanese NAGINATA from reference2: slender dark wooden pole, curved SILVER blade at RIGHT end (not giant fantasy sword). TL low ready stance with naginata diagonally raised to right; TR fast forward running step, naginata held low and trailing slightly left, scarf/hair move naturally; BL broad advancing horizontal two-handed naginata SWEEP RIGHT, hips turn and front foot plants, complete long curved blade; BR airborne rising naginata cleave UP-RIGHT, knees bent and both hands extended, complete body and weapon. Same face/body/outfit across four. ENTIRE figure and ALL long weapon tips/hair/scarf/shoes fit inside central60% own quadrant WIDTH AND HEIGHT, generous100px EMPTY transparent margin on EVERY side including center boundaries. No overlap/clipped tips, no trails/scenery/ground/shadows. True alpha transparency.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/hinako/assets/hinako-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/hinako/assets/hinako-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/hinako/assets/hinako-beast-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/hinako/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-997efd29-22e3-4dd2-9d95-71640ccd6361.png",
+      "prompt": "Use case: stylized-concept. Premium detailed hand-painted anime game cinematic art, exact same Hinako identity as approved references: short BLACK bob with subtle warm red tips, brown eyes, navy Japanese sailor uniform with white thin collar stripes and RED neck scarf, dark knee-length pleated skirt, dark knee socks and black school shoes. Preserve youthful face, head/body proportions and costume, modest naturally covered action poses. Reference1 fixes face rendering; reference2 fixes normal wholebody and weapons; reference3 fixes transformed form: weathered gray FOX half-mask covering upper face and huge gray bark/stone-textured RIGHT arm with long clawed fingers, natural left arm. Fantasy non-graphic action, no wounds or blood. No text, logo, watermark or UI. ONE transparent equal2x2 square animation atlas of FOUR complete full-body TRANSFORMED Hinako poses from reference3, facing RIGHT. Gray fox half-mask, same black bob/navy uniform/red scarf, oversized gray barklike RIGHT arm and clawed hand, natural left arm near body; no weapon in transformed poses. TL low fast forward lunge, giant right claw reaching RIGHT and rear foot pushed back; TR forceful horizontal giant-arm backhand through RIGHT with torso twisting, fingers stretched and feet apart; BL high airborne overhead windup, massive gray right fist above head, knees tucked, scarf flowing; BR deep landing slam pose, enormous RIGHT fist thrust DOWN-RIGHT close to floor while natural left hand balances, front knee bent, rear leg extended. SAME giant arm length and physique, exact mask across four, no new monsters. Whole figure and EVERY claw tip, mask ear, skirt hem and shoe within central60% quadrant WIDTH AND HEIGHT,100px transparent margin EVERY side. No effects, ground, impact cracks, injuries, overlap or cropped tips. Genuine alpha transparency.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/hinako/assets/hinako-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/hinako/assets/hinako-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/hinako/assets/hinako-beast-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/hinako/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-3ba9a2f1-a379-477a-a9db-1d98c168700b.png",
+      "prompt": "Use case: stylized-concept. Premium detailed hand-painted anime game cinematic art, exact same Hinako identity as approved references: short BLACK bob with subtle warm red tips, brown eyes, navy Japanese sailor uniform with white thin collar stripes and RED neck scarf, dark knee-length pleated skirt, dark knee socks and black school shoes. Preserve youthful face, head/body proportions and costume, modest naturally covered action poses. Reference1 fixes face rendering; reference2 fixes normal wholebody and weapons; reference3 fixes transformed form: weathered gray FOX half-mask covering upper face and huge gray bark/stone-textured RIGHT arm with long clawed fingers, natural left arm. Fantasy non-graphic action, no wounds or blood. No text, logo, watermark or UI. One wide16:9 cinematic CUT-IN painting. Hinako large close-up face on left-center, original brown eyes, cheek and chin completely visible, determined serious gaze toward RIGHT. Natural left hand holds the weathered gray FOX half-mask BESIDE her face, not covering it yet. Her enlarged gray bark/stone-textured right arm rises defensively behind the shoulder with complete claw silhouette, no injury. Navy sailor collar and red scarf clearly visible, same approved anime face and short bob. Behind her dark traditional Japanese shrine, endless red spider lilies, eerie violet mist, warm gold light spilling between torii gates, dynamic wind-blown red flower petals. Extremely refined hair, fabric and carved mask detail. No extra human, gore, text, UI or watermark. Upper-body dramatic scene with clear readable face.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/hinako/assets/hinako-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/hinako/assets/hinako-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/hinako/assets/hinako-beast-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/hinako/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-fbb88f58-96ed-452d-91e1-cff4e4faef7f.png",
+      "prompt": "Use case: stylized-concept. Wide16:9 premium hand-painted dark Japanese anime game cinematic BACKGROUND ONLY. A deserted traditional shrine approach at blue-violet night, long dark paved stone courtyard level across broad EMPTY foreground, ancient weathered wooden torii and stone lanterns receding in deep perspective, dim warm amber lantern flames, drifting lavender mist, distant shrine on hill, banks of red spider lilies confined to distant side edges. Rich intricate wood, stone and plants, atmospheric depth, beautiful eerie mood. Keep central combat floor dark and uncluttered so white/violet attacks and navy clothing remain readable. No characters, creatures, weapons, giant flowers, attack effects, inscriptions, UI, logo or watermark.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/hinako/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-f24f4d33-bb12-4d02-a601-98be9ae611ca.png",
+      "prompt": "Use case: precise-object-edit. Fix ONLY spacing and restore clipped tips of these SAME FOUR attack effects. Preserve exact silver-violet RIGHT-convex slash, triple RIGHT-convex claws, complete round red-gold flower explosion, broad stone ground impact. SHRINK each WHOLE effect uniformly to at most55% of OWN equal2x2 quadrant WIDTH AND HEIGHT. Leave at least100px fully EMPTY transparent margin on ALL sides and BOTH central boundaries. No glow bridge or overlap between cells. Restore entire round left edge of flower burst and full right edges of triple claws and ground-impact debris. All petals, rocks, spikes and soft glow edges complete and contained. Keep bright dense white cores, colors and soft alpha fading; no redesign, text, grid, panels or black backdrop.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-5726885f-0c91-40f1-a438-63ba73b4caaa.png"
+      ],
+      "bounds": []
+    }
+  ]
+}

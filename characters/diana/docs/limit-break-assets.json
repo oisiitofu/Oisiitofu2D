@@ -1,0 +1,53 @@
+{
+  "mode": "built-in imagegen",
+  "id": "diana",
+  "status": "ローカル対戦・トレモ・CPU・382フレーム同期・連続描画を確認、未公開",
+  "assets": [
+    {
+      "path": "characters/diana/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-d90bc434-472c-4519-9d66-d741f309b071.png",
+      "prompt": "Use case: stylized-concept. Premium high-end cinematic realistic CG videogame character art for PRAGMATA, match approved references exactly, refined skin and cloth detail, clean silhouettes and natural full-body action. Diana is the same young android girl with long wavy blonde hair, pale green eyes, realistic child face and proportions, oversized BLUE quilted thigh-length coat, black harness/backpack straps, dark inner shorts, black flat shoes. Do not age her up or change costume. Hugh is her adult astronaut partner from reference2, bulky weathered WHITE/gray armored spacesuit with orange tiny marks and round dark BLUE-black mirrored full-face visor, backpack thrusters. Non-graphic heroic sci-fi action only, no blood/injuries. No text/logos/UI/watermark. ONE transparent equal2x2 square sprite atlas of FOUR complete full-body SOLO DIANA poses, all facing RIGHT. TL standing ready with one palm gently extended forward, face determined; TR lively low forward running stride, hair and coat swept behind; BL planted forward hacking gesture, both hands extended toward RIGHT at chest height with fingers open, torso leaning slightly forward; BR low landing/kneeling pose with one hand out RIGHT and other near ground, head raised looking right, natural coat coverage. No actual hologram/effects, no Hugh in these four. Each ENTIRE figure including all hair fingertips and shoes fits inside central65% of own quadrant WIDTH and HEIGHT, at least100px fully transparent margin ALL sides. Same child proportions/face/coat across four. No overlap, ground or shadow, true alpha transparency.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/diana/assets/diana-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/diana/assets/diana-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/diana/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-a727c520-fcb9-4d42-b472-0a905c294bb2.png",
+      "prompt": "Use case: stylized-concept. Premium high-end cinematic realistic CG videogame character art for PRAGMATA, match approved references exactly, refined skin and cloth detail, clean silhouettes and natural full-body action. Diana is the same young android girl with long wavy blonde hair, pale green eyes, realistic child face and proportions, oversized BLUE quilted thigh-length coat, black harness/backpack straps, dark inner shorts, black flat shoes. Do not age her up or change costume. Hugh is her adult astronaut partner from reference2, bulky weathered WHITE/gray armored spacesuit with orange tiny marks and round dark BLUE-black mirrored full-face visor, backpack thrusters. Non-graphic heroic sci-fi action only, no blood/injuries. No text/logos/UI/watermark. ONE transparent equal2x2 square sprite atlas of FOUR complete full-body HUGH AND DIANA DUO action poses, both face and aim RIGHT. Diana rides securely PIGGYBACK on Hugh's back with small hands reaching past his shoulder to hack; Hugh supports her with back harness. TL strong running stride right, both feet and backpack visible, Hugh holds compact futuristic rifle low ahead; TR low lateral slide right with front knee deeply bent and rear leg stretched behind, Hugh aims rifle horizontally right, Diana hand reaching right above shoulder; BL airborne boost-jump, Hugh knees tucked with rifle aimed diagonally right-up, Diana riding back and hand reaching forward, only tiny localized cyan thruster lights; BR strong landing/firing brace on both feet, Hugh rifle aimed horizontally RIGHT at shoulder height and Diana BOTH palms extended over his shoulder for powerful hack. Adult Hugh much taller than Diana with accurate protective bulky spacesuit. Distinct natural wholebody poses. Each complete DUO including all hair, rifle tip, backpack, hands and boots fits inside central65% own quadrant WIDTH AND HEIGHT, generous at least100px transparent margins EVERY side. No beams/trails/holograms, ground/shadows, no cropped parts or overlap. Real alpha transparency.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/diana/assets/diana-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/diana/assets/diana-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/diana/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-4ee0237b-2e7b-4b95-bfdf-3d535c612493.png",
+      "prompt": "Use case: stylized-concept. Premium high-end cinematic realistic CG videogame character art for PRAGMATA, match approved references exactly, refined skin and cloth detail, clean silhouettes and natural full-body action. Diana is the same young android girl with long wavy blonde hair, pale green eyes, realistic child face and proportions, oversized BLUE quilted thigh-length coat, black harness/backpack straps, dark inner shorts, black flat shoes. Do not age her up or change costume. Hugh is her adult astronaut partner from reference2, bulky weathered WHITE/gray armored spacesuit with orange tiny marks and round dark BLUE-black mirrored full-face visor, backpack thrusters. Non-graphic heroic sci-fi action only, no blood/injuries. No text/logos/UI/watermark. One wide16:9 cinematic cut-in. Diana large close-up LEFT center with face and coat shoulder fully visible, determined kind pale green eyes, long blonde hair sweeping naturally, her right palm extended toward camera/right with delicate cyan holographic square hacking paths forming around fingertips. Hugh behind on RIGHT in full mirrored blue helmet, white space armor, compact gun raised and aimed offscreen right. Dark lunar station corridors and distant cratered moon in background, intense cyan and warm orange reflections, rich dramatic contrast, exceptionally detailed realistic CG illustration consistent with references. Show cooperation and forward action, no explosions covering faces, no writing in holograms. No violence or injury.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/diana/assets/diana-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/diana/assets/diana-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/diana/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-3bedee2e-1fbf-44c2-b74d-01b3ccbc02ae.png",
+      "prompt": "Use case: stylized-concept. Wide16:9 premium realistic cinematic CG game BACKGROUND ONLY. Near-future PRAGMATA lunar research station, broad horizontal level polished dark metal deck across EMPTY foreground, intricate white-gray modular lab structures and huge industrial robotic systems recede left/right, giant glass windows show cratered moon terrain and Earth suspended in black space. Cyan guide lights, restrained warm orange utility lights, strong perspective and subtle floating dust, film-quality detailed metal and glass materials. Dark empty midground for readable blue-white hacking effects and white astronaut. No people, characters, weapons, attack effects, lettering, UI, logos or watermark.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/diana/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-deeb9490-34bf-401c-a914-20211df13d68.png",
+      "prompt": "Use case: precise-object-edit. Correct ONLY spacing and restore clipped effect boundaries of this same four-effect transparent atlas. Keep EXACT SAME cyan hacking sphere, RIGHT-flying missile, orange gunshot flash with tracer to RIGHT, and blue-white digital Overdrive spherical explosion. SHRINK EVERY complete effect to at most55% of its OWN equal2x2 quadrant WIDTH AND HEIGHT, with at least100px empty TRANSPARENT margin ALL sides and central boundaries. Restore ENTIRE round outer edge of bottom-right explosion with all cubes/debris and round white wavefront; nothing cropped against bottom or right edge. Each effect independent, NO glow bridge between quadrants. Preserve opaque dense cores and softly fading transparent edges. No labels, panels, black backdrop or redesign.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-b653e747-d6e0-40c3-852e-c41e6e952dd8.png"
+      ],
+      "bounds": []
+    }
+  ]
+}

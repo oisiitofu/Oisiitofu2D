@@ -546,6 +546,18 @@
     ],
     "ryza-limit-drive": [
       "/assets/audio/se/ryza-limit-drive.wav"
+    ],
+    "diana-limit-hack": [
+      "/assets/audio/se/diana-limit-hack.wav"
+    ],
+    "diana-limit-overdrive": [
+      "/assets/audio/se/diana-limit-overdrive.wav"
+    ],
+    "hinako-limit-claw": [
+      "/assets/audio/se/hinako-limit-claw.wav"
+    ],
+    "hinako-limit-bloom": [
+      "/assets/audio/se/hinako-limit-bloom.wav"
     ]
   },
   "impactDesign": {
