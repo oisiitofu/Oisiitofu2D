@@ -570,6 +570,18 @@
     ],
     "ryofu-limit-earth": [
       "/assets/audio/se/ryofu-limit-earth.wav"
+    ],
+    "makoto-limit-cross": [
+      "/assets/audio/se/makoto-limit-cross.wav"
+    ],
+    "makoto-limit-messiah": [
+      "/assets/audio/se/makoto-limit-messiah.wav"
+    ],
+    "narukami-limit-thunder": [
+      "/assets/audio/se/narukami-limit-thunder.wav"
+    ],
+    "narukami-limit-truth": [
+      "/assets/audio/se/narukami-limit-truth.wav"
     ]
   },
   "impactDesign": {

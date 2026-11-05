@@ -1,0 +1,71 @@
+{
+  "mode": "built-in imagegen",
+  "id": "makoto",
+  "status": "専用素材・演出・専用音・ローカル検証済み、公開検証前",
+  "assets": [
+    {
+      "path": "characters/makoto/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-b1416592-2274-4283-92b9-f40123f0a288.png",
+      "prompt": "Use case: identity-preserve game cinematic raster illustration. Preserve EXACT Makoto Yuki from approved images: slim youthful male, asymmetric dark navy-blue hair covering one eye, gray-blue eyes, black Gekkoukan school jacket with silver buttons and white piping, white collared shirt, narrow black tie, red S.E.E.S. armband LEFT upper arm, round silver headphones around neck, black fingerless gloves, black trousers and black shoes. Same face, anatomy and outfit in every pose; straight slim silver one-handed sword with small ornate guard. Richly detailed painted anime, crisp clean silhouette, no redesign or chibi. ONE transparent square EQUAL 2x2 atlas, exactly FOUR separate COMPLETE FULL-BODY poses, all facing RIGHT. Each entire body, sword tip, hair and coat must fit central 60% of OWN quadrant width AND height, at least100px empty transparent margin on ALL sides and center boundaries. Same scale and proportions. Real alpha transparency; no scene, ground, shadows, effects, text, labels, UI, grid lines, logos or watermark. TL ready knees soft with sword low and head watching right; TR sprint forward RIGHT with long stride sword trailing LEFT and coat flying; BL low forward passing slash, right sword arm extended nearly horizontal to RIGHT at waist, torso twisted and back leg trailing; BR aerial upward slash, body rising diagonally right with left knee bent, blade extended diagonally UP-RIGHT, both feet off ground.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/makoto/assets/makoto-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/makoto/assets/makoto-atlas.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/makoto/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-bb93a28e-bf9b-46ab-beee-76b88c83c779.png",
+      "prompt": "Use case: identity-preserve game cinematic raster illustration. Preserve EXACT Makoto Yuki from approved images: slim youthful male, asymmetric dark navy-blue hair covering one eye, gray-blue eyes, black Gekkoukan school jacket with silver buttons and white piping, white collared shirt, narrow black tie, red S.E.E.S. armband LEFT upper arm, round silver headphones around neck, black fingerless gloves, black trousers and black shoes. Same face, anatomy and outfit in every pose; straight slim silver one-handed sword with small ornate guard. Richly detailed painted anime, crisp clean silhouette, no redesign or chibi. ONE transparent square EQUAL 2x2 atlas, exactly FOUR separate COMPLETE FULL-BODY poses, all facing RIGHT. Each entire body, sword tip, hair and coat must fit central 60% of OWN quadrant width AND height, at least100px empty transparent margin on ALL sides and center boundaries. Same scale and proportions. Real alpha transparency; no scene, ground, shadows, effects, text, labels, UI, grid lines, logos or watermark. TL pivoting reverse horizontal sword cut to RIGHT, back three-quarter torso, knees bent; TR aerial overhead windup, sword hand fully raised above shoulder, legs tucked and coat flares; BL low landing downward cleave, one knee nearly ground, sword tip DOWN-RIGHT forward, left arm counterbalances; BR ultimate summoning stance, body floats upright with toes downward, left open hand extends forward RIGHT, right hand retains sword pointed low, face calm resolute. No weapon pointing at own head.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/makoto/assets/makoto-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/makoto/assets/makoto-atlas.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/makoto/assets/limit-avatars.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-3f77ce69-8394-4897-ae9b-26898794feb1.png",
+      "prompt": "Use case: stylized-concept. Premium richly detailed painted anime cinematic game sprites. Persona3 summons. EXACT4 separate full-body sprites in EQUAL2x2 transparent atlas. TL Thanatos from image1 bottom right: dark navy skeletal armored knight, skull face, ragged dark shroud, multiple large navy coffin panels on chains behind back; crouched horizontal sword slash aimed RIGHT, entire long sword visible. TR SAME Thanatos airborne upward sword cleave UP-RIGHT, whole coffins and sword remain inside cell. BL MESSIAH from official reference image2 behind blue-haired boy: tall slender silver-white humanoid, long blond hair, pale smooth face with dark eye band, silver headset ears, ribbed off-white armor and long white divided skirt panels, dark straps/chains, upright pointed rectangular dorsal assembly, pale vertical coffin fan below/behind, hands crossing gently at chest, toes pointed down floating. BR SAME MESSIAH opens both arms wide, palms forward RIGHT in radiant release pose but NO actual light effects. Maintain same Messiah proportions in BL/BR, matching reference2's design and pale costume. Only specified Persona character in each quadrant; no human summoner, no mascot. All bodies, sword tips, chains and coffins fit central60% of OWN cell width and height, at least100px empty alpha margins on all sides/center. No clipping, background, pedestal, floor, shadows, glow, text, logos or watermark. Actual transparent alpha. EDIT ONLY TOP-RIGHT quadrant pose of the provided atlas. Keep TOP-LEFT, BOTTOM-LEFT and BOTTOM-RIGHT EXACTLY unchanged. Replace TOP-RIGHT overhead windup with an ACTIVE STRIKE: airborne right-facing lunge, torso leaning FORWARD, BOTH ARMS extend FORWARD-RIGHT at shoulder/chest height, hands remain BELOW face, long sword/poleblade extends from hands FORWARD-RIGHT at shallow 20-degree upward angle. Blade tip should be only slightly above head, NOT overhead/backward. Both bent legs trail LEFT below body. This is a forward-rising finishing swing, no weapon held over head. Preserve character identity, coffins/ribbons, proportions, colors, painterly quality, alpha transparency and generous margins. Complete weapon and limbs inside its own quadrant.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/makoto/assets/limit-avatars.webp"
+      ],
+      "bounds": [],
+      "revisions": [
+        {
+          "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-0586ac60-910f-45ec-944f-705e442f8b8d.png",
+          "prompt": "Use case: stylized-concept. Premium richly detailed painted anime cinematic game sprites. Persona3 summons. EXACT4 separate full-body sprites in EQUAL2x2 transparent atlas. TL Thanatos from image1 bottom right: dark navy skeletal armored knight, skull face, ragged dark shroud, multiple large navy coffin panels on chains behind back; crouched horizontal sword slash aimed RIGHT, entire long sword visible. TR SAME Thanatos airborne upward sword cleave UP-RIGHT, whole coffins and sword remain inside cell. BL MESSIAH from official reference image2 behind blue-haired boy: tall slender silver-white humanoid, long blond hair, pale smooth face with dark eye band, silver headset ears, ribbed off-white armor and long white divided skirt panels, dark straps/chains, upright pointed rectangular dorsal assembly, pale vertical coffin fan below/behind, hands crossing gently at chest, toes pointed down floating. BR SAME MESSIAH opens both arms wide, palms forward RIGHT in radiant release pose but NO actual light effects. Maintain same Messiah proportions in BL/BR, matching reference2's design and pale costume. Only specified Persona character in each quadrant; no human summoner, no mascot. All bodies, sword tips, chains and coffins fit central60% of OWN cell width and height, at least100px empty alpha margins on all sides/center. No clipping, background, pedestal, floor, shadows, glow, text, logos or watermark. Actual transparent alpha.",
+          "references": [
+            "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/makoto/assets/makoto-personas.png",
+            "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/makoto/limit-break/references/02.png"
+          ]
+        }
+      ],
+      "packing": "Equal 2x2, alpha bbox, common scale; maximum visible height550 within900x800 cells, bottom16px margin; no joint warping."
+    },
+    {
+      "path": "characters/makoto/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-1870d517-2d52-4fd4-af19-8e93a5c05071.png",
+      "prompt": "Use case: identity-preserve game cinematic raster illustration. Preserve EXACT Makoto Yuki from approved images: slim youthful male, asymmetric dark navy-blue hair covering one eye, gray-blue eyes, black Gekkoukan school jacket with silver buttons and white piping, white collared shirt, narrow black tie, red S.E.E.S. armband LEFT upper arm, round silver headphones around neck, black fingerless gloves, black trousers and black shoes. Same face, anatomy and outfit in every pose; straight slim silver one-handed sword with small ornate guard. Richly detailed painted anime, crisp clean silhouette, no redesign or chibi. Wide16:9 ultra high resolution cinematic CUT-IN illustration, chest-up closeup at LEFT half looking intensely RIGHT, face eyes cheek and chin fully readable with original facial structure; one hand reaching forward in summoning gesture and sword low out of face, gigantic green full moon over distant dark spires of Tartarus, cobalt and silver-blue spectral flame and crystalline sparks sweeping diagonally, melancholic resolve. Detailed fabric/metal, cinematic rim light and premium painted anime finish matching approved portraits, dynamic but clear silhouette, bold light-dark contrast. Entire opaque edge-to-edge illustration. No text, UI, frame, logo or watermark.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/makoto/assets/makoto-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/makoto/assets/makoto-atlas.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/makoto/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-7fcb28fb-db6e-4a72-a3d5-ca09007ed0cb.png",
+      "prompt": "Use case: stylized-concept premium painted anime cinematic videogame background, wide16:9, Persona3 Dark Hour atmosphere, enormous eerie green full moon over very distant towering black Tartarus spires and blue-black clouds, immense dark stone rooftop circular platform, subtle blue coffin-like silhouettes at extreme distance. EMPTY unobstructed broad dark foreground and midground for a sword battle; strong depth with horizon at upper third, restrained background highlights so characters and attack silhouettes remain clear. No characters, humanoids, creatures, weapons, foreground props, magic attacks, text, symbols, UI or watermark. Opaque complete painting, no transparency.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/makoto/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-95d8e65f-f586-4a96-b5a0-f5600cc46fba.png",
+      "prompt": "Use case: stylized-concept. Premium anime cinematic attack VFX sprites; ONE EQUAL2x2 transparent square atlas, FOUR distinct COMPLETE standalone effects. TL powerful crescent sword slash, thick bright silver-white CUTTING CORE and deep cobalt outer rim, bulging convex cutting face on RIGHT, two pointed tails opening LEFT; TR dark navy and violet larger crescent blade trail with bright icy white core, same convex RIGHT and open LEFT, sharp coffin-chain-like shards behind LEFT tail; BL brilliant blue-white ALMIGHTY ENERGY SPHERE with dense white central star, blue electrical fractures, purple/teal angular crystal rays radiating symmetrically, broad compact burst; BR gigantic spherical silver-blue/violet almighty explosion with solid bright white star core and sharp blue crystalline concentric shockfronts, distinct feather/chain-like fragments and outward rays. Every effect fits central70% of OWN quadrant width AND height with at least80px empty transparent margins on all sides and center separation. Effect cores are solid and saturated, softly fading outer20px only, real alpha around shapes, readable against bright AND dark scenes. No characters, weapons, landscapes, floor, UI, letters, numbers, watermark, grid or black background.",
+      "references": [],
+      "bounds": []
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "mode": "built-in imagegen",
+  "id": "narukami",
+  "status": "専用素材・演出・専用音・ローカル検証済み、公開検証前",
+  "assets": [
+    {
+      "path": "characters/narukami/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-16a51c36-c34f-44e3-a021-d9af4834d388.png",
+      "prompt": "Use case: identity-preserve game cinematic raster illustration. Preserve EXACT Yu Narukami from approved images: slim tall young man, short layered silver-gray hair, gray eyes, black rectangular glasses, black Yasogami school uniform jacket with high diamond-pattern collar and gold insignia/button, white open-collar shirt, black trousers and black shoes. Straight slender Japanese katana with dark handle. Same face, anatomy and outfit in every pose. Richly detailed painted anime, crisp clean silhouette, no redesign or chibi. ONE transparent square EQUAL 2x2 atlas, exactly FOUR separate COMPLETE FULL-BODY poses, all facing RIGHT. Each entire body, sword tip, hair and coat must fit central 60% of OWN quadrant width AND height, at least100px empty transparent margin on ALL sides and center boundaries. Same scale and proportions. Real alpha transparency; no scene, ground, shadows, effects, text, labels, UI, grid lines, logos or watermark. TL ready sword held low at side; TR fast sprint RIGHT leaning forward with trailing katana, long strong stride and coat flowing LEFT; BL long stepping horizontal katana slash RIGHT at waist, two-handed grip, planted front foot; BR leaping rising diagonal katana cut UP-RIGHT, one knee raised, both feet clear.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/narukami/assets/narukami-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/narukami/assets/narukami-atlas.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/narukami/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-1c0b36ee-a19d-4a9d-b825-0eced084e78b.png",
+      "prompt": "Use case: identity-preserve game cinematic raster illustration. Preserve EXACT Yu Narukami from approved images: slim tall young man, short layered silver-gray hair, gray eyes, black rectangular glasses, black Yasogami school uniform jacket with high diamond-pattern collar and gold insignia/button, white open-collar shirt, black trousers and black shoes. Straight slender Japanese katana with dark handle. Same face, anatomy and outfit in every pose. Richly detailed painted anime, crisp clean silhouette, no redesign or chibi. ONE transparent square EQUAL 2x2 atlas, exactly FOUR separate COMPLETE FULL-BODY poses, all facing RIGHT. Each entire body, sword tip, hair and coat must fit central 60% of OWN quadrant width AND height, at least100px empty transparent margin on ALL sides and center boundaries. Same scale and proportions. Real alpha transparency; no scene, ground, shadows, effects, text, labels, UI, grid lines, logos or watermark. TL low pivot reverse katana cut RIGHT with torso turned back three-quarter and long lateral stance; TR high aerial windup, two hands lift katana overhead, knees tucked; BL heavy landing downcut, deep front knee, blade aimed DOWN-RIGHT with face following blade; BR final summoning stance tall upright, left open hand commanding RIGHT, right katana lowered to side, glasses and eyes sharply readable, coat tails subtly flare. No magic circle or background.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/narukami/assets/narukami-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/narukami/assets/narukami-atlas.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/narukami/assets/limit-avatars.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-995b0cf4-6284-498a-a9c5-eb0cf39d4411.png",
+      "prompt": "Use case: stylized-concept. Premium richly detailed painted anime cinematic game sprites, NOT toy photography. Persona4 summons. EXACT4 separate full-body sprites EQUAL2x2 transparent atlas. TL IZANAGI from image1 top row: black long open coat with red lining, gold trim/belts, white segmented limbs, white angular horned faceplate with red slits, white ribbon straps trailing behind head, long straight silver poleblade; wide horizontal cut facing RIGHT with weapon fully extended RIGHT. TR SAME black IZANAGI airborne rising diagonal poleblade cut UP-RIGHT, bent knees and sweeping coat. BL IZANAGI-NO-OKAMI from official figure references2/3: long WHITE double-breasted officer coat with gold buttons and red lining, white segmented armor, gold shoes/spikes and gloves, gray faceted helmet with red narrow slits and single very long forehead point, very long white angular ribbon strips trailing from head, giant straight silver double-ended poleblade with circular GOLD ring at its center. Whole body floating, holding poleblade upright in both hands in front, prepared. BR SAME WHITE IZANAGI-NO-OKAMI sweeps giant poleblade diagonally DOWN-RIGHT releasing attack, dynamic extended arms and coat, full giant gold ring centered on weapon, angular head ribbons follow motion. No black-coat recolor substitution; preserve ring weapon, gold points and white coat of exact official Okami design. Each body and ENTIRE weapon/ribbons fit central60% of its OWN cell width AND height, at least100px EMPTY transparent margins all sides and center. Same proportions across corresponding pair. NO ground, pedestal, shadows, scene, light effects, text, labels, grid, logo or watermark. True alpha. EDIT ONLY TOP-RIGHT quadrant pose of the provided atlas. Keep TOP-LEFT, BOTTOM-LEFT and BOTTOM-RIGHT EXACTLY unchanged. Replace TOP-RIGHT overhead windup with an ACTIVE STRIKE: airborne right-facing lunge, torso leaning FORWARD, BOTH ARMS extend FORWARD-RIGHT at shoulder/chest height, hands remain BELOW face, long sword/poleblade extends from hands FORWARD-RIGHT at shallow 20-degree upward angle. Blade tip should be only slightly above head, NOT overhead/backward. Both bent legs trail LEFT below body. This is a forward-rising finishing swing, no weapon held over head. Preserve character identity, coffins/ribbons, proportions, colors, painterly quality, alpha transparency and generous margins. Complete weapon and limbs inside its own quadrant.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/narukami/assets/limit-avatars.webp"
+      ],
+      "bounds": [],
+      "revisions": [
+        {
+          "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-96b3346b-09a0-4da7-9b23-00d9edbaedea.png",
+          "prompt": "Use case: stylized-concept. Premium richly detailed painted anime cinematic game sprites, NOT toy photography. Persona4 summons. EXACT4 separate full-body sprites EQUAL2x2 transparent atlas. TL IZANAGI from image1 top row: black long open coat with red lining, gold trim/belts, white segmented limbs, white angular horned faceplate with red slits, white ribbon straps trailing behind head, long straight silver poleblade; wide horizontal cut facing RIGHT with weapon fully extended RIGHT. TR SAME black IZANAGI airborne rising diagonal poleblade cut UP-RIGHT, bent knees and sweeping coat. BL IZANAGI-NO-OKAMI from official figure references2/3: long WHITE double-breasted officer coat with gold buttons and red lining, white segmented armor, gold shoes/spikes and gloves, gray faceted helmet with red narrow slits and single very long forehead point, very long white angular ribbon strips trailing from head, giant straight silver double-ended poleblade with circular GOLD ring at its center. Whole body floating, holding poleblade upright in both hands in front, prepared. BR SAME WHITE IZANAGI-NO-OKAMI sweeps giant poleblade diagonally DOWN-RIGHT releasing attack, dynamic extended arms and coat, full giant gold ring centered on weapon, angular head ribbons follow motion. No black-coat recolor substitution; preserve ring weapon, gold points and white coat of exact official Okami design. Each body and ENTIRE weapon/ribbons fit central60% of its OWN cell width AND height, at least100px EMPTY transparent margins all sides and center. Same proportions across corresponding pair. NO ground, pedestal, shadows, scene, light effects, text, labels, grid, logo or watermark. True alpha.",
+          "references": [
+            "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/narukami/assets/narukami-personas.png",
+            "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/narukami/limit-break/references/izanagi-okami-01.jpg",
+            "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/narukami/limit-break/references/izanagi-okami-03.jpg"
+          ]
+        }
+      ],
+      "packing": "Equal 2x2, alpha bbox, common scale; maximum visible height550 within900x800 cells, bottom16px margin; no joint warping."
+    },
+    {
+      "path": "characters/narukami/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-13462b85-22c4-4a37-ac01-324c4b8ae40a.png",
+      "prompt": "Use case: identity-preserve game cinematic raster illustration. Preserve EXACT Yu Narukami from approved images: slim tall young man, short layered silver-gray hair, gray eyes, black rectangular glasses, black Yasogami school uniform jacket with high diamond-pattern collar and gold insignia/button, white open-collar shirt, black trousers and black shoes. Straight slender Japanese katana with dark handle. Same face, anatomy and outfit in every pose. Richly detailed painted anime, crisp clean silhouette, no redesign or chibi. Wide16:9 ultra high resolution cinematic CUT-IN illustration, chest-up closeup at LEFT half looking intensely RIGHT, face eyes cheek and chin fully readable with original facial structure; one hand reaching forward in summoning gesture and sword low out of face, black television-space void and receding TV silhouettes, golden fog split by brilliant white/gold lightning and glass shards, confident determined expression. Detailed fabric/metal, cinematic rim light and premium painted anime finish matching approved portraits, dynamic but clear silhouette, bold light-dark contrast. Entire opaque edge-to-edge illustration. No text, UI, frame, logo or watermark.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/narukami/assets/narukami-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/narukami/assets/narukami-atlas.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/narukami/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-2790ed82-1391-4096-9394-7d073d2ddb2e.png",
+      "prompt": "Use case: stylized-concept premium painted anime cinematic videogame background, wide16:9, Persona4 final TV-world atmosphere, boundless dark television-space with distant tilted blank CRT screen frames fading in golden fog, broken dark glossy stone platform, distant white ribbons of cloud under a black sky. EMPTY unobstructed broad dark foreground and midground for a sword battle; strong depth with horizon at upper third, restrained background highlights so characters and attack silhouettes remain clear. No characters, humanoids, creatures, weapons, foreground props, magic attacks, text, symbols, UI or watermark. Opaque complete painting, no transparency.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/narukami/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-701338ef-b8c7-4bf0-b96e-24cf0a1c3434.png",
+      "prompt": "Use case: stylized-concept. Premium anime cinematic attack VFX sprites; ONE EQUAL2x2 transparent square atlas, FOUR distinct COMPLETE standalone effects. TL thick silver-white/golden katana crescent, bright WHITE CUTTING CORE, golden lightning outer rim, convex cutting face bulges RIGHT, tails/opening point LEFT; TR bright thick branched GOLD LIGHTNING PILLAR descending vertically with dense white core and jagged yellow bolts, compact burst at its BOTTOM; BL enormous Myriad Truths impact burst, concentric gold and white sharp rays around compact white star, shattered glass-like pale yellow fragments, readable dense silhouette; BR a thick vertical WHITE-GOLD ALMIGHTY RAY descending from TOP to BOTTOM with densely opaque white center, sharply outlined golden edges and lightning sidebranches, more focused narrow at top and wide flared impact fan at bottom. Every effect fits central70% of OWN quadrant width AND height with at least80px empty transparent margins on all sides and center separation. Effect cores are solid and saturated, softly fading outer20px only, real alpha around shapes, readable against bright AND dark scenes. No characters, weapons, landscapes, floor, UI, letters, numbers, watermark, grid or black background.",
+      "references": [],
+      "bounds": []
+    }
+  ]
+}
