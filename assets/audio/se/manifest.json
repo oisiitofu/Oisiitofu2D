@@ -534,6 +534,18 @@
     ],
     "kingbonby-limit-destroy": [
       "/assets/audio/se/kingbonby-limit-destroy.wav"
+    ],
+    "jehuty-limit-shift": [
+      "/assets/audio/se/jehuty-limit-shift.wav"
+    ],
+    "jehuty-limit-vector": [
+      "/assets/audio/se/jehuty-limit-vector.wav"
+    ],
+    "ryza-limit-chain": [
+      "/assets/audio/se/ryza-limit-chain.wav"
+    ],
+    "ryza-limit-drive": [
+      "/assets/audio/se/ryza-limit-drive.wav"
     ]
   },
   "impactDesign": {

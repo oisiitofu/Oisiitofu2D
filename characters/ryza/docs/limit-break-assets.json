@@ -1,0 +1,60 @@
+{
+  "mode": "built-in imagegen",
+  "id": "ryza",
+  "status": "ローカル対戦・トレモ・CPU・372フレーム同期・連続描画検証済み、未公開",
+  "assets": [
+    {
+      "path": "characters/ryza/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-aae1330d-12f8-4ef4-94f5-37370bcf2005.png",
+      "prompt": "Use case: stylized-concept. Premium detailed anime 2D fighting-game cinematic raster art. References fix SAME Ryza identity and costume: short light brown bob, amber eyes, white beret and large dark brown bow, gold clover hairclip, yellow short cape/jacket, white blouse, red shorts, brown leather gloves/belts/pouches, dark brown thigh-high stockings, brown gold boots. Gold staff with BLUE ORB in ornate open gold circular head. Preserve face, body proportions, costume, colors, staff. Ordinary heroic action, no redesign. Crisp expressive face, polished rich painted materials, distinct readable full-body gestures. No text, grid, logos or watermark. ONE transparent EQUAL2x2 square animation sprite atlas, FOUR complete full-body poses facing RIGHT, same body scale. TL alert battle-ready pose, gold blue-orb staff held diagonally, other gloved hand at pouch; TR low fast running step RIGHT, staff trails behind left, yellow cape streams naturally, BOTH legs clearly running; BL big overarm throwing wind-up with small round red alchemy bomb in right hand behind shoulder, left hand holds staff low; BR dynamic completed RIGHTWARD throw, open right hand stretched right, torso turning, left hand and staff low behind, no bomb still in hand. Whole complete hat, hair, cape, staff all tips, hands, boot soles must fit inside central65% of own quadrant width AND height, at least100px transparent margin on EVERY side, no overlap. No trails, backdrop, ground or shadow. Genuine alpha transparency.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryza/assets/ryza-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryza/assets/ryza-atlas.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryza/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-a6a8a182-31f2-46c1-92ab-cdba7d99ca7f.png",
+      "prompt": "Use case: stylized-concept. Premium detailed anime 2D fighting-game cinematic raster art. References fix SAME Ryza identity and costume: short light brown bob, amber eyes, white beret and large dark brown bow, gold clover hairclip, yellow short cape/jacket, white blouse, red shorts, brown leather gloves/belts/pouches, dark brown thigh-high stockings, brown gold boots. Gold staff with BLUE ORB in ornate open gold circular head. Preserve face, body proportions, costume, colors, staff. Ordinary heroic action, no redesign. Crisp expressive face, polished rich painted materials, distinct readable full-body gestures. No text, grid, logos or watermark. ONE transparent EQUAL2x2 square animation sprite atlas, FOUR complete full-body DISTINCT attack poses facing RIGHT, same body scale as reference. TL broad two-handed horizontal staff sweep forward RIGHT, wide low stance, blue orb reaches out right at chest height; TR agile airborne forward follow-up with bent knees, staff raised above front shoulder, cape flowing left, complete body; BL low landing crouch recovering from jump, one knee bent and rear foot extended, staff held across body pointing right, gloved free hand near ground; BR powerful finishing magic release stance, BOTH gloved hands grip staff aimed horizontally RIGHT at shoulder height, blue orb at far RIGHT end, front knee braced and rear foot firm, torso leans slightly back. No visible beam yet. Each WHOLE complete figure and entire staff inside central65% of own quadrant width AND height, at least100px empty transparent margin on ALL sides; no overlap or clipped tips. No ground, effects, text or shadows. Genuine alpha transparency.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryza/assets/ryza-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryza/assets/ryza-atlas.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryza/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-4a5646a3-b678-4d71-b5b6-f88fa73f1356.png",
+      "prompt": "Use case: stylized-concept. Premium detailed anime 2D fighting-game cinematic raster art. References fix SAME Ryza identity and costume: short light brown bob, amber eyes, white beret and large dark brown bow, gold clover hairclip, yellow short cape/jacket, white blouse, red shorts, brown leather gloves/belts/pouches, dark brown thigh-high stockings, brown gold boots. Gold staff with BLUE ORB in ornate open gold circular head. Preserve face, body proportions, costume, colors, staff. Ordinary heroic action, no redesign. Crisp expressive face, polished rich painted materials, distinct readable full-body gestures. No text, grid, logos or watermark. Single wide16:9 cinematic CUT-IN painting. Ryza's determined smiling face large on left-center, face and beret fully visible, gloved hand grips blue-orb gold staff rising diagonally toward upper right, other hand holds a red round alchemy bomb. Upper body active twisting forward to cast, yellow cape sweeps behind. Background ancient island stone ruins at dusk with radiant golden and turquoise alchemical particles, depth and dramatic magical lighting. Face natural and matches reference exactly. Clear eyes, cheek and chin, fine hair and cloth details. No other characters, no UI or text. Not a sprite sheet.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryza/assets/ryza-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryza/assets/ryza-atlas.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryza/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-21ac8914-ad8e-4c03-8cae-896764894c75.png",
+      "prompt": "Use case: stylized-concept. Wide16:9 premium detailed hand-painted anime game BACKGROUND ONLY. Ancient island alchemist ruins at warm twilight: broad level worn pale stone platform in foreground, broken archways and ivy-covered columns receding into depth on both sides, luminous blue sea and distant green island cliffs under violet orange sunset clouds, tiny warm firefly motes. Empty broad central stage for readable character action, warm golden side light and deep violet shadows. Rich ancient masonry detail, majestic spacious scale. No people, characters, monsters, attack effects, magic circles, UI, text, logos or watermark.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryza/assets/limit-items.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-7b254021-5cab-4519-9239-6c5ca59c215f.png",
+      "prompt": "Use case: stylized-concept. ONE transparent EQUAL2x2 square atlas, FOUR isolated premium anime alchemy item/effect sprites. TL one polished dark RED spherical alchemy bomb with bronze-gold cap and curved cord fuse, simple small gold clover ornament, complete round object no explosion; TR one blue-white icy crystal detonation with angular translucent ice shards and dense pale blue frosty core, complete round burst; BL one bold jagged golden lightning bolt travelling vertically down, white opaque core and saturated orange-gold outline, branching forks contained; BR intricate GOLD and turquoise alchemical circular seal viewed straight on, nested fine concentric rings and precise geometric lines, no letters or words. Each sprite fits ENTIRELY INSIDE central60% of own equal quadrant width AND height, at least100px empty fully transparent margin EVERY side. No clipped fragments, no overlap. Rich painted shading, crisp strong shapes, dense cores and soft alpha edges. No characters, text, grid, UI, logo or black background.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryza/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-ec74b1f4-5682-4b32-8f31-ab318fd2ac1f.png",
+      "prompt": "Use case: precise-object-edit. Correct ONLY spacing and clipped boundaries of this four-effect atlas. Keep SAME golden right-convex staff crescent, rightward gold star projectile, white-gold beam and round alchemical explosion, all colors and details. SHRINK each COMPLETE effect to at most60% of OWN equal2x2 quadrant WIDTH and HEIGHT. At least100px empty transparent margins ALL sides including central boundaries. Restore every clipped glow tip, outer spike and fragment. Bottom-left beam MUST have COMPLETE rounded right head INSIDE own cell, not square-cut at right edge; complete left origin also inside cell. No overlap with adjacent explosion. Real alpha transparency, preserve dense bright cores and soft transparent outer edges. No text, panels, grid, black backdrop or characters.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-bfbe2cc2-7707-4230-8ebf-f8c806e82378.png"
+      ],
+      "bounds": []
+    }
+  ]
+}

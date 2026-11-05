@@ -1,0 +1,62 @@
+{
+  "mode": "built-in imagegen",
+  "id": "jehuty",
+  "status": "ローカル対戦・トレモ・CPU・377フレーム同期・連続描画検証済み、未公開",
+  "assets": [
+    {
+      "path": "characters/jehuty/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-04bf9fdb-02dc-47ef-9579-c835751d4345.png",
+      "prompt": "Use case: stylized-concept. Production raster art for a bespoke high-end 2D fighting-game Limit Break, sharp anime mecha illustration, elaborate clean mechanical details, cinematic cyan lighting, crisp readable silhouettes. Reference1 is the approved normal Jehuty design/motion sheet; reference2 is official Naked Jehuty FINAL FORM design; reference3 is official Vector Cannon hardware. These are reference images only, do not reproduce collage, labels, display stands or toy joints. Preserve Jehuty's unique extremely long pointed legs, thin waist, metallic gold structural parts, cyan circuits, angular rear fins; never replace it with generic Gundam armor. No text, logo, UI or watermark. Make a single wide 16:9 cinematic CUT-IN painting, very high detail. Final Naked Jehuty dominates left and center, close face and upper chest in aggressive three-quarter view looking RIGHT. EXACT final form from reference2: small white smooth mask with narrow dark eyes, dark slate-gray minimal armor, clearly exposed GOLD spine/chest mechanisms, slender charcoal limbs and thin cyan circuit lines. Rear dark fins rise behind head. No normal long beaked navy helmet on this final form. Left hand reaches toward foreground, white forearm energy blade diagonally right. Explosive blue zero-shift light, dark orbital fortress background with distant pale planet, torn luminous cyan space trails. Face and chest entirely visible, rightmost quarter darker for action. No cropped face, no human pilot.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/jehuty/assets/jehuty-reference.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/.tools/limit-references/jehuty-naked-official.jpg",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/.tools/limit-references/jehuty-cannon-official.jpg"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/jehuty/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-7e9a4348-ef8a-4eb4-bcc0-78a45b26a096.png",
+      "prompt": "Use case: stylized-concept. Create ONE transparent square equal2x2 sprite atlas of NORMAL JEHUTY from this approved reference sheet. Exact navy blue and ivory armor over gold mechanisms, long dark navy pointed BIRD BEAK helmet with cyan visor and tall fins. NOT Naked Jehuty, NO white face mask. Anime mechanical art, crisp detailed painted armor. FOUR complete full-body poses facing RIGHT: TL floating ready blade down; TR fast horizontal flying approach, long legs trailing left; BL broad rightward horizontal forearm-blade slash with waist turning; BR rising forearm-blade uppercut angled up-right and knees tucked. Same proportions/costume across four. Each complete robot including pointed feet, all fins and entire blade fits in central 65% WIDTH AND HEIGHT of own quadrant, 100px transparent margin on EVERY side. No overlap, cropped tips, giant trails, ground, shadows, text or watermark. Preserve thin waist and extraordinarily long pointed legs. Tiny localized cyan engine lights only. No cannon assembly on these normal frames.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/jehuty/assets/jehuty-reference.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/jehuty/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-914e57df-c0cb-4cbd-84cb-15bdb294d1bc.png",
+      "prompt": "Use case: precise-object-edit. Fix ONLY spacing and completeness of this four-pose Naked Jehuty transparent animation atlas. Preserve exact SAME white mask, dark gray armor, exposed gold spine/chest, thin cyan circuits, mechanical design and four distinct poses, including deployed Vector Cannon assembly. SHRINK each complete robot uniformly to at most 65% of its OWN equal2x2 quadrant width AND height. Restore FULL pointed leg tips, blade tips, fins, cannon ends and small propulsion trails; no clipped image edges and no crossing center boundaries. At least100px fully transparent margin on all sides of all four cells. Entire complete robot plus cannon must fit in each own cell. No extra objects, no stand, text or grid. Keep genuine alpha transparency. Body action only small local glow; remove huge trailing exhaust if needed to achieve generous safe margins.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-e1999625-c6d6-48b2-8736-88f9baaec195.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/jehuty/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-11079124-a617-47e3-a416-eefa94814200.png",
+      "prompt": "Use case: stylized-concept. One panoramic 16:9 premium anime mecha game cinematic BACKGROUND ONLY. Aumaan orbital fortress, vast dark metallic deck running horizontally across empty broad foreground, deep navy steel angular towers and suspended huge dark warship hulls far in background, pale blue planet over curved horizon, starfield and broken silver structure drifting in space, cyan rim lighting and warm tiny distant explosions for scale. Dark midground keeps cyan robots and target readable. High-end hand painted mechanical illustration, precise perspective, rich detail, majestic enormous scale. No robots, characters, central beams, UI, text, logos or watermark. Broad empty action space lower middle, level floor.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/jehuty/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-49fe0584-902e-490a-865e-526d43862367.png",
+      "prompt": "Use case: precise-object-edit. Correct ONLY layout and clipped boundaries of these same FOUR cyan-white attack effects. Preserve SAME exact crescent with convex edge RIGHT, rightward spear laser, horizontal rightward large cannon beam, and circular explosion. SHRINK each complete effect to occupy MAXIMUM60% of its OWN quadrant width AND height in an EQUAL2x2 atlas. Leave at least100px EMPTY transparent margin on all sides INCLUDING central boundaries. Restore complete outer spikes, debris and all beam tips; nothing may touch image edge. The bottom-left beam must be a COMPLETE standalone shape with a clean small left origin and broad right head INSIDE its cell, not a beam cut off by left boundary. Preserve opaque bright cores, saturated cyan contours, transparent soft outer edges. No text, labels, panels, black background, no redesign. The large empty transparent margins are REQUIRED.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-9863788f-2d20-4beb-a34e-760e4ec81c16.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/jehuty/assets/limit-cannon.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-d9a122c5-7b40-4964-be9f-1f3f2dce2955.png",
+      "prompt": "Use case: stylized-concept. ONE transparent 2-column single-row atlas, TWO COMPLETE FULL-BODY sprites of Naked Jehuty wearing Vector Cannon, detailed premium anime mecha painting. Reference1 fixes final form exact white mask face, dark gray sparse armor, exposed gold core/spine, extraordinarily long pointed gray legs and cyan circuits. Reference2 fixes cannon construction: huge gray/white angular barrel panels, gold hexagonal aperture, white square muzzle. BOTH images strict near-SIDE VIEW with head, body and ALL CANNON BARRELS AIMED HORIZONTALLY RIGHT, never toward viewer or left. LEFT CELL: deploy/charge, cannon unfolded above right shoulder aimed right, torso upright and long legs braced with gold claws open. RIGHT CELL: firing recoil wholebody pose leaning back LEFT while both cannon barrels still point RIGHT, front knee bent and rear long foot braced. Cannons are mounted above/behind shoulders, long straight horizontal barrels project RIGHT beyond face and hands. No actual beam, only small cyan charge at rightmost muzzle. Entire robot and both complete cannon tips inside central65% of OWN cell, at least100px clear transparent margin ALL sides. Same identity, proportions and mechanical design, two clearly distinct action poses. No thruster clouds, stand, ground, text, logo or watermark.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/.tools/limit-references/jehuty-naked-official.jpg",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/.tools/limit-references/jehuty-cannon-official.jpg"
+      ],
+      "bounds": []
+    }
+  ]
+}
