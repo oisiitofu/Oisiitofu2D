@@ -1,7 +1,7 @@
 {
   "mode": "built-in imagegen",
   "id": "yuri",
-  "status": "専用素材制作済み・演出コード未実装・未公開",
+  "status": "Sites v323とGitHubへ公開、対戦・トレモ・描画・専用音・公開同期を検証済み",
   "assets": [
     {
       "path": "characters/yuri/assets/limit-poses.webp",

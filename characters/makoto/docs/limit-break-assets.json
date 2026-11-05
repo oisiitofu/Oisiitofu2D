@@ -1,7 +1,7 @@
 {
   "mode": "built-in imagegen",
   "id": "makoto",
-  "status": "専用素材・演出・専用音・ローカル検証済み、公開検証前",
+  "status": "Sites v325とGitHubへ公開、対戦・トレモ・描画・専用音・公開同期を検証済み",
   "assets": [
     {
       "path": "characters/makoto/assets/limit-poses.webp",
