@@ -2,6 +2,18 @@
   "sampleRate": 48000,
   "variants": 3,
   "sounds": {
+    "hunter-limit-charge": [
+      "/assets/audio/se/hunter-limit-charge.wav"
+    ],
+    "hunter-limit-truecharge": [
+      "/assets/audio/se/hunter-limit-truecharge.wav"
+    ],
+    "naruhodo-limit-gavel": [
+      "/assets/audio/se/naruhodo-limit-gavel.wav"
+    ],
+    "naruhodo-limit-turnabout": [
+      "/assets/audio/se/naruhodo-limit-turnabout.wav"
+    ],
     "okami-limit-brush": [
       "/assets/audio/se/okami-limit-brush.wav"
     ],
