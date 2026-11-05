@@ -1,7 +1,7 @@
 {
   "mode": "built-in imagegen",
   "id": "diana",
-  "status": "ローカル対戦・トレモ・CPU・382フレーム同期・連続描画を確認、未公開",
+  "status": "Sites v321へ公開。公開描画・専用音・ファイル一致を確認。公開同期は旧サーバーの一覧更新待ち",
   "assets": [
     {
       "path": "characters/diana/assets/limit-poses.webp",

@@ -1,7 +1,7 @@
 {
   "mode": "built-in imagegen",
   "id": "hinako",
-  "status": "ローカル対戦・トレモ・CPU・379フレーム同期・連続描画を確認、未公開",
+  "status": "Sites v321へ公開。公開描画・専用音・ファイル一致を確認。公開同期379フレーム一致",
   "assets": [
     {
       "path": "characters/hinako/assets/limit-poses.webp",
