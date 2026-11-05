@@ -1,0 +1,111 @@
+{
+  "mode": "built-in image_gen",
+  "status": "implemented; local verification passed; public verification pending",
+  "assets": [
+    {
+      "id": "alain",
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/alain/assets/alain-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/alain/assets/alain-poses.png"
+      ],
+      "prompt": "Create a premium hand-painted anime action game sprite atlas on TRUE TRANSPARENT BACKGROUND. 2x2 equal cells, FOUR separate full-body illustrations, generous transparent gap and safe edge margins, no labels, no frame, no floor, no background, no opponent. Alain, exactly the young knight of references: short spiky bright blue hair, blue eyes, clean youthful face, silver plate armor with gold filigree, blue layers and long royal-blue cape gold heraldry, dark trousers and silver armored boots. Right hand straight silver sword gold hilt; left hand blue kite shield gold lion and floral emblem. Preserve original face, proportions, costume and weapon shapes. References are identity/costume reference only, do not edit base images. Very high detail crisp clean silhouette, no motion blur on body, balanced anatomy, original face preserved. Every cell has a distinct complete anatomical action, same character scale, all hair, cape, shield, blade and boots entirely inside cell. Predominantly facing right, 3/4 view. top-left: shield braced in front at chest height, knees bent, feet staggered to absorb impact, face visible above shield. top-right: weight sliding backward into a half-step, shield angled to deflect, sword chambered low. bottom-left: powerful shield bash toward right, front leg rooted, rear heel lifting, right sword held safely behind. bottom-right: riposte sword slash extended diagonally up-right just below eye level, hips turned through strike, shield covering torso. No repeated standing pose or joint rig, full-body inbetweens convey weight and action. Effects will be separate assets.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2bc9288a-b125-4d16-8183-155dc9dfc379.png",
+      "destination": "characters/alain/assets/limit-poses.webp"
+    },
+    {
+      "id": "alain",
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/alain/assets/alain-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/alain/assets/alain-poses.png"
+      ],
+      "prompt": "Create a premium hand-painted anime action game sprite atlas on TRUE TRANSPARENT BACKGROUND. 2x2 equal cells, FOUR separate full-body illustrations, generous transparent gap and safe edge margins, no labels, no frame, no floor, no background, no opponent. Alain, exactly the young knight of references: short spiky bright blue hair, blue eyes, clean youthful face, silver plate armor with gold filigree, blue layers and long royal-blue cape gold heraldry, dark trousers and silver armored boots. Right hand straight silver sword gold hilt; left hand blue kite shield gold lion and floral emblem. Preserve original face, proportions, costume and weapon shapes. References are identity/costume reference only, do not edit base images. Very high detail crisp clean silhouette, no motion blur on body, balanced anatomy, original face preserved. Every cell has a distinct complete anatomical action, same character scale, all hair, cape, shield, blade and boots entirely inside cell. Predominantly facing right, 3/4 view. top-left: controlled retreating diagonal step toward camera three-quarter, sword low, shield forward, cape responding to turn. top-right: dynamic springing pivot looking back over shoulder, both feet clear and shield moving with body, preparing to mount. bottom-left: calm strong full-body final invocation stance, sword held straight above head, shield lowered at side, face visible and both feet planted. bottom-right: final blade lowered after strike, braced wide stance with cape settling, shield beside body. No repeated standing pose or joint rig, full-body inbetweens convey weight and action. Effects will be separate assets.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a9e527de-b31c-41da-a0c8-c355b2037766.png",
+      "destination": "characters/alain/assets/limit-motion.webp"
+    },
+    {
+      "id": "alain",
+      "kind": "horse",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/alain/assets/alain-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/alain/assets/alain-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/alain/limit-break/references/high-lord-official-video.jpg"
+      ],
+      "prompt": "2x2 equal cells FOUR mounted full-body action sprites. Alain same first two refs: blue short hair/eyes, youthful face, silver gold-trim armor, blue heraldic cape, blue gold lion shield LEFT arm, silver sword gold hilt RIGHT. Horse same third official High Lord ref: BROWN horse, pale golden mane/tail, layered SILVER neck/head armor, ridged crest and long narrow forward horn on forehead armor, royal-blue/purple cloth barding gold piping/fleur motifs, gold saddle/silver plating. NOT white unicorn animal, horn armored projection. Clean detailed anime sprites, full horse/rider/weapons/cape/hooves within safe margins. TRUE TRANSPARENT BACKGROUND, no floor/particles/opponent/text. Top-left: preparation facing right side-three-quarter, sword forward chest height, horse hoof lifted. Top-right: gathered gallop right, four legs flexed under horse in suspended phase, rider leaning forward sword low, shield at chest. Bottom-left: extended gallop right, front legs reaching and hind legs pushing back, rider leaning over saddle slashing shallow upper-right. Bottom-right: turn toward camera right, horse three-quarter front, outside legs pushing into turn, rider shifts weight, cape outward, sword beside body. Consistent scale distinct leg phases.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7e6de7ed-e125-404c-878e-02e41c296598.png",
+      "destination": "characters/alain/assets/limit-horse.webp"
+    },
+    {
+      "id": "alain",
+      "kind": "cavalry",
+      "refs": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-0bd12f35-7841-49cf-b5f7-0433e445a445.png"
+      ],
+      "prompt": "Edit this transparent 2x2 rider/horse sprite sheet. Preserve all four exact character designs, faces, armor, horse, colors and poses. Fix cell separation: the raised vertical sword of the BOTTOM LEFT illustration intrudes into the TOP LEFT cell under the galloping horse. Re-layout these four complete illustrations into equally sized 2x2 cells with generous transparent padding so ALL parts, especially entire raised sword of lower-left rider, stay within that cell and no piece crosses a boundary or appears detached in another cell. Scale the complete lower-left illustration uniformly slightly smaller if necessary, keeping exact body proportions, no weapon clipping. Do not add loose objects or duplicate sword tips. Keep TRUE TRANSPARENT background, no labels/grid/shadows. This is a production sprite atlas spacing repair, not a design change.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3d28b7f6-1758-448a-a784-d8798bc0002e.png",
+      "destination": "characters/alain/assets/limit-cavalry.webp",
+      "supersededOutput": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0bd12f35-7841-49cf-b5f7-0433e445a445.png",
+      "repairReason": "Separate bottom-left raised sword from top-left horse cell; preserve anatomy/design"
+    },
+    {
+      "id": "alain",
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/alain/assets/alain-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/alain/assets/alain-poses.png"
+      ],
+      "prompt": "One premium anime cinematic cut-in 16:9 landscape opaque environment no text/logos. Exact Alain identity of references: blue hair/eyes youthful face silver gold armor blue cape blue gold lion shield. Close face/torso LEFT half, shield intercepting brilliant golden impact below face. Royal blue fabric sweeps RIGHT into ruined castle/celestial gold rays. Exquisite high-end illustration, eyes/cheeks/chin entirely visible, original face/costume, ample margin, no distortion.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-164299cf-d57a-4b59-8385-b2d38120ea61.png",
+      "destination": "characters/alain/assets/limit-cutin.webp"
+    },
+    {
+      "id": "alain",
+      "kind": "court",
+      "refs": [],
+      "prompt": "Detailed 16:9 wide anime game cinematic environment, opaque, no characters/creatures/text/logos/weapons. Royal castle forecourt blue twilight, pale stone circular courtyard expansive OPEN center for cavalry, curved gold-inlaid paving, distant arches/banners, celestial gold light overhead, sapphire shadows, no central obstruction. Premium painterly game art, subdued central/lower space for bright attacks, impressive scale.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ca319de8-abb0-4d0b-a54f-2ba37dee122b.png",
+      "destination": "characters/alain/assets/limit-court.webp"
+    },
+    {
+      "id": "alain",
+      "kind": "effects",
+      "refs": [],
+      "prompt": "TRUE TRANSPARENT BACKGROUND 2x2 equal-cell VFX atlas FOUR isolated effects no characters/weapons/text/floor. Each fully inside cell, transparent margins soft exterior taper thick opaque contour luminous solid core legible on bright backgrounds. Top-left shield impact fan dense gold-white star LEFT steel-blue angular splinters RIGHT. Top-right sword crescent CONVEX edge RIGHT open side/tails LEFT silver-white core royal-blue edge gold streaks. Bottom-left celestial charge cluster sharp golden star above compact blue-gold glow auxiliary gold particles. Bottom-right huge astral sword blast HORIZONTAL LEFT to RIGHT thick tapered white-gold blade core cobalt/gold rays jagged stars sharp tip. Distinct detailed silhouettes no checkerboard/opaque backdrop.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-6244a2b6-b165-430d-9c31-618f6fb7e4f3.png",
+      "destination": "characters/alain/assets/limit-effects.webp"
+    }
+  ],
+  "effectSourceBounds": [
+    [
+      0,
+      0,
+      630,
+      620
+    ],
+    [
+      630,
+      0,
+      1280,
+      620
+    ],
+    [
+      0,
+      620,
+      430,
+      1280
+    ],
+    [
+      430,
+      620,
+      1280,
+      1280
+    ]
+  ],
+  "effectOrientation": "Convex cutting edge RIGHT; source rotation followed by face reflection in drawEffect. No global source mirroring.",
+  "references": {
+    "officialPromotion": "https://unicorn-overlord.com/system/reinforce/",
+    "officialVideo": "https://www.youtube.com/watch?v=kLIeyfNx94c",
+    "visual": "Brown horse, silver head/neck armor with forehead projection, blue-purple gold-trim barding checked against official embedded video thumbnail"
+  }
+}

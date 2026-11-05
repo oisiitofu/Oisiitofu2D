@@ -594,6 +594,18 @@
     ],
     "nahobino-limit-murakumo": [
       "/assets/audio/se/nahobino-limit-murakumo.wav"
+    ],
+    "will-limit-royal-cut": [
+      "/assets/audio/se/will-limit-royal-cut.wav"
+    ],
+    "will-limit-sovereign": [
+      "/assets/audio/se/will-limit-sovereign.wav"
+    ],
+    "alain-limit-cavalier": [
+      "/assets/audio/se/alain-limit-cavalier.wav"
+    ],
+    "alain-limit-astral": [
+      "/assets/audio/se/alain-limit-astral.wav"
     ]
   },
   "impactDesign": {

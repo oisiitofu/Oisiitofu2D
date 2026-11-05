@@ -1,0 +1,98 @@
+{
+  "mode": "built-in image_gen",
+  "status": "implemented; local verification passed; public verification pending",
+  "assets": [
+    {
+      "id": "will",
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/will/assets/will-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/will/assets/will-atlas.png"
+      ],
+      "prompt": "Create a premium hand-painted anime action game sprite atlas on TRUE TRANSPARENT BACKGROUND. 2x2 equal cells, FOUR separate full-body illustrations, generous transparent gap and safe edge margins, no labels, no frame, no floor, no background, no opponent. Will, exactly the young slim hero of references: navy short tousled hair, engraved gold headband, heterochromia image-left blue eye and image-right golden eye, white high-collared long coat with thin subtle gray checks, dark undershirt, crossed dark brown leather harnesses gold buckles, black gloves, dark trousers, tall dark boots gold buckles. One slim straight silver sword with gold hilt. Preserve youthful face and original proportions. References are identity/costume reference only, do not edit base images. Very high detail crisp clean silhouette, no motion blur on body, balanced anatomy, original face preserved. Every cell has a distinct complete anatomical action, same character scale, all hair, cape, shield, blade and boots entirely inside cell. Predominantly facing right, 3/4 view. top-left: close guard deflecting with sword diagonally in front of body below face, knees flexed, feet firmly planted. top-right: short backward half-step, torso coiled low with sword chambered near hip, back foot bracing. bottom-left: explosive rising cut from crouch to high right, full leg drive, blade pointing steeply up-right at completed contact. bottom-right: airborne rising follow-through, one knee up, sword extended high-right, other leg trailing, face visible. No repeated standing pose or joint rig, full-body inbetweens convey weight and action. Effects will be separate assets.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1615d554-a5e7-4d2a-b9e6-464269fb85ec.png",
+      "destination": "characters/will/assets/limit-poses.webp"
+    },
+    {
+      "id": "will",
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/will/assets/will-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/will/assets/will-atlas.png"
+      ],
+      "prompt": "Create a premium hand-painted anime action game sprite atlas on TRUE TRANSPARENT BACKGROUND. 2x2 equal cells, FOUR separate full-body illustrations, generous transparent gap and safe edge margins, no labels, no frame, no floor, no background, no opponent. Will, exactly the young slim hero of references: navy short tousled hair, engraved gold headband, heterochromia image-left blue eye and image-right golden eye, white high-collared long coat with thin subtle gray checks, dark undershirt, crossed dark brown leather harnesses gold buckles, black gloves, dark trousers, tall dark boots gold buckles. One slim straight silver sword with gold hilt. Preserve youthful face and original proportions. References are identity/costume reference only, do not edit base images. Very high detail crisp clean silhouette, no motion blur on body, balanced anatomy, original face preserved. Every cell has a distinct complete anatomical action, same character scale, all hair, cape, shield, blade and boots entirely inside cell. Predominantly facing right, 3/4 view. top-left: airborne turn seen three-quarter front, knees tucked, sword drawn across chest below chin preparing descending cut. top-right: airborne downward cut, torso pitched forward, right arm extends sword diagonally down-right toward enemy below, both boots fully visible. bottom-left: landing into deep one-knee brace, blade angled down-right and coat settling. bottom-right: recover upright, determined gaze up-right, left open hand at chest radiating resolve, right sword lowered. No generated magical particles. No repeated standing pose or joint rig, full-body inbetweens convey weight and action. Effects will be separate assets.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1835ea00-ee8d-4eb3-97d9-ac0f1dcc4b76.png",
+      "destination": "characters/will/assets/limit-motion.webp"
+    },
+    {
+      "id": "will",
+      "kind": "avatars",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/will/limit-break/references/prince-detail2.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/will/limit-break/references/prince-detail1.png"
+      ],
+      "prompt": "TRUE TRANSPARENT BACKGROUND 2x2 atlas FOUR complete full-body PRINCE archetype illustrations from Metaphor ReFantazio matching original game-render references. Omit UI/logos. Black angular armored humanoid, molten orange-gold branching chest lines, pale gray side armor, tall gold crown helmet concealing face with black slit and thin gold visor, very long pale silver-white hair cascading to waist and thick layered winglike hair strands behind shoulders. Gold long triangular waist panels, slender black armored legs. Long dark massive straight sword gold edges, no extra arms/wings. Polished detailed anime sprites. Separated cells, all sword/hair/boots within safe margins, no floor/opponent/effects. Top-left: facing right three-quarter transformation arrival in midair, sword down, left arm opening. Top-right: rising sword thrust steeply up-right, one knee lifted, torso extended, hair downward. Bottom-left: suspended overhead two-handed sword strike preparation, sword high diagonal, knees tucked, hair arcing upward. Bottom-right: committed downward cleave diagonally down-right, both arms/torso forward, sword tip entirely visible far below-right, hair streaming up. Distinct poses.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7bdaa801-ee1a-43f3-9a32-20ee916956a0.png",
+      "destination": "characters/will/assets/limit-avatars.webp"
+    },
+    {
+      "id": "will",
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/will/assets/will-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/will/assets/will-atlas.png"
+      ],
+      "prompt": "One premium anime cinematic cut-in 16:9 landscape opaque environment no text/logos. Exact Will identity of references: navy hair gold headband heterochromia image-left blue/image-right gold, white checked coat dark leather harness. Close determined face/chest LEFT third hand clutching heart awakening golden royal light. Blade leads upward-right into crimson/teal fractured sky and distant golden crown. Exquisite high-end illustration, eyes/cheeks/chin entirely visible, original face/costume, ample margin, no distortion.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c2271e3b-7679-4073-938a-d59cfb94f041.png",
+      "destination": "characters/will/assets/limit-cutin.webp"
+    },
+    {
+      "id": "will",
+      "kind": "court",
+      "refs": [],
+      "prompt": "Detailed 16:9 wide anime game cinematic environment, opaque, no characters/creatures/text/logos/weapons. Royal awakening arena crimson-black void jagged teal architectural slabs, broken floating white marble stairs rising vertically, distant gold sun crown over black gates. Open center dark reflective marble floor bottom vast height for aerial duel. Premium painterly game art, subdued central/lower space for bright attacks, impressive scale.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7a6359fb-64df-419b-b007-b4bff33b7bde.png",
+      "destination": "characters/will/assets/limit-court.webp"
+    },
+    {
+      "id": "will",
+      "kind": "effects",
+      "refs": [],
+      "prompt": "TRUE TRANSPARENT BACKGROUND 2x2 equal-cell VFX atlas FOUR isolated effects no characters/weapons/text/floor. Each fully inside cell, transparent margins soft exterior taper thick opaque contour luminous solid core legible on bright backgrounds. Top-left sword crescent CONVEX edge RIGHT open concave side/tails LEFT, crimson rim gold-white core teal sparks. Top-right straight royal energy sword cut HORIZONTAL LEFT root to RIGHT sharp tip ivory/gold core black-red fractures teal sparks. Bottom-left golden crownlike awakening bloom angular rays from heart center warm auxiliary aura black-red motes. Bottom-right immense royal impact gold-white center jagged red-black fractures long teal/gold shards no ring. Distinct detailed silhouettes no checkerboard/opaque backdrop.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-fe983722-2adc-454d-b5a7-0950bd38ad0c.png",
+      "destination": "characters/will/assets/limit-effects.webp"
+    }
+  ],
+  "effectSourceBounds": [
+    [
+      0,
+      0,
+      720,
+      445
+    ],
+    [
+      720,
+      150,
+      1536,
+      410
+    ],
+    [
+      0,
+      440,
+      730,
+      1024
+    ],
+    [
+      730,
+      420,
+      1536,
+      1024
+    ]
+  ],
+  "effectOrientation": "Convex cutting edge RIGHT; source rotation followed by face reflection in drawEffect. No global source mirroring.",
+  "references": {
+    "gameCaptureSource": "https://game8.jp/metaphor-re-fantazio/644694",
+    "gameCaptureType": "Original ATLUS game screenshot hosted by guide; crown, concealed face, silver hair, orange chest lines and gold panels verified visually",
+    "technique": "https://game8.jp/metaphor-re-fantazio/644703"
+  }
+}
