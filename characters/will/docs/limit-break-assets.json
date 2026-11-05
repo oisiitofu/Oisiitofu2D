@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "implemented; local verification passed; public verification pending",
+  "status": "published and verified",
   "assets": [
     {
       "id": "will",
@@ -94,5 +94,14 @@
     "gameCaptureSource": "https://game8.jp/metaphor-re-fantazio/644694",
     "gameCaptureType": "Original ATLUS game screenshot hosted by guide; crown, concealed face, silver hair, orange chest lines and gold panels verified visually",
     "technique": "https://game8.jp/metaphor-re-fantazio/644703"
+  },
+  "publicVerification": {
+    "version": 329,
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site/",
+    "gameSource": "109211f",
+    "hostSource": "34b9479c3267f1af34986ce632593d48be7b841a",
+    "batchHashes": 19,
+    "matchingFrames": 387,
+    "onlineMethod": "Public communication; art fetched from published site to avoid historical public tunnel asset rate limits"
   }
 }
