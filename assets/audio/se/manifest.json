@@ -2,6 +2,18 @@
   "sampleRate": 48000,
   "variants": 3,
   "sounds": {
+    "katamari-limit-clack": [
+      "/assets/audio/se/katamari-limit-clack.wav"
+    ],
+    "katamari-limit-star": [
+      "/assets/audio/se/katamari-limit-star.wav"
+    ],
+    "klonoa-limit-catch": [
+      "/assets/audio/se/klonoa-limit-catch.wav"
+    ],
+    "klonoa-limit-ring": [
+      "/assets/audio/se/klonoa-limit-ring.wav"
+    ],
     "edf-limit-radio": [
       "/assets/audio/se/edf-limit-radio.wav"
     ],
