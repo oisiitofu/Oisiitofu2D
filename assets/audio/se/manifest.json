@@ -2,6 +2,18 @@
   "sampleRate": 48000,
   "variants": 3,
   "sounds": {
+    "okami-limit-brush": [
+      "/assets/audio/se/okami-limit-brush.wav"
+    ],
+    "okami-limit-dawn": [
+      "/assets/audio/se/okami-limit-dawn.wav"
+    ],
+    "zero-limit-saber": [
+      "/assets/audio/se/zero-limit-saber.wav"
+    ],
+    "zero-limit-ragnarok": [
+      "/assets/audio/se/zero-limit-ragnarok.wav"
+    ],
     "katamari-limit-clack": [
       "/assets/audio/se/katamari-limit-clack.wav"
     ],
