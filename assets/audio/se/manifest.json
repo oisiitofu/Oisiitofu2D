@@ -2,6 +2,18 @@
   "sampleRate": 48000,
   "variants": 3,
   "sounds": {
+    "arthur-limit-gold": [
+      "/assets/audio/se/arthur-limit-gold.wav"
+    ],
+    "arthur-limit-thunder": [
+      "/assets/audio/se/arthur-limit-thunder.wav"
+    ],
+    "viewtifuljoe-limit-film": [
+      "/assets/audio/se/viewtifuljoe-limit-film.wav"
+    ],
+    "viewtifuljoe-limit-kick": [
+      "/assets/audio/se/viewtifuljoe-limit-kick.wav"
+    ],
     "hunter-limit-charge": [
       "/assets/audio/se/hunter-limit-charge.wav"
     ],
