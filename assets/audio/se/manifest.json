@@ -2,6 +2,18 @@
   "sampleRate": 48000,
   "variants": 3,
   "sounds": {
+    "agumon-limit-cannon": [
+      "/assets/audio/se/agumon-limit-cannon.wav"
+    ],
+    "agumon-limit-sword": [
+      "/assets/audio/se/agumon-limit-sword.wav"
+    ],
+    "mametchi-limit-spring": [
+      "/assets/audio/se/mametchi-limit-spring.wav"
+    ],
+    "mametchi-limit-pop": [
+      "/assets/audio/se/mametchi-limit-pop.wav"
+    ],
     "donchan-limit-don": [
       "/assets/audio/se/donchan-limit-don.wav"
     ],

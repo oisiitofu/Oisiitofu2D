@@ -1,6 +1,8 @@
 'use strict';
 const assert=require('node:assert/strict'),{chromium}=require('playwright');
 const fighter=process.env.LIMIT_FIGHTER||'dragoon';
+const evolutionStage=Number(process.env.LIMIT_EVOLUTION_STAGE||0);
+assert.ok(evolutionStage===0||fighter==='agumon'&&Number.isInteger(evolutionStage)&&evolutionStage>=1&&evolutionStage<=4);
 (async()=>{
  const browser=await chromium.launch({channel:'msedge',args:['--disable-background-timer-throttling','--disable-renderer-backgrounding']});
  const pages=[],errors=[];
@@ -26,13 +28,15 @@ const fighter=process.env.LIMIT_FIGHTER||'dragoon';
   }
   await Promise.all(pages.map(page=>page.waitForFunction(id=>Net.active&&countdown===0&&LimitBreak.artPrepared([{character:id}],true),fighter)));
   const moment=Math.max(...await Promise.all(pages.map(page=>page.evaluate(()=>frame))))+100;
-  const expected=await host.evaluate(id=>{
+  const expected=await host.evaluate(({fighter,evolutionStage})=>{
+   const id=evolutionStage?AgumonEvolution.forms[evolutionStage]:fighter;
    const profile=LimitBreak.profile(id),damageSteps=[];
    let damage=70;
    for(const hit of profile?.combo?.values()??[]){damage+=hit;damageSteps.push(damage);}
-   return {damageSteps,damage:damage+(profile?.finalStrike.damage??28)};
-  },fighter);
-  for(const page of pages)await page.evaluate(({moment,damage})=>{
+   return {id,duration:profile?.duration??0,damageSteps,damage:damage+(profile?.finalStrike.damage??28)};
+  },{fighter,evolutionStage});
+  if(evolutionStage)assert.ok(expected.duration>0,'evolved form retains the dedicated cinematic');
+  for(const page of pages)await page.evaluate(({moment,damage,evolutionStage})=>{
    window.limitResults={};const base=updateFighter;
    updateFighter=(f,raw)=>{
     if(frame===moment&&f.id===0){
@@ -41,6 +45,10 @@ const fighter=process.env.LIMIT_FIGHTER||'dragoon';
       Object.assign(p,{x:660+i*65,y:main.y,face:i?-1:1,damage:i?70:100,grounded:true,inv:0,intangible:0,vx:0,vy:0,hitstun:0,hitlag:0,attack:null});
       PlayerStates.enter(p,'Idle');
      });
+     if(evolutionStage){
+      f.evolutionFrames=evolutionStage*AgumonEvolution.interval;
+      AgumonEvolution.change(f,evolutionStage);
+     }
      LimitBreak.charge(f,100);
      return base(f,{...emptyInput(),shareStock:true,jab:true,special:true,attackHeld:true,specialHeld:true});
     }
@@ -51,9 +59,9 @@ const fighter=process.env.LIMIT_FIGHTER||'dragoon';
      limitResults[e.detail]=[frame,matchTime,LimitBreak.scene?.time??null,fighters[1].damage,fighters[1].pendingLaunch?.speed??null];
     }
    });
-  },{moment,damage:expected.damage});
+  },{moment,damage:expected.damage,evolutionStage});
   await Promise.all(pages.map(page=>page.waitForFunction(damage=>Object.values(limitResults).some(r=>r[3]===damage),expected.damage)));
-  const duration=await host.evaluate(id=>LimitBreak.profile(id)?.duration??0,fighter);
+  const {duration}=expected;
   const snapshots=await Promise.all(pages.map(page=>page.evaluate(cinematic=>Object.fromEntries(Object.entries(limitResults).filter(([,v])=>cinematic?v[2]!==null:v[4]!==null)),duration>0)));
   assert.deepEqual(snapshots[0],snapshots[1]);
   if(duration){
@@ -63,6 +71,6 @@ const fighter=process.env.LIMIT_FIGHTER||'dragoon';
   }
   else assert.ok(Object.values(snapshots[0]).some(v=>v[2]===null&&v[4]>0),'instant launch without a cinematic');
   assert.deepEqual(errors,[]);
-  console.log(JSON.stringify({fighter,matchingFrames:Object.keys(snapshots[0]).length,hostSettingSynced:true,errors}));
+  console.log(JSON.stringify({fighter:expected.id,matchingFrames:Object.keys(snapshots[0]).length,hostSettingSynced:true,errors}));
  }finally{for(const page of pages)await page.evaluate(()=>Net.leave()).catch(()=>{});await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});
