@@ -474,6 +474,18 @@
     ],
     "leon-limit-blast": [
       "/assets/audio/se/leon-limit-blast.wav"
+    ],
+    "guile-limit-sonic": [
+      "/assets/audio/se/guile-limit-sonic.wav"
+    ],
+    "guile-limit-crossfire": [
+      "/assets/audio/se/guile-limit-crossfire.wav"
+    ],
+    "sol-limit-tyrant": [
+      "/assets/audio/se/sol-limit-tyrant.wav"
+    ],
+    "sol-limit-napalm": [
+      "/assets/audio/se/sol-limit-napalm.wav"
     ]
   },
   "impactDesign": {
