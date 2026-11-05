@@ -1,0 +1,59 @@
+{
+  "mode": "built-in imagegen",
+  "id": "kingbonby",
+  "assets": [
+    {
+      "path": "characters/kingbonby/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-3c550c52-2a37-4a22-bc00-42e3957c900e.png",
+      "prompt": "Use case: stylized-concept. Premium cinematic anime fighting game raster art with exceptionally refined clean linework, richly detailed painted materials, clear silhouettes, dramatic lighting. Preserve EXACT face costume proportions and palette from references. No text, logos, labels or watermark. Wide 16:9 cinematic cut-in of King Bonby purple broad squat ogre king EXACT cute threatening face, red eyes big tusks fiery orange golden hair gold crown red jewels gold skull chest ornaments red cape and loincloth. Foreground giant face laughing and muscular purple hand tossing a white die. Behind, huge Destroy train matches official reference2: purple gold demonic locomotive, red eyes, broad grinning face white bone jaw, gold chimney ring holding orange flame, black purple locomotive machinery and carriages, red cowcatcher, SMALL BLUE LOCOMOTIVE clenched in its MOUTH. Epic gold crimson rail sparks, wrecked imaginary board-game rail city at night. Keep King Bonby design from reference1, do not turn him into a realistic demon. Extremely polished colorful anime game art.",
+      "references": [
+        "characters/kingbonby/assets/kingbonby-selection.png",
+        ".tools/limit-references/destroy-official.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/kingbonby/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-26589bc1-db76-490c-91a0-aa7fe813b883.png",
+      "prompt": "Use case: stylized-concept. Premium cinematic anime fighting game raster art with exceptionally refined clean linework, richly detailed painted materials, clear silhouettes, dramatic lighting. Preserve EXACT face costume proportions and palette from references. No text, logos, labels or watermark. Wide panoramic fantastical railway board-game city arena at twilight. Branching railway tracks and oversized colorful red blue square board tiles running across empty broad foreground, distant miniature-style European/Japanese mixed city buildings and gold lit stations, purple stormclouds, red-orange sunset. High detail polished cartoon anime background with strong depth and warm gold rim light. Empty central area for giant ogre and train combat. No people, monsters, trains, dice, effects, text or labels.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/kingbonby/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-dffe1fd6-00d0-4b17-a01e-9f2553bcfa49.png",
+      "prompt": "Use case: stylized-concept. Premium cinematic anime fighting game raster art with exceptionally refined clean linework, richly detailed painted materials, clear silhouettes, dramatic lighting. Preserve EXACT face costume proportions and palette from references. No text, logos, labels or watermark. FOUR complete full-body consecutive action poses of SAME King Bonby, equal 2x2 transparent atlas. Purple squat broad ogre king red eyes big white tusks fiery golden orange hair, gold crown red gems, gold skull ornaments chest belt and shins, red cape and loincloth, purple bare feet armored gold. Exact face/proportions as references, NEVER lanky or realistic. All face RIGHT. Top left: wind up huge arm back holding one white die, body leaning backward, left foot planted ahead. Top right: broad forward throw, open fingers stretch RIGHT and follow through, no die in hand now. Bottom left: deep crouch ready to jump, both huge fists low, knees bent and cape pools behind. Bottom right: powerful lift-off, feet just tucked up, both fists raised, cape flies downward behind. Distinct flowing full-body gestures; same scale. No effects/shadows/ground. Whole crown hair cape fingers feet fit INSIDE own quadrant with 100px clear transparent margins. Actual transparent background no grid/text.",
+      "references": [
+        "characters/kingbonby/assets/kingbonby-reference.png",
+        "characters/kingbonby/assets/kingbonby-selection.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/kingbonby/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-c27e7c89-4492-4e55-b9a5-4433cd44cd88.png",
+      "prompt": "Use case: precise-object-edit. Correct ONLY this four-pose sprite atlas layout and restore any clipped extremities. Keep exact SAME four poses, face, body proportions, costume, colors and rendering. SHRINK EACH complete figure uniformly to occupy at most 70% of both width AND height of its OWN quadrant in an EQUAL 2x2 grid. Leave generous clear transparent margin on EVERY side of each quadrant. No limb, cape, hair, finger or sword can touch image edges OR cross the center cell boundary. Restore complete sword tips, hair/crown points, cape hems and boots where clipped. Each full body same scale as other poses. True transparent background, no haze/ground/grid/labels or effects. Make spacious square atlas. Do not reframe tightly; the empty transparent space is REQUIRED for safe animation frames.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-cf0ecce9-5a67-4644-a1de-12e4cb4e8c96.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/kingbonby/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-c13d9bf3-5c57-417e-84ee-f9301e79c295.png",
+      "prompt": "Use case: stylized-concept. Premium cinematic anime fighting game raster art with exceptionally refined clean linework, richly detailed painted materials, clear silhouettes, dramatic lighting. Preserve EXACT face costume proportions and palette from references. No text, logos, labels or watermark. Four complete isolated cartoon game effect sprites in EQUAL 2x2 grid on transparent background, each fits WITHIN at most 65% of own quadrant with wide fully transparent margins. Top left: one crisp glossy white SIX SIDED CUBIC die in three-quarter view, black round pips and one red pip, gold rim highlights, no tail. Top right: huge chunky gold-orange impact starburst, dark orange red outer spikes and brilliant dense yellow core, fully opaque inner body. Bottom left: RIGHTWARD rushing gold and crimson locomotive speed wake, dense fiery pointed head at RIGHT tapering multiple long tails LEFT, bright sparks, no actual locomotive. Bottom right: complete massive cartoon collision burst orange gold white core, saturated red purple outskirts, flying gold coins, torn card fragments, banknote fragments and small black rubble around perimeter. All tips and debris complete within cells. No text or characters or grid, genuine alpha transparency. Clear dense cores and soft transparent edges.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/kingbonby/assets/limit-train.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-8c2c1fd7-b0da-496d-b546-01d7b48f485b.png",
+      "prompt": "Use case: stylized-concept. Premium cinematic anime fighting game raster art with exceptionally refined clean linework, richly detailed painted materials, clear silhouettes, dramatic lighting. Preserve EXACT face costume proportions and palette from references. No text, logos, labels or watermark. Transparent game sprite asset of Destroy locomotive from reference, keep EXACT demonic purple gold cartoon face and identity. EQUAL 2 columns x1 row: TWO fully complete train views facing screen RIGHT. Left: long side/three-quarter profile, front locomotive leading at RIGHT, carriages trail LEFT. Right: three-quarter frontal charge view, face turned toward RIGHT and camera, same engine but larger face perspective. Purple mechanical body, red slit eyes, broad wicked grin ivory white bone jaw, angular gold head ornaments, round forehead light, gold chimney crown with orange flames, black purple boiler and pipes, red front cowcatcher, big black gold wheels, SMALL BLUE LOCOMOTIVE CLENCHED IN MOUTH. Two or three trailing purple passenger cars, gold windows. High detail polished cartoon anime sprite not realistic steam train. No track, ground, smoke cloud, sparks, background, text or logos. Each WHOLE train including carriage ends, cowcatcher and fire fits in OWN cell with generous 100px transparent margins. Transparent 2048x1024.",
+      "references": [
+        ".tools/limit-references/destroy-official.png"
+      ],
+      "bounds": []
+    }
+  ],
+  "animation": "8枚の専用全身ポーズを使用。既存の元ポーズ・待機・通常技は変更しない。関節リグ変形なし。連続再生の録画と両向きの実描画で確認。"
+}

@@ -522,6 +522,18 @@
     ],
     "hayabusa-limit-inferno": [
       "/assets/audio/se/hayabusa-limit-inferno.wav"
+    ],
+    "alucard-limit-flurry": [
+      "/assets/audio/se/alucard-limit-flurry.wav"
+    ],
+    "alucard-limit-soul": [
+      "/assets/audio/se/alucard-limit-soul.wav"
+    ],
+    "kingbonby-limit-dice": [
+      "/assets/audio/se/kingbonby-limit-dice.wav"
+    ],
+    "kingbonby-limit-destroy": [
+      "/assets/audio/se/kingbonby-limit-destroy.wav"
     ]
   },
   "impactDesign": {

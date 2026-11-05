@@ -1,0 +1,51 @@
+{
+  "mode": "built-in imagegen",
+  "id": "alucard",
+  "assets": [
+    {
+      "path": "characters/alucard/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-14cc0928-c321-4735-958c-0229316d1802.png",
+      "prompt": "Use case: stylized-concept. Premium cinematic anime fighting game raster art with exceptionally refined clean linework, richly detailed painted materials, clear silhouettes, dramatic lighting. Preserve EXACT face costume proportions and palette from references. No text, logos, labels or watermark. Wide 16:9 Alucard cinematic cut-in, same elegant pale mature face, golden eyes long flowing pale blonde hair, high black gold collar ornate black coat with gold filigree, red cape lining, white ruffled cravat, black gloves. Draw dynamic low lunging upper body toward screen RIGHT, long silver straight sword with ornate gold hilt and guard cutting forward. Hair and cape flowing LEFT with speed. Large full moon and gothic Dracula castle behind, blue silver spirit trails and crimson sword arcs imply tremendous speed. His eyes cheeks jaw and sword crystal clear, beautifully detailed face same identity, no different outfit.",
+      "references": [
+        "characters/alucard/assets/alucard-selection.png",
+        "characters/alucard/assets/alucard-reference.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/alucard/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-a0e84152-5f57-4370-9c7f-566e46f1f5a6.png",
+      "prompt": "Use case: stylized-concept. Premium cinematic anime fighting game raster art with exceptionally refined clean linework, richly detailed painted materials, clear silhouettes, dramatic lighting. Preserve EXACT face costume proportions and palette from references. No text, logos, labels or watermark. Wide cinematic panoramic nighttime ruined gothic castle courtyard and high terrace, black marble flagstones and stone balustrade foreground, towering pointed spires and dark rose windows far background, full blue moon high amid racing clouds, distant mountains and fog. Cold silver blue moonlight with deep purple shadows and tiny warm window highlights, spacious empty combat floor through whole center. Beautiful detailed painted Dracula castle atmosphere, clear depth. No people, animals, effects, weapons or text.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/alucard/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-7d912609-1536-4fb9-87c6-9ed5eb881297.png",
+      "prompt": "Use case: precise-object-edit. Correct ONLY this four-pose sprite atlas layout and restore any clipped extremities. Keep exact SAME four poses, face, body proportions, costume, colors and rendering. SHRINK EACH complete figure uniformly to occupy at most 70% of both width AND height of its OWN quadrant in an EQUAL 2x2 grid. Leave generous clear transparent margin on EVERY side of each quadrant. No limb, cape, hair, finger or sword can touch image edges OR cross the center cell boundary. Restore complete sword tips, hair/crown points, cape hems and boots where clipped. Each full body same scale as other poses. True transparent background, no haze/ground/grid/labels or effects. Make spacious square atlas. Do not reframe tightly; the empty transparent space is REQUIRED for safe animation frames.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-ce52a375-4f37-47d0-8cb3-61afced9a125.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/alucard/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-3745b291-3b57-46fe-ab58-ea9226217132.png",
+      "prompt": "Use case: precise-object-edit. Correct ONLY this four-pose sprite atlas layout and restore any clipped extremities. Keep exact SAME four poses, face, body proportions, costume, colors and rendering. SHRINK EACH complete figure uniformly to occupy at most 70% of both width AND height of its OWN quadrant in an EQUAL 2x2 grid. Leave generous clear transparent margin on EVERY side of each quadrant. No limb, cape, hair, finger or sword can touch image edges OR cross the center cell boundary. Restore complete sword tips, hair/crown points, cape hems and boots where clipped. Each full body same scale as other poses. True transparent background, no haze/ground/grid/labels or effects. Make spacious square atlas. Do not reframe tightly; the empty transparent space is REQUIRED for safe animation frames.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-342888ff-a05e-4940-98a0-ae80ae935711.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/alucard/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-ebe8c760-437d-4821-802d-48acdaebc09e.png",
+      "prompt": "Use case: precise-object-edit. Fix only padding of this exact 4-effect atlas and restore clipped spirit head or slash tips. Keep the exact effects and colors. EQUAL 2x2 grid. Each effect must fit FULLY inside its OWN quadrant with at least 100px transparent margin on ALL sides, no touching image edges and no crossing the center boundary. Shrink until this is true. Top left red silver crescent convex RIGHT open LEFT; top right blue silver crescent convex RIGHT open LEFT. Bottom left complete blue white spirit with intact small face at LEFT and long violet tail RIGHT, not cut at left edge. Bottom right complete crimson/violet implosion with silver blue spirit wisps. Dense opaque cores, natural alpha glow perimeter. Transparent background no text/labels/grid.",
+      "references": [
+        "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-0d74473d-5505-4322-8116-07480f7023c5.png"
+      ],
+      "bounds": []
+    }
+  ],
+  "animation": "8枚の専用全身ポーズを使用。既存の元ポーズ・待機・通常技は変更しない。関節リグ変形なし。連続再生の録画と両向きの実描画で確認。"
+}
