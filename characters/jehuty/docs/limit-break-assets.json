@@ -1,7 +1,7 @@
 {
   "mode": "built-in imagegen",
   "id": "jehuty",
-  "status": "ローカル対戦・トレモ・CPU・377フレーム同期・連続描画検証済み、未公開",
+  "status": "Sites v319へ公開済み。公開描画・専用音・同期と全18変更ファイルのSHA-256を確認",
   "assets": [
     {
       "path": "characters/jehuty/assets/limit-cutin.webp",
