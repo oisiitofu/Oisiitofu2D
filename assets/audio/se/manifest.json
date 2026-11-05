@@ -462,6 +462,18 @@
       "/assets/audio/se/dark-hit-heavy-1.wav",
       "/assets/audio/se/dark-hit-heavy-2.wav",
       "/assets/audio/se/dark-hit-heavy-3.wav"
+    ],
+    "dante-limit-awaken": [
+      "/assets/audio/se/dante-limit-awaken.wav"
+    ],
+    "dante-limit-judgement": [
+      "/assets/audio/se/dante-limit-judgement.wav"
+    ],
+    "leon-limit-launch": [
+      "/assets/audio/se/leon-limit-launch.wav"
+    ],
+    "leon-limit-blast": [
+      "/assets/audio/se/leon-limit-blast.wav"
     ]
   },
   "impactDesign": {
