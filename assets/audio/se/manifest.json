@@ -2,6 +2,15 @@
   "sampleRate": 48000,
   "variants": 3,
   "sounds": {
+    "donchan-limit-don": [
+      "/assets/audio/se/donchan-limit-don.wav"
+    ],
+    "donchan-limit-ka": [
+      "/assets/audio/se/donchan-limit-ka.wav"
+    ],
+    "donchan-limit-finale": [
+      "/assets/audio/se/donchan-limit-finale.wav"
+    ],
     "punch-light": [
       "/assets/audio/se/punch-light-1.wav",
       "/assets/audio/se/punch-light-2.wav",
