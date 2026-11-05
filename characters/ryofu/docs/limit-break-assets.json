@@ -1,0 +1,61 @@
+{
+  "mode": "built-in imagegen",
+  "id": "ryofu",
+  "status": "専用素材制作済み・演出コード未実装・未公開",
+  "assets": [
+    {
+      "path": "characters/ryofu/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-28a7626a-ae9d-49c6-a48b-33927896a4fb.png",
+      "prompt": "Use case: stylized-concept. Premium polished detailed painted anime action game raster art. Preserve EXACT approved Lu Bu/Ryofu from references: massive muscular adult warrior, fierce angular clean-shaven face, thick black eyebrows, long swept-back BLACK hair, ornate GOLD crown with TWO extraordinarily long scarlet pheasant plumes, black-and-GOLD dragon armor, large sculpted gold pauldrons, red cape and waist cloth, black gold armored boots. Weapon is LONG DARK SHAFT Fangtian halberd from reference2, gold collar/red tassel, pointed silver spear tip and TWO crescent silver side blades, entire pole several body lengths. Same armor, face/proportions/colors/weapon in all images. No blood, injury, text, logo, UI or watermark. ONE transparent square EQUAL2x2 animation atlas, FOUR COMPLETE FULL-BODY poses facing RIGHT: TL broad battle stance with halberd held diagonally low behind left ready to swing; TR powerful forward running thrust approach RIGHT, halberd angled horizontally ahead; BL gigantic horizontal two-handed halberd SWEEP RIGHT at chest height, hips strongly turn and front boot plants; BR rising airborne halberd UPPERCUT diagonally UP-RIGHT with bent knees, cape and two plumes trailing. Four genuinely distinct articulated wholebody gestures, same physique. Entire halberd shaft, blade tips, both long plumes, cape hem and both boots MUST fit inside central55% WIDTH AND HEIGHT of OWN equal quadrant with at least100px completely transparent margin ALL sides and center boundaries. Wide long weapons need LARGE empty layout, never crop or overlap adjacent cells. No slash trails/effects/scene/ground/shadows; true alpha.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryofu/assets/ryofu-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryofu/assets/ryofu-arsenal.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryofu/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-6e0e5446-0b23-4f72-9551-cf77118f2fde.png",
+      "prompt": "Use case: stylized-concept. Premium polished detailed painted anime action game raster art. Preserve EXACT approved Lu Bu/Ryofu from references: massive muscular adult warrior, fierce angular clean-shaven face, thick black eyebrows, long swept-back BLACK hair, ornate GOLD crown with TWO extraordinarily long scarlet pheasant plumes, black-and-GOLD dragon armor, large sculpted gold pauldrons, red cape and waist cloth, black gold armored boots. Weapon is LONG DARK SHAFT Fangtian halberd from reference2, gold collar/red tassel, pointed silver spear tip and TWO crescent silver side blades, entire pole several body lengths. Same armor, face/proportions/colors/weapon in all images. No blood, injury, text, logo, UI or watermark. ONE transparent square EQUAL2x2 animation atlas, FOUR COMPLETE FULL-BODY consecutive action poses with weapon attack directed RIGHT: TL forceful spinning back-swing, torso turns three-quarter away but head looks RIGHT, halberd extended right across body, cape flares behind; TR high airborne OVERHEAD WINDUP, both hands lift whole halberd above head, knees tucked and cape drops left; BL airborne DOWN-RIGHT heavy halberd cleave in progress with both hands, torso pitching forward and legs bracing below; BR low heavy landing/follow-through, both hands halberd blade DOWN-RIGHT near ground, one knee bent front and rear boot planted, fierce visible face. Same armor/face/physique and two long plumes across four. ENTIRE body including WHOLE long shaft and both sideblades, every plume/cape tip and boot inside central55% OWN equal quadrant WIDTH AND HEIGHT. Generous100px EMPTY transparent margin EVERY side/center boundaries. No weapon cropping/overlap, no ground/scene/shadows/trails/effects; genuine alpha.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryofu/assets/ryofu-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryofu/assets/ryofu-arsenal.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryofu/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-7de54e48-682c-4487-86b7-f9c04d11d9ea.png",
+      "prompt": "Use case: stylized-concept. Premium polished detailed painted anime action game raster art. Preserve EXACT approved Lu Bu/Ryofu from references: massive muscular adult warrior, fierce angular clean-shaven face, thick black eyebrows, long swept-back BLACK hair, ornate GOLD crown with TWO extraordinarily long scarlet pheasant plumes, black-and-GOLD dragon armor, large sculpted gold pauldrons, red cape and waist cloth, black gold armored boots. Weapon is LONG DARK SHAFT Fangtian halberd from reference2, gold collar/red tassel, pointed silver spear tip and TWO crescent silver side blades, entire pole several body lengths. Same armor, face/proportions/colors/weapon in all images. No blood, injury, text, logo, UI or watermark. Single wide16:9 cinematic CUT-IN painting. Lu Bu huge fierce face and gold dragon-armored shoulders dominate LEFT-center, eyes/cheeks/chin completely visible. His right arm drives full Fangtian halberd diagonally toward upper RIGHT, silver pointed double-crescent head and red tassel sharply detailed. Twin scarlet pheasant plumes arc dramatically across top and red cape sweeps behind. Background enormous Hu Lao fortress gate under stormy crimson sunset, distant gold dust and sparks, black gold red swirling battle aura. Match exact clean-shaven face and golden armor from references; do not add beard or redesign helmet. Beautiful engraved metal and flying cloth, cinematic scale, powerful active composition, no blood/gore/other characters/text/UI.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryofu/assets/ryofu-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryofu/assets/ryofu-arsenal.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryofu/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-ce34c8cb-5330-4048-bcdc-d91b0f94c0d3.png",
+      "prompt": "Use case: stylized-concept. Wide16:9 premium richly detailed painted anime fighting-game BACKGROUND ONLY. Vast empty ancient Chinese battlefield before monumental Hu Lao fortress gate, broad flat weathered dark stone/dirt courtyard in foreground, huge fortified walls and towering gate structure in far background, tall scarlet black and gold military banners on side edges WITHOUT writing, stormy sunset sky with crimson clouds and distant orange firelight, blowing gold dust and tiny embers, grand sweeping perspective and strong depth. Central foreground empty and comparatively dark for readable gold armor/red cape/purple and gold halberd effects. No soldiers, people, horses, corpses, weapons, giant effects, letters, logos, UI or watermark.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryofu/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-a5aedd46-01f7-49bb-9f2c-1c2a1c4c0aca.png",
+      "prompt": "Use case: stylized-concept. ONE true transparent equal2x2 square atlas of FOUR premium detailed painted anime halberd attack effects. TL massive GOLD-WHITE halberd slash crescent with vivid scarlet/red-orange sparks and dark red outline, convex bright cutting surface faces RIGHT, open side and tails LEFT; TR second broad VIOLET-WHITE and gold halberd arc, clearly RIGHT-convex sharp edge and left trailing split tips, denser stronger wake; BL gigantic complete horizontal ground-impact eruption, dense white-gold center, dark jagged gray stone slabs thrust up and outward, scarlet flame petals and purple lightning forks, broad low ellipse; BR complete enormous concentrated GOLD-white/SCARLET/VIOLET final martial impact explosion, thick opaque brilliant core and sharp dark crimson outer contour, long gold and purple outward spikes and black stone fragments, complete round silhouette. Each WHOLE effect inside at most55% OWN quadrant WIDTH AND HEIGHT, at least100px fully empty transparent margin EVERY side and center boundaries. No clipped spikes/debris, no overlap. Clear dense main cores and soft true-alpha edges. No characters, weapons, human bodies, blood, text, UI, labels, grid, watermark or black background.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/ryofu/assets/limit-horse.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-94252e24-a47e-47ea-86a3-15b57dc4bb73.png",
+      "prompt": "Use case: stylized-concept. Premium polished detailed painted anime action game raster art. Preserve EXACT approved Lu Bu/Ryofu from references: massive muscular adult warrior, fierce angular clean-shaven face, thick black eyebrows, long swept-back BLACK hair, ornate GOLD crown with TWO extraordinarily long scarlet pheasant plumes, black-and-GOLD dragon armor, large sculpted gold pauldrons, red cape and waist cloth, black gold armored boots. Weapon is LONG DARK SHAFT Fangtian halberd from reference2, gold collar/red tassel, pointed silver spear tip and TWO crescent silver side blades, entire pole several body lengths. Same armor, face/proportions/colors/weapon in all images. No blood, injury, text, logo, UI or watermark. ONE true transparent EQUAL2x2 square animation atlas of FOUR COMPLETE mounted-action compositions on same RED HARE warhorse from reference2: fiery CHESTNUT-RED coat, black flowing mane/tail, gold dragon head armor and harness, gold hooves armor, strong realistic horse body, never white/brown/plain unarmored horse. Lu Bu rider exact face and black-gold armor, red cape and TWO long scarlet plumes, same halberd. All move and attack RIGHT. TL forward fast GALLOP phase with forelegs stretched right and hind legs tucked, rider leans forward holding halberd ahead; TR opposite GALLOP phase forelegs tucked and hindlegs extended back left, rider and weapon same trajectory; BL powerful mounted halberd SWEEP RIGHT at chest height, torso turns and red cape flares, horse canters forward; BR leaping DISMOUNT composition, horse still moving right below, Lu Bu springing diagonally UP-RIGHT just above saddle with knees bent and whole halberd raised, complete horse AND rider entirely visible. Distinct connected action poses at SAME overall scale. Every ENTIRE horse and rider including ALL hooves, ears, tail, both long plumes, cape and full halberd blade/shaft tips MUST fit central55% WIDTH AND HEIGHT of OWN equal quadrant. At least100px EMPTY transparent margins on EVERY side and center boundaries. No overlap/cropped parts, no dust/effects/ground/shadow/scenery, no text or labels. Genuine alpha transparency.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryofu/assets/ryofu-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ryofu/assets/ryofu-arsenal.png"
+      ],
+      "bounds": []
+    }
+  ]
+}

@@ -558,6 +558,18 @@
     ],
     "hinako-limit-bloom": [
       "/assets/audio/se/hinako-limit-bloom.wav"
+    ],
+    "yuri-limit-shutter": [
+      "/assets/audio/se/yuri-limit-shutter.wav"
+    ],
+    "yuri-limit-fatal": [
+      "/assets/audio/se/yuri-limit-fatal.wav"
+    ],
+    "ryofu-limit-ranbu": [
+      "/assets/audio/se/ryofu-limit-ranbu.wav"
+    ],
+    "ryofu-limit-earth": [
+      "/assets/audio/se/ryofu-limit-earth.wav"
     ]
   },
   "impactDesign": {

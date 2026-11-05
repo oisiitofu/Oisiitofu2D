@@ -1,0 +1,51 @@
+{
+  "mode": "built-in imagegen",
+  "id": "yuri",
+  "status": "専用素材制作済み・演出コード未実装・未公開",
+  "assets": [
+    {
+      "path": "characters/yuri/assets/limit-poses.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-8a2d44fa-9a4e-4b2c-878e-e2303c9daf7d.png",
+      "prompt": "Use case: stylized-concept. Premium richly detailed painted anime cinematic game raster art. Preserve EXACT same Yuri Kozukata from approved refs: long dark brown hair and bangs, brown eyes, gentle serious face, white short puff-sleeved blouse and black neck ribbon, fitted russet-red brocade vest, dark layered lace skirt, dark knee-high lace-up boots, brown straps. Antique Camera Obscura is a compact ornate dark bronze rectangular BOX CAMERA with prominent round glass lens, from reference2; not a modern DSLR or gun. Same face/body proportions and costume across images. Natural modest ordinary action, no redesign, no blood/injury or sexualization. No text, labels, UI, grid, logo or watermark. ONE transparent square EQUAL2x2 atlas, FOUR distinct COMPLETE FULL-BODY action poses facing RIGHT: TL alert ready holding antique camera in both hands at chest; TR running RIGHT with camera protected near chest, rear leg extended, hair and vest tails flowing left; BL fast backward evasion step while facing RIGHT, front leg bends and torso leans back, BOTH hands retain camera raised toward right; BR low dodge crouch, one knee deeply bent and other foot planted behind, head looks up RIGHT, camera held safely in both hands near front shoulder. Same scale. Each entire body, all hair and camera fit inside central60% of OWN quadrant WIDTH AND HEIGHT, at least100px EMPTY transparent margin on ALL sides/center boundaries. True alpha transparency. No scene/ground/shadows/effects, no overlap or cropped feet.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/yuri/assets/yuri-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/yuri/assets/yuri-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/yuri/assets/limit-motion.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-a0a38b84-94e5-4f76-9fbc-0b9352a6eeb4.png",
+      "prompt": "Use case: stylized-concept. Premium richly detailed painted anime cinematic game raster art. Preserve EXACT same Yuri Kozukata from approved refs: long dark brown hair and bangs, brown eyes, gentle serious face, white short puff-sleeved blouse and black neck ribbon, fitted russet-red brocade vest, dark layered lace skirt, dark knee-high lace-up boots, brown straps. Antique Camera Obscura is a compact ornate dark bronze rectangular BOX CAMERA with prominent round glass lens, from reference2; not a modern DSLR or gun. Same face/body proportions and costume across images. Natural modest ordinary action, no redesign, no blood/injury or sexualization. No text, labels, UI, grid, logo or watermark. ONE transparent square EQUAL2x2 atlas, FOUR DISTINCT COMPLETE FULL-BODY camera-action poses all facing and aiming RIGHT: TL deep advancing stride, BOTH hands aim antique camera at eye/chest level horizontally right; TR dynamic pivot with torso twisting and rear heel lifted, camera remains aimed RIGHT from near face, hair and skirt flow with turn; BL low kneeling upward-angle photograph pose, BOTH hands raise camera diagonally UP-RIGHT, head follows viewfinder, both boots visible; BR final braced close-range photograph stance, front foot firmly forward and rear leg stretched back, BOTH hands grip camera slightly forward of face aimed horizontally RIGHT, torso leans into release. No actual flash/effects yet. The camera's round lens must face RIGHT not viewer. Same face/costume/scale. Every whole body and camera entirely inside central60% own quadrant WIDTH AND HEIGHT, wide100px empty transparent margins ALL sides and center. No scene/ground/shadows, clipping, labels or overlaps; true alpha.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/yuri/assets/yuri-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/yuri/assets/yuri-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/yuri/assets/limit-cutin.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-73b67088-418a-41a4-a463-13871f76d323.png",
+      "prompt": "Use case: stylized-concept. Premium richly detailed painted anime cinematic game raster art. Preserve EXACT same Yuri Kozukata from approved refs: long dark brown hair and bangs, brown eyes, gentle serious face, white short puff-sleeved blouse and black neck ribbon, fitted russet-red brocade vest, dark layered lace skirt, dark knee-high lace-up boots, brown straps. Antique Camera Obscura is a compact ornate dark bronze rectangular BOX CAMERA with prominent round glass lens, from reference2; not a modern DSLR or gun. Same face/body proportions and costume across images. Natural modest ordinary action, no redesign, no blood/injury or sexualization. No text, labels, UI, grid, logo or watermark. Single wide16:9 cinematic CUT-IN painting. Yuri's large determined face LEFT-center, eyes/cheeks/chin entirely visible, both hands carefully hold ornate antique Camera Obscura just BELOW her face, large round lens aimed toward RIGHT/foreground with icy blue-white gleam. Long hair swept left, vest embroidery and white blouse rendered beautifully. Background deep dark flooded wooden shrine on Hikami mountain, delicate blue spirit fragments and faint distant spectral silhouettes reflected in black water, fine rain and moonlight, atmospheric horror beauty with intense cyan lens reflections and restrained warm amber highlights. Only one main character, no injuries/gore. Clear exact approved face; no writing in viewfinder, text or UI. Premium detailed painted anime, rich depth and materials.",
+      "references": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/yuri/assets/yuri-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/yuri/assets/yuri-poses.png"
+      ],
+      "bounds": []
+    },
+    {
+      "path": "characters/yuri/assets/limit-court.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-2622f5ff-d3bf-4fe9-ad8d-ee454583a21c.png",
+      "prompt": "Use case: stylized-concept. Wide16:9 exceptionally detailed painted anime cinematic BACKGROUND ONLY. Ruined flooded wooden shrine on remote Japanese Hikami mountain at night, broad level dark wooden floor covered in a THIN reflective film of water across EMPTY foreground, broken shoji door frames and rotted wooden pillars receding into depth, large dark inner chamber and open far veranda leading to black lake under pale moon, cold blue moonlight, faint white mist skimming floor, fine rain visible beyond roof, scattered tiny blue spirit lights far background. Eerie beautiful deep blue-black palette, high-detail wood and water reflections, broad dark uncluttered middle for readable camera flash and characters. No people, ghosts, creatures, torii gates, attack effects, text, logo or UI.",
+      "references": [],
+      "bounds": []
+    },
+    {
+      "path": "characters/yuri/assets/limit-effects.webp",
+      "source": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-32cecd24-171f-41f6-a0b2-dec5394e1d26.png",
+      "prompt": "Use case: stylized-concept. ONE true transparent equal2x2 square atlas of FOUR premium detailed painted supernatural CAMERA effects, not gunfire or laser beams. TL short brilliant WHITE icy-blue PHOTOGRAPHIC FLASH cone expanding RIGHT from tiny left lens origin into wide pale starburst rays, dense core; TR complete round burst of deep turquoise-blue MIRROR-LIKE SPIRIT FRAGMENTS, glowing glass shards scattering from bright white center, crisp saturated contours; BL curled spectral white-blue translucent mist ribbons with faint abstract ghostly faces and fluttering blank photo-paper fragments, full elongated shape aimed RIGHT, no actual humans; BR complete dramatic RECTANGULAR PHOTOGRAPHIC SEAL explosion, brilliant white-blue central exposure surrounded by shattered dark-blue negative-film edges and blank translucent rectangular photo sheets flying outward, saturated indigo rays, dense solid white center, not a sphere or magic ring. All FOUR complete shapes wholly inside at most55% WIDTH AND HEIGHT of OWN quadrant, at least100px empty transparent margins ALL sides including both center boundaries, no clipping or overlap. Opaque dense inner attack cores and soft true-alpha outer fade. No characters, text, letters/numbers, UI, labels, grid, black backdrop or watermark.",
+      "references": [],
+      "bounds": []
+    }
+  ]
+}
