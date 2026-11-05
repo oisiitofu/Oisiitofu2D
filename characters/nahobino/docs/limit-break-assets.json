@@ -1,7 +1,7 @@
 {
   "mode": "built-in imagegen",
   "id": "nahobino",
-  "status": "専用素材・コード・専用音・ローカル検証済み、未公開",
+  "status": "Sites v327とGitHubへ公開、対戦・トレモ・描画・専用音・公開同期を検証済み",
   "assets": [
     {
       "path": "characters/nahobino/assets/limit-poses.webp",
