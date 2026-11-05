@@ -486,6 +486,18 @@
     ],
     "sol-limit-napalm": [
       "/assets/audio/se/sol-limit-napalm.wav"
+    ],
+    "bomberman-limit-chain": [
+      "/assets/audio/se/bomberman-limit-chain.wav"
+    ],
+    "bomberman-limit-mega": [
+      "/assets/audio/se/bomberman-limit-mega.wav"
+    ],
+    "pawapuro-limit-pitch": [
+      "/assets/audio/se/pawapuro-limit-pitch.wav"
+    ],
+    "pawapuro-limit-homer": [
+      "/assets/audio/se/pawapuro-limit-homer.wav"
     ]
   },
   "impactDesign": {
