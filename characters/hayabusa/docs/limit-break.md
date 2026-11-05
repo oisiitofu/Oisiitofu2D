@@ -4,6 +4,6 @@
 
 原作の[公式絶技説明](https://www.gamecity.ne.jp/manual/ng2black/jp/4200.html)の2段階目の赤い溜めと、[公式忍法説明](https://www.gamecity.ne.jp/manual/ng2black/jp/4400.html)の火炎龍を題材にする。炎弾と爆炎は公式画面を確認し、名前だけから文字どおりの龍の生物を作らない。初稿の短い刀は長い日本刀へ修正。セル範囲も刀・布・足が全て残るように設定した。
 
-素材は `assets/limit-{cutin,court,poses,effects}.webp`。内蔵imagegenを使用し、最終プロンプト・参照・保存先を `limit-break-assets.json` に記録。横斬りは右が凸側、斬り上げは上に伸びる専用弧、炎弾は右が芯・左が尾。主攻撃はart.strike、溜めや補助光はart.glow。実描画で掌と炎弾の始点を合わせ、攻撃と相手を追えるよう本人・相手を手前に描く。カメラの揺れと明滅は共有の見やすさ設定に従う。
+素材は `assets/limit-{cutin,court,poses,effects}.webp`。内蔵imagegenを使用し、最終プロンプト・参照・保存先を `limit-break-assets.json` に記録。横斬りは右が凸側、斬り上げは上に広がる専用弧（元画像の凸側は左上のため+1.05radで右上に正規化）、炎弾は右が芯・左が尾。主攻撃はart.strike、溜めや補助光はart.glow。実描画で掌と炎弾の始点を合わせ、攻撃と相手を追えるよう本人・相手を手前に描く。カメラの揺れと明滅は共有の見やすさ設定に従う。
 
 専用音は金属の高域と斬る風を重ねたblade、低域・火花・複数の衝撃を重ねたinferno。ローカル対戦・トレモ・両向き・効果音2音・カットイン比率・濃い攻撃を確認。CPUは60秒1ストック設定の1戦が結果まで進行。`LIMIT_FIGHTER=hayabusa` で既存の `characters/dragoon/tests/limit-break-online-test.cjs` を実行し309フレームのダメージと吹っ飛びが一致。公開結果は `docs/limit-break-rollout.md` に記録する。
