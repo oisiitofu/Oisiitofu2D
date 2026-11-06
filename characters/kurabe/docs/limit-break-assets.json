@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "implemented; local verification passed; public verification pending",
+  "status": "published and verified",
   "assets": [
     {
       "id": "kurabe",
@@ -103,5 +103,14 @@
       1254,
       1254
     ]
-  ]
+  ],
+  "publicVerification": {
+    "version": 331,
+    "url": "https://oisiitofu-bros.oisiitofu0141.chatgpt.site/",
+    "gameSource": "bdad454",
+    "hostSource": "1a02402aed4ea35e2d090c0a4580a56e13e43f32",
+    "batchHashes": 19,
+    "matchingFrames": 402,
+    "onlineMethod": "Public communication; art fetched from published site to avoid historical public tunnel rate limits"
+  }
 }
