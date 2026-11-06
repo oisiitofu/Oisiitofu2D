@@ -1,0 +1,94 @@
+{
+  "mode": "built-in image_gen",
+  "status": "implemented; local verification passed; public verification pending",
+  "assets": [
+    {
+      "id": "shadow",
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shadow/assets/shadow-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shadow/assets/shadow-actions.png"
+      ],
+      "prompt": "Create a premium hand-painted anime action game sprite atlas, TRUE TRANSPARENT BACKGROUND, 2x2 equal separated cells, FOUR separate complete full-body illustrations. Entire body/feet/hair/weapons inside generous transparent cell margins; no labels, text, floor, shadows, frame, opponent or effects. Consistent scale, crisp detailed silhouettes, plausible complete anatomical poses, never a joint rig. Reference images are identity/design guides only; do not change base assets. Exactly Shadow the Hedgehog of references: black anthro hedgehog with vivid red stripes on upswept swept-back head quills, red eyes, peach muzzle/inner ears, white chest tuft, slim short black limbs, large white gloves, gold inhibitor rings at wrists/ankles, red white black hover shoes with gold sole details. Preserve approved face, head-to-body ratio, shoes and markings, no human anatomy, no extra limbs. Facing right three-quarter. Top-left: deep skater's start crouch, one shoe bracing and other pushed back, left arm low and right hand clenched near chest. Top-right: rising roundhouse kick toward upper-right, torso pivots and one shoe extended to right, other knee folded, face clearly visible. Bottom-left: airborne inverted diagonal heel strike, hips above shoulders and one shoe aimed down-right, arms balancing, head visible, silhouette anatomically coherent. Bottom-right: landing from teleport into one-knee brace, raised open palm in front below chin preparing energy shot, other hand near ground. Four genuinely distinct poses, body crisp, no motion blur/energy/aura.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-086263db-529b-4581-9120-fb932c181970.png",
+      "destination": "characters/shadow/assets/limit-poses.webp"
+    },
+    {
+      "id": "shadow",
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shadow/assets/shadow-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shadow/assets/shadow-actions.png"
+      ],
+      "prompt": "Create a premium hand-painted anime action game sprite atlas, TRUE TRANSPARENT BACKGROUND, 2x2 equal separated cells, FOUR separate complete full-body illustrations. Entire body/feet/hair/weapons inside generous transparent cell margins; no labels, text, floor, shadows, frame, opponent or effects. Consistent scale, crisp detailed silhouettes, plausible complete anatomical poses, never a joint rig. Reference images are identity/design guides only; do not change base assets. Exactly Shadow the Hedgehog of references: black anthro hedgehog with vivid red stripes on upswept swept-back head quills, red eyes, peach muzzle/inner ears, white chest tuft, slim short black limbs, large white gloves, gold inhibitor rings at wrists/ankles, red white black hover shoes with gold sole details. Preserve approved face, head-to-body ratio, shoes and markings, no human anatomy, no extra limbs. Facing right three-quarter. Top-left: holding ONE faceted green Chaos Emerald in right hand near chest, left hand open in concentration, feet staggered, original gold wrist rings. Top-right: airborne whole-body turn looking back over shoulder, one fist drawn near hip and other arm forward, knees at different heights, quills flowing. Bottom-left: aerial Chaos Spear casting, right palm extended right-down below face and fingers spread, torso arched back in recoil, legs trail behind, no projectile yet. Bottom-right: awakening pose levitating upright, arms open away from sides, palms outward, shoes separated, chin raised but both eyes visible. No extra jewels, all body details exact, no effects.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f06fd2af-7f7b-463e-a570-db32a1010ccc.png",
+      "destination": "characters/shadow/assets/limit-motion.webp"
+    },
+    {
+      "id": "shadow",
+      "kind": "avatars",
+      "refs": [
+        "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bb742318-c6eb-45b8-b41f-f1387bb7e78d.png"
+      ],
+      "prompt": "Repair the safe margins of this transparent 2x2 production sprite atlas. Preserve all four exact existing designs, faces, colors, anatomy and actions; do not redesign. The TOP LEFT Super Shadow's uppermost quill tip touches/crops against the top image edge. Restore the COMPLETE original quill tip smoothly matching the design, keeping all quill tips inside the cell. Retain pale platinum-gold fur, red stripes/eyes, original gloves/shoes and face. Re-layout four complete illustrations into equal 2x2 cells with at least 40px of transparent padding on EVERY side of EVERY illustration and wide clear transparent gaps between cells. Uniformly scale complete sprites down as necessary, no separate part scaling. No body part or weapon may cross a cell boundary. TRUE TRANSPARENT background, no text, no frames, no shadow, no effect. Preserve the full-body poses and relative proportions.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5bd4d387-c247-4b7f-a818-f5a714b95b8d.png",
+      "destination": "characters/shadow/assets/limit-avatars.webp",
+      "supersededOutput": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bb742318-c6eb-45b8-b41f-f1387bb7e78d.png",
+      "repairReason": "Preserve complete quill/tool tips with transparent safe margins"
+    },
+    {
+      "id": "shadow",
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shadow/assets/shadow-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shadow/assets/shadow-actions.png"
+      ],
+      "prompt": "One wide 16:9 opaque premium anime battle cut-in, no text/logo/UI. EXACT Shadow the Hedgehog of references with black/red head quills, RED eyes, peach muzzle/ears, white chest tuft, white gloves, gold wrist inhibitor ring. Close determined face and shoulders on LEFT half, right hand holds ONE faceted green Chaos Emerald below chin. Both eyes/cheeks/muzzle fully visible. RIGHT half frozen orbital space-colony ARK fragments, enormous Earth curve with blue atmosphere, red-black chaos energy streaks and gold starlight, dramatic cosmic depth. Preserve stylized head/body ratio and exact recognizable red markings, no humanization, sharp crisp premium illustration, no ring/jewel obscuring face.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-769469f6-4b3e-4645-b09f-56b8790f5a21.png",
+      "destination": "characters/shadow/assets/limit-cutin.webp"
+    },
+    {
+      "id": "shadow",
+      "kind": "court",
+      "refs": [],
+      "prompt": "Paint a premium extremely detailed 16:9 opaque cinematic game environment. No characters/robots/creatures/weapons/text/UI. Orbital space-colony ARK exterior arena high above Earth: immense blue atmosphere curve across lower distance, silver-gray angular platform in foreground with open central combat area, broken distant metallic structures framing sides, frozen asteroids and faint red-black nebula sky, huge clear central space for teleporting aerial combat. Subdued dark navy/silver center supports red/gold chaos attacks. Rich painterly high-end anime cinematic setting, dramatic depth and scale, avoid bright central visual clutter.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a0be72ff-f8a2-47f3-a80f-af50f246f572.png",
+      "destination": "characters/shadow/assets/limit-court.webp"
+    },
+    {
+      "id": "shadow",
+      "kind": "effects",
+      "refs": [],
+      "prompt": "TRUE TRANSPARENT BACKGROUND 2x2 atlas, FOUR separate self-contained premium game attack VFX on equal square cells with VERY GENEROUS empty transparent gaps. Every ray/tail stays inside its own cell; especially bottom-cell spikes never intrude into top cells. Thick opaque colored contour and intense solid white core readable on bright backgrounds, detailed shards and tapering alpha exterior. No body/weapon/text/floor/backdrop/checkerboard. Top-left: physical kick impact, dense red-white angular wedge burst pointing RIGHT, black-red flame fragments and short gold sparks, no sword crescent. Top-right: CHAOS SPEAR HORIZONTAL LEFT casting root to RIGHT pointed lightning spear tip, thick yellow-white lightning core, crimson-black jagged edges and gold secondary prongs. Bottom-left: TIME STOP distortion cluster, emerald-green and gold compact concentric broken light ripples with black-red angular space cracks, soft auxiliary glow, no clock numbers. Bottom-right: enormous CHAOS BLAST detonation, brilliant white-gold central star with deep crimson/black outer jagged energy petals and gold plasma shards, layered thick solid center, no body silhouette. Four genuinely distinct silhouettes, entire effect isolated with transparent safe margins, avoid inter-cell bleed.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e2524f33-5c99-4000-9fde-9c50729ec052.png",
+      "destination": "characters/shadow/assets/limit-effects.webp"
+    }
+  ],
+  "effectOrientation": "Original Chaos Spear cell1 points LEFT; explicitly mirrored only this cell to RIGHT before angle rotation and facing reflection. Physical kick cell0 remains RIGHT. No other cell/source flipped.",
+  "effectSourceBounds": [
+    [
+      0,
+      0,
+      640,
+      530
+    ],
+    [
+      665,
+      0,
+      1333,
+      500
+    ],
+    [
+      0,
+      530,
+      640,
+      1180
+    ],
+    [
+      665,
+      500,
+      1333,
+      1180
+    ]
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "mode": "built-in image_gen",
+  "status": "implemented; local verification passed; public verification pending",
+  "assets": [
+    {
+      "id": "kurabe",
+      "kind": "pilot",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kurabe/assets/kurabe-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kurabe/assets/kurabe-human-poses.png"
+      ],
+      "prompt": "Create a premium hand-painted anime action game sprite atlas, TRUE TRANSPARENT BACKGROUND, 2x2 equal separated cells, FOUR separate complete full-body illustrations. Entire body/feet/hair/weapons inside generous transparent cell margins; no labels, text, floor, shadows, frame, opponent or effects. Consistent scale, crisp detailed silhouettes, plausible complete anatomical poses, never a joint rig. Reference images are identity/design guides only; do not change base assets. Exactly Juro Kurabe from references: youthful Japanese male, short tousled brown hair, brown eyes, slim teenager proportions. Black high-collared gakuran school uniform with gold buttons and gold collar insignia, white shirt cuffs/neck lining, black trousers, black school shoes, bare hands. Preserve approved face/body/costume. Facing right three-quarter. Top-left: firm step backward, one forearm raised across chest, other fingertips reaching activation spot on that forearm, determined gaze. Top-right: activation gesture completed, forearm horizontal near chest, fingers press forearm, stance anchored, eyes focused. Bottom-left: leaning forward in cockpit-like seated operating posture, knees bent and both arms reaching distinct controls, but NO seat/cockpit objects, full legs and feet visible. Bottom-right: rising from a low brace to confident upright recovery, one fist lowered and other hand releasing controls, weight shifts to front foot. Four distinct whole-body poses, no sci-fi armor on human.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-aaeb4e6f-780a-4d41-8a7d-69c07320cbed.png",
+      "destination": "characters/kurabe/assets/limit-pilot.webp"
+    },
+    {
+      "id": "kurabe",
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kurabe/assets/kurabe-mecha-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kurabe/assets/kurabe-reference.png"
+      ],
+      "prompt": "Create a premium hand-painted anime action game sprite atlas, TRUE TRANSPARENT BACKGROUND, 2x2 equal separated cells, FOUR separate complete full-body illustrations. Entire body/feet/hair/weapons inside generous transparent cell margins; no labels, text, floor, shadows, frame, opponent or effects. Consistent scale, crisp detailed silhouettes, plausible complete anatomical poses, never a joint rig. Reference images are identity/design guides only; do not change base assets. Exactly Sentinel No.13 from approved mecha reference. Bulky industrial humanoid mech with weathered light warm gray rectangular armor plates over dark exposed mechanical joints, broad block chest, compact square black sensor units atop torso with tiny orange lenses, massive squared forearms/hands, thick plated thighs and shins, broad flat armored feet, orange rear thrusters. Preserve precise approved silhouette, proportions, plate placements, no human face, no samurai decorations, no sword, no redesign. Facing right three-quarter. Top-left: heavy landing compression, both feet planted apart, deep bent knees, torso lowered with fists bracing near thighs. Top-right: rises into firing brace, wide rooted stance, right forearm aimed horizontally right at chest height with integrated cannon aperture opening, left arm balancing recoil. Bottom-left: actual cannon recoil, same planted feet but torso shifts backward and right elbow draws back slightly, cannon stays aimed right, armor tension visible; no muzzle flash. Bottom-right: lateral heavy step with left foot crossing outward into three-quarter view, right arm lowers, torso rotates to new firing lane, weight clearly transfers. FOUR different full-body mechanical poses, no disassembled parts.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d8a30ac7-2b6e-415a-a549-56ddc8aac1e4.png",
+      "destination": "characters/kurabe/assets/limit-poses.webp"
+    },
+    {
+      "id": "kurabe",
+      "kind": "motion",
+      "refs": [
+        "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cd8afc40-ce73-4219-b1b8-33ad82dec924.png"
+      ],
+      "prompt": "Repair the safe margins of this transparent 2x2 production sprite atlas. Preserve all four exact existing designs, faces, colors, anatomy and actions; do not redesign. The TOP RIGHT mech's forward plasma torch prongs reach the right image border and risk clipping. Keep the ENTIRE tool including both tips and all armor/feet inside the cell. Re-layout four complete illustrations into equal 2x2 cells with at least 40px of transparent padding on EVERY side of EVERY illustration and wide clear transparent gaps between cells. Uniformly scale complete sprites down as necessary, no separate part scaling. No body part or weapon may cross a cell boundary. TRUE TRANSPARENT background, no text, no frames, no shadow, no effect. Preserve the full-body poses and relative proportions.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9ffa7a19-0ddd-4bdf-8956-c3fe5252d0fa.png",
+      "destination": "characters/kurabe/assets/limit-motion.webp",
+      "supersededOutput": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cd8afc40-ce73-4219-b1b8-33ad82dec924.png",
+      "repairReason": "Preserve complete quill/tool tips with transparent safe margins"
+    },
+    {
+      "id": "kurabe",
+      "kind": "cutin",
+      "refs": [
+        "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8918e9fb-ddc6-4a41-9c00-e052230b6606.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kurabe/assets/kurabe-mecha-poses.png"
+      ],
+      "prompt": "Edit the FIRST cinematic cut-in, preserve Juro's EXACT existing face, hair, school uniform, hand activation gesture, composition and city/background lighting. Correct only the mech's weapon design on RIGHT: remove the oversized invented handheld sci-fi rifle/railgun completely. This character's industrial Sentinel uses its OWN INTEGRATED FOREARM armament, matching the approved mechanical design in second reference. Repaint the mech's right arm as a massive squared gray forearm aimed horizontally right with short integrated cannon aperture at wrist, like the original approved pose sheet; other arm balances beside torso. Keep weathered gray armor, compact box sensors, orange details, exact broad proportions. No separate long gun or sword, no added shield, no giant muzzle ring. Body and forearm remain fully recognizable as the approved No.13 mech. Retain wide opaque painted illustration, no text/logos.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-6eca59fc-122e-4be1-b2f6-fc35a8775476.png",
+      "destination": "characters/kurabe/assets/limit-cutin.webp",
+      "supersededOutput": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8918e9fb-ddc6-4a41-9c00-e052230b6606.png",
+      "repairReason": "Remove invented handheld long gun; restore approved integrated forearm cannon"
+    },
+    {
+      "id": "kurabe",
+      "kind": "court",
+      "refs": [],
+      "prompt": "Paint a premium extremely detailed 16:9 opaque cinematic game environment. No characters/robots/creatures/weapons/text/UI. Ruined Japanese city intersection at midnight viewed from a slightly low angle, broad clear wet asphalt foreground with faint blue circuitry-like terminal grid, collapsed high-rise silhouettes and skybridges far back, distant azure defensive barrier dome, orange embers and drifting smoke at edges. Open central arena for gigantic industrial mech, dark steel-blue central values supporting vivid cannon/plasma fire. Rich painterly high-end anime cinematic setting, dramatic depth and scale, avoid bright central visual clutter.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-6259a2e9-948a-4144-86d4-de3162115296.png",
+      "destination": "characters/kurabe/assets/limit-court.webp"
+    },
+    {
+      "id": "kurabe",
+      "kind": "effects",
+      "refs": [],
+      "prompt": "TRUE TRANSPARENT BACKGROUND 2x2 atlas, FOUR separate self-contained premium game attack VFX on equal square cells with VERY GENEROUS empty transparent gaps. Every ray/tail stays inside its own cell; especially bottom-cell spikes never intrude into top cells. Thick opaque colored contour and intense solid white core readable on bright backgrounds, detailed shards and tapering alpha exterior. No body/weapon/text/floor/backdrop/checkerboard. Top-left: armor-piercing cannon tracer, three close parallel white-yellow bullet streaks flowing HORIZONTAL LEFT muzzle roots to RIGHT tips, orange metal sparks and smoke taper at left. Top-right: single compact armored missile projectile flying HORIZONTAL LEFT to RIGHT, silver-gray pointed nose right, bright orange exhaust left, self-contained rocket and plume, no arc. Bottom-left: industrial high-output PLASMA CUTTER jet HORIZONTAL LEFT origin to RIGHT contact, dense cyan-white short thick electric lance with blue sharp envelope and copper-orange cutting sparks at RIGHT, no circular crescent. Bottom-right: enormous final plasma detonation, jagged blue-white center, copper orange fiery plate-like shards, dark smoky outer silhouette, radial blast core no circular ring. Four genuinely distinct silhouettes, entire effect isolated with transparent safe margins, avoid inter-cell bleed.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-01cae34d-567b-4b4e-8509-c0943b865021.png",
+      "destination": "characters/kurabe/assets/limit-effects.webp"
+    },
+    {
+      "id": "kurabe",
+      "kind": "cockpit",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kurabe/assets/kurabe-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kurabe/assets/limit-pilot.webp"
+      ],
+      "prompt": "Create one premium 16:9 opaque anime cinematic illustration showing Juro Kurabe ACTIVELY OPERATING INSIDE his Sentinel cockpit. Exact youthful face, tousled brown hair/brown eyes, black gakuran high collar/gold buttons/white cuffs of first reference, same head/body proportions. Second reference provides his seated operating pose, do not copy its transparent empty surroundings. Show him seated firmly inside a dark angular gray industrial mechanical pilot seat with broad backrest and harness side rails, close three-quarter upper-body view, both forearms extended onto tangible mechanical hand controls at waist level, shoulders braced and determined face clearly visible on LEFT half. RIGHT half glows with turquoise blue holographic tactical panes without legible writing; city lights visible faintly through armored curved canopy. Dedicated high quality painted cockpit interior with visible surrounding consoles, no human floating in open air, no invented futuristic human costume/helmet, school uniform unchanged. Warm orange instrument reflections and crisp blue interface light below face, unobscured eyes/cheeks/chin. No text/logos/captions, high quality face and hands, all control grip shapes coherent.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b4733836-373e-4302-9b04-9a5c59520adf.png",
+      "destination": "characters/kurabe/assets/limit-cockpit.webp"
+    }
+  ],
+  "effectOrientation": "Cannon tracers, rocket nose, plasma contact point RIGHT; plasma cell excludes unrelated emitter hardware at its LEFT source margin",
+  "effectSourceBounds": [
+    [
+      0,
+      0,
+      627,
+      627
+    ],
+    [
+      627,
+      0,
+      1254,
+      627
+    ],
+    [
+      150,
+      627,
+      627,
+      1254
+    ],
+    [
+      627,
+      627,
+      1254,
+      1254
+    ]
+  ]
+}

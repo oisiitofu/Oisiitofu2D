@@ -606,6 +606,18 @@
     ],
     "alain-limit-astral": [
       "/assets/audio/se/alain-limit-astral.wav"
+    ],
+    "kurabe-limit-battery": [
+      "/assets/audio/se/kurabe-limit-battery.wav"
+    ],
+    "kurabe-limit-plasma": [
+      "/assets/audio/se/kurabe-limit-plasma.wav"
+    ],
+    "shadow-limit-chaos-step": [
+      "/assets/audio/se/shadow-limit-chaos-step.wav"
+    ],
+    "shadow-limit-eclipse": [
+      "/assets/audio/se/shadow-limit-eclipse.wav"
     ]
   },
   "impactDesign": {
