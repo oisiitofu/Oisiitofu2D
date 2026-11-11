@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "locally verified",
+  "status": "published",
   "assets": [
     {
       "id": "nights",
@@ -51,5 +51,13 @@
       "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-749c8f6e-47f9-48ad-95db-04cb4341c7bf.png",
       "destination": "characters/nights/assets/limit-effects.webp"
     }
-  ]
+  ],
+  "verification": {
+    "siteVersion": 333,
+    "githubCommit": "05f829d",
+    "siteSourceCommit": "5fb233ea82593e2a153e8638c13f298aa8110ce4",
+    "publicHashesMatched": 17,
+    "publicGameplay": "passed",
+    "publicOnline": "unverified: online entry returned HTTP 503"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "locally verified",
+  "status": "published",
   "assets": [
     {
       "id": "miku",
@@ -86,5 +86,13 @@
       1024
     ]
   ],
-  "effectOrientation": "Note and waveform point RIGHT. Waveform mirrors at right speaker after deriving its world angle. Isolated upper cells from finale rays."
+  "effectOrientation": "Note and waveform point RIGHT. Waveform mirrors at right speaker after deriving its world angle. Isolated upper cells from finale rays.",
+  "verification": {
+    "siteVersion": 333,
+    "githubCommit": "05f829d",
+    "siteSourceCommit": "5fb233ea82593e2a153e8638c13f298aa8110ce4",
+    "publicHashesMatched": 17,
+    "publicGameplay": "passed",
+    "publicOnline": "unverified: online entry returned HTTP 503"
+  }
 }
