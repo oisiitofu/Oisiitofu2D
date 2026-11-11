@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "locally verified",
+  "status": "published",
   "assets": [
     {
       "kind": "poses",
@@ -56,5 +56,17 @@
       "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-67c76f03-1a11-4f4b-b34b-5f80d426dea2.png",
       "destination": "characters/kiryu/assets/limit-effects.webp"
     }
-  ]
+  ],
+  "verification": {
+    "siteVersion": 335,
+    "githubCommit": "5e476c9",
+    "siteSourceCommit": "c9ccea158010d23baf3ebac93b3a19791050d461",
+    "publicHashesMatched": 18,
+    "publicCoverage": 101,
+    "totalWorks": 162,
+    "publicGameplay": "passed",
+    "publicOnline": "unverified: online entry returned HTTP 503",
+    "localMatchingFrames": 384,
+    "localFinalLaunchSynced": true
+  }
 }

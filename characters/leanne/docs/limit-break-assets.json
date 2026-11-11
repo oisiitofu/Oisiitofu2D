@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "locally verified",
+  "status": "published",
   "assets": [
     {
       "kind": "poses",
@@ -108,5 +108,17 @@
       "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-72cea835-72cc-4b8f-8109-d248e5121710.png",
       "destination": "characters/leanne/assets/limit-effects.webp"
     }
-  ]
+  ],
+  "verification": {
+    "siteVersion": 335,
+    "githubCommit": "5e476c9",
+    "siteSourceCommit": "c9ccea158010d23baf3ebac93b3a19791050d461",
+    "publicHashesMatched": 18,
+    "publicCoverage": 101,
+    "totalWorks": 162,
+    "publicGameplay": "passed",
+    "publicOnline": "unverified: online entry returned HTTP 503",
+    "localMatchingFrames": 389,
+    "localFinalLaunchSynced": true
+  }
 }
