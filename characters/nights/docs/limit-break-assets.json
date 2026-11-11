@@ -1,0 +1,55 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "nights",
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nights/assets/nights-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nights/assets/nights-basic.png"
+      ],
+      "prompt": "Transparent 2x2 game sprite atlas, FOUR complete full-body illustrations in independent EQUAL cells. Generous empty transparent padding between cells and on all edges, both hair/hat tips and both feet fully inside each cell. Exact reference identity, consistent scale, detailed polished anime drawing. No effects, no labels, no backdrop, no other character. NiGHTS exactly as the approved references: large expressive blue eyes, peach face, purple two-point jester hood with blue tips and coral face trim, vivid pink neck collar, purple suit with gold framing and red chest jewel, white sleeves/gloves, gold cuffs with purple diamonds, long purple and pink pointed boots with gold tips. Keep same face, sleek limbs and proportions. Top-left: low horizontal drill flight to right, one arm reaches right, legs streamline behind. Top-right: ascending bank with one knee folded and hand reaching diagonally upward-right. Bottom-left: horizontal bank in three-quarter front, both arms open like an acrobat, feet behind. Bottom-right: inverted dive diagonally down-right with leading hand and head below torso, legs lifted, face visible. Whole-body action in each cell.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-09e4b162-82e0-43a3-870b-56388799404e.png",
+      "destination": "characters/nights/assets/limit-poses.webp"
+    },
+    {
+      "id": "nights",
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nights/assets/nights-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nights/assets/nights-basic.png"
+      ],
+      "prompt": "Transparent 2x2 game sprite atlas, FOUR complete full-body illustrations in independent EQUAL cells. Generous empty transparent padding between cells and on all edges, both hair/hat tips and both feet fully inside each cell. Exact reference identity, consistent scale, detailed polished anime drawing. No effects, no labels, no backdrop, no other character. NiGHTS exactly as the approved references: large expressive blue eyes, peach face, purple two-point jester hood with blue tips and coral face trim, vivid pink neck collar, purple suit with gold framing and red chest jewel, white sleeves/gloves, gold cuffs with purple diamonds, long purple and pink pointed boots with gold tips. Keep same face, sleek limbs and proportions. Top-left: tucked aerial half-turn, one hand above head and bent legs, hood trails the turn. Top-right: finishing drill dash flying diagonally down-right, both arms together pointing ahead and body extended, face visible. Bottom-left: aerial braking upright, palms spread at different heights, one boot extends forward. Bottom-right: poised floating finale, torso upright and both hands spread elegantly, boots staggered below. Four distinct poses.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-6ff2159a-ae80-45de-bb59-c3153388c726.png",
+      "destination": "characters/nights/assets/limit-motion.webp"
+    },
+    {
+      "id": "nights",
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nights/assets/nights-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/nights/assets/nights-basic.png"
+      ],
+      "prompt": "Wide opaque 16:9 high-end anime game cinematic cut-in. NiGHTS exactly as the approved references: large expressive blue eyes, peach face, purple two-point jester hood with blue tips and coral face trim, vivid pink neck collar, purple suit with gold framing and red chest jewel, white sleeves/gloves, gold cuffs with purple diamonds, long purple and pink pointed boots with gold tips. Keep same face, sleek limbs and proportions. Large face left-third and body banking toward the camera, open hand reaching into luminous golden star ribbon. Dream towers, indigo night, aurora and a faceted red Ideya light in right distance. Both eyes, cheek and chin visibly intact, high detail, excellent lighting, no text or logo.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-24672486-e229-4210-ac58-0cab17055b53.png",
+      "destination": "characters/nights/assets/limit-cutin.webp"
+    },
+    {
+      "id": "nights",
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide opaque 16:9 highly detailed anime dreamscape game backdrop. Twin Seeds at night, whimsical high towers and suspended bridges framing sides, starlit indigo sky, distant moon, aurora and a glassy dream platform below. Open dark blue and violet central airspace for wide acrobatics, depth, rich color and soft reflections, subtle gold highlights. No people, character, logo or text.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-385a005d-7e56-4206-b884-c352b29d1ccc.png",
+      "destination": "characters/nights/assets/limit-court.webp"
+    },
+    {
+      "id": "nights",
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Transparent 2x2 game attack effect atlas, four separate complete designs in equal cells, very generous transparent gaps and margins, high-detail solid color and bright opaque core with tapered transparent ends. Upper left gold-indigo star drill wedge pointing RIGHT, long bright center and angular star fragments. Upper right complete violet and gold star ring with defined circular edge and small star tips, dark transparent center. Lower left red faceted luminous jewel surrounded by sparse rose and gold sparks, self-contained. Lower right brilliant gold-white star explosion with dark purple outer fracture and gold star fragments. No figures, scenery, text or opaque backing.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-749c8f6e-47f9-48ad-95db-04cb4341c7bf.png",
+      "destination": "characters/nights/assets/limit-effects.webp"
+    }
+  ]
+}

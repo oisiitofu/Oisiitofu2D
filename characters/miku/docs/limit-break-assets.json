@@ -1,0 +1,90 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "miku",
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/miku/assets/miku-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/miku/assets/miku-atlas.png"
+      ],
+      "prompt": "Transparent 2x2 game sprite atlas, FOUR complete full-body illustrations in independent EQUAL cells. Generous empty transparent padding between cells and on all edges, both hair/hat tips and both feet fully inside each cell. Exact reference identity, consistent scale, detailed polished anime drawing. No effects, no labels, no backdrop, no other character. Hatsune Miku exactly as the approved references: youthful anime face, turquoise eyes, extremely long turquoise twin tails, black and magenta angular headset and clips, gray sleeveless high-collar top with turquoise tie and trim, detached black sleeves, black pleated skirt with turquoise hem, black thigh-high boots with turquoise details. One black handheld microphone. Same face, costume and proportions. Energetic wholesome concert performance. Top-left: singing into mic with bent knees and one foot crossing forward, free hand near chest. Top-right: fast dance sidestep to right, both feet visible, free arm extends right from shoulder, mic near mouth. Bottom-left: dance pivot in three-quarter front, body turns, one knee raised and hair sweeps sideways with clear silhouette, mic held at mouth. Bottom-right: low controlled landing on one knee from a dance jump, mic near mouth, free arm extends for balance. Keep complete twin tails within cell.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-913db024-4e4f-4828-826a-d31f8debfdef.png",
+      "destination": "characters/miku/assets/limit-poses.webp"
+    },
+    {
+      "id": "miku",
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/miku/assets/miku-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/miku/assets/miku-atlas.png"
+      ],
+      "prompt": "Transparent 2x2 game sprite atlas, FOUR complete full-body illustrations in independent EQUAL cells. Generous empty transparent padding between cells and on all edges, both hair/hat tips and both feet fully inside each cell. Exact reference identity, consistent scale, detailed polished anime drawing. No effects, no labels, no backdrop, no other character. Hatsune Miku exactly as the approved references: youthful anime face, turquoise eyes, extremely long turquoise twin tails, black and magenta angular headset and clips, gray sleeveless high-collar top with turquoise tie and trim, detached black sleeves, black pleated skirt with turquoise hem, black thigh-high boots with turquoise details. One black handheld microphone. Same face, costume and proportions. Energetic wholesome concert performance. Top-left: stage jump at apex, one knee raised, mic at mouth, free hand points upward-right, both boots airborne. Top-right: strong planted high-note stance, feet apart, mic to mouth, free arm sweeps horizontally toward right. Bottom-left: final sustained note, full body facing slightly right, both feet planted, mic close to mouth, free hand stretches high diagonally, face expressive and eyes visible. Bottom-right: gracious bows slightly with mic lowered to chest and free arm opening, feet grounded, face visible. Four distinct concert poses, full twin tails inside cell.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-411ad11c-adff-4115-9fc5-54aa6f82f4a2.png",
+      "destination": "characters/miku/assets/limit-motion.webp"
+    },
+    {
+      "id": "miku",
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/miku/assets/miku-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/miku/assets/miku-atlas.png"
+      ],
+      "prompt": "Wide opaque 16:9 high-end anime game cinematic cut-in. Hatsune Miku exactly as the approved references: youthful anime face, turquoise eyes, extremely long turquoise twin tails, black and magenta angular headset and clips, gray sleeveless high-collar top with turquoise tie and trim, detached black sleeves, black pleated skirt with turquoise hem, black thigh-high boots with turquoise details. One black handheld microphone. Same face, costume and proportions. Energetic wholesome concert performance. Large bright expressive singing face left-third, handheld mic below mouth, long teal hair sweeping right. An enormous blue-green concert arena, magenta edge light and distant audience lights and waveform displays. Both eyes, cheek and chin visibly intact, high detail, excellent lighting, no text or logo.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-93cb60ad-cb30-4919-b2c9-2ea6624a9b6f.png",
+      "destination": "characters/miku/assets/limit-cutin.webp"
+    },
+    {
+      "id": "miku",
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide opaque 16:9 highly detailed anime virtual concert game backdrop. Huge futuristic amphitheater with broad empty stage runway centered, charcoal reflective floor and recessed cyan stage edge lights, distant blue-green glowsticks, tall speaker stacks framing sides, teal and magenta lighting overhead and dark navy clear action area. Sharp high quality scenic materials, cinematic depth, no performers, no readable text or logo.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-235587a9-1199-4078-b956-53e811e31baa.png",
+      "destination": "characters/miku/assets/limit-court.webp"
+    },
+    {
+      "id": "miku",
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Transparent 2x2 game attack effect atlas, four separate complete designs in equal cells, very generous transparent gaps and margins, high-detail solid color and bright opaque core with tapered transparent ends. Upper left cyan glowing music note projectile pointing RIGHT with solid white core, teal waveform ribbon and magenta flecks. Upper right broad stepped turquoise-and-magenta bass pulse traveling RIGHT, solid luminous polygon edges and wave ridges. Lower left bright turquoise speaker impact with faceted pink sparks and white core, compact starburst. Lower right enormous music finale burst of cyan-white and magenta with equalizer-bar shards, solid center and a vivid silhouette. No figures, scenery, text or opaque backing.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a62d5db2-03d9-4ec8-843d-530abbb4a058.png",
+      "destination": "characters/miku/assets/limit-effects.webp"
+    },
+    {
+      "id": "miku",
+      "kind": "speaker",
+      "refs": [],
+      "prompt": "One isolated full-body stage loudspeaker prop on a truly transparent background, premium anime fighting-game asset. Compact vertical charcoal black concert speaker tower, three-quarter front, two dark round woofer cones surrounded by turquoise and magenta trim, cyan equalizer LEDs along top and small sturdy stand integrated at bottom. Stylized smooth metal panels, clear silhouette and physical volume. All corners and stand inside generous padding. Centered, no floor, shadows, scenery, words, figures, logo, or light waves.",
+      "output": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d27a3f34-2cef-4119-887d-fc22337568b1.png",
+      "destination": "characters/miku/assets/limit-speaker.webp"
+    }
+  ],
+  "effectSourceBounds": [
+    [
+      0,
+      65,
+      710,
+      420
+    ],
+    [
+      740,
+      55,
+      1536,
+      430
+    ],
+    [
+      0,
+      460,
+      650,
+      1024
+    ],
+    [
+      650,
+      440,
+      1536,
+      1024
+    ]
+  ],
+  "effectOrientation": "Note and waveform point RIGHT. Waveform mirrors at right speaker after deriving its world angle. Isolated upper cells from finale rays."
+}

@@ -618,6 +618,18 @@
     ],
     "shadow-limit-eclipse": [
       "/assets/audio/se/shadow-limit-eclipse.wav"
+    ],
+    "nights-limit-loop": [
+      "/assets/audio/se/nights-limit-loop.wav"
+    ],
+    "nights-limit-ideya": [
+      "/assets/audio/se/nights-limit-ideya.wav"
+    ],
+    "miku-limit-note": [
+      "/assets/audio/se/miku-limit-note.wav"
+    ],
+    "miku-limit-performance": [
+      "/assets/audio/se/miku-limit-performance.wav"
     ]
   },
   "impactDesign": {
