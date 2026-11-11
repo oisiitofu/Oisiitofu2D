@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "locally verified",
+  "status": "published",
   "assets": [
     {
       "kind": "poses",
@@ -85,5 +85,17 @@
         ]
       ]
     }
-  ]
+  ],
+  "verification": {
+    "siteVersion": 339,
+    "githubCommit": "fb239fe",
+    "siteSourceCommit": "c3a8df9d2494c7a753f0ee4288da63c08e821d7a",
+    "publicHashesMatched": 22,
+    "publicCoverage": 104,
+    "totalWorks": 162,
+    "publicGameplay": "passed",
+    "publicOnline": "unverified: online entry returned HTTP 503",
+    "localMatchingFrames": 403,
+    "localFinalLaunchSynced": true
+  }
 }

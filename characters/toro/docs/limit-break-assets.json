@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "locally verified",
+  "status": "published",
   "assets": [
     {
       "kind": "poses",
@@ -62,5 +62,17 @@
       "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-61abb702-a9fa-4c65-8c1c-301998473f0c.png",
       "destination": "characters/toro/assets/limit-effects.webp"
     }
-  ]
+  ],
+  "verification": {
+    "siteVersion": 339,
+    "githubCommit": "fb239fe",
+    "siteSourceCommit": "c3a8df9d2494c7a753f0ee4288da63c08e821d7a",
+    "publicHashesMatched": 22,
+    "publicCoverage": 104,
+    "totalWorks": 162,
+    "publicGameplay": "passed",
+    "publicOnline": "unverified: online entry returned HTTP 503",
+    "localMatchingFrames": 405,
+    "localFinalLaunchSynced": true
+  }
 }
