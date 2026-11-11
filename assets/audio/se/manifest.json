@@ -648,6 +648,24 @@
     ],
     "sakura-limit-steam": [
       "/assets/audio/se/sakura-limit-steam.wav"
+    ],
+    "aiai-limit-roll": [
+      "/assets/audio/se/aiai-limit-roll.wav"
+    ],
+    "aiai-limit-bumper": [
+      "/assets/audio/se/aiai-limit-bumper.wav"
+    ],
+    "aiai-limit-goal": [
+      "/assets/audio/se/aiai-limit-goal.wav"
+    ],
+    "toro-limit-table": [
+      "/assets/audio/se/toro-limit-table.wav"
+    ],
+    "toro-limit-doron": [
+      "/assets/audio/se/toro-limit-doron.wav"
+    ],
+    "toro-limit-mochi": [
+      "/assets/audio/se/toro-limit-mochi.wav"
     ]
   },
   "impactDesign": {

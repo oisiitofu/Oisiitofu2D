@@ -1,0 +1,66 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/toro/assets/toro-poses.png"
+      ],
+      "prompt": "Four full body anime sprite poses of Toro Inoue as in this exact reference sheet, transparent 2x2 atlas, one complete figure centered in each equal quadrant with large alpha padding. Keep original very simple white chibi cat silhouette, big rounded angular head and two ears with peach inner triangles, dot eyes, peach oval cheeks, black curved small cat mouth, no clothes, small paws, short tail. All four poses differ: upper-left spring from ground with one paw pointed up and both feet off floor; upper-right landing low with feet planted apart and focused eyebrows; lower-left spins toward right in midair with one foot extended forward at chest height; lower-right leans back from kicking with both paws lifted and feet poised to hop backward, bright smile. No furniture, effect, lettering, texture background or shadow. Exact line and proportions of reference.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-15f1e7ff-371d-4ff4-be4c-6c51cbfde6e8.png",
+      "destination": "characters/toro/assets/limit-poses.webp"
+    },
+    {
+      "kind": "ninja",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/toro/assets/toro-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/toro/assets/toro-forms.png"
+      ],
+      "prompt": "True alpha background. Strict equal 2x2 atlas, wide transparent gutters, each individual object fills at most 72 percent of cell, leave generous margins, no overlap. Four full-body sprites of Toro's Torobi ninja, a cute compact cat precisely matching the ninja design from the existing reference top half, black hood and outfit, red tied sash, peach ear insides and cheeks, white muzzle, tiny black eyes. TL low stance facing right and leaning to peek around paper door, one paw raised. TR tight upward leap, toes together, holds one silver star shuriken. BL midair facing right with clear throwing arm fully extended right, the silver star has left paw so hands empty. BR low soft landing with one paw close to floor, head turned right, short tail visible. All limbs/ears inside cell. No props aside from held star, no shadow or background.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-23f67f7f-9cec-4b11-b840-35051b457f9a.png",
+      "destination": "characters/toro/assets/limit-ninja.webp"
+    },
+    {
+      "kind": "oni",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/toro/assets/toro-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/toro/assets/toro-forms.png"
+      ],
+      "prompt": "True alpha background. Strict equal 2x2 atlas, wide transparent gutters, each individual object fills at most 72 percent of cell, leave generous margins, no overlap. Four full-body sprites of adorable white Toro Inoue in his Oni red-and-gold uniform with red tied headband and gold circle, match the lower half of the reference exactly. Single wooden mallet with cylindrical head. TL carries mallet low across body while stepping to right. TR spreads feet and raises mallet over head with both paws. BL swings wooden mallet downward to the right from shoulders to below paws, feet braced, determined expression. BR cheers while holding mallet up at side, visible face and both feet. Entire ears and mallet in each cell. No background, ground shadow or effect.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-896912b6-26b9-443e-a0f5-fdea178a8261.png",
+      "destination": "characters/toro/assets/limit-oni.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "True alpha background. Strict equal 2x2 atlas, wide transparent gutters, each individual object fills at most 72 percent of cell, leave generous margins, no overlap. Four isolated anime game props in 2x2 equal padded cells. TL short traditional round brown wooden chabudai table, visible feet and flat top in slight side view. TR single upright warm ivory paper shoji sliding door panel, dark slender wood grid, viewed straight on. BL single large glossy white soft mochi with a chunky rounded squished silhouette and dark subtle outline. BR blank cream speech bubble with thick jade border, short tail down left, bright empty center. No text, no people, no shadow.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c95a7755-02e5-4e1e-97f0-b35d39c90905.png",
+      "destination": "characters/toro/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/toro/assets/toro-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/toro/assets/toro-forms.png"
+      ],
+      "prompt": "Wide cinematic 2.2:1 polished hand-drawn game cut-in featuring recognizable Toro Inoue in foreground, exactly the very simple white cat with wedge ears, pink cheeks, black dots for eyes and cute smile, mid kick on a short round wooden table. At far right show red headband Oni silhouette behind a paper screen and a small dark Torobi shadow jumping above. Warm Japanese room, kinetic angular perspective, playful high contrast. Keep main face visible with eyes cheeks chin. No text or logos.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-68e97d50-d7fb-4580-b158-f568ffe6e183.png",
+      "destination": "characters/toro/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 16:9 detailed anime game backdrop, a spacious playful Japanese tatami room with warmly lit wood posts, shoji panels at back, low terrace opens onto evening garden on the left. Clear flat tatami floor occupying lower third. Empty room, props to be drawn separately, no furniture near center, no characters or letters. Jade, sunset peach and warm wood with clear silhouettes.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-377bb65b-6beb-41c8-a190-519564e002ac.png",
+      "destination": "characters/toro/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "True alpha background. Strict equal 2x2 atlas, wide transparent gutters, each individual object fills at most 72 percent of cell, leave generous margins, no overlap. Four isolated small transparent game effects. TL white and gold sharp foot impact with burnt orange edges. TR a single steel-gray four-point shuriken with small bright teal sharp motion trails pointing right, crisp dark silhouette. BL a compact violet pop of cartoon ninja smoke with dark purple outline and tapered swirls. BR white mochi impact with a dense brilliant center, thick bright amber and red starburst, white rounded droplets radiating out, black outline. No characters or text. Big invisible gutters.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-61abb702-a9fa-4c65-8c1c-301998473f0c.png",
+      "destination": "characters/toro/assets/limit-effects.webp"
+    }
+  ]
+}

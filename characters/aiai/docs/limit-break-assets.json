@@ -1,0 +1,89 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/aiai/assets/aiai-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/aiai/assets/aiai-native.png"
+      ],
+      "prompt": "Four complete AiAi character game sprites, 2x2 grid with equal cells and generous transparent padding, no shadow or background. Match the exact model from the reference: warm brown small cartoon monkey, peach face and large spiral ears, single swept curl, dark oval eyes, orange tee with a simple bold white A on chest, anatomically complete little paws, feet and tail. Same proportion and polished painted cel finish in each. Only the monkey, omit bubble from these sprites because it is a separate game layer. Top left low running to the right, one foot planted, looking ahead. Top right both feet lifted in a tucked jump diagonally right, reaches one hand out. Bottom left crouched low and leaning left, both palms braced as if steering the surface under his feet. Bottom right spread arms and feet to stabilize from sudden bounce, three-quarter forward view, excited. Full silhouette in each cell, no outer effects, props or labels.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e5d6089f-950f-4b50-ab11-aeeef60a9069.png",
+      "destination": "characters/aiai/assets/limit-poses.webp"
+    },
+    {
+      "kind": "golden",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/aiai/assets/aiai-selection.png",
+        "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e5d6089f-950f-4b50-ab11-aeeef60a9069.png"
+      ],
+      "prompt": "2x2 sprite sheet, equal padded quadrants and transparent gutters, each figure fully visible. Four complete transparent chibi full-body game sprites of Golden AiAi from Super Monkey Ball. Same rounded proportions, swept curl, spiral ears, face, orange-shirt design with A letter as reference, but shiny gold body and golden-orange shirt, expression legible and black oval eyes. Four distinctly authored poses: low crouch with fists down bracing to roll, rapid run to right with one foot planted, full-body leap reaching toward right with both feet lifted, cheering with both paws up and happy face. No sphere or background.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9445626f-b4ba-48ea-a5d5-818a6b42e546.png",
+      "destination": "characters/aiai/assets/limit-golden.webp"
+    },
+    {
+      "kind": "ball",
+      "refs": [],
+      "prompt": "Two side-by-side large circular glass balls, isolated on real transparency, 2 columns, 1 row, equal cells, lots of padding. Left is a transparent clear cartoon super monkey ball sphere with a delicate bright cyan rim on upper left and pink rim lower right, brilliant curved glass highlights, mostly see-through center for compositing a game character behind the surface. Right is the matching golden powered-up sphere, with pale gold rim, bright small white reflections, center predominantly transparent. No character, no pattern, no text, no shadow. Full uncut circles.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7484cf71-ea44-46b6-88e7-fbac01e63cc5.png",
+      "destination": "characters/aiai/assets/limit-ball.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/aiai/assets/aiai-selection.png"
+      ],
+      "prompt": "Wide 2.2:1 game cinematic illustration of AiAi matching reference, cute brown monkey, swirl ears, orange A shirt, full head and both eyes visible, inside its gleaming rainbow glass sphere. Sweeping down a steep colorful suspended tropical obstacle track, checking his footing, golden bananas shine, strong diagonal camera perspective, cobalt sky and green islands behind, clean dramatic cel painted detail. No text outside the white A on clothing.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-32d12366-7883-40bd-be4e-52956461fb66.png",
+      "destination": "characters/aiai/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Painted wide game background for a tropical Super Monkey Ball obstacle course suspended over turquoise ocean, vivid lime tropical islands, sunrise at upper right, clear open middle of the screen, far suspended tracks at top and sides, no foreground path or solid floor in lower half because game renders its own path. Far bridges and loop tracks. Polished brightly colored anime game background with depth. No characters, lettering or logos.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-702f9516-a8f5-4895-9bca-0d30cb806fd4.png",
+      "destination": "characters/aiai/assets/limit-court.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "True alpha background. Strict equal 2x2 atlas, wide transparent gutters, each individual object fills at most 72 percent of cell, leave generous margins, no overlap. Four game props in 2x2 equal square padded cells, isolated. TL a red and white arcade bumper with a wide circular rubber pad and orange center, slight side view. TR a golden bunch of three beautiful bananas with blue tiny gem light. BL a round upright arcade goal hoop in vivid gold, little checkered pattern and stars, visible empty transparent hole, feet to stand on a narrow course. BR dark turquoise and silver arcade ramp footlight side-on. No labels or characters.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e0c05e5b-16fd-4ad6-a159-455ebc90d338.png",
+      "destination": "characters/aiai/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "True alpha background. Strict equal 2x2 atlas, wide transparent gutters, each individual object fills at most 72 percent of cell, leave generous margins, no overlap. Four small distinct colorful game effects on transparent 2x2 grid. TL compact cyan white circular physical bounce impact, dark blue rays. TR short blue white speed comet heading right with pointed front and trailing streaks left. BL bright golden hit star with dark burnt orange edges, sharp orange radial sparkles. BR massive rightward golden racing impact with dense brilliant white core and edged orange and yellow arcs with rainbow confetti, no ground plane or characters. Generous alpha space between all cells.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a4dae032-c953-436d-a584-d8248fdf0dc0.png",
+      "destination": "characters/aiai/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          768,
+          512
+        ],
+        [
+          768,
+          0,
+          1536,
+          512
+        ],
+        [
+          0,
+          512,
+          664,
+          1024
+        ],
+        [
+          664,
+          512,
+          1536,
+          1024
+        ]
+      ]
+    }
+  ]
+}
