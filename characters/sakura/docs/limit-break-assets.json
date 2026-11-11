@@ -1,0 +1,152 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sakura/assets/sakura-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sakura/assets/sakura-basic.png"
+      ],
+      "prompt": "Four independently drawn full-body poses for the character in references, on true alpha transparency, exactly four equal quadrants in a 2x2 sprite sheet, generous transparent gutters and outer padding. Leave enough padding for complete hair, hands, weapon and feet. No backdrop, ground shadow, lettering, border, visual effect or additional character. Match existing in-game full-body art and high-fidelity cel painted finish. Same exact Sakura Shinguji from the references, black navy long ponytail, broad red bow, pink sakura kimono over white collar and blue obi, deep red hakama, black laced boots. One slender katana with black sheath, gold tsuba, red tassel. TL: crouches low with weight back, one hand on hilt and one on black sheath. TR: grounded stepping rising draw-cut with sword ending up and to the right. BL: hops backward to left, legs folded one higher than the other, sheath at hip, single sword held to the right safely away from body. BR: steps left onto an invisible higher platform, left knee bent, upper body and eyes toward right, sword held low beside hip. Maintain recognizable face and restrained folds.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ac764d6b-bb3b-4544-81d0-edb2e7c9cce9.png",
+      "destination": "characters/sakura/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sakura/assets/sakura-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sakura/assets/sakura-basic.png"
+      ],
+      "prompt": "Transparent 2x2 atlas, one complete subject centered in each equal quadrant with wide empty gutters, generous alpha padding, no overlap and no background. Full figures of exact Sakura Shinguji from refs, same pink sakura kimono, blue obi, red hakama, black navy long ponytail, red bow, black lace boots, exact face, single curved sword. TL: two-handed diagonal cut follow-through with blade pointed right and down, low solid stance. TR: bends knees to jump upward-left, one arm raised and sword in black scabbard. BL: suspended above ground reaching left with empty left hand for a hatch ledge, knees tucked, sheathed sword at hip. BR: crouched feet tucked and torso forward, descending as she climbs into an invisible round hatch, sheathed sword secured. No platform or machine.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9291e4dc-8073-4688-a4f0-c5a8a64f1b86.png",
+      "destination": "characters/sakura/assets/limit-motion.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          661,
+          615
+        ],
+        [
+          661,
+          0,
+          1263,
+          615
+        ],
+        [
+          0,
+          615,
+          631,
+          1246
+        ],
+        [
+          631,
+          615,
+          1263,
+          1246
+        ]
+      ]
+    },
+    {
+      "kind": "koubu",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakura/limit-break/koubu-ref-2.jpg",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakura/limit-break/koubu-ref-4.jpg",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakura/limit-break/koubu-ref-5.jpg"
+      ],
+      "prompt": "Transparent 2x2 atlas, one complete subject centered in each equal quadrant with wide empty gutters, generous alpha padding, no overlap and no background. Four hand-painted anime full figures of the SAME original Sakura Shinguji Koubu, the pale cherry-pink Taisho steam-powered armor exactly as the references, not a person in armor. Bulbous rounded torso, two long dark horizontal black visor slits, pale pink dome, short stout arms and legs, pink metal bell-shaped feet, red segmented side skirts, brass pipes and steam cylinders on back, green and red rivet indicators. One single steel katana only. Top left open upper round hatch and empty cockpit, sword held down. Top right closed hatch, heavy low stance preparing to spring right, sword held low. Bottom left leaping upright facing right, bent rear leg, raises sword high overhead. Bottom right midair descending toward right, sword swings diagonally down to the right. No steam, stand or visual effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1aa2370b-87e2-476d-adb8-cb2184738aa9.png",
+      "destination": "characters/sakura/assets/limit-koubu.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          631,
+          579
+        ],
+        [
+          631,
+          0,
+          1262,
+          579
+        ],
+        [
+          0,
+          579,
+          631,
+          1246
+        ],
+        [
+          631,
+          579,
+          1262,
+          1246
+        ]
+      ]
+    },
+    {
+      "kind": "koubu-finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakura/limit-break/koubu-ref-2.jpg",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakura/limit-break/koubu-ref-4.jpg",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakura/limit-break/koubu-ref-5.jpg"
+      ],
+      "prompt": "Transparent 2x2 atlas, one complete subject centered in each equal quadrant with wide empty gutters, generous alpha padding, no overlap and no background. Four hand-painted anime full-body poses of the SAME original Sakura Shinguji Koubu, pale pink as the reference photos, dark black horizontal eye slits, pale pink round dome, squat steam-powered armor, deep red segmented hip shields, round pink boots, visible brass pipes and steam cylinders. One single silver katana. Top-left wide heavy landing stance with sword aimed diagonally down-right. Top-right low stable stance coiling for a horizontal two-handed cut, blade pulled back left. Bottom-left wide strong two-handed release, full blade extends right at chest level, both feet firmly braced. Bottom-right stands upright to relax, katana down and pointed diagonally to right, both feet flat. No person, steam, effect, extra sword, or background.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-766919d4-def7-4ff6-b864-f29e0fc555b3.png",
+      "destination": "characters/sakura/assets/limit-koubu-finish.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          630,
+          609
+        ],
+        [
+          630,
+          0,
+          1261,
+          609
+        ],
+        [
+          0,
+          609,
+          676,
+          1247
+        ],
+        [
+          676,
+          609,
+          1261,
+          1247
+        ]
+      ]
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sakura/assets/sakura-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sakura/assets/sakura-basic.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakura/limit-break/koubu-ref-2.jpg"
+      ],
+      "prompt": "Wide 2.2:1 lavish cut-in for Sakura Shinguji of Sakura Wars. Her recognizable face is center-left with both eyes, cheeks and chin visible, long dark ponytail and red bow, pink cherry kimono and deep red hakama. Single sword arcs from her grip at left toward far right. Behind her, her official round pink Taisho Koubu mech with black horizontal visor slits and brass pipes in dramatic backlight. Sparse pink petals and amber lamps, vivid perspective, detailed cinematic anime with crisp line art, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-eb59a99d-719e-48bf-9172-37f5f188d590.png",
+      "destination": "characters/sakura/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 16:9 anime game battle background on a vacant Taisho theater stage. Wooden floor level across the lower third, warm amber footlights and deep burgundy velvet wings, dark Japanese period proscenium, large painted cherry blossom backdrop mostly above. Cool shadows on the left around a hidden stage trap, softly lit center/right battle area, no actors, no mech, no text, no floor tilt. Rich hand-painted detail.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-65b451a2-84d5-4077-8b76-4fbf92d96415.png",
+      "destination": "characters/sakura/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "A professional 2 by 2 VFX sprite atlas for an anime fighting game, EXACTLY FOUR SMALL discrete objects surrounded by true transparent space. Each shape must fit well inside its own equal quadrant. Each object occupies ONLY THE INNER 62 PERCENT of its quadrant width and height. EXAGGERATE TRANSPARENT GAPS. Do not let effects touch other quadrants or edges. TOP LEFT: bright white hot-pink crescent, convex cutting edge on the right, two sharp ends open left, tiny pink petals. TOP RIGHT: a vertical downward cut, a narrow upright magenta teardrop blade with bright sharp tip pointing down, white core, discrete dark red petals. BOTTOM LEFT: a compact white-gray ground stomp puff with a sharp bright center and small dust crescents, base visibly flat and not cropped. BOTTOM RIGHT: a compact fan expanding rightward, white center near the left hand side and broad sharply outlined rose-red curved wave front across the right, a fan of triangular petals and white tips. Strong crisp silhouettes, rich vivid cherry magenta, zero backdrop, no checkerboard, no fog beyond any silhouette, no characters, no text. The most important thing is generous empty padding on ALL four sides of EVERY EFFECT.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-91bf0180-dd1d-40e7-97b2-31158c416322.png",
+      "destination": "characters/sakura/assets/limit-effects.webp",
+      "supersedes": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1ec1372c-a477-4a8c-8a43-a65959de1cd8.png"
+    }
+  ]
+}

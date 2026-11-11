@@ -642,6 +642,12 @@
     ],
     "leanne-limit-confirm": [
       "/assets/audio/se/leanne-limit-confirm.wav"
+    ],
+    "sakura-limit-blade": [
+      "/assets/audio/se/sakura-limit-blade.wav"
+    ],
+    "sakura-limit-steam": [
+      "/assets/audio/se/sakura-limit-steam.wav"
     ]
   },
   "impactDesign": {
