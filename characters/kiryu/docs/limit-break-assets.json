@@ -1,0 +1,60 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kiryu/assets/kiryu-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kiryu/assets/kiryu-atlas.png"
+      ],
+      "prompt": "Create a transparent 2x2 sprite sheet for the existing fighting game. Four separate high-fidelity painted anime full-body poses of the same character exactly as the reference, one full figure centered in each equal quadrant with generous clear padding between cells and all outer edges. All hair, hands, weapons and both shoes entirely inside the appropriate cell. No effects, text, props apart from held character weapons specified below, scenery, contact shadow or graphic decoration. Match the existing full-body reference's outfit, proportions and rendering closely. Four grounded brawler transition poses. Top left: sinks into low guarded stance, fists tucked, weight back. Top right: short aggressive step toward right, one hand still tucked, coat opens naturally. Bottom left: sharply rotated hook contact to the right, heels on street plane. Bottom right: right side thrust kick, supporting leg grounded, clearly readable black shoe and whole body. Keep Kazuma Kiryu's exact angular face, black hair, gray suit and deep red open collar, black shoes.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cb0b0cca-2965-4f9c-9453-3b5985aa9cbc.png",
+      "destination": "characters/kiryu/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kiryu/assets/kiryu-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kiryu/assets/kiryu-atlas.png"
+      ],
+      "prompt": "Transparent 2x2 atlas, one subject in each EQUAL quadrant, wide clear alpha gaps and transparent margins on all edges. Do not touch edges. No ground shadow. Isolated on true transparency. Match the Kazuma Kiryu reference exactly: gray tailored suit, dark red open collar, black hair and shoes. Consistent painted game proportions, full silhouette including shoes in each quadrant. No attack effects or background. Full figures: Top-left rotates hips with both open hands reaching right to grab at shoulder height, both soles down. Top-right dips into a low wide stance with both hands gripped tightly together up to the right as if lifting an invisible opponent. Bottom-left three-quarter view of hips turning clockwise, weight solidly on one foot, both arms releasing a throw up and to the LEFT. Bottom-right recovers from the turn with his left foot braced, open hand lowered, torso turned toward the left. Single figure only, no opponent.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3f738b12-37c1-4386-b80d-0103384fdf53.png",
+      "destination": "characters/kiryu/assets/limit-motion.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kiryu/assets/kiryu-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kiryu/assets/kiryu-atlas.png"
+      ],
+      "prompt": "Transparent 2x2 atlas, one subject in each EQUAL quadrant, wide clear alpha gaps and transparent margins on all edges. Do not touch edges. No ground shadow. Isolated on true transparency. Match the Kazuma Kiryu reference exactly: gray tailored suit, dark red open collar, black hair and shoes. Consistent painted game proportions, full silhouette including shoes in each quadrant. No attack effects or background. Top-left guarded boxing roll with low shoulder, rear fist coiled at waist, angled left. Top-right full-power short driving straight punch to the left with one foot braced and the other stepping in. Bottom-left full follow-through in a deep staggered stance to the left, face visible. Bottom-right straightens and relaxes fists at chest, shoes flat.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d5b121e5-f6ef-4b22-a9d6-bf3b1c45747a.png",
+      "destination": "characters/kiryu/assets/limit-finish.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kiryu/assets/kiryu-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kiryu/assets/kiryu-atlas.png"
+      ],
+      "prompt": "Wide 2.2:1 cinematic anime illustration with Kazuma Kiryu dominating the left and middle, recognizably exact face, swept black hair, gray suit and red open collar. Both eyes, cheeks and chin fully visible. Low angle, he steps forward with a fiercely focused look, braced clenched fist in the right foreground, rainy Kamurocho signage and wet asphalt in crimson-blue rim light. Hints of a blue heat aura separate his silhouette. Detailed face, foreshortened anatomy, aggressive perspective. No text or logos.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-615e3e18-885e-4cdd-bcc8-f5813ed941f7.png",
+      "destination": "characters/kiryu/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 16:9 cinematic game battle background, vacant rain-slick Kamurocho nightlife side street at night with no people or silhouettes. Readable side-on flat pavement occupying lower half, brick side wall on the left where a game character will collide, storefronts and neon in upper half. Perspective recedes to center. Saturated navy and magenta, dark middle, subdued pavement. No readable text, no logos. Detailed painted anime environment.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-02282457-1cd9-41a7-946e-36f907f90989.png",
+      "destination": "characters/kiryu/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Transparent 2x2 atlas, one subject in each EQUAL quadrant, wide clear alpha gaps and transparent margins on all edges. Do not touch edges. No ground shadow. Isolated on true transparency. Top-left compact cyan and white physical impact with short sharp radial edges and clear dark outline. Top-right fast horizontal red-gold punch streak heading LEFT, short angular slivers trailing right. Bottom-left broken masonry chips and concrete dust exploding outward, gray stones with crisp edges in a short radial burst. Bottom-right large dense white gold physical impact core with four vivid dark crimson jagged flames, vivid punch energy with a compact dark edge. Four separate transparent game effect cells, no surrounding gradients, no figures.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-67c76f03-1a11-4f4b-b34b-5f80d426dea2.png",
+      "destination": "characters/kiryu/assets/limit-effects.webp"
+    }
+  ]
+}

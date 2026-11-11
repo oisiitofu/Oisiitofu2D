@@ -1,0 +1,112 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/leanne/assets/leanne-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/leanne/assets/leanne-neutral-locked.png"
+      ],
+      "prompt": "Create a transparent 2x2 sprite sheet for the existing fighting game. Four separate high-fidelity painted anime full-body poses of the same character exactly as the reference, one full figure centered in each equal quadrant with generous clear padding between cells and all outer edges. All hair, hands, weapons and both shoes entirely inside the appropriate cell. No effects, text, props apart from held character weapons specified below, scenery, contact shadow or graphic decoration. Match the existing full-body reference's outfit, proportions and rendering closely. Four distinct acrobatic gunfight transition poses for adult Reanbell from End of Eternity. Top left: low two-foot spring, compact SMG held against chest. Top right: takeoff rising right with both feet clear, tucks one knee, aims SMG diagonally down right. Bottom left: midair over the target, turns shoulders to aim compact SMG down left, coat hem billows naturally. Bottom right: low full-body landing toward right, weight on front bent leg and SMG tucked against torso. Match exact blond bob, blue-gray eyes, ivory sleeves, black studded corset, paneled ivory and slate-blue coat, charcoal leggings and black lace boots. Weapons are stylized game props, no visual gunfire.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cd7d6fb8-960d-4090-b93e-24d26468c7ec.png",
+      "destination": "characters/leanne/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/leanne/assets/leanne-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/leanne/assets/leanne-neutral-locked.png"
+      ],
+      "prompt": "Transparent 2x2 atlas, one subject in each EQUAL quadrant, wide clear alpha gaps and transparent margins on all edges. Do not touch edges. No ground shadow. Isolated on true transparency. Match the Reanbell reference exactly: blond bob, ivory sleeves, black corset, slate-blue and ivory long coat panels, black leggings and black laced boots. Consistent painted game proportions, full silhouette including shoes in each quadrant. No attack effects or background. Full figures: Top-left low knee slide moving RIGHT, right shin forward and left leg extended behind, SMG held tucked upright. Top-right rises from knee-slide, hands lowering SMG by sling, coat settles. Bottom-left legs balanced wide, turning LEFT and draws a single compact pistol close to her chest, SMG no longer in hands. Bottom-right deliberate two-hand stance aiming compact pistol LEFT in strict side profile, boots planted.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-67681f99-89e7-4578-ab37-0a2445440f2e.png",
+      "destination": "characters/leanne/assets/limit-motion.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          631,
+          606
+        ],
+        [
+          631,
+          0,
+          1263,
+          606
+        ],
+        [
+          0,
+          606,
+          631,
+          1245
+        ],
+        [
+          631,
+          606,
+          1263,
+          1245
+        ]
+      ]
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/leanne/assets/leanne-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/leanne/assets/leanne-neutral-locked.png"
+      ],
+      "prompt": "Transparent 2x2 atlas, one subject in each EQUAL quadrant, wide clear alpha gaps and transparent margins on all edges. Do not touch edges. No ground shadow. Isolated on true transparency. Match the Reanbell reference exactly: blond bob, ivory sleeves, black corset, slate-blue and ivory long coat panels, black leggings and black laced boots. Consistent painted game proportions, full silhouette including shoes in each quadrant. No attack effects or background. Full figures: Top-left turning midair down-left, compact SMG directed downward-left as feet trail right, dynamic diagonal body line, full hair and weapons shown. Top-right one-knee braced turn on the ground, upper body angled left, compact SMG at waist. Bottom-left recoil from aimed pistol shot LEFT, hands rise slightly in recoil with wrists together, both feet braced. Bottom-right lowers her one compact pistol to her side and exhales, coat gently settles.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8e165a00-83ff-4aaf-a377-be7214db954f.png",
+      "destination": "characters/leanne/assets/limit-finish.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          623,
+          593
+        ],
+        [
+          623,
+          0,
+          1247,
+          593
+        ],
+        [
+          0,
+          593,
+          623,
+          1261
+        ],
+        [
+          623,
+          593,
+          1247,
+          1261
+        ]
+      ]
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/leanne/assets/leanne-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/leanne/assets/leanne-neutral-locked.png"
+      ],
+      "prompt": "Wide 2.2:1 lavish game cut-in painting, exact recognizable adult Reanbell in reference design, blond bob and blue-gray eyes, ivory sleeves, blue and black corseted coat with silver trim. Her face from eyes to chin occupies central-left and her knees are tucked as she twists through the air. Compact steampunk SMG points diagonally down toward right, giant steel mechanisms and streaking amber and blue light behind. High fidelity cinematic game illustration, clean readable face and anatomy, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8bebf546-28b8-4a87-a0ae-107dcd670641.png",
+      "destination": "characters/leanne/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 16:9 painted game battle background on an open level metal catwalk in the city of Basel, empty and flat traversable floor across lower third, dusky industrial archways, huge clockwork gears in the void, brass rails, blue-green shadows and desaturated amber spotlights. Clear dark combat area, depth from layered beams, cinematic detailed game art. No people, no text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e1ba6246-941a-4473-9a55-b337c57c6e34.png",
+      "destination": "characters/leanne/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Transparent 2x2 atlas, one subject in each EQUAL quadrant, wide clear alpha gaps and transparent margins on all edges. Do not touch edges. No ground shadow. Isolated on true transparency. Top-left pointed compact BLUE tracer heading RIGHT with white center and dark blue edge, bright comet tail trails left. Top-right dense BLUE scratch damage impact made of sharp luminous triangular shards and cool blue fragments, no symbols. Bottom-left short orange copper sparks streaking sideways from contact with a steel floor, small low angled spray. Bottom-right powerful GOLD-ORANGE impact with crisp amber outline, white center and a broad spall of angular fragments. No weapons, figures, letters or fog. Four independent transparent cells.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-72cea835-72cc-4b8f-8109-d248e5121710.png",
+      "destination": "characters/leanne/assets/limit-effects.webp"
+    }
+  ]
+}

@@ -630,6 +630,18 @@
     ],
     "miku-limit-performance": [
       "/assets/audio/se/miku-limit-performance.wav"
+    ],
+    "kiryu-limit-rush": [
+      "/assets/audio/se/kiryu-limit-rush.wav"
+    ],
+    "kiryu-limit-wall": [
+      "/assets/audio/se/kiryu-limit-wall.wav"
+    ],
+    "leanne-limit-burst": [
+      "/assets/audio/se/leanne-limit-burst.wav"
+    ],
+    "leanne-limit-confirm": [
+      "/assets/audio/se/leanne-limit-confirm.wav"
     ]
   },
   "impactDesign": {

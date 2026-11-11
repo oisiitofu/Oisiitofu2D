@@ -85,7 +85,8 @@ const LimitBreak=(()=>{
   const {attacker,target,face}=current;
   attacker.attack=null;attacker.buffer=null;
   PlayerStates.enter(attacker,attacker.grounded?'NormalLanding':'Fall',attacker.grounded?12:Infinity);
-  CombatSystem.limitFinisher(attacker,target,{...finalStrike,launchDirection:face});
+  const launchDirection=finalStrike.reverseLaunch?-face:face;
+  CombatSystem.limitFinisher(attacker,target,{...finalStrike,launchDirection});
  }
  function visualChanged(){if(drawnRevision===visualRevision)return false;drawnRevision=visualRevision;return true;}
  addEventListener('DOMContentLoaded',()=>{
