@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "locally verified",
+  "status": "published",
   "assets": [
     {
       "kind": "poses",
@@ -148,5 +148,17 @@
       "destination": "characters/sakura/assets/limit-effects.webp",
       "supersedes": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1ec1372c-a477-4a8c-8a43-a65959de1cd8.png"
     }
-  ]
+  ],
+  "verification": {
+    "siteVersion": 337,
+    "githubCommit": "0c8dd76",
+    "siteSourceCommit": "7e103b3d47f1d81f89ed554617ca47851ac74288",
+    "publicHashesMatched": 11,
+    "publicCoverage": 102,
+    "totalWorks": 162,
+    "publicGameplay": "passed",
+    "publicOnline": "unverified: online entry returned HTTP 503",
+    "localMatchingFrames": 408,
+    "localFinalLaunchSynced": true
+  }
 }
