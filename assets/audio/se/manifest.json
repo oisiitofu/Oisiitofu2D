@@ -666,6 +666,24 @@
     ],
     "toro-limit-mochi": [
       "/assets/audio/se/toro-limit-mochi.wav"
+    ],
+    "astro-limit-spring": [
+      "/assets/audio/se/astro-limit-spring.wav"
+    ],
+    "astro-limit-impact": [
+      "/assets/audio/se/astro-limit-impact.wav"
+    ],
+    "astro-limit-booster": [
+      "/assets/audio/se/astro-limit-booster.wav"
+    ],
+    "parappa-limit-beat": [
+      "/assets/audio/se/parappa-limit-beat.wav"
+    ],
+    "parappa-limit-hit": [
+      "/assets/audio/se/parappa-limit-hit.wav"
+    ],
+    "parappa-limit-skate": [
+      "/assets/audio/se/parappa-limit-skate.wav"
     ]
   },
   "impactDesign": {

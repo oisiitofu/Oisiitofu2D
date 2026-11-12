@@ -1,0 +1,52 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/parappa/assets/parappa-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/parappa/assets/parappa-basic.png"
+      ],
+      "prompt": "True alpha transparent 2x2 game sprite atlas, EXACTLY FOUR individually drawn full figures in equal square cells with large clear gutters, whole head, hands and both feet inside each cell. No background, labels or shadow. Exact existing flat paper cartoon PaRappa: very flat bold black outline, cream dog face, black floppy ears, tall orange-red beanie with green frog patch, sleeveless blue shirt, baggy navy pants, red white sneakers. Four distinctly drawn full-body poses: TL feet apart low kung-fu stance with hands guarding. TR fast short straight punch toward right from feet-apart braced stance. BL side kick to right with sneaker toe at waist height and back foot planted, broad expression. BR arms crossed in front to block, body coils low preparing to spring onto a skateboard. Keep original paper-flat shape and colors, no realistic lighting or gradients. Do not draw any skateboard or objects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4f6767a7-2dab-4821-85fd-eb7dae34f859.png",
+      "destination": "characters/parappa/assets/limit-poses.webp"
+    },
+    {
+      "kind": "skate",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4df878ad-44d6-4edb-a9ac-2a2a8c410f3f.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/parappa/assets/limit-skate.webp"
+    },
+    {
+      "kind": "dance",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d34b02b1-6ce0-47a7-b679-01d2a2dee2fe.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/parappa/assets/limit-dance.webp"
+    },
+    {
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c1d26f6d-91b7-4cba-9180-38c9669cf99b.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/parappa/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-fd603dd0-97b9-4114-94b4-83de5cc55c53.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/parappa/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c03d24a8-4a2a-4a9f-8c58-602227a65ccf.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/parappa/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cbe3c8bf-914e-49a2-acdb-5fccc8c84bcf.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/parappa/assets/limit-effects.webp"
+    }
+  ]
+}

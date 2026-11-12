@@ -1,0 +1,52 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/astro/assets/astro-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/astro/assets/astro-basic.png"
+      ],
+      "prompt": "True alpha transparent 2x2 game sprite atlas, EXACTLY FOUR individually drawn full figures in equal square cells with large clear gutters, whole head, hands and both feet inside each cell. No background, labels or shadow. Match Astro's exact white and cobalt body, blue scarf, blue boot cuffs, single antenna and black visor with two bright blue eyes. Four individual complete poses: TL plants feet on a steep incline, hips back and both arms tugging right, left foot pressed against floor; TR leaps diagonally up-right with one arm reaching to upper right and other arm tucked, both boots in view; BL swings underneath a point above, left arm up-right fully extended, legs tucked and scarf trails; BR aerial uncoiling and pointing right with one fist, one knee tucked, body leaning forward. The actual extend-o glove and rope are drawn separately in-game, keep ordinary blue hands. Clear three-quarter game side view.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e6e900df-c2f5-4da4-a31b-9f4aa16bf5eb.png",
+      "destination": "characters/astro/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3c027cbd-e85b-4b5b-bb9a-d7a0e45008cf.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/astro/assets/limit-motion.webp"
+    },
+    {
+      "kind": "booster",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7b4a7616-272e-427d-a3eb-f6c340bede5e.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/astro/assets/limit-booster.webp"
+    },
+    {
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0b046104-d6d0-4e90-8b0e-57cf5921e5c8.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/astro/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4bc5db5e-a503-4cf9-82af-4df050668d19.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/astro/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c546a256-2a81-47c9-88fb-c741ae6998ac.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/astro/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-421693b2-3b24-41cb-aab0-f60006f7608d.png",
+      "source": "ImageGen output matched by visual inspection",
+      "destination": "characters/astro/assets/limit-effects.webp"
+    }
+  ]
+}
