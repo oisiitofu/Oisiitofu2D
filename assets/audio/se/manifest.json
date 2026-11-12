@@ -684,6 +684,24 @@
     ],
     "parappa-limit-skate": [
       "/assets/audio/se/parappa-limit-skate.wav"
+    ],
+    "kitten-limit-kick": [
+      "/assets/audio/se/kitten-limit-kick.wav"
+    ],
+    "kitten-limit-shift": [
+      "/assets/audio/se/kitten-limit-shift.wav"
+    ],
+    "kitten-limit-jupiter": [
+      "/assets/audio/se/kitten-limit-jupiter.wav"
+    ],
+    "crash-limit-phase": [
+      "/assets/audio/se/crash-limit-phase.wav"
+    ],
+    "crash-limit-crate": [
+      "/assets/audio/se/crash-limit-crate.wav"
+    ],
+    "crash-limit-spin": [
+      "/assets/audio/se/crash-limit-spin.wav"
     ]
   },
   "impactDesign": {

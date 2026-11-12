@@ -1,0 +1,156 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/crash/assets/crash-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/crash/assets/crash-atlas.png"
+      ],
+      "prompt": "Four complete full-body separate fighting game sprites, transparent 2x2 atlas, equal quadrants with wide transparent padding. All hair, hands, feet and fabric inside each cell. No background, text or shadow. Exactly existing Crash Bandicoot cartoon game design: vivid orange fur, eyebrows, green eyes, broad muzzle, oversized red sneakers, blue cropped denim pants, fingerless brown gloves. TL plants both shoes low preparing to spring, arms down and eyes on box. TR bounces upward with knees tucked and arms outward, open grin. BL drops to right with one sole down as if stomping an invisible crate, other leg tucked. BR wide dynamic spin windup facing left, shoulder turns, both hands open and feet apart. No crate, mask, effect or background.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-35f7f9b8-6c38-4ff3-85d1-f706de734787.png",
+      "destination": "characters/crash/assets/limit-poses.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          625,
+          622
+        ],
+        [
+          625,
+          0,
+          1263,
+          622
+        ],
+        [
+          0,
+          622,
+          570,
+          1245
+        ],
+        [
+          570,
+          622,
+          1263,
+          1245
+        ]
+      ]
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/crash/assets/crash-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/crash/assets/crash-atlas.png"
+      ],
+      "prompt": "True alpha transparent 2x2 sprite atlas. Strict equal cells, generous transparent gutters and outer edges, one distinct whole item per cell within inner 72 percent. No overlap, labels, ground shadow or backdrop. Exact Crash from reference, orange fur and head spikes, green eyes, wide cream muzzle, brown gloves, blue jeans, red sneakers. TL airborne bounce reaching toward next crate, legs trailing; TR forceful mid-air twisting spin with arms spread and crossed legs; BL crouched running slip under an invisible hazard with one glove down and shoes braced; BR slides to stop with one shoe extended and hands above head, grin. No effects or props.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-93161cf5-8c8f-41dc-9c6a-a2a1853f5ab8.png",
+      "destination": "characters/crash/assets/limit-motion.webp"
+    },
+    {
+      "kind": "spin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/crash/assets/crash-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/crash/assets/crash-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/crash/limit-break/quantum-mask-designs.png"
+      ],
+      "prompt": "True alpha transparent 2x2 sprite atlas. Strict equal cells, generous transparent gutters and outer edges, one distinct whole item per cell within inner 72 percent. No overlap, labels, ground shadow or backdrop. Exact existing orange Crash with blue jeans, red sneakers, gloves and goofy wide grin. The strongest dark matter spin with vivid PURPLE accents painted ON his silhouette and clothing while keeping the orange fur and recognizable face. TL draws both arms to side and coils torso, one foot braced; TR throws shoulders wide at start of rapid horizontal spin; BL almost horizontal in a full flying spin toward right, turn seen in three-quarter view, all limbs visible; BR unwinds and celebrates with hands up, feet planted. No floating magic, no mask or props in frame, effects rendered separately.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8cd6f66e-4eb6-4522-b444-75a7bcceb937.png",
+      "destination": "characters/crash/assets/limit-spin.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          630,
+          623
+        ],
+        [
+          630,
+          0,
+          1261,
+          623
+        ],
+        [
+          0,
+          623,
+          681,
+          1247
+        ],
+        [
+          681,
+          623,
+          1261,
+          1247
+        ]
+      ]
+    },
+    {
+      "kind": "masks",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/crash/limit-break/quantum-mask-designs.png"
+      ],
+      "prompt": "True alpha transparent 2x2 sprite atlas. Strict equal cells, generous transparent gutters and outer edges, one distinct whole item per cell within inner 72 percent. No overlap, labels, ground shadow or backdrop. The exact three carved Crash Bandicoot 4 quantum masks from the provided concept reference, polished painted in-game item sprites, front or three-quarter views. TOP LEFT Lani-Loli at right of reference: cyan face, broad fanned blue crystal crest, glowing eyes with pink rims, grimacing white teeth and pink mouth rim. TOP RIGHT Kupuna-Wa at top of reference: gold circular moon-phase clock headdress, pale face with half-closed eyes, two hanging cyan hourglass earrings. BOTTOM LEFT Akano at left of reference: sharp deep purple carved angular helmet face, floating purple stones near brows, stern orange glowing eyes, dark plum jaw. BOTTOM RIGHT a small violet diamond-shaped dimensional rift shard, no character. No lettering or extra objects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3006e0aa-a8db-4765-9d60-28732bd351b6.png",
+      "destination": "characters/crash/assets/limit-masks.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "True alpha transparent 2x2 sprite atlas. Strict equal cells, generous transparent gutters and outer edges, one distinct whole item per cell within inner 72 percent. No overlap, labels, ground shadow or backdrop. Four chunky Crash-style wooden game props. TL an intact brown banded square wooden crate with X-shaped diagonal planks, no labels. TR 3 angular timber splinters in a compact group. BL distinct group of three pale shattered side boards with small nails. BR one glossy Wumpa fruit with yellow-to-red color and leaf. Video game painted cell style with thick silhouette.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ccf6d081-62af-433f-bcee-91a803568f07.png",
+      "destination": "characters/crash/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/crash/assets/crash-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/crash/assets/crash-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/crash/limit-break/quantum-mask-designs.png"
+      ],
+      "prompt": "Wide 2.2:1 energetic cinematic game cut-in of exact Crash Bandicoot in reference, orange fur, exaggerated green eyes, broad expressive grin, blue jeans and red sneakers. Face clear in left-middle, leaping among exploding wooden crates, dark purple angular Akano mask in far background surrounded by purple vortex with amber wood chips. Ancient machinery and twilight jungle. Painted game illustration, crisp clean lighting, no text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9412fc66-8102-44da-93c2-761c6ac63694.png",
+      "destination": "characters/crash/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 16:9 polished videogame battlefield backdrop, zany tropical abandoned bandicoot factory in rainforest, orange machinery and deep purple portal lights among vines, level flat stone and metal flooring across lower third, unobstructed middle with muted tones for readable movement, cinematic twilight blues. No characters or large foreground objects, no letters.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e914314d-c681-4edd-af3b-a1aefcb5b4ec.png",
+      "destination": "characters/crash/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "True alpha transparent 2x2 sprite atlas. Strict equal cells, generous transparent gutters and outer edges, one distinct whole item per cell within inner 72 percent. No overlap, labels, ground shadow or backdrop. TL compact wood-crate impact with white and golden dense center, rich orange wood shards and dark red edge. TR separate temporal amber and cyan ripple, glassy curved wave with sharp edges. BL compact deep magenta rotational slashing vortex, dark violet outline and bright pink curved leading face. BR huge rightward magenta and ultraviolet dark-matter spinning burst with dense white pink core and pointed purple curved tips and small golden timber shrapnel. No objects or letters. Lots of empty padding.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-00d07639-21f5-45c1-a3a1-2ed599dc0bc5.png",
+      "destination": "characters/crash/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          592,
+          597
+        ],
+        [
+          592,
+          0,
+          1316,
+          597
+        ],
+        [
+          0,
+          597,
+          494,
+          1195
+        ],
+        [
+          494,
+          597,
+          1316,
+          1195
+        ]
+      ]
+    }
+  ]
+}

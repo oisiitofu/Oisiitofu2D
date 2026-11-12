@@ -1,0 +1,93 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kitten/assets/kitten-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kitten/assets/kitten-atlas.png"
+      ],
+      "prompt": "Four complete full-body separate fighting game sprites, transparent 2x2 atlas, equal quadrants with wide transparent padding. All hair, hands, feet and fabric inside each cell. No background, text or shadow. Exactly existing Kat: long blonde hair, dark gravity suit with ornate gold lines, black and gold ankle boots, flowing black gold scarf, same slender anime proportions, red eyes. TL low ground-level gravity slide to right one heel forward, body angled back. TR springs upward to right with both feet off floor, one knee bent and hair falls toward lower left. BL uses a vertical wall as floor, one boot pressed to an invisible vertical wall on right, body horizontal pointing left, hair follows angle. BR twists from the wall with high rightward kick, arms balancing, both legs visible. No wall or magic.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8a09ee9b-2683-4521-a41b-b978b25e5dab.png",
+      "destination": "characters/kitten/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kitten/assets/kitten-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kitten/assets/kitten-atlas.png"
+      ],
+      "prompt": "True alpha transparent 2x2 sprite atlas. Strict equal cells, generous transparent gutters and outer edges, one distinct whole item per cell within inner 72 percent. No overlap, labels, ground shadow or backdrop. Exact Kat from reference, long honey blonde hair, red eyes, black ornate gold-trimmed gravity suit, black and gold knee boots, long dark ribbons. TL stretches one boot into a hard sideways air kick, hair swept diagonally up; TR hangs weightlessly on side, knees bent, both arms reaching down, ribbons wave up; BL arrests momentum and braces with legs together and elbows bent, looks down-right; BR straightens and tucks her knees close in midair ready for a vertical dive. Distinct fully visible poses.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ce7ac90d-8cd9-4564-901e-cd197fc2004a.png",
+      "destination": "characters/kitten/assets/limit-motion.webp"
+    },
+    {
+      "kind": "jupiter",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kitten/assets/kitten-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kitten/assets/kitten-atlas.png"
+      ],
+      "prompt": "True alpha transparent 2x2 sprite atlas. Strict equal cells, generous transparent gutters and outer edges, one distinct whole item per cell within inner 72 percent. No overlap, labels, ground shadow or backdrop. Exact Kat from the reference, same ornate gold-lined black gravity suit, long golden hair and ribbons, red eyes, no additional costume pieces. TL suspended above ground with fists down and head lowered, gathering force; TR tucks shoulders and points both boots down; BL heavy feet-first dive downward, both legs together, red-orange rim light ONLY with no glows outside figure, hair trails upward and face visible; BR lands in a deep three-point crouch with one fist down and hair trailing to the right, full silhouette. No background or separate VFX.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-317f1172-dfc6-4d31-bf0e-19ede262d3a0.png",
+      "destination": "characters/kitten/assets/limit-jupiter.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "True alpha transparent 2x2 sprite atlas. Strict equal cells, generous transparent gutters and outer edges, one distinct whole item per cell within inner 72 percent. No overlap, labels, ground shadow or backdrop. Four floating Gravity Rush-style city props, one isolated item per quadrant. Top left a tall vertical dark greenish bronze and stone art nouveau building wall panel, flat side-on face, strong vertical silhouette with ledges and windows, no people. Top right a single piece of worn tan brick rubble. Bottom left a different chunky slate stone with brass pipe fragment. Bottom right an antique bronze lantern with jade glass. Soft painterly material details, true alpha.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-554e1bb1-dd3d-4425-9657-319ed10f12dc.png",
+      "destination": "characters/kitten/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kitten/assets/kitten-presentation-portrait.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/kitten/assets/kitten-atlas.png"
+      ],
+      "prompt": "Wide 2.2:1 painted anime game cut-in of exact Kat from Gravity Rush, glowing red eyes, recognizable long golden hair and black gold filigree suit. Close face in left-middle, both eyes cheeks chin visible, legs sweep into the right on a gravity fall as the steampunk floating city tilts, mint and deep coral gravity accents and pieces of masonry suspended. Dynamic full composition with rich cinematic light. No lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-be9527d2-c702-44b1-a301-55f15dd031c6.png",
+      "destination": "characters/kitten/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 16:9 video game battlefield backdrop, floating art nouveau European steampunk city above a rose and indigo cloud sea. Broad old stone rooftop at lower third with level traversable walking plane, dim greenish bronze, vintage railings, apartment towers on sides and a central vertical building facade. Dramatic atmospheric dusk with light around edges and a quiet middle for characters. No figures or words.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5b356771-c8d2-4e2e-bc43-ff0624e20ec4.png",
+      "destination": "characters/kitten/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "True alpha transparent 2x2 sprite atlas. Strict equal cells, generous transparent gutters and outer edges, one distinct whole item per cell within inner 72 percent. No overlap, labels, ground shadow or backdrop. TL vivid mint-teal spiral gravity warp ring with bright inner core and deep emerald outline. TR dense orange and red horizontal impact star, angled pointed rays and ivory center. BL compact burgundy orange heavy gravity spark with small angular stones. BR enormous distinct orange-red downward impact eruption, core of white gold light, dark scarlet angular rocks and a wide ground shock wave, clear crisp silhouette. Exactly four isolated objects, transparent gutters.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ff051e1b-845c-49d3-adb1-ec9dded439e0.png",
+      "destination": "characters/kitten/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          580,
+          545
+        ],
+        [
+          580,
+          0,
+          1293,
+          545
+        ],
+        [
+          0,
+          545,
+          552,
+          1217
+        ],
+        [
+          552,
+          545,
+          1293,
+          1217
+        ]
+      ]
+    }
+  ]
+}
