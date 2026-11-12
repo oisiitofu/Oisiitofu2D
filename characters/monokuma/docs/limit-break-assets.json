@@ -1,0 +1,90 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/monokuma/assets/monokuma-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/monokuma/assets/monokuma-atlas.png"
+      ],
+      "prompt": "Create four independent high-quality full-body Monokuma game animation sprites in a strict transparent 2×2 atlas with broad clear margins, each figure entirely in its cell. Match Danganronpa model exactly: compact rounded bear, half white on viewer's left with simple black dot eye, half pitch black on viewer's right with red lightning eye, same belly swirl and mischievous mouth. Face three-quarter right while showing the black and white markings. Top left crouches low and prepares to hop with a small wooden judge's gavel at hip. Top right leaps with feet tucked and gavel held up. Bottom left lands on both feet and strikes downward with gavel held in both paws. Bottom right leans over a ledge and reaches down with empty paws, body low and feet still visible. No ledge or furniture, no background, no effects, no text. Crisp soft cell shading and clear shape.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-002dfca0-63b1-4a41-80e2-e16bce23b365.png",
+      "destination": "characters/monokuma/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/monokuma/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Exactly four individually isolated complete sprites in a strict 2×2 transparent atlas. One centered in each quadrant, at least 9% empty margins on every side, no visible grid or lines, no overlap, no shadow floor or background, no labels. Same compact Monokuma design in reference, white half on viewer-left with black dot eye, black half on viewer-right with red lightning eye, rounded snout and swirl belly. Four different positions, facing 3/4 right but show both halves. Top left hangs with both paws high as if holding a ledge, body dangling, feet together, no ledge drawn. Top right drops feet first with legs bent and paws high, eyes open. Bottom left plants feet wide and reaches with both paws to pull an imaginary horizontal lever, body weight forward. Bottom right leans back into the pull, elbows bent and feet sliding, mischievous grin, no handle drawn. Premium stylized game sprite, stable design.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4695205c-840d-4c9f-9732-e4eead2f64e4.png",
+      "destination": "characters/monokuma/assets/limit-motion.webp"
+    },
+    {
+      "kind": "bat",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/monokuma/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Exactly four individually isolated complete sprites in a strict 2×2 transparent atlas. One centered in each quadrant, at least 9% empty margins on every side, no visible grid or lines, no overlap, no shadow floor or background, no labels. Identical Danganronpa Monokuma reference proportions and left/right white/black markings, round ears, red lightning eye and belly swirl. Whole body. Top left hurries right with a small wooden baseball bat trailing at hip, leans forward. Top right plants both feet with both paws on a baseball bat high and behind in winding pose. Bottom left steps into a powerful rightward baseball swing, bat and feet entirely visible, contact follow through. Bottom right stands with a triumphant grin, baseball bat raised above shoulder, both feet firm. No effects, ball or labels.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-405b6d18-e433-4da6-a843-5b5f02d4c2c0.png",
+      "destination": "characters/monokuma/assets/limit-bat.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Exactly four individually isolated complete sprites in a strict 2×2 transparent atlas. One centered in each quadrant, at least 9% empty margins on every side, no visible grid or lines, no overlap, no shadow floor or background, no labels. Danganronpa theatrical stylized game props. Top left one isolated red wood and gold judge's podium with open side stair or ledge on right and a flat walkable top, front-side view. Top right small dark bronze and magenta switch box with big horizontal pink lever on post, ready for a round bear to pull. Bottom left retro cartoon baseball pitching machine with two disk rollers, basket and blue-gray-magenta armor on a thick stand, directs ball diagonally up to right, playful design. Bottom right white baseball with thick bright pink stitches and crisp contour, single sphere. No lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5a9d8cce-e32e-4906-a859-00882ba6a602.png",
+      "destination": "characters/monokuma/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/monokuma/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Wide 2.2:1 premium Danganronpa game cinematic key art. Exact Monokuma white left black right viewer-facing split, bright red lightning eye, black bead eye, bright grin, both round ears. Face large inside center 65%; one paw swings a gold and red judge's gavel close in foreground. Behind, ornate dramatic Hope's Peak class trial chamber, deep maroon and gold, diagonal magenta-white graphic shards and shadows. Very crisp stylish videogame illustration, no blood or injuries, no words, no logos, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-82717b1e-094a-4556-816f-8a7ff4e22076.png",
+      "destination": "characters/monokuma/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 2.2:1 side-on game cinematic background in Danganronpa class trial style. Ornate trial chamber at Hope's Peak, black iron and wooden juror galleries, wine-red theatrical curtains, warm circular spotlights from above. Large clear circular glossy black-wood court flooring in bottom quarter with soft rose inlay bands. Uncluttered lower center, angular light high, deep purple and rose, black-and-white diagonal wall accents. No figures, machines, readable text or signs.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bc757454-3ec9-4262-aeae-23d6e817fe9d.png",
+      "destination": "characters/monokuma/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Four completely separated pure impact effects in a transparent equal 2x2 atlas, wide clear margins in each quadrant; premium Danganronpa anime action comic style. DO NOT draw any equipment, objects, gavel, baseball, bat, weapon, hands, furniture, letters or background. Upper left strong downward magenta and warm gold splash like lightning meeting ground, solid white and yellow core, outward spikes. Upper right spinning hard-edged pink circular shock ring, angular white accents and clear transparent openings around a compact solid center. Lower left bright magenta-white angular cartoon hit burst with black speedline accents, opaque solid white core and radial pink shock edge, no round object. Lower right huge wide opaque white and hot pink main impact with sharp black radial lines and paper triangle particles, dramatic rich color and transparent soft outer fringe. No overlap, no marks near quadrant dividers.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-32304921-fa0f-4828-8b2a-aa512c4161ac.png",
+      "destination": "characters/monokuma/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          631,
+          623
+        ],
+        [
+          631,
+          0,
+          1262,
+          623
+        ],
+        [
+          0,
+          623,
+          566,
+          1246
+        ],
+        [
+          566,
+          623,
+          1262,
+          1246
+        ]
+      ]
+    }
+  ]
+}

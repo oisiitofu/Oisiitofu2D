@@ -1,0 +1,131 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/aloy/assets/aloy-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/aloy/assets/aloy-basic.png"
+      ],
+      "prompt": "Create four independent full-body animation sprites in a strict transparent 2×2 atlas with clear gutters and margins, one whole figure per cell. Exactly the reference Aloy of Horizon, green eyes, freckles, long copper braids, blue neck wrap, layered tan leather Nora costume, fur shoulder mantle, wraps and boots, stylized detailed 3D game sprite. All face right. Top left kneels on one knee and draws a curved tribal bow straight to right, elbows and bow fully visible. Top right rises with left forearm aimed diagonally upward, wrist-mounted Pullcaster drawn, right hand holding bow low, no external cable. Bottom left drawn upward by an imaginary rope, one arm extended high and knees tucked, braid swings down, full body. Bottom right airborne descending, holding imaginary glider handle overhead, asymmetric legs and eyes toward lower right, no glider included. No cables, particles, text, backgrounds, or cast shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e924d8a1-354b-40a7-b3fe-22fbe997e5a7.png",
+      "destination": "characters/aloy/assets/limit-poses.webp",
+      "cropBoxes": [
+        [
+          10,
+          0,
+          610,
+          604
+        ],
+        [
+          650,
+          0,
+          1252,
+          604
+        ],
+        [
+          10,
+          634,
+          610,
+          1247
+        ],
+        [
+          650,
+          634,
+          1252,
+          1247
+        ]
+      ]
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/aloy/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Exactly four individually isolated complete sprites in a strict 2×2 transparent atlas. One centered in each quadrant, at least 9% empty margins on every side, no visible grid or lines, no overlap, no shadow floor or background, no labels. Same Aloy with copper braids, freckles and exact Nora leather armor and blue neck wrap. Each facing right. Top left airborne twisting upper body and aiming right horizontally with a curved tribal bow, knees staggered. Top right diving diagonal strike from above, holding a blue machine-tipped spear toward lower right, braid streaming behind. Bottom left lands in a deep crouch with both feet braced and hand near the floor, spear held close. Bottom right extends a long machine-tipped spear horizontally to right for a machine override, head up, hips lowered, full spear and feet visible. Stylish realistic action game rendering and crisp silhouette.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-6238b82d-0f69-40dc-a2f0-1ed8309282cb.png",
+      "destination": "characters/aloy/assets/limit-motion.webp"
+    },
+    {
+      "kind": "surge",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/aloy/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Exactly four individually isolated complete sprites in a strict 2×2 transparent atlas. One centered in each quadrant, at least 9% empty margins on every side, no visible grid or lines, no overlap, no shadow floor or background, no labels. Same Aloy design, copper braids and exact blue neck wrap and Nora armor, 3D videogame render. Top left all facing right, grips a long spear firmly in both hands pressed forward into an imaginary machine flank, driving from rear foot. Top right evasive hop, torso lean backward, both knees up and braid swung up, eyes toward right. Bottom left planted archer with bow aimed diagonally downward to right and front foot on low rock implied, no rock. Bottom right finish pose centered, feet planted, bow drawn horizontally to right at shoulder with stoic expression, large clear full bow and believable hands. No particles.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ec9dd576-5ff6-464c-ac8c-65f007ccbddb.png",
+      "destination": "characters/aloy/assets/limit-surge.webp"
+    },
+    {
+      "kind": "machine",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/aloy/limit-break/tremortusk-official.png"
+      ],
+      "prompt": "Exactly four individually isolated complete sprites in a strict 2×2 transparent atlas. One centered in each quadrant, at least 9% empty margins on every side, no visible grid or lines, no overlap, no shadow floor or background, no labels. Guerrilla Horizon Forbidden West Tremortusk exact canonical mechanized mammoth from reference with four articulated forward-sweeping tusks, long green armored segmented trunk, heavy graphite/silver exposed machine body, scuffed teal and green armor with red painted marks, four piston legs and armored turret deck. Full four legs, tail, trunk and all four tusks entirely visible, profile three-quarter facing left in every image. Top left standing with head slightly raised and orange optics; top right standing tilted head down, optics switch cyan blue; bottom left full heavy running stride with tusks aimed left and cyan optics; bottom right dramatic finishing tusk upswing and rearing one step, cyan optics. Same design and size in each sprite; no organic flesh, no riders, no smoke, no environment, no text. High quality detailed game concept render.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cf87f16c-4e9f-48e4-96b0-06594725d7b6.png",
+      "source": "https://blog.playstation.com/tachyon/2021/11/0c19baf8ccbfa7293a9da230f44aab752ecfd444.png",
+      "destination": "characters/aloy/assets/limit-machine.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/aloy/limit-break/tremortusk-official.png"
+      ],
+      "prompt": "Exactly four individually isolated complete sprites in a strict 2×2 transparent atlas. One centered in each quadrant, at least 9% empty margins on every side, no visible grid or lines, no overlap, no shadow floor or background, no labels. Horizon Forgotten West action prop art, rich material texture. Top left single worn slate concrete and teal metal grapple anchor end projecting diagonally inward from an isolated fragment of ancient structural beam with bolt eye in lower center. Top right single wide blue hexagonal-hologram Shieldwing glider, canopy with three clearly articulated rounded blue energy lobes, two small handles underneath and open alpha around, seen in profile with handle in lower center. Bottom left one slender glowing blue tribal arrow pointing right with separate cyan tail flare. Bottom right one prominent horizontally facing ivory-teal armor access port with cyan light and concentric segmented rings, isolated and no ground.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ed784659-20ab-4b49-93a6-81fde51045e3.png",
+      "source": "https://blog.playstation.com/tachyon/2021/11/0c19baf8ccbfa7293a9da230f44aab752ecfd444.png",
+      "destination": "characters/aloy/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/aloy/limit-break/first-motion-source.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/aloy/limit-break/tremortusk-official.png"
+      ],
+      "prompt": "Premium widescreen 2.2:1 Horizon Forbidden West cinematic key art with Aloy exactly matching reference red braided hair and blue Nora scarf, green eyes, freckles, fur shoulder armor, focused look. Close face and shoulders on left-center, one arm extending bow across scene. Huge four-tusked green and steel mechanical Tremortusk with cyan override optics in the distant right with cold cliff silhouettes, low bronze sunlight and soft cyan beams. Art direction faithful to exact existing face. Keep eyes, cheeks and chin within middle 65 percent. No words, no logo, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7d9b332c-0c8c-4eef-8308-a0757f83343e.png",
+      "source": "https://blog.playstation.com/tachyon/2021/11/0c19baf8ccbfa7293a9da230f44aab752ecfd444.png",
+      "destination": "characters/aloy/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Premium 2.2:1 side-on fighting-game cinematic environment in Horizon Forbidden West style. Reclaimed ruins with a dark broken ancient freeway beam high left-center among rocky cliffs, sparse conifers, far waterfall and dawn light, low flat overgrown concrete battlefield across bottom quarter with a clean footing line and moderate subdued contrast behind actors. Misty layered cliffs and moss green rocks, cold teal distant sky and warm light. No characters, machines, text, HUD or foreground objects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-12f15c38-313e-4a17-8bae-da2aec75b379.png",
+      "destination": "characters/aloy/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Exactly four individually isolated complete sprites in a strict 2×2 transparent atlas. One centered in each quadrant, at least 9% empty margins on every side, no visible grid or lines, no overlap, no shadow floor or background, no labels. Readable game combat effects, opaque cores and well defined bright silhouette. Top left compact bright blue-white bow-arrow hit sparkle with tiny copper fragments and sharp cyan outer spikes. Top right blue braided short Pullcaster shock impact with narrow central electric snap, bright gold tip, entirely isolated. Bottom left triangular cyan override energy pulse with angular bright microsegments and machine sparks, solid white core. Bottom right huge golden and turquoise attack wave from a mechanical tusk sweeping up to the LEFT, ivory opaque edge and chips and dust low, readable strong silhouette. Transparent edges, no backdrop.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c01b2d89-41f3-42b7-ba58-767af1bfdce4.png",
+      "destination": "characters/aloy/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          630,
+          623
+        ],
+        [
+          630,
+          0,
+          1261,
+          623
+        ],
+        [
+          0,
+          623,
+          539,
+          1247
+        ],
+        [
+          539,
+          623,
+          1261,
+          1247
+        ]
+      ]
+    }
+  ]
+}

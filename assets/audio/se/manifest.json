@@ -744,6 +744,30 @@
     ],
     "sam-limit-grenade": [
       "/assets/audio/se/sam-limit-grenade.wav"
+    ],
+    "aloy-limit-arrow": [
+      "/assets/audio/se/aloy-limit-arrow.wav"
+    ],
+    "aloy-limit-caster": [
+      "/assets/audio/se/aloy-limit-caster.wav"
+    ],
+    "aloy-limit-override": [
+      "/assets/audio/se/aloy-limit-override.wav"
+    ],
+    "aloy-limit-tremortusk": [
+      "/assets/audio/se/aloy-limit-tremortusk.wav"
+    ],
+    "monokuma-limit-gavel": [
+      "/assets/audio/se/monokuma-limit-gavel.wav"
+    ],
+    "monokuma-limit-turntable": [
+      "/assets/audio/se/monokuma-limit-turntable.wav"
+    ],
+    "monokuma-limit-lever": [
+      "/assets/audio/se/monokuma-limit-lever.wav"
+    ],
+    "monokuma-limit-ball": [
+      "/assets/audio/se/monokuma-limit-ball.wav"
     ]
   },
   "impactDesign": {
