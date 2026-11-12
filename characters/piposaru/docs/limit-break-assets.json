@@ -1,0 +1,63 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/piposaru/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Edit this transparent 2×2 sprite sheet, keeping its four equally sized cells and the exact Pipo Monkey drawing style and model. Preserve the top two sprites, the seated pose holding a green floor radar and the second raising his red-silver rotor helmet. In the two bottom sprites, change only the handheld mechanism: remove both red boxing gloves and all extended silver chains. Keep the pose, tail, legs, spinning rotor, expression and hands; give his hands a short cobalt grip with a small circular crimson port flush against the grip in place of the gloves. Leave clear transparent space beyond the grip. Keep all body parts and items within their own quadrant, no backdrop, no floor shadow, no text, high quality original crisp line and soft cel shading.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f458f8a2-e3a0-4baa-8cc2-6eebc81ceb9d.png",
+      "destination": "characters/piposaru/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/piposaru/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Exactly four completely separate sprites in a 2 by 2 transparent atlas, one centered per quadrant; leave at least 12% clear margin to edges and dividers, no overlap, backdrop, labels, or separate shadows. Match the reference exactly, cartoon Pipo Monkey with tan face, red top lamp, silver helmet, yellow shirt, bare tan feet, brown curled tail. All four face to the right. Top left vertically hovering upright in blue rotor helmet, both hands grasp a small blue stick with a closed empty circular red connector, no boxing glove attached. Top right descends diagonally fast, legs back and torso forward, rotor still spinning, same bare blue handle but no glove. Bottom left landing low, feet braced, knees bent, dark blue net pole carried horizontal, thin neon mesh on net held low at right, rotor folded away and normal red dome. Bottom right plants both feet and sweeps net up diagonally overhead, outline blue and teal open woven net, entire feet, head and net within cell. High-end crisp game cel shading, same large expressive eyes and proportions.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e1446761-6645-46aa-adff-676b24b04885.png",
+      "destination": "characters/piposaru/assets/limit-motion.webp"
+    },
+    {
+      "kind": "net",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/piposaru/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Exactly four completely separate sprites in a 2 by 2 transparent atlas, one centered per quadrant; leave at least 12% clear margin to edges and dividers, no overlap, backdrop, labels, or separate shadows. Match exactly same Pipo Monkey cartoon brown/tan body, yellow shirt and silver helmet with red lamp. All facing right. Top left powerfully jumps with bare feet pushing off, looks up and holds an open blue woven capture net facing upward with both hands. Top right swings blue open net diagonally down in midair with one leg kicked outward, strong energetic pose. Bottom left holds his feet planted and braces pulling the long net handle backward at hip height, low center of gravity, blue rim and open woven net ahead. Bottom right relieved mischievous celebration, upright smile with one hand raised and one hand holding folded blue net down. Full readable figures, bright cel shading, no auxiliary effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9ff1b88e-1518-42a1-9b63-d11df2accf9b.png",
+      "destination": "characters/piposaru/assets/limit-net.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Exactly four completely separate sprites in a 2 by 2 transparent atlas, one centered per quadrant; leave at least 12% clear margin to edges and dividers, no overlap, backdrop, labels, or separate shadows. Ape Escape gadget props, bright early PlayStation sci-fi with premium painted materials. Top left a small round green radar detector with emerald screen and short aerial on a bronze pedestal. Top right a single large red cartoon boxing glove pointing horizontally RIGHT with left-side blue metal connection, no wire and no handle. Bottom left an arched open time transfer machine on bronze foot pads, aqua blue hollow center, pulsing cyan rings and chrome gold frame. Bottom right a separate bright cyan capture net basket in wide open side-view, open round rim on right and tapered woven blue grid on left, no handle, completely see-through grid. All props complete.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-21181135-fc20-4860-8bb6-2d2d50f08978.png",
+      "destination": "characters/piposaru/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/piposaru/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Wide 2.2:1 dramatic Ape Escape special move art. Exact Pipo Monkey from reference: brown body and curled tail, tan muzzle, expressive wide black-white eyes, red lamp on silver helmet, yellow top. Giant energetic face at left-center, his blue capture net sweeps up to the right and loops behind red helmet, lens scale creates excitement. Behind, a bright chrome Time Station, gold rings, cyan pulses and warm sunlight. Premium stylized painted game rendering with very crisp silhouette, dramatic directional light and familiar design. Face within middle two-thirds, no text or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7c8c83f0-50c8-48dd-ae25-3fa98945bb26.png",
+      "destination": "characters/piposaru/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 2.2:1 side-on game cinematic Ape Escape Time Station interior. Futuristic late-90s colorful time travel control room, vivid cerulean and ivory, aqua chronometer, orange-gold conduit and concentric rings in the back. Entire bottom quarter a single level metallic play platform with floor contact line and warm small floor guides. Keep center low background low contrast and uncluttered to silhouette a small brown/yellow character, no foreground props, no figures, no text, no HUD.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-068f9e9a-f37d-4ec0-a7b7-7da2a06d7308.png",
+      "destination": "characters/piposaru/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Exactly four completely separate sprites in a 2 by 2 transparent atlas, one centered per quadrant; leave at least 12% clear margin to edges and dividers, no overlap, backdrop, labels, or separate shadows. Colorful highly readable toy science-fiction arcade fight impacts. Top left shallow horizontal lime green radar pulse with solid gold edge and few green pixel fragments. Top right strong warm red and peach star-like punch impact, cream opaque center and hard orange contour, no glove object. Bottom left curved thick electric blue net-swipe with convex silhouette facing right and bright opaque white-cyan core, no physical net object. Bottom right huge aqua-gold capture transfer discharge with open gaps, pixel confetti and extremely bright opaque central blast, thicker rim and transparently fading outer edge. Keep all four strictly separated.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5b7e54f2-e673-46de-8b9c-85554d18a9ef.png",
+      "destination": "characters/piposaru/assets/limit-effects.webp"
+    }
+  ]
+}

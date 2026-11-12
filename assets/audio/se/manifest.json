@@ -720,6 +720,30 @@
     ],
     "sackboy-limit-star": [
       "/assets/audio/se/sackboy-limit-star.wav"
+    ],
+    "piposaru-limit-radar": [
+      "/assets/audio/se/piposaru-limit-radar.wav"
+    ],
+    "piposaru-limit-rotor": [
+      "/assets/audio/se/piposaru-limit-rotor.wav"
+    ],
+    "piposaru-limit-glove": [
+      "/assets/audio/se/piposaru-limit-glove.wav"
+    ],
+    "piposaru-limit-net": [
+      "/assets/audio/se/piposaru-limit-net.wav"
+    ],
+    "sam-limit-odradek": [
+      "/assets/audio/se/sam-limit-odradek.wav"
+    ],
+    "sam-limit-tar": [
+      "/assets/audio/se/sam-limit-tar.wav"
+    ],
+    "sam-limit-carrier": [
+      "/assets/audio/se/sam-limit-carrier.wav"
+    ],
+    "sam-limit-grenade": [
+      "/assets/audio/se/sam-limit-grenade.wav"
     ]
   },
   "impactDesign": {

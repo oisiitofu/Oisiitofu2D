@@ -1,0 +1,97 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sam/assets/sam-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sam/assets/sam-basic.png"
+      ],
+      "prompt": "Create a strict transparent 2x2 atlas of four full-body action game animation sprites. Every figure with all limbs, head and tall cargo within its quadrant, generous margins, isolated, no backdrop, no shadow. Match the exact referenced Sam Porter Bridges design with short scruffy beard, swept brown hair, navy blue BRIDGES suit, yellow cargo straps and cargo cases, round amber BB pod on chest, black boots and tiny blue Odradek on left shoulder. Top left bends at waist while one hand steadies heavy cargo and one foot slips forward. Top right turns sharply to watch Odradek while dropping into low step and bracing cargo straps. Bottom left crouches deeply with both boots side-by-side as if balancing on hover cargo platform, arms extended, feet aligned, no platform in sprite. Bottom right leans hard into a downhill hoverboard carve, one hand gripping shoulder strap and other spread out, cargo following torso angle and all anatomy readable, no board. Stylized cinematic game sprite rendering like character reference.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a4680da0-b50c-4c0b-acec-14b54cc97eb4.png",
+      "destination": "characters/sam/assets/limit-poses.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          631,
+          641
+        ],
+        [
+          631,
+          0,
+          1263,
+          641
+        ],
+        [
+          0,
+          641,
+          631,
+          1246
+        ],
+        [
+          631,
+          641,
+          1263,
+          1246
+        ]
+      ]
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sam/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Exactly four completely separate sprites in a 2 by 2 transparent atlas, one centered per quadrant; leave at least 12% clear margin to edges and dividers, no overlap, backdrop, labels, or separate shadows. Match Sam Porter Bridges in reference precisely: short scruffy beard, tousled brown hair, slate navy armored suit, black boots, yellow cargo straps, stacked square metallic cargo and amber BB pod on chest. Tiny blue Odradek on shoulder. All face to the RIGHT in source. Top left leaps out of a downhill slide, rear leg pushing, weight shifts backward, one hand gripping cargo straps, no board. Top right long airborne leap, knees bent, hands balance cargo, profile looking over shoulder. Bottom left absorbs a hard landing with both feet planted, one knee lower and torso bent with hands supporting cargo. Bottom right turns his torso, upright with left hand opening his pouch and right hand preparing to pull out a small capsule. Full-body high-end gritty stylized game character, clear blue-gray and gold silhouette.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a468dc73-4b50-471b-97e2-57701312daa7.png",
+      "destination": "characters/sam/assets/limit-motion.webp"
+    },
+    {
+      "kind": "throw",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sam/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Exactly four completely separate sprites in a 2 by 2 transparent atlas, one centered per quadrant; leave at least 12% clear margin to edges and dividers, no overlap, backdrop, labels, or separate shadows. Same exact Sam Porter Bridges reference face, navy BRIDGES suit, black boots, cargo and gold straps and amber chest BB, blue Odradek. All facing RIGHT. Top left stable two-foot windup with small dark navy cylindrical capsule in rear throwing hand behind shoulder, other hand supporting chest, tense. Top right full overarm pitching follow-through, extended empty right hand pointing diagonally upward, rear boot raised and body rotates. Bottom left two-foot wide stance defending against a crashing wave, bent knees and one forearm up near face, visible eyes and still wearing cargo. Bottom right holds ground standing with hands lowered, looks into distance in profile, straps and pod legible. Dark sci-fi adventure art with bright edge lighting, no particles or objects floating off body.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bc3266a3-60ad-4f68-9f54-856f6a9aa1e6.png",
+      "destination": "characters/sam/assets/limit-throw.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Exactly four completely separate sprites in a 2 by 2 transparent atlas, one centered per quadrant; leave at least 12% clear margin to edges and dividers, no overlap, backdrop, labels, or separate shadows. Death Stranding cinematic assets with detailed painted video game realism. Top left floating carrier rideable flat rectangular gray metallic cargo sled, shallow front-side perspective, large open flat deck on top, dark ridged rim and orange warning stripes, no rider. Top right creeping tar pool with a few abstract hand-shaped tar tendrils, shallow horizontal silhouette, cyan rim reflections. Bottom left enormous Death Stranding Catcher quadruped like lion made of wet black chiral tar, golden gold-metal mask like flared ribs, trailing dark strands, powerful elongated limbs, facing left with one front leg braced as if surging out of water; whole creature visible, no blood or injuries. Bottom right small short navy fictional grenade capsule with white collar, single separated object. No other backgrounds.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-73e45737-96b9-4206-bfc0-fa4fe6b39c89.png",
+      "destination": "characters/sam/assets/limit-props.webp"
+    },
+    {
+      "kind": "terrain",
+      "refs": [],
+      "prompt": "Exactly four completely separate sprites in a 2 by 2 transparent atlas, one centered per quadrant; leave at least 12% clear margin to edges and dividers, no overlap, backdrop, labels, or separate shadows. Death Stranding game environmental prop sprite set. Top left low horizontal fractured gray rock shelf with flat broad walkable surface, hints of moss, front side-view face, teal rim light. Top right thin sloping black slick riverbank strip descending to the right at moderate slope, detailed wet dark rocks and flecks of moss, long clear top walking edge. Bottom left separate flat streak of gray spray and mist behind a hovering cargo sled, subtly lit teal. Bottom right long curved edge of silver rain mist over dark tar, clear silhouette, no thick obscuring clouds. Match realistic cinematic landscape props.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b05232a8-f559-4251-8d69-70eff6ffeeca.png",
+      "destination": "characters/sam/assets/limit-terrain.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sam/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Wide 2.2:1 premium Death Stranding cinematic key art. Exact man from reference, Sam Porter Bridges, short beard, brown tousled hair, slate blue suit and gold straps, amber BB chest pod, stacked cargo, small blue Odradek alert over shoulder. A tense close-up from front-side at eye level as he turns toward a huge shadow in rain, chest and face visible with teal edge light, distant gray Icelandic landscape and black tar glittering in pale sky, warmly lit pod contrasts, restrained cinematic film grade. Face fully within central 65%, no lettering or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5ee51b5d-4910-4f9a-817d-476ec6363444.png",
+      "destination": "characters/sam/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide panoramic 2.2:1 side-on Death Stranding cinematic battlefield. High-budget gritty Icelandic landscape with slate basalt and charcoal tar shallows, blue-gray rain and distant mist mountains, bright low cold light through clouds. One clear continuous low rock and tar plain across the bottom quarter for the characters, less detail behind fighters, layered riverbank rock profiles in distance. No figures, no enemies, no vehicles, no text, no HUD. Ground visibly distinct from storm sky.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7cd2a6f3-16c1-4a97-8d56-f10d7b6b5822.png",
+      "destination": "characters/sam/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Exactly four completely separate sprites in a 2 by 2 transparent atlas, one centered per quadrant; leave at least 12% clear margin to edges and dividers, no overlap, backdrop, labels, or separate shadows. Readable combat VFX for dark Death Stranding environment with opaque high-contrast centers. Top left small bright blue scanning fan with several clean Odradek rays and a white central flash. Top right forceful silver-black tar spout impact with thick pale rim and glowing amber chiral flecks, ground-facing. Bottom left saturated red and amber hemispherical fictional game capsule impact smoke with bright opaque center, no gore. Bottom right huge wide asymmetrical black and silver sweeping tar wave impact with strong ice-blue contour and large amber flakes, hard readable luminous foam core, side view, translucent only on fringes. Strict borders between four motifs.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c215c6a7-ffc3-48bb-b82f-32fd82090af5.png",
+      "destination": "characters/sam/assets/limit-effects.webp"
+    }
+  ]
+}
