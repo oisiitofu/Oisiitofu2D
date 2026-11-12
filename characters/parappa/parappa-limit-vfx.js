@@ -47,7 +47,7 @@ const ParappaLimitVFX=(()=>{
   const boardAlpha=ease((t-97)/16)*(1-ease((t-212)/18));
   const boardLift=pulse(t,137,15,12);
   const dismount=ease((t-188)/22);
-  const boardX=mix(x,1471,dismount),boardY=mix(y-9,718,dismount);
+  const boardX=mix(x,1471,dismount),boardY=mix(y-38,718,dismount);
   ctx.save();ctx.translate(boardX,boardY);ctx.rotate(-.19*boardLift+.19*dismount);
   art.grid('props',0,2,2,0,0,269,{alpha:boardAlpha,anchorY:.5});
   ctx.restore();

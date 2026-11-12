@@ -28,6 +28,7 @@ const AstroLimitVFX=(()=>{
   [367,1751,739,2180,301,1839,411,.74,0,12]
  ];
  const poseAtlases=['poses','motion','booster'];
+ const tetherWrists=[[105,-146],[105,-216],[160,-199],[142,-162]];
  const pulse=(t,hit,lead,tail)=>ease((t-hit+lead)/lead)*(1-ease((t-hit-2)/tail));
 
  function spring(fromX,fromY,toX,toY,alpha,color){
@@ -62,7 +63,7 @@ const AstroLimitVFX=(()=>{
   ctx.fillStyle='#09152d';ctx.fillRect(0,0,W,H);
   art.image('court',-85-cx*.023,-60-cy*.04,W+224,H+126);
   world(cx,cy,zoom,roll,face,t,Math.max(hit*.51,finish));
-  const tether=ease((t-47)/12)*(1-ease((t-102)/10));
+  const tether=ease((t-47)/12)*(1-ease((t-99)/8));
   const socketAlpha=1-ease((t-112)/19);
   if(socketAlpha>0){
    ctx.save();ctx.globalAlpha=socketAlpha;
@@ -71,7 +72,10 @@ const AstroLimitVFX=(()=>{
    art.grid('props',0,2,2,anchor.x,anchor.y,251,{anchorY:.5,alpha:socketAlpha});
   }
   art.grid('props',1,2,2,anchor.x-12,anchor.y+19,156,{anchorY:.5,alpha:tether});
-  spring(x+81,y-201,anchor.x,anchor.y,tether,'#c1eaff');
+  if(tether>0){
+   const [wristX,wristY]=tetherWrists[pose];
+   spring(x+wristX,y+wristY,anchor.x,anchor.y,tether,'#c1eaff');
+  }
   art.grid('props',3,2,2,1015,755,443,{alpha:pulse(t,248,38,73)});
   art.glow(1,x-225,y-145,715,382,pulse(t,294,16,31)*.72);
   art.strike(3,tx+56,ty-148,840,608,finish);
