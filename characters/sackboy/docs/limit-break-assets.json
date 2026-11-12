@@ -1,0 +1,90 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sackboy/assets/sackboy-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sackboy/assets/sackboy-basic.png"
+      ],
+      "prompt": "Four separate complete high detail videogame sprites in a strict transparent 2x2 atlas. Wide clear margins, one full-body figure per quadrant with everything inside its cell, no overlap, no backdrop, no lettering or shadow. Match the exact little brown knitted burlap Sackboy from references, bulbous round square head, button-black eyes, smile, silver zipper down chest, visible seams and fingers. Top left kneels low and pushes a flat imaginary card to floor with both hands. Top right pulls an imaginary tab with both hands and leans backward with planted feet. Bottom left jumps upward to right, knees tucked and arms forward, both feet visible. Bottom right lands on one foot and bends knees, torso tilts forward and smiling face visible. All props are drawn separately, no objects in hands.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ad467ce2-6bc3-4973-b120-72be842facc3.png",
+      "destination": "characters/sackboy/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sackboy/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Maintain exact reference Sackboy knitted seams, head shape, black bead eyes, brown yarn, silver zipper, expressive puppet body. Four independent high-quality 3D game sprite assets in a strict transparent 2×2 atlas, each entirely in its own cell with ample clear margins including around tips, equal canvas divisions, no labels, no numbers, no background, no base shadow. Top left ducks very low and scrambles forward with hands touching floor, looking right. Top right reaches out to pull an imaginary handle with both hands leaning back with heels planted, looking right. Bottom left drives body weight into a large imaginary button by pushing both palms down, standing and leaning forward. Bottom right rides a platform upward, feet horizontally side-by-side, knees bent, arms open for balance, looking down and right. Only the character, no props.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-801efc46-9b3e-4b48-86ac-108e0a4fd6e0.png",
+      "destination": "characters/sackboy/assets/limit-motion.webp"
+    },
+    {
+      "kind": "star",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sackboy/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Match identical little knitted reference Sackboy. Bright eye highlights, hand-built yarn texture, prominent zipper. Four independent high-quality 3D game sprite assets in a strict transparent 2×2 atlas, each entirely in its own cell with ample clear margins including around tips, equal canvas divisions, no labels, no numbers, no background, no base shadow. Top left midair forward tuck with one leg extended about to unroll, looking right. Top right reaches one hand out midair to stick a tiny yellow paper star ahead, back leg extended, looking right. Bottom left lands on both feet in a low crouch, fingertips braced, knees bend, same zipper and size. Bottom right stands square and throws arms up in jubilation with both feet touching ground. No shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f94182b7-383a-4cbe-9625-fbb4a8bd3669.png",
+      "destination": "characters/sackboy/assets/limit-star.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Actual tactile handmade LittleBigPlanet Create mode craft mechanism sprites, realistic layered corrugated cardboard and stitching. Four independent high-quality 3D game sprite assets in a strict transparent 2×2 atlas, each entirely in its own cell with ample clear margins including around tips, equal canvas divisions, no labels, no numbers, no background, no base shadow. Top left one horizontal thin rectangular orange cloth pad with giant round magenta push button on top, low front view. Top right one broad tall folded corrugated cardboard ramp / pop-up platform with open accordion hinge at left and a flat top, cardboard brown and pink trim. Bottom left one tall vertical industrial toy spring piston mounted on a wood base, broad enough to support a small puppet, fabric and plastic construction. Bottom right one large unfolded five pointed yellow and hot pink origami paper star with crisp visible folds and stacked cardboard layers, front view. Clear empty separation.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-389e47c5-3634-404e-bf25-49b6b8ddbd44.png",
+      "destination": "characters/sackboy/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sackboy/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Wide 2.2:1 premium LittleBigPlanet cinematic key art. Exactly the same brown burlap Sackboy, button black eyes, cheek seam and silver zipper. Face and upper body very close, joyful focused expression, foreground hand placing a brilliant star-shaped paper sticker onto a giant pop-up set as a pink and amber accordion world unfolds in the background. Dramatic tactile felt and paper textures, natural studio light and bold pink-gold rim, eyes and face within center 65 percent, no text, no border, no menu.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f93ff92a-0f19-437a-aa0f-41f5cf2f9de3.png",
+      "destination": "characters/sackboy/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide panoramic side-on premium LittleBigPlanet crafted world 2.2:1. Broad flat corrugated cardboard and stitched fabric floor spanning full width near bottom quarter, behind it distant miniature cardboard hills, stitched purple sky with cotton clouds and handmade scrapbook stars, bolts, wool spools, soft violet pink lighting. Leave central lower area clean for animated props and fighters. Cozy workshop practical lighting and hand assembled diorama realism. No text, no characters, no big foreground star.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f33ab390-60a8-4e62-a2fa-51164a4cfb36.png",
+      "destination": "characters/sackboy/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "LittleBigPlanet handmade combat impact effect sprites, sharp paper cut shapes and thick confetti visible on a bright stage. Four independent high-quality 3D game sprite assets in a strict transparent 2×2 atlas, each entirely in its own cell with ample clear margins including around tips, equal canvas divisions, no labels, no numbers, no background, no base shadow. Top left compact pink-orange felt cartoon impact burst with solid warm pale core. Top right vertical rising piston blast made of paper triangles and amber springs with distinct solid pink outline. Bottom left small golden paper spark star with solid yellow center. Bottom right enormous wide radial shower of pink and golden folded cardstock shards around a brilliant dense central layered starburst, silhouette sharp with airy transparent gaps at edges. No backdrop or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d73a15be-f966-4483-829c-471e302dc5ec.png",
+      "destination": "characters/sackboy/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          656,
+          599
+        ],
+        [
+          656,
+          0,
+          1312,
+          599
+        ],
+        [
+          0,
+          599,
+          590,
+          1199
+        ],
+        [
+          590,
+          599,
+          1312,
+          1199
+        ]
+      ]
+    }
+  ]
+}

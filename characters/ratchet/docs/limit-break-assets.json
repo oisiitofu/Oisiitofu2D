@@ -1,0 +1,68 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ratchet/assets/ratchet-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/ratchet/assets/ratchet-basic.png"
+      ],
+      "prompt": "Four separate complete high detail videogame sprites in a strict transparent 2x2 atlas. Wide clear margins, one full-body figure per quadrant with everything inside its cell, no overlap, no backdrop, no lettering or shadow. Match the exact yellow striped Lombax Ratchet from game refs, large pointed ears, green eyes, dark navy and orange armor, brown gloves and boots, long striped tail, and tiny silver Clank with green eyes visibly attached to Ratchet's back. Top left steps low and winds the blue-gray double-ended Omniwrench behind him. Top right full-body rising wrench uppercut to right with rear foot pushing off. Bottom left crouched fast hoverboot skating toward right with front foot out, no visible effects. Bottom right pivots in midair facing left, wrench held safely to side, tail and Clank clear. No shots or scenery.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2ec46d4e-4868-40a8-9035-ef428ee21e83.png",
+      "destination": "characters/ratchet/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ratchet/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Strict 2 by 2 transparent atlas of exactly the same Ratchet and Clank character models in reference. Preserve the attached little silver Clank in every pose, pointed ears, face shape, navy and orange outfit, striped fur, long tail, and exact blue metal Omniwrench. Entire figure fully inside own quadrant with ample padding and clear separation. Top left leaping toward right midair feet-first, reaches forward with wrench angled down. Top right aggressively dives diagonally downward to right with both hands swinging the Omniwrench, legs fully extended. Bottom left lands in deep squat with both boots flat, head raised, holds same small Omniwrench across knees. Bottom right stands and clips the Omniwrench down along his side, turning torso in anticipation. Four anatomically distinct readable full body poses, all facing right, same size and rendering as ref. Render nothing around the figures, clear alpha all around every figure, no light effects, scenery, portals, alternate weapons, shadows, or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8efbb9c6-f098-4eb4-a885-c2f58ccdd00f.png",
+      "destination": "characters/ratchet/assets/limit-motion.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Insomniac Ratchet & Clank Rift Apart cinematic props. Four independent high-quality 3D game sprite assets in a strict transparent 2×2 atlas, each entirely in its own cell with ample clear margins including around tips, equal canvas divisions, no labels, no numbers, no background, no base shadow. Top left tall narrow jagged golden rift with orange edge, glasslike cracked space perimeter and transparent hollow center. Top right wide horizontal ragged purple dimensional tear, open black-violet elliptical inner plane, crystalline gold flecks. Bottom left single falling silver robotic claw-sized wreckage with lime light. Bottom right one enormous horizontal piece of offworld robot chassis with steel pylons, orange armor plating and vents, silhouette and shaded mass, debris attached close. Fully separated; no streams, no ground.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0e74e9b3-197c-4032-984f-f11dbdfe24ae.png",
+      "destination": "characters/ratchet/assets/limit-props.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Panoramic 2.2:1 AAA stylized 3D side-on fighting-game cinematic environment inspired by Megalopolis in Ratchet & Clank Rift Apart. Vast distant space-age towers and hover trains behind an elevated industrial plaza. Clear horizontal metal platform across lower quarter, orange sun behind teal glass towers, rich violet atmospheric depth, silhouette zoning with lower central fight plane somewhat darker and less busy. No character, no text, no portals, no foreground furniture.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a272a421-93ef-4c8d-8f9c-c1c25b6a8247.png",
+      "destination": "characters/ratchet/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "2x2 transparent atlas of four premium arcade combat impact sprites, all individually centered with ample transparent border on all sides including inner dividers; each graphic uses strictly at most 75% of width and height of its quadrant so no glow or shards cross a divider. Top left exactly one visible blue-white luminous crescent slash with convex side on right and empty space on left, no depicted weapon or tool or handle, shaped like a curved blade of solid energy. Top right intense purple-gold dimensional fracture impact with luminous solid core and jagged transparent fringes. Bottom left compact vertical amber explosion with blue hot core and tiny steel shards. Bottom right huge horizontal low explosion with thick amber-violet silhouette and opaque warm core, visible edges, star-shaped detail at the ground and towering shards; high contrast. Four separate motifs and nothing else; no text or backdrop.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5d607b2d-7e80-42aa-9c85-6fc657125840.png",
+      "destination": "characters/ratchet/assets/limit-effects.webp"
+    },
+    {
+      "kind": "ryno",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ratchet/limit-break/first-motion-source.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ratchet/limit-break/ryno-in-game-reference.jpg"
+      ],
+      "prompt": "Create four isolated full-body Ratchet video-game animation sprites, strictly separated 2x2 atlas, ample empty gutters and transparent margins, no contact shadows, no particles, all facing right; face, feet, tail and gun entirely visible. Keep striped yellow fur, ears, green eyes, orange/navy armor and Clank on back of ref1. Match the actual RYNO 8 from ref2: three dark steel wedge fins with orange-gold panels in a triangular configuration around one round bright violet dimensional aperture; horizontal foregrip, no rifle barrel, match weapon exactly in all 4 poses. Top left lifts RYNO up and steps in, balanced posture. Top right crouches into a low brace with launcher tipped upward 45 degrees. Bottom left fires into sky 50 degrees, both legs braced and full-body recoil. Bottom right recovers, launcher pointed up next to shoulder and face relaxed. AAA 3D stylized game render, original costume intact.",
+      "path": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-2145e910-4ed5-4d8e-812d-c6d95cc9e5d1.png",
+      "source": "https://press-start.com.au/wp-content/uploads/2021/06/ryno-feature-770x433.jpg",
+      "destination": "characters/ratchet/assets/limit-ryno.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ratchet/limit-break/first-motion-source.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ratchet/limit-break/ryno-in-game-reference.jpg"
+      ],
+      "prompt": "Wide panoramic 2.2:1 premium Ratchet & Clank Rift Apart game cinematic. Match Ratchet, pointed ears, green eyes, striped fur, orange/navy armor, brown gloves and visible Clank just above shoulder of first reference. Exact RYNO 8 from second reference: three angled dark steel wedge fins with amber orange panels around a central violet round dimensional aperture and horizontal foregrip, no conventional rifle barrel. Ratchet hoists this weapon in foreground in three-quarter view, eye and ear silhouette clear, both face and weapon legible. Behind them, industrial Megalopolis at sunset and a wide fractured violet dimensional tear, cinematic rim lighting, warm orange contrasted with strong blue. Face inside central 65 percent, no lettering, no border, no HUD.",
+      "path": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-c864ba8e-4699-4d82-ba09-c11d90576dc2.png",
+      "source": "https://press-start.com.au/wp-content/uploads/2021/06/ryno-feature-770x433.jpg",
+      "destination": "characters/ratchet/assets/limit-cutin.webp"
+    }
+  ]
+}

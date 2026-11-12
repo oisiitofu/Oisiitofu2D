@@ -702,6 +702,24 @@
     ],
     "crash-limit-spin": [
       "/assets/audio/se/crash-limit-spin.wav"
+    ],
+    "ratchet-limit-wrench": [
+      "/assets/audio/se/ratchet-limit-wrench.wav"
+    ],
+    "ratchet-limit-rift": [
+      "/assets/audio/se/ratchet-limit-rift.wav"
+    ],
+    "ratchet-limit-ryno": [
+      "/assets/audio/se/ratchet-limit-ryno.wav"
+    ],
+    "sackboy-limit-fold": [
+      "/assets/audio/se/sackboy-limit-fold.wav"
+    ],
+    "sackboy-limit-piston": [
+      "/assets/audio/se/sackboy-limit-piston.wav"
+    ],
+    "sackboy-limit-star": [
+      "/assets/audio/se/sackboy-limit-star.wav"
     ]
   },
   "impactDesign": {
