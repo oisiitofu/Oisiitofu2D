@@ -1,6 +1,6 @@
 {
   "mode": "built-in image_gen",
-  "status": "locally verified",
+  "status": "published",
   "assets": [
     {
       "kind": "poses",
@@ -48,5 +48,17 @@
       "source": "ImageGen output matched by visual inspection",
       "destination": "characters/parappa/assets/limit-effects.webp"
     }
-  ]
+  ],
+  "verification": {
+    "siteVersion": 341,
+    "githubCommit": "80d22b2",
+    "siteSourceCommit": "bfcb98fc32d1b09a05243a1641eb5412fa0f27cc",
+    "publicHashesMatched": 22,
+    "publicCoverage": 106,
+    "totalWorks": 162,
+    "publicGameplay": "passed",
+    "publicOnline": "unverified: online entry returned HTTP 503",
+    "localMatchingFrames": 410,
+    "localFinalLaunchSynced": true
+  }
 }
