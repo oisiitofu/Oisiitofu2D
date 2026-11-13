@@ -816,6 +816,30 @@
     ],
     "estelle-limit-blossom": [
       "/assets/audio/se/estelle-limit-blossom.wav"
+    ],
+    "rean-limit-parry": [
+      "/assets/audio/se/rean-limit-parry.wav"
+    ],
+    "rean-limit-awaken": [
+      "/assets/audio/se/rean-limit-awaken.wav"
+    ],
+    "rean-limit-landing": [
+      "/assets/audio/se/rean-limit-landing.wav"
+    ],
+    "rean-limit-blade": [
+      "/assets/audio/se/rean-limit-blade.wav"
+    ],
+    "shizuna-limit-parry": [
+      "/assets/audio/se/shizuna-limit-parry.wav"
+    ],
+    "shizuna-limit-step": [
+      "/assets/audio/se/shizuna-limit-step.wav"
+    ],
+    "shizuna-limit-cut": [
+      "/assets/audio/se/shizuna-limit-cut.wav"
+    ],
+    "shizuna-limit-moon": [
+      "/assets/audio/se/shizuna-limit-moon.wav"
     ]
   },
   "impactDesign": {

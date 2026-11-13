@@ -1,0 +1,67 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-atlas.png"
+      ],
+      "prompt": "Same Rean Schwarzer from refs, black hair, sharp blue-gray eyes, white military coat over dark trousers with red trim as shown in existing sheet, katana and scabbard. Four right-facing complete separate sprites in a transparent 2x2 atlas: low parry, withdraw blade with planted feet, re-sheath and brace, kneel and gather strength with katana vertical. Preserve clothing and exact design; no effects or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-83d377a1-4875-4824-8647-108c3fb9a60c.png",
+      "destination": "characters/rean/assets/limit-poses.webp"
+    },
+    {
+      "kind": "awaken",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rean/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Same Rean from reference, same white coat black trousers boots and katana scabbard, awakening changes hair to SILVER WHITE and both irises to scarlet. Four separated full-body right-facing action sprites: knees planted looking up, pulls out a low katana, full upward single draw-cut, stands braced holding katana straight up to summon. 2x2 transparent atlas, huge gutters, no floor shadows, no text or effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3097fd95-7a02-432a-af91-d791fd3fc718.png",
+      "destination": "characters/rean/assets/limit-awaken.webp"
+    },
+    {
+      "kind": "valimar",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rean/limit-break/valimar-official.webp"
+      ],
+      "prompt": "Strict separated transparent 2x2 atlas, four independent full sprites entirely within own quadrants, wide gutters. Transparent background, no grid lines, cast shadows, or labels. Exact gray Valimar mechanical knight from reference, silver and charcoal armor, horned head, mint eyes and layered blade-like wings. Four poses: descends with knees bent, lands on one knee, stands gripping great katana pointed low, performs powerful upward two-hand slash. Empty alpha all around each figure. No background, no effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-70db5a00-0d7d-4e11-9b1b-02783b427206.png",
+      "source": "https://www.falcom.co.jp/goods-data/2022_valimar",
+      "destination": "characters/rean/assets/limit-valimar.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Strict separated transparent 2x2 atlas, four independent full sprites entirely within own quadrants, wide gutters. Transparent background, no grid lines, cast shadows, or labels. Clockwork fantasy props for a gray knight summoning. Top left wide layered violet and pale teal summoning sigil in perspective with open alpha and opaque linework, no lettering. Top right dark silver empty weapon cradle with teal inset. Bottom left slate stone fragments. Bottom right rising narrow teal crystal illumination.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-655a1bfa-af80-44ad-b905-90169bc3a576.png",
+      "destination": "characters/rean/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Strict separated transparent 2x2 atlas, four independent full sprites entirely within own quadrants, wide gutters. Transparent background, no grid lines, cast shadows, or labels. Anime fight impacts, crisp opaque core. Top left small steel-blue blade parry sparks. Top right narrow violet-red rising draw cut with clear sharp edge. Bottom left broad teal-gray heavy landing impact with stones and white core. Bottom right giant diagonal rising violet silver crescent pointing right with hot white edge and dark outline. No weapon drawn.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-635140f1-53fc-4a91-814f-0439e9c2c86a.png",
+      "destination": "characters/rean/assets/limit-effects.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rean/limit-break/first-motion-source.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rean/limit-break/valimar-official.webp"
+      ],
+      "prompt": "2.2:1 premium fantasy action anime key art, same Rean in exact white coat and face from reference, awakened silver hair and red eyes, draws katana with intense expression, right behind him huge exact gray Valimar knight, violet and teal rim light, night stone plaza. Face and weapon legible, no text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e3682af5-1589-4c62-880b-0968aa2f639c.png",
+      "source": "https://www.falcom.co.jp/goods-data/2022_valimar",
+      "destination": "characters/rean/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "2.2:1 cinematic side-on battle background, Erebonian gray castle terrace with mountain mist and evening slate blue sky, broad open clear level stone ground across bottom quarter, distant pale teal lamps and warm windows, no figures or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-81d6f2f4-abfb-4d0c-bfe9-7ba9a66ed904.png",
+      "destination": "characters/rean/assets/limit-court.webp"
+    }
+  ]
+}

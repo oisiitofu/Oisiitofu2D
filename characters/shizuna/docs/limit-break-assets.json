@@ -1,0 +1,64 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-atlas.png"
+      ],
+      "prompt": "Same Shizuna Rem Misurugi from refs, long silver hair, white and red garment over dark fitted reinforcement suit as in exact existing assets, long black odachi. Four right-facing complete separate sprites in a transparent 2x2 atlas: pull shoulder and forward foot away from an incoming strike, parry with the blunt spine, a diagonally backward low sidestep with coat and hair trailing, and one foot raised over an unseen ledge to launch a low counter. Whole sword and feet, wide gutters, no background, no effects or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3691b691-a84f-49b6-8432-4cc736edda9b.png",
+      "destination": "characters/shizuna/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shizuna/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Exact Shizuna from reference with silver hair, black reinforcement suit and long white red overcoat, black odachi. Four separate complete right-facing full-body action sprites: front foot steps onto a low unseen rock while bending knee; pushes off rock with torso low, sword trailing; passes a low draw slash, weight deeply set into front leg; plants both feet in a still post-slash stance, cloak and hair lowered. 2x2 transparent atlas, wide margins, no floor shadows, effects, writing or rocks.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0c9098dd-a4ff-459c-ba51-4761761a51e7.png",
+      "destination": "characters/shizuna/assets/limit-motion.webp"
+    },
+    {
+      "kind": "moon",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shizuna/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Strict separated transparent 2x2 atlas, four independent full sprites entirely within own quadrants, wide gutters. Transparent background, no grid lines, cast shadows, or labels. Same Shizuna exact silver hair, white-red coat over dark reinforcement outfit and black odachi. Four right-facing distinct action poses: crouches in sharp anticipation, draws long sword upward stepping low, arrested pose at end of strike with still blade, relaxes and lowers weapon as hair settles. Entire feet and sword included.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e19fab0a-b095-4b6e-aa16-6816ce417e1e.png",
+      "destination": "characters/shizuna/assets/limit-moon.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Strict separated transparent 2x2 atlas, four independent full sprites entirely within own quadrants, wide gutters. Transparent background, no grid lines, cast shadows, or labels. Fantasy mountain ruin objects: upper left low broken dark stone ledge with broad flat footrest, upper right spread of individually visible pink floating petals, lower left small slate rocks, lower right pale moon reflection ripple. No actors.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0e69d391-a67d-4607-b3be-deb71111b44f.png",
+      "destination": "characters/shizuna/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Strict separated transparent 2x2 atlas, four independent full sprites entirely within own quadrants, wide gutters. Transparent background, no grid lines, cast shadows, or labels. Precise readable anime sword action effects. Top left icy white steel contact sparks; top right low silver-violet narrow crescent; bottom left thin vivid dark plum slash with white edge and pink sparks; bottom right giant distinct white-pink diagonal fissure with luminous opaque cutting core, plum outlines and bright pink petals, facing right. No literal swords.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3cab8c82-88dc-4d09-8d86-d01bb9b1f71d.png",
+      "destination": "characters/shizuna/assets/limit-effects.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shizuna/limit-break/first-motion-source.png"
+      ],
+      "prompt": "2.2:1 high-detail anime key art, same Shizuna exact silver hair and black reinforced outfit with white red coat, close-up calmly drawing her long black odachi, eyes cheek and chin readable, thin pink petals, dark moonlit terrace, white rim light, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9a510cd7-46d7-47de-89bb-546e86ea259e.png",
+      "destination": "characters/shizuna/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "2.2:1 cinematic side-on fantasy battle background, moonlit mountain terrace with low stone gate and dark landscape below, red maple and subtle mist, clear flat stone fighting surface lower quarter, no figures or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2152e8ec-e937-42a0-8857-37748f0d88b7.png",
+      "destination": "characters/shizuna/assets/limit-court.webp"
+    }
+  ]
+}
