@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/enoch/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Enoch gameplay design: tall athletic young man with long loose blond hair, white silver segmented armor over shoulders arms and shins, exposed abdomen, charcoal trousers and white hanging cloth, luminous blue crescent blade. Preserve face, costume, proportions. Widescreen cinematic close-up keeping full face visible, Celestial white stone terraces floating over a cloud sea, blue crystal geometric arches and distant gold light; flat open pale floor in foreground. 2.2:1 landscape no lettering or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-95542d1f-c356-4ab1-88ad-a02281e372a3.png",
+      "destination": "characters/enoch/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/enoch/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty side-view arena, Celestial white stone terraces floating over a cloud sea, blue crystal geometric arches and distant gold light; flat open pale floor in foreground. 2.2:1 wide, no people or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-43d4bf94-1463-41fa-9b31-7fdbbe76157f.png",
+      "destination": "characters/enoch/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/enoch/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Enoch gameplay design: tall athletic young man with long loose blond hair, white silver segmented armor over shoulders arms and shins, exposed abdomen, charcoal trousers and white hanging cloth, luminous blue crescent blade. Preserve face, costume, proportions. Four full body right-facing poses: firm blade guard, vertical arch swing, rises with knees tucked, reaches down while airborne. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-686c461c-1f94-4a86-8929-c1a748e3b9c3.png",
+      "destination": "characters/enoch/assets/limit-poses.webp"
+    },
+    {
+      "kind": "weapons",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/enoch/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Enoch gameplay design: tall athletic young man with long loose blond hair, white silver segmented armor over shoulders arms and shins, exposed abdomen, charcoal trousers and white hanging cloth, luminous blue crescent blade. Preserve face, costume, proportions. Four full body right-facing poses: floating golden ring of small blue remote blades around open hand, launches several blue energy blades, holds two oval silver shields braced overhead, descends feet-first with two oval shields. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7119803a-e3f2-4e49-8eaa-5c5167b054ae.png",
+      "destination": "characters/enoch/assets/limit-weapons.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/enoch/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Enoch gameplay design: tall athletic young man with long loose blond hair, white silver segmented armor over shoulders arms and shins, exposed abdomen, charcoal trousers and white hanging cloth, luminous blue crescent blade. Preserve face, costume, proportions. Four full body right-facing poses: shield landing in deep crouch, spreads the two shields to deflect, lifts same curved blue blade over head, drives curved blade forward while feet planted. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cb6109ce-211d-4768-ab18-969782316a0f.png",
+      "destination": "characters/enoch/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/enoch/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four props alone: pale broken floor shards, floating row of six blue energy daggers, oval white silver shield edge, bright golden crystal ring. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-334efad8-06b7-4cf1-abd5-56477682fe82.png",
+      "destination": "characters/enoch/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/enoch/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four effects alone: right-facing blue silver crescent, cluster of sharp pale blue blade darts, gold white shield collision blast, massive bright blue and gold vertical crescent with opaque core and gold edge. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f72238fa-2675-476f-b0bb-9d19cd6f3bb2.png",
+      "destination": "characters/enoch/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          102,
+          43,
+          682,
+          414
+        ],
+        [
+          843,
+          75,
+          1480,
+          388
+        ],
+        [
+          72,
+          465,
+          732,
+          972
+        ],
+        [
+          819,
+          423,
+          1472,
+          989
+        ]
+      ]
+    }
+  ]
+}

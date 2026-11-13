@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/mono/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Mono battle sprite low polygon boy: angular sunny yellow hair, green eyes, white tunic, turquoise short cape, red hanging pendant with white plus, dark shorts and blocky brown boots, huge striped pencil with blue silver yellow bands and bright red tip. Keep the polygon geometry of the face, hair and clothing. Widescreen cinematic close-up keeping full face visible, Whimsical illustrated paper kingdom with pastel turquoise and yellow swatches, sketchbook paper texture, flat open foreground paper platform, floating pencil marks in distance. 2.2:1 landscape no lettering or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f1893db9-8a2d-4159-821e-25c2531c2733.png",
+      "destination": "characters/mono/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/mono/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty side-view arena, Whimsical illustrated paper kingdom with pastel turquoise and yellow swatches, sketchbook paper texture, flat open foreground paper platform, floating pencil marks in distance. 2.2:1 wide, no people or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1056fa38-87b8-4748-831d-a44d99abb0e8.png",
+      "destination": "characters/mono/assets/limit-court.webp"
+    },
+    {
+      "kind": "draw",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/mono/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Mono battle sprite low polygon boy: angular sunny yellow hair, green eyes, white tunic, turquoise short cape, red hanging pendant with white plus, dark shorts and blocky brown boots, huge striped pencil with blue silver yellow bands and bright red tip. Keep the polygon geometry of the face, hair and clothing. Four full body right-facing poses: runs leaning forward with pencil angled down behind, turns body in a wide arc and pencil touches floor, plants feet and sweeps pencil sideways, looks back over shoulder gripping pencil. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-28159296-ce5f-4629-b902-3acb1fbd3cf6.png",
+      "destination": "characters/mono/assets/limit-draw.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/mono/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Mono battle sprite low polygon boy: angular sunny yellow hair, green eyes, white tunic, turquoise short cape, red hanging pendant with white plus, dark shorts and blocky brown boots, huge striped pencil with blue silver yellow bands and bright red tip. Keep the polygon geometry of the face, hair and clothing. Four full body right-facing poses: holds the large pencil low, leans over and puts pencil tip on floor, pulls tip across floor in wide step, kneels with pencil ready to mark. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3c24480d-d7f4-45e6-8e93-ea3984cfe583.png",
+      "destination": "characters/mono/assets/limit-poses.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/mono/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Mono battle sprite low polygon boy: angular sunny yellow hair, green eyes, white tunic, turquoise short cape, red hanging pendant with white plus, dark shorts and blocky brown boots, huge striped pencil with blue silver yellow bands and bright red tip. Keep the polygon geometry of the face, hair and clothing. Four full body right-facing poses: braces and lifts pencil with both hands, reaches overhead and marks a big curved line, sweeps pencil down with full body follow-through, stands relaxed holding same pencil. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-179b0459-6db0-4069-8c84-dbbf0f7ffb48.png",
+      "destination": "characters/mono/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/mono/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four props alone: blue round cartoon slime, angular cream white low-poly unicorn with yellow horn, huge whimsical sketchbook dragon with blue paper wings and orange yellow body facing right, separate floating pastel pencil chips. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-386acc31-da26-4b28-b73b-62c72cf9b52f.png",
+      "destination": "characters/mono/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/mono/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four attacks alone: vivid red-yellow pencil spark, blue oval slime collision, warm gold unicorn streak with bright core, massive multicolored opaque pencil-and-ink blast with hard white center, no text. Exactly four evenly spaced tiles with wide transparent margins in a 2x2 grid, completely transparent background. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-738f77f6-ab5a-413a-be96-1469533f539a.png",
+      "destination": "characters/mono/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          360,
+          97,
+          740,
+          396
+        ],
+        [
+          1173,
+          94,
+          1536,
+          409
+        ],
+        [
+          365,
+          555,
+          708,
+          919
+        ],
+        [
+          1032,
+          486,
+          1536,
+          1001
+        ]
+      ]
+    }
+  ]
+}

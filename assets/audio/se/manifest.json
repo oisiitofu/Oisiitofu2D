@@ -1023,6 +1023,30 @@
     ],
     "rayman-limit-finish": [
       "/assets/audio/se/rayman-limit-finish.wav"
+    ],
+    "enoch-limit-arch": [
+      "/assets/audio/se/enoch-limit-arch.wav"
+    ],
+    "enoch-limit-gale": [
+      "/assets/audio/se/enoch-limit-gale.wav"
+    ],
+    "enoch-limit-veil": [
+      "/assets/audio/se/enoch-limit-veil.wav"
+    ],
+    "enoch-limit-finish": [
+      "/assets/audio/se/enoch-limit-finish.wav"
+    ],
+    "mono-limit-draw": [
+      "/assets/audio/se/mono-limit-draw.wav"
+    ],
+    "mono-limit-slime": [
+      "/assets/audio/se/mono-limit-slime.wav"
+    ],
+    "mono-limit-unicorn": [
+      "/assets/audio/se/mono-limit-unicorn.wav"
+    ],
+    "mono-limit-finish": [
+      "/assets/audio/se/mono-limit-finish.wav"
     ]
   },
   "impactDesign": {
