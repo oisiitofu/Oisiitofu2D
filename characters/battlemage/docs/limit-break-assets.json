@@ -1,0 +1,69 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlemage/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact red-haired spear-wielding Dungeon Fighter Battle Mage from attached fighting game sprite. Preserve long vivid crimson ponytail, red-black gold-trimmed attire, dark tights, orange feathered skirt tails, matching proportions and gold-tipped spear with purple gemstone. Cinematic 2.2:1 wide anime shot, face clearly visible, spear swept in front, three golden energy chaser orbs floating in a deep purple vaulted arena. No words or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b70d4a58-b4c1-4fb2-ada0-3c4acd12b0e0.png",
+      "destination": "characters/battlemage/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlemage/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty landscape 2.2:1, Vaulted violet chamber with a flat dark circular floor, blue magenta light and distant pillars, top-down perspective blended with side view to show paths. No people or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-07bf3d4f-8af8-4936-b16c-b578f02cd4dd.png",
+      "destination": "characters/battlemage/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlemage/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Battle Mage from supplied fighting-game sprite: vivid red long high ponytail, black red gold-trimmed outfit and dark tights, orange feathered tails, slender athletic build, black gold spear with violet gem. Keep face, hairstyle and clothes. Full-body right-facing poses in order: Ready with spear low, horizontal thrust, rising spear sweep, slides into a one-knee turn. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-20755679-3b04-4e63-8e0d-8e4cb473f534.png",
+      "destination": "characters/battlemage/assets/limit-poses.webp"
+    },
+    {
+      "kind": "warp",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlemage/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Battle Mage from supplied fighting-game sprite: vivid red long high ponytail, black red gold-trimmed outfit and dark tights, orange feathered tails, slender athletic build, black gold spear with violet gem. Keep face, hairstyle and clothes. Full-body right-facing poses in order: Steps diagonally while tracing a spear curve, touches a floating orb with one hand and holds spear in the other, reappears low in forward running stance, vaults high with spear behind. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1648e660-e9b7-4d12-be03-a59db89b3162.png",
+      "destination": "characters/battlemage/assets/limit-warp.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlemage/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Battle Mage from supplied fighting-game sprite: vivid red long high ponytail, black red gold-trimmed outfit and dark tights, orange feathered tails, slender athletic build, black gold spear with violet gem. Keep face, hairstyle and clothes. Full-body right-facing poses in order: Raises spear and opens left hand, pushes spear down with both arms, wide balanced follow-through, settles back into original stance. Same normal outfit throughout. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4df89d84-ef2d-4c93-a419-5fc913fdb145.png",
+      "destination": "characters/battlemage/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlemage/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Separate objects only: golden orb with violet core, smaller red orb, three suspended gold prismatic fragments, golden magic circle with no writing. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d670e84b-c54d-46bd-9928-d862cb692460.png",
+      "destination": "characters/battlemage/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlemage/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Separate effects only: sharp copper spear thrust, magenta gold chaser burst, thin violet teleport wake, huge luminous gold violet quasar explosion with bold dark edges. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1944404f-9807-460d-9913-adf4e751cd6e.png",
+      "destination": "characters/battlemage/assets/limit-effects.webp"
+    }
+  ]
+}

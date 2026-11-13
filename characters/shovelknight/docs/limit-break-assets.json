@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shovelknight/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact compact blue-armored Shovel Knight from supplied pixel art references. Keep two ivory horns, black T visor, blue gauntlets, gold trim, wooden shaft and blue spade-shaped blade. Cinematic action pose pogoing off a falling stone with faithful chunky silhouette and original pixel character style. Behind him a hand-painted side-view fortress excavation, breaking stone tiles and orange torchlight. Dynamic 2.2:1 wide shot, no text or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c8b8890c-b30a-487c-bc01-baf6e60399ab.png",
+      "destination": "characters/shovelknight/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shovelknight/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty landscape 2.2:1, Subterranean fortress excavation, layers of stone walkways, iron pillars and amber torches, open flat foreground. Rich 2D pixel-art environment. No people or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9380a772-62eb-405d-8218-4a849e40fe42.png",
+      "destination": "characters/shovelknight/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shovelknight/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact blue-armored Shovel Knight from supplied pixel game sprite: two cream horns, blue rounded helmet with black T-shaped visor, gold trim, stocky proportions, brown wooden shaft and blue shovel blade. Deliberate crisp pixel art with thick black outline, same head and body ratio. Full-body right-facing poses in order: Ready with shovel held forward, springs up with legs tucked, aims shovel straight down in midair, lands shovel-down with feet high. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b761d608-be28-428e-8969-b456aaa1a3ad.png",
+      "destination": "characters/shovelknight/assets/limit-poses.webp"
+    },
+    {
+      "kind": "drop",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shovelknight/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact blue-armored Shovel Knight from supplied pixel game sprite: two cream horns, blue rounded helmet with black T-shaped visor, gold trim, stocky proportions, brown wooden shaft and blue shovel blade. Deliberate crisp pixel art with thick black outline, same head and body ratio. Full-body right-facing poses in order: Bounces with shovel down, tucks shovel horizontally to cross a gap, drives shovel down again with both arms, lands on an upper ledge and steadies with shovel in front. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9107728f-1214-449d-94af-629351ed2252.png",
+      "destination": "characters/shovelknight/assets/limit-drop.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shovelknight/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact blue-armored Shovel Knight from supplied pixel game sprite: two cream horns, blue rounded helmet with black T-shaped visor, gold trim, stocky proportions, brown wooden shaft and blue shovel blade. Deliberate crisp pixel art with thick black outline, same head and body ratio. Full-body right-facing poses in order: Levers shovel under stone, lifts shovel like a bat, hits forward using full body, settles to ready stance. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e1816ef2-12cd-4db2-8ea3-b236cb114b19.png",
+      "destination": "characters/shovelknight/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shovelknight/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Separate objects only: narrow slab of gray stone, crumbling stone floor platform, angular brown boulder, stone chips. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-45c32228-0580-4e06-bf61-2586138d1e6f.png",
+      "destination": "characters/shovelknight/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shovelknight/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Separate effects only: gold shovel spark, blue white downward speed streak, amber rocky impact with thick contour, large blue gold shock wave with rock debris and opaque white core. Exactly four isolated figures or objects in a 2x2 grid with generous completely transparent gutters and margins. No text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2472a242-2aac-47e9-97d8-f3ca79e6d49d.png",
+      "destination": "characters/shovelknight/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          170,
+          148,
+          478,
+          466
+        ],
+        [
+          790,
+          83,
+          1064,
+          524
+        ],
+        [
+          84,
+          752,
+          517,
+          1116
+        ],
+        [
+          553,
+          649,
+          1257,
+          1159
+        ]
+      ]
+    }
+  ]
+}

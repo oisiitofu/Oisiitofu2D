@@ -1047,6 +1047,30 @@
     ],
     "mono-limit-finish": [
       "/assets/audio/se/mono-limit-finish.wav"
+    ],
+    "shovelknight-limit-shovel": [
+      "/assets/audio/se/shovelknight-limit-shovel.wav"
+    ],
+    "shovelknight-limit-bounce": [
+      "/assets/audio/se/shovelknight-limit-bounce.wav"
+    ],
+    "shovelknight-limit-break": [
+      "/assets/audio/se/shovelknight-limit-break.wav"
+    ],
+    "shovelknight-limit-finish": [
+      "/assets/audio/se/shovelknight-limit-finish.wav"
+    ],
+    "battlemage-limit-spear": [
+      "/assets/audio/se/battlemage-limit-spear.wav"
+    ],
+    "battlemage-limit-chaser": [
+      "/assets/audio/se/battlemage-limit-chaser.wav"
+    ],
+    "battlemage-limit-warp": [
+      "/assets/audio/se/battlemage-limit-warp.wav"
+    ],
+    "battlemage-limit-finish": [
+      "/assets/audio/se/battlemage-limit-finish.wav"
     ]
   },
   "impactDesign": {
