@@ -942,6 +942,36 @@
     ],
     "sakuna-limit-finish": [
       "/assets/audio/se/sakuna-limit-finish.wav"
+    ],
+    "laharl-limit-blade": [
+      "/assets/audio/se/laharl-limit-blade.wav"
+    ],
+    "laharl-limit-lift": [
+      "/assets/audio/se/laharl-limit-lift.wav"
+    ],
+    "laharl-limit-rock": [
+      "/assets/audio/se/laharl-limit-rock.wav"
+    ],
+    "laharl-limit-fist": [
+      "/assets/audio/se/laharl-limit-fist.wav"
+    ],
+    "laharl-limit-impact": [
+      "/assets/audio/se/laharl-limit-impact.wav"
+    ],
+    "raguna-limit-shield": [
+      "/assets/audio/se/raguna-limit-shield.wav"
+    ],
+    "raguna-limit-plant": [
+      "/assets/audio/se/raguna-limit-plant.wav"
+    ],
+    "raguna-limit-sprout": [
+      "/assets/audio/se/raguna-limit-sprout.wav"
+    ],
+    "raguna-limit-fire": [
+      "/assets/audio/se/raguna-limit-fire.wav"
+    ],
+    "raguna-limit-finish": [
+      "/assets/audio/se/raguna-limit-finish.wav"
     ]
   },
   "impactDesign": {

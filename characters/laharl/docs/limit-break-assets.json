@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/laharl/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Illustrate a premium wide cinematic cut-in of the exact battle design in the reference, same youthful anime demon proportions, large deep blue spiky hair with exactly two very long sharply curved blue antenna hair strands, pointed ears, red eyes, red long frayed scarf, bare chest like the reference, gold-edged black bracers, black knee-length shorts, black-red boots, wide silver greatsword with small gold-red crossguard. Crouching ready to jump from a meteor, gripping the sword over his shoulder. Keep face unobstructed. Demon realm suspended black cliffs and a cluster of huge fiery meteors with orange embers against dark violet star fields; mostly cool dark color so red scarf and silhouette read. 2.2:1 wide, no lettering UI or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0fc88ba0-40f7-443a-92f5-9e4e2957c6a2.png",
+      "destination": "characters/laharl/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/laharl/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Environment only. Demon realm suspended black cliffs and a cluster of huge fiery meteors with orange embers against dark violet star fields; mostly cool dark color so red scarf and silhouette read. Side-view combat, unobstructed flat ground across bottom third, 2.2:1 landscape, no text or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-17ad5ed4-54f3-4bee-a529-d19e6495ef20.png",
+      "destination": "characters/laharl/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/laharl/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact identity and costume from the supplied fighting-game reference: same youthful anime demon proportions, large deep blue spiky hair with exactly two very long sharply curved blue antenna hair strands, pointed ears, red eyes, red long frayed scarf, bare chest like the reference, gold-edged black bracers, black knee-length shorts, black-red boots, wide silver greatsword with small gold-red crossguard. All four figures face right, full body. Four whole body poses: blade held diagonally, two handed upward greatsword launch, short bent knee jump after the swing, extended sideways dive. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-aaeede8f-63ce-43bc-89ff-a2b73a663a61.png",
+      "destination": "characters/laharl/assets/limit-poses.webp"
+    },
+    {
+      "kind": "ride",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/laharl/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact identity and costume from the supplied fighting-game reference: same youthful anime demon proportions, large deep blue spiky hair with exactly two very long sharply curved blue antenna hair strands, pointed ears, red eyes, red long frayed scarf, bare chest like the reference, gold-edged black bracers, black knee-length shorts, black-red boots, wide silver greatsword with small gold-red crossguard. All four figures face right, full body. Four whole body poses: stretches right to land on a rock, surf stance knees deeply bent cape trailing, springs from one rock to another, airborne clenched fist winding up above his head. Do not draw the rock. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-13338965-bb30-4664-bcfa-221469c96000.png",
+      "destination": "characters/laharl/assets/limit-ride.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/laharl/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact identity and costume from the supplied fighting-game reference: same youthful anime demon proportions, large deep blue spiky hair with exactly two very long sharply curved blue antenna hair strands, pointed ears, red eyes, red long frayed scarf, bare chest like the reference, gold-edged black bracers, black knee-length shorts, black-red boots, wide silver greatsword with small gold-red crossguard. All four figures face right, full body. Four whole body poses: midair downward fist punch, tucks arms and legs while falling, lands in wide braced crouch, stands raising one fist with scarf falling back. Keep the original sprite proportions. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-05aec144-d35a-4dbb-9ea7-f9ef995c8c4a.png",
+      "destination": "characters/laharl/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/laharl/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four separate objects: dark orange glowing floating meteor surfboard-shaped top, larger fractured charcoal meteor, small falling ember rocks, jagged levitating volcanic pedestal. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b6486330-4b29-4995-99f0-40bf1fd61791.png",
+      "destination": "characters/laharl/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/laharl/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated VFX: rightward violet silver rising crescent, orange white meteor streak pointed right, violet jagged collision sparks, massive opaque orange and magenta meteor explosion with directional outward ground shockwave. Clear opaque shapes. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-89988e33-f533-4ecb-86ba-9cc30578e035.png",
+      "destination": "characters/laharl/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          68,
+          28,
+          679,
+          478
+        ],
+        [
+          739,
+          64,
+          1511,
+          399
+        ],
+        [
+          77,
+          551,
+          569,
+          946
+        ],
+        [
+          574,
+          458,
+          1536,
+          1024
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/raguna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Illustrate a premium wide cinematic cut-in of the exact battle design in the reference, same anime young adult with short layered chestnut hair, blue eyes, charcoal long-sleeved base layer, brown leather armor and crossing belts, white geometric embroidery on brick-red split waistcloth, dark pants, brown boots, round bronze and wood shield, narrow silver sword. Sword and shield at the edge of a farm holding a green rune glow near the ground. Keep face unobstructed. Sunlit terrace farm with newly sprouting furrows, a stone waterway, green hills and distant gate ruins; cel painted fantasy environment with green magical motes. 2.2:1 wide, no lettering UI or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9520e527-d980-42c2-ba34-eb66e6cde656.png",
+      "destination": "characters/raguna/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/raguna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Environment only. Sunlit terrace farm with newly sprouting furrows, a stone waterway, green hills and distant gate ruins; cel painted fantasy environment with green magical motes. Side-view combat, unobstructed flat ground across bottom third, 2.2:1 landscape, no text or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-39d98530-af2a-46aa-af15-c45598cbb6dc.png",
+      "destination": "characters/raguna/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/raguna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact identity and costume from the supplied fighting-game reference: same anime young adult with short layered chestnut hair, blue eyes, charcoal long-sleeved base layer, brown leather armor and crossing belts, white geometric embroidery on brick-red split waistcloth, dark pants, brown boots, round bronze and wood shield, narrow silver sword. All four figures face right, full body. Four whole body poses: alert sword-and-round-shield stance, low shield shove, backsteps while covering chest with shield, kneels and sets a gloved hand on dirt while shield stays attached. No dirt or effects. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-6eea1356-808e-429b-992e-9ac0dd29ecb3.png",
+      "destination": "characters/raguna/assets/limit-poses.webp"
+    },
+    {
+      "kind": "field",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/raguna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact identity and costume from the supplied fighting-game reference: same anime young adult with short layered chestnut hair, blue eyes, charcoal long-sleeved base layer, brown leather armor and crossing belts, white geometric embroidery on brick-red split waistcloth, dark pants, brown boots, round bronze and wood shield, narrow silver sword. All four figures face right, full body. Four whole body poses: runs diagonally with blade behind him, knees bent banking with shield raised, stops low and touches ground with one hand, pushes off with sword swung up. Keep shield present. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ad2ae1ad-bb4e-4a2e-b883-a5d4a190a1d3.png",
+      "destination": "characters/raguna/assets/limit-field.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/raguna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact identity and costume from the supplied fighting-game reference: same anime young adult with short layered chestnut hair, blue eyes, charcoal long-sleeved base layer, brown leather armor and crossing belts, white geometric embroidery on brick-red split waistcloth, dark pants, brown boots, round bronze and wood shield, narrow silver sword. All four figures face right, full body. Four whole body poses: withdraws and lowers sword with other hand reaching for a wooden staff, holding long wooden staff with gold loop and blue orb as in reference with both hands, turns at waist and points the same staff straight forward, leans into two-handed staff thrust. No effects. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b117e5d7-2b0d-4eb7-bc7c-9a33e888fe76.png",
+      "destination": "characters/raguna/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/raguna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated 2D prop sprites: two furrows of damp farmland, group of broad light-green curled seedlings, low crumbling mossy ruin stone, small floating yellow green rune crystals. No people. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-05c47026-f73c-41e7-9ca2-f1d83db475f5.png",
+      "destination": "characters/raguna/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/raguna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated VFX: right-facing cream-white shield impact burst, clear light-green circular rune glyph lifting sprout sparks (no text), steep emerald and yellow plant energy column with opaque core, huge turquoise-gold crisscross rune flame wave with opaque cream centre and rich outside edge. No people. Four isolated evenly distributed tiles in a 2x2 grid with wide transparent gaps and outer margins. Transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b7ea6956-915b-4936-a8e1-ecbc536d9668.png",
+      "destination": "characters/raguna/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          102,
+          15,
+          643,
+          426
+        ],
+        [
+          793,
+          14,
+          1468,
+          436
+        ],
+        [
+          120,
+          447,
+          572,
+          998
+        ],
+        [
+          610,
+          467,
+          1536,
+          1002
+        ]
+      ]
+    }
+  ]
+}
