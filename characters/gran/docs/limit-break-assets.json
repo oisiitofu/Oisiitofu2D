@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/gran/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Same young male anime swordsman as supplied Gran gameplay sprites: short tousled chestnut hair, strong cobalt hood and flowing waistcloth, bright silver plate cuirass shoulders and knees, brown trousers and gloves, long straight steel sword with a gold crossguard. Preserve proportions, clothing and face. Cinematic widescreen 2.2:1 close-up in action showing the face/visor, Airship deck in the skies, open wood plank foreground, blue-gold sunrise and sea of clouds, brass rails and billowing white sail, refined painted JRPG art. Character sharp, expressive, no text, no UI, no watermark.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9dda0d0b-4086-476e-b486-c6484a579048.png",
+      "destination": "characters/gran/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/gran/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty 2.2:1 side-scrolling arena environment, Airship deck in the skies, open wood plank foreground, blue-gold sunrise and sea of clouds, brass rails and billowing white sail, refined painted JRPG art. No characters, readable and open flat fighting ground, no text or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f01db07b-1b8a-4438-b495-af62100e2918.png",
+      "destination": "characters/gran/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/gran/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Same young male anime swordsman as supplied Gran gameplay sprites: short tousled chestnut hair, strong cobalt hood and flowing waistcloth, bright silver plate cuirass shoulders and knees, brown trousers and gloves, long straight steel sword with a gold crossguard. Preserve proportions, clothing and face. Four right-facing full-body action poses in order: Ready guard, low turning backhand slash, sliding sideways on one foot with sword across chest, low controlled stop. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7d16a0c6-9c31-4613-9c5e-2cf214934478.png",
+      "destination": "characters/gran/assets/limit-poses.webp"
+    },
+    {
+      "kind": "summon",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/gran/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Same young male anime swordsman as supplied Gran gameplay sprites: short tousled chestnut hair, strong cobalt hood and flowing waistcloth, bright silver plate cuirass shoulders and knees, brown trousers and gloves, long straight steel sword with a gold crossguard. Preserve proportions, clothing and face. Four right-facing full-body action poses in order: Back foot plants and sword points up to sky, low forward rush, diagonal two-handed swing, leading shoulder braced with sword forward. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c1842b55-328a-4575-bbe1-501c7c0d91e6.png",
+      "destination": "characters/gran/assets/limit-summon.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/gran/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Same young male anime swordsman as supplied Gran gameplay sprites: short tousled chestnut hair, strong cobalt hood and flowing waistcloth, bright silver plate cuirass shoulders and knees, brown trousers and gloves, long straight steel sword with a gold crossguard. Preserve proportions, clothing and face. Four right-facing full-body action poses in order: Preparing high guard, drives sword forward with two hands, shoulders square in follow-through, returns to relaxed standing with cape settling. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b5293ae0-4307-4e98-a20e-fc2738fa5fc8.png",
+      "destination": "characters/gran/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/gran/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four separate isolated props: imposing full-body black and violet Bahamut dragon with indigo underside and huge wings, dragon head and chest facing down-right, turquoise wind ribbons, loose wood fragments. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c3cd6524-a91c-4c46-81a1-ea7ef729e9f0.png",
+      "destination": "characters/gran/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/gran/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated clear right-facing fantasy attack VFX: steel-white crescent with blue edge, compact golden sword collision, turquoise gust with opaque centre, broad blue-white-gold dragon breath beam with hard core and dark edges. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1fd62210-8f44-4847-bb73-15880edb9403.png",
+      "destination": "characters/gran/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          80,
+          45,
+          691,
+          465
+        ],
+        [
+          851,
+          67,
+          1434,
+          454
+        ],
+        [
+          4,
+          574,
+          665,
+          961
+        ],
+        [
+          690,
+          568,
+          1536,
+          975
+        ]
+      ]
+    }
+  ]
+}

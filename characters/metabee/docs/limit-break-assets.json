@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/metabee/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact yellow beetle robot Metabee from game sprite. Large mustard-yellow armor, black visor and two bright green eyes, twin short dark barrel tubes on top of head, black gun barrel on each arm, white torso and large white toe caps. Rounded small robot proportions. No mouth, no additional barrels, no human face. Cinematic widescreen 2.2:1 close-up in action showing the face/visor, Evening Japanese schoolyard turned robot arena, open flat tan court foreground, muted navy fences and green scoreboards with blank faces, amber lamps and violet dusk. Character sharp, expressive, no text, no UI, no watermark.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ebe7d6fa-d4c0-40bf-8dbc-b8160c83d71c.png",
+      "destination": "characters/metabee/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/metabee/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty 2.2:1 side-scrolling arena environment, Evening Japanese schoolyard turned robot arena, open flat tan court foreground, muted navy fences and green scoreboards with blank faces, amber lamps and violet dusk. No characters, readable and open flat fighting ground, no text or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-41207f9d-6e2f-49e4-bc91-06143665e11c.png",
+      "destination": "characters/metabee/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/metabee/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact yellow beetle robot Metabee from game sprite. Large mustard-yellow armor, black visor and two bright green eyes, twin short dark barrel tubes on top of head, black gun barrel on each arm, white torso and large white toe caps. Rounded small robot proportions. No mouth, no additional barrels, no human face. Four right-facing full-body action poses in order: Ready feet planted, skating laterally one arm aimed, backward aerial roll with knees bent, one-knee landing with gun held straight. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-59ff7baf-a676-4010-8c4f-7ba47135475c.png",
+      "destination": "characters/metabee/assets/limit-poses.webp"
+    },
+    {
+      "kind": "recoil",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/metabee/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact yellow beetle robot Metabee from game sprite. Large mustard-yellow armor, black visor and two bright green eyes, twin short dark barrel tubes on top of head, black gun barrel on each arm, white torso and large white toe caps. Rounded small robot proportions. No mouth, no additional barrels, no human face. Four right-facing full-body action poses in order: Low skid with left gun pointed, left foot plants and other gun comes up, recoils back from right-arm blast, braces in profile with both arm barrels raised. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-664d80db-73ab-4eeb-97d7-7527ea438e52.png",
+      "destination": "characters/metabee/assets/limit-recoil.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/metabee/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact yellow beetle robot Metabee from game sprite. Large mustard-yellow armor, black visor and two bright green eyes, twin short dark barrel tubes on top of head, black gun barrel on each arm, white torso and large white toe caps. Rounded small robot proportions. No mouth, no additional barrels, no human face. Four right-facing full-body action poses in order: Crosses both arms below visor to charge, both arms aim parallel while leaning into kickback, full extension as all guns fire, settles with barrels lowered. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cd0bb504-dc5b-45c9-93ff-67a60ab9b956.png",
+      "destination": "characters/metabee/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/metabee/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated distinct prop sprites: gray gravel chips, gray smoke puffs, a single left-to-right rocket with short exhaust, cyan circular energy coil. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a2f7bf15-f76e-4a91-a05a-5b1c040f0885.png",
+      "destination": "characters/metabee/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/metabee/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated right-facing bright readable attacks: small amber muzzle impact, pair of cream-gold bullet trails, heavy blue yellow missile explosion, massive wide golden-white and mint energy barrage with separate visible trails and dark outline. Four distinct evenly spaced sprites, 2x2 grid, generous clear transparent margins, transparent background, no captions or shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c7505b6b-2f3d-4567-a414-be9213b8330f.png",
+      "destination": "characters/metabee/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          378,
+          177,
+          520,
+          289
+        ],
+        [
+          1082,
+          193,
+          1473,
+          306
+        ],
+        [
+          446,
+          537,
+          694,
+          887
+        ],
+        [
+          962,
+          466,
+          1536,
+          910
+        ]
+      ]
+    }
+  ]
+}

@@ -972,6 +972,33 @@
     ],
     "raguna-limit-finish": [
       "/assets/audio/se/raguna-limit-finish.wav"
+    ],
+    "gran-limit-blade": [
+      "/assets/audio/se/gran-limit-blade.wav"
+    ],
+    "gran-limit-wind": [
+      "/assets/audio/se/gran-limit-wind.wav"
+    ],
+    "gran-limit-summon": [
+      "/assets/audio/se/gran-limit-summon.wav"
+    ],
+    "gran-limit-finish": [
+      "/assets/audio/se/gran-limit-finish.wav"
+    ],
+    "metabee-limit-rifle": [
+      "/assets/audio/se/metabee-limit-rifle.wav"
+    ],
+    "metabee-limit-recoil": [
+      "/assets/audio/se/metabee-limit-recoil.wav"
+    ],
+    "metabee-limit-missile": [
+      "/assets/audio/se/metabee-limit-missile.wav"
+    ],
+    "metabee-limit-charge": [
+      "/assets/audio/se/metabee-limit-charge.wav"
+    ],
+    "metabee-limit-finish": [
+      "/assets/audio/se/metabee-limit-finish.wav"
     ]
   },
   "impactDesign": {
