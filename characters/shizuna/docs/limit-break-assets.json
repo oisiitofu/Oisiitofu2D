@@ -5,29 +5,31 @@
     {
       "kind": "poses",
       "refs": [
-        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-selection.png",
-        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-atlas.png"
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-selection.png"
       ],
-      "prompt": "Same Shizuna Rem Misurugi from refs, long silver hair, white and red garment over dark fitted reinforcement suit as in exact existing assets, long black odachi. Four right-facing complete separate sprites in a transparent 2x2 atlas: pull shoulder and forward foot away from an incoming strike, parry with the blunt spine, a diagonally backward low sidestep with coat and hair trailing, and one foot raised over an unseen ledge to launch a low counter. Whole sword and feet, wide gutters, no background, no effects or shadows.",
-      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3691b691-a84f-49b6-8432-4cc736edda9b.png",
+      "prompt": " Four complete separate whole-body sprites arranged one per quadrant of a transparent 2x2 atlas, very broad gutters, no divider lines, background or floor shadows. Each faces right. Maintain exactly the same Shizuna that appears in the actual game references: pale icy blue silver hair and blue eyes, large dark ribbon, black fitted high-neck chest armor with gold edging and short dark skirt, white shoulder and coat panels with black inner lining, dark thigh-high boots, subtle vivid BLUE tassel at hip. Preserve gold trims; no red, orange or pink on clothing or blade; pink petals are only separate attack effects. Exact in-game slim silver sword edge on a dark blade with gold hilt. Top left pulls shoulder and front foot away, top right parries using spine of blade, bottom left low backward sidestep, bottom right raises one foot for low counter.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cf4cec52-8284-4694-9e48-d509747bed1d.png",
       "destination": "characters/shizuna/assets/limit-poses.webp"
     },
     {
       "kind": "motion",
       "refs": [
-        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shizuna/limit-break/first-motion-source.png"
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-selection.png"
       ],
-      "prompt": "Exact Shizuna from reference with silver hair, black reinforcement suit and long white red overcoat, black odachi. Four separate complete right-facing full-body action sprites: front foot steps onto a low unseen rock while bending knee; pushes off rock with torso low, sword trailing; passes a low draw slash, weight deeply set into front leg; plants both feet in a still post-slash stance, cloak and hair lowered. 2x2 transparent atlas, wide margins, no floor shadows, effects, writing or rocks.",
-      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0c9098dd-a4ff-459c-ba51-4761761a51e7.png",
+      "prompt": " Four complete separate whole-body sprites arranged one per quadrant of a transparent 2x2 atlas, very broad gutters, no divider lines, background or floor shadows. Each faces right. Maintain exactly the same Shizuna that appears in the actual game references: pale icy blue silver hair and blue eyes, large dark ribbon, black fitted high-neck chest armor with gold edging and short dark skirt, white shoulder and coat panels with black inner lining, dark thigh-high boots, subtle vivid BLUE tassel at hip. Preserve gold trims; no red, orange or pink on clothing or blade; pink petals are only separate attack effects. Exact in-game slim silver sword edge on a dark blade with gold hilt. Top left one foot steps onto unseen ledge and bends knee, top right pushes off ledge with torso low, bottom left deep step with low draw slash, bottom right pauses with both feet flat. No ledge drawn.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ea617859-9b7d-4033-9bab-4af3658fde24.png",
       "destination": "characters/shizuna/assets/limit-motion.webp"
     },
     {
       "kind": "moon",
       "refs": [
-        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shizuna/limit-break/first-motion-source.png"
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-selection.png"
       ],
-      "prompt": "Strict separated transparent 2x2 atlas, four independent full sprites entirely within own quadrants, wide gutters. Transparent background, no grid lines, cast shadows, or labels. Same Shizuna exact silver hair, white-red coat over dark reinforcement outfit and black odachi. Four right-facing distinct action poses: crouches in sharp anticipation, draws long sword upward stepping low, arrested pose at end of strike with still blade, relaxes and lowers weapon as hair settles. Entire feet and sword included.",
-      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e19fab0a-b095-4b6e-aa16-6816ce417e1e.png",
+      "prompt": " Four complete separate whole-body sprites arranged one per quadrant of a transparent 2x2 atlas, very broad gutters, no divider lines, background or floor shadows. Each faces right. Maintain exactly the same Shizuna that appears in the actual game references: pale icy blue silver hair and blue eyes, large dark ribbon, black fitted high-neck chest armor with gold edging and short dark skirt, white shoulder and coat panels with black inner lining, dark thigh-high boots, subtle vivid BLUE tassel at hip. Preserve gold trims; no red, orange or pink on clothing or blade; pink petals are only separate attack effects. Exact in-game slim silver sword edge on a dark blade with gold hilt. Top left low anticipation, top right draws upward, bottom left freezes after the cut with blade high, bottom right lowers weapon. All blade tips and feet in image.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-464248f4-952c-4573-887c-de2c346c880a.png",
       "destination": "characters/shizuna/assets/limit-moon.webp"
     },
     {
@@ -47,10 +49,11 @@
     {
       "kind": "cutin",
       "refs": [
-        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shizuna/limit-break/first-motion-source.png"
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shizuna/assets/shizuna-selection.png"
       ],
-      "prompt": "2.2:1 high-detail anime key art, same Shizuna exact silver hair and black reinforced outfit with white red coat, close-up calmly drawing her long black odachi, eyes cheek and chin readable, thin pink petals, dark moonlit terrace, white rim light, no lettering.",
-      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9a510cd7-46d7-47de-89bb-546e86ea259e.png",
+      "prompt": "Maintain exactly the same Shizuna that appears in the actual game references: pale icy blue silver hair and blue eyes, large dark ribbon, black fitted high-neck chest armor with gold edging and short dark skirt, white shoulder and coat panels with black inner lining, dark thigh-high boots, subtle vivid BLUE tassel at hip. Preserve gold trims; no red, orange or pink on clothing or blade; pink petals are only separate attack effects. Exact in-game slim silver sword edge on a dark blade with gold hilt. Premium panoramic 2.2:1 cut-in anime key art, close up eyes cheek and chin readable, exact white and black costume with blue and gold accents, calmly draws her blade in a dark moonlit terrace with separate pink petals, no lettering or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-08b300d5-d754-47c8-a1a3-4d5893a58c05.png",
       "destination": "characters/shizuna/assets/limit-cutin.webp"
     },
     {

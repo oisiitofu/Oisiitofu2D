@@ -5,20 +5,21 @@
     {
       "kind": "poses",
       "refs": [
-        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-selection.png",
-        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-atlas.png"
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-selection.png"
       ],
-      "prompt": "Same Rean Schwarzer from refs, black hair, sharp blue-gray eyes, white military coat over dark trousers with red trim as shown in existing sheet, katana and scabbard. Four right-facing complete separate sprites in a transparent 2x2 atlas: low parry, withdraw blade with planted feet, re-sheath and brace, kneel and gather strength with katana vertical. Preserve clothing and exact design; no effects or shadows.",
-      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-83d377a1-4875-4824-8647-108c3fb9a60c.png",
+      "prompt": " Four complete separate whole-body sprites arranged one per quadrant of a transparent 2x2 atlas, very broad gutters, no divider lines, background or floor shadows. Each faces right. Maintain exactly the same Rean that appears in both actual game references: silver-white hair and red eyes from the start, entirely dark charcoal/black long military coat with narrow cool silver piping and subtle dark wine red lining, black shirt, dark trousers and black boots, subtle metal shoulder straps, slim silver katana and dark scabbard. The outer coat stays black, never turn it white or gray. Top left low parry, top right retracts katana with feet planted, bottom left braces with hand on scabbard, bottom right kneels with katana vertical.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-dfdc7f15-7a7a-4b66-ab1a-c1ea6ba92afb.png",
       "destination": "characters/rean/assets/limit-poses.webp"
     },
     {
       "kind": "awaken",
       "refs": [
-        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rean/limit-break/first-motion-source.png"
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-selection.png"
       ],
-      "prompt": "Same Rean from reference, same white coat black trousers boots and katana scabbard, awakening changes hair to SILVER WHITE and both irises to scarlet. Four separated full-body right-facing action sprites: knees planted looking up, pulls out a low katana, full upward single draw-cut, stands braced holding katana straight up to summon. 2x2 transparent atlas, huge gutters, no floor shadows, no text or effects.",
-      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3097fd95-7a02-432a-af91-d791fd3fc718.png",
+      "prompt": " Four complete separate whole-body sprites arranged one per quadrant of a transparent 2x2 atlas, very broad gutters, no divider lines, background or floor shadows. Each faces right. Maintain exactly the same Rean that appears in both actual game references: silver-white hair and red eyes from the start, entirely dark charcoal/black long military coat with narrow cool silver piping and subtle dark wine red lining, black shirt, dark trousers and black boots, subtle metal shoulder straps, slim silver katana and dark scabbard. The outer coat stays black, never turn it white or gray. Top left kneels and lifts head, top right pulls out low katana while leaning forward, bottom left performs upward draw-cut, bottom right stands with arms raised holding katana vertically. No energy drawn; motion and game costume precise.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-321802f9-1767-4bff-ad16-1a09ad3a651b.png",
       "destination": "characters/rean/assets/limit-awaken.webp"
     },
     {
@@ -48,12 +49,12 @@
     {
       "kind": "cutin",
       "refs": [
-        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rean/limit-break/first-motion-source.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/rean/assets/rean-selection.png",
         "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rean/limit-break/valimar-official.webp"
       ],
-      "prompt": "2.2:1 premium fantasy action anime key art, same Rean in exact white coat and face from reference, awakened silver hair and red eyes, draws katana with intense expression, right behind him huge exact gray Valimar knight, violet and teal rim light, night stone plaza. Face and weapon legible, no text.",
-      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e3682af5-1589-4c62-880b-0968aa2f639c.png",
-      "source": "https://www.falcom.co.jp/goods-data/2022_valimar",
+      "prompt": "Maintain exactly the same Rean that appears in both actual game references: silver-white hair and red eyes from the start, entirely dark charcoal/black long military coat with narrow cool silver piping and subtle dark wine red lining, black shirt, dark trousers and black boots, subtle metal shoulder straps, slim silver katana and dark scabbard. The outer coat stays black, never turn it white or gray. Premium panoramic 2.2:1 cut-in key art, face clear in center-left and black coat visible on chest, prepares low draw with katana, giant exact silver gray Valimar behind as silhouette from third ref, cool teal and violet rim light, nighttime stone plaza, no lettering or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3d6e65e5-0582-4175-b81f-813356dd4f7d.png",
       "destination": "characters/rean/assets/limit-cutin.webp"
     },
     {
