@@ -999,6 +999,30 @@
     ],
     "metabee-limit-finish": [
       "/assets/audio/se/metabee-limit-finish.wav"
+    ],
+    "haseo-limit-scythe": [
+      "/assets/audio/se/haseo-limit-scythe.wav"
+    ],
+    "haseo-limit-lance": [
+      "/assets/audio/se/haseo-limit-lance.wav"
+    ],
+    "haseo-limit-hammer": [
+      "/assets/audio/se/haseo-limit-hammer.wav"
+    ],
+    "haseo-limit-judgment": [
+      "/assets/audio/se/haseo-limit-judgment.wav"
+    ],
+    "rayman-limit-punch": [
+      "/assets/audio/se/rayman-limit-punch.wav"
+    ],
+    "rayman-limit-bounce": [
+      "/assets/audio/se/rayman-limit-bounce.wav"
+    ],
+    "rayman-limit-glide": [
+      "/assets/audio/se/rayman-limit-glide.wav"
+    ],
+    "rayman-limit-finish": [
+      "/assets/audio/se/rayman-limit-finish.wav"
     ]
   },
   "impactDesign": {

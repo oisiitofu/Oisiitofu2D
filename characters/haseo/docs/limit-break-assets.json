@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/haseo/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Haseo fighting-game design from reference: pale young man with sweeping white hair, intricately layered black steel armor, deep red angular spikes and boots, gold claw accents, red glowing chest emblem, black segmented red-edged scythe with gold fittings and pale cutting edge. Preserve face, costume and proportions through every pose. Cinematic close up just before the signature attack. Broken bridge of the virtual Lost Ground, dark indigo and rust-red angular ruins suspended in a deep blue digital sky, flat wide stone foreground, ornate anime environment. Wide 2.2:1, complete face visible, no UI or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d341602e-3268-4c21-9523-4134429a7a72.png",
+      "destination": "characters/haseo/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/haseo/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty side view 2.2:1 arena. Broken bridge of the virtual Lost Ground, dark indigo and rust-red angular ruins suspended in a deep blue digital sky, flat wide stone foreground, ornate anime environment. No figures or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0ce4b23b-0ec7-4485-98cb-082a95a377ad.png",
+      "destination": "characters/haseo/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/haseo/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Haseo fighting-game design from reference: pale young man with sweeping white hair, intricately layered black steel armor, deep red angular spikes and boots, gold claw accents, red glowing chest emblem, black segmented red-edged scythe with gold fittings and pale cutting edge. Preserve face, costume and proportions through every pose. Four full-body right-facing poses: low scythe guard, upward sweeping scythe, hops with scythe raised behind, rotates into a stretched aerial scythe cut Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8fd2fca8-1b00-4532-873b-f2b547769298.png",
+      "destination": "characters/haseo/assets/limit-poses.webp"
+    },
+    {
+      "kind": "phase",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/haseo/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Haseo fighting-game design from reference: pale young man with sweeping white hair, intricately layered black steel armor, deep red angular spikes and boots, gold claw accents, red glowing chest emblem, black segmented red-edged scythe with gold fittings and pale cutting edge. Preserve face, costume and proportions through every pose. Four full-body right-facing poses: airborne with twin narrow angular red energy lances, kneeling midair with lances crossed, opens both lances in wide side thrust, tucks for descent with a blocky red-black energy hammer instead Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5879b994-c64a-4719-9ff1-00cca830c9b0.png",
+      "destination": "characters/haseo/assets/limit-phase.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/haseo/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Haseo fighting-game design from reference: pale young man with sweeping white hair, intricately layered black steel armor, deep red angular spikes and boots, gold claw accents, red glowing chest emblem, black segmented red-edged scythe with gold fittings and pale cutting edge. Preserve face, costume and proportions through every pose. Four full-body right-facing poses: falls swinging huge angular crimson energy hammer, strikes ground in wide crouch with hammer, stands holding one gold claw forward to charge a glowing crimson orb, returns to same original scythe stance Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-dc96f2b0-d0c8-4a07-bce2-36af3ebc6a77.png",
+      "destination": "characters/haseo/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/haseo/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated scenery sprites: fractured stone platform, ring of floating crimson digital fragments, dark blue levitating slabs, red luminous polygon chips. No characters, no faces. Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-93f889f1-2c72-4d2e-ae2a-8cc398fb5e78.png",
+      "destination": "characters/haseo/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/haseo/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated VFX facing right with opaque bright cores: white and crimson scythe crescent, two sharp magenta lance thrust streaks, jagged red-gold hammer shockwave rising up, giant crimson orb with white centre and dark cracked outline. No character, no weapon silhouette. Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-70e1a9d8-e968-41b1-8259-ec2cfe6aa708.png",
+      "destination": "characters/haseo/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          68,
+          0,
+          702,
+          447
+        ],
+        [
+          805,
+          59,
+          1510,
+          397
+        ],
+        [
+          45,
+          456,
+          733,
+          1003
+        ],
+        [
+          793,
+          450,
+          1513,
+          1000
+        ]
+      ]
+    }
+  ]
+}

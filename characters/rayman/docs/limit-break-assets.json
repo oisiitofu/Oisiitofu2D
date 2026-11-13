@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rayman/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Rayman gameplay sprite in reference. Large orange swept hair, bulbous peach nose, white cartoon eyes, red neckerchief, eggplant purple torso with white ring, detached white gloves and detached yellow-white shoes, no neck or limbs connecting them. Rounded glossy game sprite style, preserve proportions. Cinematic close up just before the signature attack. Painted Glade of Dreams, teal forest with lush floating mossy blocks, round giant mushrooms in warm amber light, open fighting ground in lower third, colorful and playful side-scrolling art. Wide 2.2:1, complete face visible, no UI or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-626c3d18-ded0-4291-94d3-6eddc8560bf6.png",
+      "destination": "characters/rayman/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rayman/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty side view 2.2:1 arena. Painted Glade of Dreams, teal forest with lush floating mossy blocks, round giant mushrooms in warm amber light, open fighting ground in lower third, colorful and playful side-scrolling art. No figures or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4008847a-8d69-4830-9649-62eea6fe5651.png",
+      "destination": "characters/rayman/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rayman/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Rayman gameplay sprite in reference. Large orange swept hair, bulbous peach nose, white cartoon eyes, red neckerchief, eggplant purple torso with white ring, detached white gloves and detached yellow-white shoes, no neck or limbs connecting them. Rounded glossy game sprite style, preserve proportions. Four distinct full-body poses facing right: ready stance gloves lifted, springs from one shoe, launches flying right fist while body stays back, tilts forward in sliding land with other glove out Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1e3fc4d8-9c52-49fa-acf5-83e566654ce1.png",
+      "destination": "characters/rayman/assets/limit-poses.webp"
+    },
+    {
+      "kind": "glide",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rayman/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Rayman gameplay sprite in reference. Large orange swept hair, bulbous peach nose, white cartoon eyes, red neckerchief, eggplant purple torso with white ring, detached white gloves and detached yellow-white shoes, no neck or limbs connecting them. Rounded glossy game sprite style, preserve proportions. Four right-facing full-body poses: hovers with hair spinning like a rotor and both shoes beneath body, glides forward with flattened spinning hair and shoes behind, descends with both gloves out, lands upright with hair no longer spinning Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-53ca0c91-c9b9-45cf-b4d8-33284a14ae29.png",
+      "destination": "characters/rayman/assets/limit-glide.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rayman/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Rayman gameplay sprite in reference. Large orange swept hair, bulbous peach nose, white cartoon eyes, red neckerchief, eggplant purple torso with white ring, detached white gloves and detached yellow-white shoes, no neck or limbs connecting them. Rounded glossy game sprite style, preserve proportions. Four full-body poses facing right: braces and winds one white glove back, twists while holding charged fist, launches forward long-range punch with detached leading glove, settles with broad grin and shoes planted Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5da9b21b-f5ba-4f27-9a7e-7b5e385fdd36.png",
+      "destination": "characters/rayman/assets/limit-finish.webp",
+      "cropBoxes": [
+        [
+          52,
+          15,
+          569,
+          505
+        ],
+        [
+          752,
+          15,
+          1269,
+          513
+        ],
+        [
+          27,
+          604,
+          755,
+          1111
+        ],
+        [
+          797,
+          553,
+          1208,
+          1114
+        ]
+      ]
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rayman/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four separate 2D cartoon prop sprites: flat broad orange mushroom cap with short stem, flat mossy floating platform, golden leaf cluster, single isolated closed white four-finger cartoon glove pointed right to use as a flying fist. No character body. Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3b3cba84-15c8-4f45-92e0-19e8ad5a5f32.png",
+      "destination": "characters/rayman/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/rayman/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four separate effects facing right: compact orange punch flash, short yellow cream ricochet streak with dark edge, pale turquoise haircopter wind arc, big gold and blue telescopic punch impact with opaque white core. No character. Exactly four separate drawings in 2x2 grid with generous transparent gutters and margins, alpha background, no captions, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5b8c7036-ac5e-460b-9584-3304903f6eda.png",
+      "destination": "characters/rayman/assets/limit-effects.webp"
+    }
+  ]
+}
