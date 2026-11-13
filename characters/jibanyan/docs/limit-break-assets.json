@@ -1,0 +1,74 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jibanyan/limit-break/battle-design-reference.png"
+      ],
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7d2e71ee-dfe4-4017-8adc-4180a8b9aae1.png",
+      "destination": "characters/jibanyan/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jibanyan/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Match the supplied battle sprite exactly: Jibanyan with the same flat cel-shaded giant round red-orange cat head, yellow eyes, white muzzle and forehead blaze, ear notch, yellow ribbed belly band, cyan bell, short round limbs and two red tails with distinct blue flame tips. Keep the same size relations, face shapes and costume as the reference. Four full-body poses facing right: (1) wide ready stance with clenched fists, (2) leap forwards leading with right paw, (3) very low extended slide on belly, (4) crouch below enemy winding up one paw at shoulder to punch vertically. No added effects apart from intrinsic two small blue tail flames. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four full-body poses facing right: (1) wide ready stance with clenched fists, (2) leap forwards leading with right paw, (3) very low extended slide on belly, (4) crouch below enemy winding up one paw at shoulder to punch vertically. No added effects apart from intrinsic two small blue tail flames.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-44194927-1898-4849-81e3-a9695e0ebddc.png",
+      "destination": "characters/jibanyan/assets/limit-poses.webp"
+    },
+    {
+      "kind": "flurry",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jibanyan/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Match the supplied battle sprite exactly: Jibanyan with the same flat cel-shaded giant round red-orange cat head, yellow eyes, white muzzle and forehead blaze, ear notch, yellow ribbed belly band, cyan bell, short round limbs and two red tails with distinct blue flame tips. Keep the same size relations, face shapes and costume as the reference. Four full-body poses facing right viewed side-three-quarter, of a compact vertical punching combination: (1) right paw raised in an uppercut while both feet stay low, (2) left paw raised in a twisting uppercut, (3) legs tucked as he rises with both paws reaching up, (4) sideways airborne roll with arms tucking in and tails curling. No added effects apart from intrinsic two small blue tail flames. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four full-body poses facing right viewed side-three-quarter, of a compact vertical punching combination: (1) right paw raised in an uppercut while both feet stay low, (2) left paw raised in a twisting uppercut, (3) legs tucked as he rises with both paws reaching up, (4) sideways airborne roll with arms tucking in and tails curling. No added effects apart from intrinsic two small blue tail flames.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f450b2ec-8006-4140-a6be-4586bc529e6c.png",
+      "destination": "characters/jibanyan/assets/limit-flurry.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jibanyan/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Match the supplied battle sprite exactly: Jibanyan with the same flat cel-shaded giant round red-orange cat head, yellow eyes, white muzzle and forehead blaze, ear notch, yellow ribbed belly band, cyan bell, short round limbs and two red tails with distinct blue flame tips. Keep the same size relations, face shapes and costume as the reference. Four full-body poses facing right: (1) crouching with rear feet planted against a vertical wall in midair, no wall drawn, (2) downward diagonal diving punch, (3) braced wide stance with left forward palm in hard shove, (4) leaping hard simultaneous forward double-palm strike, stretched low and facing right. No added effects apart from intrinsic two small blue tail flames. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four full-body poses facing right: (1) crouching with rear feet planted against a vertical wall in midair, no wall drawn, (2) downward diagonal diving punch, (3) braced wide stance with left forward palm in hard shove, (4) leaping hard simultaneous forward double-palm strike, stretched low and facing right. No added effects apart from intrinsic two small blue tail flames.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3b00725d-a4b7-43f4-aa22-28cf76ecc8ae.png",
+      "destination": "characters/jibanyan/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jibanyan/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four separate 2D objects on transparent background: (1) short gray concrete utility pole and the side of a brick post with a paw impact scuff, (2) pale cyan ground flame trail with two ghost swirls, (3) tiny group of floating blue wisps, (4) two flying cracked street paving chips. Never include any character. Each object safely inside its own quadrant. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four separate 2D objects on transparent background: (1) short gray concrete utility pole and the side of a brick post with a paw impact scuff, (2) pale cyan ground flame trail with two ghost swirls, (3) tiny group of floating blue wisps, (4) two flying cracked street paving chips. Never include any character. Each object safely inside its own quadrant.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-13d3a7fb-71a0-460a-9ec4-d8e0e2f74fc0.png",
+      "destination": "characters/jibanyan/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jibanyan/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four separate attack effects facing right in 2x2: (1) compact yellow-orange comic punch collision with pale center and rich outline, (2) horizontal white cyan and warm cream triple boxing streak, (3) distinct claw-shaped blue-white diving impact with rich blue edge, (4) massive double paw shaped cyan impact, layered navy outer edge, white centers and amber crackle. Painted hard readable cores, no silhouettes or props. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four separate attack effects facing right in 2x2: (1) compact yellow-orange comic punch collision with pale center and rich outline, (2) horizontal white cyan and warm cream triple boxing streak, (3) distinct claw-shaped blue-white diving impact with rich blue edge, (4) massive double paw shaped cyan impact, layered navy outer edge, white centers and amber crackle. Painted hard readable cores, no silhouettes or props.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a0da1975-df6b-4b37-ba52-e98de9f09cf4.png",
+      "destination": "characters/jibanyan/assets/limit-effects.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7d2e71ee-dfe4-4017-8adc-4180a8b9aae1.png"
+      ],
+      "prompt": "Cinematic panoramic empty Japanese urban residential crossroads at night, side view with open flat crossing in the foreground and a low brick wall with utility pole in the right third, warm yellow street lights, navy and teal skyline, road in a subtle polished 2D anime environmental painting style. Clear ground plane just below screen center. No figures, no signs, no letters. 2.2:1 wide landscape.",
+      "brief": "Cinematic panoramic empty Japanese urban residential crossroads at night, side view with open flat crossing in the foreground and a low brick wall with utility pole in the right third, warm yellow street lights, navy and teal skyline, road in a subtle polished 2D anime environmental painting style. Clear ground plane just below screen center. No figures, no signs, no letters. 2.2:1 wide landscape.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d692d7d1-918f-406b-a8ce-eca0d22bd427.png",
+      "destination": "characters/jibanyan/assets/limit-court.webp"
+    }
+  ]
+}

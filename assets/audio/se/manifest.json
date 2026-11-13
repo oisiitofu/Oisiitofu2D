@@ -888,6 +888,33 @@
     ],
     "c4621-limit-blade": [
       "/assets/audio/se/c4621-limit-blade.wav"
+    ],
+    "jibanyan-limit-paws": [
+      "/assets/audio/se/jibanyan-limit-paws.wav"
+    ],
+    "jibanyan-limit-flurry": [
+      "/assets/audio/se/jibanyan-limit-flurry.wav"
+    ],
+    "jibanyan-limit-wall": [
+      "/assets/audio/se/jibanyan-limit-wall.wav"
+    ],
+    "jibanyan-limit-finish": [
+      "/assets/audio/se/jibanyan-limit-finish.wav"
+    ],
+    "layton-limit-step": [
+      "/assets/audio/se/layton-limit-step.wav"
+    ],
+    "layton-limit-gear": [
+      "/assets/audio/se/layton-limit-gear.wav"
+    ],
+    "layton-limit-pendulum": [
+      "/assets/audio/se/layton-limit-pendulum.wav"
+    ],
+    "layton-limit-wind": [
+      "/assets/audio/se/layton-limit-wind.wav"
+    ],
+    "layton-limit-finish": [
+      "/assets/audio/se/layton-limit-finish.wav"
     ]
   },
   "impactDesign": {

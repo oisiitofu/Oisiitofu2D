@@ -1,0 +1,100 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/layton/limit-break/battle-design-reference.png"
+      ],
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-48027c10-61d4-48d2-9c09-e8130dbdd207.png",
+      "destination": "characters/layton/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/layton/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Match the exact supplied Professor Layton battle sprite: enormously tall dark chocolate top hat with a burnt orange band, dot eyes, tiny nose, warm tan stylized face, clean flat linework, dark brown open-collar coat, dark trousers and burnt orange shirt, bare hands, long thin legs. Preserve the slender proportions and hat size. Four distinct right-facing full-body poses: (1) hand on hat brim and feet planted, (2) lunging with open palm push, (3) straightening the coat and twisting to look back, (4) raising one knee to turn at the bottom of stairs. No stairs or effects. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four distinct right-facing full-body poses: (1) hand on hat brim and feet planted, (2) lunging with open palm push, (3) straightening the coat and twisting to look back, (4) raising one knee to turn at the bottom of stairs. No stairs or effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1efded50-dbac-4e6f-8bcf-2e3698e48afc.png",
+      "destination": "characters/layton/assets/limit-poses.webp"
+    },
+    {
+      "kind": "stairs",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/layton/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Match the exact supplied Professor Layton battle sprite: enormously tall dark chocolate top hat with a burnt orange band, dot eyes, tiny nose, warm tan stylized face, clean flat linework, dark brown open-collar coat, dark trousers and burnt orange shirt, bare hands, long thin legs. Preserve the slender proportions and hat size. Four distinct right-facing whole-body stair ascent poses viewed side three-quarter: (1) pushes off ground with right foot to step upward, (2) weight on higher front leg and coat trailing, (3) longer second stride while pinning down his hat with one hand, (4) straightens at top with both arms out for balance. No stairs or effects. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four distinct right-facing whole-body stair ascent poses viewed side three-quarter: (1) pushes off ground with right foot to step upward, (2) weight on higher front leg and coat trailing, (3) longer second stride while pinning down his hat with one hand, (4) straightens at top with both arms out for balance. No stairs or effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-6a4cb87d-e265-40a2-ad1c-ffc943ef186a.png",
+      "destination": "characters/layton/assets/limit-stairs.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          590,
+          613
+        ],
+        [
+          610,
+          0,
+          1199,
+          613
+        ],
+        [
+          0,
+          619,
+          600,
+          1312
+        ],
+        [
+          609,
+          619,
+          1199,
+          1312
+        ]
+      ]
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/layton/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Match the exact supplied Professor Layton battle sprite: enormously tall dark chocolate top hat with a burnt orange band, dot eyes, tiny nose, warm tan stylized face, clean flat linework, dark brown open-collar coat, dark trousers and burnt orange shirt, bare hands, long thin legs. Preserve the slender proportions and hat size. Four distinct right-facing whole-body poses: (1) reaches for a control panel at chest height with right hand, (2) plants left foot and pulls a lever with both hands, (3) leans forward and turns a crank, (4) forcefully pushes a lever down with right hand and left hand on hat. Show hands making gestures without props. Keep the hat untouched, bare hands, same clean flat sprite linework. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four distinct right-facing whole-body poses: (1) reaches for a control panel at chest height with right hand, (2) plants left foot and pulls a lever with both hands, (3) leans forward and turns a crank, (4) forcefully pushes a lever down with right hand and left hand on hat. Show hands making gestures without props. Keep the hat untouched, bare hands, same clean flat sprite linework.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f8740197-0193-49f9-8330-1369088e1b45.png",
+      "destination": "characters/layton/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/layton/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four separate well-detailed 2D clockwork prop illustrations: (1) short ascending iron staircase that rises from right to left, with a landing on the left, three quarter side-on, (2) brass tabletop control panel with lever and wheel but no stand or chair, (3) heavy toothed floor rack of three rising gears, (4) a large swinging brass pendulum blade and short pivot bar. No character. Each prop within one quadrant with ample transparent margins. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four separate well-detailed 2D clockwork prop illustrations: (1) short ascending iron staircase that rises from right to left, with a landing on the left, three quarter side-on, (2) brass tabletop control panel with lever and wheel but no stand or chair, (3) heavy toothed floor rack of three rising gears, (4) a large swinging brass pendulum blade and short pivot bar. No character. Each prop within one quadrant with ample transparent margins.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-94c49638-2cf8-461f-8caf-739e48ec72a2.png",
+      "destination": "characters/layton/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/layton/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four separate attack effects: (1) small horizontal amber palm strike burst with cream center, (2) horizontal golden rising gear tooth sparks compressed into one stream, (3) swinging rich bronze curved clock pendulum attack with orange edge and clear hard core, (4) giant golden clock hand sweeping across a partially outlined clock face with copper and pale yellow curved impact and sparks. Deliberate opaque cores and transparent exterior, no text or numerals. Exact 2x2 evenly-spaced sprite grid, one drawing per quadrant, generous transparent gutters, canvas completely transparent. No labels, no borders, no floor or shadows.",
+      "brief": "Four separate attack effects: (1) small horizontal amber palm strike burst with cream center, (2) horizontal golden rising gear tooth sparks compressed into one stream, (3) swinging rich bronze curved clock pendulum attack with orange edge and clear hard core, (4) giant golden clock hand sweeping across a partially outlined clock face with copper and pale yellow curved impact and sparks. Deliberate opaque cores and transparent exterior, no text or numerals.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c67833ca-87af-405e-ba35-335c09106b0b.png",
+      "destination": "characters/layton/assets/limit-effects.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-48027c10-61d4-48d2-9c09-e8130dbdd207.png"
+      ],
+      "prompt": "Wide cinematic antique clockmaker's workshop interior with tall warm brown iron walls and massive ornate clock at back, golden amber lights with cool blue at windows, empty foreground flat industrial stone ground, open environment with room for separate platforms and pendulum in the game. Side view as for a 2D fighting game. No character, no text, no UI, 2.2:1 landscape.",
+      "brief": "Wide cinematic antique clockmaker's workshop interior with tall warm brown iron walls and massive ornate clock at back, golden amber lights with cool blue at windows, empty foreground flat industrial stone ground, open environment with room for separate platforms and pendulum in the game. Side view as for a 2D fighting game. No character, no text, no UI, 2.2:1 landscape.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-79c2e0e2-6415-4db3-b6e4-1262047c7df5.png",
+      "destination": "characters/layton/assets/limit-court.webp"
+    }
+  ]
+}
