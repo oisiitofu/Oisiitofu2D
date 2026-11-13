@@ -840,6 +840,30 @@
     ],
     "shizuna-limit-moon": [
       "/assets/audio/se/shizuna-limit-moon.wav"
+    ],
+    "adol-limit-sword": [
+      "/assets/audio/se/adol-limit-sword.wav"
+    ],
+    "adol-limit-ride": [
+      "/assets/audio/se/adol-limit-ride.wav"
+    ],
+    "adol-limit-star": [
+      "/assets/audio/se/adol-limit-star.wav"
+    ],
+    "adol-limit-beam": [
+      "/assets/audio/se/adol-limit-beam.wav"
+    ],
+    "dana-limit-ice": [
+      "/assets/audio/se/dana-limit-ice.wav"
+    ],
+    "dana-limit-hammer": [
+      "/assets/audio/se/dana-limit-hammer.wav"
+    ],
+    "dana-limit-katar": [
+      "/assets/audio/se/dana-limit-katar.wav"
+    ],
+    "dana-limit-light": [
+      "/assets/audio/se/dana-limit-light.wav"
     ]
   },
   "impactDesign": {

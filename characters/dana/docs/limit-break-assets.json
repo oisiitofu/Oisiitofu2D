@@ -1,0 +1,69 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/dana/assets/dana-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/dana/assets/dana-poses.png"
+      ],
+      "prompt": "Exact reference Dana from Ys VIII in blue and white Iclucian outfit with long blue hair and two half-moon blades. Four right-facing full-body isolated transparent 2x2 sprites with wide margins: braces low with blades crossed, extends arms for fan-shaped cut, steps upward with one foot toward a ledge while retaining blades, pivots above the ground with legs staggered and both curved blades visible. Preserve color and outfit. No background, labels or impacts.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a2a69c1d-d556-4aad-b1ae-b80841f21920.png",
+      "destination": "characters/dana/assets/limit-poses.webp"
+    },
+    {
+      "kind": "gratica",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/dana/limit-break/gratica-reference.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/dana/assets/dana-poses.png"
+      ],
+      "prompt": "Four complete separated transparent sprites in strict 2x2 layout, one per cell, broad gutters, no floor shadow or labels. Exact official green-haired Dana Gratica in first reference, long flowing leafy green hair, gold verdigris armor, green and white garments, gold tall armored boots and heavy green-gold war hammer. Facing right: leans over grip preparing downward smash, heavy two-handed hammer downward, one boot braced as she lifts hammer off ground, looks up while stepping onto rising ledge. Same face and anime render quality as second ref. No ground or sparks.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-00f8ca33-3b5d-4546-8720-c4f265ddf8f5.png",
+      "source": "https://www.falcom.co.jp/ys8_ps4/sp/system/page01.html",
+      "destination": "characters/dana/assets/limit-gratica.webp"
+    },
+    {
+      "kind": "luminous",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/dana/limit-break/luminous-reference.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/dana/assets/dana-poses.png"
+      ],
+      "prompt": "Four complete separated transparent sprites in strict 2x2 layout, one per cell, broad gutters, no floor shadow or labels. Exact official Luminous Dana in first ref with bright golden orange hair and long golden crown points, white and gold armor and white leg panels, paired compact gold fist-mounted katar blades. Facing right: steps up sideways lightly, short left-handed katar jab, airborne short right-handed katar jab, holds both hands braced and aimed diagonally toward lower right to cast ray. Whole body and tips, no ray or VFX.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ea40ac7d-9101-40e2-8bb3-ccff4a684d30.png",
+      "source": "https://www.falcom.co.jp/ys8_ps4/sp/system/page01.html",
+      "destination": "characters/dana/assets/limit-luminous.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Four complete separated transparent sprites in strict 2x2 layout, one per cell, broad gutters, no floor shadow or labels. Top left high clear blue ice shelf with flat walkable top and pointed bottom; top right dark tan tall fractured stone pillar with flat walkable top; lower left separated blue ice chunks; lower right amber stone chips and blue light flecks, polished anime render.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a68fbd5f-7e6a-4a40-aae8-5e9b7e1e62e5.png",
+      "destination": "characters/dana/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Four complete separated transparent sprites in strict 2x2 layout, one per cell, broad gutters, no floor shadow or labels. Premium opaque impact FX. Top left readable cyan crescent with white core and frost pieces; top right green-gold downward hammer impact with strong white rim and fractured stone; bottom left compact hot golden katar impact; bottom right brilliant straight golden-white beam aiming to right with clear opaque warm core, narrow gold linework and amber energy halo. High contrast and no weapon or objects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-65bcb0cd-575e-4ee9-ad30-2f216cb1e88d.png",
+      "destination": "characters/dana/assets/limit-effects.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/dana/assets/dana-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/dana/assets/dana-selection.png"
+      ],
+      "prompt": "Match the existing in-game Dana reference precisely, pale blue eyes, long blue hair, flowing blue and white costume with gold trim, boots and paired gold-edged crescent swords. Premium anime cut-in 2.2:1. Chest up as Dana swings paired half-moon blades in two diagonals with her face comfortably visible near center, blue gold highlights, ancient Eternia stone in rear and crystalline blue light. No words or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c3e7ab08-c921-4c03-ad93-f5c4624b50f5.png",
+      "destination": "characters/dana/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Premium wide 2.2:1 side-on Ys VIII ancient Eternian temple ruins, moonlit blue-green stone walls, turquoise crystal veins and warm pale braziers, broad walkable flat stone floor in lower quarter, a distant carved stairway and cliff silhouettes, visually calm behind fighters. No figures or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b2e7fa1e-0058-46b1-8eb5-291953939735.png",
+      "destination": "characters/dana/assets/limit-court.webp"
+    }
+  ]
+}

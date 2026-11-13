@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/adol/assets/adol-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/adol/assets/adol-atlas.png"
+      ],
+      "prompt": "Exact reference Adol, red hair, blue-gray armor with warm trim, existing sword and footwear. Four right-facing full-body transparent sprites in a 2x2 atlas with empty gutters, no objects or background: withdraws blade low on beach, plants one foot and swings, crouches with both feet as if balancing on a narrow surfboard, rises as if launching off a board over a wave. Keep entire sword, hair and boots, no board, no splash.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-04485223-ebf9-491e-b7e8-2decce5b1a61.png",
+      "destination": "characters/adol/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/adol/assets/adol-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/adol/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Four complete separated transparent sprites in strict 2x2 layout, one per cell, broad gutters, no floor shadow or labels. Match the original game atlas precisely: Adol's crimson short hair, blue-black and gold-edged armor, dark leggings, brown armored boots, red and white split cape, steel straight sword with gold guard. All facing right: low crouch balancing both feet on unseen board, rise sharply with both boots level, vault off with one leg dropped, lands on one knee and keeps sword out. No board or VFX drawn.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e80d754a-2a98-4ca9-a6f4-5785424d4d57.png",
+      "destination": "characters/adol/assets/limit-motion.webp"
+    },
+    {
+      "kind": "flame",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/adol/assets/adol-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/adol/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Four complete separated transparent sprites in strict 2x2 layout, one per cell, broad gutters, no floor shadow or labels. Match the original game atlas precisely: Adol's crimson short hair, blue-black and gold-edged armor, dark leggings, brown armored boots, red and white split cape, steel straight sword with gold guard. Facing right: low diagonal swing, wide step drawing star-shaped sword line, kneels and aims sword tip straight ahead, braced finishing pose sword lowered and boots planted. No VFX.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-6542784c-6df2-4e71-a3ab-7e0c1a671daa.png",
+      "destination": "characters/adol/assets/limit-flame.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/adol/limit-break/board-reference.webp"
+      ],
+      "prompt": "Four complete separated transparent sprites in strict 2x2 layout, one per cell, broad gutters, no floor shadow or labels. Upper left one slim narrow red wood fantasy surfing board with upturned red nose and cream gold trim matching official Ys X screenshot, underside faint cyan seams, side three-quarter view; upper right thin blue water wake; lower left low broad worn coastal rock shelf with walkable flat top; lower right white spray droplets.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-dfa64de5-0107-4f5e-a305-61bf35165fcb.png",
+      "destination": "characters/adol/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Four complete separated transparent sprites in strict 2x2 layout, one per cell, broad gutters, no floor shadow or labels. High clarity anime combat effects: top left compact gold sword impact with solid white core, top right cyan horizontal wave with white foam rim, lower left angular five-point star trail of red gold strokes with hollow center, lower right a gigantic horizontal rightward heat beam with very solid white-yellow inner core and orange-red burning outer outline. No objects or weapons.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b4ad02b4-38b2-492e-9730-71edd6ac64ba.png",
+      "destination": "characters/adol/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          620,
+          444
+        ],
+        [
+          640,
+          0,
+          1774,
+          444
+        ],
+        [
+          0,
+          444,
+          612,
+          887
+        ],
+        [
+          642,
+          444,
+          1760,
+          846
+        ]
+      ]
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/adol/assets/adol-atlas.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/adol/assets/adol-selection.png"
+      ],
+      "prompt": "Match the original game atlas precisely: Adol's crimson short hair, blue-black and gold-edged armor, dark leggings, brown armored boots, red and white split cape, steel straight sword with gold guard. Premium 2.2:1 cinematic cut-in. Waist up on coastal cliff as he points sword toward right and gathers amber flame at its tip, face comfortably in center third, red-white cape and blue gold armor visible. Cool turquoise water in rear and orange rim light. No text or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f2317eb5-9f6d-485a-802a-2087b86ce682.png",
+      "destination": "characters/adol/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Premium wide 2.2:1 side-on fighting stage in Ys X bay, lively turquoise sea, coastal cliffs in distance, shallow surface across lower quarter and flat slate rock shelf toward right, dramatic overcast light and clear level water contact, no figures, labels or board.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3c77725d-1bae-45e4-a418-d3922b0199b3.png",
+      "destination": "characters/adol/assets/limit-court.webp"
+    }
+  ]
+}
