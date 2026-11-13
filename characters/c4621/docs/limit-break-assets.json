@@ -1,0 +1,67 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/c4621/assets/c4621-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/c4621/assets/c4621-selection.png"
+      ],
+      "prompt": "Exact same C4-621 mech from the two active game references, asymmetric angular off-white and charcoal armor and orange vents, four-tube orange shoulder pod, long dark right hand rifle, cyan blade on left forearm. Four independent transparent whole body sprites in 2x2 with wide gutters, all facing right, no effects. Pose one braces firing right with both feet, pose two stoops and banks low with jet-port exposed, pose three brakes with one heel planted and torso leaning backward, pose four low crouched landing as left forearm blade points down. Original armor panel positions and proportions. No lettering or cast shadows.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-df926c21-da75-47a6-8b78-926f81727d9d.png",
+      "destination": "characters/c4621/assets/limit-poses.webp"
+    },
+    {
+      "kind": "boost",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/c4621/assets/c4621-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/c4621/assets/c4621-selection.png"
+      ],
+      "prompt": "2x2 transparent atlas, four separated complete assets, broad gutters, no background or labels. Exact game atlas C4-621 with off-white and charcoal armor, orange four-tube shoulder pod, black right-hand rifle and blue left forearm blade. Four right-facing whole-body poses: low lateral quick boost bank, hips twisted with torso upright while braking, both boots planted with rifle aimed level, left knee down with blue blade arm braced. No smoke, weapons precisely matched.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-777b3e9d-8e0e-44f1-937a-3869b9c20656.png",
+      "destination": "characters/c4621/assets/limit-boost.webp"
+    },
+    {
+      "kind": "blade",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/c4621/assets/c4621-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/c4621/assets/c4621-selection.png"
+      ],
+      "prompt": "2x2 transparent atlas, four separated complete assets, broad gutters, no background or labels. Exact game atlas C4-621 with off-white and charcoal armor, orange four-tube shoulder pod, black right-hand rifle and blue left forearm blade. Four right-facing whole-body poses: low planting of rear foot, accelerates by leaning far forward, fully extends left forearm blade up-right with dramatic whole-body followthrough, stands down and lowers both arms. No free effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-908f87ca-3ad1-4684-925b-8abe0ae0338a.png",
+      "destination": "characters/c4621/assets/limit-blade.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "2x2 transparent atlas, four separated complete assets, broad gutters, no background or labels. Stylized armored sci-fi game effects props: top left compact silver fictional missile with warm glowing tail pointing right, top right isolated long cyan exhaust plume pointing left, bottom left scattered chunks of metal, bottom right a small amber thruster flare. No text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0362f3a9-fd01-4b6d-bc13-1206e3f964c8.png",
+      "destination": "characters/c4621/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "2x2 transparent atlas, four separated complete assets, broad gutters, no background or labels. Readable fictional mech arcade impacts. Top left short bright amber shooting impact, top right white-orange missile burst, lower left strong turquoise braking spray with solid core, lower right large angular cyan-white sword upward slash, bright core and opaque edge with cool outline. No actual weapons.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-71821bbd-f08c-48f9-b1aa-f7435292a627.png",
+      "destination": "characters/c4621/assets/limit-effects.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/c4621/assets/c4621-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/c4621/assets/c4621-selection.png"
+      ],
+      "prompt": "2.2:1 panoramic high detail sci-fi game illustration. Exact game atlas C4-621 with off-white and charcoal armor, orange four-tube shoulder pod, black right-hand rifle and blue left forearm blade. Close cockpit head and shoulders, blue blade directed diagonally upward, low industrial backlight, sparks on steel. Exact armor and proportions. No text or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-65379a69-721a-48f5-824d-cd38788c3988.png",
+      "destination": "characters/c4621/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "2.2:1 panoramic side-on Rubicon industrial refinery, slate machinery, orange signals and fog, long flat dark landing deck spanning bottom quarter, low contrast behind fighters, empty scene, no letters.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bfb3b9a6-54af-4855-a702-d4354dd9dc94.png",
+      "destination": "characters/c4621/assets/limit-court.webp"
+    }
+  ]
+}

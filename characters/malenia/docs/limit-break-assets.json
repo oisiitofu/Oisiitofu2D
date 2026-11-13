@@ -1,0 +1,119 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/malenia/assets/malenia-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/malenia/assets/malenia-selection.png"
+      ],
+      "prompt": "Exact Malenia from attached active game atlas and portrait: gold winged helmet fully intact, deep crimson long hair and red cape, layered pale gold armor and draped white skirt, gold right prosthetic arm wielding a long slender gold katana. 2x2 transparent whole-body animation sprites all facing right, wide margins, no background or effects. Four distinct full-body poses: low grounded blade draw, launches from one foot with knee lifted, hangs high in folded guard with blade over shoulder and cape draping, tips forward to prepare diagonal slash. Preserve existing head, face silhouette, costume, prosthesis, and long sword exactly.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1a1578ee-356b-418b-b8a1-d52de76c8caf.png",
+      "destination": "characters/malenia/assets/limit-poses.webp"
+    },
+    {
+      "kind": "dance",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/malenia/assets/malenia-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/malenia/assets/malenia-selection.png"
+      ],
+      "prompt": "2x2 transparent atlas, four separated complete assets, broad gutters, no background or labels. Exact game atlas Malenia, gold winged helmet, long crimson hair and cape, layered cream skirt and right gold prosthetic with extremely long slender gold blade. Four right-facing airborne poses: tightly tucked windup, diagonal plunge slash, midair horizontal extended slash, high turn with leg tucked and cape hanging. No effects, full blade and feet.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-508ca929-6859-4b1b-9fda-79a968cf91c7.png",
+      "destination": "characters/malenia/assets/limit-dance.webp"
+    },
+    {
+      "kind": "rot",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/malenia/assets/malenia-rot.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/malenia/assets/malenia-selection.png"
+      ],
+      "prompt": "2x2 transparent atlas, four separated complete assets, broad gutters, no background or labels. Exact game atlas rot Malenia, same gold helmet, hair, gold prosthesis, cream layered costume and huge red petal wings. Four right-facing full-body poses: hovering with wings unfurled, diving headfirst with blade low, kneeling after impact with wings open, standing in center of wings with blade down. No effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-334ec9a6-717c-4039-9fec-45444b995b55.png",
+      "destination": "characters/malenia/assets/limit-rot.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "2x2 transparent atlas, four separated complete assets, broad gutters, no background or labels. Fantasy boss battle motifs. Top left a compact scarlet unopened flower bud, top right fully opened enormous scarlet and burnt orange flower with a hollow center, bottom left low translucent scarlet petals and leaves, bottom right flying stone and water droplets.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3b32a537-9abf-448e-8627-62e187caefcd.png",
+      "destination": "characters/malenia/assets/limit-props.webp",
+      "cropBoxes": [
+        [
+          70,
+          129,
+          415,
+          552
+        ],
+        [
+          451,
+          0,
+          1312,
+          603
+        ],
+        [
+          17,
+          815,
+          644,
+          1151
+        ],
+        [
+          683,
+          623,
+          1312,
+          1199
+        ]
+      ]
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "2x2 transparent atlas, four separated complete assets, broad gutters, no background or labels. High contrast anime game effects. Top left solid silver-gold slicing crescent with right convex edge, top right blue-white horizontal rapid cuts, bottom left compact orange-white landing flare, bottom right huge scarlet orange flower-shaped blast with solid white-hot center and distinct petals, transparent fringe.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f7125a6b-1c97-42a3-a697-44a4e06c34d1.png",
+      "destination": "characters/malenia/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          12,
+          0,
+          514,
+          540
+        ],
+        [
+          553,
+          103,
+          1263,
+          418
+        ],
+        [
+          12,
+          677,
+          472,
+          1155
+        ],
+        [
+          472,
+          506,
+          1263,
+          1245
+        ]
+      ]
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/malenia/assets/malenia-poses.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/malenia/assets/malenia-selection.png"
+      ],
+      "prompt": "Panoramic 2.2:1 cinematic illustration, Exact game atlas Malenia, gold winged helmet, long crimson hair and cape, layered cream skirt and right gold prosthetic with extremely long slender gold blade. Her eyes remain under the helmet as in game, shoulders and long blade clearly visible, quiet pale roots and water with orange light behind. No text or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-13efdf8f-333c-4caf-a834-48e22008fb40.png",
+      "destination": "characters/malenia/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Panoramic 2.2:1 side-on fantasy arena below enormous pale roots, muted teal shadows, a few white flowers, flat shallow water over stone spanning bottom quarter, subdued contrast behind fighters. No figures or lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3864c8e6-7662-4e63-a701-43d2c2a72336.png",
+      "destination": "characters/malenia/assets/limit-court.webp"
+    }
+  ]
+}

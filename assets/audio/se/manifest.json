@@ -864,6 +864,30 @@
     ],
     "dana-limit-light": [
       "/assets/audio/se/dana-limit-light.wav"
+    ],
+    "malenia-limit-draw": [
+      "/assets/audio/se/malenia-limit-draw.wav"
+    ],
+    "malenia-limit-dance": [
+      "/assets/audio/se/malenia-limit-dance.wav"
+    ],
+    "malenia-limit-wings": [
+      "/assets/audio/se/malenia-limit-wings.wav"
+    ],
+    "malenia-limit-bloom": [
+      "/assets/audio/se/malenia-limit-bloom.wav"
+    ],
+    "c4621-limit-rifle": [
+      "/assets/audio/se/c4621-limit-rifle.wav"
+    ],
+    "c4621-limit-missile": [
+      "/assets/audio/se/c4621-limit-missile.wav"
+    ],
+    "c4621-limit-boost": [
+      "/assets/audio/se/c4621-limit-boost.wav"
+    ],
+    "c4621-limit-blade": [
+      "/assets/audio/se/c4621-limit-blade.wav"
     ]
   },
   "impactDesign": {
