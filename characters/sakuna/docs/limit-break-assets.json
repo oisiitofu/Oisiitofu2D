@@ -1,0 +1,95 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakuna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "High quality cinematic wide cut-in of the exact attached 2D fighting-game version of Sakuna. Preserve the little harvest goddess's proportions, round violet eyes, dark violet large looped hair with red ties, floral red and gold kimono sleeves, indigo pleated skirt, cream celestial ribbons, brown sandals and gold ear ornaments. In the air as a broad white ribbon curves from her shoulder towards the top right, both hands lifting a traditional long-handled wooden hoe with a broad dark bronze rectangular blade. Character's eyes and face clear. Late storm over tiered rice fields and jagged volcanic outcrops, gold light, watercolor anime environment. Keep rich precise sprite-style character details. 2.2:1 cinematic landscape, no UI, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5c996c97-99bc-4e68-ba63-bedca99f1dad.png",
+      "destination": "characters/sakuna/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakuna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact match to the attached Sakuna game atlas. Very small harvest goddess with large violet eyes, dark violet hair in big loops with red ties, red gold-trimmed short kimono with floral detail, dark indigo pleated skirt, brown sandals, gold round earrings, two cream silk ribbons and long wooden hoe with dark bronze rectangular blade. Keep sprite silhouette, clothes, face and limbs. Four right-facing full-body poses: 1) grounded with hoe horizontal in guard, 2) pushes off floor with both legs bent and ribbons drawn taut behind her, 3) midair swing in low lateral arc with both hands on hoe, 4) high airborne reaching up to the right with left hand to send a cream ribbon forward. No effects except the character ribbons. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3c2bb0d3-52e7-4d2b-be92-61f69a22a683.png",
+      "destination": "characters/sakuna/assets/limit-poses.webp"
+    },
+    {
+      "kind": "swing",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakuna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact match to the attached Sakuna game atlas. Very small harvest goddess with large violet eyes, dark violet hair in big loops with red ties, red gold-trimmed short kimono with floral detail, dark indigo pleated skirt, brown sandals, gold round earrings, two cream silk ribbons and long wooden hoe with dark bronze rectangular blade. Keep sprite silhouette, clothes, face and limbs. Four right-facing full-body poses: 1) sailing diagonally upward with body stretched and looking above, 2) knees tucked at apex and hoe raised beside shoulder, 3) side-on twist pulling a taut cream ribbon with both hands, 4) reverse torque tossing outward with body tilted and hoe beside waist. No characters besides Sakuna. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a55da852-4fb9-42a9-8b9d-27f47ec94630.png",
+      "destination": "characters/sakuna/assets/limit-swing.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakuna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact match to the attached Sakuna game atlas. Very small harvest goddess with large violet eyes, dark violet hair in big loops with red ties, red gold-trimmed short kimono with floral detail, dark indigo pleated skirt, brown sandals, gold round earrings, two cream silk ribbons and long wooden hoe with dark bronze rectangular blade. Keep sprite silhouette, clothes, face and limbs. Four right-facing distinct full-body poses: 1) raises hoe over head suspended in the air with bent knees, 2) upside-down quarter roll with ribbon swirling near shoulders, 3) steep downward plunge leading with the hoe, 4) wide kneeling landing with hoe head down, hair and cream ribbons settling. Preserve all proportions. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-93b866d3-8c4a-4803-aecf-947e8f07b425.png",
+      "destination": "characters/sakuna/assets/limit-finish.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakuna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated vivid readable effects: (1) right-facing short cream gold circular strike with opaque rich dark edge; (2) smooth ivory and gold ribbon trail curling right with cloth weave and high contrast; (3) angular golden impact on soil, dark amber silhouette and opaque interior; (4) massive expanding blue-white and gold shockwave with broken soil and golden rice sparks, striking forward along the earth. No figures. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4148aa36-9746-462f-b31b-b225e0267168.png",
+      "destination": "characters/sakuna/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          144,
+          68,
+          652,
+          429
+        ],
+        [
+          798,
+          96,
+          1450,
+          405
+        ],
+        [
+          69,
+          513,
+          651,
+          942
+        ],
+        [
+          671,
+          498,
+          1510,
+          940
+        ]
+      ]
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sakuna/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated hand-painted game scenery sprites: (1) flat tall dark volcanic rock outcrop with knobby upper-right hook, (2) squat layered rocky ledge with rice-grass, (3) rice chaff and soil debris, (4) a few tiny amber floating autumn rice grains. No characters. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-fcbbf0b1-0a53-4003-807c-db021738d9fb.png",
+      "destination": "characters/sakuna/assets/limit-props.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5c996c97-99bc-4e68-ba63-bedca99f1dad.png"
+      ],
+      "prompt": "Wide 2.2:1 painted anime environment of terraced rice fields beneath storm clouds breaking to gold light, jagged volcanic mountains, windy crops, open flat earthen battleground across foreground at mid-height. No figures, no letters or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8eccd79e-3781-4718-94c0-3cd267268318.png",
+      "destination": "characters/sakuna/assets/limit-court.webp"
+    }
+  ]
+}

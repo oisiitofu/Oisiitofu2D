@@ -915,6 +915,33 @@
     ],
     "layton-limit-finish": [
       "/assets/audio/se/layton-limit-finish.wav"
+    ],
+    "kisuke-limit-parry": [
+      "/assets/audio/se/kisuke-limit-parry.wav"
+    ],
+    "kisuke-limit-draw": [
+      "/assets/audio/se/kisuke-limit-draw.wav"
+    ],
+    "kisuke-limit-swap": [
+      "/assets/audio/se/kisuke-limit-swap.wav"
+    ],
+    "kisuke-limit-sheath": [
+      "/assets/audio/se/kisuke-limit-sheath.wav"
+    ],
+    "kisuke-limit-finish": [
+      "/assets/audio/se/kisuke-limit-finish.wav"
+    ],
+    "sakuna-limit-hoe": [
+      "/assets/audio/se/sakuna-limit-hoe.wav"
+    ],
+    "sakuna-limit-silk": [
+      "/assets/audio/se/sakuna-limit-silk.wav"
+    ],
+    "sakuna-limit-throw": [
+      "/assets/audio/se/sakuna-limit-throw.wav"
+    ],
+    "sakuna-limit-finish": [
+      "/assets/audio/se/sakuna-limit-finish.wav"
     ]
   },
   "impactDesign": {

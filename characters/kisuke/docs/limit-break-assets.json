@@ -1,0 +1,69 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/kisuke/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "High quality cinematic wide cut-in of the exact attached 2D fighting-game version of Kisuke. The same tousled warm dark brown hair, turquoise long scarf with two ends, gold-trimmed sleeveless indigo ninja armor with red seams, baggy indigo trousers, dark forearm guards, straw sandals, red lacquer scabbard and single long silver katana. Keep young face, proportions and clothes completely consistent, including visible scarf. Mid-close anime character shot just before an iaijutsu draw, one hand on scabbard, steel reflection near the bottom but no face obstructions. Dark green moonlit bamboo and fog with red shrine lanterns and Japanese hand-painted cinematic background. 2.2:1 horizontal, no letters, no frame, no UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d7bfeed1-9a00-42a4-810b-ba2f145b9ef0.png",
+      "destination": "characters/kisuke/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/kisuke/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact match to attached Kisuke gameplay atlas: teen ninja with tousled brown hair, bright turquoise long split scarf, sleeveless indigo battle clothing, gold and red trim, baggy indigo trousers, dark bracers, rope sandals, red lacquer scabbard and slender silver katana. Maintain face, costume, weapon and proportions. Four right-facing full-body poses: 1) low crossed-arm blade guard, 2) pushing forward in a short firm parry and looking toward right, 3) low forward draw strike with left knee bent and katana tip extended right, 4) wide lunge recovery with blade held back. Wide margins. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-838ae646-574f-43a1-a33c-a362e5cc4619.png",
+      "destination": "characters/kisuke/assets/limit-poses.webp"
+    },
+    {
+      "kind": "swap",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/kisuke/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact match to attached Kisuke gameplay atlas: teen ninja with tousled brown hair, bright turquoise long split scarf, sleeveless indigo battle clothing, gold and red trim, baggy indigo trousers, dark bracers, rope sandals, red lacquer scabbard and slender silver katana. Maintain face, costume, weapon and proportions. Four right-facing distinct whole-body poses: 1) hips low, one hand releasing a broken sword hilt and the other reaching down, 2) deep kneel with right hand reaching for a planted replacement katana, 3) rises turning torso with sword drawn upright, 4) stepping back into horizontal ready guard, eyes on opponent. No flying particles or shadows. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4c436f8c-36b1-4715-b7d3-a9dac7d2da7e.png",
+      "destination": "characters/kisuke/assets/limit-swap.webp"
+    },
+    {
+      "kind": "sheath",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/kisuke/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact match to attached Kisuke gameplay atlas: teen ninja with tousled brown hair, bright turquoise long split scarf, sleeveless indigo battle clothing, gold and red trim, baggy indigo trousers, dark bracers, rope sandals, red lacquer scabbard and slender silver katana. Maintain face, costume, weapon and proportions. Four right-facing distinct full-body poses: 1) katana ready at waist with hand over scabbard, 2) low sweeping iaijutsu with sword stretched right, 3) standing in half-profile carefully sliding the silver sword into its red scabbard at hip, 4) final stance with katana fully sheathed and scarf trailing. No effects. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2eafa859-bf40-4d5c-b134-fe9b61b9c895.png",
+      "destination": "characters/kisuke/assets/limit-sheath.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/kisuke/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four separate bright readable sword attack effects. (1) compact icy steel sparks from a parry; (2) slender cyan and silver crescent convex to the right; (3) orange-white low underhand flat slash with its tip pointing right; (4) broad cobalt, white and gold delayed iai cut with a sweeping bright rightward tip. No figures. Bright opaque cores, transparent outside. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d10a5655-030a-4ea5-a273-1a64aae7b96c.png",
+      "destination": "characters/kisuke/assets/limit-effects.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/kisuke/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Four isolated sprites: sword fragments silver with red lacquer hilt, single silver katana planted point-down in a patch of leaf litter, group of dark green flying bamboo leaves, single red wooden lantern. No human figure. Exactly four equal-sized widely separated tiles in a 2x2 grid, transparent canvas and wide transparent margins, no labels, no text, no border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b7a6be07-6818-4165-a456-54a4cb7fd429.png",
+      "destination": "characters/kisuke/assets/limit-props.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d7bfeed1-9a00-42a4-810b-ba2f145b9ef0.png"
+      ],
+      "prompt": "Wide 2.2:1 painted anime environment. Empty moonlit bamboo grove with deep teal night fog, red lanterns and a shrine gate far in background. Open flat stone path spans the foreground at mid-height. Tactile subtle Japanese painting, no text or figures.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1d8084da-b84e-4fee-ac8c-8263a8a54227.png",
+      "destination": "characters/kisuke/assets/limit-court.webp"
+    }
+  ]
+}
