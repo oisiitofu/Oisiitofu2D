@@ -1,0 +1,89 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/yuma/assets/yuma-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/yuma/assets/yuma-attacks.png"
+      ],
+      "prompt": "Create four independent full-body game animation sprites in a strict transparent 2×2 atlas with generous clear gutters, no divider lines, every figure fully in its cell. Exactly match the referenced Yuma Kokohead existing game character: lavender short hair, purple eyes, black navy detective cloak with gold buttons and star brooch, navy wide-brim hat with vivid blue ribbon and small golden star, dark slim boots, glowing violet short Solution Blade with an ornate gold guard. All face right. Top left ducks very low under an incoming obstacle, one foot stepping, blade held parallel to the ground. Top right firmly plants both feet and parries with the blade diagonally upward toward the right. Bottom left pushes off and tucks knees to jump, reaches one gloved hand forward, sword held tight to chest. Bottom right floats near apex of jump and inserts a tiny golden key into sword guard, blade horizontal, focus in both eyes. Same exact outfit proportions. No shadow, text, glow floating away, backgrounds or characters besides Yuma.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-081c7efb-093f-4eb9-83d6-4121909d7f46.png",
+      "destination": "characters/yuma/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\yuma\\limit-break\\first-motion-source.png"
+      ],
+      "brief": "Four Yuma poses from overhead jump to downward slash, braced landing and facing the giant ally.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ae8f7fb0-4500-49ff-9b82-9c5661652feb.png",
+      "destination": "characters/yuma/assets/limit-motion.webp"
+    },
+    {
+      "kind": "solution",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\yuma\\limit-break\\first-motion-source.png"
+      ],
+      "brief": "Four Yuma poses for recoil, forward lunge, upward strike and settling cloak.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ec18fdd0-289f-4889-a893-6355d2344951.png",
+      "destination": "characters/yuma/assets/limit-solution.webp"
+    },
+    {
+      "kind": "shinigami",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\yuma\\limit-break\\god-shinigami-official-08.jpg",
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\yuma\\limit-break\\god-shinigami-official-09.jpg"
+      ],
+      "brief": "Four canonical GOD Shinigami poses with the long pink braid and scythe, including a running step, forward kick and wall charge.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ebb48aa3-4af6-4729-9fbe-5ae32ce46a85.png",
+      "source": "https://www.spike-chunsoft.com/news/master-detective-archives-rain-code-episodes-and-subquests-details-revealed/",
+      "destination": "characters/yuma/assets/limit-shinigami.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "brief": "Pink and blue statement panels, brass evidence key, and purple spirit.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9c8ee219-b7f1-4f93-a3c0-21ea4753df05.png",
+      "destination": "characters/yuma/assets/limit-props.webp"
+    },
+    {
+      "kind": "hazards",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\yuma\\limit-break\\god-shinigami-official-08.jpg",
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\yuma\\limit-break\\god-shinigami-official-09.jpg"
+      ],
+      "brief": "Ochre wall, iron ball, broken rubble and stone platform.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-45535ab0-c461-4dc9-8c65-3da1ebaa6767.png",
+      "source": "https://www.spike-chunsoft.com/news/master-detective-archives-rain-code-episodes-and-subquests-details-revealed/",
+      "destination": "characters/yuma/assets/limit-hazards.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\yuma\\limit-break\\first-motion-source.png",
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\yuma\\limit-break\\god-shinigami-official-08.jpg",
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\yuma\\limit-break\\god-shinigami-official-09.jpg"
+      ],
+      "brief": "Wide Yuma cut-in inserting the evidence key with Shinigami and the maze behind.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3f91cefa-02d3-4ed4-840d-86d276c0ab12.png",
+      "source": "https://www.spike-chunsoft.com/news/master-detective-archives-rain-code-episodes-and-subquests-details-revealed/",
+      "destination": "characters/yuma/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "brief": "Wide violet Mystery Labyrinth with stairs, floating arches, rain and a clear level path.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9f6694ea-28ee-4fbc-9f32-d46f07b0ff1a.png",
+      "destination": "characters/yuma/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "brief": "Parry, key flash, violet curved slash and blade-lit wall fracture.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-27e538b9-7e13-45f0-9ea6-f2b06a20efd9.png",
+      "destination": "characters/yuma/assets/limit-effects.webp"
+    }
+  ]
+}

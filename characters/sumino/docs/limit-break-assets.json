@@ -1,0 +1,90 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sumino/assets/sumino-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/sumino/assets/sumino-atlas.png"
+      ],
+      "prompt": "Create four independent whole-body anime action game animation sprites in a strict transparent 2x2 atlas with clear empty gutters and no divider lines, each figure entirely in its own quadrant. Exactly match the referenced Takumi Sumino game design, vivid burgundy layered hair, blue-violet eyes, black high-collared academy combat uniform edged in crimson piping, silver buttons, left white armband, fitted trousers and boots, and slender black-and-red luminous mechanical sword. All facing right. Top left low kneeling defense, with sword horizontal at waist and back foot holding ground. Top right steps diagonally hard onto front right foot, gives an angled low sweep with long blade still completely inside the quadrant. Bottom left finishes outward sweeping strike with torso turned and both feet planted; one hand supports hilt. Bottom right draws blade back close and takes a deliberate backward step with low center of gravity, eyes fixed to right. Maintain crisp realistic anime shading and same body proportions. No special effect, blood, backdrop, lettering, shadow or other objects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9d372b15-ae2c-4180-86cb-0cdc230f7bf0.png",
+      "destination": "characters/sumino/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\sumino\\limit-break\\first-motion-source.png"
+      ],
+      "brief": "Four Sumino poses including guarded sidestep, sweeping slash, low finish and blade guard.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-070a0336-f3fe-4362-bbde-b04498d586c9.png",
+      "destination": "characters/sumino/assets/limit-motion.webp"
+    },
+    {
+      "kind": "defense",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\sumino\\limit-break\\first-motion-source.png"
+      ],
+      "brief": "Four Sumino poses including compressed windup, forward slash, large sweeping strike and resting follow-through.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-260b7fa9-25d6-4cd6-b3c0-0db06db8d3fd.png",
+      "destination": "characters/sumino/assets/limit-defense.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "brief": "Defensive barricade, gate pillar, power node and embers.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3bba7102-cf39-4c17-9e94-7358ec634e53.png",
+      "destination": "characters/sumino/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\sumino\\limit-break\\first-motion-source.png"
+      ],
+      "brief": "Wide Sumino cut-in drawing the red Hemoanima blade in front of the academy gate.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e1f94daf-f961-48a0-a456-a69634878329.png",
+      "destination": "characters/sumino/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "brief": "Wide academy gate and flat slate plaza under persistent fire.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5c2daef8-79a4-4df0-8634-62645cbbacbe.png",
+      "destination": "characters/sumino/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "brief": "Guard impact, red ground pulse, curved slash and broad final strike.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-04289681-c809-4888-ab7c-fc2af59e9bbf.png",
+      "destination": "characters/sumino/assets/limit-effects.webp",
+      "cropBoxes": [
+        [
+          0,
+          0,
+          631,
+          623
+        ],
+        [
+          631,
+          0,
+          1263,
+          623
+        ],
+        [
+          0,
+          623,
+          517,
+          1246
+        ],
+        [
+          517,
+          623,
+          1263,
+          1246
+        ]
+      ]
+    }
+  ]
+}

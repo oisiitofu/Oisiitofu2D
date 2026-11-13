@@ -768,6 +768,30 @@
     ],
     "monokuma-limit-ball": [
       "/assets/audio/se/monokuma-limit-ball.wav"
+    ],
+    "yuma-limit-repel": [
+      "/assets/audio/se/yuma-limit-repel.wav"
+    ],
+    "yuma-limit-key": [
+      "/assets/audio/se/yuma-limit-key.wav"
+    ],
+    "yuma-limit-solution": [
+      "/assets/audio/se/yuma-limit-solution.wav"
+    ],
+    "yuma-limit-wall": [
+      "/assets/audio/se/yuma-limit-wall.wav"
+    ],
+    "sumino-limit-guard": [
+      "/assets/audio/se/sumino-limit-guard.wav"
+    ],
+    "sumino-limit-blade": [
+      "/assets/audio/se/sumino-limit-blade.wav"
+    ],
+    "sumino-limit-line": [
+      "/assets/audio/se/sumino-limit-line.wav"
+    ],
+    "sumino-limit-finale": [
+      "/assets/audio/se/sumino-limit-finale.wav"
     ]
   },
   "impactDesign": {
