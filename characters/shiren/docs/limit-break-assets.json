@@ -1,0 +1,66 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shiren/assets/shiren-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/shiren/assets/shiren-atlas.png"
+      ],
+      "prompt": "Match the exact Shiren reference, young adult male wanderer with amber eyes, brown hair, wide tan woven kasa, bright red tunic, blue-and-white striped cape, dark trousers and sandals, short Japanese sword and round shield where appropriate. Four separate whole body poses in 2×2 transparent atlas with wide margins and no labels or cast shadows, facing right. Upper left plants both feet with a small carved staff in hands extended to right, expressive. Upper right turns his shoulder to step down into a narrow passage, one foot seeking lower tread. Lower left crouches with both feet flat and lifts a triangular white rice ball with black seaweed to mouth. Lower right just finishing the bite, rising decisively with cape and feet apart, one hand holding sword in sheath. Include the complete brim, cape and both feet in each, same high-detail stylized anime rendering. No background or effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-29e3ad82-f25f-446b-8a51-675fc1fc7812.png",
+      "destination": "characters/shiren/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shiren/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Four fully isolated complete sprites in a strict 2x2 transparent atlas with wide clear gutters. No background, grid, text or floor shadows. Same Shiren of the reference, young adult wanderer in broad straw hat, blue striped cape, red tunic, dark pants, straw sandals. Facing right. Four distinct poses: descending a step with magic staff angled forward; planted striking with short sword; crouches and lifts rice ball; takes a bite with eyes focused, hat clear. Whole body in each cell.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-51971887-186c-44f6-ac2e-8b5c0a65cc7d.png",
+      "destination": "characters/shiren/assets/limit-motion.webp"
+    },
+    {
+      "kind": "dosukoi",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shiren/limit-break/first-motion-source.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shiren/limit-break/official-dosukoi.webp"
+      ],
+      "prompt": "Four fully isolated complete sprites in a strict 2x2 transparent atlas with wide clear gutters. No background, grid, text or floor shadows. Shiren the Wanderer 6 in canonical Dosukoi sumo state. Preserve same exact face, broad straw hat, blue-white striped cape and red tunic, now clearly rounded heavy body, wider belt and stance. Four distinct full-body right-facing poses: rises and plants both feet, lifts one leg for heavy stomp, lands wide with raised short blade, heavy forward blade cut with both feet engaged. Same person and outfit. No stray objects or effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b2d1e463-9200-4497-a448-f3754b693b4f.png",
+      "source": "https://www.spike-chunsoft.co.jp/pages/shiren6/system/",
+      "destination": "characters/shiren/assets/limit-dosukoi.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Four fully isolated complete sprites in a strict 2x2 transparent atlas with wide clear gutters. No background, grid, text or floor shadows. Japanese mystery dungeon props. Top left two weathered stone stair treads descending to right, complete footing silhouette. Top right a square stone pressure plate with red circular inset. Bottom left vertical wall of large mossy cracked sandstone blocks. Bottom right separated chunky mossy stones and dusty fragments. Warm and teal reflected light, isolated silhouettes.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3c900253-c3aa-4803-8d8c-7f672db9cce5.png",
+      "destination": "characters/shiren/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/shiren/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Wide 2.2:1 premium anime action key art. Match Shiren reference face and straw kasa, blue and white cape, red tunic; noticeably rounder powerful Dosukoi form. Waist-up three quarter view with short sword raised and stone breaking around him, small triangular rice ball tucked beside belt. Warm torchlight and cool turquoise dungeon edges. Clear face, no writing or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f883168c-9873-4b5d-a404-54fc72430607.png",
+      "destination": "characters/shiren/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 2.2:1 side-on Mystery Dungeon battle background. Narrow underground Japanese dungeon with warm hanging lanterns, dark turquoise stone, mossy worn masonry, distant staircase, broad clear walkable stone platform across bottom quarter. No figures or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d934a55a-3267-4c7e-bd32-cf23409bb84b.png",
+      "destination": "characters/shiren/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Four fully isolated complete sprites in a strict 2x2 transparent atlas with wide clear gutters. No background, grid, text or floor shadows. Anime combat impacts with opaque cores: top left cyan horizontal magic staff bolt pointing right; top right compact orange trap-break impact and chunks; bottom left warm ochre stomp with bright white core and dust chips; bottom right huge rightward glowing gold and teal sweeping sword and shattered masonry, no literal weapon. Distinct edges on bright ground.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e17ce411-2feb-4c8d-b36a-86eaa5857b0b.png",
+      "destination": "characters/shiren/assets/limit-effects.webp"
+    }
+  ]
+}

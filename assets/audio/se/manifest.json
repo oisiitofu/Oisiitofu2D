@@ -792,6 +792,30 @@
     ],
     "sumino-limit-finale": [
       "/assets/audio/se/sumino-limit-finale.wav"
+    ],
+    "shiren-limit-staff": [
+      "/assets/audio/se/shiren-limit-staff.wav"
+    ],
+    "shiren-limit-rice": [
+      "/assets/audio/se/shiren-limit-rice.wav"
+    ],
+    "shiren-limit-stomp": [
+      "/assets/audio/se/shiren-limit-stomp.wav"
+    ],
+    "shiren-limit-wall": [
+      "/assets/audio/se/shiren-limit-wall.wav"
+    ],
+    "estelle-limit-staff": [
+      "/assets/audio/se/estelle-limit-staff.wav"
+    ],
+    "estelle-limit-pivot": [
+      "/assets/audio/se/estelle-limit-pivot.wav"
+    ],
+    "estelle-limit-land": [
+      "/assets/audio/se/estelle-limit-land.wav"
+    ],
+    "estelle-limit-blossom": [
+      "/assets/audio/se/estelle-limit-blossom.wav"
     ]
   },
   "impactDesign": {

@@ -1,0 +1,64 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/estelle/assets/estelle-selection.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/characters/estelle/assets/estelle-atlas.png"
+      ],
+      "prompt": "Match the exact existing Estelle Bright sprite design: vivid long orange twin ponytails with silver oval fasteners, warm brown eyes, red short jacket, white undershirt, silver shoulder plate, belts and legwear as reference. Full long brown metal-tipped quarterstaff. Four separate whole-body right-facing sprites in a strict 2×2 transparent atlas with wide margins and no grid marks. Upper left braces and stabs the butt end at hip level straight right. Upper right steps half a pace back and switches hand positions, staff close across waist. Lower left drives the far end of the staff diagonally down into an imaginary ground, one foot leaving floor, grip and entire pole very clear. Lower right vaults upward with knees bent around fixed pole, both hands gripping, momentum in twin ponytails. Separate full bodies and equipment, no scenery or visible ground, no text or free effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f82c9868-a558-4ec2-81b8-bb8aae74b2fe.png",
+      "destination": "characters/estelle/assets/limit-poses.webp"
+    },
+    {
+      "kind": "motion",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/estelle/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Four fully isolated complete sprites in a strict 2x2 transparent atlas with wide clear gutters. No background, grid, text or floor shadows. Exactly the same Estelle Bright as the reference, long orange twin tails, red jacket, shoulder armor and brown metal-ended quarterstaff. Facing right. Four full-body poses: release from vault swinging feet upward; airborne twist swings staff diagonally down; lands on one knee with staff planted obliquely; rises with reversed grip to strike with the rear end. Complete staff tips and hair. No free effects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1937bc2a-7aed-4222-9aec-63949f413677.png",
+      "destination": "characters/estelle/assets/limit-motion.webp"
+    },
+    {
+      "kind": "blossom",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/estelle/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Four fully isolated complete sprites in a strict 2x2 transparent atlas with wide clear gutters. No background, grid, text or floor shadows. Same Estelle Bright orange twin tails, red-white jacket, silver shoulder and exact quarterstaff. Facing right. Four different full-body actions: balanced low staff sweep; steps in while raising quarterstaff over shoulder; powerful broad finishing staff strike diagonally right with both boots planted; straightens and lowers staff, confident expression. Full pole and figure in each cell.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-78d7f9bb-a500-4dc1-aa9a-0399e32a38e3.png",
+      "destination": "characters/estelle/assets/limit-blossom.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [],
+      "prompt": "Four fully isolated complete sprites in a strict 2x2 transparent atlas with wide clear gutters. No background, grid, text or floor shadows. Trails in the Sky courtyard props: upper left low carved pale stone rail, top right broad pale stone stepping slab, bottom left several isolated pink petals swirling with open spaces, bottom right wide pink flowering branch. Warm sunlight, no figures.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-64afcc47-adc1-432b-9600-d371969d43fb.png",
+      "destination": "characters/estelle/assets/limit-props.webp"
+    },
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/estelle/limit-break/first-motion-source.png"
+      ],
+      "prompt": "Wide 2.2:1 premium anime action key art. Exact Estelle Bright reference face, orange twin tails, red outfit and quarterstaff. Three-quarter tight mid-swing pose, both eyes legible, staff diagonal in foreground, blossom petals and a Liberl courtyard behind, strong warm directional light. No text or borders.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-caac7878-590a-4702-b042-31f2afe9d76e.png",
+      "destination": "characters/estelle/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [],
+      "prompt": "Wide 2.2:1 premium side-on Trails in the Sky courtyard background, pale stone terrace with visible footing across lower quarter, Liberl hills and distant towers, a few flowering trees, warm spring light. Calm middle-ground for actors, no figures or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a1406c26-0cc4-44f0-a384-94a6cdfcdfcd.png",
+      "destination": "characters/estelle/assets/limit-court.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [],
+      "prompt": "Four fully isolated complete sprites in a strict 2x2 transparent atlas with wide clear gutters. No background, grid, text or floor shadows. Four distinct fantasy arcade combat effects with opaque solid core. Top left compact amber staff end impact; top right blue-white diagonal air crescent; bottom left tight gold-pink upward staff hit; bottom right enormous clearly rightward luminous gold and pink crescent with blossom petals, cut edge readable, no actual staff or other objects.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cc9b5e19-e5ae-48e6-a4b3-fd2e1819fc57.png",
+      "destination": "characters/estelle/assets/limit-effects.webp"
+    }
+  ]
+}
