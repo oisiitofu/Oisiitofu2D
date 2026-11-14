@@ -1362,6 +1362,12 @@
     ],
     "hachiware-limit-charge": [
       "/assets/audio/se/hachiware-limit-charge.wav"
+    ],
+    "terra-limit-meltdown": [
+      "/assets/audio/se/terra-limit-meltdown.wav"
+    ],
+    "yuffie-limit-all-creation": [
+      "/assets/audio/se/yuffie-limit-all-creation.wav"
     ]
   },
   "impactDesign": {
