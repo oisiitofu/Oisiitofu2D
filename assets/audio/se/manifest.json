@@ -1095,6 +1095,33 @@
     ],
     "miyabi-limit-finish": [
       "/assets/audio/se/miyabi-limit-finish.wav"
+    ],
+    "eve-limit-parry": [
+      "/assets/audio/se/eve-limit-parry.wav"
+    ],
+    "eve-limit-blink": [
+      "/assets/audio/se/eve-limit-blink.wav"
+    ],
+    "eve-limit-edge": [
+      "/assets/audio/se/eve-limit-edge.wav"
+    ],
+    "eve-limit-tachy": [
+      "/assets/audio/se/eve-limit-tachy.wav"
+    ],
+    "eve-limit-finish": [
+      "/assets/audio/se/eve-limit-finish.wav"
+    ],
+    "zoe-limit-stomp": [
+      "/assets/audio/se/zoe-limit-stomp.wav"
+    ],
+    "zoe-limit-claw": [
+      "/assets/audio/se/zoe-limit-claw.wav"
+    ],
+    "zoe-limit-fire": [
+      "/assets/audio/se/zoe-limit-fire.wav"
+    ],
+    "zoe-limit-finish": [
+      "/assets/audio/se/zoe-limit-finish.wav"
     ]
   },
   "impactDesign": {

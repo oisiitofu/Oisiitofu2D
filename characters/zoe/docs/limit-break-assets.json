@@ -1,0 +1,69 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/zoe/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact trainer Zoe and Grizzbolt from attached game sprites, Zoe black hair with magenta streaks black cap black outfit stays seated on back, huge round yellow-and-black Grizzbolt with dark pointed ears cream claws black lightning chest and broad grin. Both appear in each pose. Cinematic 2.2:1 attack close-up with unobstructed face, Rocky Palworld tower arena at dusk, blue-violet pylons and gold electric glow, clear fighting ground. No text or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5828cbbc-5355-4073-ba58-6b484d67639e.png",
+      "destination": "characters/zoe/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/zoe/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty 2.2:1 side-view arena, Rocky Palworld tower arena at dusk, blue-violet pylons and gold electric glow, clear fighting ground. No figures, UI, or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-55a3ef03-c560-44dd-8fa5-54c1b69caa73.png",
+      "destination": "characters/zoe/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/zoe/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact trainer Zoe and Grizzbolt from attached game sprites, Zoe black hair with magenta streaks black cap black outfit stays seated on back, huge round yellow-and-black Grizzbolt with dark pointed ears cream claws black lightning chest and broad grin. Both appear in each pose. Four full-body right-facing poses. stable riding, Grizzbolt low stomp, forward claw sweep, low banking run. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ceb2a300-6454-4193-838b-e0a94413c06c.png",
+      "destination": "characters/zoe/assets/limit-poses.webp"
+    },
+    {
+      "kind": "charge",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/zoe/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact trainer Zoe and Grizzbolt from attached game sprites, Zoe black hair with magenta streaks black cap black outfit stays seated on back, huge round yellow-and-black Grizzbolt with dark pointed ears cream claws black lightning chest and broad grin. Both appear in each pose. Four full-body right-facing poses. two different banking strides, deep skidding stop with Zoe pointing forward, raises large stylized fictional rotary blaster. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e8f9e99d-8549-4697-9ef9-4e920e829bf6.png",
+      "destination": "characters/zoe/assets/limit-charge.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/zoe/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact trainer Zoe and Grizzbolt from attached game sprites, Zoe black hair with magenta streaks black cap black outfit stays seated on back, huge round yellow-and-black Grizzbolt with dark pointed ears cream claws black lightning chest and broad grin. Both appear in each pose. Four full-body right-facing poses. mounted recoil with blaster, lowers blaster, reaches wide downward with claws, stable stance after discharge. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4ae2943d-fceb-4083-8c95-a7afd92933dd.png",
+      "destination": "characters/zoe/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/zoe/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Isolated objects only. Do not include characters. purple rocks, yellow ground electricity filaments, gray smoke, teal electric pylons. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ecfe1ed2-9c42-449d-8a94-5f4d0844283e.png",
+      "destination": "characters/zoe/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/zoe/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Isolated objects only. Do not include characters. gold claw rake convex right, blue-white stomp burst, gold stylized electric projectile stream, huge yellow and blue ground discharge with hard luminous core. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-487d20d5-3094-4bc6-a6d9-b9d56cc31976.png",
+      "destination": "characters/zoe/assets/limit-effects.webp"
+    }
+  ]
+}

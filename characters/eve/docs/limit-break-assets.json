@@ -1,0 +1,79 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/eve/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact adult EVE from the battle sprite: very long dark ponytail, green, white and black futuristic suit, narrow straight silver Blood Edge, same face and proportions. Cinematic 2.2:1 attack close-up with unobstructed face, Ruined futuristic overpass at blue hour, broken girders, violet and cyan industrial lights, wide clear combat floor. No text or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-237d3453-9df6-4e51-8961-f5a412d66415.png",
+      "destination": "characters/eve/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/eve/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty 2.2:1 side-view arena, Ruined futuristic overpass at blue hour, broken girders, violet and cyan industrial lights, wide clear combat floor. No figures, UI, or text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f1dc2c5b-a45a-41de-9049-46e3b4eccd1e.png",
+      "destination": "characters/eve/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/eve/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact adult EVE from the battle sprite: very long dark ponytail, green, white and black futuristic suit, narrow straight silver Blood Edge, same face and proportions. Four full-body right-facing poses. low sword guard, twisting parry, forward riposte, low leaping pivot. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c026ec62-3e13-48a2-a264-9febc8fcdcf0.png",
+      "destination": "characters/eve/assets/limit-poses.webp"
+    },
+    {
+      "kind": "tachy",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/eve/limit-break/battle-design-reference.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/eve/limit-break/tachy-reference.png"
+      ],
+      "prompt": "Exact adult EVE from the battle sprite: very long dark ponytail, green, white and black futuristic suit, narrow straight silver Blood Edge, same face and proportions. Four full-body right-facing poses. Use second reference's black Tachy suit with magenta trim and blade: airborne knee tuck, kicks away from a beam, downward diagonal swing, twists into counter cut. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3667843c-2e92-4fac-8818-c81b7f0c4af2.png",
+      "destination": "characters/eve/assets/limit-tachy.webp",
+      "battlePoseSource": {
+        "path": "characters/eve/assets/eve-tachy.png",
+        "tiles": [
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/eve/limit-break/battle-design-reference.png",
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/eve/limit-break/tachy-reference.png"
+      ],
+      "prompt": "Exact adult EVE from the battle sprite: very long dark ponytail, green, white and black futuristic suit, narrow straight silver Blood Edge, same face and proportions. Four full-body right-facing poses. First three poses in black-magenta Tachy mode: low landing, floor-level sword swing, straightens; fourth pose in green-white normal suit back in guard. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-07991a92-0efc-4cd6-ab1e-2fcb7ef9834d.png",
+      "destination": "characters/eve/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/eve/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Isolated objects only. Do not include characters. broken steel girder, scrap shards, dark blue holographic rift, magenta drone flare. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-68a35893-3dc8-408b-87cc-8625331546bb.png",
+      "destination": "characters/eve/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/eve/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Isolated objects only. Do not include characters. silver-blue parry spark, magenta crescent convex right, hot pink diagonal slash streak, immense blue-pink ground shock wave with opaque white center. Exactly four tiles on a 2x2 grid with wide transparent gutters and margins. Completely transparent background, no lettering.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d2bcc5ef-153d-4a37-a7db-8dc6b7a06a7b.png",
+      "destination": "characters/eve/assets/limit-effects.webp"
+    }
+  ]
+}
