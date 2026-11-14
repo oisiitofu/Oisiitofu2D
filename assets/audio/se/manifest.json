@@ -1338,6 +1338,12 @@
     ],
     "cojicoji-limit-finish": [
       "/assets/audio/se/cojicoji-limit-finish.wav"
+    ],
+    "aruru-limit-pop": [
+      "/assets/audio/se/aruru-limit-pop.wav"
+    ],
+    "aruru-limit-bayoen": [
+      "/assets/audio/se/aruru-limit-bayoen.wav"
     ]
   },
   "impactDesign": {
