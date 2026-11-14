@@ -1404,6 +1404,12 @@
     ],
     "estark-limit-dangokuzan": [
       "/assets/audio/se/estark-limit-dangokuzan.wav"
+    ],
+    "moogle-limit-rhapsody": [
+      "/assets/audio/se/moogle-limit-rhapsody.wav"
+    ],
+    "veronica-limit-madante": [
+      "/assets/audio/se/veronica-limit-madante.wav"
     ]
   },
   "impactDesign": {
