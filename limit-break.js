@@ -24,7 +24,43 @@ const LimitBreak=(()=>{
  }
  const canConnect=f=>f.attack?.type==='limitBreak'&&!meter(f)?.used&&!f.hitlag&&!f.hitstun&&!f.pendingLaunch;
 
- function define(id,profile,visual){profiles.set(id,{...profile,visual});}
+ function comboTimeline({id,shotTime,cues,combo,duration}){
+  // The early cinematics and previously approved sequences keep their authored timing.
+  const hits=[...(combo?.keys()??[])].sort((a,b)=>a-b);
+  if(duration<=320||hits.length<2||id==='kingbonby'||id==='alucard')return null;
+  const gaps=hits.slice(1).map((hit,i)=>hit-hits[i]);
+  if(!gaps.some(gap=>gap>32)||gaps.filter(gap=>gap>23).length<2)return null;
+  const first=hits[0],last=hits.at(-1);
+  let sourceStart=0;
+  while(sourceStart<duration&&shotTime(sourceStart)!==first)sourceStart++;
+  const sourceEnd=sourceStart+last-first;
+  if(sourceEnd>=duration||shotTime(sourceEnd)!==last)return null;
+  const frames=[sourceStart];
+  const cueTimes=[...cues.keys()].sort((a,b)=>a-b);
+  for(let i=0;i<gaps.length;i++){
+   const start=hits[i],end=hits[i+1];
+   // Keep action cues as well as damage frames. Longer movement beats retain extra room.
+   const beats=[start,...cueTimes.filter(cue=>cue>start&&cue<end),end];
+   const gap=end-start;
+   const target=gap<=23?gap:gap<=55?16+Math.round((gap-20)*.18):23+Math.round((gap-55)*.22);
+   for(let j=1;j<beats.length;j++){
+    const previous=beats[j-1],next=beats[j];
+    const sourceLength=next-previous;
+    const length=Math.max(1,Math.round(sourceLength*target/gap));
+    for(let step=1;step<=length;step++){
+     frames.push(sourceStart+previous-first+Math.round(step*sourceLength/length));
+    }
+   }
+  }
+  const saved=sourceEnd-sourceStart-frames.length+1;
+  if(saved<=0)return null;
+  const sourceTime=time=>time<=sourceStart?time:time<sourceStart+frames.length?frames[time-sourceStart]:time+saved;
+  return {duration:duration-saved,sourceTime};
+ }
+ function define(id,profile,visual){
+  const timeline=comboTimeline({...profile,id});
+  profiles.set(id,{...profile,visual,...timeline});
+ }
  function profile(id){return profiles.get(id);}
  function matchProfiles(players,enabled){
   if(!enabled)return [];
@@ -33,7 +69,10 @@ const LimitBreak=(()=>{
  }
  function prepareArt(players,enabled){return Promise.all(matchProfiles(players,enabled).map(p=>p.visual().load()));}
  function artPrepared(players,enabled){return matchProfiles(players,enabled).every(p=>p.visual().prepared);}
- function draw(current){current.profile.visual().draw(current);}
+ function draw(current){
+  const {profile,time}=current;
+  profile.visual().draw(profile.sourceTime?{...current,time:profile.sourceTime(time)}:current);
+ }
  function drawOpeners(){for(const f of fighters)if(f.attack?.type==='limitBreak')profile(f.characterId)?.visual().drawOpener?.(f);}
  function drawContact(current){current.profile.visual().drawContact(current);}
 
@@ -72,9 +111,11 @@ const LimitBreak=(()=>{
   visualRevision++;
  }
  function tick(){
-  const current=scene,{shotTime,cues,duration,finalStrike,combo}=current.profile;
-  const time=shotTime(++current.time);
-  if(time!==shotTime(current.time-1)){
+  const current=scene,{shotTime,cues,duration,finalStrike,combo,sourceTime}=current.profile;
+  const authoredTime=frame=>shotTime(sourceTime?sourceTime(frame):frame);
+  const previous=authoredTime(current.time);
+  const time=authoredTime(++current.time);
+  if(time!==previous){
    const cue=cues.get(time),damage=combo?.get(time);
    if(cue)sound(...cue,current.attacker);
    if(damage)CombatSystem.limitHit(current.attacker,current.target,{...finalStrike,damage});

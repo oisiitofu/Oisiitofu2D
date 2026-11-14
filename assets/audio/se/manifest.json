@@ -1194,6 +1194,30 @@
     ],
     "sans-limit-finish": [
       "/assets/audio/se/sans-limit-finish.wav"
+    ],
+    "terrarian-limit-dig": [
+      "/assets/audio/se/terrarian-limit-dig.wav"
+    ],
+    "terrarian-limit-star": [
+      "/assets/audio/se/terrarian-limit-star.wav"
+    ],
+    "terrarian-limit-sword": [
+      "/assets/audio/se/terrarian-limit-sword.wav"
+    ],
+    "terrarian-limit-zenith": [
+      "/assets/audio/se/terrarian-limit-zenith.wav"
+    ],
+    "horse-limit-plank": [
+      "/assets/audio/se/horse-limit-plank.wav"
+    ],
+    "horse-limit-spring": [
+      "/assets/audio/se/horse-limit-spring.wav"
+    ],
+    "horse-limit-spin": [
+      "/assets/audio/se/horse-limit-spin.wav"
+    ],
+    "horse-limit-goal": [
+      "/assets/audio/se/horse-limit-goal.wav"
     ]
   },
   "impactDesign": {

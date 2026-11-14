@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "horse",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e49146d6-3c3b-4dbb-b626-1ceeb2f21839.png",
+      "prompt": "Ultra-wide 2.2:1 striking 2D fighting game cut-in. Match attached Ultimate Chicken Horse playable brown horse exactly, flat minimalist paper-cutout cartoon. Long rectangular muzzle, one black dot for eye, triangular upright ears, dark zigzag mane and tail, tan orange-brown flat body, dark rectangular hooves, exactly four legs. Dramatic dynamic pose in cartoon paper-cutout grassy obstacle course, sunset hills and layered clouds, room for platforms and a clear foreground, no existing props. No UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/horse/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/horse/assets/limit-cutin.webp"
+    },
+    {
+      "id": "horse",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-262a51fd-2aa2-4ad6-a68e-5ffe41906d1c.png",
+      "prompt": "Empty ultra-wide 2.2:1 polished side-view game background, cartoon paper-cutout grassy obstacle course, sunset hills and layered clouds, room for platforms and a clear foreground, no existing props. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/horse/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/horse/assets/limit-court.webp"
+    },
+    {
+      "id": "horse",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e61cc924-2d88-40a2-a8aa-49f23ecaf61f.png",
+      "prompt": "Match attached Ultimate Chicken Horse playable brown horse exactly, flat minimalist paper-cutout cartoon. Long rectangular muzzle, one black dot for eye, triangular upright ears, dark zigzag mane and tail, tan orange-brown flat body, dark rectangular hooves, exactly four legs. Four full-body right-facing game animation poses: neutral, carries short wood plank in teeth, puts plank down, jumps over a short gap. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/horse/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/horse/assets/limit-poses.webp"
+    },
+    {
+      "id": "horse",
+      "kind": "course",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e93a715b-fed2-44d9-a5d2-59fad57a025e.png",
+      "prompt": "Match attached Ultimate Chicken Horse playable brown horse exactly, flat minimalist paper-cutout cartoon. Long rectangular muzzle, one black dot for eye, triangular upright ears, dark zigzag mane and tail, tan orange-brown flat body, dark rectangular hooves, exactly four legs. Four full-body right-facing game animation poses: stretches front legs in a gallop, springs with legs tucked, steps onto narrow board, leaps forward with front hooves extended. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/horse/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/horse/assets/limit-course.webp"
+    },
+    {
+      "id": "horse",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8e78d6e2-ef83-4ea0-8cd1-dbe1a76bf7ac.png",
+      "prompt": "Match attached Ultimate Chicken Horse playable brown horse exactly, flat minimalist paper-cutout cartoon. Long rectangular muzzle, one black dot for eye, triangular upright ears, dark zigzag mane and tail, tan orange-brown flat body, dark rectangular hooves, exactly four legs. Four full-body right-facing game animation poses: spins midair while rebalancing all four legs, brakes with both front hooves, lands beside a goal flag, proud standing stance. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/horse/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/horse/assets/limit-finish.webp"
+    },
+    {
+      "id": "horse",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a7fad635-cd55-4942-ba01-eff8afe3d1d8.png",
+      "prompt": "Only isolated graphics without figures: four isolated graphic elements: wooden plank, red spring pad, two-sided wooden rotating platform, simple checkered goal flag. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/horse/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/horse/assets/limit-props.webp"
+    },
+    {
+      "id": "horse",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-573c647d-d2a6-4391-864b-18f78c2efa13.png",
+      "prompt": "Only isolated graphics without figures: four isolated clear cartoon game impact graphics: cream wood impact star, compressed red-orange spring impact, stylized yellow spinning plank trail, bright gold cartoon platform collision burst with visible pieces of wood and ribbon. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/horse/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/horse/assets/limit-effects.webp"
+    }
+  ]
+}

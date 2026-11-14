@@ -40,7 +40,7 @@ const {chromium}=require('playwright');
     function draw(time){
      const scale=Math.min(canvas.width/W,canvas.height/H);
      ctx.setTransform(scale,0,0,scale,(canvas.width-W*scale)/2,(canvas.height-H*scale)/2);
-     visual.draw({attacker:{...fighters[0],characterId:id},target:fighters[1],face:1,time});
+     LimitBreak.draw({profile,attacker:{...fighters[0],characterId:id},target:fighters[1],face:1,time});
     }
     try{
      for(let time=profile.contactHold+4;time<profile.duration;time+=4){

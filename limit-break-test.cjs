@@ -12,8 +12,33 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
   const filtered=await p.locator('.fighter-card:visible').evaluateAll(cards=>cards.map(card=>card.dataset.id));
   assert.deepEqual(filtered,await p.evaluate(()=>Roster.selectable.filter(d=>LimitBreak.hasCinematic(d.id)).map(d=>d.id)));
   assert.ok(['dragoon','roxas'].every(id=>filtered.includes(id)));
+  const pacing=await p.evaluate(()=>{
+   const adjusted=Roster.selectable.map(({id})=>[id,LimitBreak.profile(id)]).filter(([,profile])=>profile?.sourceTime);
+   for(const [id,profile] of adjusted){
+    const times=Array.from({length:profile.duration+1},(_,frame)=>profile.shotTime(profile.sourceTime(frame)));
+    const events=new Set([...profile.combo.keys(),...profile.cues.keys()]);
+    for(const frame of events){
+     if(!times.includes(frame))throw Error(id+' skipped an authored hit or sound at '+frame);
+    }
+    const hits=[...profile.combo.keys()].sort((a,b)=>a-b);
+    const frames=hits.map(hit=>times.indexOf(hit));
+    if(profile.sourceTime(frames[0])!==frames[0])throw Error(id+' changed the time up to the first hit');
+    if(profile.sourceTime(profile.duration)-profile.sourceTime(frames.at(-1))!==profile.duration-frames.at(-1)){
+     throw Error(id+' changed the time after the final combo hit');
+    }
+   }
+   return {
+    adjusted:adjusted.map(([id])=>id),
+    examples:['dragoon','roxas','alucard','kingbonby','horse','terrarian'].map(id=>[id,LimitBreak.profile(id)?.duration])
+   };
+  });
+  assert.ok(pacing.adjusted.includes('shadow')&&pacing.adjusted.includes('jett'));
+  assert.deepEqual(pacing.examples.slice(0,4),[['dragoon',264],['roxas',262],['alucard',347],['kingbonby',357]]);
+  assert.deepEqual(pacing.examples.slice(4),[['horse',322],['terrarian',327]]);
   const checked=await p.evaluate(async()=>{
-   await ArtLoader.prepare([{character:'vivi'},{character:'nargacuga'},{character:'diana'},{character:'nightraven'}]);
+   const standardFighters=Roster.selectable.filter(({id})=>!LimitBreak.hasCinematic(id));
+   const standardIds=standardFighters.slice(0,3).map(({id})=>id);
+   await ArtLoader.prepare([{character:'vivi'},...standardIds.map(character=>({character}))]);
    const check=(ok,message)=>{if(!ok)throw Error(message);};
    state='pause';training=false;setupStage('0');
    const floor=platforms.find(p=>p.main);
@@ -31,7 +56,7 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
    const chord={...emptyInput(),shareStock:true,jab:true,special:true,attackHeld:true,specialHeld:true};
    function attempt(f){LimitBreak.charge(f,100);frame++;updateFighter(f,chord);check(f.attack?.standardLimit,f.characterId+' activated standard move');}
    function resolve(f){f.timer=f.attack.activeStart;resolveCombat();}
-   check(LimitBreak.artPrepared([{character:'vivi',team:['diana','nargacuga']}],true),'standard roster requests no cinematic assets');
+   check(LimitBreak.artPrepared([{character:standardIds[0],team:standardIds.slice(1)}],true),'standard roster requests no cinematic assets');
    let n=0;
    for(const {id} of Roster.definitions){
     if(LimitBreak.hasCinematic(id))continue;
@@ -44,12 +69,12 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
     }
    }
    {
-    const [a,b,c]=reset('nargacuga',40,true);
+    const [a,b,c]=reset(standardIds[0],40,true);
     attempt(a);resolve(a);
     check(b.damage===98&&c.damage===70&&!c.pendingLaunch,'first connected opponent only');
    }
    {
-    const [a,b]=reset('diana',440);
+    const [a,b]=reset(standardIds[1],440);
     attempt(a);resolve(a);
     check(!LimitBreak.meter(a).used&&LimitBreak.meter(a).value===0&&b.damage===70,'whiff spends meter and preserves entitlement');
     a.attack=null;LimitBreak.charge(a,100);check(LimitBreak.ready(a),'can recharge after whiff');
@@ -57,12 +82,12 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
     check(!LimitBreak.meter(a).used&&b.damage===70&&b.shield<b.character.shieldHP,'shield blocks the standard opener');
    }
    {
-    const [a]=reset('nargacuga',40,false,false,false);
+    const [a]=reset(standardIds[0],40,false,false,false);
     LimitBreak.charge(a,100);frame++;updateFighter(a,chord);
     check(!LimitBreak.ready(a)&&a.attack?.type!=='limitBreak','setting off disables the shared move');
    }
    {
-    const [a]=reset('nightraven');training=true;LimitBreak.begin(true);
+    const [a]=reset(standardIds[2]);training=true;LimitBreak.begin(true);
     const button=document.getElementById('training-limit-max');
     check(!button.classList.contains('hidden'),'training gauge button visible');
     button.click();check(LimitBreak.ready(a),'training gauge fills a non-cinematic fighter');

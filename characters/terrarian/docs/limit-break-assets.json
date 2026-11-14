@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "terrarian",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-883f6f73-0514-40f5-a88c-7c97d85961de.png",
+      "prompt": "Ultra-wide 2.2:1 striking 2D fighting game cut-in. Match attached Terraria adventurer sprite exactly, chunky true 16-bit pixel art, brown-red spiky hair, blue shoulder pads, gray chest, khaki pants, brown boots, green blade gold hilt and magenta ring. Preserve this appearance and small character proportions, no new helmet. Dramatic dynamic pose in Terraria pixel art earth cutaway from grass rim to slate mine, warm torches, blue starry sky through the opening, flat foreground for fighting. No UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/terrarian/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/terrarian/assets/limit-cutin.webp"
+    },
+    {
+      "id": "terrarian",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a4a318ff-9f3f-4c16-a45f-346c18073d4d.png",
+      "prompt": "Empty ultra-wide 2.2:1 polished side-view game background, Terraria pixel art earth cutaway from grass rim to slate mine, warm torches, blue starry sky through the opening, flat foreground for fighting. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/terrarian/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/terrarian/assets/limit-court.webp"
+    },
+    {
+      "id": "terrarian",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b26f7a4f-f211-447b-9b4a-f34aec328d1c.png",
+      "prompt": "Match attached Terraria adventurer sprite exactly, chunky true 16-bit pixel art, brown-red spiky hair, blue shoulder pads, gray chest, khaki pants, brown boots, green blade gold hilt and magenta ring. Preserve this appearance and small character proportions, no new helmet. Four full-body right-facing game animation poses: standing with green sword, crouched pickaxe poised, swings pickaxe into floor, drops with bent legs and pickaxe. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/terrarian/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/terrarian/assets/limit-poses.webp"
+    },
+    {
+      "id": "terrarian",
+      "kind": "mine",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3b18b711-20de-43cc-9b58-0ce0081b0451.png",
+      "prompt": "Match attached Terraria adventurer sprite exactly, chunky true 16-bit pixel art, brown-red spiky hair, blue shoulder pads, gray chest, khaki pants, brown boots, green blade gold hilt and magenta ring. Preserve this appearance and small character proportions, no new helmet. Four full-body right-facing game animation poses: lands in a crouch, reaches for green sword, swings green sword low, raises sword and climbs up. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/terrarian/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/terrarian/assets/limit-mine.webp"
+    },
+    {
+      "id": "terrarian",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8a13c853-b23c-42ca-a23d-837bab12e214.png",
+      "prompt": "Match attached Terraria adventurer sprite exactly, chunky true 16-bit pixel art, brown-red spiky hair, blue shoulder pads, gray chest, khaki pants, brown boots, green blade gold hilt and magenta ring. Preserve this appearance and small character proportions, no new helmet. Four full-body right-facing game animation poses: wall push with knees tucked, power stance with lifted sword, lands with huge forward green blade sweep, same green sword back in guard. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/terrarian/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/terrarian/assets/limit-finish.webp"
+    },
+    {
+      "id": "terrarian",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-dd9e8cad-4c84-462a-9121-3675bfdaa1e3.png",
+      "prompt": "Only isolated graphics without figures: four isolated pixel art items: broken earth tile with grass, chunk of gray ore, four hovering endgame swords on a transparent background, loose rock chips. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/terrarian/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/terrarian/assets/limit-props.webp"
+    },
+    {
+      "id": "terrarian",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-dcafc49d-7888-4135-a1a7-abc8a6876a16.png",
+      "prompt": "Only isolated graphics without figures: four distinct crisp pixel art attacks: pickaxe impact, bright falling golden star strike, vivid green and blue sword crescent opening to the right, giant multi-colored overlapping sword trails with solid bright centers. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/terrarian/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/terrarian/assets/limit-effects.webp"
+    }
+  ]
+}
