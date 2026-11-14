@@ -1416,6 +1416,12 @@
     ],
     "magus-limit-dark-matter": [
       "/assets/audio/se/magus-limit-dark-matter.wav"
+    ],
+    "riki-limit-heropon": [
+      "/assets/audio/se/riki-limit-heropon.wav"
+    ],
+    "melia-limit-elemental-burst": [
+      "/assets/audio/se/melia-limit-elemental-burst.wav"
     ]
   },
   "impactDesign": {
