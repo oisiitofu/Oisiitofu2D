@@ -1428,6 +1428,12 @@
     ],
     "hanajs-limit-quantum": [
       "/assets/audio/se/hanajs-limit-quantum.wav"
+    ],
+    "pneuma-limit-radiant": [
+      "/assets/audio/se/pneuma-limit-radiant.wav"
+    ],
+    "edelgard-limit-raging-storm": [
+      "/assets/audio/se/edelgard-limit-raging-storm.wav"
     ]
   },
   "impactDesign": {
