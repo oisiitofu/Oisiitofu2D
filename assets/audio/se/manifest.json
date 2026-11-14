@@ -1356,6 +1356,12 @@
     ],
     "chocobo-limit-meteor": [
       "/assets/audio/se/chocobo-limit-meteor.wav"
+    ],
+    "tails-limit-crossbolt": [
+      "/assets/audio/se/tails-limit-crossbolt.wav"
+    ],
+    "hachiware-limit-charge": [
+      "/assets/audio/se/hachiware-limit-charge.wav"
     ]
   },
   "impactDesign": {
