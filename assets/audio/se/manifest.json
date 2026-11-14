@@ -1380,6 +1380,12 @@
     ],
     "zidane-limit-grand-lethal": [
       "/assets/audio/se/zidane-limit-grand-lethal.wav"
+    ],
+    "tidus-limit-blitz": [
+      "/assets/audio/se/tidus-limit-blitz.wav"
+    ],
+    "lightning-limit-army-of-one": [
+      "/assets/audio/se/lightning-limit-army-of-one.wav"
     ]
   },
   "impactDesign": {
