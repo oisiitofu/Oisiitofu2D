@@ -1,0 +1,154 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "maelle",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b2ddec0f-efec-4e5d-a0c0-dd5285ae491b.png",
+      "prompt": "Ultra-wide 2.2:1 polished fighting game cut-in with clear face and outfit silhouette. Exactly the supplied game's final-form Maelle: very long wavy pale blue-silver hair, silver-white split-tail coat with dark high collar and sleeves, dark fitted leggings and boots, slim straight rapier with ornate circular bronze hilt. Do not use red hair or ordinary Maelle outfit. Preserve battle face, clothes and proportions. Dramatic action pose in Belle Epoque ruined opera palace with giant broken rose window, deep navy architecture and controlled amber and silver highlights, plain reflective stone combat floor. No UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/maelle/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/maelle/assets/limit-cutin.webp"
+    },
+    {
+      "id": "maelle",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2a3d7446-1b80-449f-85b8-a3f0bf114647.png",
+      "prompt": "Empty ultra-wide 2.2:1 polished side-view game background, Belle Epoque ruined opera palace with giant broken rose window, deep navy architecture and controlled amber and silver highlights, plain reflective stone combat floor. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/maelle/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/maelle/assets/limit-court.webp"
+    },
+    {
+      "id": "maelle",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-69c04173-d3e1-4a85-9dc5-16983211fc50.png",
+      "prompt": "Exactly the supplied game's final-form Maelle: very long wavy pale blue-silver hair, silver-white split-tail coat with dark high collar and sleeves, dark fitted leggings and boots, slim straight rapier with ornate circular bronze hilt. Do not use red hair or ordinary Maelle outfit. Preserve battle face, clothes and proportions. Four independent full-body right-facing game animation poses: right-facing idle guard, low gliding fencing step, short angled parry, heel-planted counter. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/maelle/limit-break/battle-design-reference.png"
+      ],
+      "boxes": [
+        [
+          0,
+          0,
+          550,
+          623
+        ],
+        [
+          566,
+          0,
+          1261,
+          623
+        ],
+        [
+          0,
+          623,
+          543,
+          1247
+        ],
+        [
+          552,
+          623,
+          1261,
+          1247
+        ]
+      ],
+      "destination": "characters/maelle/assets/limit-poses.webp"
+    },
+    {
+      "id": "maelle",
+      "kind": "thrust",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e9d2a613-d8ad-43c0-85d3-5716b248c733.png",
+      "prompt": "Exactly the supplied game's final-form Maelle: very long wavy pale blue-silver hair, silver-white split-tail coat with dark high collar and sleeves, dark fitted leggings and boots, slim straight rapier with ornate circular bronze hilt. Do not use red hair or ordinary Maelle outfit. Preserve battle face, clothes and proportions. Four independent full-body right-facing game animation poses: draws rapier to hip, low forward lunge, upright direct thrust, high point extension. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/maelle/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/maelle/assets/limit-thrust.webp"
+    },
+    {
+      "id": "maelle",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-278ed4fb-4c91-4ee5-a37d-871d5e1c8233.png",
+      "prompt": "Exactly the supplied game's final-form Maelle: very long wavy pale blue-silver hair, silver-white split-tail coat with dark high collar and sleeves, dark fitted leggings and boots, slim straight rapier with ornate circular bronze hilt. Do not use red hair or ordinary Maelle outfit. Preserve battle face, clothes and proportions. Four independent full-body right-facing game animation poses: pulls back into narrow stance, gathers power at shoulder, decisive extended thrust, relaxed stance with blade lowered. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/maelle/limit-break/battle-design-reference.png"
+      ],
+      "boxes": [
+        [
+          0,
+          0,
+          627,
+          627
+        ],
+        [
+          627,
+          0,
+          1254,
+          627
+        ],
+        [
+          0,
+          627,
+          682,
+          1254
+        ],
+        [
+          709,
+          627,
+          1254,
+          1254
+        ]
+      ],
+      "destination": "characters/maelle/assets/limit-finish.webp"
+    },
+    {
+      "id": "maelle",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1d3405c7-afc1-4f67-b83a-b6311b2d71eb.png",
+      "prompt": "Only isolated graphics without figures: four isolated objects: silver ground skid, amber glass motes, painterly radiant ripple, rose-window shard particles. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/maelle/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/maelle/assets/limit-props.webp"
+    },
+    {
+      "id": "maelle",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-782d11a4-feba-4063-9582-7b01bae021f6.png",
+      "prompt": "Only isolated graphics without figures: four isolated attacks with bright opaque core: silver parry spark, narrow lavender right-facing rapier thrust, pale gold diagonal lance, immense intense crimson-purple and ivory point-first piercing beam to the right. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/maelle/limit-break/battle-design-reference.png"
+      ],
+      "boxes": [
+        [
+          0,
+          0,
+          566,
+          627
+        ],
+        [
+          590,
+          0,
+          1254,
+          627
+        ],
+        [
+          0,
+          627,
+          540,
+          1254
+        ],
+        [
+          555,
+          627,
+          1254,
+          1254
+        ]
+      ],
+      "destination": "characters/maelle/assets/limit-effects.webp"
+    }
+  ]
+}

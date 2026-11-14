@@ -1170,6 +1170,30 @@
     ],
     "deemo-limit-finish": [
       "/assets/audio/se/deemo-limit-finish.wav"
+    ],
+    "maelle-limit-parry": [
+      "/assets/audio/se/maelle-limit-parry.wav"
+    ],
+    "maelle-limit-riposte": [
+      "/assets/audio/se/maelle-limit-riposte.wav"
+    ],
+    "maelle-limit-step": [
+      "/assets/audio/se/maelle-limit-step.wav"
+    ],
+    "maelle-limit-stendhal": [
+      "/assets/audio/se/maelle-limit-stendhal.wav"
+    ],
+    "sans-limit-gravity": [
+      "/assets/audio/se/sans-limit-gravity.wav"
+    ],
+    "sans-limit-bone": [
+      "/assets/audio/se/sans-limit-bone.wav"
+    ],
+    "sans-limit-blaster": [
+      "/assets/audio/se/sans-limit-blaster.wav"
+    ],
+    "sans-limit-finish": [
+      "/assets/audio/se/sans-limit-finish.wav"
     ]
   },
   "impactDesign": {

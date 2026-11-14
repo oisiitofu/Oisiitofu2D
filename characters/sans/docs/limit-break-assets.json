@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "sans",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9788291f-0336-4151-8db4-9a054f423d76.png",
+      "prompt": "Ultra-wide 2.2:1 polished fighting game cut-in with clear face and outfit silhouette. Exactly the supplied game's Sans: compact cartoony white round skull with big black eye sockets and toothy grin, cobalt blue hoodie with lavender lining, white T-shirt, black shorts with white stripes, pink slippers. Same smooth crisp black linework and simple cel shading. No visible pupils except one tiny turquoise glint in gravity gesture. Dramatic action pose in dark final corridor with faint gold stained glass windows and deep blue shadow, plain dark floor in foreground. No UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sans/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/sans/assets/limit-cutin.webp"
+    },
+    {
+      "id": "sans",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f620c0da-ce77-4cdf-b3e1-cfc29de55926.png",
+      "prompt": "Empty ultra-wide 2.2:1 polished side-view game background, dark final corridor with faint gold stained glass windows and deep blue shadow, plain dark floor in foreground. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sans/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/sans/assets/limit-court.webp"
+    },
+    {
+      "id": "sans",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cb580a05-e713-4afa-8304-410ab91d8f11.png",
+      "prompt": "Exactly the supplied game's Sans: compact cartoony white round skull with big black eye sockets and toothy grin, cobalt blue hoodie with lavender lining, white T-shirt, black shorts with white stripes, pink slippers. Same smooth crisp black linework and simple cel shading. No visible pupils except one tiny turquoise glint in gravity gesture. Four independent full-body right-facing game animation poses: standing with hands in pockets, raising one hand palm up, snapping one arm downward, ducking under bone wave. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sans/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/sans/assets/limit-poses.webp"
+    },
+    {
+      "id": "sans",
+      "kind": "gravity",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0f586b24-e346-43c4-a5a8-ddc2a36bfb7d.png",
+      "prompt": "Exactly the supplied game's Sans: compact cartoony white round skull with big black eye sockets and toothy grin, cobalt blue hoodie with lavender lining, white T-shirt, black shorts with white stripes, pink slippers. Same smooth crisp black linework and simple cel shading. No visible pupils except one tiny turquoise glint in gravity gesture. Four independent full-body right-facing game animation poses: running sidestep, leaning and bracing on a vertical surface, one hand pointing sideways, raises one finger with tiny blue socket light. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sans/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/sans/assets/limit-gravity.webp"
+    },
+    {
+      "id": "sans",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7efe6542-2ae9-4543-a203-a5d18c8adf1b.png",
+      "prompt": "Exactly the supplied game's Sans: compact cartoony white round skull with big black eye sockets and toothy grin, cobalt blue hoodie with lavender lining, white T-shirt, black shorts with white stripes, pink slippers. Same smooth crisp black linework and simple cel shading. No visible pupils except one tiny turquoise glint in gravity gesture. Four independent full-body right-facing game animation poses: hops away from impact, two hands thrown outward, lowers arms in exhaustion, hands back in pockets. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sans/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/sans/assets/limit-finish.webp"
+    },
+    {
+      "id": "sans",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-70e42581-dbda-4273-adc7-6d58b05a433c.png",
+      "prompt": "Only isolated graphics without figures: four isolated objects: white upright bone obstacle, shallow horizontal row of individual white bones, one white horned Gaster Blaster skull with mouth closed, the same white horned Gaster Blaster skull with mouth open glowing cyan. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sans/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/sans/assets/limit-props.webp"
+    },
+    {
+      "id": "sans",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-47e9756a-3965-4d5b-8fd3-7ffc7ca4107d.png",
+      "prompt": "Only isolated graphics without figures: four isolated bright game effects: white bone impact flash, row of light blue bone silhouettes, intense cyan-white horizontal rightward laser beam, enormous clustered cyan-white converging laser beams toward right with a dense bright core. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters and padding, fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/sans/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/sans/assets/limit-effects.webp"
+    }
+  ]
+}
