@@ -1392,6 +1392,12 @@
     ],
     "clive-limit-hellfire": [
       "/assets/audio/se/clive-limit-hellfire.wav"
+    ],
+    "hydaelyn-limit-exodus": [
+      "/assets/audio/se/hydaelyn-limit-exodus.wav"
+    ],
+    "onionknight-limit-magic": [
+      "/assets/audio/se/onionknight-limit-magic.wav"
     ]
   },
   "impactDesign": {
