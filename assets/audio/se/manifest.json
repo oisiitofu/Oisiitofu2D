@@ -1374,6 +1374,12 @@
     ],
     "aerith-limit-judgment": [
       "/assets/audio/se/aerith-limit-judgment.wav"
+    ],
+    "vincent-limit-chaos": [
+      "/assets/audio/se/vincent-limit-chaos.wav"
+    ],
+    "zidane-limit-grand-lethal": [
+      "/assets/audio/se/zidane-limit-grand-lethal.wav"
     ]
   },
   "impactDesign": {
