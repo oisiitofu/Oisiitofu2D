@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "quote",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-03c5ac62-279b-4667-9ac0-688b6d092aba.png",
+      "prompt": "Ultra-wide 2.2:1 detailed fighting game action cut-in, Match the attached Quote precisely: chunky authentic pixel art, white face, black hair and dark blue boots, red cap with pale rectangular patch, green round ear sides, long vivid green scarf, pale sleeveless top and red pants. Holds a blue-gray fictional sci-fi blaster. Keep same compact sprite style and shapes. Cave Story pixel art underground cavern under a crumbling floating island, ochre blocks, bright teal crystals, industrial steel platforms and a flat fighting floor. No text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/quote/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/quote/assets/limit-cutin.webp"
+    },
+    {
+      "id": "quote",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bd57afc7-fea3-46d0-8f10-eae533ff2c5b.png",
+      "prompt": "Empty ultra-wide 2.2:1 side-view game arena background, Cave Story pixel art underground cavern under a crumbling floating island, ochre blocks, bright teal crystals, industrial steel platforms and a flat fighting floor. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/quote/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/quote/assets/limit-court.webp"
+    },
+    {
+      "id": "quote",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-dc095bee-0b95-49ce-a31c-484a1bcc5b6a.png",
+      "prompt": "Match the attached Quote precisely: chunky authentic pixel art, white face, black hair and dark blue boots, red cap with pale rectangular patch, green round ear sides, long vivid green scarf, pale sleeveless top and red pants. Holds a blue-gray fictional sci-fi blaster. Keep same compact sprite style and shapes. Four full-body right-facing game poses: standing holding blaster, braces low on floor, hops with scarf trailing, boosts sideways with boots back. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/quote/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/quote/assets/limit-poses.webp"
+    },
+    {
+      "id": "quote",
+      "kind": "boost",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-15b26e70-ce67-4165-8616-594990c5b2f2.png",
+      "prompt": "Match the attached Quote precisely: chunky authentic pixel art, white face, black hair and dark blue boots, red cap with pale rectangular patch, green round ear sides, long vivid green scarf, pale sleeveless top and red pants. Holds a blue-gray fictional sci-fi blaster. Keep same compact sprite style and shapes. Four full-body right-facing game poses: braces against vertical wall, kicks off sideways, lies flat in a low airborne burst, lands on one knee and aims. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/quote/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/quote/assets/limit-boost.webp"
+    },
+    {
+      "id": "quote",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-48cc630e-e1e2-4bd3-a324-10c18fff69a1.png",
+      "prompt": "Match the attached Quote precisely: chunky authentic pixel art, white face, black hair and dark blue boots, red cap with pale rectangular patch, green round ear sides, long vivid green scarf, pale sleeveless top and red pants. Holds a blue-gray fictional sci-fi blaster. Keep same compact sprite style and shapes. Four full-body right-facing game poses: holds one knee planted while charging sci-fi blaster, raises weapon on recoil, looks forward with scarf still flowing, neutral. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/quote/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/quote/assets/limit-finish.webp"
+    },
+    {
+      "id": "quote",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-de61ae46-ee58-4e61-be3b-fb01d24aa66f.png",
+      "prompt": "Only isolated graphics without figures: four isolated pixel props: broken tan rock platform, turquoise booster flame, blue-white charge orb, crumbling mineral block pieces. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/quote/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/quote/assets/limit-props.webp"
+    },
+    {
+      "id": "quote",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c89b0dc5-2b5d-4fb8-8ea1-7dc5084c11b0.png",
+      "prompt": "Only isolated graphics without figures: four isolated pixel game attacks: small orange impact, crisp blue-white round shot, diagonal aqua jet strike, enormous blue-white high energy beam pointing right with solid luminous core. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/quote/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/quote/assets/limit-effects.webp"
+    }
+  ]
+}

@@ -1266,6 +1266,30 @@
     ],
     "knight-limit-finish": [
       "/assets/audio/se/knight-limit-finish.wav"
+    ],
+    "reimu-limit-charm": [
+      "/assets/audio/se/reimu-limit-charm.wav"
+    ],
+    "reimu-limit-seal": [
+      "/assets/audio/se/reimu-limit-seal.wav"
+    ],
+    "reimu-limit-orb": [
+      "/assets/audio/se/reimu-limit-orb.wav"
+    ],
+    "reimu-limit-finish": [
+      "/assets/audio/se/reimu-limit-finish.wav"
+    ],
+    "quote-limit-shot": [
+      "/assets/audio/se/quote-limit-shot.wav"
+    ],
+    "quote-limit-boost": [
+      "/assets/audio/se/quote-limit-boost.wav"
+    ],
+    "quote-limit-charge": [
+      "/assets/audio/se/quote-limit-charge.wav"
+    ],
+    "quote-limit-spur": [
+      "/assets/audio/se/quote-limit-spur.wav"
     ]
   },
   "impactDesign": {

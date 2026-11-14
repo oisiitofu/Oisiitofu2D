@@ -1,0 +1,128 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "reimu",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bb59b2b9-ffea-4923-915a-51069e3a7b7f.png",
+      "prompt": "Ultra-wide 2.2:1 detailed fighting game action cut-in, Match the attached compact Reimu precisely: enormous red bow with white edging, dark brown hair, vibrant red shrine maiden dress, detached broad white sleeves with red trim, yellow neck tie, brown shoes, wood gohei tipped with white zigzag paper and a red ofuda. Preserve all original shapes and colors. twilight Hakurei shrine courtyard with a torii, falling petals, dark indigo sky and pink clouds, clear courtyard pavement. No text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/reimu/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/reimu/assets/limit-cutin.webp"
+    },
+    {
+      "id": "reimu",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c1c3d9c1-2e9d-4266-b348-71926e597724.png",
+      "prompt": "Empty ultra-wide 2.2:1 side-view game arena background, twilight Hakurei shrine courtyard with a torii, falling petals, dark indigo sky and pink clouds, clear courtyard pavement. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/reimu/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/reimu/assets/limit-court.webp"
+    },
+    {
+      "id": "reimu",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-053ef039-5403-49c1-815b-026977b1083e.png",
+      "prompt": "Match the attached compact Reimu precisely: enormous red bow with white edging, dark brown hair, vibrant red shrine maiden dress, detached broad white sleeves with red trim, yellow neck tie, brown shoes, wood gohei tipped with white zigzag paper and a red ofuda. Preserve all original shapes and colors. Four full-body right-facing game poses: standing ready, pushes a red paper charm forward, low hover with knees tucked, drifting up with both sleeves flared. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/reimu/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/reimu/assets/limit-poses.webp"
+    },
+    {
+      "id": "reimu",
+      "kind": "ofuda",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-41689673-e1e8-46ec-b42b-e2f695656aa3.png",
+      "prompt": "Match the attached compact Reimu precisely: enormous red bow with white edging, dark brown hair, vibrant red shrine maiden dress, detached broad white sleeves with red trim, yellow neck tie, brown shoes, wood gohei tipped with white zigzag paper and a red ofuda. Preserve all original shapes and colors. Four full-body right-facing game poses: side-step floating with gohei high, places a paper charm below her, shifts upward with pointed toes, raises the purification wand toward the sky. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/reimu/limit-break/battle-design-reference.png"
+      ],
+      "boxes": [
+        [
+          0,
+          0,
+          768,
+          460
+        ],
+        [
+          768,
+          0,
+          1536,
+          451
+        ],
+        [
+          0,
+          474,
+          768,
+          1024
+        ],
+        [
+          768,
+          451,
+          1536,
+          1024
+        ]
+      ],
+      "destination": "characters/reimu/assets/limit-ofuda.webp"
+    },
+    {
+      "id": "reimu",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-df0b8dc6-b315-4716-94d4-0cfcc66ceaa4.png",
+      "prompt": "Match the attached compact Reimu precisely: enormous red bow with white edging, dark brown hair, vibrant red shrine maiden dress, detached broad white sleeves with red trim, yellow neck tie, brown shoes, wood gohei tipped with white zigzag paper and a red ofuda. Preserve all original shapes and colors. Four full-body right-facing game poses: back arched summoning colored orbs, sweeps gohei downward, gently descends, returns to same relaxed guard. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/reimu/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/reimu/assets/limit-finish.webp"
+    },
+    {
+      "id": "reimu",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-45ef1f88-d2a8-4722-9b72-af3a4c1715b3.png",
+      "prompt": "Only isolated graphics without figures: four isolated objects: red paper ofuda, white and red boundary ring, five jewel-like rainbow spirit orbs, swirl of loose white paper. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/reimu/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/reimu/assets/limit-props.webp"
+    },
+    {
+      "id": "reimu",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2c3f1fb1-b254-4dbe-84a6-298433bd2047.png",
+      "prompt": "Only isolated graphics without figures: four isolated attacks: hot red charm burst, amber and cream charm streak, hard-edged red white purification slash, immense converging multicolored orb explosion with dense bright core. Exactly four complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/reimu/limit-break/battle-design-reference.png"
+      ],
+      "boxes": [
+        [
+          0,
+          0,
+          768,
+          465
+        ],
+        [
+          768,
+          0,
+          1536,
+          450
+        ],
+        [
+          0,
+          471,
+          768,
+          1024
+        ],
+        [
+          768,
+          464,
+          1536,
+          1024
+        ]
+      ],
+      "destination": "characters/reimu/assets/limit-effects.webp"
+    }
+  ]
+}
