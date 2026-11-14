@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "ryoku",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-36a9e1cc-4ae1-4880-915d-5e54824283f7.png",
+      "prompt": "Ultra-wide 2.2:1 polished stylized fighting game cut-in, Exact attached Ryoku battle sprite: tiny lime-green four-legged dog, leaf-shaped floppy ears with pale veins, big black eyes, white round muzzle, lime nose, green patterned neckerchief, dark brown tiny paws. Match expressive proportions. Japanese garden teahouse with stone stepping path, small pond, warm sun, jade green foliage and a clear near floor. No text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ryoku/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/ryoku/assets/limit-cutin.webp"
+    },
+    {
+      "id": "ryoku",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7cc21161-c1b0-4a40-8045-d37b18bccdfc.png",
+      "prompt": "Empty ultra-wide 2.2:1 stylized side-view game arena, Japanese garden teahouse with stone stepping path, small pond, warm sun, jade green foliage and a clear near floor. No characters, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ryoku/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/ryoku/assets/limit-court.webp"
+    },
+    {
+      "id": "ryoku",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1b8d877f-3562-4ee5-b016-90c0089c5ecf.png",
+      "prompt": "Exact attached Ryoku battle sprite: tiny lime-green four-legged dog, leaf-shaped floppy ears with pale veins, big black eyes, white round muzzle, lime nose, green patterned neckerchief, dark brown tiny paws. Match expressive proportions. Four independent full-body right-facing game poses: neutral facing right, nudges forward with paw, crouches gathering, jumps with leaf ears back. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ryoku/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/ryoku/assets/limit-poses.webp"
+    },
+    {
+      "id": "ryoku",
+      "kind": "tea",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bca42e95-1e4b-43a2-9a43-1e8173569f60.png",
+      "prompt": "Exact attached Ryoku battle sprite: tiny lime-green four-legged dog, leaf-shaped floppy ears with pale veins, big black eyes, white round muzzle, lime nose, green patterned neckerchief, dark brown tiny paws. Match expressive proportions. Four independent full-body right-facing game poses: front paws reach for landing, low sprint, leaps in arc with ears trailing, crouches for second jump. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ryoku/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/ryoku/assets/limit-tea.webp"
+    },
+    {
+      "id": "ryoku",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1dafbd14-9efc-45d3-81f7-ff021aa73b20.png",
+      "prompt": "Exact attached Ryoku battle sprite: tiny lime-green four-legged dog, leaf-shaped floppy ears with pale veins, big black eyes, white round muzzle, lime nose, green patterned neckerchief, dark brown tiny paws. Match expressive proportions. Four independent full-body right-facing game poses: pushes both paws forward, lands with ears spread, settles on all fours, exact neutral guard. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ryoku/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/ryoku/assets/limit-finish.webp"
+    },
+    {
+      "id": "ryoku",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-83a0c0e8-1899-49c0-af64-215ba8a728f8.png",
+      "prompt": "Four separate isolated game illustration assets: tea tray, round green tea bowl with pale steam, jade ceramic teapot, two flat stone stepping rocks. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ryoku/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/ryoku/assets/limit-props.webp"
+    },
+    {
+      "id": "ryoku",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-910b6647-296d-4d34-ba5a-84480917781e.png",
+      "prompt": "Four separate isolated game illustration assets: lime foamy tea splash with opaque highlights, green leaf streak, amber and ivory steam impact, brilliant emerald white upward water and tea leaf eruption. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ryoku/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/ryoku/assets/limit-effects.webp"
+    }
+  ]
+}

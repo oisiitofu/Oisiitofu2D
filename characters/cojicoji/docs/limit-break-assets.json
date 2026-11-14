@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "cojicoji",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f1b4ce08-b111-4846-b753-95bec4e9d26e.png",
+      "prompt": "Ultra-wide 2.2:1 polished stylized fighting game cut-in, Exact attached Coji-Coji battle sprite: circle golden pale-yellow face, red-orange round ears, green scalloped rim, small pink spiral cheeks and tiny eyes, bright red coat with single round yellow button, blue pants and short yellow shoes. Same body and art outline. pastel storybook fairyland with rolling pink clouds, a distant crescent moon and starry turquoise sky, a clear fighting floor. No text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/cojicoji/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/cojicoji/assets/limit-cutin.webp"
+    },
+    {
+      "id": "cojicoji",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a555e23e-88ce-4b65-8c07-2ca238ec201b.png",
+      "prompt": "Empty ultra-wide 2.2:1 stylized side-view game arena, pastel storybook fairyland with rolling pink clouds, a distant crescent moon and starry turquoise sky, a clear fighting floor. No characters, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/cojicoji/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/cojicoji/assets/limit-court.webp"
+    },
+    {
+      "id": "cojicoji",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5136d686-6aff-492f-ae92-9fd2b7916d73.png",
+      "prompt": "Exact attached Coji-Coji battle sprite: circle golden pale-yellow face, red-orange round ears, green scalloped rim, small pink spiral cheeks and tiny eyes, bright red coat with single round yellow button, blue pants and short yellow shoes. Same body and art outline. Four independent full-body right-facing game poses: neutral, toes lift from ground, floats with both arms spread, tucks feet in while gently rotating. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/cojicoji/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/cojicoji/assets/limit-poses.webp"
+    },
+    {
+      "id": "cojicoji",
+      "kind": "float",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3e01aec3-b134-4edd-9cc9-5d6f2daf7c3c.png",
+      "prompt": "Exact attached Coji-Coji battle sprite: circle golden pale-yellow face, red-orange round ears, green scalloped rim, small pink spiral cheeks and tiny eyes, bright red coat with single round yellow button, blue pants and short yellow shoes. Same body and art outline. Four independent full-body right-facing game poses: holds both hands forward, leans back against imaginary crescent, kicks away and floats face forward, dodges in a horizontal tilted curl. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/cojicoji/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/cojicoji/assets/limit-float.webp"
+    },
+    {
+      "id": "cojicoji",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b7967718-e57e-4361-904b-181232762687.png",
+      "prompt": "Exact attached Coji-Coji battle sprite: circle golden pale-yellow face, red-orange round ears, green scalloped rim, small pink spiral cheeks and tiny eyes, bright red coat with single round yellow button, blue pants and short yellow shoes. Same body and art outline. Four independent full-body right-facing game poses: pushes with palms, curls knees up, unfolds while floating down, cheerful same neutral. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/cojicoji/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/cojicoji/assets/limit-finish.webp"
+    },
+    {
+      "id": "cojicoji",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-550f10fd-35f6-436a-a975-7165ce68be1e.png",
+      "prompt": "Four separate isolated game illustration assets: golden crescent moon seat, clustered small yellow stars, pastel striped cloud, circle of sparkling gold dust. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/cojicoji/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/cojicoji/assets/limit-props.webp"
+    },
+    {
+      "id": "cojicoji",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1a0d34b5-eb64-477f-abe6-e950678cdf2d.png",
+      "prompt": "Four separate isolated game illustration assets: small yellow star impact with dark outline, rounded blue and pink wind arc, bright falling pixel-free comet, giant colorful dreamlike star burst with opaque cream core. Four complete tiles in strict 2x2 grid with wide transparent gutters, fully transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/cojicoji/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/cojicoji/assets/limit-effects.webp"
+    }
+  ]
+}

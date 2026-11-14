@@ -1314,6 +1314,30 @@
     ],
     "chiikawa-limit-finish": [
       "/assets/audio/se/chiikawa-limit-finish.wav"
+    ],
+    "ryoku-limit-tap": [
+      "/assets/audio/se/ryoku-limit-tap.wav"
+    ],
+    "ryoku-limit-tea": [
+      "/assets/audio/se/ryoku-limit-tea.wav"
+    ],
+    "ryoku-limit-steam": [
+      "/assets/audio/se/ryoku-limit-steam.wav"
+    ],
+    "ryoku-limit-finish": [
+      "/assets/audio/se/ryoku-limit-finish.wav"
+    ],
+    "cojicoji-limit-star": [
+      "/assets/audio/se/cojicoji-limit-star.wav"
+    ],
+    "cojicoji-limit-float": [
+      "/assets/audio/se/cojicoji-limit-float.wav"
+    ],
+    "cojicoji-limit-moon": [
+      "/assets/audio/se/cojicoji-limit-moon.wav"
+    ],
+    "cojicoji-limit-finish": [
+      "/assets/audio/se/cojicoji-limit-finish.wav"
     ]
   },
   "impactDesign": {
