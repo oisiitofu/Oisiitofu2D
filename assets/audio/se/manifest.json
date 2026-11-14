@@ -1218,6 +1218,30 @@
     ],
     "horse-limit-goal": [
       "/assets/audio/se/horse-limit-goal.wav"
+    ],
+    "chef-limit-pan": [
+      "/assets/audio/se/chef-limit-pan.wav"
+    ],
+    "chef-limit-throw": [
+      "/assets/audio/se/chef-limit-throw.wav"
+    ],
+    "chef-limit-steam": [
+      "/assets/audio/se/chef-limit-steam.wav"
+    ],
+    "chef-limit-serve": [
+      "/assets/audio/se/chef-limit-serve.wav"
+    ],
+    "morphie-limit-mass": [
+      "/assets/audio/se/morphie-limit-mass.wav"
+    ],
+    "morphie-limit-kick": [
+      "/assets/audio/se/morphie-limit-kick.wav"
+    ],
+    "morphie-limit-plant": [
+      "/assets/audio/se/morphie-limit-plant.wav"
+    ],
+    "morphie-limit-avatar": [
+      "/assets/audio/se/morphie-limit-avatar.wav"
     ]
   },
   "impactDesign": {

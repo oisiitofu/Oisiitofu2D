@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "chef",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-138c96e5-16df-4b84-954f-08d72ab705a9.png",
+      "prompt": "Ultra-wide 2.2:1 polished 2D video game cinematic cut-in. Exact attached compact chibi chef fighter: very large white three-lobed chef hat with blue band, brown curly bun and fringe, smooth warm peaches skin, dot eyes, red neckerchief, white double breasted chef coat, blue apron pants, brown shoes and black frying pan. Same facial features, proportions and vivid outlines. Dynamic action, clear face and outfit in whimsical Onion Kingdom fantasy kitchen, high arched warm stone walls, orderly counters, copper pans and wood beams, warm sunset, unobstructed foreground. No UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chef/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chef/assets/limit-cutin.webp"
+    },
+    {
+      "id": "chef",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ad728ce3-8996-460f-9304-bcc16b8dd1e9.png",
+      "prompt": "Empty ultra-wide 2.2:1 side-view game background: whimsical Onion Kingdom fantasy kitchen, high arched warm stone walls, orderly counters, copper pans and wood beams, warm sunset, unobstructed foreground. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chef/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chef/assets/limit-court.webp"
+    },
+    {
+      "id": "chef",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f2f575a2-1952-4f79-8f01-c1105d87f736.png",
+      "prompt": "Exact attached compact chibi chef fighter: very large white three-lobed chef hat with blue band, brown curly bun and fringe, smooth warm peaches skin, dot eyes, red neckerchief, white double breasted chef coat, blue apron pants, brown shoes and black frying pan. Same facial features, proportions and vivid outlines. Four full-body right-facing game animation poses: idle holding pan, running with pan tucked, flipping ingredients, leaping directly off a moving counter. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chef/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chef/assets/limit-poses.webp"
+    },
+    {
+      "id": "chef",
+      "kind": "cook",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-601471e8-5747-485a-838f-74bc71e39f0c.png",
+      "prompt": "Exact attached compact chibi chef fighter: very large white three-lobed chef hat with blue band, brown curly bun and fringe, smooth warm peaches skin, dot eyes, red neckerchief, white double breasted chef coat, blue apron pants, brown shoes and black frying pan. Same facial features, proportions and vivid outlines. Four full-body right-facing game animation poses: lands in crouch with pan high, swings pan horizontally, catches a big stock pot with both mitts, tilts pot forward with knees braced. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chef/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chef/assets/limit-cook.webp"
+    },
+    {
+      "id": "chef",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4a1fe447-6e9b-4b62-b6ae-f57ae0772fdf.png",
+      "prompt": "Exact attached compact chibi chef fighter: very large white three-lobed chef hat with blue band, brown curly bun and fringe, smooth warm peaches skin, dot eyes, red neckerchief, white double breasted chef coat, blue apron pants, brown shoes and black frying pan. Same facial features, proportions and vivid outlines. Four full-body right-facing game animation poses: climbs two steps holding a plate, runs with a giant serving dish, slides the dish forward low, calm standing holding pan. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chef/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chef/assets/limit-finish.webp"
+    },
+    {
+      "id": "chef",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-47e11b3a-1daa-4609-9d63-279f113e797e.png",
+      "prompt": "Only isolated graphics without figures: four isolated items: rectangular wood kitchen counter side view, black metal cooking pot with handles, a cluster of colorful sliced vegetables, oversized decorated platter of golden stew. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chef/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chef/assets/limit-props.webp"
+    },
+    {
+      "id": "chef",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b2152925-7021-4f64-850b-c3b4a4d82894.png",
+      "prompt": "Only isolated graphics without figures: four clear isolated game strikes: orange pan flick with opaque sharp edge, green and scarlet tossed vegetables with speed streaks, thick white steam column with amber center, gold cream and red cartoon impact explosion with vegetables and white center. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chef/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chef/assets/limit-effects.webp"
+    }
+  ]
+}

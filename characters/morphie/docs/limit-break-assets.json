@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "morphie",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2638e38d-f18c-443f-b87c-8a5d1ffd4c14.png",
+      "prompt": "Ultra-wide 2.2:1 polished 2D video game cinematic cut-in. Exact attached blue metal Morphie fighter: short rounded cobalt segmented robot, white calavera head with bright colorful tiny dots, black circular eye socket, cheerful open mouth with red interior, white painted ribs, bronze gold wrist and foot trim, kneecap disks. Same battle design and palette. Only limbs referred to in the pose brief change size. Dynamic action, clear face and outfit in vivid adobe plaza inspired by Morphies Law, papel picado, desert rocks and turquoise sky, colossal blue avatar silhouette far behind, clear red earth floor. No UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/morphie/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/morphie/assets/limit-cutin.webp"
+    },
+    {
+      "id": "morphie",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-556b134a-ef2b-48fb-9442-e38940685b29.png",
+      "prompt": "Empty ultra-wide 2.2:1 side-view game background: vivid adobe plaza inspired by Morphies Law, papel picado, desert rocks and turquoise sky, colossal blue avatar silhouette far behind, clear red earth floor. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/morphie/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/morphie/assets/limit-court.webp"
+    },
+    {
+      "id": "morphie",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-55ce4cc3-d19e-48a5-8319-a8e1da75aa3c.png",
+      "prompt": "Exact attached blue metal Morphie fighter: short rounded cobalt segmented robot, white calavera head with bright colorful tiny dots, black circular eye socket, cheerful open mouth with red interior, white painted ribs, bronze gold wrist and foot trim, kneecap disks. Same battle design and palette. Only limbs referred to in the pose brief change size. Four full-body right-facing game animation poses: neutral guard, sidesteps holding small fictional colorful blaster, fires while hopping backward, crouches after recoil. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/morphie/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/morphie/assets/limit-poses.webp"
+    },
+    {
+      "id": "morphie",
+      "kind": "mass",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-55d63d5c-ff45-4571-a947-217b95fee0f6.png",
+      "prompt": "Exact attached blue metal Morphie fighter: short rounded cobalt segmented robot, white calavera head with bright colorful tiny dots, black circular eye socket, cheerful open mouth with red interior, white painted ribs, bronze gold wrist and foot trim, kneecap disks. Same battle design and palette. Only limbs referred to in the pose brief change size. Four full-body right-facing game animation poses: blue robot with huge calves and normal arms leaps vertically, twists in air with both large legs, lands on one oversized gold and blue hand, sweeps with that hand while rotating. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/morphie/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/morphie/assets/limit-mass.webp"
+    },
+    {
+      "id": "morphie",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-912b8da7-da94-4c38-9f0a-a45a4f90bd9e.png",
+      "prompt": "Exact attached blue metal Morphie fighter: short rounded cobalt segmented robot, white calavera head with bright colorful tiny dots, black circular eye socket, cheerful open mouth with red interior, white painted ribs, bronze gold wrist and foot trim, kneecap disks. Same battle design and palette. Only limbs referred to in the pose brief change size. Four full-body right-facing game animation poses: kneels touching floor control glyph, extends right hand commanding avatar, braces against recoil, returns to original compact size and guard. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/morphie/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/morphie/assets/limit-finish.webp"
+    },
+    {
+      "id": "morphie",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cf54085e-1e31-4fd8-9225-a4a699223414.png",
+      "prompt": "Only isolated graphics without figures: four isolated items: streams of turquoise and orange mass particles, large stylized colossal bright cobalt robotic forearm clenched in a fist with gold bands, upright turquoise control glyph, crumbling chunks of warm adobe. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/morphie/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/morphie/assets/limit-props.webp"
+    },
+    {
+      "id": "morphie",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-96ca2d14-748b-41d5-8f50-54c64a9b5bfd.png",
+      "prompt": "Only isolated graphics without figures: four distinct isolated game impacts: orange cyan mass bolt with white core pointing right, lime blue curved kick streak pointing right, opaque blue orange blast with hard outline, giant cobalt gold impact shock burst with white bright core. Exactly four independent complete tiles in strict 2x2 grid with wide clear transparent gutters and padding. Fully transparent background. No border, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/morphie/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/morphie/assets/limit-effects.webp"
+    }
+  ]
+}
