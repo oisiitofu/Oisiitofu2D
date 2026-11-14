@@ -1,0 +1,69 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/miyabi/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Hoshimi Miyabi of attached fighting game atlas: pale anime swordswoman with very long straight black hair, tall black fox ears, dark teal gold-embroidered coat, black pleated skirt, charcoal tights, black boots, black scabbard and straight narrow katana with gold trim. Keep red eyes and full body silhouette. Wide premium 2.2:1 anime cinematic close up, visible unobstructed face, sword in hand. New Eridu open railway platform at night with dark navy concrete, distant warm lights, cool blue ice crystals near edge, open foreground fighting floor. No text or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-460fe3ec-2cd8-43e1-b9f7-114ab3764ce2.png",
+      "destination": "characters/miyabi/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/miyabi/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty wide 2.2:1 side-view fantasy game arena. New Eridu open railway platform at night with dark navy concrete, distant warm lights, cool blue ice crystals near edge, open foreground fighting floor. No characters, no text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-10c70705-40e9-4600-a09e-369cddbf667b.png",
+      "destination": "characters/miyabi/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/miyabi/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Hoshimi Miyabi of attached fighting game atlas: pale anime swordswoman with very long straight black hair, tall black fox ears, dark teal gold-embroidered coat, black pleated skirt, charcoal tights, black boots, black scabbard and straight narrow katana with gold trim. Keep red eyes and full body silhouette. Four full-body poses all facing right: stands with left hand securing scabbard, steps into low draw slash, moves diagonally with narrow blade low, turns with arm extended. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4baf6ac9-0ca9-4e3b-9637-33ca4fd64c92.png",
+      "destination": "characters/miyabi/assets/limit-poses.webp"
+    },
+    {
+      "kind": "frost",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/miyabi/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Hoshimi Miyabi of attached fighting game atlas: pale anime swordswoman with very long straight black hair, tall black fox ears, dark teal gold-embroidered coat, black pleated skirt, charcoal tights, black boots, black scabbard and straight narrow katana with gold trim. Keep red eyes and full body silhouette. Four full-body poses all facing right: short grounded step across camera, carefully guides blade into scabbard, standing still with both hands at waist and low center of gravity, unfolds into swift forward draw. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c610b746-1eda-44b6-8696-cf8ad42043f8.png",
+      "destination": "characters/miyabi/assets/limit-frost.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/miyabi/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Hoshimi Miyabi of attached fighting game atlas: pale anime swordswoman with very long straight black hair, tall black fox ears, dark teal gold-embroidered coat, black pleated skirt, charcoal tights, black boots, black scabbard and straight narrow katana with gold trim. Keep red eyes and full body silhouette. Four full-body poses all facing right: opens stance knees bent, high half-turn cut, low finishing follow-through with blade in front, returns sword to sheath and stands. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f8096605-bd93-4bca-a1dd-a87945186c00.png",
+      "destination": "characters/miyabi/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/miyabi/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Only effects or objects; no humanoid characters or silhouettes. isolated frost pillars, silver ice crystals, scattering ice chunks, frost particles. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-77fc6617-5ab3-4dfe-87f0-2ddb35f1ef09.png",
+      "destination": "characters/miyabi/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/miyabi/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Only effects or objects; no humanoid characters or silhouettes. isolated opaque white-blue slash curved convex right, thin dark cyan ice cut with bright inner line, thick ice shatter with indigo edges, huge rightward layered blue white ice crescent with clear shape and dark blue outer line. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8c578c1c-50db-480a-9ccc-be3db45c8fb5.png",
+      "destination": "characters/miyabi/assets/limit-effects.webp"
+    }
+  ]
+}

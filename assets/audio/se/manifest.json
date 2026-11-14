@@ -1071,6 +1071,30 @@
     ],
     "battlemage-limit-finish": [
       "/assets/audio/se/battlemage-limit-finish.wav"
+    ],
+    "ulgrim-limit-parry": [
+      "/assets/audio/se/ulgrim-limit-parry.wav"
+    ],
+    "ulgrim-limit-edge": [
+      "/assets/audio/se/ulgrim-limit-edge.wav"
+    ],
+    "ulgrim-limit-rift": [
+      "/assets/audio/se/ulgrim-limit-rift.wav"
+    ],
+    "ulgrim-limit-finish": [
+      "/assets/audio/se/ulgrim-limit-finish.wav"
+    ],
+    "miyabi-limit-draw": [
+      "/assets/audio/se/miyabi-limit-draw.wav"
+    ],
+    "miyabi-limit-frost": [
+      "/assets/audio/se/miyabi-limit-frost.wav"
+    ],
+    "miyabi-limit-shatter": [
+      "/assets/audio/se/miyabi-limit-shatter.wav"
+    ],
+    "miyabi-limit-finish": [
+      "/assets/audio/se/miyabi-limit-finish.wav"
     ]
   },
   "impactDesign": {

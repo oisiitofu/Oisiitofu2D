@@ -1,0 +1,69 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "kind": "cutin",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ulgrim/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Ulgrim of the attached fighting game atlas: mature man, swept dark-brown hair, short full beard, long split navy coat, fine gold piping, brown leather armor straps, brown boots and dark gloves, single straight silver sword with ornate golden crossguard. Same face and proportions. Wide premium 2.2:1 anime cinematic close up, visible unobstructed face, sword in hand. Gothic Grim Dawn ruined stone terraces at dusk, dark purple aether fissure, iron lanterns, layered steep stone steps visible in background, flat unobstructed foreground. No text or UI.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-fd982909-db36-4f73-8299-847e86c63ae2.png",
+      "destination": "characters/ulgrim/assets/limit-cutin.webp"
+    },
+    {
+      "kind": "court",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ulgrim/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Empty wide 2.2:1 side-view fantasy game arena. Gothic Grim Dawn ruined stone terraces at dusk, dark purple aether fissure, iron lanterns, layered steep stone steps visible in background, flat unobstructed foreground. No characters, no text.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ecd442b9-d588-45be-96bd-f1aee33c6166.png",
+      "destination": "characters/ulgrim/assets/limit-court.webp"
+    },
+    {
+      "kind": "poses",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ulgrim/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Ulgrim of the attached fighting game atlas: mature man, swept dark-brown hair, short full beard, long split navy coat, fine gold piping, brown leather armor straps, brown boots and dark gloves, single straight silver sword with ornate golden crossguard. Same face and proportions. Four full-body poses all facing right: ready guard, turning parry with blade crossed, short sliding retreat, lunging upper swing. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-225c79b0-1a0e-4337-93b2-3a0a3a9fe656.png",
+      "destination": "characters/ulgrim/assets/limit-poses.webp"
+    },
+    {
+      "kind": "rift",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ulgrim/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Ulgrim of the attached fighting game atlas: mature man, swept dark-brown hair, short full beard, long split navy coat, fine gold piping, brown leather armor straps, brown boots and dark gloves, single straight silver sword with ornate golden crossguard. Same face and proportions. Four full-body poses all facing right: low sidestep while left hand opens a rift, stepping out of an opening, descending onto a stone step with coat flowing, steadying at bottom of steps. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bd8e7a11-a5e2-4c98-ad0c-3ae9eab3bdc5.png",
+      "destination": "characters/ulgrim/assets/limit-rift.webp"
+    },
+    {
+      "kind": "finish",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ulgrim/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Exact Ulgrim of the attached fighting game atlas: mature man, swept dark-brown hair, short full beard, long split navy coat, fine gold piping, brown leather armor straps, brown boots and dark gloves, single straight silver sword with ornate golden crossguard. Same face and proportions. Four full-body poses all facing right: guard with sword tip down, crouches to draw sword horizontally, huge two-handed horizontal swing, settles back to guarded stance. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f59a1135-f752-4dff-b880-316cf3c7a473.png",
+      "destination": "characters/ulgrim/assets/limit-finish.webp"
+    },
+    {
+      "kind": "props",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ulgrim/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Only effects or objects; no humanoid characters or silhouettes. isolated shattered steps, dark purple luminous vertical rift, scattered stone chunks, brass torch. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-40aab49a-b489-4ce8-82d5-27cac78560f5.png",
+      "destination": "characters/ulgrim/assets/limit-props.webp"
+    },
+    {
+      "kind": "effects",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/ulgrim/limit-break/battle-design-reference.png"
+      ],
+      "prompt": "Only effects or objects; no humanoid characters or silhouettes. isolated bright gold parry collision, horizontal violet trail, silver blue sword crescent bulging right, enormous opaque silver and violet impact slash pointed right. Exactly four separate evenly spaced tiles, 2x2 grid with transparent margins, fully transparent canvas, no text or border.",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-cb855cac-e3f4-4878-a9de-692381ea61d5.png",
+      "destination": "characters/ulgrim/assets/limit-effects.webp"
+    }
+  ]
+}
