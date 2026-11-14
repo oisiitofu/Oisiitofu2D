@@ -1,0 +1,101 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "octane",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7ce085c0-8c61-431a-933f-2a1f55962ffa.png",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\octane\\limit-break\\battle-design-reference.png"
+      ],
+      "destination": "characters/octane/assets/limit-cutin.webp"
+    },
+    {
+      "id": "octane",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-20c1f4ce-330c-43ba-9cc6-7a1c1182adcd.png",
+      "prompt": "Empty ultra-wide 2.2:1 polished painted side-view fighting game background, desert sport arena at sunset, canyon walls and battered futuristic stadium infrastructure with a clear flat floor. No figures, no UI, no text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/octane/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/octane/assets/limit-court.webp"
+    },
+    {
+      "id": "octane",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-dc4d6723-c4d8-40eb-8e0d-4e280c7492c8.png",
+      "prompt": "Match the game sprite precisely: adult Octane, round lime goggles, black toothy respirator, sleeveless green vest, bare muscular arms, orange exposed black prosthetic knee joints, lime foot edges. Maintain identical outfit, proportions, and colors. Four full-body right-facing anime game poses: low running start, one boot forward placing launch pad, slides low with one hand back, extends forward on low horizontal jump. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/octane/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/octane/assets/limit-poses.webp"
+    },
+    {
+      "id": "octane",
+      "kind": "rebound",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-870b0f42-fc8b-4c18-b8e0-2897ba783d49.png",
+      "prompt": "Match the game sprite precisely: adult Octane, round lime goggles, black toothy respirator, sleeveless green vest, bare muscular arms, orange exposed black prosthetic knee joints, lime foot edges. Maintain identical outfit, proportions, and colors. Four full-body right-facing anime game poses: first airborne kick, pivots in abruptly crouched landing, jumps sharply off a pad, kicks sideways with the other leg. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/octane/limit-break/battle-design-reference.png"
+      ],
+      "boxes": [
+        [
+          0,
+          0,
+          768,
+          480
+        ],
+        [
+          768,
+          0,
+          1536,
+          495
+        ],
+        [
+          0,
+          496,
+          768,
+          859
+        ],
+        [
+          768,
+          496,
+          1536,
+          1024
+        ]
+      ],
+      "destination": "characters/octane/assets/limit-rebound.webp"
+    },
+    {
+      "id": "octane",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7bb2fcd4-b5c7-49e0-9396-430d78b0a5bd.png",
+      "prompt": "Match the game sprite precisely: adult Octane, round lime goggles, black toothy respirator, sleeveless green vest, bare muscular arms, orange exposed black prosthetic knee joints, lime foot edges. Maintain identical outfit, proportions, and colors. Four full-body right-facing anime game poses: tucks both knees, extends both mechanical boots downward with fists back, squat landing, normal guard. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/octane/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/octane/assets/limit-finish.webp"
+    },
+    {
+      "id": "octane",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f75e1d80-fb67-4f3f-ad7b-907dbfaa9326.png",
+      "prompt": "Only isolated graphics without figures: battered green and black trapezoid jump pad, orange spring impulse cone, lime speed vapor, spray of dust and gravel. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/octane/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/octane/assets/limit-props.webp"
+    },
+    {
+      "id": "octane",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-30ce546d-4c6f-4fa6-a5a7-39bc4ebe230c.png",
+      "prompt": "Only isolated graphics without figures: lime kick arc with hard outline, orange-white mechanical impact spark, lime aerodynamic kick trail, orange-lime shockwave bursting from ground with bright core. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/octane/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/octane/assets/limit-effects.webp"
+    }
+  ]
+}

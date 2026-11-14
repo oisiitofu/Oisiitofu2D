@@ -1,0 +1,101 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "deemo",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7fe7642d-de37-48a8-9dec-7f9a0e26fa0b.png",
+      "refs": [
+        "C:\\Users\\haro_\\OneDrive\\ドキュメント\\Oisiitofu2D\\previews\\deemo\\limit-break\\battle-design-reference.png"
+      ],
+      "destination": "characters/deemo/assets/limit-cutin.webp"
+    },
+    {
+      "id": "deemo",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a1ac3009-8725-4d19-8e6c-2d91ce82dd48.png",
+      "prompt": "Empty ultra-wide 2.2:1 polished painted side-view fighting game background, a shadowed gothic castle music chamber with a high circular skylight, amber sunbeams, quiet dark gold and blue tones, and clear stone floor. No figures, no UI, no text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/deemo/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/deemo/assets/limit-court.webp"
+    },
+    {
+      "id": "deemo",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-232c7cb8-f2c1-4c88-a1e8-e2c349d5d85e.png",
+      "prompt": "Match the game sprite precisely: very tall slender Deemo, round featureless black head and one tiny glint, black split-tailed tuxedo, white shirt triangle, long black fingers and narrow black legs. Preserve entire dark silhouette with warm rim lighting. Four full-body right-facing anime game poses: standing at attention, seated side profile on invisible piano bench reaching toward keys, seated stretching left hand lower as if playing piano, seated lifting right hand over invisible piano. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/deemo/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/deemo/assets/limit-poses.webp"
+    },
+    {
+      "id": "deemo",
+      "kind": "branches",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b40712cb-f37d-4735-97df-e18ba31720b4.png",
+      "prompt": "Match the game sprite precisely: very tall slender Deemo, round featureless black head and one tiny glint, black split-tailed tuxedo, white shirt triangle, long black fingers and narrow black legs. Preserve entire dark silhouette with warm rim lighting. Four full-body right-facing anime game poses: rises from invisible bench pushing off knee, strides up an inclined tree root, balances on an invisible branch with arms extended, stands conducting with one arm raised. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/deemo/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/deemo/assets/limit-branches.webp"
+    },
+    {
+      "id": "deemo",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-e01e0e93-ef68-47a2-8065-589ac82a8300.png",
+      "prompt": "Match the game sprite precisely: very tall slender Deemo, round featureless black head and one tiny glint, black split-tailed tuxedo, white shirt triangle, long black fingers and narrow black legs. Preserve entire dark silhouette with warm rim lighting. Four full-body right-facing anime game poses: steps forward balancing, sweeps both arms down conducting, gently lowers arms, poised upright neutral. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/deemo/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/deemo/assets/limit-finish.webp"
+    },
+    {
+      "id": "deemo",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a70e50fb-8208-451e-8b41-6a63afde160f.png",
+      "prompt": "Only isolated graphics without figures: side view black baby grand piano and bench, low angled dark golden woody root, elevated tier of golden leafy branches, crown of warm glowing leaves. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/deemo/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/deemo/assets/limit-props.webp"
+    },
+    {
+      "id": "deemo",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-65bf3fd1-e571-41ea-9069-17b060ba6d5a.png",
+      "prompt": "Only isolated graphics without figures: compact amber piano key sound hit, sharp amber root-tip with white center, horizontal pale gold sound wave, grand amber-white explosion of leaves and musical ribbons with crisp bright core. Exactly four complete independent tiles in a strict 2x2 grid with wide transparent gutters and padding. Fully transparent background. No border, labels, UI or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/deemo/limit-break/battle-design-reference.png"
+      ],
+      "boxes": [
+        [
+          0,
+          0,
+          768,
+          461
+        ],
+        [
+          768,
+          0,
+          1536,
+          461
+        ],
+        [
+          0,
+          461,
+          768,
+          1024
+        ],
+        [
+          768,
+          461,
+          1536,
+          1024
+        ]
+      ],
+      "destination": "characters/deemo/assets/limit-effects.webp"
+    }
+  ]
+}

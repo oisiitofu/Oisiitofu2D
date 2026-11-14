@@ -1146,6 +1146,30 @@
     ],
     "jett-limit-land": [
       "/assets/audio/se/jett-limit-land.wav"
+    ],
+    "octane-limit-stim": [
+      "/assets/audio/se/octane-limit-stim.wav"
+    ],
+    "octane-limit-pad": [
+      "/assets/audio/se/octane-limit-pad.wav"
+    ],
+    "octane-limit-kick": [
+      "/assets/audio/se/octane-limit-kick.wav"
+    ],
+    "octane-limit-finish": [
+      "/assets/audio/se/octane-limit-finish.wav"
+    ],
+    "deemo-limit-bass": [
+      "/assets/audio/se/deemo-limit-bass.wav"
+    ],
+    "deemo-limit-keys": [
+      "/assets/audio/se/deemo-limit-keys.wav"
+    ],
+    "deemo-limit-root": [
+      "/assets/audio/se/deemo-limit-root.wav"
+    ],
+    "deemo-limit-finish": [
+      "/assets/audio/se/deemo-limit-finish.wav"
     ]
   },
   "impactDesign": {
