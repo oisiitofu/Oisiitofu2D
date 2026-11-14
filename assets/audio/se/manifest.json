@@ -1350,6 +1350,12 @@
     ],
     "vivi-limit-doomsday": [
       "/assets/audio/se/vivi-limit-doomsday.wav"
+    ],
+    "hornet-limit-thread": [
+      "/assets/audio/se/hornet-limit-thread.wav"
+    ],
+    "chocobo-limit-meteor": [
+      "/assets/audio/se/chocobo-limit-meteor.wav"
     ]
   },
   "impactDesign": {
