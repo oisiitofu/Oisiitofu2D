@@ -1290,6 +1290,30 @@
     ],
     "quote-limit-spur": [
       "/assets/audio/se/quote-limit-spur.wav"
+    ],
+    "battlecat-limit-paw": [
+      "/assets/audio/se/battlecat-limit-paw.wav"
+    ],
+    "battlecat-limit-cart": [
+      "/assets/audio/se/battlecat-limit-cart.wav"
+    ],
+    "battlecat-limit-lever": [
+      "/assets/audio/se/battlecat-limit-lever.wav"
+    ],
+    "battlecat-limit-cannon": [
+      "/assets/audio/se/battlecat-limit-cannon.wav"
+    ],
+    "chiikawa-limit-pole": [
+      "/assets/audio/se/chiikawa-limit-pole.wav"
+    ],
+    "chiikawa-limit-vault": [
+      "/assets/audio/se/chiikawa-limit-vault.wav"
+    ],
+    "chiikawa-limit-push": [
+      "/assets/audio/se/chiikawa-limit-push.wav"
+    ],
+    "chiikawa-limit-finish": [
+      "/assets/audio/se/chiikawa-limit-finish.wav"
     ]
   },
   "impactDesign": {

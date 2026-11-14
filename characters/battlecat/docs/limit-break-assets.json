@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "battlecat",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4e46ac83-6bfe-4d2a-9802-965cb87315ea.png",
+      "prompt": "Ultra-wide 2.2:1 polished colorful fighting game cut-in, Exact attached Battle Cats basic Cat, almost perfectly round smooth white body, tiny triangular ears, tiny black eyes and same simple smiling open muzzle, stubby feet, thick black ink outline. Keep the ultraminimal battle sprite design. cartoon Battle Cats grassy battlefield with clouds, hills and distant cat-faced fortress, simple clean wide combat floor. No text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlecat/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/battlecat/assets/limit-cutin.webp"
+    },
+    {
+      "id": "battlecat",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-bc4bc354-0baf-426e-8075-9ce4480da8d4.png",
+      "prompt": "Empty ultra-wide 2.2:1 side-view game arena, cartoon Battle Cats grassy battlefield with clouds, hills and distant cat-faced fortress, simple clean wide combat floor. No characters, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlecat/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/battlecat/assets/limit-court.webp"
+    },
+    {
+      "id": "battlecat",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c217b6fc-0f0f-4b33-8692-05c4ceb22800.png",
+      "prompt": "Exact attached Battle Cats basic Cat, almost perfectly round smooth white body, tiny triangular ears, tiny black eyes and same simple smiling open muzzle, stubby feet, thick black ink outline. Keep the ultraminimal battle sprite design. Four independent full-body right-facing game poses: idle, trots forward, squats pushing a platform, leads charge with tiny paws forward. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlecat/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/battlecat/assets/limit-poses.webp"
+    },
+    {
+      "id": "battlecat",
+      "kind": "charge",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-642529ac-56e7-42b0-a7b3-c4f5ae7aa7b6.png",
+      "prompt": "Exact attached Battle Cats basic Cat, almost perfectly round smooth white body, tiny triangular ears, tiny black eyes and same simple smiling open muzzle, stubby feet, thick black ink outline. Keep the ultraminimal battle sprite design. Four independent full-body right-facing game poses: runs next to allies, stretches to jump, rolls sideways, hops with paws upward. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlecat/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/battlecat/assets/limit-charge.webp"
+    },
+    {
+      "id": "battlecat",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9899397e-8d21-46d1-b2bc-aff5fefb02d3.png",
+      "prompt": "Exact attached Battle Cats basic Cat, almost perfectly round smooth white body, tiny triangular ears, tiny black eyes and same simple smiling open muzzle, stubby feet, thick black ink outline. Keep the ultraminimal battle sprite design. Four independent full-body right-facing game poses: reaches up to grab a lever, pulls with both tiny paws, recoils in surprise, relaxed smiling idle. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlecat/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/battlecat/assets/limit-finish.webp"
+    },
+    {
+      "id": "battlecat",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-85e6cb4b-6e0b-4488-ad52-cfb485c7e46e.png",
+      "prompt": "Four separate isolated game illustration assets: wood platform cart, line of three matching simple round white cats, cartoon cat-faced cannon tower, pull lever with black base. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlecat/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/battlecat/assets/limit-props.webp"
+    },
+    {
+      "id": "battlecat",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-aa45ec72-ed6b-49d6-a65a-000c8deb2df1.png",
+      "prompt": "Four separate isolated game illustration assets: white paw slap outlined in black, orange comic collision star, light gold clustered white paw strike with thick outline, huge lemon white bright cannon shock beam to the right. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/battlecat/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/battlecat/assets/limit-effects.webp"
+    }
+  ]
+}

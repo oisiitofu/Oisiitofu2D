@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "chiikawa",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-79fba5cc-2208-47d4-b36e-e8285457ad2b.png",
+      "prompt": "Ultra-wide 2.2:1 polished colorful fighting game cut-in, Exact attached Chiikawa, tiny round all-white creature with very small round ears, little peach pink tail, pink blush cheeks, black dot eyes, miniature mouth and thick smooth linework. Holds the exact blue U-ended sasumata fantasy pole. Keep same proportions and quiet pastel anime kawaii style. gentle pastel hillside flower clearing with soft clouds and distant pale stone ledges, clear flat grassy fighting floor. No text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chiikawa/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chiikawa/assets/limit-cutin.webp"
+    },
+    {
+      "id": "chiikawa",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-5dce1da6-7b04-40fb-bd48-dc8b31ef2db0.png",
+      "prompt": "Empty ultra-wide 2.2:1 side-view game arena, gentle pastel hillside flower clearing with soft clouds and distant pale stone ledges, clear flat grassy fighting floor. No characters, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chiikawa/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chiikawa/assets/limit-court.webp"
+    },
+    {
+      "id": "chiikawa",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2a376a5c-8879-4f2b-b5d3-d2b6f46cd3ef.png",
+      "prompt": "Exact attached Chiikawa, tiny round all-white creature with very small round ears, little peach pink tail, pink blush cheeks, black dot eyes, miniature mouth and thick smooth linework. Holds the exact blue U-ended sasumata fantasy pole. Keep same proportions and quiet pastel anime kawaii style. Four independent full-body right-facing game poses: neutral gripping blue pole, stumbles and leans backward, plants the pole, vaults forward. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chiikawa/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chiikawa/assets/limit-poses.webp"
+    },
+    {
+      "id": "chiikawa",
+      "kind": "pole",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f8780f42-7c55-44ac-93b2-ff8272727f3d.png",
+      "prompt": "Exact attached Chiikawa, tiny round all-white creature with very small round ears, little peach pink tail, pink blush cheeks, black dot eyes, miniature mouth and thick smooth linework. Holds the exact blue U-ended sasumata fantasy pole. Keep same proportions and quiet pastel anime kawaii style. Four independent full-body right-facing game poses: crouches low with pole stretched out, raises U-ended pole with knees bent, turns mid-hop, pushes with both legs braced. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chiikawa/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chiikawa/assets/limit-pole.webp"
+    },
+    {
+      "id": "chiikawa",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1156a4a5-a191-4336-9dc9-761d320ab941.png",
+      "prompt": "Exact attached Chiikawa, tiny round all-white creature with very small round ears, little peach pink tail, pink blush cheeks, black dot eyes, miniature mouth and thick smooth linework. Holds the exact blue U-ended sasumata fantasy pole. Keep same proportions and quiet pastel anime kawaii style. Four independent full-body right-facing game poses: joins two hands holding shaft horizontally, deep stance with bent shaft pushing forward, falls into relaxed sitting, original upright ready pose. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chiikawa/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chiikawa/assets/limit-finish.webp"
+    },
+    {
+      "id": "chiikawa",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d968f655-24e5-494d-9975-51a8c63f3920.png",
+      "prompt": "Four separate isolated game illustration assets: blue-eared white friendly Hachiware companion, flower petal gust, two pastel mushroom props, pink and white confetti stars. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chiikawa/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chiikawa/assets/limit-props.webp"
+    },
+    {
+      "id": "chiikawa",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-80280fda-2e7b-4f1d-a8a8-d244d7e66e9f.png",
+      "prompt": "Four separate isolated game illustration assets: pale blue pole swoosh with crisp edges, low warm coral push star, narrow sky-blue upward crescent, huge pink and sky-blue pastel comic burst with bright white core. Four separate complete tiles in a strict 2x2 grid with wide transparent gutters, transparent background, no text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/chiikawa/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/chiikawa/assets/limit-effects.webp"
+    }
+  ]
+}
