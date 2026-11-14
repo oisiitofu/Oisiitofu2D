@@ -1386,6 +1386,12 @@
     ],
     "lightning-limit-army-of-one": [
       "/assets/audio/se/lightning-limit-army-of-one.wav"
+    ],
+    "noctis-limit-armiger": [
+      "/assets/audio/se/noctis-limit-armiger.wav"
+    ],
+    "clive-limit-hellfire": [
+      "/assets/audio/se/clive-limit-hellfire.wav"
     ]
   },
   "impactDesign": {
