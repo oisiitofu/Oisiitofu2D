@@ -1410,6 +1410,12 @@
     ],
     "veronica-limit-madante": [
       "/assets/audio/se/veronica-limit-madante.wav"
+    ],
+    "namine-limit-memory-chain": [
+      "/assets/audio/se/namine-limit-memory-chain.wav"
+    ],
+    "magus-limit-dark-matter": [
+      "/assets/audio/se/magus-limit-dark-matter.wav"
     ]
   },
   "impactDesign": {
