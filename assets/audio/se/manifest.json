@@ -1368,6 +1368,12 @@
     ],
     "yuffie-limit-all-creation": [
       "/assets/audio/se/yuffie-limit-all-creation.wav"
+    ],
+    "zack-limit-hard-rush": [
+      "/assets/audio/se/zack-limit-hard-rush.wav"
+    ],
+    "aerith-limit-judgment": [
+      "/assets/audio/se/aerith-limit-judgment.wav"
     ]
   },
   "impactDesign": {
