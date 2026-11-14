@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "human",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-701459b7-c6ec-460f-aca8-10a02c4ed261.png",
+      "prompt": "Ultra-wide 2.2:1 polished stylized game action illustration. Exact attached Human Fall Flat fighter, ivory-white featureless rounded soft person, entirely blank round white head, short chunky legs, mitten hands, smooth matte with simple black outline. No clothes or face. bright surreal floating limestone construction courtyard, yellow timber crane, lavender skies. No text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/human/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/human/assets/limit-cutin.webp"
+    },
+    {
+      "id": "human",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-adbb2cae-a2fb-469d-b469-9ae175c61389.png",
+      "prompt": "Empty ultra-wide 2.2:1 animated game arena background, bright surreal floating limestone construction courtyard, yellow timber crane, lavender skies. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/human/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/human/assets/limit-court.webp"
+    },
+    {
+      "id": "human",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-65642b76-ab05-4c49-91ab-8e21c43aff03.png",
+      "prompt": "Exact attached Human Fall Flat fighter, ivory-white featureless rounded soft person, entirely blank round white head, short chunky legs, mitten hands, smooth matte with simple black outline. No clothes or face. Four full-body right-facing game poses: neutral, reaches up with both hands, hangs by both hands with loose trailing legs, swings by one hand. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/human/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/human/assets/limit-poses.webp"
+    },
+    {
+      "id": "human",
+      "kind": "swing",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9b6b313f-d9a3-46dc-958f-425453817637.png",
+      "prompt": "Exact attached Human Fall Flat fighter, ivory-white featureless rounded soft person, entirely blank round white head, short chunky legs, mitten hands, smooth matte with simple black outline. No clothes or face. Four full-body right-facing game poses: reaches sideways overhead, lands on both knees, shoves imaginary crate with two palms, jumps with both arms extended. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/human/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/human/assets/limit-swing.webp"
+    },
+    {
+      "id": "human",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c06a209f-0aa7-4a78-8363-bbf07c8010a6.png",
+      "prompt": "Exact attached Human Fall Flat fighter, ivory-white featureless rounded soft person, entirely blank round white head, short chunky legs, mitten hands, smooth matte with simple black outline. No clothes or face. Four full-body right-facing game poses: hangs by both arms, pulls downward, falls backward arms flailing, stands relaxed. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/human/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/human/assets/limit-finish.webp"
+    },
+    {
+      "id": "human",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-eea0cd7e-723c-4d89-b578-063db33a9df3.png",
+      "prompt": "Only isolated graphics without figures: ochre beam, slatted puzzle crate, suspended cargo slab with ropes, tilting gray platform. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/human/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/human/assets/limit-props.webp"
+    },
+    {
+      "id": "human",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-8daea8da-6da9-4cf0-9d2b-8122ff7f2561.png",
+      "prompt": "Only isolated graphics without figures: orange body bump spark, white wind sweep, yellow wood and stone impact, enormous ivory amber burst with blocks. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/human/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/human/assets/limit-effects.webp"
+    }
+  ]
+}

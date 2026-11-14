@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "knight",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ffebf082-eec4-4d4b-8b8e-d86b9ece11a2.png",
+      "prompt": "Ultra-wide 2.2:1 polished stylized game action illustration. Exact attached Hollow Knight fighter: tiny black bug body, slate-indigo ragged cloak, oversized ivory twin-horn mask with two black eye pits, short steel nail, thick hand-drawn outline and same proportions. ancient Hallownest cavern opening into moonlit black stone temple with cold shafts of light, clear lower fighting floor. No text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/knight/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/knight/assets/limit-cutin.webp"
+    },
+    {
+      "id": "knight",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-7cf99ecd-a2c1-46cd-b4e6-20cfee4a8e59.png",
+      "prompt": "Empty ultra-wide 2.2:1 animated game arena background, ancient Hallownest cavern opening into moonlit black stone temple with cold shafts of light, clear lower fighting floor. No figures, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/knight/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/knight/assets/limit-court.webp"
+    },
+    {
+      "id": "knight",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-ddf8b50f-4c7d-4a8a-85d9-d3081029803c.png",
+      "prompt": "Exact attached Hollow Knight fighter: tiny black bug body, slate-indigo ragged cloak, oversized ivory twin-horn mask with two black eye pits, short steel nail, thick hand-drawn outline and same proportions. Four full-body right-facing game poses: standing guard, low jump preparation, airborne knees tucked, aims nail straight down. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/knight/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/knight/assets/limit-poses.webp"
+    },
+    {
+      "id": "knight",
+      "kind": "pogo",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-213bb689-1f80-4feb-83a9-e90624b4f9bf.png",
+      "prompt": "Exact attached Hollow Knight fighter: tiny black bug body, slate-indigo ragged cloak, oversized ivory twin-horn mask with two black eye pits, short steel nail, thick hand-drawn outline and same proportions. Four full-body right-facing game poses: descends nail-first, springs with cloak flying up, braces against invisible wall, twists downward with nail. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/knight/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/knight/assets/limit-pogo.webp"
+    },
+    {
+      "id": "knight",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f0ba76d6-6099-41b7-840f-e1b93142e6a3.png",
+      "prompt": "Exact attached Hollow Knight fighter: tiny black bug body, slate-indigo ragged cloak, oversized ivory twin-horn mask with two black eye pits, short steel nail, thick hand-drawn outline and same proportions. Four full-body right-facing game poses: kneels nail in floor, dark cloak surges, raises head and opens arms, normal ready pose. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/knight/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/knight/assets/limit-finish.webp"
+    },
+    {
+      "id": "knight",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-9a6eddd1-71ab-4326-8c2f-5af988fad88e.png",
+      "prompt": "Only isolated graphics without figures: rough stone platform, cold dust burst, black void tendrils with indigo rims, hovering spectral shell light. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/knight/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/knight/assets/limit-props.webp"
+    },
+    {
+      "id": "knight",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b77dff0a-e705-4327-956e-217c81135980.png",
+      "prompt": "Only isolated graphics without figures: white right-facing nail slash, white vertical nail impact, blue-white shadow slash, giant upward indigo and ivory void eruption. Exactly four separate complete tiles in strict 2x2 grid, wide transparent gutters, fully transparent background, no border, text or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/knight/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/knight/assets/limit-effects.webp"
+    }
+  ]
+}

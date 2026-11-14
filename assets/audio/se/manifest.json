@@ -1242,6 +1242,30 @@
     ],
     "morphie-limit-avatar": [
       "/assets/audio/se/morphie-limit-avatar.wav"
+    ],
+    "human-limit-grab": [
+      "/assets/audio/se/human-limit-grab.wav"
+    ],
+    "human-limit-swing": [
+      "/assets/audio/se/human-limit-swing.wav"
+    ],
+    "human-limit-crate": [
+      "/assets/audio/se/human-limit-crate.wav"
+    ],
+    "human-limit-drop": [
+      "/assets/audio/se/human-limit-drop.wav"
+    ],
+    "knight-limit-nail": [
+      "/assets/audio/se/knight-limit-nail.wav"
+    ],
+    "knight-limit-pogo": [
+      "/assets/audio/se/knight-limit-pogo.wav"
+    ],
+    "knight-limit-void": [
+      "/assets/audio/se/knight-limit-void.wav"
+    ],
+    "knight-limit-finish": [
+      "/assets/audio/se/knight-limit-finish.wav"
     ]
   },
   "impactDesign": {
