@@ -1122,6 +1122,30 @@
     ],
     "zoe-limit-finish": [
       "/assets/audio/se/zoe-limit-finish.wav"
+    ],
+    "exe-limit-buster": [
+      "/assets/audio/se/exe-limit-buster.wav"
+    ],
+    "exe-limit-panel": [
+      "/assets/audio/se/exe-limit-panel.wav"
+    ],
+    "exe-limit-sword": [
+      "/assets/audio/se/exe-limit-sword.wav"
+    ],
+    "exe-limit-finish": [
+      "/assets/audio/se/exe-limit-finish.wav"
+    ],
+    "jett-limit-knife": [
+      "/assets/audio/se/jett-limit-knife.wav"
+    ],
+    "jett-limit-wind": [
+      "/assets/audio/se/jett-limit-wind.wav"
+    ],
+    "jett-limit-fan": [
+      "/assets/audio/se/jett-limit-fan.wav"
+    ],
+    "jett-limit-land": [
+      "/assets/audio/se/jett-limit-land.wav"
     ]
   },
   "impactDesign": {

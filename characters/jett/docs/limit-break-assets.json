@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "jett",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-308be1b9-40a5-4a43-ae96-b9ad0e8b03fc.png",
+      "prompt": "Ultra-wide 2.2:1 fighting game cinematic cut-in, 2D anime action illustration, composed to clearly reveal face, outfit, gloves and weapon across the central strip. Match the attached Jett battle sprite precisely: white hair tied up with long side fringe, cyan sleeveless hooded layer and trailing split coat tails, very dark blue baggy pants, black fingerless gloves, short angular blue steel kunai. Preserve compact anime game sprite proportions and exactly the same clothes and face. Action-ready pose, Ascent-inspired Italian rooftop courtyard, dramatic slate and turquoise dawn, tiled ground and terracotta rooftops with a distinctive open sky and empty center stage. No UI, text, logos.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jett/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/jett/assets/limit-cutin.webp"
+    },
+    {
+      "id": "jett",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c6b2599d-6d4b-4f80-b665-513b7abaee1e.png",
+      "prompt": "Empty 2.2:1 video game cinematic environment with exceptional polish, side-view fighting arena, Ascent-inspired Italian rooftop courtyard, dramatic slate and turquoise dawn, tiled ground and terracotta rooftops with a distinctive open sky and empty center stage. Unobstructed center and floor in the lower third. No characters, UI, or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jett/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/jett/assets/limit-court.webp"
+    },
+    {
+      "id": "jett",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-396960ea-d31b-4114-b987-f4dc7c2755e8.png",
+      "prompt": "Match the attached Jett battle sprite precisely: white hair tied up with long side fringe, cyan sleeveless hooded layer and trailing split coat tails, very dark blue baggy pants, black fingerless gloves, short angular blue steel kunai. Preserve compact anime game sprite proportions and exactly the same clothes and face. Full-body right-facing fighting game frames: low running slide, one-handed smoke orb toss, crouch gathering wind, knee up climbing vertically. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jett/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/jett/assets/limit-poses.webp"
+    },
+    {
+      "id": "jett",
+      "kind": "glide",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-c6be8ad7-1ae9-4018-b825-cef8cb31418d.png",
+      "prompt": "Match the attached Jett battle sprite precisely: white hair tied up with long side fringe, cyan sleeveless hooded layer and trailing split coat tails, very dark blue baggy pants, black fingerless gloves, short angular blue steel kunai. Preserve compact anime game sprite proportions and exactly the same clothes and face. Full-body right-facing fighting game frames: rising back arched and throwing down, sideways horizontal glide with arm extended, twists in air to throw opposite hand, floats with both knees tucked and five kunai orbiting. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jett/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/jett/assets/limit-glide.webp"
+    },
+    {
+      "id": "jett",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f2198ea3-b7a6-468a-88d4-334597fbb087.png",
+      "prompt": "Match the attached Jett battle sprite precisely: white hair tied up with long side fringe, cyan sleeveless hooded layer and trailing split coat tails, very dark blue baggy pants, black fingerless gloves, short angular blue steel kunai. Preserve compact anime game sprite proportions and exactly the same clothes and face. Full-body right-facing fighting game frames: points both arms down while diving, throws a fan of knives diagonally down, one hand braced landing, standing ready. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jett/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/jett/assets/limit-finish.webp"
+    },
+    {
+      "id": "jett",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b9041116-027b-4222-84ea-64aeff7b12df.png",
+      "prompt": "Only isolated graphic assets, no figures: four isolated cinematic props: pale blue-white swirling translucent smoke orb, narrow vertical wind updraft, grounded pale teal dust skid, clean arc of five floating angular blue steel kunai. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jett/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/jett/assets/limit-props.webp"
+    },
+    {
+      "id": "jett",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-0e76a12f-7eb2-4681-aacc-2c77846e547d.png",
+      "prompt": "Only isolated graphic assets, no figures: four isolated vivid game attack effects: single blue-white dagger streak tip on right, pale turquoise cutting wind crescent bulging right, blue-white fan of thrown steel kunai tip on right, broad diagonal converging ice-blue luminous kunai impact with solid bright core. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/jett/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/jett/assets/limit-effects.webp"
+    }
+  ]
+}

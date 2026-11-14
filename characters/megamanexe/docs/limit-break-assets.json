@@ -1,0 +1,76 @@
+{
+  "mode": "built-in image_gen",
+  "status": "locally verified",
+  "assets": [
+    {
+      "id": "megamanexe",
+      "kind": "cutin",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-2fe2cbf3-b904-42e0-bfed-e68cf54b511b.png",
+      "prompt": "Ultra-wide 2.2:1 fighting game cinematic cut-in, 2D anime action illustration, composed to clearly reveal face, outfit, gloves and weapon across the central strip. Match the attached MegaMan.EXE sprite precisely: compact stylized proportions, large blue helmet with yellow bands and circular red-and-gold ear disks, cyan side lines on navy bodysuit, round red/gold chest badge, rounded blue boots. Keep line weight and flat colored anime cel shading on pose sprites. Action-ready pose, a stylized dark cyber world with violet distant network nodes and a clear perspective ground of turquoise square wireframe panels. No UI, text, logos.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/megamanexe/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/megamanexe/assets/limit-cutin.webp"
+    },
+    {
+      "id": "megamanexe",
+      "kind": "court",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-71e4f45d-e71c-4301-8fdb-fb1a59802cdb.png",
+      "prompt": "Empty 2.2:1 video game cinematic environment with exceptional polish, side-view fighting arena, a stylized dark cyber world with violet distant network nodes and a clear perspective ground of turquoise square wireframe panels. Unobstructed center and floor in the lower third. No characters, UI, or text.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/megamanexe/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/megamanexe/assets/limit-court.webp"
+    },
+    {
+      "id": "megamanexe",
+      "kind": "poses",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-58466dba-9b43-46a2-8565-449b90d42493.png",
+      "prompt": "Match the attached MegaMan.EXE sprite precisely: compact stylized proportions, large blue helmet with yellow bands and circular red-and-gold ear disks, cyan side lines on navy bodysuit, round red/gold chest badge, rounded blue boots. Keep line weight and flat colored anime cel shading on pose sprites. Full-body right-facing fighting game frames: standing guard, sidestep with arm cannon charging, recoil shooting diagonally, crouched planting a boot. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/megamanexe/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/megamanexe/assets/limit-poses.webp"
+    },
+    {
+      "id": "megamanexe",
+      "kind": "chips",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-25898a00-dd97-4d46-a9a1-ea28af7853a3.png",
+      "prompt": "Match the attached MegaMan.EXE sprite precisely: compact stylized proportions, large blue helmet with yellow bands and circular red-and-gold ear disks, cyan side lines on navy bodysuit, round red/gold chest badge, rounded blue boots. Keep line weight and flat colored anime cel shading on pose sprites. Full-body right-facing fighting game frames: running through a luminous opening, short green sword thrust, wide sweeping horizontal green sword slash, long green sword overhead preparation. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/megamanexe/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/megamanexe/assets/limit-chips.webp"
+    },
+    {
+      "id": "megamanexe",
+      "kind": "finish",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-be79100f-34dc-48ac-a4f9-fea4f7120a42.png",
+      "prompt": "Match the attached MegaMan.EXE sprite precisely: compact stylized proportions, large blue helmet with yellow bands and circular red-and-gold ear disks, cyan side lines on navy bodysuit, round red/gold chest badge, rounded blue boots. Keep line weight and flat colored anime cel shading on pose sprites. Full-body right-facing fighting game frames: arm raised while planting both feet, powerful diagonal green blade windup, planted decisive giant energy-sword swing, relaxed guard with arm retracted. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/megamanexe/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/megamanexe/assets/limit-finish.webp"
+    },
+    {
+      "id": "megamanexe",
+      "kind": "props",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a0e7cab5-9cd6-49c2-949d-f0664a2e9be7.png",
+      "prompt": "Only isolated graphic assets, no figures: four isolated objects: blue network tile, colored battle chip card stack, standing vertical green scan gate, tiny turquoise pixel shards. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/megamanexe/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/megamanexe/assets/limit-props.webp"
+    },
+    {
+      "id": "megamanexe",
+      "kind": "effects",
+      "path": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-fb687198-01dc-4f67-a97c-4ad8b695f959.png",
+      "prompt": "Only isolated graphic assets, no figures: four isolated attacks: blue buster bolt with white center, bright green sword crescent bulging right, long diagonal green sword trail, enormous green-white sword wave cutting to the right. Exactly 4 independent complete tiles in a strict 2×2 grid with large fully transparent gutters and padding. Each tile must fit within its own quadrant. Fully transparent background. No text, border or UI.",
+      "refs": [
+        "C:/Users/haro_/OneDrive/ドキュメント/Oisiitofu2D/previews/megamanexe/limit-break/battle-design-reference.png"
+      ],
+      "destination": "characters/megamanexe/assets/limit-effects.webp"
+    }
+  ]
+}
