@@ -1422,6 +1422,12 @@
     ],
     "melia-limit-elemental-burst": [
       "/assets/audio/se/melia-limit-elemental-burst.wav"
+    ],
+    "nia-limit-aqua-spiral": [
+      "/assets/audio/se/nia-limit-aqua-spiral.wav"
+    ],
+    "hanajs-limit-quantum": [
+      "/assets/audio/se/hanajs-limit-quantum.wav"
     ]
   },
   "impactDesign": {
