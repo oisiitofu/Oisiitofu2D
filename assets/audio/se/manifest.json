@@ -1398,6 +1398,12 @@
     ],
     "onionknight-limit-magic": [
       "/assets/audio/se/onionknight-limit-magic.wav"
+    ],
+    "arus-limit-gigaslash": [
+      "/assets/audio/se/arus-limit-gigaslash.wav"
+    ],
+    "estark-limit-dangokuzan": [
+      "/assets/audio/se/estark-limit-dangokuzan.wav"
     ]
   },
   "impactDesign": {
