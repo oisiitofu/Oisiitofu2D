@@ -1344,6 +1344,12 @@
     ],
     "aruru-limit-bayoen": [
       "/assets/audio/se/aruru-limit-bayoen.wav"
+    ],
+    "tifa-limit-heaven": [
+      "/assets/audio/se/tifa-limit-heaven.wav"
+    ],
+    "vivi-limit-doomsday": [
+      "/assets/audio/se/vivi-limit-doomsday.wav"
     ]
   },
   "impactDesign": {

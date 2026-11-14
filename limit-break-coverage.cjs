@@ -6,6 +6,12 @@ const read=file=>fs.readFileSync(file,'utf8');
 const roster=vm.runInNewContext(read('character-origins.js')+'\n'+read('roster.js')+'\nRoster.selectable.map(d=>({id:d.id,name:d.name,work:d.origin||CharacterOrigins[d.id]}))',{});
 const scripts=[...read('index.html').matchAll(/<script src="([^"]+\.js)"/g)].map(m=>m[1]);
 const cinematics=new Set(scripts.flatMap(file=>[...read(file).matchAll(/LimitBreak\.define\(['"]([^'"]+)['"]/g)].map(m=>m[1])));
+if(process.argv.includes('--fighters')){
+ const completed=roster.filter(fighter=>cinematics.has(fighter.id));
+ const remaining=roster.filter(fighter=>!cinematics.has(fighter.id));
+ console.log(JSON.stringify({total:roster.length,completed:completed.length,remaining:remaining.length,implemented:completed,next:remaining},null,2));
+ process.exit(0);
+}
 const works=new Map();
 for(const fighter of roster){
  if(!fighter.work)throw Error('Missing work: '+fighter.id);
