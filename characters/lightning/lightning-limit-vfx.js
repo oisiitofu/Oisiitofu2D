@@ -2,7 +2,7 @@
 
 const LightningLimitVFX=(()=>{
  const {assets,camera,ease,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('lightning',['cutin','effects']);
+ const art=assets('lightning',['cutin','effects','court'],{revision:2});
  const shots=[
   [0,391,672,1051,672,721,431,.94,0,1],[32,693,669,1051,672,875,431,.98,-.014,35],
   [44,869,668,1064,655,970,434,1,.019,7],[59,929,646,1103,630,1016,418,.97,-.018,8],
@@ -16,16 +16,15 @@ const LightningLimitVFX=(()=>{
   const t=LightningLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,pose]=camera(shots,t);
   const hit=Math.max(...hits.map(h=>pulse(t,h,3,8))),finish=pulse(t,178,4,23);
   frameClip();
-  const sky=ctx.createLinearGradient(0,0,W,H);
-  sky.addColorStop(0,'#152437');sky.addColorStop(.59,'#41345f');sky.addColorStop(1,'#7a435d');
-  ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const width=W+350;
+  art.image('court',-(width-W)*.5-(cx-1025)*.12,-101-(cy-414)*.14,width,width*9/16);
   world(cx,cy,z,roll,face,t,Math.max(hit*.61,finish));
-  ctx.fillStyle='#32263e';ctx.fillRect(-1600,673,6080,560);
-  for(let i=0;i<17;i++){
-   const bx=i*258-1130,top=300+(i%4)*41;
-   ctx.fillStyle=i%2===0?'#322941':'#49324e';ctx.fillRect(bx,top,180,673-top);
-   ctx.strokeStyle='#936783';ctx.lineWidth=4;ctx.strokeRect(bx+19,top+22,138,43);
-  }
+  const spread=ease((t-178)/17);
+  const charge=pulse(t,177,17,4);
+  art.glow(2,x+38,y-163,332,230,charge*.75,-1.04);
+  art.glow(3,tx-14,ty-365,477+spread*343,810,finish*.72,.08);
+  art.strike(3,tx-7,ty-360,432+spread*245,775+spread*135,finish,.06);
+  art.glow(1,tx+95*spread,ty-77,615+spread*321,348,finish*.56,-.09);
   const sprite={...attacker,x,y,face:Math.sign(pose),attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
   drawSprite(sprite,1,Math.abs(pose)-1,3.18);
   target(opponent,tx,ty-hit*14,-.1-hit*.38-ease((t-179)/26)*1.35,2.55);
@@ -34,18 +33,11 @@ const LightningLimitVFX=(()=>{
    if(i===2||i===5){
     const sx=x+Math.sign(pose)*106,sy=y-127,dx=tx-sx,dy=ty-126-sy;
     art.strike(2,sx+dx*.5,sy+dy*.5,Math.hypot(dx,dy)+75,124,power,Math.atan2(dy,dx));
-   }else art.strike(i%2,tx,ty-116,429+i*12,320,power,[-.42,.62,0,-1.2,.46,0,.16][i]);
+   }else art.strike(i%2,tx,ty-116,429+i*12,320,power,[-.42,.62,0,-1.2,.46,0,.16][i],i>=4?-1:1);
   }
-  const branches=ease((t-176)/5)*(1-ease((t-181)/12));
-  ctx.save();ctx.globalAlpha=branches*.77;ctx.strokeStyle='#e8dfff';ctx.lineWidth=5;
-  ctx.beginPath();
-  for(const side of [-1,1]){
-   ctx.moveTo(tx,ty-194);ctx.lineTo(tx+side*139,ty-255);
-   ctx.lineTo(tx+side*242,ty-231);ctx.lineTo(tx+side*398,ty-335);
-  }
-  ctx.stroke();ctx.restore();
-  art.strike(3,tx-13,ty-244,580+ease((t-180)/13)*315,590,finish,.11);
-  art.strike(1,tx+114,ty-123,745,318,pulse(t,183,3,15),-.11);
+  const strike=pulse(t,178,2,12);
+  art.strike(0,tx-32,ty-145,435+spread*172,318,strike,-.42);
+  art.strike(1,tx+91,ty-103,522+spread*271,258,pulse(t,181,3,11),-.17);
   ctx.restore();flash('219,194,255',Math.max(hit*.11,finish*.24));bands(t,'#171427');
   art.portrait(1+t*.001,ease(t/4)*(1-ease((t-16)/12)));ctx.restore();
  }
