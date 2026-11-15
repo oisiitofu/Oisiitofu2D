@@ -26,7 +26,7 @@ const {chromium}=require('playwright');
     let portraitDraws=0,maxAspectError=0,opaqueStrikeDraws=0,frameWeight=0,bestWeight=0,bestTime=0;
     ctx.drawImage=function(source,...args){
      const path=source.src?.split('?')[0];
-     if(path?.endsWith('/limit-cutin.webp')||path?.endsWith('/limit-cockpit.webp')){
+     if(/\/limit-(?:cutin(?:-ninja|-sage)?|cockpit)\.webp$/.test(path||'')){
       const [,,width,height]=args;
       portraitDraws++;
       maxAspectError=Math.max(maxAspectError,Math.abs(width/height-source.naturalWidth/source.naturalHeight));

@@ -213,7 +213,7 @@ const LimitCinematic=(()=>{
   }
   const strike=(n,x,y,w,h,strength=1,angle=0,face=1)=>drawEffect(impactAtlas,'source-over',n,x,y,w,h,impactOpacity(strength),angle,face);
   const glow=(n,x,y,w,h,alpha=1,angle=0,face=1)=>drawEffect(images.effects,'screen',n,x,y,w,h,alpha,angle,face);
-  const portrait=(zoom,alpha)=>cutIn(images.cutin,W/2,H/2,W*zoom,710*zoom,alpha);
+  const portrait=(zoom,alpha,name='cutin')=>cutIn(images[name],W/2,H/2,W*zoom,710*zoom,alpha);
   return {load,image,grid,strike,glow,portrait,get prepared(){return names.every(name=>!!images[name]);}};
  }
  function camera(shots,t){
