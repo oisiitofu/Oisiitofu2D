@@ -2,7 +2,7 @@
 
 const TerraLimitVFX=(()=>{
  const {assets,camera,ease,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('terra',['cutin','effects']);
+ const art=assets('terra',['cutin','effects','court'],{revision:2});
  const shots=[
   [0,440,673,1059,674,770,420,.93,0,1],[32,669,673,1059,674,861,433,.98,-.011,22],
   [46,862,673,1068,661,963,438,1,.023,17],[63,833,673,1078,623,953,412,.97,-.021,36],
@@ -19,35 +19,33 @@ const TerraLimitVFX=(()=>{
   const impact=Math.max(...hits.map(hit=>pulse(t,hit,4,9)));
   const flare=pulse(t,206,7,23),shift=pulse(t,95,11,12),returnGlow=pulse(t,229,6,8);
   frameClip();
-  const sky=ctx.createRadialGradient(W*.53,H*.42,30,W*.53,H*.42,W*.72);
-  sky.addColorStop(0,t>=95?'#733457':'#343f61');sky.addColorStop(.63,'#282444');sky.addColorStop(1,'#111223');
-  ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const width=W+342;
+  art.image('court',-(width-W)*.5-(cx-1000)*.1,-104-(cy-404)*.13,width,width*9/16);
   world(cx,cy,z,roll,face,t,Math.max(impact*.6,flare));
-  for(let i=0;i<15;i++){
-   const bx=i*284-1120,by=345-i%4*73;
-   ctx.fillStyle=i%2===0?'#221b35':'#302641';
-   ctx.beginPath();ctx.moveTo(bx-76,671);ctx.lineTo(bx+13,by+103);ctx.lineTo(bx+69,by);
-   ctx.lineTo(bx+154,by+79);ctx.lineTo(bx+183,671);ctx.fill();
-  }
-  ctx.fillStyle='#33283d';ctx.fillRect(-1700,675,5900,520);
-  ctx.strokeStyle='#a55567';ctx.lineWidth=4;
-  ctx.beginPath();ctx.moveTo(-1700,675);ctx.lineTo(4100,675);ctx.stroke();
+  const casting=pulse(t,206,20,10);
+  const fromX=x-95,fromY=y-142,dx=tx-fromX,dy=ty-122-fromY;
+  const ray=Math.atan2(dy,dx),rayLength=Math.hypot(dx,dy)+102;
+  const spread=ease((t-206)/15);
+  const plume=pulse(t,206,2,24);
+  art.strike(3,tx+Math.cos(ray)*(235+spread*111),ty-119+Math.sin(ray)*175,
+   622+spread*345,402+spread*120,plume,ray);
+  art.glow(0,tx-155*spread,ty-90,500+spread*676,275+spread*168,plume*.58,-.18);
   const sprite={...attacker,x,y,face:Math.sign(pose),attack:null,mode:'Idle',state:'idle',grounded:true,
    inv:0,intangible:0,terraTrance:t<95?attacker.terraTrance:t<229?1:attacker.terraTrance};
-  art.glow(3,x,y-120,530,454,Math.max(shift,returnGlow)*.9);
+  const change=Math.max(shift,returnGlow);
+  art.glow(2,x,y-185,310,720,change*.84);
+  art.glow(1,x,y-123,450,440,change*.58);
+  art.glow(1,x-83,y-146,270,270,casting*.82);
   drawSprite(sprite,1,Math.abs(pose)-1,3.1);
   target(opponent,tx,ty-impact*18,-.08-impact*.31+ease((t-207)/27)*1.39,2.6);
   for(const [i,hit] of hits.entries()){
    const slot=[0,1,2,3,0,3][i],power=pulse(t,hit,slot===1?6:4,10);
-   art.strike(slot,tx-6,ty-(slot===2?281:118),slot===2?285:385,slot===2?570:295,power,slot===0?-.35:0);
+   art.strike(slot,tx-6,ty-(slot===2?281:118),slot===2?305:430,slot===2?625:306,power,[-.55,0,0,.28,-.22,-.78][i]);
   }
-  const fromX=x-95,fromY=y-142,dx=tx-fromX,dy=ty-122-fromY;
-  art.strike(3,fromX+dx*.5,fromY+dy*.5,Math.hypot(dx,dy)+230,371,flare,Math.atan2(dy,dx));
-  const burn=ease((t-205)/5)*(1-ease((t-209)/19));
-  art.strike(3,tx-133,ty-129,670+220*ease((t-207)/14),302,burn,Math.PI+.08);
-  const wave=135+ease((t-204)/21)*620;
-  ctx.save();ctx.globalAlpha=flare*.84;ctx.strokeStyle='#ffc389';ctx.lineWidth=7;
-  ctx.beginPath();ctx.ellipse(tx,ty-77,wave,wave*.39,0,0,Math.PI*2);ctx.stroke();ctx.restore();
+  art.glow(3,fromX+dx*.5,fromY+dy*.5,rayLength+110,346,flare*.61,ray);
+  art.strike(3,fromX+dx*.5,fromY+dy*.5,rayLength,255,flare,ray);
+  const burn=pulse(t,206,2,17);
+  art.strike(1,tx-20,ty-119,338+spread*290,318+spread*102,burn,-.25+t*.014);
   ctx.restore();flash('255,175,175',Math.max(impact*.1,shift*.25,flare*.23,returnGlow*.18));bands(t,'#161328');
   art.portrait(1+t*.001,ease(t/4)*(1-ease((t-16)/12)));ctx.restore();
  }

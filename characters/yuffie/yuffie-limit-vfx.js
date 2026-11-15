@@ -2,7 +2,7 @@
 
 const YuffieLimitVFX=(()=>{
  const {assets,camera,ease,mix,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('yuffie',['cutin','effects']);
+ const art=assets('yuffie',['cutin','effects','court','shuriken'],{revision:2});
  const shots=[
   [0,423,662,1095,659,759,432,.89,0,1],[35,562,662,1095,659,820,433,.93,-.009,24],
   [47,605,662,1099,647,852,430,.95,.019,18],[64,789,661,1127,618,960,423,.95,-.018,31],
@@ -15,50 +15,41 @@ const YuffieLimitVFX=(()=>{
  const pulse=(t,hit,lead,tail)=>ease((t-hit+lead)/lead)*(1-ease((t-hit-2)/tail));
  function blade(x,y,t,alpha,size){
   if(alpha<=0)return;
-  ctx.save();ctx.translate(x,y);ctx.rotate(t*.77);ctx.scale(size,size);ctx.globalAlpha=alpha;
-  ctx.fillStyle='#d4e9dc';ctx.strokeStyle='#28463f';ctx.lineWidth=4;
-  for(let i=0;i<4;i++){
-   ctx.rotate(Math.PI*.5);
-   ctx.beginPath();ctx.moveTo(7,-11);ctx.lineTo(81,-29);ctx.lineTo(52,11);ctx.lineTo(9,16);ctx.closePath();ctx.fill();ctx.stroke();
-  }
-  ctx.fillStyle='#294956';ctx.beginPath();ctx.arc(0,0,16,0,Math.PI*2);ctx.fill();ctx.restore();
+  ctx.save();ctx.translate(x,y);ctx.rotate(t*.41);
+  art.image('shuriken',-size/2,-size/2,size,size,alpha);
+  ctx.restore();
  }
  function draw({attacker,target:opponent,face,time}){
   const t=YuffieLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,pose]=camera(shots,t);
   const impact=Math.max(...hits.map(hit=>pulse(t,hit,4,9))),finish=pulse(t,198,5,23);
   frameClip();
-  const sky=ctx.createLinearGradient(0,0,W,H);
-  sky.addColorStop(0,'#16394a');sky.addColorStop(.57,'#2c625e');sky.addColorStop(1,'#202444');
-  ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const width=W+330;
+  art.image('court',-(width-W)*.5-(cx-1000)*.12,-100-(cy-419)*.13,width,width*9/16);
   world(cx,cy,z,roll,face,t,Math.max(impact*.56,finish));
-  for(let i=0;i<19;i++){
-   const px=i*199-1080;
-   ctx.fillStyle=i%2===0?'#244a4d':'#1d3d43';
-   ctx.fillRect(px,0,15+i%3*9,664);
-   ctx.fillRect(px-34,119+i%4*95,82,12);
-  }
-  ctx.fillStyle='#203f47';ctx.fillRect(-1900,664,5900,660);
-  ctx.strokeStyle='#609483';ctx.lineWidth=3;
-  for(let i=-12;i<24;i++){ctx.beginPath();ctx.moveTo(i*141,666);ctx.lineTo((i-6)*361,1150);ctx.stroke();}
+  const spread=ease((t-198)/17);
+  art.strike(3,tx+68*spread,ty-105-32*spread,483+spread*526,440+spread*110,finish,.1+spread*.39);
   const travel=ease((t-34)/13),retract=ease((t-67)/15);
-  blade(mix(mix(611,tx,travel),x+100,retract),mix(mix(530,ty-132,travel)-99*Math.sin(travel*Math.PI),y-142,retract),t,pulse(t,50,17,33),1);
+  const discX=mix(mix(611,tx,travel),x+100,retract);
+  const discY=mix(mix(530,ty-132,travel)-99*Math.sin(travel*Math.PI),y-142,retract);
+  const discStrength=pulse(t,50,17,33);
+  art.glow(0,discX-49,discY,290,172,discStrength*.73,-.18+t*.025);
+  blade(discX,discY,t,discStrength,197);
   const sprite={...attacker,x,y,face:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
   drawSprite(sprite,1,pose-1,3.2);
   target(opponent,tx,ty-impact*15,-.1-impact*.33-ease((t-199)/28)*1.34,2.55);
   for(const [i,hit] of hits.entries()){
    art.strike(i%3,tx-18,ty-119,365+i*17,278,pulse(t,hit,5,8),[.15,-.46,.53,-1.05,.48,-.16][i]);
   }
-  const close=ease((t-173)/25),orbit=(1-close)*406;
+  const close=ease((t-173)/25),orbit=mix(460,62,close);
+  const echo=pulse(t,194,23,7);
   for(let i=0;i<4;i++){
    const angle=i*Math.PI/2+t*.097;
-   blade(tx+Math.cos(angle)*orbit,ty-122+Math.sin(angle)*orbit*.68,t+i*2,pulse(t,194,23,7),.78);
+   const echoX=tx+Math.cos(angle)*orbit,echoY=ty-122+Math.sin(angle)*orbit*.68;
+   art.glow(i%2?2:0,echoX,echoY,297,155,echo*.85,angle-Math.PI*.5);
+   blade(echoX,echoY,t+i*2,echo*.7,133);
   }
-  art.strike(3,tx,ty-104,424+ease((t-198)/17)*398,394,finish,t*.085);
-  const shock=ease((t-197)/5)*(1-ease((t-204)/16));
-  art.strike(1,tx+112,ty-98,550+ease((t-201)/15)*360,296,shock,-t*.097);
-  ctx.save();ctx.globalAlpha=shock*.84;ctx.strokeStyle='#d8ffe3';ctx.lineWidth=5;
-  const radius=115+ease((t-198)/19)*427;
-  ctx.beginPath();ctx.ellipse(tx,ty-82,radius,radius*.39,-.24,0,Math.PI*2);ctx.stroke();ctx.restore();
+  art.strike(1,tx,ty-116,282+spread*133,239,pulse(t,198,3,10),-.17);
+  art.glow(2,tx+121*spread,ty-105,562+spread*395,378,finish*.56,-.15);
   ctx.restore();flash('195,255,215',Math.max(impact*.1,finish*.24));bands(t,'#102732');
   art.portrait(1+t*.001,ease(t/4)*(1-ease((t-16)/12)));ctx.restore();
  }
