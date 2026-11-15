@@ -25,12 +25,13 @@ const {chromium}=require('playwright');
     const original=ctx.drawImage;
     let portraitDraws=0,maxAspectError=0,opaqueStrikeDraws=0,frameWeight=0,bestWeight=0,bestTime=0;
     ctx.drawImage=function(source,...args){
-     if(source.src?.endsWith('/limit-cutin.webp')){
+     const path=source.src?.split('?')[0];
+     if(path?.endsWith('/limit-cutin.webp')||path?.endsWith('/limit-cockpit.webp')){
       const [,,width,height]=args;
       portraitDraws++;
       maxAspectError=Math.max(maxAspectError,Math.abs(width/height-source.naturalWidth/source.naturalHeight));
      }
-     const strike=source.src?.endsWith('/limit-effects.webp')||source.src?.endsWith('/limit-impact.webp')||source instanceof HTMLCanvasElement;
+     const strike=path?.endsWith('/limit-effects.webp')||path?.endsWith('/limit-impact.webp')||source instanceof HTMLCanvasElement;
      if(strike&&ctx.globalCompositeOperation==='source-over'&&ctx.globalAlpha>=.999){
       opaqueStrikeDraws++;
       frameWeight+=args.at(-2)*args.at(-1);
