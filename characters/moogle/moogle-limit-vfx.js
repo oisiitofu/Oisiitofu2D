@@ -1,7 +1,7 @@
 'use strict';
 const MoogleLimitVFX=(()=>{
  const {assets,camera,ease,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('moogle',['cutin','effects']);
+ const art=assets('moogle',['cutin','effects','court','motes'],{revision:2});
  const shots=[
   [0,424,672,1090,671,757,426,.94,0,1],[33,693,672,1090,671,891,434,.97,0,30],
   [46,907,668,1098,660,1002,434,1,.018,8],[64,1020,498,1176,598,1098,353,.91,-.021,14],
@@ -16,36 +16,29 @@ const MoogleLimitVFX=(()=>{
   const hits=[...MoogleLimitProfile.combo.keys()],impact=Math.max(...hits.map(h=>pulse(t,h,4,9)));
   const finish=pulse(t,195,5,26);
   frameClip();
-  const sky=ctx.createLinearGradient(0,0,0,H);
-  sky.addColorStop(0,'#273754');sky.addColorStop(.58,'#5b687e');sky.addColorStop(1,'#568580');
-  ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const width=W+359;
+  art.image('court',-(width-W)*.5-(cx-1040)*.12,-99-(cy-403)*.14,width,width*9/16);
   world(cx,cy,z,roll,face,t,Math.max(impact*.51,finish));
-  for(let i=0;i<18;i++){
-   const px=i*255-1390,height=173+(i*83)%290;
-   ctx.fillStyle=i%2?'#3c596b':'#395465';
-   ctx.beginPath();ctx.moveTo(px-94,673);ctx.lineTo(px-37,673-height*.74);
-   ctx.quadraticCurveTo(px,673-height,px+37,673-height*.74);ctx.lineTo(px+94,673);ctx.fill();
+  const lift=ease((t-189)/16),rise=ease((t-193)/22);
+  art.glow(1,x+61,y-148,590,369,pulse(t,195,30,12)*.67,-.17);
+  art.strike(3,tx-10+97*rise,ty-292-76*lift,483+335*lift,644+150*lift,finish,-.14+rise*.21);
+  art.glow(3,tx+55*rise,ty-281-85*lift,470+428*lift,636+203*lift,finish*.62,-.26);
+  for(const [i,side] of [-1,1].entries()){
+   const orbit=t*.093+i*Math.PI;
+   const gustX=tx+Math.cos(orbit)*(83+276*rise),gustY=ty-158-lift*(103+i*107);
+   const span=279+lift*(242+100*i);
+   ctx.save();ctx.translate(gustX,gustY);ctx.rotate(side*.39+Math.sin(orbit)*.48);
+   art.image('motes',-span*.5,-span*.33,span,span*.66,finish*.69);
+   ctx.restore();
   }
-  ctx.fillStyle='#365c65';ctx.fillRect(-1600,673,6200,650);
   const sprite={...attacker,x,y,face:Math.sign(pose),attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
   drawSprite(sprite,1,Math.abs(pose)-1,3.42);
   target(opponent,tx,ty-impact*13,-.12-impact*.35-ease((t-196)/29)*1.37,2.57);
-  for(const [i,h] of hits.entries())art.strike(i%3,tx,ty-111,379+i*19,309,pulse(t,h,4,9),[-.28,.65,-.69,.53,-.22,.31][i]);
-  const lift=ease((t-189)/16);
-  art.strike(3,tx-34,ty-142-112*lift,426+360*lift,474+263*lift,finish,t*.042);
-  ctx.save();ctx.globalAlpha=finish*.72;ctx.strokeStyle='#b7f7dd';ctx.lineWidth=5;
-  for(let i=0;i<8;i++){
-   const a=t*.2+i*.67,r=85+i*17;
-   ctx.beginPath();ctx.ellipse(tx+Math.sin(a)*27,ty-27-i*46*lift,r,r*.34,-.12,a,a+4.12);ctx.stroke();
+  for(const [i,h] of hits.entries()){
+   art.strike(i%3,tx,ty-111,379+i*19,309,pulse(t,h,4,9),[-.28,.65,-.69,.53,-.22,.31][i],i===2||i===3?-1:1);
   }
-  ctx.restore();
-  ctx.save();ctx.globalAlpha=finish*.88;ctx.fillStyle='#e4ffe4';
-  for(let i=0;i<17;i++){
-   const a=i*2.4+t*.29,r=101+(i*37)%265;
-   const px=tx+Math.cos(a)*r,py=ty-84-(i*77)%415;
-   ctx.beginPath();ctx.ellipse(px,py,16+i%5,4,a,0,Math.PI*2);ctx.fill();
-  }
-  ctx.restore();ctx.restore();flash('204,250,230',Math.max(impact*.11,finish*.19));bands(t,'#1b253a');
+  art.strike(0,tx-13,ty-102,281+rise*87,228,pulse(t,195,2,11),-.14);
+  ctx.restore();flash('204,250,230',Math.max(impact*.11,finish*.19));bands(t,'#1b253a');
   art.portrait(1+t*.001,ease(t/4)*(1-ease((t-16)/12)));ctx.restore();
  }
  function drawContact({x,y,time}){art.strike(0,x,y,170+time*4,150,1-time/23);}
