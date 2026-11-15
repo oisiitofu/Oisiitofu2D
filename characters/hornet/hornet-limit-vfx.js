@@ -2,7 +2,7 @@
 
 const HornetLimitVFX=(()=>{
  const {assets,camera,ease,mix,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('hornet',['cutin','effects']);
+ const art=assets('hornet',['cutin','effects','court'],{revision:2});
  const shots=[
   [0,400,677,1065,670,747,437,.94,0,1],[32,548,649,1065,670,811,400,.92,-.03,43],
   [46,873,667,1065,654,979,440,.98,.023,41],[62,1020,739,1117,641,1068,456,.95,.03,4],
@@ -20,17 +20,9 @@ const HornetLimitVFX=(()=>{
   const hitStrength=Math.max(...hits.map(hit=>pulse(t,hit,4,8)));
   const storm=pulse(t,182,7,25);
   frameClip();
-  const sky=ctx.createRadialGradient(W*.48,H*.35,5,W*.48,H*.35,W*.73);
-  sky.addColorStop(0,'#7a534d');sky.addColorStop(.54,'#412a3a');sky.addColorStop(1,'#191521');
-  ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const width=W+290,height=width*9/16;
+  art.image('court',-(width-W)*.5-(cx-1000)*.08,-78-(cy-408)*.09,width,height);
   world(cx,cy,z,roll,face,t,Math.max(storm,hitStrength*.7));
-  for(let i=0;i<12;i++){
-   const px=-540+i*268,roof=130+i%4*47;
-   ctx.fillStyle=i%2===0?'#2d2031':'#392638';
-   ctx.beginPath();ctx.moveTo(px,674);ctx.lineTo(px,roof+77);
-   ctx.lineTo(px+88,roof);ctx.lineTo(px+177,roof+77);ctx.lineTo(px+177,674);ctx.fill();
-  }
-  ctx.fillStyle='#392733';ctx.fillRect(-1800,678,5800,720);
   const tether=ease((t-26)/10)*(1-ease((t-136)/14));
   const [ax,ay]=anchors[t<69?0:t<111?1:2];
   const catchTime=t<69?32:t<111?73:113;
@@ -43,16 +35,14 @@ const HornetLimitVFX=(()=>{
   for(const [i,hit] of hits.entries()){
    art.strike(i%3,tx-10,ty-99,415+20*i,234,pulse(t,hit,5,10),[.07,-.26,-1.1,1,.71,-.64][i]);
   }
-  const turn=t*.037;
+  const sweep=ease((t-176)/16),turn=t*.065;
+  art.strike(3,tx,ty-101,676+218*sweep,529,storm,turn);
+  art.glow(1,tx,ty-111,758,593,pulse(t,186,4,15)*.52,-turn);
+  ctx.save();ctx.globalAlpha=storm*.81;ctx.strokeStyle='#fff3cf';ctx.lineWidth=3;
+  const radius=95+340*sweep;
   for(let i=0;i<5;i++){
-   const rotation=i*Math.PI/5+turn;
-   art.strike(3,tx,ty-121,690+180*ease((t-178)/10),124,storm,rotation);
-  }
-  ctx.save();ctx.globalAlpha=storm*.9;ctx.strokeStyle='#fff3cf';ctx.lineWidth=4;
-  const radius=95+340*ease((t-180)/19);
-  for(let i=0;i<5;i++){
-   const sweep=turn+i*.7;
-   ctx.beginPath();ctx.ellipse(tx,ty-120,radius,radius*.38,sweep,sweep,sweep+3.9);ctx.stroke();
+   const phase=turn+i*.7;
+   ctx.beginPath();ctx.ellipse(tx,ty-109,radius,radius*.38,phase,phase,phase+3.9);ctx.stroke();
   }
   ctx.restore();
   ctx.restore();

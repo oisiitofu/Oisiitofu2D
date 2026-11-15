@@ -2,7 +2,7 @@
 
 const ChocoboLimitVFX=(()=>{
  const {assets,camera,ease,mix,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('chocobo',['cutin','effects']);
+ const art=assets('chocobo',['cutin','effects','court'],{revision:2});
  const shots=[
   [0,310,683,1080,680,762,422,.88,0,0],[28,522,683,1080,680,786,422,.92,0,34],
   [40,791,683,1080,680,935,436,.97,.018,37],[47,942,683,1105,662,1024,433,1,.02,9],
@@ -20,18 +20,15 @@ const ChocoboLimitVFX=(()=>{
   const impact=Math.max(...hits.map(hit=>pulse(t,hit,4,9)));
   const finish=pulse(t,191,5,27);
   frameClip();
-  const sky=ctx.createLinearGradient(0,0,0,H);
-  sky.addColorStop(0,'#241c38');sky.addColorStop(.62,'#9d5347');sky.addColorStop(1,'#d89963');
-  ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const width=W+290,height=width*9/16;
+  art.image('court',-(width-W)*.5-(cx-1095)*.078,-77-(cy-418)*.10,width,height);
   world(cx,cy,z,roll,face,t,Math.max(impact*.56,finish));
-  ctx.fillStyle='#a76163';ctx.beginPath();ctx.moveTo(-1200,683);
-  for(let i=0;i<14;i++)ctx.lineTo(-1200+i*414,i%2===0?622:395+i%3*37);
-  ctx.lineTo(4500,900);ctx.fill();
-  ctx.fillStyle='#635047';ctx.beginPath();ctx.moveTo(-1700,685);ctx.lineTo(815,685);
-  ctx.lineTo(930,791);ctx.lineTo(1018,791);ctx.lineTo(1175,683);
-  ctx.lineTo(4100,683);ctx.lineTo(4100,1420);ctx.lineTo(-1700,1420);ctx.fill();
-  ctx.fillStyle='#b88857';ctx.fillRect(706,435,163,17);
-  ctx.fillStyle='#855943';ctx.fillRect(727,452,123,20);
+  const rock=ctx.createLinearGradient(710,431,743,488);
+  rock.addColorStop(0,'#e9b58b');rock.addColorStop(.42,'#916748');rock.addColorStop(1,'#4c3742');
+  ctx.fillStyle=rock;ctx.strokeStyle='#624247';ctx.lineWidth=3;
+  ctx.beginPath();ctx.moveTo(687,437);ctx.lineTo(727,426);ctx.lineTo(839,426);ctx.lineTo(875,437);
+  ctx.lineTo(844,463);ctx.lineTo(805,475);ctx.lineTo(722,466);ctx.closePath();ctx.fill();ctx.stroke();
+  ctx.beginPath();ctx.moveTo(724,441);ctx.lineTo(752,448);ctx.lineTo(783,439);ctx.lineTo(816,446);ctx.stroke();
   const sprite={...attacker,x,y,face:pose===20?-1:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
   drawSprite(sprite,1,pose,3);
   target(opponent,tx,ty-impact*16,-.15-impact*.4-ease((t-192)/25)*1.41,2.6);
@@ -50,7 +47,7 @@ const ChocoboLimitVFX=(()=>{
    }
    ctx.restore();
   }
-  art.strike(3,tx+mix(350,0,fall),mix(-105,ty-124,fall),325+160*fall,350+171*fall,pulse(t,191,33,16),-.44);
+  art.strike(3,tx+mix(350,65,fall),mix(-105,ty-205,fall),380+176*fall,370+188*fall,pulse(t,191,33,16),-.44);
   const spread=165+660*ease((t-191)/20);
   art.strike(1,tx,ty-50,spread,spread*.41,finish);
   ctx.save();ctx.globalAlpha=finish*.75;ctx.strokeStyle='#ffcf89';ctx.lineWidth=6;
