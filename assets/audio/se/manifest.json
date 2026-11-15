@@ -1434,6 +1434,12 @@
     ],
     "edelgard-limit-raging-storm": [
       "/assets/audio/se/edelgard-limit-raging-storm.wav"
+    ],
+    "dietrich-limit-black-flame": [
+      "/assets/audio/se/dietrich-limit-black-flame.wav"
+    ],
+    "colette-limit-holy-judgment": [
+      "/assets/audio/se/colette-limit-holy-judgment.wav"
     ]
   },
   "impactDesign": {
