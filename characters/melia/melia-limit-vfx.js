@@ -1,7 +1,7 @@
 'use strict';
 const MeliaLimitVFX=(()=>{
  const {assets,camera,ease,mix,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('melia',['cutin','effects']);
+ const art=assets('melia',['cutin','effects','terrace','elements'],{revision:2});
  const shots=[
   [0,493,667,1123,669,808,429,.94,0,0],[35,634,665,1123,669,878,428,.96,0,40],
   [46,785,663,1144,654,965,433,1,.016,13],[64,730,527,1192,610,961,379,.9,-.019,41],
@@ -10,48 +10,47 @@ const MeliaLimitVFX=(()=>{
   [169,810,576,1370,644,1090,415,.86,0,40],[202,815,563,1386,643,1100,408,.88,.022,17],
   [238,815,670,1911,324,1290,398,.76,0,0]
  ];
- const colors=['#dabbff','#ffad9b','#a6edff'];
  const pulse=(t,h,a,b)=>ease((t-h+a)/a)*(1-ease((t-h-2)/b));
- function orb(x,y,r,color,alpha,angle){
+ function element(i,x,y,size,alpha,angle){
   if(alpha<=0)return;
   ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha=alpha;
-  const glow=ctx.createRadialGradient(0,0,1,0,0,r);
-  glow.addColorStop(0,'#fffaff');glow.addColorStop(.58,color);glow.addColorStop(1,'#593e76');
-  ctx.fillStyle=glow;ctx.strokeStyle=color;ctx.lineWidth=4;
-  ctx.beginPath();ctx.arc(0,0,r,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.ellipse(0,0,r*1.38,r*.46,0,0,Math.PI*2);ctx.stroke();ctx.restore();
+  art.grid('elements',i,3,1,0,0,size,{anchorY:.5});
+  ctx.restore();
  }
  function draw({attacker,target:opponent,face,time}){
   const t=MeliaLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,pose]=camera(shots,t);
   const hits=[...MeliaLimitProfile.combo.keys()],impact=Math.max(...hits.map(h=>pulse(t,h,4,9)));
   const finish=pulse(t,202,6,25);
   frameClip();
-  const sky=ctx.createRadialGradient(W*.51,H*.33,13,W*.51,H*.33,W*.73);
-  sky.addColorStop(0,'#63618d');sky.addColorStop(.59,'#3f426b');sky.addColorStop(1,'#19253d');
-  ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const width=W+344;
+  art.image('terrace',-(width-W)*.49-(cx-1000)*.12,-94-(cy-416)*.13,width,width*9/16);
+  ctx.fillStyle='rgba(18,18,55,'+(finish*.23)+')';ctx.fillRect(0,0,W,H);
   world(cx,cy,z,roll,face,t,Math.max(impact*.56,finish));
-  ctx.fillStyle='#354667';ctx.fillRect(-1800,672,6200,650);
-  ctx.strokeStyle='#93afc9';ctx.lineWidth=4;
-  for(const r of [419,514,629]){
-   ctx.beginPath();ctx.ellipse(1042,675,r,r*.24,0,0,Math.PI*2);ctx.stroke();
+  const elements=[0,0,1,2,2,1];
+  for(const [i,h] of hits.entries()){
+   const flight=ease((t-h+13)/13),angle=t*.047+i*1.98;
+   element(elements[i],mix(x+Math.cos(angle)*149,tx,flight),mix(y-162+Math.sin(angle)*98,ty-113,flight),124,pulse(t,h,14,4),angle*.31);
+  }
+  for(let i=0;i<3;i++){
+   const h=198+i*4,fall=ease((t-h+13)/13),ox=tx+(i-1)*245;
+   const impactX=tx+(i-1)*103,oy=241-i*39;
+   element(i,mix(ox,impactX,fall),mix(oy,ty-118,fall),148+fall*47,pulse(t,h,24,4),t*.028+i);
+   const burst=pulse(t,h,3,18);
+   art.strike(i,impactX,ty-[357,113,144][i],[372,630,590][i],[790,371,385][i],burst,[-.09,.17,-.19][i]);
+   art.glow(i,impactX+(i-1)*35,ty-[360,115,133][i],[450,706,663][i],[826,430,419][i],burst*.28,[-.09,.17,-.19][i]);
   }
   const sprite={...attacker,x,y,face:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
   drawSprite(sprite,1,pose,3.15);
   target(opponent,tx,ty-impact*14,-.11-impact*.35-ease((t-203)/28)*1.34,2.53);
   for(const [i,h] of hits.entries()){
-   const pc=ease((t-h+12)/12),a=t*.05+i*1.98;
-   orb(mix(x+Math.cos(a)*164,tx,pc),mix(y-155+Math.sin(a)*110,ty-113,pc),39,colors[i%3],pulse(t,h,13,3),a);
-   art.strike(i%3,tx,ty-118,407+i*13,316,pulse(t,h,4,9),[-.22,-.43,.7,.29,-.61,.32][i]);
+   const slot=elements[i],width=slot===0?240:408;
+   art.strike(slot,tx,ty-118,width+i*9,slot===0?398:316,pulse(t,h,4,9),[-.41,-.24,.23,-.25,.53,.37][i]);
   }
-  for(let i=0;i<3;i++){
-   const h=198+i*4,drop=ease((t-h+14)/14),ox=tx+(i-1)*179;
-   orb(mix(ox,tx,drop),mix(263-i*39,ty-114,drop),65,colors[i],pulse(t,h,22,2),t*.09+i*2);
-   const burst=pulse(t,h,3,17),impactX=mix(ox,tx,.55);
-   art.strike([3,1,2][i],impactX,ty-(i===0?264:117),i===0?319:442,i===0?618:405,burst,.29*(1-i));
-  }
+  art.strike(1,tx+76,ty-83,310,226,pulse(t,202,2,10),-.21);
+  art.strike(2,tx+97,ty-102,303,249,pulse(t,206,2,11),.28);
   ctx.restore();flash('227,214,255',Math.max(impact*.1,finish*.22));bands(t,'#22283e');
   art.portrait(1+t*.001,ease(t/4)*(1-ease((t-16)/12)));ctx.restore();
  }
- function drawContact({x,y,time}){art.strike(1,x,y,169+time*4,147,1-time/23);}
+ function drawContact({x,y,time}){art.strike(0,x,y,148+time*4,188,1-time/23,-.4);}
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
 })();
