@@ -186,10 +186,10 @@ const LimitCinematic=(()=>{
   }
   paint.putImageData(pixels,0,0);return layer;
  }
- function assets(id,names,{blackMatte=false}={}){
+ function assets(id,names,{blackMatte=false,revision}={}){
   const images={};let pending,impactAtlas;
   const load=()=>pending??=Promise.all(names.map(async name=>{
-   const image=new Image();image.src='characters/'+id+'/assets/limit-'+name+'.webp';
+   const image=new Image();image.src='characters/'+id+'/assets/limit-'+name+'.webp'+(revision?'?v='+encodeURIComponent(revision):'');
    await image.decode();
    if(name==='effects')impactAtlas=blackMatte?keyImpactAtlas(image):image;
    images[name]=image;
