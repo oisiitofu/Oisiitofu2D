@@ -1,7 +1,7 @@
 'use strict';
 const EdelgardLimitVFX=(()=>{
  const {assets,camera,ease,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('edelgard',['cutin','effects']);
+ const art=assets('edelgard',['cutin','effects','throne','debris'],{revision:2});
  const shots=[
   [0,387,672,1078,605,732,423,.93,0,0],[33,697,672,1078,605,888,421,.98,0,2],
   [46,897,673,1081,598,990,414,1.02,.022,11],[64,1001,641,1157,569,1079,404,.96,-.02,8],
@@ -16,31 +16,27 @@ const EdelgardLimitVFX=(()=>{
   const hits=[...EdelgardLimitProfile.combo.keys()],impact=Math.max(...hits.map(h=>pulse(t,h,4,9)));
   const finish=pulse(t,207,5,26);
   frameClip();
-  const sky=ctx.createLinearGradient(0,0,0,H);
-  sky.addColorStop(0,'#343047');sky.addColorStop(.62,'#754551');sky.addColorStop(1,'#a36759');
-  ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const width=W+365,height=width*9/16;
+  const ground=H*.51+(Math.max(532,y)-cy)*z;
+  ctx.save();
+  if(face<0){ctx.translate(W,0);ctx.scale(-1,1);}
+  art.image('throne',-(width-W)*.48-(cx-1100)*.145,Math.min(-9,ground-height*.78),width,height);
+  ctx.restore();
+  ctx.fillStyle='rgba(32,13,19,'+(finish*.27)+')';ctx.fillRect(0,0,W,H);
   world(cx,cy,z,roll,face,t,Math.max(impact*.66,finish));
-  for(let i=0;i<13;i++){
-   const px=i*330-1150;
-   ctx.fillStyle=i%2?'#483743':'#4c3542';ctx.fillRect(px,221,92,461);
-   ctx.fillStyle='#a3655b';ctx.fillRect(px+20,232,52,116);
-  }
-  const steps=[[-1900,675,2900],[1000,641,86],[1086,607,115],[1201,570,121],[1322,535,3030]];
-  for(const [px,py,w] of steps){
-   ctx.fillStyle='#4d383e';ctx.fillRect(px,py,w,950-py);
-   ctx.fillStyle='#a47b6d';ctx.fillRect(px,py,w,7);
-  }
+  const spread=ease((t-207)/17),finishX=1586,groundY=537;
+  art.grid('debris',0,2,1,finishX+spread*81,groundY+91,608+spread*499,{anchorY:.64,alpha:finish});
+  art.grid('debris',1,2,1,finishX+spread*146,groundY-101,607+spread*311,{anchorY:.48,alpha:pulse(t,216,7,23)*.83});
+  art.glow(1,x+112,y-133,382,322,pulse(t,194,15,11)*.53,-.37);
+  art.strike(3,finishX+spread*105,groundY-159,632+spread*519,411+spread*164,finish,-.24);
   const sprite={...attacker,x,y,face:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
   drawSprite(sprite,1,pose,3.17);
   target(opponent,tx,ty-impact*13,-.12-impact*.38-ease((t-208)/26)*1.36,2.54);
-  for(const [i,h] of hits.entries())art.strike([0,0,1,2,0,1][i],tx-11,ty-112,421+i*16,328,pulse(t,h,4,9),[-.26,.55,-.83,.32,-.37,.6][i]);
-  art.strike(3,tx+25,ty-131,530+ease((t-207)/18)*447,481,finish,-.43);
-  ctx.save();ctx.globalAlpha=finish*.89;ctx.strokeStyle='#ffbc8e';ctx.lineWidth=7;
-  for(const side of [-1,1]){
-   ctx.beginPath();ctx.moveTo(tx,535);ctx.lineTo(tx+side*118,554);
-   ctx.lineTo(tx+side*216,542);ctx.lineTo(tx+side*407,633);ctx.stroke();
+  for(const [i,h] of hits.entries()){
+   art.strike([0,1,2,0,1,2][i],tx-11,ty-112,421+i*16,328,pulse(t,h,4,9),[-.26,.29,.15,-.31,-.19,.16][i]);
   }
-  ctx.restore();ctx.restore();flash('255,173,133',Math.max(impact*.11,finish*.22));bands(t,'#241b2c');
+  art.strike(2,finishX-39,groundY-113,360+spread*114,280,pulse(t,207,2,9),.19);
+  ctx.restore();flash('255,173,133',Math.max(impact*.11,finish*.22));bands(t,'#241b2c');
   art.portrait(1+t*.001,ease(t/4)*(1-ease((t-16)/12)));ctx.restore();
  }
  function drawContact({x,y,time}){art.strike(0,x,y,170+time*4,147,1-time/23);}
