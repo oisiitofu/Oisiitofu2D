@@ -2,7 +2,7 @@
 
 const CliveLimitVFX=(()=>{
  const {assets,camera,ease,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('clive',['cutin','effects']);
+ const art=assets('clive',['cutin','effects','court','ifrit'],{revision:2});
  const shots=[
   [0,411,674,1039,671,730,433,.94,0,1],[35,668,674,1039,671,855,424,.97,-.013,35],
   [46,846,641,1059,649,944,422,.98,.025,10],[64,925,611,1106,627,1013,414,.95,-.017,8],
@@ -17,20 +17,22 @@ const CliveLimitVFX=(()=>{
   const hits=[...CliveLimitProfile.combo.keys()],hit=Math.max(...hits.map(h=>pulse(t,h,4,9)));
   const finish=pulse(t,204,5,28),charge=pulse(t,193,25,13);
   frameClip();
-  const sky=ctx.createLinearGradient(0,0,0,H);
-  sky.addColorStop(0,'#272032');sky.addColorStop(.58,'#71434d');sky.addColorStop(1,'#bb643f');
-  ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  const width=W+360;
+  art.image('court',-(width-W)*.5-(cx-1030)*.12,-102-(cy-408)*.13,width,width*9/16);
   world(cx,cy,z,roll,face,t,Math.max(hit*.58,finish));
-  for(let i=0;i<16;i++){
-   const px=i*309-1470,py=334+i%5*49;
-   ctx.fillStyle=i%2===0?'#472633':'#58303a';
-   ctx.beginPath();ctx.moveTo(px-100,675);ctx.lineTo(px,py+81);ctx.lineTo(px+73,py);
-   ctx.lineTo(px+225,675);ctx.fill();
-  }
-  ctx.fillStyle='#3d2937';ctx.fillRect(-1700,676,6500,600);
   const ice=pulse(t,104,7,16);
-  art.strike(2,980,566,356,180,ice);
-  art.glow(3,x+63,y-146,553,507,charge*.8,-.24);
+  art.strike(2,980,566,426,296,ice);
+  const apparition=ease((t-168)/25)*(1-ease((t-204)/15));
+  const lift=ease((t-167)/27);
+  art.image('ifrit',x-384,y-753-lift*70,770,770,apparition*.67);
+  art.glow(3,x+63,y-161,487,561,charge*.62,-.24);
+  const spread=ease((t-204)/19);
+  for(const [offset,height,delay,angle] of [[-193,622,2,-.14],[0,935,0,.07],[206,711,3,.23]]){
+   const power=pulse(t,204+delay,5,21);
+   const px=tx+offset*(1+spread*.48),py=ty-38-height*.45;
+   art.glow(3,px,py,440+spread*141,height,power*.58,angle);
+   art.strike(3,px,py,372+spread*91,height,power,angle);
+  }
   const sprite={...attacker,x,y,face:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
   drawSprite(sprite,1,pose-1,3.14);
   target(opponent,tx,ty-hit*13,-.09-hit*.36-ease((t-205)/27)*1.36,2.52);
@@ -38,29 +40,9 @@ const CliveLimitVFX=(()=>{
    const slot=[0,0,1,2,0,3][i];
    art.strike(slot,tx-11,ty-120,400+i*12,324,pulse(t,h,4,10),[.28,-.62,0,.13,.71,-.26][i]);
   }
-  const burst=ease((t-201)/7)*(1-ease((t-207)/17)),spread=150+680*ease((t-204)/19);
-  const rising=ease((t-200)/6);
-  for(const [offset,height,delay] of [[-169,480,2],[0,735,0],[172,552,3]]){
-   const power=pulse(t,204+delay,5,21);
-   if(power<=0)continue;
-   const px=tx+offset,base=ty-47,tip=base-height*rising;
-   const flame=ctx.createLinearGradient(px,base,px,tip-1);
-   flame.addColorStop(0,'#fff7a8');flame.addColorStop(.34,'#ffb54b');flame.addColorStop(1,'#d22c36');
-   ctx.save();ctx.globalAlpha=power*.93;ctx.fillStyle=flame;
-   ctx.beginPath();ctx.moveTo(px-114,base);
-   ctx.bezierCurveTo(px-161,base-160*rising,px+82,tip+119,px-21,tip);
-   ctx.bezierCurveTo(px+83,tip+120,px+156,base-137*rising,px+105,base);
-   ctx.closePath();ctx.fill();ctx.restore();
-  }
-  art.strike(3,tx-13,ty-84,416+320*ease((t-203)/18),248,finish*.85,-.09);
-  ctx.save();ctx.globalAlpha=burst*.78;ctx.strokeStyle='#ffc372';ctx.lineWidth=8;
-  ctx.beginPath();ctx.ellipse(tx,ty-69,spread,spread*.33,0,0,Math.PI*2);ctx.stroke();
-  ctx.fillStyle='#ffcb80';
-  for(let i=0;i<24;i++){
-   const px=tx+(i%2?1:-1)*spread*(.3+i%7*.1),py=ty-110-(i*83)%454;
-   ctx.fillRect(px,py,5+i%4,11+i%9);
-  }
-  ctx.restore();ctx.restore();
+  art.strike(1,tx-18,ty-84,382+spread*195,270,pulse(t,204,2,13),-.15);
+  art.glow(0,tx+86*spread,ty-86,649+spread*451,320,finish*.7,-.14);
+  ctx.restore();
   flash('255,165,113',Math.max(hit*.1,finish*.25));bands(t,'#221421');
   art.portrait(1+t*.001,ease(t/4)*(1-ease((t-16)/12)));ctx.restore();
  }
