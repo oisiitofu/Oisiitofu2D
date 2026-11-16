@@ -1440,6 +1440,12 @@
     ],
     "colette-limit-holy-judgment": [
       "/assets/audio/se/colette-limit-holy-judgment.wav"
+    ],
+    "presea-limit-crimson-devastation": [
+      "/assets/audio/se/presea-limit-crimson-devastation.wav"
+    ],
+    "genis-limit-indignation-judgment": [
+      "/assets/audio/se/genis-limit-indignation-judgment.wav"
     ]
   },
   "impactDesign": {
