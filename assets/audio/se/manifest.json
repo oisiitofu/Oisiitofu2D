@@ -1446,6 +1446,12 @@
     ],
     "genis-limit-indignation-judgment": [
       "/assets/audio/se/genis-limit-indignation-judgment.wav"
+    ],
+    "ash-limit-rending-saber": [
+      "/assets/audio/se/ash-limit-rending-saber.wav"
+    ],
+    "shionne-limit-ferox-sol": [
+      "/assets/audio/se/shionne-limit-ferox-sol.wav"
     ]
   },
   "impactDesign": {
