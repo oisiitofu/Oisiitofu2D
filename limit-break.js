@@ -211,7 +211,8 @@ const LimitCinematic=(()=>{
    ctx.globalCompositeOperation=blend;
    ctx.drawImage(src,n%2*sw+2,Math.floor(n/2)*sh+2,sw-4,sh-4,-w/2,-h/2,w,h);ctx.restore();
   }
-  const strike=(n,x,y,w,h,strength=1,angle=0,face=1)=>drawEffect(impactAtlas,'source-over',n,x,y,w,h,impactOpacity(strength),angle,face);
+  const strike=(n,x,y,w,h,strength=1,angle=0,face=1,atlas='effects')=>
+   drawEffect(atlas==='effects'?impactAtlas:images[atlas],'source-over',n,x,y,w,h,impactOpacity(strength),angle,face);
   const glow=(n,x,y,w,h,alpha=1,angle=0,face=1)=>drawEffect(images.effects,'screen',n,x,y,w,h,alpha,angle,face);
   const portrait=(zoom,alpha,name='cutin')=>cutIn(images[name],W/2,H/2,W*zoom,710*zoom,alpha);
   return {load,image,grid,strike,glow,portrait,get prepared(){return names.every(name=>!!images[name]);}};
@@ -239,9 +240,22 @@ const LimitCinematic=(()=>{
   const h=32*ease(t/7);
   ctx.fillStyle=color;ctx.fillRect(0,0,W,h);ctx.fillRect(0,H-h,W,h);
  }
+ function portraitPanel(t,tilt,draw){
+  const opening=ease(t/5),closing=ease((t-16)/12);
+  const reveal=opening*(1-closing);
+  if(reveal<=0)return;
+  const center=H/2+(1-opening)*110-closing*65,half=296*reveal;
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(0,center-half+tilt);ctx.lineTo(W,center-half-tilt);
+  ctx.lineTo(W,center+half-tilt);ctx.lineTo(0,center+half+tilt);
+  ctx.closePath();ctx.clip();
+  draw(1+t*.001,opening*(1-closing*.35));
+  ctx.restore();
+ }
  function flash(rgb,strength){
   if(!Accessibility.flash||strength<=0)return;
   ctx.fillStyle='rgba('+rgb+','+unit(strength)*Accessibility.flash+')';ctx.fillRect(0,0,W,H);
  }
- return {unit,ease,mix,assets,camera,frameClip,world,target,bands,flash,cutIn,impactOpacity,keyImpactAtlas};
+ return {unit,ease,mix,assets,camera,frameClip,world,target,bands,flash,cutIn,portraitPanel,impactOpacity,keyImpactAtlas};
 })();

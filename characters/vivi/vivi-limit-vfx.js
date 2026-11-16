@@ -1,8 +1,8 @@
 'use strict';
 
 const ViviLimitVFX=(()=>{
- const {assets,camera,ease,mix,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('vivi',['cutin','effects','court'],{revision:2});
+ const {assets,camera,ease,mix,world,target,frameClip,bands,flash,portraitPanel}=LimitCinematic;
+ const art=assets('vivi',['cutin','effects','court','finish'],{revision:3});
  const shots=[
   [0,430,664,1081,664,756,428,.94,0,0],
   [39,475,664,1081,664,794,421,.94,0,8],
@@ -15,8 +15,9 @@ const ViviLimitVFX=(()=>{
   [132,562,664,1197,625,874,407,.9,0,11],
   [149,550,664,1215,592,859,405,.89,.016,18],
   [175,472,664,1201,650,843,384,.8,-.02,8],
-  [200,503,664,1226,648,875,369,.76,0,18],
-  [211,503,664,1301,628,915,379,.78,.017,18],
+  [197,503,664,1226,648,888,323,.71,-.01,18],
+  [207,503,664,1263,641,931,379,.87,.022,18],
+  [216,503,664,1361,554,968,370,.74,.016,18],
   [241,503,664,1675,375,1070,394,.76,0,0]
  ];
  const pulse=(t,hit,lead,tail)=>ease((t-hit+lead)/lead)*(1-ease((t-hit-2)/tail));
@@ -30,10 +31,16 @@ const ViviLimitVFX=(()=>{
   frameClip();
   const width=W+262,height=width*9/16;
   art.image('court',-(width-W)*.5-(cx-864)*.09,-75-(cy-410)*.09,width,height);
+  ctx.fillStyle='rgba(7,4,25,'+(pulse(t,198,16,33)*.47)+')';
+  ctx.fillRect(0,0,W,H);
   world(cx,cy,z,roll,face,t,Math.max(impact*.54,finish));
-  if(finish>0){
-   art.glow(3,tx,ty-52,638,212,finish*.49);
-  }
+  const impactX=1245,ground=664;
+  const finishArt=(slot,x,y,w,h,strength,angle)=>art.strike(slot,x,y,w,h,strength,angle,1,'finish');
+  const tear=pulse(t,184,17,23);
+  finishArt(0,impactX-176,122,690,524,tear,.045);
+  const shock=pulse(t,210,4,29),spread=ease((t-207)/24);
+  art.glow(3,impactX,ground-48,758,221,finish*.46);
+  finishArt(3,impactX,ground-13,mix(438,1350,spread),mix(326,560,spread),shock*.87,.025);
   const sprite={...attacker,x,y,face:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
   drawSprite(sprite,1,pose,3.15);
   target(opponent,tx,ty-impact*12,-.07-impact*.35-ease((t-207)/31)*1.36,2.6);
@@ -50,24 +57,15 @@ const ViviLimitVFX=(()=>{
     art.strike(2,tx,ty-347,309,680,strength);
    }
   }
-  const fall=ease((t-181)/26),meteor=310+395*fall;
-  const collapse=ease((t-209)/14),fallStrength=pulse(t,207,25,19);
-  art.strike(3,tx+mix(-190,0,fall),mix(-60,ty-106,fall),meteor+190*collapse,meteor-232*collapse,fallStrength,t*.013);
-  art.strike(2,tx,ty-222,344+326*collapse,522,pulse(t,211,4,18),-.18);
-  ctx.save();
-  const burst=ease((t-206)/4)*(1-ease((t-211)/20));
-  ctx.globalAlpha=burst*.82;ctx.fillStyle='#d4a5ff';
-  for(let i=0;i<17;i++){
-   const angle=i*2.4,distance=76+ease((t-209)/21)*(120+i%5*38);
-   const px=tx+Math.cos(angle)*distance,py=ty-103+Math.sin(angle)*distance;
-   ctx.beginPath();ctx.arc(px,py,6+i%3,0,Math.PI*2);ctx.fill();
-  }
-  ctx.globalAlpha=finish*.9;ctx.strokeStyle='#e4b8ff';ctx.lineWidth=7;
-  const wave=125+630*ease((t-207)/21);
-  ctx.beginPath();ctx.ellipse(tx,ty-75,wave,wave*.3,0,0,Math.PI*2);ctx.stroke();ctx.restore();
+  const fall=Math.pow(LimitCinematic.unit((t-184)/23),1.7);
+  finishArt(1,mix(impactX-130,impactX-58,fall),mix(-171,ground-345,fall),
+   572,749,pulse(t,207,21,5),-.17);
+  const pillar=pulse(t,208,2,19),rise=ease((t-206)/10);
+  const pillarHeight=mix(512,848,rise);
+  finishArt(2,impactX,ground-pillarHeight*.34,mix(530,814,rise),pillarHeight,pillar,-.021);
   ctx.restore();
   flash('182,139,255',Math.max(impact*.13,finish*.2));bands(t,'#0a0b19');
-  art.portrait(1+Math.max(0,t)*.001,ease(t/4)*(1-ease((t-16)/12)));
+  portraitPanel(t,26,art.portrait);
   ctx.restore();
  }
  function drawContact({x,y,time}){art.strike(0,x,y,139+time*5,138,1-time/23);}
