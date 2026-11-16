@@ -1,18 +1,20 @@
 'use strict';
 
 const ChocoboLimitVFX=(()=>{
- const {assets,camera,ease,mix,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('chocobo',['cutin','effects','court'],{revision:2});
+ const {assets,camera,ease,mix,world,target,frameClip,bands,flash,portraitPanel,unit}=LimitCinematic;
+ const art=assets('chocobo',['cutin','effects','court','finish'],{revision:3});
  const shots=[
   [0,310,683,1080,680,762,422,.88,0,0],[28,522,683,1080,680,786,422,.92,0,34],
   [40,791,683,1080,680,935,436,.97,.018,37],[47,942,683,1105,662,1024,433,1,.02,9],
   [63,992,548,1178,606,1085,348,.92,-.035,10],[74,804,437,1219,587,1012,305,.86,-.028,5],
   [82,1057,433,1256,582,1150,315,.9,.02,11],[101,1196,623,1280,664,1238,414,.94,.03,20],
   [120,969,801,1266,667,1117,489,.88,.016,15],[139,1165,677,1350,622,1257,425,.89,-.028,17],
-  [160,1270,677,1459,633,1370,397,.88,.01,8],[191,1242,677,1448,685,1344,379,.8,.026,12],
+  [160,1270,677,1459,633,1370,361,.84,.01,8],[179,1242,677,1448,683,1507,313,.76,-.02,12],
+  [191,1242,677,1448,685,1404,421,1.03,.037,12],[201,1238,677,1615,526,1444,391,.83,.013,15],
   [222,1241,677,1970,506,1578,411,.76,0,0],[225,1241,677,2030,471,1590,424,.76,0,0]
  ];
  const pulse=(t,hit,lead,tail)=>ease((t-hit+lead)/lead)*(1-ease((t-hit-2)/tail));
+ const meteorArt=(slot,x,y,w,h,strength,angle=0,face=1)=>art.strike(slot,x,y,w,h,strength,angle,face,'finish');
 
  function draw({attacker,target:opponent,face,time}){
   const t=ChocoboLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,pose]=camera(shots,t);
@@ -22,7 +24,12 @@ const ChocoboLimitVFX=(()=>{
   frameClip();
   const width=W+290,height=width*9/16;
   art.image('court',-(width-W)*.5-(cx-1095)*.078,-77-(cy-418)*.10,width,height);
+  ctx.fillStyle='rgba(39,14,32,'+(pulse(t,190,24,33)*.49)+')';ctx.fillRect(0,0,W,H);
   world(cx,cy,z,roll,face,t,Math.max(impact*.56,finish));
+  const landingX=1448,ground=683,spread=ease((t-191)/23);
+  meteorArt(2,landingX+38*spread,ground-82,mix(420,1460,spread),mix(325,511,spread),pulse(t,198,8,28)*.88);
+  const eruption=ease((t-190)/12),plumeHeight=mix(403,798,eruption);
+  meteorArt(1,landingX,ground-plumeHeight*.30,mix(502,1040,eruption),plumeHeight,pulse(t,193,3,23),.025);
   const rock=ctx.createLinearGradient(710,431,743,488);
   rock.addColorStop(0,'#e9b58b');rock.addColorStop(.42,'#916748');rock.addColorStop(1,'#4c3742');
   ctx.fillStyle=rock;ctx.strokeStyle='#624247';ctx.lineWidth=3;
@@ -34,27 +41,16 @@ const ChocoboLimitVFX=(()=>{
   target(opponent,tx,ty-impact*16,-.15-impact*.4-ease((t-192)/25)*1.41,2.6);
   for(const [i,hit] of hits.entries()){
    const strength=pulse(t,hit,5,9);
-   art.strike(i%3,tx-35,ty-104,358+i*11,265+14*i,strength,[.08,-.44,.74,.95,-.31,-.21][i]);
+   const angle=[.08,-.44,.74,.95,-.31,-.21][i];
+   art.strike(i%3,tx-35,ty-104,358+i*11,265+14*i,strength,angle);
+   if(i===2||i===3||i===5)meteorArt(3,tx-12,ty-83,444,360,strength*.83,angle);
   }
-  const fall=ease((t-159)/32);
-  if(fall>0&&t<202){
-   ctx.save();ctx.globalAlpha=pulse(t,191,28,12);
-   const mx=tx+mix(350,0,fall),my=mix(-105,ty-124,fall);
-   for(let i=0;i<14;i++){
-    const offset=i*23-150,length=(i%5)*26+90;
-    ctx.strokeStyle=i%3===0?'#fff4bc':'#ff9062';ctx.lineWidth=3+i%4;
-    ctx.beginPath();ctx.moveTo(mx+62+offset,my+15);ctx.lineTo(mx+length+offset,my-length*1.7);ctx.stroke();
-   }
-   ctx.restore();
-  }
-  art.strike(3,tx+mix(350,65,fall),mix(-105,ty-205,fall),380+176*fall,370+188*fall,pulse(t,191,33,16),-.44);
-  const spread=165+660*ease((t-191)/20);
-  art.strike(1,tx,ty-50,spread,spread*.41,finish);
-  ctx.save();ctx.globalAlpha=finish*.75;ctx.strokeStyle='#ffcf89';ctx.lineWidth=6;
-  ctx.beginPath();ctx.ellipse(tx,ty-45,spread*.62,spread*.15,0,0,Math.PI*2);ctx.stroke();ctx.restore();
+  const fall=unit((t-160)/31)**1.68;
+  meteorArt(0,landingX+mix(605,308,fall),mix(-148,ground-275,fall),mix(497,828,fall),mix(432,749,fall),
+   pulse(t,191,31,4),.10);
   ctx.restore();
   flash('255,190,115',Math.max(impact*.14,finish*.21));bands(t,'#241523');
-  art.portrait(1+t*.001,ease(t/4)*(1-ease((t-16)/12)));ctx.restore();
+  portraitPanel(t,-24,art.portrait);ctx.restore();
  }
  function drawContact({x,y,time}){art.strike(0,x,y,164+time*4,145,1-time/23);}
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
