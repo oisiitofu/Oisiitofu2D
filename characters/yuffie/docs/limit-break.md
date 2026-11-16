@@ -4,4 +4,6 @@
 
 改修では、現行の黄色いスカーフ、鉢金、緑の襟と大手裏剣を参照した。組み込みImageGenで、空中で大手裏剣を受け取る横長カットイン、夜のウータイを想定した屋根と木橋、回転する四刃手裏剣、緑と白の斬撃・命中火花を制作し、`assets/limit-cutin.webp`、`assets/limit-court.webp`、`assets/limit-shuriken.webp`、`assets/limit-effects.webp` に保存。手裏剣の回収と、複数方向から命中点へ集束する森羅万象を別の軌道で描く。
 
+再比較では、大手裏剣が一つの軌道で飛び、弧を描いて本人の手へ戻るようにした。投げた手裏剣を追いながら先に間合いを取り、引いたカメラから手元へ寄って回収を見せる。回収直後に踏み込み、森羅万象の斬撃を前方へ伸ばす。往復の風跡、回転、命中、決め技の斬撃を `assets/limit-finish.webp` に収録。カットインは画像の比率を保ったまま斜めに開く。
+
 [作品公式資料](https://jp.finalfantasy.com/titles/finalfantasy7/)
