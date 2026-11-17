@@ -1494,6 +1494,18 @@
     ],
     "narmaya-limit-dance": [
       "/assets/audio/se/narmaya-limit-dance.wav"
+    ],
+    "ellen-limit-freeze": [
+      "/assets/audio/se/ellen-limit-freeze.wav"
+    ],
+    "ellen-limit-winter": [
+      "/assets/audio/se/ellen-limit-winter.wav"
+    ],
+    "billy-limit-showtime": [
+      "/assets/audio/se/billy-limit-showtime.wav"
+    ],
+    "billy-limit-starlight": [
+      "/assets/audio/se/billy-limit-starlight.wav"
     ]
   },
   "impactDesign": {
