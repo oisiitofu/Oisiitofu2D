@@ -1470,6 +1470,18 @@
     ],
     "anubis-limit-orbital-burst": [
       "/assets/audio/se/anubis-limit-orbital-burst.wav"
+    ],
+    "naegi-limit-evidence": [
+      "/assets/audio/se/naegi-limit-evidence.wav"
+    ],
+    "naegi-limit-rebuttal": [
+      "/assets/audio/se/naegi-limit-rebuttal.wav"
+    ],
+    "etna-limit-chaos-impact": [
+      "/assets/audio/se/etna-limit-chaos-impact.wav"
+    ],
+    "etna-limit-prinny-chain": [
+      "/assets/audio/se/etna-limit-prinny-chain.wav"
     ]
   },
   "impactDesign": {
