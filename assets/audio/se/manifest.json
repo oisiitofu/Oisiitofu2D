@@ -1452,6 +1452,12 @@
     ],
     "shionne-limit-ferox-sol": [
       "/assets/audio/se/shionne-limit-ferox-sol.wav"
+    ],
+    "felyne-limit-mega-barrel": [
+      "/assets/audio/se/felyne-limit-mega-barrel.wav"
+    ],
+    "nargacuga-limit-tail-slam": [
+      "/assets/audio/se/nargacuga-limit-tail-slam.wav"
     ]
   },
   "impactDesign": {
