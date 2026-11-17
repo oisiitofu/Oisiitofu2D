@@ -1482,6 +1482,18 @@
     ],
     "etna-limit-prinny-chain": [
       "/assets/audio/se/etna-limit-prinny-chain.wav"
+    ],
+    "charlotta-limit-shield": [
+      "/assets/audio/se/charlotta-limit-shield.wav"
+    ],
+    "charlotta-limit-execution": [
+      "/assets/audio/se/charlotta-limit-execution.wav"
+    ],
+    "narmaya-limit-stance": [
+      "/assets/audio/se/narmaya-limit-stance.wav"
+    ],
+    "narmaya-limit-dance": [
+      "/assets/audio/se/narmaya-limit-dance.wav"
     ]
   },
   "impactDesign": {
