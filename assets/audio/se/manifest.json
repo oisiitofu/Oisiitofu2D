@@ -1458,6 +1458,18 @@
     ],
     "nargacuga-limit-tail-slam": [
       "/assets/audio/se/nargacuga-limit-tail-slam.wav"
+    ],
+    "ky-limit-install": [
+      "/assets/audio/se/ky-limit-install.wav"
+    ],
+    "ky-limit-lightning": [
+      "/assets/audio/se/ky-limit-lightning.wav"
+    ],
+    "anubis-limit-zero-shift": [
+      "/assets/audio/se/anubis-limit-zero-shift.wav"
+    ],
+    "anubis-limit-orbital-burst": [
+      "/assets/audio/se/anubis-limit-orbital-burst.wav"
     ]
   },
   "impactDesign": {
