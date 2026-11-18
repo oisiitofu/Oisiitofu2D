@@ -21,7 +21,8 @@ const {chromium}=require('playwright');
   for(const id of ids){
    const result=await page.evaluate(async({id,review})=>{
     const profile=LimitBreak.profile(id),visual=profile.visual();
-    await visual.load();
+    // Felyne's cinematic also draws the boomerang from its battle atlas.
+    await Promise.all([visual.load(),id==='felyne'&&ArtLoader.load(id)]);
     const original=ctx.drawImage;
     let portraitDraws=0,maxAspectError=0,opaqueStrikeDraws=0,frameWeight=0,bestWeight=0,bestTime=0;
     ctx.drawImage=function(source,...args){
