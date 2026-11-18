@@ -1,8 +1,8 @@
 'use strict';
 
 const ZackLimitVFX=(()=>{
- const {assets,camera,ease,world,target,frameClip,bands,flash}=LimitCinematic;
- const art=assets('zack',['cutin','effects','court'],{revision:2});
+ const {assets,camera,ease,mix,world,target,frameClip,bands,flash,portraitPanel}=LimitCinematic;
+ const art=assets('zack',['cutin','effects','court','finish'],{revision:3});
  const shots=[
   [0,406,674,1066,673,736,431,.94,0,1],[34,674,674,1066,673,866,441,.98,-.017,53],
   [46,860,674,1068,662,963,445,1.02,.018,17],[63,927,665,1097,613,1012,409,.97,-.018,19],
@@ -15,18 +15,20 @@ const ZackLimitVFX=(()=>{
  const pulse=(t,hit,lead,tail)=>ease((t-hit+lead)/lead)*(1-ease((t-hit-2)/tail));
  function draw({attacker,target:opponent,face,time}){
   const t=ZackLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,pose]=camera(shots,t);
-  const impact=Math.max(...hits.map(hit=>pulse(t,hit,4,9))),finish=pulse(t,191,5,25);
+  const impact=Math.max(...hits.map(hit=>pulse(t,hit,4,9))),finish=pulse(t,191,3,16);
+  const groundShock=pulse(t,198,5,24),sweep=ease((t-190)/19);
+  const bladeX=mix(x+145,tx+260,sweep),bladeY=mix(y-151,ty-275,sweep);
   frameClip();
   const width=W+380;
   art.image('court',-(width-W)*.5-(cx-1050)*.14,-102-(cy-416)*.14,width,width*9/16);
+  ctx.fillStyle='rgba(12,19,45,'+pulse(t,192,17,28)*.40+')';ctx.fillRect(0,0,W,H);
   world(cx,cy,z,roll,face,t,Math.max(impact*.63,finish));
-  const sweep=ease((t-191)/20);
-  art.strike(3,tx+80+sweep*180,ty-123-sweep*54,605+sweep*620,422+sweep*88,finish,-.22);
-  art.glow(1,tx+105+sweep*325,ty-122-sweep*80,605+sweep*483,409,finish*.65,-.17);
+  art.strike(1,x+252+sweep*326,y-31,664+sweep*513,251+sweep*51,groundShock,.015,1,'finish');
   art.glow(0,x+108,y-140,520,284,pulse(t,191,15,6)*.69,-.41);
   const sprite={...attacker,x,y,face:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
   drawSprite(sprite,1,pose-1,3.05);
   target(opponent,tx,ty-impact*15,-.12-impact*.39-ease((t-191)/27)*1.31,2.55);
+  art.strike(0,bladeX,bladeY,680+sweep*428,440+sweep*102,finish,-.17,1,'finish');
   for(const [i,hit] of hits.entries()){
    const slot=i%3;
    art.strike(slot,tx-30,ty-126,434+i*13,315+i*5,pulse(t,hit,4,9),[-.12,-.7,-.95,.7,.15,1.02][i],slot===0?-1:1);
@@ -34,7 +36,7 @@ const ZackLimitVFX=(()=>{
   art.strike(0,tx-35,ty-132,350+sweep*155,212,pulse(t,191,2,11),-.64,-1);
   ctx.restore();
   flash('255,209,148',Math.max(impact*.13,finish*.2));bands(t,'#161c2c');
-  art.portrait(1+t*.001,ease(t/4)*(1-ease((t-16)/12)));ctx.restore();
+  portraitPanel(t,30,(zoom,alpha)=>art.portrait(zoom,alpha));ctx.restore();
  }
  function drawContact({x,y,time}){art.strike(0,x,y,161+time*4,145,1-time/23);}
  return {load:art.load,get prepared(){return art.prepared;},draw,drawContact};
