@@ -3898,10 +3898,10 @@
   "lid": {
     "source": "characters/lid/assets/lid-selection.png",
     "crop": [
-      0,
-      150,
-      1254,
-      840
+      57,
+      115,
+      1140,
+      764
     ],
     "presentation": true,
     "mode": "built-in imagegen",

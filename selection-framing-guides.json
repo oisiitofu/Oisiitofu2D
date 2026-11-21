@@ -7619,10 +7619,10 @@
         840
       ],
       "crop": [
-        0,
-        150,
-        1254,
-        840
+        57,
+        115,
+        1140,
+        764
       ],
       "source": "characters/lid/assets/lid-selection.png",
       "sourceSize": [
