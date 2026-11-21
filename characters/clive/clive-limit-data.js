@@ -13,7 +13,7 @@ const CliveLimitProfile=(()=>{
  const impacts=[[46, 3, "fire-hit"], [64, 3, "sword-hit"], [84, 4, "impact-heavy"], [104, 4, "ice-hit"], [123, 4, "sword-hit"], [143, 4, "fire-hit"]];
  const combo=new Map(impacts.map(([time,damage])=>[time,damage]));
  const cues=new Map([[1,[impacts[0][2],1]],...impacts.map(([time,,sound])=>[time,[sound,1]]),
-  [204,['clive-limit-hellfire',1]]]);
+  [168,['fire-cast',.78]],[204,['clive-limit-hellfire',1]]]);
  const finalStrike={name:'イフリート・地獄の火炎',type:'limitFinisher',damage:26,launchDamage:37,angle:-.53,
   baseKnockback:4.5,knockbackGrowth:.075,launchPercentOffset:15,soundFamily:'sword'};
  return {contactHold,shotTime,duration,opener,combo,cues,contactCue:cues.get(1),finalStrike};

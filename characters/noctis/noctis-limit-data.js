@@ -13,7 +13,7 @@ const NoctisLimitProfile=(()=>{
  const impacts=[[46, 3, "sword-hit"], [64, 3, "sword-hit"], [82, 4, "sword-hit-heavy"], [102, 4, "light-hit"], [122, 4, "sword-hit"], [142, 4, "sword-hit-heavy"]];
  const combo=new Map(impacts.map(([time,damage])=>[time,damage]));
  const cues=new Map([[1,[impacts[0][2],1]],...impacts.map(([time,,sound])=>[time,[sound,1]]),
-  [195,['noctis-limit-armiger',1]]]);
+  [164,['light-cast',.76]],[195,['noctis-limit-armiger',1]]]);
  const finalStrike={name:'ファントムソード',type:'limitFinisher',damage:26,launchDamage:37,angle:-.53,
   baseKnockback:4.5,knockbackGrowth:.075,launchPercentOffset:15,soundFamily:'sword'};
  return {contactHold,shotTime,duration,opener,combo,cues,contactCue:cues.get(1),finalStrike};
