@@ -10,10 +10,10 @@ const ArusLimitProfile=(()=>{
   damage:5,reach:225,hitboxSize:1.6,pose:6,aerial:true,canClank:false,
   intangibleFrames:[[1,23]],soundFamily:'sword'
  });
- const impacts=[[45, 3, "impact-heavy"], [63, 3, "sword-hit"], [82, 4, "sword-hit-heavy"], [102, 4, "sword-hit"], [121, 4, "thunder-hit"], [141, 4, "sword-hit-heavy"]];
+ const impacts=[[45, 3, "shield-hit"], [63, 3, "sword-hit"], [82, 4, "sword-hit-heavy"], [102, 4, "sword-hit"], [121, 4, "thunder-hit"], [141, 4, "sword-hit-heavy"]];
  const combo=new Map(impacts.map(([time,damage])=>[time,damage]));
  const cues=new Map([[1,[impacts[0][2],1]],...impacts.map(([time,,sound])=>[time,[sound,1]]),
-  [193,['arus-limit-gigaslash',1]]]);
+  [176,['thunder-cast',.76]],[193,['arus-limit-gigaslash',1]]]);
  const finalStrike={name:'ギガスラッシュ',type:'limitFinisher',damage:26,launchDamage:37,angle:-.53,reverseLaunch:true,
   baseKnockback:4.5,knockbackGrowth:.075,launchPercentOffset:15,soundFamily:'sword'};
  return {contactHold,shotTime,duration,opener,combo,cues,contactCue:cues.get(1),finalStrike};
