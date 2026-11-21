@@ -13,7 +13,7 @@ const TidusLimitProfile=(()=>{
  const impacts=[[45, 3, "sword-hit"], [62, 3, "sword-hit"], [80, 4, "sword-hit-heavy"], [99, 4, "wind-hit"], [119, 4, "sword-hit"], [139, 4, "sword-hit-heavy"]];
  const combo=new Map(impacts.map(([time,damage])=>[time,damage]));
  const cues=new Map([[1,[impacts[0][2],1]],...impacts.map(([time,,sound])=>[time,[sound,1]]),
-  [199,['tidus-limit-blitz',1]]]);
+  [171,['water-cast',.72]],[191,['wind-hit',.86]],[199,['tidus-limit-blitz',1]]]);
  const finalStrike={name:'エース・オブ・ザ・ブリッツ',type:'limitFinisher',damage:26,launchDamage:37,angle:-.53,
   baseKnockback:4.5,knockbackGrowth:.075,launchPercentOffset:15,soundFamily:'sword'};
  return {contactHold,shotTime,duration,opener,combo,cues,contactCue:cues.get(1),finalStrike};
