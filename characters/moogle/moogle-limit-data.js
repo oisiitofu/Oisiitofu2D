@@ -13,7 +13,7 @@ const MoogleLimitProfile=(()=>{
  const impacts=[[46, 3, "punch-light"], [64, 3, "wind-hit"], [83, 3, "staff-hit"], [102, 4, "wind-hit"], [122, 4, "punch-light"], [142, 4, "wind-hit-heavy"]];
  const combo=new Map(impacts.map(([time,damage])=>[time,damage]));
  const cues=new Map([[1,[impacts[0][2],1]],...impacts.map(([time,,sound])=>[time,[sound,1]]),
-  [195,['moogle-limit-rhapsody',1]]]);
+  [170,['wind-cast',.74]],[195,['moogle-limit-rhapsody',1]]]);
  const finalStrike={name:'風のラプソディ',type:'limitFinisher',damage:26,launchDamage:37,angle:-.53,
   baseKnockback:4.5,knockbackGrowth:.075,launchPercentOffset:15,soundFamily:'wing'};
  return {contactHold,shotTime,duration,opener,combo,cues,contactCue:cues.get(1),finalStrike};

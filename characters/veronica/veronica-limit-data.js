@@ -13,7 +13,7 @@ const VeronicaLimitProfile=(()=>{
  const impacts=[[47, 3, "staff-hit"], [65, 3, "fire-hit"], [84, 4, "ice-hit"], [104, 4, "thunder-hit"], [124, 4, "fire-hit"], [144, 4, "light-hit-heavy"]];
  const combo=new Map(impacts.map(([time,damage])=>[time,damage]));
  const cues=new Map([[1,[impacts[0][2],1]],...impacts.map(([time,,sound])=>[time,[sound,1]]),
-  [207,['veronica-limit-madante',1]]]);
+  [170,['light-cast',.76]],[207,['veronica-limit-madante',1]]]);
  const finalStrike={name:'マダンテ',type:'limitFinisher',damage:26,launchDamage:37,angle:-.53,reverseLaunch:true,
   baseKnockback:4.5,knockbackGrowth:.075,launchPercentOffset:15,soundFamily:'magic'};
  return {contactHold,shotTime,duration,opener,combo,cues,contactCue:cues.get(1),finalStrike};

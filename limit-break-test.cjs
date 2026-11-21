@@ -8,9 +8,9 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
   await p.goto(process.env.GAME_URL||'http://localhost:4182');
   await p.waitForFunction(()=>window.AstralEdge?.assetsLoaded,null,{polling:100,timeout:60000});
   await p.click('#enter-roster');
-  await p.click('[data-library-scope="limit"]');
+  assert.equal(await p.locator('[data-library-scope="limit"]').count(),0);
   const filtered=await p.locator('.fighter-card:visible').evaluateAll(cards=>cards.map(card=>card.dataset.id));
-  assert.deepEqual(filtered,await p.evaluate(()=>Roster.selectable.filter(d=>LimitBreak.hasCinematic(d.id)).map(d=>d.id)));
+  assert.deepEqual(filtered,await p.evaluate(()=>[...Roster.selectable.map(d=>d.id),'random']));
   assert.ok(['dragoon','roxas'].every(id=>filtered.includes(id)));
   const pacing=await p.evaluate(()=>{
    const adjusted=Roster.selectable.map(({id})=>[id,LimitBreak.profile(id)]).filter(([,profile])=>profile?.sourceTime);

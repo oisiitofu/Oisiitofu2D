@@ -10,9 +10,9 @@ const fighter=process.env.LIMIT_FIGHTER||'crash';
   await page.waitForFunction(()=>AstralEdge.assetsLoaded);
   assert.equal(await page.locator('#limit-break').isChecked(),true);
   await page.click('#enter-roster');
-  await page.click('[data-library-scope="limit"]');
+  assert.equal(await page.locator('[data-library-scope="limit"]').count(),0);
   const filtered=await page.locator('.fighter-card:visible').evaluateAll(cards=>cards.map(card=>card.dataset.id));
-  assert.deepEqual(filtered,await page.evaluate(()=>Roster.selectable.filter(d=>LimitBreak.hasCinematic(d.id)).map(d=>d.id)));
+  assert.deepEqual(filtered,await page.evaluate(()=>[...Roster.selectable.map(d=>d.id),'random']));
   assert.ok(['dragoon','roxas'].every(id=>filtered.includes(id)));
   await page.click('[data-library-scope="all"]');
   await page.evaluate(async fighter=>{
