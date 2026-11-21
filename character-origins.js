@@ -1,6 +1,7 @@
 'use strict';
 // Public source works, separate from combat-style descriptions.
 const CharacterOrigins=Object.freeze({
+ lid:'ファイナルファンタジーレゾナンス',
  "elliot": "冒険家エリオットの千年物語",
  "yuma": "超探偵事件簿 レインコード",
  "magus": "クロノ・トリガー",

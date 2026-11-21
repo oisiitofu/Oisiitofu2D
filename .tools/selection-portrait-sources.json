@@ -3893,5 +3893,18 @@
       1536,
       1024
     ]
+  },
+  "lid": {
+    "source": "characters/lid/assets/lid-selection.png",
+    "crop": [
+      0,
+      150,
+      1254,
+      840
+    ],
+    "presentation": true,
+    "mode": "built-in imagegen",
+    "original": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-b350af0b-c9d1-4593-aa77-902b3553da68.png",
+    "prompt": "リド本人とハンマーの顔・髪・衣装・構図を保ち、空・建物・飛空艇の背景だけを完全透過。"
   }
 }

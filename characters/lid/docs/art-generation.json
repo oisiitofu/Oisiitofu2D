@@ -1,0 +1,19 @@
+{
+  "mode": "built-in imagegen",
+  "reference": "C:/Users/haro_/Downloads/AI/rido.png",
+  "sprites": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-d288f6ac-4bc4-4aee-b4cb-0d4f9e1aae07.png",
+  "portrait": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-3dcf6a6e-4191-4d65-b55a-dda9f0d85398.png",
+  "cutin": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-1ff0e61d-b63a-4877-b727-f5a8d21e37a1.png",
+  "prompts": {
+    "sprites": "8列6段の48全身動作。原デザインを維持し工具、メカボ搭乗、魔法の各動作を個別に描く。",
+    "portrait": "添付リドの顔・黄色の作業着・ゴーグルを維持した高解像度の顔から肩のアップ。青空と飛空艇工房。顔の輪郭を横中央へ。",
+    "cutin": "対戦用全身画像と添付シートを参照。リドが端末を構え飛空艇を指揮する専用横長構図。",
+    "effects": "専用のハンマー着弾、土柱、青いブースト、爆発、メカボ、エンタープライズ、砲弾、地表爆発を4列2段の透過素材で制作。",
+    "court": "飛空艇工房と浮遊島を背景に、本人・相手・爆撃を読み取れる開けた飛空艇ドック。",
+    "portraitTransparent": "選択画像は既存キャラと同じ背景透過。本人の顔・髪・衣装・ハンマーを維持し背景のみ除去。"
+  },
+  "effects": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b6a313e1-8b36-48d1-b62d-1e038d891e9a.png",
+  "court": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-bd0a9de7-3b3f-4120-a316-8c8ed33f3689.png",
+  "effectsClean": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-b32a8f7a-cfd9-48ab-9cc4-bc430f380c21.png",
+  "portraitTransparent": "C:/Users/haro_/.codex/generated_images/01a1a727-fbb4-70b3-b0da-07f92cdd1fb3/exec-b350af0b-c9d1-4593-aa77-902b3553da68.png"
+}

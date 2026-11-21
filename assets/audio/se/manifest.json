@@ -1506,6 +1506,15 @@
     ],
     "billy-limit-starlight": [
       "/assets/audio/se/billy-limit-starlight.wav"
+    ],
+    "lid-limit-command": [
+      "/assets/audio/se/lid-limit-command.wav"
+    ],
+    "lid-limit-shell": [
+      "/assets/audio/se/lid-limit-shell.wav"
+    ],
+    "lid-limit-enterprise": [
+      "/assets/audio/se/lid-limit-enterprise.wav"
     ]
   },
   "impactDesign": {

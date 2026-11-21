@@ -7600,6 +7600,42 @@
         1012,
         610
       ]
+    },
+    "lid": {
+      "profile": "human",
+      "eye": [
+        649,
+        404
+      ],
+      "faceCenterX": 650,
+      "span": 440,
+      "top": 0,
+      "reviewed": "2026-11-22",
+      "referenceCrop": [
+        0,
+        150,
+        1254,
+        840
+      ],
+      "crop": [
+        0,
+        150,
+        1254,
+        840
+      ],
+      "source": "characters/lid/assets/lid-selection.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "faceBounds": [
+        430,
+        295,
+        878,
+        633
+      ],
+      "sourceSha256": "79047bfef309d50a7a58a6e6d068c9937925b40e6490e58312c8e68fa1b09ff4",
+      "centerBasis": "元画像の横中心を維持し、目・頬・顎を保護"
     }
   }
 }
