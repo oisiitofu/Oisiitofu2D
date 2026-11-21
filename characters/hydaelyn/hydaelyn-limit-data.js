@@ -13,7 +13,7 @@ const HydaelynLimitProfile=(()=>{
  const impacts=[[47, 3, "sword-hit"], [65, 3, "sword-hit"], [84, 4, "ice-hit"], [104, 4, "light-hit"], [124, 4, "wind-hit"], [145, 4, "light-hit-heavy"]];
  const combo=new Map(impacts.map(([time,damage])=>[time,damage]));
  const cues=new Map([[1,[impacts[0][2],1]],...impacts.map(([time,,sound])=>[time,[sound,1]]),
-  [209,['hydaelyn-limit-exodus',1]]]);
+  [156,['light-cast',.74]],[209,['hydaelyn-limit-exodus',1]]]);
  const finalStrike={name:'エクソダス',type:'limitFinisher',damage:26,launchDamage:37,angle:-.53,
   baseKnockback:4.5,knockbackGrowth:.075,launchPercentOffset:15,soundFamily:'sword'};
  return {contactHold,shotTime,duration,opener,combo,cues,contactCue:cues.get(1),finalStrike};
