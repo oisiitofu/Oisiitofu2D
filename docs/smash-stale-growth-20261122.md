@@ -13,3 +13,5 @@
 - `smash-stale-online-test.cjs`：2クライアントで上スマ連打の326フレームが一致。
 
 検証結果はGit管理外の `previews/smash-audit/stale-growth.json` と `stale-growth-before.json`。広範な `launch-control-balance-test.cjs` は、既存のテスト用クォートの初期化不足（quoteXP未定義）で停止したため、当該テスト全体の合格とは扱わない。
+
+公開版 v495（公開ソース `74bace9b0004934b28b17757a33552660ebf1606`）でも対象の画像・操作・演出を確認。配信差分の照合と結果は `docs/limit-break-rollout.md`。公開オンライン入口はHTTP 503、同期はローカル検証。
