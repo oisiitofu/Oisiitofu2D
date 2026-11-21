@@ -1,7 +1,7 @@
 'use strict';
 const NierLimitVFX=(()=>{
  const {assets,unit,ease,camera,frameClip,world,target,bands,flash}=LimitCinematic;
- const art=assets('nier',['cutin','poses','court','effects','book','shadow'],{blackMatte:true});
+ const art=assets('nier',['cutin','court','effects','book','shadow'],{blackMatte:true});
  const shots=[
   [0,480,648,831,632,680,487,1.13,-.016,0],
   [26,536,649,838,626,711,477,1.23,.018,1],
@@ -21,7 +21,12 @@ const NierLimitVFX=(()=>{
   [247,827,641,1350,291,922,446,.86,0,5]
  ];
  const cuts=[[91,846,444,.20,1],[110,850,464,-.14,-1],[127,885,489,.75,1],[206,925,495,.70,1]];
- function normal(index,x,y,alpha){art.grid('poses',index,3,2,x,y,285,{alpha});}
+ function normal(attacker,x,y,t,alpha){
+  // Follow the opening thrust with the battle poses for reaching out and raising the hand.
+  const pose=t<19?6:t<36?13:16;
+  const sprite={...attacker,x,y,face:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
+  drawSprite(sprite,alpha,pose,2.75);
+ }
  function shadow(index,x,y,t,alpha=1){
   const face=t>=100&&t<122?-1:1;
   art.grid('shadow',index,3,2,x,y,345,{alpha,face,anchorY:.94});
@@ -60,7 +65,7 @@ const NierLimitVFX=(()=>{
   }
   ctx.restore();
  }
- function draw({target:opponent,face,time}){
+ function draw({attacker,target:opponent,face,time}){
   const t=NierLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
   const hit=cuts.findLast(v=>v[0]<=t),age=hit?t-hit[0]:100,shock=unit(1-age/14);
   frameClip();ctx.fillStyle='#151017';ctx.fillRect(0,0,W,H);
@@ -86,7 +91,7 @@ const NierLimitVFX=(()=>{
    if(t<178)art.strike(0,tx-58,ty-109,291,227,ease((t-149)/10)*(1-ease((t-170)/8)),.13);
   }
   target(opponent,tx,ty,-.18+shock*.48-(t>=207?.64:0));
-  if(changing<1)normal(t<29?index:t<48?1:2,x,y,1-changing);
+  if(changing<1)normal(attacker,x,y,t,1-changing);
   if(changing>0){
    if(shock>.4&&t<139)shadow(index,x-(t<104?47:-46),y+9,t,.21*shock);
    shadow(index,x,y,t,changing);

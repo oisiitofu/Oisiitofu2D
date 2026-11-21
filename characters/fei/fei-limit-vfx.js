@@ -1,7 +1,7 @@
 'use strict';
 const FeiLimitVFX=(()=>{
  const {assets,ease,unit,mix,camera,frameClip,world,target,bands,flash}=LimitCinematic;
- const art=assets('fei',['cutin','court','poses','gear','effects']);
+ const art=assets('fei',['cutin','court','gear','effects']);
  const shots=[
   [0,553,654,851,619,703,453,1.19,-.038,0],
   [37,614,649,871,621,749,431,1.12,.028,0],
@@ -42,8 +42,15 @@ const FeiLimitVFX=(()=>{
   ctx.save();ctx.beginPath();ctx.moveTo(0,128);ctx.lineTo(W,72);ctx.lineTo(W,670);ctx.lineTo(0,726);ctx.closePath();ctx.clip();
   art.portrait(s,opacity);ctx.restore();
  }
- function draw({target:opponent,face,time}){
-  const t=FeiLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll,index]=camera(shots,t);
+ function drawOnFoot(attacker,x,y,t,alpha){
+  if(alpha<=0)return;
+  // Complete battle poses for the palm strike, kick, takeoff, and return to the floor.
+  const pose=t<35?3:t<47?13:t<58?4:t<67?7:t<78?32:t<90?33:t<104?34:t<246?35:t<254?36:0;
+  const sprite={...attacker,x,y,face:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
+  drawSprite(sprite,alpha,pose,3.05);
+ }
+ function draw({attacker,target:opponent,face,time}){
+  const t=FeiLimitProfile.shotTime(time),[x,y,tx,ty,cx,cy,z,roll]=camera(shots,t);
   const [gx,gy,height,gearIndex]=camera(gearShots,t);
   const arrival=ease((t-93)/13)*(1-ease((t-122)/21));
   const blast=ease((t-181)/7)*(1-ease((t-195)/29));
@@ -53,7 +60,7 @@ const FeiLimitVFX=(()=>{
   target(opponent,tx,ty,-.12-Math.sin(t*.17)*.12-ease((t-184)/33)*1.25);
   const gearOpacity=ease((t-100)/16)*(1-ease((t-223)/27));
   const onFoot=t<104?1-ease((t-92)/12):ease((t-233)/18);
-  art.grid('poses',index,3,2,x,y,358,{alpha:onFoot});
+  drawOnFoot(attacker,x,y,t,onFoot);
   art.grid('gear',gearIndex,2,2,gx,gy,height,{alpha:gearOpacity,face:gearIndex===0||gearIndex===3?-1:1});
   art.glow(0,468,341,558+arrival*241,706,arrival*.81);
   for(const [at,angle] of [[40,-.12],[60,-.67]]){
