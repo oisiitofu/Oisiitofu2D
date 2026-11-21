@@ -7569,36 +7569,37 @@
     "diana": {
       "profile": "chibi",
       "eye": [
-        800,
-        300
+        680,
+        430
       ],
-      "span": 454,
+      "faceCenterX": 680,
+      "span": 500,
       "top": 0,
-      "reviewed": "2026-11-03",
+      "reviewed": "2026-11-22",
       "referenceCrop": [
         0,
+        40,
+        1254,
+        840
+      ],
+      "crop": [
         0,
-        1536,
-        1024
+        40,
+        1254,
+        840
       ],
       "source": "characters/diana/assets/diana-selection-cutout.png",
       "sourceSize": [
-        1536,
-        1024
+        1254,
+        1254
       ],
-      "sourceSha256": "6ab0abc5d7ac4d24ac78f001a8c8e9001276851d028f9d4422f6545350c1bf37",
-      "centerBasis": "元画像の横中心を維持",
-      "crop": [
-        0,
-        0,
-        1536,
-        1024
-      ],
+      "sourceSha256": "998a80f2f668412805e789c72b63dd7055104c036c328aa8003fe34b5611e77b",
+      "centerBasis": "元画像の横中心を維持、目・頬・顎を保護",
       "faceBounds": [
-        558,
-        105,
-        1012,
-        610
+        415,
+        300,
+        940,
+        800
       ]
     },
     "lid": {

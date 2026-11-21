@@ -3880,19 +3880,20 @@
     "source": "characters/diana/assets/diana-selection-cutout.png",
     "crop": [
       0,
-      0,
-      1536,
-      1024
+      40,
+      1254,
+      840
     ],
-    "mode": "built-in imagegen",
-    "framing": "dedicated high-resolution character portrait",
     "presentationSource": "characters/diana/assets/diana-selection.png",
     "presentationCrop": [
       0,
       0,
-      1536,
-      1024
-    ]
+      1254,
+      1254
+    ],
+    "mode": "built-in imagegen",
+    "original": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a0a8de09-f107-418f-a29c-ee3beca6eb88.png",
+    "prompt": "元の子供の顔・長い金髪・青いコートを維持した高品質CG。背景なしの透過選択画像。"
   },
   "lid": {
     "source": "characters/lid/assets/lid-selection.png",

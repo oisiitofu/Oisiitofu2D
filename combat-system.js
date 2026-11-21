@@ -5,6 +5,10 @@ const CombatSystem=(()=>{
  // per reference unit). Keep knockback/hitstun, weight and charge relationships.
  const isSmash=a=>/smash/i.test([a.type,a.sourceType].join(' '))||!a.type&&Roster.definitions.some(({id})=>['smash','upsmash','downsmash'].some(key=>movesFor({characterId:id})[key]===a));
  const launchSpeed=(a,raw)=>raw*(isSmash(a)?.12:.24);
+ // Smash repetition still reduces damage. Its knockback damage retains 75%
+ // of the amount lost to staling, so accumulating percent can overcome repeated use.
+ function knockbackDamage(a,damage,staleMultiplier=1){return isSmash(a)&&staleMultiplier>0&&staleMultiplier<1?damage/staleMultiplier*(1-(1-staleMultiplier)*.25):damage;}
+
  // Calibrate the resulting trajectory, including the existing horizontal
  // smash boost. Rotate its velocity without increasing its magnitude.
  function launchTrajectory(a){
@@ -73,7 +77,7 @@ const CombatSystem=(()=>{
   if(a.type==='limitBreak'){if(touch&&!o.grabbed)LimitBreak.capture(f,o,touch);return;}
   // Rifle chip damage must not launch, interrupt attacks, or pin the victim in hitlag.
   if(a.damageOnly){LimitBreak.charge(o,dmg);o.damage=Math.min(999,o.damage+dmg);f.stats.damage+=dmg;f.stats.hits++;o.lastHit=f.id;BattleReport.hit(f,o,a,dmg,false);CombatVFX.impact(touch?.x??o.x,touch?.y??o.y-40,f.color,dmg,f.face,f.characterId,0,HitFeedback.contact(f,a,dmg,box));GameAudio.strike(f,a,dmg);return;}
-  let raw=calculateKnockback(a,o.damage+dmg,o.character.weight,f.damage,dmg)*(o.characterId==='edea'?edeaDefaultReduction(o):1)*(o.characterId==='presea'?preseaBraceReduction(o):1),crouch=o.mode==='Crouch';if(crouch){raw*=o.character.crouchKnockback;lag=Math.floor(lag*o.character.crouchHitlag);}
+  let raw=calculateKnockback(a,o.damage+dmg,o.character.weight,f.damage,knockbackDamage(a,dmg,modifier))*(o.characterId==='edea'?edeaDefaultReduction(o):1)*(o.characterId==='presea'?preseaBraceReduction(o):1),crouch=o.mode==='Crouch';if(crouch){raw*=o.character.crouchKnockback;lag=Math.floor(lag*o.character.crouchHitlag);}
   LimitBreak.charge(o,dmg);o.damage=Math.min(999,o.damage+dmg);f.stats.damage+=dmg;f.stats.hits++;o.lastHit=f.id;let armored=protect.armor&&((protect.armor.damageThreshold??Infinity)>=dmg)&&((protect.armor.knockbackThreshold??Infinity)>=raw)&&((protect.armor.hitCount??Infinity)>(o.armorHits||0));
   BattleReport.hit(f,o,a,dmg,!armored);
   if(a.healOnHit&&f.characterId==='nia')NiaRules.heal(f,a.healOnHit);
@@ -127,5 +131,5 @@ const CombatSystem=(()=>{
  }
  function timeline(f){let a=f.attack;if(!a)return;for(let e of a.timeline){if(e.frame!==f.timer||a.eventsDone.has(e))continue;a.eventsDone.add(e);switch(e.type){case 'SetVelocity':if(e.x!==undefined)f.vx=e.x*f.face;if(e.y!==undefined)f.vy=e.y;break;case 'AddVelocity':f.vx+=(e.x||0)*f.face;f.vy+=e.y||0;break;case 'EnableGravity':f.gravityOff=false;break;case 'DisableGravity':f.gravityOff=true;break;case 'SetIntangible':f.intangible=e.frames;break;case 'ClearIntangible':f.intangible=0;break;case 'EnableHitbox':a.extraHitboxes.push(e.hitbox);break;case 'DisableHitbox':a.extraHitboxes=a.extraHitboxes.filter(h=>h.id!==e.id);break;case 'ChangeHitbox':Object.assign(a.extraHitboxes.find(h=>h.id===e.id)||{},e.values);break;case 'EnableArmor':a.armorFrames=[{start:f.timer,end:e.end||a.totalFrames,...e.armor}];break;case 'DisableArmor':a.armorFrames=[];break;case 'EnableLandingFlag':a.autoCancelWindow=[];break;case 'DisableLandingFlag':a.autoCancelWindow=[[f.timer,Infinity]];break;case 'PlaySFX':sound(e.sound||'swing',1,f);break;case 'SpawnVFX':ring(f.x,f.y-32,colors[f.color],e.size||70);break;case 'CameraShake':shake=e.amount||5;break;}}
  }
- return{stale,calculateKnockback,launchSpeed,launchTrajectory,influence,freeze,hitlag,protection,contact,shieldCovers,hit,limitHit,limitFinisher,resolve,timeline,inWindow};
+ return{stale,calculateKnockback,knockbackDamage,launchSpeed,launchTrajectory,influence,freeze,hitlag,protection,contact,shieldCovers,hit,limitHit,limitFinisher,resolve,timeline,inWindow};
 })();

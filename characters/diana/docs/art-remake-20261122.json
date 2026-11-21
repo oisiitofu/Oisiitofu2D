@@ -1,0 +1,90 @@
+{
+  "mode": "built-in imagegen",
+  "base": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-f530431f-5679-452b-a3e2-c7747073d03a.png",
+  "attacks": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-4c6f64c4-9625-4a25-a507-8cfe873c5759.png",
+  "portrait": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a0a8de09-f107-418f-a29c-ee3beca6eb88.png",
+  "body": 238,
+  "prompts": [
+    "青いコート・顔・頭身を保つ24の全身基本動作。",
+    "16の新しい全身攻撃動作。",
+    "背景なしの高解像度選択画像。",
+    "元絵の背景・接地影を完全透過にし白い縁や残背景を除去。",
+    "本人4姿勢とヒュー連携4姿勢を新しく描いた高品質CG全身。背景なし。",
+    "顔・青いコート・白い宇宙服を保つ専用横長ハック／銃撃カットイン。"
+  ],
+  "packing": "元ピクセルの透過を保持。余白を詰めて透明な3pxのガターで個別に配置。",
+  "limitBodies": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-a38057dd-4b58-4dd7-b43b-a79d5a42295b.png",
+  "limitCutin": "C:\\Users\\haro_\\.codex\\generated_images\\01a1a727-fbb4-70b3-b0da-07f92cdd1fb3\\exec-6f989c6a-00a4-4b29-8e73-99be98260ab3.png",
+  "muzzleGeometry": {
+    "4": [
+      634.1,
+      283.31,
+      0
+    ],
+    "5": [
+      724.63,
+      350.6,
+      0
+    ],
+    "6": [
+      609.51,
+      149.84,
+      -0.65
+    ],
+    "7": [
+      510.47,
+      181.66,
+      0
+    ]
+  },
+  "limitSourceBounds": [
+    [
+      152,
+      7,
+      370,
+      348
+    ],
+    [
+      649,
+      59,
+      954,
+      339
+    ],
+    [
+      99,
+      371,
+      415,
+      661
+    ],
+    [
+      657,
+      388,
+      981,
+      657
+    ],
+    [
+      92,
+      671,
+      462,
+      1049
+    ],
+    [
+      561,
+      723,
+      1069,
+      1054
+    ],
+    [
+      106,
+      1059,
+      435,
+      1425
+    ],
+    [
+      629,
+      1054,
+      989,
+      1445
+    ]
+  ]
+}
