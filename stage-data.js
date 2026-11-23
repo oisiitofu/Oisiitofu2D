@@ -104,6 +104,28 @@ const StageCatalog=(()=>{
    {x:284,y:395,w:190},
    {x:1071,y:437,w:181},
    {x:450,y:475,w:176,motion:{path:[[0,0,0],[70,0,0],[175,200,-176],[255,200,-176],[375,477,-69],[460,477,-69],[599,0,0],[655,0,0]]}}
+  ]},
+  {id:"34",name:"石の神殿",origin:"ニーア レプリカント",theme:"stone",folder:"lost-shrine",color:"#d9e0ed",layout:"中央の短い床と左右の回廊の間に隙間がある",platforms:[
+   {x:427,y:560,w:586,main:true},
+   {x:156,y:500,w:222},
+   {x:1062,y:500,w:222},
+   {x:650,y:349,w:140}
+  ]},
+  {id:"35",name:"タルタロス",origin:"ペルソナ3",theme:"tartarus",folder:"tartarus",color:"#befb8d",layout:"左の床が階段のように曲がり、右の高台へ近づく",platforms:[
+   {x:270,y:560,w:900,main:true},
+   {x:919,y:326,w:218},
+   {x:316,y:465,w:182,motion:{path:[[0,0,0],[42,0,0],[143,213,0],[206,213,-135],[280,440,-135],[374,440,-135],[570,0,0],[620,0,0]]}}
+  ]},
+  {id:"36",name:"大社跡",origin:"モンスターハンター",theme:"shrine",folder:"shrine-ruins",color:"#b6dc9a",layout:"上段の長い橋と左下の孤立した復帰足場",platforms:[
+   {x:278,y:557,w:894,main:true},
+   {x:102,y:595,w:160},
+   {x:294,y:432,w:169},
+   {x:938,y:463,w:211},
+   {x:502,y:315,w:440}
+  ]},
+  {id:"37",name:"メテオ",origin:"スターフォックス",theme:"meteobelt",folder:"meteo-belt",color:"#aabef2",layout:"岩の足場が右の崖外まで回り、上空を通って戻る",platforms:[
+   {x:338,y:560,w:764,main:true},
+   {x:179,y:435,w:171,motion:{path:[[0,0,0],[90,0,0],[245,380,-147],[450,828,-40],[540,870,40],[635,685,-125],[790,335,-163],[970,0,0],[1010,0,0]]}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

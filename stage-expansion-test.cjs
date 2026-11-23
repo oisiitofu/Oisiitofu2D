@@ -32,7 +32,7 @@ async function local(browser,errors){
  await page.click('#enter-training');
  await page.click('#stage-details');
  assert.equal(await page.locator('.stage-detail-card').count(),StageCatalog.stages.length+1);
- assert(await page.locator('#stage-list-dialog').evaluate(dialog=>dialog.scrollHeight<=dialog.clientHeight));
+ assert(await page.locator('#stage-list-dialog').evaluate((dialog,count)=>dialog.scrollWidth<=dialog.clientWidth&&(count>36||dialog.scrollHeight<=dialog.clientHeight),StageCatalog.stages.length+1));
  const workStages=StageCatalog.stages.filter(stage=>stage.origin);
  assert.equal(new Set(workStages.map(stage=>stage.origin)).size,workStages.length);
  const workNames=await page.evaluate(()=>Roster.selectable.map(fighter=>fighter.origin));
@@ -213,7 +213,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}

@@ -986,5 +986,101 @@ const StageArtData={
    "surfaceRight": 751,
    "walkY": 71
   }
+ },
+ "stone": {
+  "backgroundSource": "assets/stage-v10-stone-background.png",
+  "background": "assets/ready/stage-v10-stone-background-f2cb6adfff446776.webp",
+  "preview": "assets/ready/stage-picker-stone-a44df06b109a58e9.webp",
+  "main": {
+   "source": "assets/stage-v10-stone-main.png",
+   "image": "assets/ready/stage-v10-stone-main-f664d10ad3ea028e.webp",
+   "width": 1525,
+   "height": 369,
+   "surfaceLeft": 7,
+   "surfaceRight": 1516,
+   "walkY": 9,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v10-stone-small.png",
+   "image": "assets/ready/stage-v10-stone-small-b03bfb0cbeccac86.webp",
+   "width": 807,
+   "height": 228,
+   "surfaceLeft": 7,
+   "surfaceRight": 799,
+   "walkY": 9
+  }
+ },
+ "tartarus": {
+  "backgroundSource": "assets/stage-v10-tartarus-background.png",
+  "background": "assets/ready/stage-v10-tartarus-background-f22833d54e62c2ab.webp",
+  "preview": "assets/ready/stage-picker-tartarus-783ca0814dec5922.webp",
+  "main": {
+   "source": "assets/stage-v10-tartarus-main.png",
+   "image": "assets/ready/stage-v10-tartarus-main-d2aa3a658d6ae78c.webp",
+   "width": 1518,
+   "height": 293,
+   "surfaceLeft": 7,
+   "surfaceRight": 1509,
+   "walkY": 9,
+   "verticalScale": 0.65
+  },
+  "small": {
+   "source": "assets/stage-v10-tartarus-small.png",
+   "image": "assets/ready/stage-v10-tartarus-small-d5b57b08eb4f6f6f.webp",
+   "width": 699,
+   "height": 169,
+   "surfaceLeft": 8,
+   "surfaceRight": 691,
+   "walkY": 9
+  }
+ },
+ "shrine": {
+  "backgroundSource": "assets/stage-v10-shrine-background.png",
+  "background": "assets/ready/stage-v10-shrine-background-55ee8ff2f04c2fa7.webp",
+  "preview": "assets/ready/stage-picker-shrine-f5f94c8146c691f1.webp",
+  "main": {
+   "source": "assets/stage-v10-shrine-main.png",
+   "image": "assets/ready/stage-v10-shrine-main-4a79df0d0f8c1307.webp",
+   "width": 1517,
+   "height": 304,
+   "surfaceLeft": 26,
+   "surfaceRight": 1490,
+   "walkY": 10,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v10-shrine-small.png",
+   "image": "assets/ready/stage-v10-shrine-small-4d5956910d0d0e5b.webp",
+   "width": 576,
+   "height": 216,
+   "surfaceLeft": 22,
+   "surfaceRight": 553,
+   "walkY": 10
+  }
+ },
+ "meteobelt": {
+  "backgroundSource": "assets/stage-v10-meteobelt-background.png",
+  "background": "assets/ready/stage-v10-meteobelt-background-23e101f42fd4e3c8.webp",
+  "preview": "assets/ready/stage-picker-meteobelt-0c55f3a9513945db.webp",
+  "main": {
+   "source": "assets/stage-v10-meteobelt-main.png",
+   "image": "assets/ready/stage-v10-meteobelt-main-a96ad35d5e3dcad6.webp",
+   "width": 1511,
+   "height": 371,
+   "surfaceLeft": 7,
+   "surfaceRight": 1502,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v10-meteobelt-small.png",
+   "image": "assets/ready/stage-v10-meteobelt-small-a85fa717de10824c.webp",
+   "width": 568,
+   "height": 184,
+   "surfaceLeft": 7,
+   "surfaceRight": 560,
+   "walkY": 9
+  }
  }
 };
