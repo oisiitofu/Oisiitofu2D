@@ -4,19 +4,25 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
  const browser=await chromium.launch({channel:'msedge',headless:true});
  try{
   const p=await browser.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.stack));
-  await p.goto(process.env.TEST_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});await p.click('#enter-training');await p.click('#start');
+  await p.goto(process.env.TEST_URL||'http://localhost:4173');await p.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:180000});await p.click('#enter-training');await p.click('#start');await p.waitForFunction(()=>state==='battle');
   const result=await p.evaluate(()=>{
-   state='pause';countdown=hitstop=0;const failures=[];let checks=0;
+   state='pause';LimitBreak.begin(false);countdown=hitstop=0;const failures=[];let checks=0;
    const check=(name,ok,detail)=>{checks++;if(!ok)failures.push({name,detail});};
    const read=Controls.read;let input={};Controls.read=()=>({...emptyInput(),...input});
    function reset(id='dragoon',stage='0'){
-    setupStage(stage);for(const r of Object.values(NewcomerCore.registry))r.reset();
+    setupStage(stage);
     const main=platforms.find(p=>p.main);fighters=[makeFighter(0,0,id),makeFighter(1,1,'dragoon')];
     for(const [n,f]of fighters.entries())Object.assign(f,{x:main.x+main.w*(n?.85:.35),y:main.y,grounded:true,control:n?'dummy':'keyboard',inv:0,intangible:0,respawn:0});
+    for(const r of Object.values(NewcomerCore.registry))r.reset();
     input={};hitstop=0;return fighters[0];
    }
    function tick(i={},n=1){input=i;for(let k=0;k<n;k++)update(true);}
    const snap=f=>({mode:f.mode,x:f.x,y:f.y,vx:f.vx,vy:f.vy,face:f.face,hitstun:f.hitstun,attack:f.attack?.type,fastFall:f.fastFall});
+   // Charge the resources required to exercise down specials from the air.
+   const downSpecialResources={
+    eve:{eveEnergy:100},donchan:{donSoul:100},terra:{terraGauge:100},ky:{kyTension:50},sol:{solTension:50},
+    miyabi:{miyabiFrost:1},zero3:{zero3Blood:100},kurabe:{kurabeGauge:100},battlemage:{bmGauge:100}
+   };
    try{
     for(const stage of ['0','1']){
      const f=reset('dragoon',stage),main=platforms.find(p=>p.main),sides=platforms.filter(p=>!p.main).slice(0,2);
@@ -52,10 +58,13 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
      for(const button of ['jump','jab','heavy','smash','special']){
       const f=reset(id);Object.assign(f,{x:720,y:80,grounded:false,vx:12*side,vy:-8,hitstun:20,tumbling:true});PlayerStates.enter(f,'Tumble');tick({[button]:true});
       check(id+'/'+side+'/'+button+' keeps launch during stun',Math.abs(f.vx-(12-.075)*side)<1e-8&&Math.abs(f.vy-(-8+f.character.gravity))<1e-8,snap(f));
-      check(id+'/'+side+'/'+button+' retains stun without action',f.hitstun===19&&!f.attack&&f.airJumps===1,snap(f));
+      check(id+'/'+side+'/'+button+' retains stun without action',f.hitstun===19&&!f.attack&&f.airJumps===f.character.airJumpCount,snap(f));
      }
      for(const fast of [false,true]){
-      const f=reset(id);Object.assign(f,{x:720,y:80,grounded:false,vy:2,face:side,fastFall:fast,eveEnergy:100,donSoul:100});PlayerStates.enter(f,'Fall');tick({y:1,special:true});
+      const f=reset(id);
+      Object.assign(f,{x:720,y:80,grounded:false,vy:2,face:side,fastFall:fast});
+      Object.assign(f,downSpecialResources[id]);
+      PlayerStates.enter(f,'Fall');tick({y:1,special:true});
       check(id+'/'+side+'/'+fast+' down special suppresses fast fall',!f.fastFall&&!!f.attack?.downSpecialInput,snap(f));
      }
     }
