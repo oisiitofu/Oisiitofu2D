@@ -269,6 +269,30 @@ const StageCatalog=(()=>{
    {x:351,y:531,w:738,main:true},
    {x:111,y:669,w:184},
    {x:1139,y:643,w:202}
+  ]},
+  {id:"62",name:"アストラル界",origin:"ASTRAL CHAIN",theme:"astral",folder:"astral-plane",color:"#f3a0a6",layout:"赤い橋の外側から二つの足場が移動し、高い位置で一時的につながる",platforms:[
+   {x:309,y:556,w:822,main:true},
+   {x:613,y:452,w:214},
+   {x:103,y:503,w:183,motion:{path:[[0,0,0],[100,0,0],[225,259,-192],[300,267,-192],[405,20,-23],[498,0,0],[560,0,0]]}},
+   {x:1153,y:466,w:180,motion:{path:[[0,0,0],[147,0,0],[210,-75,-40],[283,-600,-155],[334,-600,-155],[492,0,0],[560,0,0]]}}
+  ]},
+  {id:"63",name:"ソル神殿",origin:"黄金の太陽",theme:"sol",folder:"sol-sanctum",color:"#efd8a6",layout:"左右に二つずつの祭壇があり、中央の上空は広く空く",platforms:[
+   {x:184,y:557,w:1072,main:true},
+   {x:143,y:434,w:184},
+   {x:371,y:320,w:193},
+   {x:875,y:338,w:184},
+   {x:1116,y:429,w:176}
+  ]},
+  {id:"64",name:"ダイヤモンドシティ",origin:"メイド イン ワリオ",theme:"diamond",folder:"diamond-city",color:"#f7c5e3",layout:"上段の短い台が間隔を変え、点検台は中央の下からせり上がる",platforms:[
+   {x:241,y:558,w:958,main:true},
+   {x:352,y:360,w:202},
+   {x:883,y:359,w:171,motion:{path:[[0,0,0],[80,0,0],[139,-190,0],[193,-190,0],[261,0,0],[330,0,0]]}},
+   {x:601,y:479,w:237,motion:{path:[[0,0,0],[160,0,0],[190,0,-66],[264,0,-66],[310,0,0],[440,0,0]]}}
+  ]},
+  {id:"65",name:"バルド島",origin:"巨人のドシン",theme:"barudo",folder:"barudo-island",color:"#ddeb8e",layout:"左右の地面が交互にせり上がり、足場の高さが入れ替わる",platforms:[
+   {x:349,y:554,w:742,main:true},
+   {x:121,y:568,w:229,motion:{y:71,period:480}},
+   {x:1090,y:484,w:232,motion:{y:71,phase:3.141592653589793,period:480}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
