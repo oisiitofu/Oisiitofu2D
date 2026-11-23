@@ -63,7 +63,8 @@ const StageVisuals=(()=>{
  }
  function geometry(p){
   const art=StageArtData[StageCatalog.get(activeStage).theme]?.[p.art??(p.main?'main':'small')];if(!art)return null;
-  const scaleX=p.w/(art.surfaceRight-art.surfaceLeft),scaleY=scaleX*(art.verticalScale??(p.main?.76:.60));
+  const sourceWidth=art.surfaceRight-art.surfaceLeft,scaleX=p.w/sourceWidth;
+  const scaleY=(p.baseW??p.w)/sourceWidth*(art.verticalScale??(p.main?.76:.60));
   return{art,x:p.x-art.surfaceLeft*scaleX,y:p.y-art.walkY*scaleY,w:art.width*scaleX,h:art.height*scaleY,scaleX,scaleY};
  }
  function platform(p){
@@ -77,9 +78,9 @@ const StageVisuals=(()=>{
  function motionOffset(motion,time){
   if(motion.path){
    const stops=motion.path,t=time%stops.at(-1)[0];
-   const index=stops.findIndex(stop=>stop[0]>t),[begin,x0,y0]=stops[index-1],[end,x1,y1]=stops[index];
+   const index=stops.findIndex(stop=>stop[0]>t),[begin,x0,y0,w0=0]=stops[index-1],[end,x1,y1,w1=0]=stops[index];
    const progress=(t-begin)/(end-begin),smooth=progress*progress*(3-2*progress);
-   return[x0+(x1-x0)*smooth,y0+(y1-y0)*smooth];
+   return[x0+(x1-x0)*smooth,y0+(y1-y0)*smooth,w0+(w1-w0)*smooth];
   }
   const phase=motion.phase||0,phaseY=phase+(motion.phaseY||0),t=time*TAU/motion.period;
   return[(motion.x||0)*(Math.sin(t+phase)-Math.sin(phase)),(motion.y||0)*(Math.sin(t*(motion.harmonicY??1)+phaseY)-Math.sin(phaseY))];
@@ -90,9 +91,9 @@ const StageVisuals=(()=>{
   const riders=fighters.map(f=>f.grounded&&!f.respawn&&!f.ledge?platforms.find(p=>Math.abs(f.y-p.y)<3&&f.x>=p.x-f.character.ecb.radius&&f.x<=p.x+p.w+f.character.ecb.radius):null);
   clock++;for(const p of platforms){
    if(!p.motion)continue;
-   p.baseX??=p.x;p.baseY??=p.y;
-   const oldX=p.x,oldY=p.y,[dx,dy]=motionOffset(p.motion,clock);
-   p.x=p.baseX+dx;p.y=p.baseY+dy;p.dx=p.x-oldX;p.dy=p.y-oldY;
+   p.baseX??=p.x;p.baseY??=p.y;p.baseW??=p.w;
+   const oldX=p.x,oldY=p.y,[dx,dy,dw=0]=motionOffset(p.motion,clock);
+   p.x=p.baseX+dx;p.y=p.baseY+dy;p.w=p.baseW+dw;p.dx=p.x-oldX;p.dy=p.y-oldY;
   }
   fighters.forEach((f,n)=>{const p=riders[n];if(p?.motion){f.x+=p.dx;f.y+=p.dy;}});
  }

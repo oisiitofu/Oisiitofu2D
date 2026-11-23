@@ -109,9 +109,9 @@ async function local(browser,errors){
      StageVisuals.tick();
      if(id==='25'&&tick%45===44)samples.set(tick+1,[p.x,p.y]);
      if(Math.abs(fighter.x-p.x-w/2)>.01||Math.abs(fighter.y-p.y)>.01)carried=false;
-     if(Math.abs(p.x-x)+Math.abs(p.y-y)>1)moved.add(index);
+     if(Math.abs(p.x-x)+Math.abs(p.y-y)+Math.abs(p.w-w)>1)moved.add(index);
     }
-    if(!carried||Math.abs(p.x-x)+Math.abs(p.y-y)>.01)return {align,carried,loop:false,tracks:0};
+    if(!carried||Math.abs(p.x-x)+Math.abs(p.y-y)+Math.abs(p.w-w)>.01)return {align,carried,loop:false,tracks:0};
     if(id==='25'){
      const [rightLow,rightHigh,leftLow,leftHigh]=[45,225,315,495].map(t=>samples.get(t));
      if(Math.abs(rightLow[0]-rightHigh[0])>.01||Math.abs(leftLow[0]-leftHigh[0])>.01||
@@ -120,6 +120,24 @@ async function local(browser,errors){
     }
    }
    setupStage(id);
+   if(id==='70'){
+    const lift=platforms.find(p=>p.motion),upper=platforms.find(p=>p.y===356);
+    for(let tick=0;tick<263;tick++)StageVisuals.tick();
+    const traveller=makeFighter(0,0,'dragoon');
+    Object.assign(traveller,{x:lift.x+lift.w-7,y:lift.y,vx:0,vy:0,grounded:true});
+    for(let tick=0;tick<32&&traveller.x<upper.x+18;tick++){
+     updateFighter(traveller,{...emptyInput(),x:1});
+     if(!traveller.grounded||traveller.y!==upper.y)throw Error('Lost footing between the Rolent decks');
+    }
+    if(traveller.x<upper.x+18)throw Error('Could not step from the Rolent lift to the upper deck');
+    setupStage(id);
+   }
+   if(id==='73'){
+    const bridge=platforms.find(p=>p.motion),anchor=bridge.x+bridge.w;
+    for(let tick=0;tick<200;tick++)StageVisuals.tick();
+    if(bridge.w!==343||bridge.x+bridge.w!==anchor)throw Error('The security deck did not extend from its anchor');
+    setupStage(id);
+   }
    if(id==='62'){
     const [left,right]=platforms.filter(p=>p.motion);
     for(let tick=0;tick<295;tick++)StageVisuals.tick();
@@ -208,17 +226,29 @@ async function online(browser,errors,id){
   await pick(page,id==='13'?'random':id);
   await page.evaluate(()=>{
    window.stageFrames=[];
-   addEventListener('online-frame',event=>stageFrames.push([event.detail,StageVisuals.clock,platforms.map(p=>[p.x,p.y]),fighters.map(f=>[f.x,f.y])]));
+   addEventListener('online-frame',event=>stageFrames.push([event.detail,StageVisuals.clock,platforms.map(p=>[p.x,p.y,p.w]),fighters.map(f=>[f.x,f.y])]));
   });
   await page.click('#open-room');
   await page.click('#ready-room');
  }
- await Promise.all(pages.map(page=>page.waitForFunction(stage=>Net.active&&activeStage===stage&&countdown===0&&StageVisuals.clock>=75,id,{timeout:60000})));
+ const platformsForStage=StageCatalog.get(id).platforms;
+ const motionStarts=platformsForStage.filter(p=>p.motion?.path).map(p=>{
+  const path=p.motion.path;
+  const firstMove=path.findIndex((point,n)=>n>0&&point.slice(1).some((value,axis)=>value!==(path[0][axis+1]??0)));
+  return firstMove>0?path[firstMove-1][0]:0;
+ });
+ const minimumFrames=75+Math.max(0,...motionStarts);
+ await Promise.all(pages.map(page=>page.waitForFunction(({stage,minimumFrames})=>Net.active&&activeStage===stage&&countdown===0&&StageVisuals.clock>=minimumFrames,{stage:id,minimumFrames},{timeout:60000})));
  const [a,b]=await Promise.all(pages.map(page=>page.evaluate(()=>stageFrames.filter(snapshot=>snapshot[1]>0))));
  const hostFrames=new Map(a.map(row=>[row[0],row]));
  const shared=b.filter(row=>hostFrames.has(row[0]));
  assert(shared.length>=60);
  for(const row of shared)assert.deepEqual(hostFrames.get(row[0]),row);
+ platformsForStage.forEach((platform,i)=>{
+  if(!platform.motion)return;
+  assert(shared.some(row=>row[2][i].some((value,axis)=>Math.abs(value-[platform.x,platform.y,platform.w][axis])>1)),
+   'Movement was not observed for platform '+i+' on stage '+id);
+ });
  await host.evaluate(()=>Net.leave());
  await guest.waitForFunction(()=>!Net.code&&!Net.active);
  await Promise.all(pages.map(page=>page.context().close()));
@@ -234,7 +264,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37','39','40','43','44','47','49','52','53','54','59','60','62','64','65','67','69']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37','39','40','43','44','47','49','52','53','54','59','60','62','64','65','67','69','70','73']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}

@@ -1850,5 +1850,101 @@ const StageArtData={
    "surfaceRight": 768,
    "walkY": 9
   }
+ },
+ "rolent": {
+  "backgroundSource": "assets/stage-v19-rolent-background.png",
+  "background": "assets/ready/stage-v19-rolent-background-22c5a9fa2d58f6b1.webp",
+  "preview": "assets/ready/stage-picker-rolent-80a8a9f5c827d867.webp",
+  "main": {
+   "source": "assets/stage-v19-rolent-main.png",
+   "image": "assets/ready/stage-v19-rolent-main-e5bdbc1e52ce5677.webp",
+   "width": 1520,
+   "height": 242,
+   "surfaceLeft": 15,
+   "surfaceRight": 1505,
+   "walkY": 10,
+   "verticalScale": 0.65
+  },
+  "small": {
+   "source": "assets/stage-v19-rolent-small.png",
+   "image": "assets/ready/stage-v19-rolent-small-905e1d308373c4d4.webp",
+   "width": 740,
+   "height": 193,
+   "surfaceLeft": 12,
+   "surfaceRight": 726,
+   "walkY": 10
+  }
+ },
+ "sakura": {
+  "backgroundSource": "assets/stage-v19-sakura-background.png",
+  "background": "assets/ready/stage-v19-sakura-background-c13178d4e2a38a75.webp",
+  "preview": "assets/ready/stage-picker-sakura-1adcee154944df42.webp",
+  "main": {
+   "source": "assets/stage-v19-sakura-main.png",
+   "image": "assets/ready/stage-v19-sakura-main-c4efa311fbd39e70.webp",
+   "width": 1490,
+   "height": 309,
+   "surfaceLeft": 15,
+   "surfaceRight": 1474,
+   "walkY": 9,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v19-sakura-small.png",
+   "image": "assets/ready/stage-v19-sakura-small-a73cc2307b2f2f30.webp",
+   "width": 766,
+   "height": 155,
+   "surfaceLeft": 30,
+   "surfaceRight": 734,
+   "walkY": 9
+  }
+ },
+ "hagure": {
+  "backgroundSource": "assets/stage-v19-hagure-background.png",
+  "background": "assets/ready/stage-v19-hagure-background-478ea66951401391.webp",
+  "preview": "assets/ready/stage-picker-hagure-3098587425511a1c.webp",
+  "main": {
+   "source": "assets/stage-v19-hagure-main.png",
+   "image": "assets/ready/stage-v19-hagure-main-069bc8f20f15bd5f.webp",
+   "width": 1518,
+   "height": 257,
+   "surfaceLeft": 42,
+   "surfaceRight": 1473,
+   "walkY": 10,
+   "verticalScale": 0.63
+  },
+  "small": {
+   "source": "assets/stage-v19-hagure-small.png",
+   "image": "assets/ready/stage-v19-hagure-small-e42ad0aa86864657.webp",
+   "width": 809,
+   "height": 220,
+   "surfaceLeft": 37,
+   "surfaceRight": 771,
+   "walkY": 8
+  }
+ },
+ "nefcity": {
+  "backgroundSource": "assets/stage-v19-nefcity-background.png",
+  "background": "assets/ready/stage-v19-nefcity-background-ace53a612b42b5e7.webp",
+  "preview": "assets/ready/stage-picker-nefcity-8346f96cf3d67e31.webp",
+  "main": {
+   "source": "assets/stage-v19-nefcity-main.png",
+   "image": "assets/ready/stage-v19-nefcity-main-3e5b309ff6e41997.webp",
+   "width": 1526,
+   "height": 304,
+   "surfaceLeft": 46,
+   "surfaceRight": 1479,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v19-nefcity-small.png",
+   "image": "assets/ready/stage-v19-nefcity-small-097467d4b237f221.webp",
+   "width": 830,
+   "height": 148,
+   "surfaceLeft": 28,
+   "surfaceRight": 801,
+   "walkY": 9
+  }
  }
 };
