@@ -2,8 +2,12 @@
 // Only the static edition substitutes this adapter for online.js.
 const Net=(()=>{
  function onlineUrl(room){
-  const url=new URL(PublicOnlineConfig.onlineUrl);url.searchParams.set('mode','online');
-  if(room)url.searchParams.set('room',room.toUpperCase());return url.href;
+  const endpoint=typeof PublicOnlineConfig==='undefined'?'/online':PublicOnlineConfig.onlineUrl;
+  const url=new URL(endpoint,location.href);url.searchParams.set('mode','online');
+  if(room)url.searchParams.set('room',room.toUpperCase());
+  const pool=Roster.stagePoolRecord();
+  if(pool.updatedAt)url.hash=new URLSearchParams({'stage-random':JSON.stringify(pool)}).toString();
+  return url.href;
  }
  const browse=()=>location.assign(onlineUrl());
  function init(){PlayerNames.init();
