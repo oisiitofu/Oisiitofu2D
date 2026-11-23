@@ -505,6 +505,32 @@ const StageCatalog=(()=>{
    {x:915,y:337,w:224},
    {x:1057,y:449,w:169},
    {x:629,y:237,w:183,motion:{x:336,y:49,harmonicY:3,period:760}}
+  ]},
+  {id:"98",name:"ポート・ブリーズ群島",origin:"グランブルーファンタジー",theme:"portbreeze",folder:"port-breeze-archipelago",color:"#b9e8e0",layout:"荷降ろし台が舟着き場から高い桟橋へ上がり、短い台が雲上を往復する",platforms:[
+   {x:274,y:558,w:892,main:true},
+   {x:996,y:350,w:204},
+   {x:556,y:292,w:164,motion:{x:195,period:410}},
+   {x:111,y:475,w:176,motion:{path:[[0,0,0],[86,0,0],[216,160,-98],[282,160,-98],[379,431,-55],[474,0,0],[540,0,0]]}}
+  ]},
+  {id:"99",name:"さくらニュータウン",origin:"妖怪ウォッチ",theme:"sakurayw",folder:"sakura-new-town",color:"#c8e6b3",layout:"公園側は見通しのよい広場で、住宅側には屋根と高い遊歩道がある",platforms:[
+   {x:141,y:554,w:1158,main:true},
+   {x:203,y:435,w:280},
+   {x:1000,y:371,w:286},
+   {x:780,y:306,w:164}
+  ]},
+  {id:"100",name:"涙の都",origin:"Hollow Knight",theme:"tearcity",folder:"city-of-tears",color:"#b3cae7",layout:"右の高い鐘楼から三段で下り、低い石橋は崖下の復帰先になる",platforms:[
+   {x:338,y:558,w:764,main:true},
+   {x:487,y:635,w:364},
+   {x:146,y:473,w:207},
+   {x:814,y:456,w:225},
+   {x:1013,y:362,w:198},
+   {x:1140,y:273,w:163}
+  ]},
+  {id:"101",name:"エイドス7",origin:"Stellar Blade",theme:"eidos7",folder:"eidos-7",color:"#d9d1aa",layout:"高架から短い整備台へ降りられ、右端の台が廃線に沿って低く往復する",platforms:[
+   {x:289,y:560,w:894,main:true},
+   {x:216,y:407,w:296},
+   {x:681,y:373,w:226},
+   {x:1102,y:629,w:204,motion:{path:[[0,0,0],[97,0,0],[214,-205,0],[277,-205,0],[342,-205,-40],[416,0,-40],[482,0,0],[535,0,0]]}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

@@ -2,7 +2,7 @@
 
 ファイター選択画面の登場作品名を基準とする。同じ表記に属するファイターはステージを共有する。原作の場所名を使い、公式資料で確認した景観を新規背景に反映する。ステージの出典は `stage-data.js` の `origin` で管理する。
 
-## 実装済み（75 / 163作品）
+## 実装済み（79 / 163作品）
 
 | 作品 | ステージ | 原作から取り入れた要素 | 足場・ギミック |
 | --- | --- | --- | --- |
@@ -81,8 +81,12 @@
 | [サクラ大戦](https://common.sakura-taisen.com/archives/game/atsuki/settei1_110.html) | 大帝国劇場 | 太正の銀座にある帝劇のロビーと舞台、赤い幕と金の装飾 | 4枚。舞台装置の足場が舞台袖からせり上がり、中段を経て上手へ移る。 |
 | [天穂のサクナヒメ](https://www.marv.jp/special/game/sakuna/) | ヒノエ島 | 山間に広がる水田と茅葺の家、島の急な地形 | 7枚。棚田の畦を左右で異なる間隔に配置。左は奥の高台、右は谷底へ下りる。 |
 | [Clair Obscur: Expedition 33](https://www.expedition33.com/post/news-expedition-33-announce) | ルミエール | ベル・エポック風のルミエールの街と海、遠景にそびえるモノリス | 5枚。浮いた石畳が上空を横切る間に三度上下し、左右の足場から飛び移れる。 |
+| [グランブルーファンタジー](https://anime.granbluefantasy.jp/1st/story/03.html) | ポート・ブリーズ群島 | 風が吹き抜ける空の島々と、騎空艇が行き交う港 | 4枚。荷降ろし台が舟着き場から高い桟橋へ上がり、短い台が雲上を往復する。 |
+| [妖怪ウォッチ](https://www.youkai-watch.jp/yw2/game/game10.html) | さくらニュータウン | 坂道に住宅が並ぶケータたちの町、公園と遊歩道 | 4枚。公園側は見通しのよい広場で、住宅側には屋根と高い遊歩道がある。 |
+| [Hollow Knight](https://www.teamcherry.com.au/blog/hollow-knights-mega-may-update) | 涙の都 | 雨が降り続く地下都市と、王都の尖塔や石の橋 | 6枚。右の高い鐘楼から三段で下り、低い石橋は崖下の復帰先になる。 |
+| [Stellar Blade](https://blog.ja.playstation.com/2024/03/25/20240325-stellarblade/comment-page-1/) | エイドス7 | 崩れた都市エイドス7の高架、草木に覆われたコンクリートや駅跡 | 4枚。高架から短い整備台へ降りられ、右端の台が廃線に沿って低く往復する。 |
 
-## 未制作（88作品）
+## 未制作（84作品）
 
 - [ ] ファイナルファンタジーレゾナンス
 - [ ] ドラッグ オン ドラグーン3
@@ -140,12 +144,10 @@
 - [ ] 英雄伝説 黎の軌跡
 - [ ] イース
 - [ ] ARMORED CORE VI FIRES OF RUBICON
-- [ ] 妖怪ウォッチ
 - [ ] レイトン教授
 - [ ] 魔界戦記ディスガイア
 - [ ] 朧村正
 - [ ] ルーンファクトリー
-- [ ] グランブルーファンタジー
 - [ ] .hack//G.U.
 - [ ] メダロット
 - [ ] ラクガキ王国
@@ -158,14 +160,12 @@
 - [ ] アラド戦記
 - [ ] ゼンレスゾーンゼロ
 - [ ] パルワールド
-- [ ] Stellar Blade
 - [ ] DEEMO
 - [ ] Terraria
 - [ ] Ultimate Chicken Horse
 - [ ] Overcooked
 - [ ] Morphies Law
 - [ ] Human: Fall Flat
-- [ ] Hollow Knight
 - [ ] 東方Project
 - [ ] 洞窟物語
 - [ ] にゃんこ大戦争
