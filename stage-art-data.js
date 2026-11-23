@@ -1274,5 +1274,101 @@ const StageArtData={
    "surfaceRight": 925,
    "walkY": 9
   }
+ },
+ "grandship": {
+  "backgroundSource": "assets/stage-v13-grandship-background.png",
+  "background": "assets/ready/stage-v13-grandship-background-71a44ba1cdeac6aa.webp",
+  "preview": "assets/ready/stage-picker-grandship-63c97f35c8c7c9b3.webp",
+  "main": {
+   "source": "assets/stage-v13-grandship-main.png",
+   "image": "assets/ready/stage-v13-grandship-main-2704db67369d01e9.webp",
+   "width": 1527,
+   "height": 311,
+   "surfaceLeft": 45,
+   "surfaceRight": 1482,
+   "walkY": 11,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v13-grandship-small.png",
+   "image": "assets/ready/stage-v13-grandship-small-38ba1618fb9b2765.webp",
+   "width": 754,
+   "height": 212,
+   "surfaceLeft": 25,
+   "surfaceRight": 728,
+   "walkY": 10
+  }
+ },
+ "cogito": {
+  "backgroundSource": "assets/stage-v13-cogito-background.png",
+  "background": "assets/ready/stage-v13-cogito-background-7823fa813066a556.webp",
+  "preview": "assets/ready/stage-picker-cogito-451a2a559e2c75e6.webp",
+  "main": {
+   "source": "assets/stage-v13-cogito-main.png",
+   "image": "assets/ready/stage-v13-cogito-main-00736b14028e0b29.webp",
+   "width": 1493,
+   "height": 239,
+   "surfaceLeft": 40,
+   "surfaceRight": 1451,
+   "walkY": 12,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v13-cogito-small.png",
+   "image": "assets/ready/stage-v13-cogito-small-1be5215582b92c2f.webp",
+   "width": 761,
+   "height": 156,
+   "surfaceLeft": 30,
+   "surfaceRight": 730,
+   "walkY": 12
+  }
+ },
+ "batical": {
+  "backgroundSource": "assets/stage-v13-batical-background.png",
+  "background": "assets/ready/stage-v13-batical-background-a0c38775f992ffa3.webp",
+  "preview": "assets/ready/stage-picker-batical-aec89a5ca80b4991.webp",
+  "main": {
+   "source": "assets/stage-v13-batical-main.png",
+   "image": "assets/ready/stage-v13-batical-main-830dd26a69d47c19.webp",
+   "width": 1503,
+   "height": 284,
+   "surfaceLeft": 21,
+   "surfaceRight": 1481,
+   "walkY": 9,
+   "verticalScale": 0.57
+  },
+  "small": {
+   "source": "assets/stage-v13-batical-small.png",
+   "image": "assets/ready/stage-v13-batical-small-e31a407af8cd0673.webp",
+   "width": 772,
+   "height": 244,
+   "surfaceLeft": 24,
+   "surfaceRight": 746,
+   "walkY": 30
+  }
+ },
+ "hexa": {
+  "backgroundSource": "assets/stage-v13-hexa-background.png",
+  "background": "assets/ready/stage-v13-hexa-background-a7b62b1a549e8c81.webp",
+  "preview": "assets/ready/stage-picker-hexa-ef8e56f0fbaccbc2.webp",
+  "main": {
+   "source": "assets/stage-v13-hexa-main.png",
+   "image": "assets/ready/stage-v13-hexa-main-b6a3854f3c6e333c.webp",
+   "width": 1495,
+   "height": 377,
+   "surfaceLeft": 11,
+   "surfaceRight": 1484,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v13-hexa-small.png",
+   "image": "assets/ready/stage-v13-hexa-small-82b729c64ff35363.webp",
+   "width": 800,
+   "height": 156,
+   "surfaceLeft": 26,
+   "surfaceRight": 774,
+   "walkY": 10
+  }
  }
 };
