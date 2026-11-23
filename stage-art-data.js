@@ -2138,5 +2138,101 @@ const StageArtData={
    "surfaceRight": 847,
    "walkY": 9
   }
+ },
+ "hikami": {
+  "backgroundSource": "assets/stage-v22-hikami-background.png",
+  "background": "assets/ready/stage-v22-hikami-background-1e2290edecfcb263.webp",
+  "preview": "assets/ready/stage-picker-hikami-ec3f0cb894ce7c41.webp",
+  "main": {
+   "source": "assets/stage-v22-hikami-main.png",
+   "image": "assets/ready/stage-v22-hikami-main-3ec257c584cafbf5.webp",
+   "width": 1515,
+   "height": 259,
+   "surfaceLeft": 57,
+   "surfaceRight": 1456,
+   "walkY": 9,
+   "verticalScale": 0.64
+  },
+  "small": {
+   "source": "assets/stage-v22-hikami-small.png",
+   "image": "assets/ready/stage-v22-hikami-small-9546ebe590e33476.webp",
+   "width": 820,
+   "height": 159,
+   "surfaceLeft": 29,
+   "surfaceRight": 791,
+   "walkY": 9
+  }
+ },
+ "draculacastle": {
+  "backgroundSource": "assets/stage-v22-draculacastle-background.png",
+  "background": "assets/ready/stage-v22-draculacastle-background-dfaa16209b9bcf98.webp",
+  "preview": "assets/ready/stage-picker-draculacastle-d30f3469730698eb.webp",
+  "main": {
+   "source": "assets/stage-v22-draculacastle-main.png",
+   "image": "assets/ready/stage-v22-draculacastle-main-133ceca91717dc3c.webp",
+   "width": 1486,
+   "height": 374,
+   "surfaceLeft": 11,
+   "surfaceRight": 1474,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v22-draculacastle-small.png",
+   "image": "assets/ready/stage-v22-draculacastle-small-61db88364761c950.webp",
+   "width": 756,
+   "height": 213,
+   "surfaceLeft": 12,
+   "surfaceRight": 743,
+   "walkY": 9
+  }
+ },
+ "rosetower": {
+  "backgroundSource": "assets/stage-v22-rosetower-background.png",
+  "background": "assets/ready/stage-v22-rosetower-background-83ce8cb269445aef.webp",
+  "preview": "assets/ready/stage-picker-rosetower-80163d0fd41583e1.webp",
+  "main": {
+   "source": "assets/stage-v22-rosetower-main.png",
+   "image": "assets/ready/stage-v22-rosetower-main-c3d29c73d217cea9.webp",
+   "width": 1524,
+   "height": 261,
+   "surfaceLeft": 37,
+   "surfaceRight": 1487,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v22-rosetower-small.png",
+   "image": "assets/ready/stage-v22-rosetower-small-eea765bd8bb15350.webp",
+   "width": 771,
+   "height": 234,
+   "surfaceLeft": 17,
+   "surfaceRight": 752,
+   "walkY": 10
+  }
+ },
+ "thors": {
+  "backgroundSource": "assets/stage-v22-thors-background.png",
+  "background": "assets/ready/stage-v22-thors-background-ac5a965520080283.webp",
+  "preview": "assets/ready/stage-picker-thors-3ba26c733b054db1.webp",
+  "main": {
+   "source": "assets/stage-v22-thors-main.png",
+   "image": "assets/ready/stage-v22-thors-main-d73390a2966a0791.webp",
+   "width": 1524,
+   "height": 265,
+   "surfaceLeft": 32,
+   "surfaceRight": 1491,
+   "walkY": 8,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v22-thors-small.png",
+   "image": "assets/ready/stage-v22-thors-small-b80710e8a3fac0a0.webp",
+   "width": 770,
+   "height": 204,
+   "surfaceLeft": 20,
+   "surfaceRight": 749,
+   "walkY": 9
+  }
  }
 };

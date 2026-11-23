@@ -397,6 +397,32 @@ const StageCatalog=(()=>{
    {x:448,y:312,w:519},
    {x:1108,y:437,w:179},
    {x:78,y:426,w:174,motion:{path:[[0,0,0],[81,0,0],[162,0,216],[248,200,216],[299,200,216],[402,0,216],[480,0,0],[530,0,0]]}}
+  ]},
+  {id:"82",name:"日上山",origin:"零 ～濡鴉ノ巫女～",theme:"hikami",folder:"mount-hikami",color:"#b9c9df",layout:"高い社殿と水面の低い板を、左寄りの参道から行き来する",platforms:[
+   {x:247,y:555,w:946,main:true},
+   {x:253,y:417,w:265},
+   {x:629,y:330,w:211},
+   {x:1058,y:620,w:219}
+  ]},
+  {id:"83",name:"悪魔城",origin:"悪魔城ドラキュラ",theme:"draculacastle",folder:"draculas-castle",color:"#d9b1cf",layout:"細い回廊の下に足場が一枚あり、城塔の片側を大きく上る",platforms:[
+   {x:347,y:558,w:746,main:true},
+   {x:234,y:465,w:180},
+   {x:335,y:353,w:290},
+   {x:1080,y:604,w:169,motion:{path:[[0,0,0],[112,0,0],[258,0,-314],[332,-141,-314],[403,-141,-314],[474,0,-314],[646,0,0],[720,0,0]]}}
+  ]},
+  {id:"84",name:"ローズタワー",origin:"スーパーモンキーボール",theme:"rosetower",folder:"rose-tower",color:"#edd1bc",layout:"バラ園の昇降台が左右で違う周期を持ち、高所へ渡る順番が変わる",platforms:[
+   {x:299,y:555,w:842,main:true},
+   {x:555,y:340,w:330},
+   {x:1201,y:467,w:164},
+   {x:184,y:423,w:187,motion:{y:92,period:365}},
+   {x:1004,y:419,w:184,motion:{y:81,phase:3.141592653589793,period:510}}
+  ]},
+  {id:"85",name:"旧校舎地下",origin:"英雄伝説 閃の軌跡",theme:"thors",folder:"thors-old-schoolhouse",color:"#a9d6e0",layout:"導力台が低い通路から左中段、右中段へと段階的に進む",platforms:[
+   {x:236,y:563,w:968,main:true},
+   {x:176,y:437,w:184},
+   {x:1095,y:431,w:175},
+   {x:648,y:282,w:144},
+   {x:370,y:476,w:163,motion:{path:[[0,0,0],[114,0,0],[205,114,-118],[270,114,-118],[347,292,-118],[424,292,5],[492,0,5],[557,0,0],[615,0,0]]}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
