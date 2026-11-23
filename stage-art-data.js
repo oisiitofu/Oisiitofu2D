@@ -3386,5 +3386,101 @@ const StageArtData={
    "surfaceRight": 739,
    "walkY": 10
   }
+ },
+ "crosscastle": {
+  "backgroundSource": "assets/stage-v35-crosscastle-background.png",
+  "background": "assets/ready/stage-v35-crosscastle-background-2b2a74318d18b28a.webp",
+  "preview": "assets/ready/stage-picker-crosscastle-3a0b7ef71d215b80.webp",
+  "main": {
+   "source": "assets/stage-v35-crosscastle-main.png",
+   "image": "assets/ready/stage-v35-crosscastle-main-7d060467d2db6229.webp",
+   "width": 1513,
+   "height": 304,
+   "surfaceLeft": 31,
+   "surfaceRight": 1480,
+   "walkY": 9,
+   "verticalScale": 0.63
+  },
+  "small": {
+   "source": "assets/stage-v35-crosscastle-small.png",
+   "image": "assets/ready/stage-v35-crosscastle-small-02a266abb92f2189.webp",
+   "width": 780,
+   "height": 193,
+   "surfaceLeft": 19,
+   "surfaceRight": 761,
+   "walkY": 10
+  }
+ },
+ "titania": {
+  "backgroundSource": "assets/stage-v35-titania-background.png",
+  "background": "assets/ready/stage-v35-titania-background-ead6807c818f2ded.webp",
+  "preview": "assets/ready/stage-picker-titania-4c823f3c868fc485.webp",
+  "main": {
+   "source": "assets/stage-v35-titania-main.png",
+   "image": "assets/ready/stage-v35-titania-main-9934ef6d2204a0f1.webp",
+   "width": 1535,
+   "height": 295,
+   "surfaceLeft": 26,
+   "surfaceRight": 1507,
+   "walkY": 18,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v35-titania-small.png",
+   "image": "assets/ready/stage-v35-titania-small-dc080425006560a0.webp",
+   "width": 766,
+   "height": 183,
+   "surfaceLeft": 27,
+   "surfaceRight": 739,
+   "walkY": 9
+  }
+ },
+ "asgardhills": {
+  "backgroundSource": "assets/stage-v35-asgardhills-background.png",
+  "background": "assets/ready/stage-v35-asgardhills-background-b038a63ef632d875.webp",
+  "preview": "assets/ready/stage-picker-asgardhills-ac7d7b955e05ae6e.webp",
+  "main": {
+   "source": "assets/stage-v35-asgardhills-main.png",
+   "image": "assets/ready/stage-v35-asgardhills-main-f5617e760881b38d.webp",
+   "width": 1510,
+   "height": 213,
+   "surfaceLeft": 25,
+   "surfaceRight": 1486,
+   "walkY": 9,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v35-asgardhills-small.png",
+   "image": "assets/ready/stage-v35-asgardhills-small-28cfac4492da7aa7.webp",
+   "width": 750,
+   "height": 179,
+   "surfaceLeft": 32,
+   "surfaceRight": 717,
+   "walkY": 11
+  }
+ },
+ "cresta": {
+  "backgroundSource": "assets/stage-v35-cresta-background.png",
+  "background": "assets/ready/stage-v35-cresta-background-29c915e2745c93e4.webp",
+  "preview": "assets/ready/stage-picker-cresta-168869e197b86e54.webp",
+  "main": {
+   "source": "assets/stage-v35-cresta-main.png",
+   "image": "assets/ready/stage-v35-cresta-main-0bd2d6654780ec6e.webp",
+   "width": 1480,
+   "height": 245,
+   "surfaceLeft": 28,
+   "surfaceRight": 1453,
+   "walkY": 10,
+   "verticalScale": 0.59
+  },
+  "small": {
+   "source": "assets/stage-v35-cresta-small.png",
+   "image": "assets/ready/stage-v35-cresta-small-a79dc8504d149e55.webp",
+   "width": 784,
+   "height": 198,
+   "surfaceLeft": 29,
+   "surfaceRight": 755,
+   "walkY": 11
+  }
  }
 };
