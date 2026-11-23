@@ -2234,5 +2234,101 @@ const StageArtData={
    "surfaceRight": 749,
    "walkY": 9
   }
+ },
+ "iselia": {
+  "backgroundSource": "assets/stage-v23-iselia-background.png",
+  "background": "assets/ready/stage-v23-iselia-background-fc72a6ea8d3f3911.webp",
+  "preview": "assets/ready/stage-picker-iselia-07a4bf78acf55a53.webp",
+  "main": {
+   "source": "assets/stage-v23-iselia-main.png",
+   "image": "assets/ready/stage-v23-iselia-main-36e42b027f8acd0a.webp",
+   "width": 1529,
+   "height": 250,
+   "surfaceLeft": 31,
+   "surfaceRight": 1497,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v23-iselia-small.png",
+   "image": "assets/ready/stage-v23-iselia-small-13da0e2bb985a66d.webp",
+   "width": 782,
+   "height": 194,
+   "surfaceLeft": 17,
+   "surfaceRight": 765,
+   "walkY": 9
+  }
+ },
+ "primp": {
+  "backgroundSource": "assets/stage-v23-primp-background.png",
+  "background": "assets/ready/stage-v23-primp-background-bffc4e167eacb1a7.webp",
+  "preview": "assets/ready/stage-picker-primp-a3c16d32f3fe59ef.webp",
+  "main": {
+   "source": "assets/stage-v23-primp-main.png",
+   "image": "assets/ready/stage-v23-primp-main-aab4e4ca36a69969.webp",
+   "width": 1518,
+   "height": 307,
+   "surfaceLeft": 27,
+   "surfaceRight": 1491,
+   "walkY": 10,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v23-primp-small.png",
+   "image": "assets/ready/stage-v23-primp-small-dd3c08cfa893a7da.webp",
+   "width": 827,
+   "height": 233,
+   "surfaceLeft": 16,
+   "surfaceRight": 809,
+   "walkY": 9
+  }
+ },
+ "basel": {
+  "backgroundSource": "assets/stage-v23-basel-background.png",
+  "background": "assets/ready/stage-v23-basel-background-50897fc1a050cd26.webp",
+  "preview": "assets/ready/stage-picker-basel-de182027ee0087d3.webp",
+  "main": {
+   "source": "assets/stage-v23-basel-main.png",
+   "image": "assets/ready/stage-v23-basel-main-2b717d496879da8e.webp",
+   "width": 1507,
+   "height": 286,
+   "surfaceLeft": 35,
+   "surfaceRight": 1471,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v23-basel-small.png",
+   "image": "assets/ready/stage-v23-basel-small-fb23f6244a15083b.webp",
+   "width": 772,
+   "height": 174,
+   "surfaceLeft": 28,
+   "surfaceRight": 743,
+   "walkY": 9
+  }
+ },
+ "palevia": {
+  "backgroundSource": "assets/stage-v23-palevia-background.png",
+  "background": "assets/ready/stage-v23-palevia-background-e32f83551a8439b2.webp",
+  "preview": "assets/ready/stage-picker-palevia-8cf5735fbc052bc0.webp",
+  "main": {
+   "source": "assets/stage-v23-palevia-main.png",
+   "image": "assets/ready/stage-v23-palevia-main-a42f84df7aa76a13.webp",
+   "width": 1529,
+   "height": 321,
+   "surfaceLeft": 27,
+   "surfaceRight": 1500,
+   "walkY": 9,
+   "verticalScale": 0.64
+  },
+  "small": {
+   "source": "assets/stage-v23-palevia-small.png",
+   "image": "assets/ready/stage-v23-palevia-small-72cfbc682261a47c.webp",
+   "width": 788,
+   "height": 167,
+   "surfaceLeft": 21,
+   "surfaceRight": 766,
+   "walkY": 9
+  }
  }
 };
