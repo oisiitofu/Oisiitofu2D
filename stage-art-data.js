@@ -889,5 +889,102 @@ const StageArtData={
    "surfaceRight": 808,
    "walkY": 46
   }
+ },
+ "rolante": {
+  "backgroundSource": "assets/stage-v9-rolante-background.png",
+  "background": "assets/ready/stage-v9-rolante-background-772098ae0589a04d.webp",
+  "preview": "assets/ready/stage-picker-rolante-4d7a6d545a3742c4.webp",
+  "main": {
+   "source": "assets/stage-v9-rolante-main.png",
+   "image": "assets/ready/stage-v9-rolante-main-442bc4ee7fc4d7e8.webp",
+   "width": 1510,
+   "height": 452,
+   "surfaceLeft": 18,
+   "surfaceRight": 1491,
+   "walkY": 67,
+   "verticalScale": 0.55
+  },
+  "small": {
+   "source": "assets/stage-v9-rolante-small.png",
+   "image": "assets/ready/stage-v9-rolante-small-ebdf7fd2ddccd2fb.webp",
+   "width": 722,
+   "height": 241,
+   "surfaceLeft": 15,
+   "surfaceRight": 707,
+   "walkY": 46
+  }
+ },
+ "crossing": {
+  "backgroundSource": "assets/stage-v9-crossing-background.png",
+  "background": "assets/ready/stage-v9-crossing-background-5368b0dce1c8402a.webp",
+  "preview": "assets/ready/stage-picker-crossing-a3901d0e89e01942.webp",
+  "main": {
+   "source": "assets/stage-v9-crossing-main.png",
+   "image": "assets/ready/stage-v9-crossing-main-dc31c7c86b625b6c.webp",
+   "width": 1528,
+   "height": 437,
+   "surfaceLeft": 10,
+   "surfaceRight": 1518,
+   "walkY": 112,
+   "verticalScale": 0.5
+  },
+  "small": {
+   "source": "assets/stage-v9-crossing-small.png",
+   "image": "assets/ready/stage-v9-crossing-small-30257e421218a39e.webp",
+   "width": 818,
+   "height": 212,
+   "surfaceLeft": 10,
+   "surfaceRight": 808,
+   "walkY": 14,
+   "verticalScale": 0.5
+  }
+ },
+ "floatisles": {
+  "backgroundSource": "assets/stage-v9-floatisles-background.png",
+  "background": "assets/ready/stage-v9-floatisles-background-5f9919f81c93b07d.webp",
+  "preview": "assets/ready/stage-picker-floatisles-9a4c36a04ac4650a.webp",
+  "main": {
+   "source": "assets/stage-v9-floatisles-main.png",
+   "image": "assets/ready/stage-v9-floatisles-main-a1aa28371599d350.webp",
+   "width": 1518,
+   "height": 344,
+   "surfaceLeft": 23,
+   "surfaceRight": 1488,
+   "walkY": 57,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v9-floatisles-small.png",
+   "image": "assets/ready/stage-v9-floatisles-small-09f5e8f86092d079.webp",
+   "width": 759,
+   "height": 216,
+   "surfaceLeft": 17,
+   "surfaceRight": 743,
+   "walkY": 34
+  }
+ },
+ "argentum": {
+  "backgroundSource": "assets/stage-v9-argentum-background.png",
+  "background": "assets/ready/stage-v9-argentum-background-441d29808c8aaa58.webp",
+  "preview": "assets/ready/stage-picker-argentum-ee3d521a2f23dde2.webp",
+  "main": {
+   "source": "assets/stage-v9-argentum-main.png",
+   "image": "assets/ready/stage-v9-argentum-main-132cd385a9931037.webp",
+   "width": 1533,
+   "height": 387,
+   "surfaceLeft": 14,
+   "surfaceRight": 1517,
+   "walkY": 123,
+   "verticalScale": 0.56
+  },
+  "small": {
+   "source": "assets/stage-v9-argentum-small.png",
+   "image": "assets/ready/stage-v9-argentum-small-85a21cdab39ff703.webp",
+   "width": 766,
+   "height": 230,
+   "surfaceLeft": 14,
+   "surfaceRight": 751,
+   "walkY": 71
+  }
  }
 };

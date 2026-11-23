@@ -506,3 +506,7 @@ body.touch-mode .stage-random-option{min-height:36px}
  #stage-list-dialog{width:min(1120px,95vw)}
  #stage-list-grid{grid-template-columns:repeat(8,minmax(0,1fr))}
 }
+@media(min-width:1281px) and (min-height:751px){
+ #stage-list-dialog{width:min(1260px,95vw)}
+ #stage-list-grid{grid-template-columns:repeat(9,minmax(0,1fr))}
+}

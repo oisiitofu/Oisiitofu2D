@@ -2,7 +2,8 @@
 const assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs');
 const {chromium}=require('playwright');
 const StageCatalog=require('./stage-data.js');
-const stages=StageCatalog.stages.filter(stage=>stage.layout);
+const stageIds=process.env.STAGE_TEST_IDS?.split(',');
+const stages=StageCatalog.stages.filter(stage=>stage.layout&&(!stageIds||stageIds.includes(stage.id)));
 const base=process.env.GAME_URL||'http://127.0.0.1:4173';
 
 async function open(browser,viewport,errors,mobile=false){
@@ -42,7 +43,7 @@ async function local(browser,errors){
  }
  const toggles=page.locator('.stage-random-switch');
  assert.equal(await toggles.count(),StageCatalog.stages.length);
- const included='28';
+ const included=(stages.find(stage=>stage.platforms.some(platform=>platform.motion))??stages[0]).id;
  for(const input of await toggles.all()){
   if(await input.getAttribute('data-stage')!==included)await input.uncheck();
  }
@@ -212,7 +213,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of ['13','18','20','21','25','28'])console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}

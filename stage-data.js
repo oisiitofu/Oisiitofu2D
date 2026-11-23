@@ -82,6 +82,28 @@ const StageCatalog=(()=>{
   {id:'29',name:'廃墟都市',origin:'ニーア オートマタ',theme:'cityruins',folder:'city-ruins',color:'#c9d8b3',layout:'左の大屋上と、右の崖下に残る非常用の足場',platforms:[
    {x:230,y:540,w:880,main:true},{x:276,y:378,w:455},
    {x:807,y:441,w:163},{x:1127,y:642,w:188}
+  ]},
+  {id:"30",name:"ローラント城",origin:"聖剣伝説3",theme:"rolante",folder:"rolante-castle",color:"#b3dbc9",layout:"吊り台が崖から中央上空へ山なりに移動",platforms:[
+   {x:300,y:560,w:840,main:true},
+   {x:942,y:380,w:183,art:"main"},
+   {x:234,y:466,w:182,motion:{path:[[0,0,0],[82,0,0],[170,115,-79],[263,272,-132],[370,390,-45],[438,390,-45],[620,0,0],[650,0,0]]}}
+  ]},
+  {id:"31",name:"スクランブル交差点",origin:"すばらしきこのせかい",theme:"crossing",folder:"scramble-crossing",color:"#e3abfd",layout:"広い地上と中央を横切る低い歩道橋",platforms:[
+   {x:143,y:560,w:1154,main:true},
+   {x:521,y:454,w:398}
+  ]},
+  {id:"32",name:"フロートアイランズ",origin:"星のカービィ",theme:"floatisles",folder:"float-islands",color:"#8ce9ed",layout:"左右の小島が波に合わせて同時に上下する",platforms:[
+   {x:260,y:550,w:920,main:true},
+   {x:628,y:341,w:184},
+   {x:207,y:435,w:212,motion:{y:36,period:300}},
+   {x:975,y:457,w:207,motion:{y:36,period:300}},
+   {x:1197,y:594,w:148}
+  ]},
+  {id:"33",name:"アヴァリティア",origin:"ゼノブレイド2",theme:"argentum",folder:"argentum-trade-guild",color:"#f6cc91",layout:"運搬台が低・中・高の3つの船着き場を巡る",platforms:[
+   {x:220,y:560,w:1000,main:true},
+   {x:284,y:395,w:190},
+   {x:1071,y:437,w:181},
+   {x:450,y:475,w:176,motion:{path:[[0,0,0],[70,0,0],[175,200,-176],[255,200,-176],[375,477,-69],[460,477,-69],[599,0,0],[655,0,0]]}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

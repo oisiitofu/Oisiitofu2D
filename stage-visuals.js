@@ -44,12 +44,12 @@ const StageVisuals=(()=>{
  }
  function atmosphere(theme,color){
   for(let n=0;n<12;n++){
-   const rise=theme==='abyss'||theme==='mycelium'||theme==='hollow',drift=theme==='rail'?2.7:theme==='gaur'?1.15:theme==='aurora'?.85:.25;
+   const rise=theme==='abyss'||theme==='mycelium'||theme==='hollow',drift=theme==='rail'||theme==='rolante'?2.7:theme==='gaur'?1.15:theme==='aurora'?.85:.25;
    const x=(W*100+n*211.7+(theme==='rail'?-1:1)*clock*drift)%W;
    const y=(H*100+n*113.7+(rise?-1:1)*clock*(theme==='abyss'?.72:.30))%H;
    ctx.globalAlpha=.13+(Math.sin(clock*.018+n)+1)*.055;
    if(theme==='abyss'){ctx.strokeStyle=color;ctx.beginPath();ctx.arc(x,y,2+n%5,0,TAU);ctx.stroke();}
-   else if(theme==='rail'||theme==='aurora'||theme==='salt'||theme==='gaur'||theme==='hylia')line([[x,y],[x+7+n%4*3,y+(theme==='aurora'||theme==='gaur'?2:0)]],color,1);
+   else if(theme==='rail'||theme==='aurora'||theme==='salt'||theme==='gaur'||theme==='hylia'||theme==='rolante'||theme==='floatisles')line([[x,y],[x+7+n%4*3,y+(theme==='aurora'||theme==='gaur'?2:0)]],color,1);
    else if(theme==='archive'||theme==='origami'||theme==='dusk'){
     ctx.save();ctx.translate(x,y);ctx.rotate(n+clock*.017);path([[-3,-2],[3,-2],[5,2],[-2,3]],color);ctx.restore();
    }else if(theme==='crystal'){
