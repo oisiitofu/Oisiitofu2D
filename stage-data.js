@@ -475,6 +475,36 @@ const StageCatalog=(()=>{
    {x:1088,y:414,w:217},
    {x:733,y:345,w:185},
    {x:85,y:631,w:174,motion:{path:[[0,0,0],[91,0,0],[171,-25,-187],[245,175,-187],[339,404,-215],[427,647,-242],[484,647,-242],[548,647,-120],[645,80,-125],[721,0,0],[770,0,0]]}}
+  ]},
+  {id:"94",name:"ダアト・東京タワー",origin:"真・女神転生V",theme:"daattower",folder:"daat-tokyo-tower",color:"#e8bd94",layout:"埋もれた高架の左に短い岩棚が二つ、右には崖下まで離れた復帰用の足場がある",platforms:[
+   {x:259,y:553,w:922,main:true},
+   {x:175,y:496,w:186},
+   {x:355,y:425,w:194},
+   {x:572,y:333,w:210},
+   {x:989,y:398,w:229},
+   {x:1217,y:624,w:171}
+  ]},
+  {id:"95",name:"大帝国劇場",origin:"サクラ大戦",theme:"teigeki",folder:"grand-imperial-theater",color:"#efb9b5",layout:"舞台装置の足場が舞台袖からせり上がり、中段を経て上手へ移る",platforms:[
+   {x:173,y:561,w:1094,main:true},
+   {x:171,y:424,w:240},
+   {x:1047,y:360,w:174},
+   {x:466,y:489,w:242,motion:{path:[[0,0,0],[110,0,0],[211,0,-94],[264,0,-94],[355,269,-177],[472,269,-177],[541,0,-177],[659,0,0],[720,0,0]]}}
+  ]},
+  {id:"96",name:"ヒノエ島",origin:"天穂のサクナヒメ",theme:"hinoe",folder:"hinoe-island",color:"#d4e49a",layout:"棚田の畦を左右で異なる間隔に配置。左は奥の高台、右は谷底へ下りる",platforms:[
+   {x:308,y:555,w:824,main:true},
+   {x:111,y:431,w:177},
+   {x:265,y:376,w:173},
+   {x:420,y:291,w:157},
+   {x:780,y:414,w:210},
+   {x:1003,y:471,w:202},
+   {x:1186,y:590,w:178}
+  ]},
+  {id:"97",name:"ルミエール",origin:"Clair Obscur: Expedition 33",theme:"lumiere",folder:"lumiere",color:"#e2c8cf",layout:"浮いた石畳が上空を横切る間に三度上下し、左右の足場から飛び移れる",platforms:[
+   {x:306,y:556,w:828,main:true},
+   {x:267,y:414,w:219},
+   {x:915,y:337,w:224},
+   {x:1057,y:449,w:169},
+   {x:629,y:237,w:183,motion:{x:336,y:49,harmonicY:3,period:760}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

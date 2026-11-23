@@ -2426,5 +2426,101 @@ const StageArtData={
    "surfaceRight": 765,
    "walkY": 10
   }
+ },
+ "daattower": {
+  "backgroundSource": "assets/stage-v25-daattower-background.png",
+  "background": "assets/ready/stage-v25-daattower-background-3e748435f308ff65.webp",
+  "preview": "assets/ready/stage-picker-daattower-ffea7188b1eb52b0.webp",
+  "main": {
+   "source": "assets/stage-v25-daattower-main.png",
+   "image": "assets/ready/stage-v25-daattower-main-8eab22964f8ad6ad.webp",
+   "width": 1526,
+   "height": 271,
+   "surfaceLeft": 40,
+   "surfaceRight": 1485,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v25-daattower-small.png",
+   "image": "assets/ready/stage-v25-daattower-small-f2d4cb799344d706.webp",
+   "width": 789,
+   "height": 158,
+   "surfaceLeft": 15,
+   "surfaceRight": 773,
+   "walkY": 9
+  }
+ },
+ "teigeki": {
+  "backgroundSource": "assets/stage-v25-teigeki-background.png",
+  "background": "assets/ready/stage-v25-teigeki-background-e0aeb6085833b355.webp",
+  "preview": "assets/ready/stage-picker-teigeki-70a0528dec839014.webp",
+  "main": {
+   "source": "assets/stage-v25-teigeki-main.png",
+   "image": "assets/ready/stage-v25-teigeki-main-7802a23554afa503.webp",
+   "width": 1522,
+   "height": 270,
+   "surfaceLeft": 56,
+   "surfaceRight": 1464,
+   "walkY": 10,
+   "verticalScale": 0.63
+  },
+  "small": {
+   "source": "assets/stage-v25-teigeki-small.png",
+   "image": "assets/ready/stage-v25-teigeki-small-796572031080e5c9.webp",
+   "width": 820,
+   "height": 157,
+   "surfaceLeft": 28,
+   "surfaceRight": 791,
+   "walkY": 9
+  }
+ },
+ "hinoe": {
+  "backgroundSource": "assets/stage-v25-hinoe-background.png",
+  "background": "assets/ready/stage-v25-hinoe-background-1e17f43fa1d79e81.webp",
+  "preview": "assets/ready/stage-picker-hinoe-63f79f84642dfb8d.webp",
+  "main": {
+   "source": "assets/stage-v25-hinoe-main.png",
+   "image": "assets/ready/stage-v25-hinoe-main-b395a34b1f8747be.webp",
+   "width": 1522,
+   "height": 275,
+   "surfaceLeft": 40,
+   "surfaceRight": 1482,
+   "walkY": 10,
+   "verticalScale": 0.64
+  },
+  "small": {
+   "source": "assets/stage-v25-hinoe-small.png",
+   "image": "assets/ready/stage-v25-hinoe-small-dcf5f8fc8894b4c1.webp",
+   "width": 803,
+   "height": 189,
+   "surfaceLeft": 25,
+   "surfaceRight": 774,
+   "walkY": 17
+  }
+ },
+ "lumiere": {
+  "backgroundSource": "assets/stage-v25-lumiere-background.png",
+  "background": "assets/ready/stage-v25-lumiere-background-738db74b09dd9217.webp",
+  "preview": "assets/ready/stage-picker-lumiere-e2d215273d5a442f.webp",
+  "main": {
+   "source": "assets/stage-v25-lumiere-main.png",
+   "image": "assets/ready/stage-v25-lumiere-main-1af916fea0e60157.webp",
+   "width": 1504,
+   "height": 299,
+   "surfaceLeft": 38,
+   "surfaceRight": 1466,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v25-lumiere-small.png",
+   "image": "assets/ready/stage-v25-lumiere-small-ff0f6c967e9bd7e3.webp",
+   "width": 768,
+   "height": 155,
+   "surfaceLeft": 21,
+   "surfaceRight": 746,
+   "walkY": 10
+  }
  }
 };
