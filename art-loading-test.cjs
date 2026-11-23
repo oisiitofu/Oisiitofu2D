@@ -1,4 +1,5 @@
 const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+const base=process.env.GAME_URL||'http://localhost:4173';
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:'msedge'});
  try{
@@ -6,11 +7,16 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
   page.on('pageerror',e=>errors.push(e.stack));page.on('request',r=>requests.push(new URL(r.url()).pathname));
   // The production menu must never segment a sheet, or encode a portrait PNG.
   await page.addInitScript(()=>{HTMLCanvasElement.prototype.toDataURL=function(){throw Error('Unexpected runtime portrait encoding');};});
-  const began=Date.now();await page.goto('http://localhost:4173',{waitUntil:'domcontentloaded'});
-  await page.waitForFunction(()=>document.querySelectorAll('.fighter-card img').length===Roster.selectable.length&&[...document.querySelectorAll('.fighter-card img')].every(i=>i.complete&&i.naturalWidth),null,{timeout:10000});
-  const portraitsMs=Date.now()-began;
-  await page.click('#enter-training');await page.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:10000});
+  const began=Date.now();await page.goto(base,{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:10000});
+  assert.equal(requests.filter(path=>path.includes('-selection-thumb-')).length,0,'Hidden roster thumbnails must not compete with startup assets');
   const readyMs=Date.now()-began;
+  await page.click('#enter-training');
+  assert.equal(await page.locator('.fighter-card img').count(),await page.evaluate(()=>Roster.selectable.length));
+  const sample=page.locator('.fighter-card[data-id="estelle"] img');
+  await sample.scrollIntoViewIfNeeded();
+  await sample.evaluate(img=>img.decode());
+  const portraitsMs=Date.now()-began;
   const checks=await page.evaluate(async(requested)=>{
    const manifest=await(await fetch('assets/ready/manifest.json')).json(),mismatches=[];
    const checksum=c=>{const copy=document.createElement('canvas');copy.width=c.width;copy.height=c.height;const cg=copy.getContext('2d',{willReadFrequently:true});cg.drawImage(c,0,0);const d=cg.getImageData(0,0,c.width,c.height).data;let h=2166136261;for(let p=0;p<d.length;p+=4){h=Math.imul(h^d[p+3],16777619);if(d[p+3]===255)for(let k=0;k<3;k++)h=Math.imul(h^d[p+k],16777619);}return(h>>>0).toString(16);};
@@ -30,13 +36,13 @@ const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=requ
   await page.click('#swatches button:first-child');await page.click('[data-id="estelle"]');await page.click('#start');await page.waitForFunction(()=>state==='battle');
   assert.equal(await page.evaluate(()=>fighters[0].characterId),'estelle');
   const hashed=Object.values(JSON.parse(fs.readFileSync('assets/ready/manifest.json','utf8')).characters)[0].image;
-  const response=await page.request.get('http://localhost:4173/'+hashed);
+  const response=await page.request.get(base+'/'+hashed);
   assert.match(response.headers()['cache-control'],/immutable/);
-  assert.equal((await page.request.get('http://localhost:4173/assets/ready/manifest.json')).headers()['cache-control'],'no-cache');
-  assert.equal((await page.request.get('http://localhost:4173/assets/ready/private.txt')).status(),404);
-  const bundle=await page.request.get('http://localhost:4173/game-bundle.js');
+  assert.equal((await page.request.get(base+'/assets/ready/manifest.json')).headers()['cache-control'],'no-cache');
+  assert.equal((await page.request.get(base+'/assets/ready/private.txt')).status(),404);
+  const bundle=await page.request.get(base+'/game-bundle.js');
   assert.match(bundle.headers()['content-type'],/javascript/);
-  assert.equal((await page.request.get('http://localhost:4173/game-bundle.js',{headers:{'If-None-Match':bundle.headers().etag}})).status(),304);
+  assert.equal((await page.request.get(base+'/game-bundle.js',{headers:{'If-None-Match':bundle.headers().etag}})).status(),304);
   assert.deepEqual(errors,[]);
   console.log(JSON.stringify({portraitsMs,readyMs,...checks,errors},null,2));
  }finally{await browser.close();}

@@ -47,12 +47,6 @@ const ArtLoader=(()=>{
    catch{manifest=null;return false;}
    for(const id of Object.keys(manifest.characters))describe(id);
    Roster.artReady();
-   // Mobile menus may show while offscreen thumbnails are still loading.
-   // The match's own textures remain behind prepare()/the online loaded barrier.
-   if(mobile())return true;
-   // Give small selection portraits priority over full combat textures.
-   try{await Promise.all(Roster.definitions.map(d=>thumbnail(d.id)?.src||portrait(d.id,0,d.pose,true)).filter(Boolean).map(url=>image(url)));}
-   catch{/* A failed thumbnail must not trigger parsing every full source sheet. */}
    return true;
   })();
   return initializing;

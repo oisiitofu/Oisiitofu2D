@@ -272,7 +272,7 @@ const Roster=(()=>{
   for(const card of cards){
    const img=card.querySelector('img');if(!img)continue;
    const d=definitionFor(card.dataset.id),thumb=single?null:ArtLoader.thumbnail(d.id);
-   if(typeof TouchControls!=='undefined'&&TouchControls.enabled){img.loading='lazy';img.decoding='async';img.fetchPriority='low';}
+   img.loading=single?'eager':'lazy';img.decoding='async';img.fetchPriority=single?'auto':'low';
    if(thumb){
     const sizes=Math.ceil(Math.max(img.clientWidth||140,img.clientHeight*thumb.aspect))+'px';
     if(img.sizes!==sizes)img.sizes=sizes;

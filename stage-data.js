@@ -245,6 +245,30 @@ const StageCatalog=(()=>{
    {x:195,y:560,w:1050,main:true},
    {x:167,y:394,w:262},
    {x:1011,y:394,w:262}
+  ]},
+  {id:"58",name:"クーケン島",origin:"ライザのアトリエ",theme:"kurken",folder:"kurken-island",color:"#f4db93",layout:"左側の段々畑を上り、右側は長い作業台と低い湖畔の足場へ下りる",platforms:[
+   {x:206,y:550,w:1028,main:true},
+   {x:224,y:455,w:225},
+   {x:315,y:361,w:227},
+   {x:485,y:277,w:157},
+   {x:807,y:415,w:361},
+   {x:1117,y:586,w:207}
+  ]},
+  {id:"59",name:"漂流村",origin:"イースVIII",theme:"castaway",folder:"castaway-village",color:"#b5e2b9",layout:"防衛柵の上で争う長い中段と、崖外から戻る流木台",platforms:[
+   {x:285,y:557,w:870,main:true},
+   {x:419,y:395,w:406},
+   {x:888,y:326,w:222},
+   {x:94,y:633,w:174,motion:{path:[[0,0,0],[76,0,0],[180,70,-88],[232,135,-146],[309,135,-146],[460,0,0],[510,0,0]]}}
+  ]},
+  {id:"60",name:"スオウ京",origin:"SCARLET NEXUS",theme:"suoh",folder:"suoh-city",color:"#f5b7b4",layout:"上段の昇降台が中央で止まり、右端へ上がって横に戻る",platforms:[
+   {x:248,y:560,w:944,main:true},
+   {x:222,y:425,w:214},
+   {x:560,y:443,w:220,motion:{path:[[0,0,0],[93,0,0],[156,0,-94],[221,0,-94],[320,428,-173],[393,428,-173],[461,0,-173],[523,0,0],[570,0,0]]}}
+  ]},
+  {id:"61",name:"湖のリエーニエ",origin:"ELDEN RING",theme:"liurnia",folder:"liurnia-of-the-lakes",color:"#a4c8db",layout:"高台のない石橋。湖面すれすれの踏み石が左右の崖外に離れている",platforms:[
+   {x:351,y:531,w:738,main:true},
+   {x:111,y:669,w:184},
+   {x:1139,y:643,w:202}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

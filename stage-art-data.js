@@ -1562,5 +1562,101 @@ const StageArtData={
    "surfaceRight": 822,
    "walkY": 9
   }
+ },
+ "kurken": {
+  "backgroundSource": "assets/stage-v16-kurken-background.png",
+  "background": "assets/ready/stage-v16-kurken-background-a60db7336442da47.webp",
+  "preview": "assets/ready/stage-picker-kurken-248dcf1fe1296774.webp",
+  "main": {
+   "source": "assets/stage-v16-kurken-main.png",
+   "image": "assets/ready/stage-v16-kurken-main-95731de3e861cd93.webp",
+   "width": 1502,
+   "height": 326,
+   "surfaceLeft": 12,
+   "surfaceRight": 1489,
+   "walkY": 11,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v16-kurken-small.png",
+   "image": "assets/ready/stage-v16-kurken-small-9e81c0b4024614e1.webp",
+   "width": 777,
+   "height": 139,
+   "surfaceLeft": 8,
+   "surfaceRight": 768,
+   "walkY": 9
+  }
+ },
+ "castaway": {
+  "backgroundSource": "assets/stage-v16-castaway-background.png",
+  "background": "assets/ready/stage-v16-castaway-background-5fe13499081b6288.webp",
+  "preview": "assets/ready/stage-picker-castaway-87923f12c5a944d6.webp",
+  "main": {
+   "source": "assets/stage-v16-castaway-main.png",
+   "image": "assets/ready/stage-v16-castaway-main-aaa1f9a096fd0191.webp",
+   "width": 1522,
+   "height": 292,
+   "surfaceLeft": 52,
+   "surfaceRight": 1471,
+   "walkY": 19,
+   "verticalScale": 0.63
+  },
+  "small": {
+   "source": "assets/stage-v16-castaway-small.png",
+   "image": "assets/ready/stage-v16-castaway-small-c24d4759d0aff1dd.webp",
+   "width": 758,
+   "height": 201,
+   "surfaceLeft": 24,
+   "surfaceRight": 736,
+   "walkY": 10
+  }
+ },
+ "suoh": {
+  "backgroundSource": "assets/stage-v16-suoh-background.png",
+  "background": "assets/ready/stage-v16-suoh-background-3ad2fa92c2cd8117.webp",
+  "preview": "assets/ready/stage-picker-suoh-5c5c89abe60a4666.webp",
+  "main": {
+   "source": "assets/stage-v16-suoh-main.png",
+   "image": "assets/ready/stage-v16-suoh-main-cd947fbf13cdb1e0.webp",
+   "width": 1524,
+   "height": 233,
+   "surfaceLeft": 41,
+   "surfaceRight": 1483,
+   "walkY": 13,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v16-suoh-small.png",
+   "image": "assets/ready/stage-v16-suoh-small-ba8e7d356d8b8e5f.webp",
+   "width": 778,
+   "height": 157,
+   "surfaceLeft": 37,
+   "surfaceRight": 740,
+   "walkY": 9
+  }
+ },
+ "liurnia": {
+  "backgroundSource": "assets/stage-v16-liurnia-background.png",
+  "background": "assets/ready/stage-v16-liurnia-background-119a5f096a7503d7.webp",
+  "preview": "assets/ready/stage-picker-liurnia-dcac08cf2b2b0a6a.webp",
+  "main": {
+   "source": "assets/stage-v16-liurnia-main.png",
+   "image": "assets/ready/stage-v16-liurnia-main-586ff61b9666579b.webp",
+   "width": 1523,
+   "height": 364,
+   "surfaceLeft": 18,
+   "surfaceRight": 1507,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v16-liurnia-small.png",
+   "image": "assets/ready/stage-v16-liurnia-small-d92a98527ec3ef7c.webp",
+   "width": 765,
+   "height": 196,
+   "surfaceLeft": 12,
+   "surfaceRight": 754,
+   "walkY": 9
+  }
  }
 };
