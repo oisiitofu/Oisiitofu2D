@@ -81,11 +81,14 @@ async function local(browser,errors){
  assert(await page.evaluate(()=>training&&StageVisuals.prepared()&&fighters.every(fighter=>fighter.grounded)));
  for(const stage of stages){
   const results=await page.evaluate(async id=>{
+   await start({artPrepared:true,participants:BattlePlayers.config(),squads:SquadBattle.config(),stage:id});
    state='pause';
-   await StageVisuals.load(id);
-   setupStage(id);
-   StageVisuals.retain(id);
    const main=platforms.find(p=>p.main);
+   if(activeStage!==id||!training||!StageVisuals.prepared(id)||
+     !document.querySelector('#battlelabel').textContent.includes(StageCatalog.name(id))||
+     !fighters.every(f=>f.grounded&&f.y===main.y&&f.x>=main.x&&f.x<=main.x+main.w)){
+    throw Error('Invalid training start for '+StageCatalog.name(id));
+   }
    const fighter=fighters[0];
    const moved=new Set();
    for(let i=0;i<fighters.length;i++)Object.assign(fighters[i],{x:main.x+main.w*(i+1)/(fighters.length+1),y:main.y,vx:0,vy:0,grounded:true,inv:0});
@@ -225,7 +228,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37','39','40','43','44','47','49']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37','39','40','43','44','47','49','52','53']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}

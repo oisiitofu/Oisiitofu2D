@@ -1370,5 +1370,101 @@ const StageArtData={
    "surfaceRight": 774,
    "walkY": 10
   }
+ },
+ "kamuro": {
+  "backgroundSource": "assets/stage-v14-kamuro-background.png",
+  "background": "assets/ready/stage-v14-kamuro-background-f2e441b3f0043bb1.webp",
+  "preview": "assets/ready/stage-picker-kamuro-ab0f71cc6fff6b48.webp",
+  "main": {
+   "source": "assets/stage-v14-kamuro-main.png",
+   "image": "assets/ready/stage-v14-kamuro-main-eccba20f9dbfdf7b.webp",
+   "width": 1524,
+   "height": 214,
+   "surfaceLeft": 57,
+   "surfaceRight": 1466,
+   "walkY": 10,
+   "verticalScale": 0.63
+  },
+  "small": {
+   "source": "assets/stage-v14-kamuro-small.png",
+   "image": "assets/ready/stage-v14-kamuro-small-bb7703e59e2bf873.webp",
+   "width": 794,
+   "height": 138,
+   "surfaceLeft": 29,
+   "surfaceRight": 764,
+   "walkY": 8
+  }
+ },
+ "rpd": {
+  "backgroundSource": "assets/stage-v14-rpd-background.png",
+  "background": "assets/ready/stage-v14-rpd-background-1b8ed90eceb3cec1.webp",
+  "preview": "assets/ready/stage-picker-rpd-6291a490ea2d1be8.webp",
+  "main": {
+   "source": "assets/stage-v14-rpd-main.png",
+   "image": "assets/ready/stage-v14-rpd-main-a4d369fc51ff9578.webp",
+   "width": 1524,
+   "height": 326,
+   "surfaceLeft": 65,
+   "surfaceRight": 1458,
+   "walkY": 9,
+   "verticalScale": 0.65
+  },
+  "small": {
+   "source": "assets/stage-v14-rpd-small.png",
+   "image": "assets/ready/stage-v14-rpd-small-8300fc860e14ca06.webp",
+   "width": 808,
+   "height": 195,
+   "surfaceLeft": 15,
+   "surfaceRight": 792,
+   "walkY": 9
+  }
+ },
+ "sylvalum": {
+  "backgroundSource": "assets/stage-v14-sylvalum-background.png",
+  "background": "assets/ready/stage-v14-sylvalum-background-73d394433724bd60.webp",
+  "preview": "assets/ready/stage-picker-sylvalum-c05b7f6836f6db9f.webp",
+  "main": {
+   "source": "assets/stage-v14-sylvalum-main.png",
+   "image": "assets/ready/stage-v14-sylvalum-main-487a38f7c884aedd.webp",
+   "width": 1504,
+   "height": 331,
+   "surfaceLeft": 37,
+   "surfaceRight": 1466,
+   "walkY": 11,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v14-sylvalum-small.png",
+   "image": "assets/ready/stage-v14-sylvalum-small-6441168dac8398d2.webp",
+   "width": 778,
+   "height": 164,
+   "surfaceLeft": 26,
+   "surfaceRight": 750,
+   "walkY": 9
+  }
+ },
+ "booster": {
+  "backgroundSource": "assets/stage-v14-booster-background.png",
+  "background": "assets/ready/stage-v14-booster-background-94f0abee1d911f5b.webp",
+  "preview": "assets/ready/stage-picker-booster-2ace61328e5838bd.webp",
+  "main": {
+   "source": "assets/stage-v14-booster-main.png",
+   "image": "assets/ready/stage-v14-booster-main-60d0c1b5b0bed08b.webp",
+   "width": 1526,
+   "height": 218,
+   "surfaceLeft": 50,
+   "surfaceRight": 1475,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v14-booster-small.png",
+   "image": "assets/ready/stage-v14-booster-small-7bbef2706b3dac8d.webp",
+   "width": 777,
+   "height": 191,
+   "surfaceLeft": 26,
+   "surfaceRight": 751,
+   "walkY": 10
+  }
  }
 };

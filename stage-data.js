@@ -197,6 +197,30 @@ const StageCatalog=(()=>{
    {x:1138,y:483,w:186},
    {x:414,y:376,w:219,motion:{path:[[0,0,0],[70,0,0],[185,120,-110],[270,350,-110],[383,387,43],[460,267,89],[580,40,70],[650,0,0]]}},
    {x:840,y:360,w:167,motion:{path:[[0,0,0],[70,0,0],[185,-119,116],[270,-324,116],[383,-388,-33],[460,-263,-76],[580,-40,-66],[650,0,0]]}}
+  ]},
+  {id:"50",name:"神室町",origin:"龍が如く",theme:"kamuro",folder:"kamurocho",color:"#f2a0a4",layout:"広い車道。低い歩道が右、高い看板足場は左",platforms:[
+   {x:131,y:560,w:1178,main:true},
+   {x:182,y:381,w:247},
+   {x:814,y:475,w:466}
+  ]},
+  {id:"51",name:"ラクーン警察署",origin:"バイオハザード",theme:"rpd",folder:"raccoon-police-station",color:"#b1c9bf",layout:"高さの違う左右の回廊を中央の狭い足場で結ぶ",platforms:[
+   {x:321,y:561,w:820,main:true},
+   {x:144,y:476,w:238},
+   {x:374,y:378,w:206},
+   {x:646,y:320,w:149},
+   {x:857,y:409,w:319},
+   {x:1120,y:507,w:176}
+  ]},
+  {id:"52",name:"白樹の大陸",origin:"ゼノブレイドクロス",theme:"sylvalum",folder:"sylvalum",color:"#cce8ed",layout:"白い岩棚2枚が近づく間だけ左右の間を渡りやすくなる",platforms:[
+   {x:414,y:560,w:612,main:true},
+   {x:594,y:310,w:252},
+   {x:193,y:435,w:204,motion:{x:91,phase:0,period:460}},
+   {x:1032,y:445,w:220,motion:{x:94,phase:3.141592653589793,period:460}}
+  ]},
+  {id:"53",name:"ブッキータワー",origin:"スーパーマリオRPG",theme:"booster",folder:"booster-tower",color:"#ecc093",layout:"おもちゃの台車が上下2本の線路を回り、中央の台へ近づく",platforms:[
+   {x:287,y:560,w:866,main:true},
+   {x:589,y:381,w:185},
+   {x:172,y:465,w:159,motion:{path:[[0,0,0],[98,0,0],[255,760,0],[304,760,0],[384,760,-165],[492,760,-165],[650,0,-165],[720,0,0],[785,0,0]]}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
