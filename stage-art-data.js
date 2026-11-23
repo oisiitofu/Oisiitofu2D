@@ -1754,5 +1754,101 @@ const StageArtData={
    "surfaceRight": 761,
    "walkY": 9
   }
+ },
+ "sanderson": {
+  "backgroundSource": "assets/stage-v18-sanderson-background.png",
+  "background": "assets/ready/stage-v18-sanderson-background-2a74a44777d0cbce.webp",
+  "preview": "assets/ready/stage-picker-sanderson-f64b442c25044861.webp",
+  "main": {
+   "source": "assets/stage-v18-sanderson-main.png",
+   "image": "assets/ready/stage-v18-sanderson-main-f6162222e3d0315a.webp",
+   "width": 1509,
+   "height": 328,
+   "surfaceLeft": 57,
+   "surfaceRight": 1451,
+   "walkY": 9,
+   "verticalScale": 0.66
+  },
+  "small": {
+   "source": "assets/stage-v18-sanderson-small.png",
+   "image": "assets/ready/stage-v18-sanderson-small-b4f1e4b023bcfe5a.webp",
+   "width": 816,
+   "height": 118,
+   "surfaceLeft": 21,
+   "surfaceRight": 794,
+   "walkY": 10
+  }
+ },
+ "aumaan": {
+  "backgroundSource": "assets/stage-v18-aumaan-background.png",
+  "background": "assets/ready/stage-v18-aumaan-background-ceff214d79a13496.webp",
+  "preview": "assets/ready/stage-picker-aumaan-b9212ada70b4f610.webp",
+  "main": {
+   "source": "assets/stage-v18-aumaan-main.png",
+   "image": "assets/ready/stage-v18-aumaan-main-cf01612b795f8eef.webp",
+   "width": 1520,
+   "height": 259,
+   "surfaceLeft": 59,
+   "surfaceRight": 1460,
+   "walkY": 11,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v18-aumaan-small.png",
+   "image": "assets/ready/stage-v18-aumaan-small-97cc4acdb7b18b49.webp",
+   "width": 792,
+   "height": 136,
+   "surfaceLeft": 22,
+   "surfaceRight": 769,
+   "walkY": 10
+  }
+ },
+ "meridian": {
+  "backgroundSource": "assets/stage-v18-meridian-background.png",
+  "background": "assets/ready/stage-v18-meridian-background-dee5fc99a75b07e0.webp",
+  "preview": "assets/ready/stage-picker-meridian-4a7ceb46977585ad.webp",
+  "main": {
+   "source": "assets/stage-v18-meridian-main.png",
+   "image": "assets/ready/stage-v18-meridian-main-86254b88ee7d6f39.webp",
+   "width": 1512,
+   "height": 296,
+   "surfaceLeft": 32,
+   "surfaceRight": 1479,
+   "walkY": 10,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v18-meridian-small.png",
+   "image": "assets/ready/stage-v18-meridian-small-dbf6ad416dec478e.webp",
+   "width": 757,
+   "height": 189,
+   "surfaceLeft": 20,
+   "surfaceRight": 736,
+   "walkY": 8
+  }
+ },
+ "calaglia": {
+  "backgroundSource": "assets/stage-v18-calaglia-background.png",
+  "background": "assets/ready/stage-v18-calaglia-background-a2cd759a0e92d93f.webp",
+  "preview": "assets/ready/stage-picker-calaglia-3ee55e06643ace7c.webp",
+  "main": {
+   "source": "assets/stage-v18-calaglia-main.png",
+   "image": "assets/ready/stage-v18-calaglia-main-6e78b615f693de2d.webp",
+   "width": 1524,
+   "height": 284,
+   "surfaceLeft": 33,
+   "surfaceRight": 1489,
+   "walkY": 12,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v18-calaglia-small.png",
+   "image": "assets/ready/stage-v18-calaglia-small-6eb8d76cfdbbfc38.webp",
+   "width": 782,
+   "height": 175,
+   "surfaceLeft": 17,
+   "surfaceRight": 768,
+   "walkY": 9
+  }
  }
 };

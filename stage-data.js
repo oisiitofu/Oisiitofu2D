@@ -293,6 +293,30 @@ const StageCatalog=(()=>{
    {x:349,y:554,w:742,main:true},
    {x:121,y:568,w:229,motion:{y:71,period:480}},
    {x:1090,y:484,w:232,motion:{y:71,phase:3.141592653589793,period:480}}
+  ]},
+  {id:"66",name:"サンダースン家",origin:"ちびロボ！",theme:"sanderson",folder:"sanderson-house",color:"#ead0a8",layout:"ローテーブルを主戦場に、片側の玩具を踏んで棚へ登る",platforms:[
+   {x:193,y:565,w:1054,main:true},
+   {x:163,y:471,w:180},
+   {x:278,y:386,w:171},
+   {x:338,y:276,w:364},
+   {x:1028,y:427,w:227}
+  ]},
+  {id:"67",name:"アーマーン",origin:"ANUBIS ZONE OF THE ENDERS",theme:"aumaan",folder:"aumaan",color:"#c4bfdf",layout:"大型搬送台が右の格納庫からせり上がり、上段を中央まで走る",platforms:[
+   {x:365,y:554,w:710,main:true},
+   {x:1016,y:596,w:261,motion:{path:[[0,0,0],[74,0,0],[217,0,-261],[350,-480,-261],[417,-480,-261],[535,0,-261],[690,0,0],[740,0,0]]}}
+  ]},
+  {id:"68",name:"メリディアン",origin:"Horizon",theme:"meridian",folder:"meridian",color:"#ead3a8",layout:"谷をまたぐ狭い橋から左右の上段回廊に移れる",platforms:[
+   {x:442,y:552,w:556,main:true},
+   {x:121,y:479,w:269},
+   {x:347,y:339,w:256},
+   {x:857,y:374,w:238},
+   {x:1056,y:474,w:260},
+   {x:594,y:412,w:268}
+  ]},
+  {id:"69",name:"カラグリア",origin:"テイルズ オブ アライズ",theme:"calaglia",folder:"calaglia",color:"#ebbc9b",layout:"鉱車が上段を横切り、右端を降りて主足場の下から戻る",platforms:[
+   {x:253,y:555,w:934,main:true},
+   {x:601,y:439,w:238},
+   {x:92,y:355,w:152,motion:{path:[[0,0,0],[65,0,0],[240,1142,0],[295,1142,0],[406,1142,303],[452,1142,303],[675,0,303],[792,0,0],[840,0,0]]}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
