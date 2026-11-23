@@ -7,14 +7,14 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{execFileSync}=
  const result=await page.evaluate(()=>{
   state='pause';training=false;countdown=hitstop=0;StageRules.oneOnOne=false;
   let checks=0;const failed=[],examples=[],check=(name,pass,detail)=>{checks++;if(!pass)failed.push({name,detail});},snap=f=>({x:f.x,y:f.y,vx:f.vx,vy:f.vy,mode:f.mode,hitstun:f.hitstun,grounded:f.grounded,attack:f.attack?.type});
-  function pair(id='dragoon',stage='0'){setupStage(stage);for(const r of Object.values(NewcomerCore.registry))r.reset();const main=platforms.find(p=>p.main);fighters=[makeFighter(0,0,'dragoon'),makeFighter(1,1,id)];for(const [n,f]of fighters.entries())Object.assign(f,{x:main.x+main.w*(n?.7:.3),y:main.y,grounded:true,inv:0,intangible:0,damage:120,control:'dummy'});return fighters;}
+  function pair(id='dragoon',stage='0',attackerId='dragoon'){setupStage(stage);const main=platforms.find(p=>p.main);fighters=[makeFighter(0,0,attackerId),makeFighter(1,1,id)];for(const r of Object.values(NewcomerCore.registry))r.reset();for(const [n,f]of fighters.entries())Object.assign(f,{x:main.x+main.w*(n?.7:.3),y:main.y,grounded:true,inv:0,intangible:0,damage:120,control:'dummy'});return fighters;}
   function step(f,input={}){frame++;PlayerController.tick(f,{...emptyInput(),...input});}
   function release(f,input={}){let n=0;while(f.hitlag&&n++<40)step(f,input);return n;}
   // Actual authored smashes, every receiving body and both horizontal directions.
   // Mashing through hitlag and hitstun must match a neutral input trajectory.
   for(const {id}of Roster.definitions)for(const side of [-1,1]){
-   const runs=[];for(const mash of [false,true]){const [a,f]=pair(id);a.characterId=id;prepareFighter(a);Object.assign(a,{face:side,inv:0});const main=platforms.find(p=>p.main);Object.assign(f,{x:side<0?main.x+35:main.x+main.w-35,face:-side});const start=f.x;hit(a,f,{...movesFor(a).smash,type:'smash',launchDirection:side});const speed=f.pendingLaunch?.speed;
-    release(f,mash?{jump:true,jab:true,special:true}:{});check(id+'/'+side+'/'+mash+' releases nonzero hit',f.hitstun>0&&Math.abs(f.vx)>0&&speed>0,snap(f));const ticks=Math.min(18,f.hitstun-1);for(let n=0;n<ticks;n++){step(f,mash?{jump:true,jab:true,special:true}:{});check(id+'/'+side+'/'+mash+'/'+n+' cannot act in stun',!f.attack&&f.airJumps===1&&f.hitstun>0,snap(f));}runs.push(snap(f));check(id+'/'+side+'/'+mash+' exits ledge',side*(f.x-(side<0?main.x:main.x+main.w))>20&&side*(f.x-start)>55&&!f.grounded&&!f.ledge,snap(f));
+   const runs=[];for(const mash of [false,true]){const [a,f]=pair(id,'0',id);Object.assign(a,{face:side,inv:0});const main=platforms.find(p=>p.main);Object.assign(f,{x:side<0?main.x+35:main.x+main.w-35,face:-side});const start=f.x;hit(a,f,{...movesFor(a).smash,type:'smash',launchDirection:side});const speed=f.pendingLaunch?.speed;
+    release(f,mash?{jump:true,jab:true,special:true}:{});check(id+'/'+side+'/'+mash+' releases nonzero hit',f.hitstun>0&&Math.abs(f.vx)>0&&speed>0,snap(f));const ticks=Math.min(18,f.hitstun-1);for(let n=0;n<ticks;n++){step(f,mash?{jump:true,jab:true,special:true}:{});check(id+'/'+side+'/'+mash+'/'+n+' cannot act in stun',!f.attack&&f.airJumps===f.character.airJumpCount&&f.hitstun>0,snap(f));}runs.push(snap(f));check(id+'/'+side+'/'+mash+' exits ledge',side*(f.x-(side<0?main.x:main.x+main.w))>20&&side*(f.x-start)>55&&!f.grounded&&!f.ledge,snap(f));
    }check(id+'/'+side+' mashing preserves full trajectory',JSON.stringify(runs[0])===JSON.stringify(runs[1]),runs);
   }
   // Flat hits on supported feet must not count as an airborne floor impact.
@@ -31,8 +31,9 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{execFileSync}=
    check(stage.id+'/'+side+'/'+angle+' hit roll exits stage',side*(f.x-edge)>100&&f.hitstun>0&&!f.grounded&&!f.ledge,snap(f));
   }
   for(const button of ['jump','jab','heavy','smash','special']){
-   let [a,f]=pair();Object.assign(f,{x:720,y:100,grounded:false,vx:12,vy:-8,tumbling:true,hitstun:2});PlayerStates.enter(f,'Tumble');step(f,{[button]:true});check(button+' remains locked on penultimate stun frame',f.hitstun===1&&f.vx>11&&!f.attack,snap(f));step(f);check(button+' last stun frame retains momentum',f.hitstun===0&&f.vx>11&&!f.attack,snap(f));step(f);check(button+' buffered action cancels residual velocity when actionable',Math.abs(f.vx)<1&&!f.tumbling&&(button==='jump'?f.airJumps===0:button==='smash'?f.mode==='Fall':!!f.attack),snap(f));
-   [a,f]=pair();Object.assign(f,{x:720,y:100,grounded:false,vx:12,vy:-8,tumbling:true,hitstun:0});PlayerStates.enter(f,'Tumble');step(f,{[button]:true});check(button+' fresh action cancels residual velocity',Math.abs(f.vx)<1&&!f.tumbling&&(button==='jump'?f.airJumps===0:button==='smash'?f.mode==='Fall':!!f.attack),snap(f));
+   const acted=f=>Math.abs(f.vx)<1&&!f.tumbling&&(button==='jump'?f.airJumps===0:button==='smash'?f.attack?.type==='air':!!f.attack);
+   let [a,f]=pair();Object.assign(f,{x:720,y:100,grounded:false,vx:12,vy:-8,tumbling:true,hitstun:2});PlayerStates.enter(f,'Tumble');step(f,{[button]:true});check(button+' remains locked on penultimate stun frame',f.hitstun===1&&f.vx>11&&!f.attack,snap(f));step(f);check(button+' last stun frame retains momentum',f.hitstun===0&&f.vx>11&&!f.attack,snap(f));step(f);check(button+' buffered action cancels residual velocity when actionable',acted(f),snap(f));
+   [a,f]=pair();Object.assign(f,{x:720,y:100,grounded:false,vx:12,vy:-8,tumbling:true,hitstun:0});PlayerStates.enter(f,'Tumble');step(f,{[button]:true});check(button+' fresh action cancels residual velocity',acted(f),snap(f));
   }
   // Real floor/wall/ceiling impacts and defensive techs still work.
   for(const side of [-1,1]){

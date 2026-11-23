@@ -15,7 +15,23 @@ function quoteObject(f,kind){return QuoteRules.objects.find(q=>q.owner===f.id&&q
 function quoteShot(r,f,kind,v={}){return r.spawn(f,{kind,x:f.x+f.face*28,y:f.y-76*.55,vx:f.face*8,vy:0,life:65,radius:11,damage:8,base:2.8,growth:.032,angle:-.65,...v});}
 function quoteWindow(f,a,shape,frames=5,values={}){a.activeFrames=[CombatData.window(f.timer,f.timer+frames,shape,{pose:a.pose,index:0,meleeCoverage:true,damage:10,baseKnockback:3,knockbackGrowth:.034,...values})];a.activeStart=f.timer;a.activeEnd=f.timer+frames;}
 function quoteFloor(q){const p=platforms.find(p=>q.x>=p.x&&q.x<=p.x+p.w&&q.previousY<=p.y+1&&q.y>=p.y&&q.vy>=0);if(p){q.y=p.y;q.vy=0;q.grounded=true;}else if(q.grounded&&!platforms.some(p=>q.x>=p.x&&q.x<=p.x+p.w&&Math.abs(q.y-p.y)<2))q.grounded=false;return p;}
-function quoteContact(q,f,y=q.y){const b={x1:q.previousX,y1:q.previousY-(q.y-y),x2:q.x,y2:y,radius:q.radius};for(const o of BattlePlayers.targets(f)){if(q.hits.has(o.id)||CombatSystem.protection(o).intangible)continue;const touch=CombatSystem.contact(b,o),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(o.mode)&&CombatSystem.shieldCovers(o,b);if(!touch&&!shield)continue;q.hits.add(o.id);if(o.attack?.counterWindow&&o.timer>=o.attack.counterWindow[0]&&o.timer<=o.attack.counterWindow[1]){attack(o,o.attack.counterMove);o.inv=o.attack.totalFrames;q.dead=true;continue;}CombatSystem.hit(f,o,{...QuoteMoves[q.sourceType||'dragon'],type:q.sourceType||'dragon',special:true,projectile:true,charge:0,damage:q.damage,staleMultiplier:q.stale,launchDirection:q.face,angle:q.angle,baseKnockback:q.base,knockbackGrowth:q.growth,soundFamily:q.family||"gun"},b,touch);quoteProjectileHit(q,f,o);if(q.single)q.dead=true;}return q.hits.size;}
+function quoteContact(q,f,y=q.y){
+ const b={x1:q.previousX,y1:q.previousY-(q.y-y),x2:q.x,y2:y,radius:q.radius};
+ for(const o of BattlePlayers.targets(f)){
+  if(q.hits.has(o.id)||CombatSystem.protection(o).intangible)continue;
+  const touch=CombatSystem.contact(b,o),shield=['ShieldStart','ShieldHold','ShieldDrop'].includes(o.mode)&&CombatSystem.shieldCovers(o,b);
+  if(!touch&&!shield)continue;
+  q.hits.add(o.id);
+  if(o.attack?.counterWindow&&o.timer>=o.attack.counterWindow[0]&&o.timer<=o.attack.counterWindow[1]){
+   attack(o,o.attack.counterMove);o.inv=o.attack.totalFrames;q.dead=true;continue;
+  }
+  const damageBefore=o.damage;
+  CombatSystem.hit(f,o,{...QuoteMoves[q.sourceType||'dragon'],type:q.sourceType||'dragon',special:true,projectile:true,charge:0,damage:q.damage,staleMultiplier:q.stale,launchDirection:q.face,angle:q.angle,baseKnockback:q.base,knockbackGrowth:q.growth,soundFamily:q.family||"gun"},b,touch);
+  if(o.damage>damageBefore)quoteProjectileHit(q,f);
+  if(q.single)q.dead=true;
+ }
+ return q.hits.size;
+}
 function quoteDamagedObject(q,f,radius=22){return BattlePlayers.targets(f).some(o=>o.attack&&attackBoxes(o).some(b=>{const dx=b.x2-b.x1,dy=b.y2-b.y1,t=clamp(((q.x-b.x1)*dx+(q.y-b.y1)*dy)/(dx*dx+dy*dy||1),0,1);return Math.hypot(q.x-b.x1-t*dx,q.y-b.y1-t*dy)<b.radius+radius;}));}
 function quoteEscape(f,a,begin){if(a.phase==='escape') {NewcomerCore.escapeAction(f,a,0);if(!a.escapeSide)begin();return true;}if(a.phase==='start'&&f.timer===8){const p=platforms.find(p=>p.main);if(f.x>p.x&&f.x<p.x+p.w&&f.y>p.y+65){NewcomerCore.escape(f,a);a.phase='escape';quoteDuration(f,a,f.timer+190);return true;}}return false;}
 function quoteReset(f){Object.assign(f,{quoteRiseUsed:false,quoteCooldown:0,quoteXP:{dragon:0,dash:0,gale:0},quoteFuel:44,quoteLastDamage:f.damage||0,quoteBubbleCD:0});}
@@ -31,7 +47,7 @@ if(['gale','airDrop'].includes(a.type)){a.pose=t<12?42:43;f.vx*=.7;if(t>=6&&t<=4
 }
 function quoteNormal(f,a,i,r){if(a.type==='dair'&&f.timer===15&&!f.grounded){f.vy=Math.max(-4,f.vy-5);quoteShot(r,f,'bullet',{x:f.x,y:f.y-8,vx:0,vy:12,life:28,damage:5,radius:6,single:true});}}
 function quoteOnHit(f,o,a){if(!a.special)for(const k of Object.keys(f.quoteXP))f.quoteXP[k]=Math.min(54,f.quoteXP[k]+2);}
-function quoteProjectileHit(q,f,o){const type=q.sourceType==='airDrop'?'gale':q.sourceType;if(f.quoteXP[type]!==undefined)f.quoteXP[type]=Math.min(54,f.quoteXP[type]+4);}
+function quoteProjectileHit(q,f){const type=q.sourceType==='airDrop'?'gale':q.sourceType;if(f.quoteXP[type]!==undefined)f.quoteXP[type]=Math.min(54,f.quoteXP[type]+4);}
 function quoteProjectile(q,f,o,r){if(q.kind==='bubble'&&!q.released){const angle=q.age*.07+q.orbit*Math.PI*.38;q.x=f.x+Math.cos(angle)*35;q.y=f.y-36+Math.sin(angle)*25;for(const other of Object.values(NewcomerCore.registry).flatMap(r=>r.objects)){if(other===q||other.owner===q.owner||other.dead||!other.damage)continue;if(Math.hypot(other.x-q.x,other.y-q.y)<(other.radius||10)+q.radius){other.dead=true;q.dead=true;break;}}return true;}if(q.kind==='fire'){q.vy+=.35;q.x+=q.vx;q.y+=q.vy;if(quoteFloor(q)){q.bounces++;q.vy=-7;q.grounded=false;if(q.bounces>q.maxBounces)q.dead=true;}quoteContact(q,f);return true;}q.x+=q.vx;q.y+=q.vy;if(StageGeometry.overlaps(platforms.find(p=>p.main),q.x,q.y,3,3))q.dead=true;else quoteContact(q,f);return true;}
 function quoteCPU(f,o,i,clear){if(f.attack?.type==='dragon')i.specialHeld=f.timer<34;if(f.attack?.type==='rise'){i.y=f.y>platforms.find(p=>p.main).y-90?-1:0;i.specialHeld=true;}}
 
