@@ -2810,5 +2810,101 @@ const StageArtData={
    "surfaceRight": 774,
    "walkY": 35
   }
+ },
+ "akihara": {
+  "backgroundSource": "assets/stage-v29-akihara-background.png",
+  "background": "assets/ready/stage-v29-akihara-background-dabbac1ccc08f0e3.webp",
+  "preview": "assets/ready/stage-picker-akihara-1149edfc8b9f51e1.webp",
+  "main": {
+   "source": "assets/stage-v29-akihara-main.png",
+   "image": "assets/ready/stage-v29-akihara-main-10b42def21167ff0.webp",
+   "width": 1531,
+   "height": 264,
+   "surfaceLeft": 66,
+   "surfaceRight": 1465,
+   "walkY": 9,
+   "verticalScale": 0.59
+  },
+  "small": {
+   "source": "assets/stage-v29-akihara-small.png",
+   "image": "assets/ready/stage-v29-akihara-small-721bdd4a4aedb598.webp",
+   "width": 824,
+   "height": 223,
+   "surfaceLeft": 33,
+   "surfaceRight": 791,
+   "walkY": 8
+  }
+ },
+ "korogantis": {
+  "backgroundSource": "assets/stage-v29-korogantis-background.png",
+  "background": "assets/ready/stage-v29-korogantis-background-c2a37b4e91703f31.webp",
+  "preview": "assets/ready/stage-picker-korogantis-d5a326293287144c.webp",
+  "main": {
+   "source": "assets/stage-v29-korogantis-main.png",
+   "image": "assets/ready/stage-v29-korogantis-main-a7a384d796c58f29.webp",
+   "width": 1527,
+   "height": 238,
+   "surfaceLeft": 58,
+   "surfaceRight": 1471,
+   "walkY": 11,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v29-korogantis-small.png",
+   "image": "assets/ready/stage-v29-korogantis-small-6cfe88f41d30144b.webp",
+   "width": 716,
+   "height": 187,
+   "surfaceLeft": 31,
+   "surfaceRight": 688,
+   "walkY": 12
+  }
+ },
+ "candyhouse": {
+  "backgroundSource": "assets/stage-v29-candyhouse-background.png",
+  "background": "assets/ready/stage-v29-candyhouse-background-1289a1a00f3a42c0.webp",
+  "preview": "assets/ready/stage-picker-candyhouse-04224845c354991c.webp",
+  "main": {
+   "source": "assets/stage-v29-candyhouse-main.png",
+   "image": "assets/ready/stage-v29-candyhouse-main-4dd5324ee3cecbba.webp",
+   "width": 1512,
+   "height": 259,
+   "surfaceLeft": 37,
+   "surfaceRight": 1474,
+   "walkY": 10,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v29-candyhouse-small.png",
+   "image": "assets/ready/stage-v29-candyhouse-small-f95d9fe4a0095770.webp",
+   "width": 760,
+   "height": 179,
+   "surfaceLeft": 27,
+   "surfaceRight": 731,
+   "walkY": 10
+  }
+ },
+ "edithold": {
+  "backgroundSource": "assets/stage-v29-edithold-background.png",
+  "background": "assets/ready/stage-v29-edithold-background-26f57d4c7297f47a.webp",
+  "preview": "assets/ready/stage-picker-edithold-aacf21aec3f08314.webp",
+  "main": {
+   "source": "assets/stage-v29-edithold-main.png",
+   "image": "assets/ready/stage-v29-edithold-main-990c9d71327561ac.webp",
+   "width": 1528,
+   "height": 284,
+   "surfaceLeft": 37,
+   "surfaceRight": 1490,
+   "walkY": 10,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v29-edithold-small.png",
+   "image": "assets/ready/stage-v29-edithold-small-2ad7c7e4aee88769.webp",
+   "width": 816,
+   "height": 246,
+   "surfaceLeft": 36,
+   "surfaceRight": 780,
+   "walkY": 10
+  }
  }
 };
