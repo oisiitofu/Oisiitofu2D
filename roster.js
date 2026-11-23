@@ -293,20 +293,50 @@ const Roster=(()=>{
  function summary(){const bingo=document.querySelector('#match-kind').value==='bingo'&&document.querySelector('#battle-mode').value==='online',startButton=document.querySelector('#start');if(startButton.dataset.bingo!==String(bingo)){startButton.dataset.bingo=String(bingo);startButton.innerHTML=bingo?'ビンゴカードから選ぶ <span>→</span>':'READY TO FIGHT <span>→</span>';}const online=document.querySelector('#battle-mode').value==='online',mode=document.querySelector('#battle-mode').selectedOptions[0].textContent,stage=document.querySelector('#stage').selectedOptions[0].textContent,cpu=document.querySelector('#cpu-character').selectedOptions[0].textContent;document.querySelector('#match-summary').textContent=mode+(document.querySelector('#match-kind').value==='bingo'&&document.querySelector('#battle-mode').value==='online'?' · ビンゴ対戦':'')+' · '+(SquadBattle.size()>1?(online?BattlePlayers.count()+'人 / ':'')+SquadBattle.size()+'キャラ団体戦':BattlePlayers.count()+'人 / '+($roster('battle-format').value==='teams'?'チーム戦・チームアタック'+(BattlePlayers.teamAttack()?'あり':'なし')+' / ':'')+BattlePlayers.stockCount()+'ストック')+(online||BattlePlayers.count()>2?'':' / '+cpu)+' / '+MatchRules.timeLabel(BattlePlayers.timeLimit())+' · '+stage;document.querySelector('#open-room').textContent=Net.code?'ROOM '+Net.code+(bingo?' · ビンゴカードを選ぶ →':' · 準備完了 / 参加者 →'):'ルームをつくる / 参加する →';refreshStages();}
  function refreshStages(){
   const id=$roster('stage').value,online=$roster('battle-mode').value==='online';
-  document.querySelectorAll('.stage-card').forEach(button=>{const selected=button.dataset.stage===id;button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));});
+  document.querySelectorAll('.stage-card,.stage-detail-card').forEach(button=>{const selected=button.dataset.stage===id;button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));});
   $roster('stage-selection-hint').textContent=online?'参加者の希望から抽選':'ステージを選択';
+  $roster('stage-list-mode').textContent=online?'各プレイヤーの希望から対戦ステージを抽選します。':'カードを押して対戦するステージを選びます。';
   document.querySelector('.stage-preview span').textContent=StageCatalog.name(id);
  }
+ function stagePreview(d,image){
+  if(d.id==='random')return '<span class="stage-random" aria-hidden="true">?</span>';
+  const backdrop=image?`<image href="${image}" width="1440" height="810" preserveAspectRatio="xMidYMid slice"/><rect width="1440" height="810" fill="#071022" opacity=".22"/>`:'<rect width="1440" height="810" fill="#101b30"/>';
+  const ledges=d.platforms.map(p=>`<rect x="${p.x}" y="${p.y}" width="${p.w}" height="${p.main?60:28}" rx="12" fill="${d.color}" stroke="#152234" stroke-width="10" paint-order="stroke"/>`).join('');
+  return `<svg viewBox="0 0 1440 810" aria-hidden="true">${backdrop}${ledges}</svg>`;
+ }
  function initStages(){
-  const select=$roster('stage'),previous=select.value,strip=$roster('stage-strip');select.replaceChildren();strip.replaceChildren();
-  for(const d of [{id:'random',name:'おまかせ'},...StageCatalog.stages]){
+  const select=$roster('stage'),previous=select.value,strip=$roster('stage-strip'),dialog=$roster('stage-list-dialog'),grid=$roster('stage-list-grid');
+  const entries=[{id:'random',name:'おまかせ'},...StageCatalog.stages];
+  select.replaceChildren();strip.replaceChildren();
+  const imageFor=d=>StageArtData[d.theme]?.preview||(d.previewBackground?StageLegacyPreview:null);
+  function choose(id){
+   select.value=id;select.dispatchEvent(new Event('change',{bubbles:true}));
+  }
+  for(const d of entries){
    const option=document.createElement('option');option.value=d.id;option.textContent=d.name;select.append(option);
-   const button=document.createElement('button');button.className='stage-card';button.dataset.stage=d.id;button.title=d.id==='random'?'全ステージから対戦開始ごとに抽選':d.name;
-   const stageImage=StageArtData[d.theme]?.background||d.previewBackground;
-   const art=d.id==='random'?'<span class="stage-random" aria-hidden="true">?</span>':`<svg viewBox="0 0 1440 810" aria-hidden="true">${stageImage?`<image href="${stageImage}" width="1440" height="810" preserveAspectRatio="xMidYMid slice"/><rect width="1440" height="810" fill="#071022" opacity=".3"/>`:'<rect width="1440" height="810" fill="#101b30"/>'}${d.platforms.map(p=>`<rect x="${p.x}" y="${p.y}" width="${p.w}" height="${p.main?60:28}" rx="12" fill="${d.color}"/>`).join('')}</svg>`;
-   const touch=typeof TouchControls!=='undefined'&&TouchControls.enabled;button.innerHTML=(touch&&stageImage?`<img class="stage-preview-image" data-stage-preview="${stageImage}" alt="" decoding="async" fetchpriority="low">`:art)+`<b>${d.name}</b>`;button.onclick=()=>{select.value=d.id;select.dispatchEvent(new Event('change'));};strip.append(button);
+   const button=document.createElement('button');button.type='button';button.className='stage-card';button.dataset.stage=d.id;button.title=d.id==='random'?'全ステージから対戦開始ごとに抽選':d.name;
+   const image=imageFor(d),touch=typeof TouchControls!=='undefined'&&TouchControls.enabled,art=stagePreview(d,image);
+   button.innerHTML=(touch&&image?`<img class="stage-preview-image" data-stage-preview="${image}" alt="" decoding="async" fetchpriority="low">`:art)+`<b>${d.name}</b>`;button.onclick=()=>choose(d.id);strip.append(button);
   }
   select.value=StageCatalog.normalize(previous);
+  $roster('stage-details').onclick=()=>{
+   Controls.clear();
+   if(!grid.children.length)for(const d of entries){
+    const button=document.createElement('button');button.type='button';button.className='stage-detail-card';button.dataset.stage=d.id;
+    const picture=document.createElement('span');picture.className='stage-detail-art';picture.innerHTML=stagePreview(d,imageFor(d));
+    const name=document.createElement('b');name.textContent=d.name;
+    const caption=document.createElement('small');caption.textContent=d.layout||(d.id==='random'?'全ステージから抽選':d.platforms.some(p=>p.motion)?'移動する足場':'固定の足場');
+    button.append(picture,name,caption);grid.append(button);
+    button.onclick=()=>{
+     choose(d.id);dialog.close();
+     const selected=strip.querySelector('.stage-card.selected');
+     if(selected)strip.scrollLeft+=selected.getBoundingClientRect().left-strip.getBoundingClientRect().left;
+    };
+   }
+   refreshStages();dialog.showModal();grid.querySelector('.selected')?.focus({preventScroll:true});
+  };
+  $roster('close-stage-list').onclick=()=>dialog.close();
+  dialog.addEventListener('close',()=>Controls.clear());
   const previews=strip.querySelectorAll('[data-stage-preview]');if(previews.length){if(typeof IntersectionObserver==='function'){const observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.src=e.target.dataset.stagePreview;observer.unobserve(e.target);}},{root:strip,rootMargin:'40px'});previews.forEach(el=>observer.observe(el));}else previews.forEach(el=>el.src=el.dataset.stagePreview);}
   for(const [id,direction]of [['stage-prev',-1],['stage-next',1]])$roster(id).onclick=()=>strip.scrollBy({left:direction*strip.clientWidth*.8,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
  }
@@ -329,7 +359,7 @@ const Roster=(()=>{
   for(const el of grid.querySelectorAll('.fighter-card>b')){const available=Math.max(0,el.clientWidth-8),fullWidth=measure.measureText(el.textContent).width;el.style.fontSize=(Math.floor(Math.min(nameSize,fontSize*available/fullWidth)*10)/10)+'px';el.parentElement.title=el.textContent;}
   cardArt(grid,cards);
  }
- function closePanels(){BingoBattle.close();for(const id of ['match-settings','online-room','settings','fighter-list-dialog','character-guide-dialog']){const dialog=document.getElementById(id);if(dialog.open)dialog.close();}}
+ function closePanels(){BingoBattle.close();for(const id of ['match-settings','online-room','settings','fighter-list-dialog','character-guide-dialog','stage-list-dialog']){const dialog=document.getElementById(id);if(dialog.open)dialog.close();}}
  function mode(){const online=document.querySelector('#battle-mode').value==='online';if(!online)document.querySelector('#match-kind').value='normal';document.querySelector('#online-panel').classList.toggle('hidden',!online);document.querySelector('.online-squad-size').classList.toggle('hidden',!online);document.querySelector('#online-lineup-controls').classList.toggle('hidden',!online);document.querySelector('#start').classList.toggle('hidden',online);document.querySelector('#open-room').classList.toggle('hidden',!online);document.querySelector('#roster-online-status').classList.toggle('hidden',!online);document.querySelector('#cpu-options').classList.toggle('hidden',online);if(!online&&Net.code)Net.leave();$roster('select-cpu').classList.toggle('hidden',online);if(online)target='player';refreshSelection();fit();SquadBattle.refresh();BattlePlayers.refresh();}
  function open(value='battle'){if(value==='online'&&!Net.code){document.querySelector('#home-screen').classList.remove('hidden');document.querySelector('#character-screen').classList.add('hidden');Net.browse();return;}document.querySelector('#menu').classList.remove('hidden');document.querySelector('#home-screen').classList.add('hidden');document.querySelector('#character-screen').classList.remove('hidden');document.querySelector('#battle-mode').value=value;mode();fit();artReady();}
  function init(){document.querySelector('.edition span').textContent=selectable.length+' FIGHTERS';for(const option of $roster('cpu-character').options)if(hiddenForms.has(option.value))option.hidden=option.disabled=true;document.querySelector('.roster-count').textContent=String(selectable.length).padStart(2,'0')+' FIGHTER / 05 COLORS';const grid=document.querySelector('#fighter-grid');for(const d of selectable){const button=document.createElement('button');button.className='fighter-card';button.dataset.id=d.id;button.innerHTML=`<img alt=""><small>${d.style}</small><b>${d.name}</b><span class="selected-mark"><span class="player-mark">1P</span><span class="cpu-mark">CPU</span></span>`;button.onclick=()=>select(d.id);grid.append(button);}for(let n=0;n<Math.max(0,6-definitions.length);n++){const slot=document.createElement('div');slot.className='future-fighter';slot.innerHTML='<span>＋</span><small>NEXT CHALLENGER</small>';slot.setAttribute('aria-label','今後追加するキャラクターの枠');grid.append(slot);}select(chosen);

@@ -13,7 +13,7 @@ const StageVisuals=(()=>{
   // Keep atmosphere and texture, with enough contrast behind tiny fighters.
   const shade=ctx.createLinearGradient(0,0,0,H);shade.addColorStop(0,'#0610260c');shade.addColorStop(.5,'#06102625');shade.addColorStop(1,'#0309136b');ctx.fillStyle=shade;ctx.fillRect(0,0,W,H);
   ctx.save();
-  const color={sky:'#e4faff',adventure:'#ffdf9c',waltz:'#e6d6ff',jazz:'#eecb95',japan:'#ffb68d',cyber:'#6ce7ff',fire:'#ffad53',festival:'#ffe1b2',beauty:'#ffe0ed',factory:'#ffc775',sports:'#e6fff4'}[stage.theme];
+  const color={sky:'#e4faff',adventure:'#ffdf9c',waltz:'#e6d6ff',jazz:'#eecb95',japan:'#ffb68d',cyber:'#6ce7ff',fire:'#ffad53',festival:'#ffe1b2',beauty:'#ffe0ed',factory:'#ffc775',sports:'#e6fff4'}[stage.theme]||stage.color;
   for(let n=0;n<26;n++){
    const x=(n*173.81+clock*(stage.theme==='beauty'?.23:.10))%W,y=(n*71.35-clock*(stage.theme==='fire'?.38:.12)+H*100)%H;
    ctx.globalAlpha=.12+(Math.sin(clock*.018+n)+1)*.08;
@@ -22,7 +22,21 @@ const StageVisuals=(()=>{
   }
   if(stage.theme==='factory'){for(let n=0;n<9;n++){const x=110+n*160,y=H-80-((clock*.65+n*47)%190);ctx.globalAlpha=.12;line([[x,y],[x-2,y+5]],'#ffbc5f',1.3);}}
   if(stage.theme==='sports'){for(let n=0;n<7;n++){const x=80+n*207,y=H*.3+(n%2)*45;ctx.globalAlpha=Math.max(0,Math.sin(clock*.035+n*2.1)-.94)*5;line([[x-3,y],[x+3,y]],'#fff',1);line([[x,y-3],[x,y+3]],'#fff',1);}}
+  if(stage.layout)atmosphere(stage.theme,color);
   ctx.restore();return true;
+ }
+ function atmosphere(theme,color){
+  for(let n=0;n<12;n++){
+   const rise=theme==='abyss'||theme==='mycelium',drift=theme==='rail'?2.7:theme==='aurora'?.85:.25;
+   const x=(W*100+n*211.7+(theme==='rail'?-1:1)*clock*drift)%W;
+   const y=(H*100+n*113.7+(rise?-1:1)*clock*(theme==='abyss'?.72:.30))%H;
+   ctx.globalAlpha=.13+(Math.sin(clock*.018+n)+1)*.055;
+   if(theme==='abyss'){ctx.strokeStyle=color;ctx.beginPath();ctx.arc(x,y,2+n%5,0,TAU);ctx.stroke();}
+   else if(theme==='rail'||theme==='aurora')line([[x,y],[x+7+n%4*3,y+(theme==='aurora'?2:0)]],color,1);
+   else if(theme==='archive'||theme==='origami'){
+    ctx.save();ctx.translate(x,y);ctx.rotate(n+clock*.017);path([[-3,-2],[3,-2],[5,2],[-2,3]],color);ctx.restore();
+   }else ellipse(x,y,2+n%3,2+n%3,color);
+  }
  }
  function geometry(p){
   const art=StageArtData[StageCatalog.get(activeStage).theme]?.[p.main?'main':'small'];if(!art)return null;
@@ -37,11 +51,26 @@ const StageVisuals=(()=>{
   ctx.restore();return true;
  }
  function reset(){clock=0;}
+ function motionOffset(motion,time){
+  if(motion.path){
+   const stops=motion.path,t=time%stops.at(-1)[0];
+   const index=stops.findIndex(stop=>stop[0]>t),[begin,x0,y0]=stops[index-1],[end,x1,y1]=stops[index];
+   const progress=(t-begin)/(end-begin),smooth=progress*progress*(3-2*progress);
+   return[x0+(x1-x0)*smooth,y0+(y1-y0)*smooth];
+  }
+  const phase=motion.phase||0,phaseY=phase+(motion.phaseY||0),t=time*TAU/motion.period;
+  return[(motion.x||0)*(Math.sin(t+phase)-Math.sin(phase)),(motion.y||0)*(Math.sin(t+phaseY)-Math.sin(phaseY))];
+ }
  function tick(){
   // Pick support before moving any platform. Two crossing platforms must never
   // carry the same fighter twice in one simulation frame.
   const riders=fighters.map(f=>f.grounded&&!f.respawn&&!f.ledge?platforms.find(p=>Math.abs(f.y-p.y)<3&&f.x>=p.x-f.character.ecb.radius&&f.x<=p.x+p.w+f.character.ecb.radius):null);
-  clock++;for(const p of platforms){if(!p.motion)continue;p.baseX??=p.x;p.baseY??=p.y;const oldX=p.x,oldY=p.y,t=clock*TAU/p.motion.period+(p.motion.phase||0),initial=Math.sin(p.motion.phase||0);p.x=p.baseX+(p.motion.x||0)*(Math.sin(t)-initial);p.y=p.baseY+(p.motion.y||0)*(Math.sin(t)-initial);p.dx=p.x-oldX;p.dy=p.y-oldY;}
+  clock++;for(const p of platforms){
+   if(!p.motion)continue;
+   p.baseX??=p.x;p.baseY??=p.y;
+   const oldX=p.x,oldY=p.y,[dx,dy]=motionOffset(p.motion,clock);
+   p.x=p.baseX+dx;p.y=p.baseY+dy;p.dx=p.x-oldX;p.dy=p.y-oldY;
+  }
   fighters.forEach((f,n)=>{const p=riders[n];if(p?.motion){f.x+=p.dx;f.y+=p.dy;}});
  }
  return{load,prepared,retain,background,platform,geometry,reset,tick,get ready(){return prepared()},get clock(){return clock},get diagnostics(){return{images:images.size}}};

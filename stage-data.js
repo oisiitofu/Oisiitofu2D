@@ -14,7 +14,31 @@ const StageCatalog=(()=>{
   {id:'9',name:'フェスティバル・パレード',theme:'festival',folder:'festival-parade',color:'#ff9bd8',platforms:[{x:190,y:560,w:1060,main:true},{x:340,y:390,w:200,motion:{y:40,period:300}},{x:900,y:390,w:200,motion:{y:-40,period:300}},{x:630,y:285,w:180}]},
   {id:'10',name:'水鏡の花園',theme:'beauty',folder:'mirror-garden',color:'#9ce4cf',platforms:[{x:300,y:560,w:840,main:true},{x:410,y:395,w:200},{x:830,y:395,w:200},{x:630,y:290,w:180,motion:{x:90,period:480}}]},
   {id:'11',name:'ギアワーク・ファクトリー',theme:'factory',folder:'gearwork-factory',color:'#ffbf62',platforms:[{x:250,y:560,w:940,main:true},{x:345,y:405,w:190,motion:{y:80,period:300}},{x:905,y:405,w:190,motion:{y:80,period:300,phase:3.141592653589793}}]},
-  {id:'12',name:'チャンピオンズ・スタジアム',theme:'sports',folder:'champions-stadium',color:'#7ee6c7',platforms:[{x:190,y:560,w:1060,main:true},{x:405,y:380,w:210},{x:825,y:380,w:210}]}
+  {id:'12',name:'チャンピオンズ・スタジアム',theme:'sports',folder:'champions-stadium',color:'#7ee6c7',platforms:[{x:190,y:560,w:1060,main:true},{x:405,y:380,w:210},{x:825,y:380,w:210}]},
+  {id:'13',name:'深海観測窓',theme:'abyss',folder:'abyss-observatory',color:'#62dccc',layout:'2台の観測リフトが楕円を周回',platforms:[
+   {x:250,y:560,w:940,main:true},
+   {x:636,y:430,w:168,motion:{x:150,y:72,phaseY:Math.PI/2,period:480}},
+   {x:636,y:286,w:168,motion:{x:150,y:72,phase:Math.PI,phaseY:Math.PI/2,period:480}}
+  ]},
+  {id:'14',name:'極光の氷窟',theme:'aurora',folder:'aurora-grotto',color:'#a3dcff',layout:'崖の外に張り出す氷棚',platforms:[
+   {x:310,y:560,w:820,main:true},{x:140,y:480,w:205},{x:1095,y:480,w:205},{x:624,y:340,w:192}
+  ]},
+  {id:'15',name:'星詠みの書庫',theme:'archive',folder:'starlit-archive',color:'#ffd397',layout:'高さの違う4つの書棚',platforms:[
+   {x:220,y:560,w:1000,main:true},{x:330,y:455,w:155},{x:525,y:372,w:160},{x:758,y:295,w:176},{x:965,y:427,w:196}
+  ]},
+  {id:'16',name:'折り紙工房',theme:'origami',folder:'origami-workshop',color:'#ffe2ad',layout:'斜めに折り替わる和紙の足場',platforms:[
+   {x:285,y:560,w:870,main:true},
+   {x:310,y:468,w:188,motion:{path:[[0,0,0],[45,0,0],[180,210,-113],[285,210,-113],[435,0,0],[480,0,0]]}},
+   {x:935,y:370,w:182,motion:{path:[[0,0,0],[78,0,0],[216,-165,104],[330,-165,104],[475,0,0],[480,0,0]]}}
+  ]},
+  {id:'17',name:'胞子の洞窟',theme:'mycelium',folder:'spore-cavern',color:'#eaa5ed',layout:'中央の菌床が上昇してしばらく滞在',platforms:[
+   {x:215,y:560,w:1010,main:true},{x:355,y:380,w:165},{x:920,y:380,w:165},
+   {x:560,y:474,w:320,motion:{path:[[0,0,0],[100,0,0],[225,0,-172],[345,0,-172],[475,0,0],[540,0,0]]}}
+  ]},
+  {id:'18',name:'宵越しの夜行列車',theme:'rail',folder:'midnight-express',color:'#ffc482',layout:'保線車が上下2段の経路を周回',platforms:[
+   {x:190,y:560,w:1060,main:true},{x:1038,y:396,w:154},
+   {x:340,y:436,w:170,motion:{path:[[0,0,0],[35,0,0],[200,510,0],[262,510,-114],[422,0,-114],[485,0,0],[520,0,0]]}}
+  ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
  const normalize=id=>id==='random'||stages.some(s=>s.id===id)?id:stages[0].id;

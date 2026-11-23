@@ -1,5 +1,6 @@
 'use strict';
-// Native generated sprite geometry; collision top/ends map to these pixels.
+// Native sprite geometry; collision top/ends map to these pixels.
+const StageLegacyPreview="assets/ready/stage-picker-sanctum-5f49562d4db7b394.webp";
 const StageArtData={
  "sky": {
   "backgroundSource": "assets/stage-v2-sky-background.png",
@@ -35,7 +36,8 @@ const StageArtData={
     "width": 296,
     "height": 172
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-sky-ff7db7d8e84b85a0.webp"
  },
  "adventure": {
   "backgroundSource": "assets/stage-v2-adventure-background.png",
@@ -71,7 +73,8 @@ const StageArtData={
     "width": 297,
     "height": 205
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-adventure-51cf9876f5a14cbd.webp"
  },
  "waltz": {
   "backgroundSource": "assets/stage-v2-waltz-background.png",
@@ -107,7 +110,8 @@ const StageArtData={
     "width": 293,
     "height": 167
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-waltz-acb12892f3a86a12.webp"
  },
  "jazz": {
   "backgroundSource": "assets/stage-v2-jazz-background.png",
@@ -143,7 +147,8 @@ const StageArtData={
     "width": 329,
     "height": 186
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-jazz-2168360edc8a803f.webp"
  },
  "japan": {
   "backgroundSource": "assets/stage-v2-japan-background.png",
@@ -179,7 +184,8 @@ const StageArtData={
     "width": 333,
     "height": 227
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-japan-587bd7b7936d05c8.webp"
  },
  "cyber": {
   "backgroundSource": "assets/stage-v2-cyber-background.png",
@@ -215,7 +221,8 @@ const StageArtData={
     "width": 323,
     "height": 201
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-cyber-d863987d740592a7.webp"
  },
  "fire": {
   "backgroundSource": "assets/stage-v2-fire-background.png",
@@ -251,7 +258,8 @@ const StageArtData={
     "width": 302,
     "height": 204
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-fire-a360aed27d9f280c.webp"
  },
  "festival": {
   "backgroundSource": "assets/stage-v2-festival-background.png",
@@ -287,7 +295,8 @@ const StageArtData={
     "width": 300,
     "height": 200
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-festival-31209b5e517fe021.webp"
  },
  "beauty": {
   "backgroundSource": "assets/stage-v2-beauty-background.png",
@@ -323,7 +332,8 @@ const StageArtData={
     "width": 309,
     "height": 206
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-beauty-00f078c317040964.webp"
  },
  "factory": {
   "backgroundSource": "assets/stage-v3-factory-background.png",
@@ -359,7 +369,8 @@ const StageArtData={
     "width": 704,
     "height": 306
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-factory-cba0ef6f870ae242.webp"
  },
  "sports": {
   "backgroundSource": "assets/stage-v3-sports-background.png",
@@ -395,6 +406,229 @@ const StageArtData={
     "width": 802,
     "height": 164
    }
-  }
+  },
+  "preview": "assets/ready/stage-picker-sports-bbdca95b63f104e9.webp"
+ },
+ "abyss": {
+  "backgroundSource": "assets/stage-v4-abyss-background.png",
+  "background": "assets/ready/stage-v4-abyss-background-cb14d8d3addcd0b7.webp",
+  "main": {
+   "image": "assets/ready/stage-v4-abyss-main-449c3707608adfae.webp",
+   "nativeImage": "assets/stage-v4-abyss-main.png",
+   "width": 1479,
+   "height": 303,
+   "walkY": 22,
+   "surfaceLeft": 17,
+   "surfaceRight": 1461,
+   "source": "assets/stage-v4-abyss-platforms.png",
+   "rect": {
+    "left": 29,
+    "top": 142,
+    "width": 1479,
+    "height": 303
+   }
+  },
+  "small": {
+   "image": "assets/ready/stage-v4-abyss-small-861bb90e9fd37d18.webp",
+   "nativeImage": "assets/stage-v4-abyss-small.png",
+   "width": 830,
+   "height": 217,
+   "walkY": 21,
+   "surfaceLeft": 12,
+   "surfaceRight": 819,
+   "source": "assets/stage-v4-abyss-platforms.png",
+   "rect": {
+    "left": 353,
+    "top": 726,
+    "width": 830,
+    "height": 217
+   }
+  },
+  "preview": "assets/ready/stage-picker-abyss-69a1a1690a477964.webp"
+ },
+ "aurora": {
+  "backgroundSource": "assets/stage-v4-aurora-background.png",
+  "background": "assets/ready/stage-v4-aurora-background-7d6929c76dee212e.webp",
+  "main": {
+   "image": "assets/ready/stage-v4-aurora-main-e5623e741676aaf1.webp",
+   "nativeImage": "assets/stage-v4-aurora-main.png",
+   "width": 1448,
+   "height": 239,
+   "walkY": 18,
+   "surfaceLeft": 11,
+   "surfaceRight": 1435,
+   "source": "assets/stage-v4-aurora-platforms.png",
+   "rect": {
+    "left": 45,
+    "top": 208,
+    "width": 1448,
+    "height": 239
+   }
+  },
+  "small": {
+   "image": "assets/ready/stage-v4-aurora-small-942e96cccc6a4151.webp",
+   "nativeImage": "assets/stage-v4-aurora-small.png",
+   "width": 748,
+   "height": 220,
+   "walkY": 16,
+   "surfaceLeft": 11,
+   "surfaceRight": 736,
+   "source": "assets/stage-v4-aurora-platforms.png",
+   "rect": {
+    "left": 395,
+    "top": 758,
+    "width": 748,
+    "height": 220
+   }
+  },
+  "preview": "assets/ready/stage-picker-aurora-540907fb352d0dad.webp"
+ },
+ "archive": {
+  "backgroundSource": "assets/stage-v4-archive-background.png",
+  "background": "assets/ready/stage-v4-archive-background-65a9daf76cc411d9.webp",
+  "main": {
+   "image": "assets/ready/stage-v4-archive-main-8aeff1df94f7bdd7.webp",
+   "nativeImage": "assets/stage-v4-archive-main.png",
+   "width": 1507,
+   "height": 291,
+   "walkY": 28,
+   "surfaceLeft": 15,
+   "surfaceRight": 1489,
+   "source": "assets/stage-v4-archive-platforms.png",
+   "rect": {
+    "left": 15,
+    "top": 172,
+    "width": 1507,
+    "height": 291
+   }
+  },
+  "small": {
+   "image": "assets/ready/stage-v4-archive-small-6f27e0b135d52489.webp",
+   "nativeImage": "assets/stage-v4-archive-small.png",
+   "width": 805,
+   "height": 188,
+   "walkY": 28,
+   "surfaceLeft": 12,
+   "surfaceRight": 791,
+   "source": "assets/stage-v4-archive-platforms.png",
+   "rect": {
+    "left": 366,
+    "top": 713,
+    "width": 805,
+    "height": 188
+   }
+  },
+  "preview": "assets/ready/stage-picker-archive-029cf06424a89226.webp"
+ },
+ "origami": {
+  "backgroundSource": "assets/stage-v4-origami-background.png",
+  "background": "assets/ready/stage-v4-origami-background-215ffc491bf7c29b.webp",
+  "main": {
+   "image": "assets/ready/stage-v4-origami-main-5eeb776696caadd5.webp",
+   "nativeImage": "assets/stage-v4-origami-main.png",
+   "width": 1520,
+   "height": 192,
+   "walkY": 13,
+   "surfaceLeft": 12,
+   "surfaceRight": 1508,
+   "source": "assets/stage-v4-origami-platforms.png",
+   "rect": {
+    "left": 8,
+    "top": 191,
+    "width": 1520,
+    "height": 192
+   }
+  },
+  "small": {
+   "image": "assets/ready/stage-v4-origami-small-1e5937899ad433df.webp",
+   "nativeImage": "assets/stage-v4-origami-small.png",
+   "width": 831,
+   "height": 141,
+   "walkY": 13,
+   "surfaceLeft": 12,
+   "surfaceRight": 819,
+   "source": "assets/stage-v4-origami-platforms.png",
+   "rect": {
+    "left": 352,
+    "top": 729,
+    "width": 831,
+    "height": 141
+   }
+  },
+  "preview": "assets/ready/stage-picker-origami-3850d5b5eb50e069.webp"
+ },
+ "mycelium": {
+  "backgroundSource": "assets/stage-v4-mycelium-background.png",
+  "background": "assets/ready/stage-v4-mycelium-background-a423b72f75463c57.webp",
+  "main": {
+   "image": "assets/ready/stage-v4-mycelium-main-0eb153dfd80da357.webp",
+   "nativeImage": "assets/stage-v4-mycelium-main.png",
+   "width": 1460,
+   "height": 309,
+   "walkY": 14,
+   "surfaceLeft": 12,
+   "surfaceRight": 1449,
+   "source": "assets/stage-v4-mycelium-platforms.png",
+   "rect": {
+    "left": 38,
+    "top": 133,
+    "width": 1460,
+    "height": 309
+   }
+  },
+  "small": {
+   "image": "assets/ready/stage-v4-mycelium-small-617288daf5c8f63a.webp",
+   "nativeImage": "assets/stage-v4-mycelium-small.png",
+   "width": 788,
+   "height": 245,
+   "walkY": 15,
+   "surfaceLeft": 13,
+   "surfaceRight": 776,
+   "source": "assets/stage-v4-mycelium-platforms.png",
+   "rect": {
+    "left": 373,
+    "top": 697,
+    "width": 788,
+    "height": 245
+   }
+  },
+  "preview": "assets/ready/stage-picker-mycelium-b25cac5f6d3e627e.webp"
+ },
+ "rail": {
+  "backgroundSource": "assets/stage-v4-rail-background.png",
+  "background": "assets/ready/stage-v4-rail-background-17b56892cfc3aa2c.webp",
+  "main": {
+   "image": "assets/ready/stage-v4-rail-main-4be4ac1deedbf186.webp",
+   "nativeImage": "assets/stage-v4-rail-main.png",
+   "width": 1487,
+   "height": 348,
+   "walkY": 13,
+   "surfaceLeft": 25,
+   "surfaceRight": 1460,
+   "source": "assets/stage-v4-rail-platforms.png",
+   "rect": {
+    "left": 25,
+    "top": 129,
+    "width": 1487,
+    "height": 348
+   }
+  },
+  "small": {
+   "image": "assets/ready/stage-v4-rail-small-194dda4a78d07dba.webp",
+   "nativeImage": "assets/stage-v4-rail-small.png",
+   "width": 730,
+   "height": 292,
+   "walkY": 11,
+   "surfaceLeft": 9,
+   "surfaceRight": 720,
+   "source": "assets/stage-v4-rail-platforms.png",
+   "rect": {
+    "left": 402,
+    "top": 694,
+    "width": 730,
+    "height": 292
+   }
+  },
+  "preview": "assets/ready/stage-picker-rail-c4cb19fa971f3b0e.webp"
  }
 };
