@@ -1178,5 +1178,101 @@ const StageArtData={
    "surfaceRight": 806,
    "walkY": 21
   }
+ },
+ "avalon": {
+  "backgroundSource": "assets/stage-v12-avalon-background.png",
+  "background": "assets/ready/stage-v12-avalon-background-58642c357fac6b8e.webp",
+  "preview": "assets/ready/stage-picker-avalon-f4e5cba7ae3b88e2.webp",
+  "main": {
+   "source": "assets/stage-v12-avalon-main.png",
+   "image": "assets/ready/stage-v12-avalon-main-2bb28bbe03952ae6.webp",
+   "width": 1732,
+   "height": 375,
+   "surfaceLeft": 68,
+   "surfaceRight": 1664,
+   "walkY": 11,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v12-avalon-small.png",
+   "image": "assets/ready/stage-v12-avalon-small-c7e97a076c25db92.webp",
+   "width": 924,
+   "height": 201,
+   "surfaceLeft": 14,
+   "surfaceRight": 909,
+   "walkY": 22
+  }
+ },
+ "ripple": {
+  "backgroundSource": "assets/stage-v12-ripple-background.png",
+  "background": "assets/ready/stage-v12-ripple-background-015e7cde1fd9c18d.webp",
+  "preview": "assets/ready/stage-picker-ripple-472b7eb1ea2c5ead.webp",
+  "main": {
+   "source": "assets/stage-v12-ripple-main.png",
+   "image": "assets/ready/stage-v12-ripple-main-f9e65e60098cefe6.webp",
+   "width": 1757,
+   "height": 294,
+   "surfaceLeft": 84,
+   "surfaceRight": 1670,
+   "walkY": 11,
+   "verticalScale": 0.65
+  },
+  "small": {
+   "source": "assets/stage-v12-ripple-small.png",
+   "image": "assets/ready/stage-v12-ripple-small-ad2b355a8f0aa442.webp",
+   "width": 950,
+   "height": 186,
+   "surfaceLeft": 48,
+   "surfaceRight": 902,
+   "walkY": 13
+  }
+ },
+ "chemical": {
+  "backgroundSource": "assets/stage-v12-chemical-background.png",
+  "background": "assets/ready/stage-v12-chemical-background-1aa3fe948a6cc764.webp",
+  "preview": "assets/ready/stage-picker-chemical-d411a45e3c14e31e.webp",
+  "main": {
+   "source": "assets/stage-v12-chemical-main.png",
+   "image": "assets/ready/stage-v12-chemical-main-f336a7284b129ed7.webp",
+   "width": 1722,
+   "height": 349,
+   "surfaceLeft": 63,
+   "surfaceRight": 1659,
+   "walkY": 11,
+   "verticalScale": 0.57
+  },
+  "small": {
+   "source": "assets/stage-v12-chemical-small.png",
+   "image": "assets/ready/stage-v12-chemical-small-42dec682d9acaa3f.webp",
+   "width": 970,
+   "height": 205,
+   "surfaceLeft": 39,
+   "surfaceRight": 931,
+   "walkY": 9
+  }
+ },
+ "monastery": {
+  "backgroundSource": "assets/stage-v12-monastery-background.png",
+  "background": "assets/ready/stage-v12-monastery-background-76973ede24422755.webp",
+  "preview": "assets/ready/stage-picker-monastery-dcae3713235e2d13.webp",
+  "main": {
+   "source": "assets/stage-v12-monastery-main.png",
+   "image": "assets/ready/stage-v12-monastery-main-dc615685f98301f2.webp",
+   "width": 1752,
+   "height": 344,
+   "surfaceLeft": 85,
+   "surfaceRight": 1666,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v12-monastery-small.png",
+   "image": "assets/ready/stage-v12-monastery-small-a4d62357d2fcdbbe.webp",
+   "width": 960,
+   "height": 209,
+   "surfaceLeft": 34,
+   "surfaceRight": 925,
+   "walkY": 9
+  }
  }
 };

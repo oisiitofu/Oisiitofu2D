@@ -148,6 +148,31 @@ const StageCatalog=(()=>{
    {x:402,y:325,w:174},
    {x:646,y:357,w:189},
    {x:840,y:474,w:300}
+  ]},
+  {id:"42",name:"帝都アバロン",origin:"ロマンシング サ・ガ2",theme:"avalon",folder:"imperial-avalon",color:"#b8dfe8",layout:"城壁上に細い足場が2枚、右の堀には低い退避路",platforms:[
+   {x:189,y:560,w:960,main:true},
+   {x:223,y:448,w:222},
+   {x:446,y:322,w:156},
+   {x:753,y:308,w:181},
+   {x:964,y:449,w:226},
+   {x:1135,y:625,w:164}
+  ]},
+  {id:"43",name:"クリアブルック",origin:"オクトパストラベラー",theme:"ripple",folder:"clearbrook",color:"#cbdfa6",layout:"川下の小舟が右の崖下をゆっくり流れて岸へ戻る",platforms:[
+   {x:244,y:551,w:896,main:true},
+   {x:356,y:416,w:305},
+   {x:1024,y:643,w:145,motion:{path:[[0,0,0],[118,0,0],[300,160,-18],[363,160,-18],[470,45,-78],[540,0,0],[620,0,0]]}}
+  ]},
+  {id:"44",name:"ケミカルプラント",origin:"ソニック・ザ・ヘッジホッグ",theme:"chemical",folder:"chemical-plant",color:"#f3b4ed",layout:"左右の昇降台が異なる周期で折れ曲がった配管を巡る",platforms:[
+   {x:248,y:565,w:944,main:true},
+   {x:629,y:374,w:182},
+   {x:178,y:478,w:192,motion:{path:[[0,0,0],[74,82,-74],[117,82,-74],[189,82,-158],[250,270,-158],[330,270,-158],[450,0,0],[510,0,0]]}},
+   {x:1025,y:367,w:170,motion:{path:[[0,0,0],[80,0,0],[166,0,164],[225,-142,164],[302,-142,80],[354,0,0],[390,0,0]]}}
+  ]},
+  {id:"45",name:"ガルグ＝マク大修道院",origin:"ファイアーエムブレム",theme:"monastery",folder:"garreg-mach-monastery",color:"#e0d1b6",layout:"短い中庭から左の回廊へ登り、頭上の渡り廊下を越える",platforms:[
+   {x:428,y:561,w:644,main:true},
+   {x:219,y:481,w:252},
+   {x:435,y:389,w:216},
+   {x:539,y:285,w:480}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
