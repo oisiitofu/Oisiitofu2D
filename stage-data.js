@@ -643,6 +643,33 @@ const StageCatalog=(()=>{
    {x:352,y:401,w:154},
    {x:516,y:311,w:181},
    {x:866,y:421,w:404}
+  ]},
+  {id:"118",name:"月面のニューヨーク",origin:"プラグマタ",theme:"lunarnewyork",folder:"lunar-new-york",color:"#b7cde7",layout:"造形用の足場が右から左へ二度に分けて送り出される。折り返しは下層のまっすぐな軌道を通る",platforms:[
+   {x:312,y:559,w:824,main:true},
+   {x:151,y:351,w:329},
+   {x:1077,y:485,w:226},
+   {x:876,y:404,w:181,motion:{path:[[0,0,0],[109,0,0],[212,-266,-66],[262,-266,-66],[374,-519,-29],[431,-519,-29],[511,-519,54],[673,0,54],[743,0,0],[798,0,0]]}}
+  ]},
+  {id:"119",name:"カタヤマ・パレス 水処理場下層",origin:"ペルソナ5：The Phantom X",theme:"katayamawater",folder:"katayama-water-treatment",color:"#ddbacb",layout:"水門に沿う短い整備台が左右で時間差をつけて上下する。中央は左右の台から飛び移れる固定の高架",platforms:[
+   {x:278,y:555,w:881,main:true},
+   {x:629,y:331,w:192},
+   {x:246,y:471,w:146,motion:{path:[[0,0,0],[72,0,0],[164,-40,-76],[303,-40,-76],[391,0,0],[470,0,0]]}},
+   {x:1064,y:404,w:205,motion:{path:[[0,0,0],[141,0,0],[240,71,77],[304,71,77],[421,0,0],[470,0,0]]}}
+  ]},
+  {id:"120",name:"ダームの塔",origin:"イース",theme:"dharmtower",folder:"dharm-tower",color:"#c1cce5",layout:"最上段へ通じる短い足場が左に連なる。右は離れた長い足場と崖下の狭い石棚で復帰ルートが分かれる",platforms:[
+   {x:351,y:559,w:763,main:true},
+   {x:128,y:492,w:168},
+   {x:309,y:414,w:163},
+   {x:418,y:321,w:139},
+   {x:563,y:244,w:156},
+   {x:914,y:381,w:331},
+   {x:1174,y:627,w:165}
+  ]},
+  {id:"121",name:"地方裁判所 第2法廷",origin:"逆転裁判",theme:"districtcourt",folder:"district-court-courtroom-2",color:"#e0c3a1",layout:"地上は広い法廷。中央の証言台と左右の弁護席・検察席を異なる高さと幅で配置した",platforms:[
+   {x:125,y:554,w:1190,main:true},
+   {x:223,y:397,w:297},
+   {x:613,y:473,w:214},
+   {x:945,y:427,w:314}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

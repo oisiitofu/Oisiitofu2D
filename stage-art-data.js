@@ -3002,5 +3002,101 @@ const StageArtData={
    "surfaceRight": 754,
    "walkY": 10
   }
+ },
+ "lunarnewyork": {
+  "backgroundSource": "assets/stage-v31-lunarnewyork-background.png",
+  "background": "assets/ready/stage-v31-lunarnewyork-background-ea98fb5f087e530b.webp",
+  "preview": "assets/ready/stage-picker-lunarnewyork-074b23362062bdb0.webp",
+  "main": {
+   "source": "assets/stage-v31-lunarnewyork-main.png",
+   "image": "assets/ready/stage-v31-lunarnewyork-main-2767142081b2c601.webp",
+   "width": 1520,
+   "height": 293,
+   "surfaceLeft": 47,
+   "surfaceRight": 1472,
+   "walkY": 9,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v31-lunarnewyork-small.png",
+   "image": "assets/ready/stage-v31-lunarnewyork-small-242ba6051536f02c.webp",
+   "width": 802,
+   "height": 142,
+   "surfaceLeft": 35,
+   "surfaceRight": 767,
+   "walkY": 9
+  }
+ },
+ "katayamawater": {
+  "backgroundSource": "assets/stage-v31-katayamawater-background.png",
+  "background": "assets/ready/stage-v31-katayamawater-background-346b4c816c5aba61.webp",
+  "preview": "assets/ready/stage-picker-katayamawater-7f68dae2c7fb2688.webp",
+  "main": {
+   "source": "assets/stage-v31-katayamawater-main.png",
+   "image": "assets/ready/stage-v31-katayamawater-main-89b39536faaa4c2e.webp",
+   "width": 1510,
+   "height": 209,
+   "surfaceLeft": 31,
+   "surfaceRight": 1478,
+   "walkY": 10,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v31-katayamawater-small.png",
+   "image": "assets/ready/stage-v31-katayamawater-small-7fc8c17cbeffd8ac.webp",
+   "width": 762,
+   "height": 170,
+   "surfaceLeft": 27,
+   "surfaceRight": 734,
+   "walkY": 10
+  }
+ },
+ "dharmtower": {
+  "backgroundSource": "assets/stage-v31-dharmtower-background.png",
+  "background": "assets/ready/stage-v31-dharmtower-background-f331492b2e1ca718.webp",
+  "preview": "assets/ready/stage-picker-dharmtower-2cd6ea5e9be83276.webp",
+  "main": {
+   "source": "assets/stage-v31-dharmtower-main.png",
+   "image": "assets/ready/stage-v31-dharmtower-main-321649cf0486ca20.webp",
+   "width": 1491,
+   "height": 320,
+   "surfaceLeft": 25,
+   "surfaceRight": 1469,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v31-dharmtower-small.png",
+   "image": "assets/ready/stage-v31-dharmtower-small-f59f7e12cdb2604d.webp",
+   "width": 772,
+   "height": 218,
+   "surfaceLeft": 18,
+   "surfaceRight": 754,
+   "walkY": 10
+  }
+ },
+ "districtcourt": {
+  "backgroundSource": "assets/stage-v31-districtcourt-background.png",
+  "background": "assets/ready/stage-v31-districtcourt-background-e09f573612a016de.webp",
+  "preview": "assets/ready/stage-picker-districtcourt-ae2cf0b66f0e26a2.webp",
+  "main": {
+   "source": "assets/stage-v31-districtcourt-main.png",
+   "image": "assets/ready/stage-v31-districtcourt-main-251b83155d40eb74.webp",
+   "width": 1492,
+   "height": 272,
+   "surfaceLeft": 75,
+   "surfaceRight": 1418,
+   "walkY": 8,
+   "verticalScale": 0.59
+  },
+  "small": {
+   "source": "assets/stage-v31-districtcourt-small.png",
+   "image": "assets/ready/stage-v31-districtcourt-small-dae78dd6e2170d64.webp",
+   "width": 828,
+   "height": 189,
+   "surfaceLeft": 33,
+   "surfaceRight": 793,
+   "walkY": 9
+  }
  }
 };
