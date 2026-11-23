@@ -3,7 +3,62 @@
 const FighterLibrary=(()=>{
  const favoriteKey='tofu-bros.favorite-fighters.v1',recentKey='tofu-bros.recent-fighters.v1',folderKey='tofu-bros.favorite-folders.v1';
  const order=new Map(Roster.selectable.map((d,n)=>[d.id,n])),valid=new Set(order.keys()),collator=new Intl.Collator('ja');
- let favorites=[],recent=[],folders=[],scope='all',origin='',folderMemoryOnly=false;
+ let favorites=[],recent=[],folders=[],scope='all',origin='',query='',folderMemoryOnly=false;
+ const readings={isaac:'ろびん',okami:'おおかみ',twob:'とぅーびー',makoto:'ゆうきまこと',narukami:'なるかみゆう',naegi:'なえぎまこと',pawapuro:'ぱわぷろくん',headmaster:'じゅくちょう',sakuna:'さくなひめ',human:'ひゅーまん',miku:'はつねみく',naruhodo:'なるほどうりゅういち',layton:'れいとんきょうじゅ',kiryu:'きりゅうかずま',ryofu:'りょふ',edf:'ちきゅうぼうえいぐん',frog:'かえる',sumino:'すみのたくみ',eve:'いゔ',deemo:'でぃーも',hanajs:'はな',kisuke:'きすけ',c4621:'しーふぉーろくにーいち',toro:'とろ',hinako:'しみずひなこ',yuri:'ゆうり',katamari:'かたまりだましい',alucard:'あるかーど',kurabe:'くらべじゅうろう',karateka:'からてか',hayabusa:'りゅうはやぶさ',reimu:'はくれいれいむ',sakura:'しんぐうじさくら',miyabi:'ほしみみやび',agumon:'あぐもん',saki:'さきあまみや',megamanexe:'ろっくまんえぐぜ',kosmos:'こすもす'};
+ const normalize=s=>String(s).normalize('NFKC').toLowerCase().replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-96)).replace(/[\s・･.ー\-]/g,'');
+ const aliases={
+  dragoon:'Lalafell|Dragoon|FF14|FFXIV|Final Fantasy XIV',lid:'Lid|Final Fantasy Resonance|FF Resonance',
+  terra:'Terra Branford|Tina Branford|FF6|FFVI',tifa:'Tifa Lockhart|FF7|FFVII',zack:'Zack Fair|FF7|FFVII',
+  aerith:'Aerith Gainsborough|Aeris|FF7|FFVII',yuffie:'Yuffie Kisaragi|FF7|FFVII',vincent:'Vincent Valentine|FF7|FFVII',
+  zidane:'Zidane Tribal|FF9|FFIX',vivi:'Vivi Ornitier|FF9|FFIX',tidus:'Tidus|FF10|FFX',lightning:'Lightning|FF13|FFXIII',
+  noctis:'Noctis Lucis Caelum|FF15|FFXV',clive:'Clive Rosfield|FF16|FFXVI',hydaelyn:'Hydaelyn|FF14|FFXIV',
+  onionknight:'Onion Knight|FF3|FFIII',twob:'2B|YoRHa No. 2 Type B|NieR Automata',nier:'NieR|NieR Replicant',
+  naruhodo:'Phoenix Wright|Ryuichi Naruhodo|Ace Attorney',isaac:'Isaac|Robin|Golden Sun',edf:'Earth Defense Force|EDF',
+  maruku:'Marx|Kirby',pneuma:'Pneuma|Pyra and Mythra|Xenoblade Chronicles 2',nargacuga:'Nargacuga|Monster Hunter|モンハン',
+  felyne:'Felyne|Palico|Monster Hunter|モンハン',hunter:'Hunter|Monster Hunter|モンハン',quote:'Quote|Cave Story',
+  miku:'Hatsune Miku',okami:'Amaterasu|Okami|Ōkami',kiryu:'Kazuma Kiryu|Yakuza|Like a Dragon',
+  reimu:'Reimu Hakurei|Hakurei Reimu|Touhou|とうほう',megamanexe:'Mega Man EXE|Rockman EXE|Battle Network',
+  zero3:'Zero|Drakengard 3',hanajs:'Poppi|Hana JS|Xenoblade Chronicles 2',lloyd:'Lloyd Irving|Tales of Symphonia',
+  velvet:'Velvet Crowe|Tales of Berseria',kurabe:'Juro Kurabe|13 Sentinels Aegis Rim',
+  kingbonby:'King Bonby|King Bomby|Momotaro Dentetsu',octoling:'Octoling|Splatoon',cubivore:'Cubivore|Animal Leader'
+ };
+ const romajiRows=[
+  ['あいうえお','a i u e o'],['かきくけこ','ka ki ku ke ko'],['さしすせそ','sa shi su se so'],
+  ['たちつてと','ta chi tsu te to'],['なにぬねの','na ni nu ne no'],['はひふへほ','ha hi fu he ho'],
+  ['まみむめも','ma mi mu me mo'],['やゆよ','ya yu yo'],['らりるれろ','ra ri ru re ro'],['わをん','wa wo n'],
+  ['がぎぐげご','ga gi gu ge go'],['ざじずぜぞ','za ji zu ze zo'],['だぢづでど','da ji zu de do'],
+  ['ばびぶべぼ','ba bi bu be bo'],['ぱぴぷぺぽ','pa pi pu pe po'],['ぁぃぅぇぉ','a i u e o']
+ ];
+ const romaji=new Map(romajiRows.flatMap(([kana,letters])=>[...kana].map((key,n)=>[key,letters.split(' ')[n]])));
+ const digraphs={き:'ky',ぎ:'gy',し:'sh',じ:'j',ち:'ch',に:'ny',ひ:'hy',び:'by',ぴ:'py',み:'my',り:'ry'};
+ for(const [kana,prefix] of Object.entries(digraphs))for(const [tail,vowel] of Object.entries({ゃ:'a',ゅ:'u',ょ:'o',ぇ:'e'}))romaji.set(kana+tail,prefix+vowel);
+ for(const [kana,letters] of Object.entries({てぃ:'ti',でぃ:'di',とぅ:'tu',どぅ:'du',ふぁ:'fa',ふぃ:'fi',ふぇ:'fe',ふぉ:'fo',うぃ:'wi',うぇ:'we',うぉ:'wo',ゔ:'vu',ゔぁ:'va',ゔぃ:'vi',ゔぇ:'ve',ゔぉ:'vo'}))romaji.set(kana,letters);
+ function kanaLatin(value){
+  const kana=normalize(value);let text='',double=false;
+  for(let i=0;i<kana.length;i++){
+   if(kana[i]==='っ'){double=true;continue;}
+   const pair=romaji.get(kana.slice(i,i+2)),part=pair||romaji.get(kana[i])||kana[i];
+   if(double){text+=part.startsWith('ch')?'t':part[0];double=false;}
+   text+=part;if(pair&&i+1<kana.length)i++;
+  }
+  return text;
+ }
+ const searchKey=value=>normalize(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').normalize('NFC').replace(/[\p{P}\p{S}]/gu,'');
+ function searchTerms(d){
+  const titles=[d.origin,series(d)];
+  const franchise=titles.flatMap(title=>title?.includes('ファイナルファンタジー')?['FF','Final Fantasy']:title?.startsWith('テイルズ オブ')?['Tales of']:[]);
+  return [d.name,reading(d),kanaLatin(reading(d)),d.id,...titles,...titles.filter(Boolean).map(kanaLatin),...franchise,...(aliases[d.id]||'').split('|'),(d.style||'').split('/')[0]].filter(Boolean).map(searchKey);
+ }
+ const searchIndex=new Map(Roster.selectable.map(d=>[d.id,searchTerms(d)]));
+ function searchPredicate(query){
+  const words=query.normalize('NFKC').trim().split(/\s+/).map(searchKey).filter(Boolean),combined=words.join('');
+  return id=>{
+   const terms=searchIndex.get(id)||[];
+   return !words.length||terms.some(term=>term.includes(combined))||words.every(word=>terms.some(term=>term.includes(word)));
+  };
+ }
+ function reading(d){return readings[d.id]||d.name;}
+ const matchesRandom=query=>[normalize('おまかせ'),'random','omakase'].some(value=>value.includes(searchKey(query)));
  const traits=[
   {id:'tether',label:'フック・引き寄せ復帰',description:'技を支点に掛け、引き寄せや振り子を使って戻れます。',members:'aloy ratchet hornet sackboy terrarian sakuna akira'},
   {id:'warp',label:'ワープ・位置交換',description:'目印や方向を選び、離れた地点へ一気に移動します。',members:'noctis namine magus shadow kasane battlemage aiai megamanexe midna'},
@@ -65,21 +120,28 @@ const FighterLibrary=(()=>{
  function apply(){
   const grid=document.getElementById('fighter-grid');if(!grid)return;
   const cards=[...grid.querySelectorAll('.fighter-card')];if(scope==='recent')cards.sort((a,b)=>recent.indexOf(a.dataset.id)-recent.indexOf(b.dataset.id));else cards.sort((a,b)=>(order.get(a.dataset.id)??999)-(order.get(b.dataset.id)??999));grid.append(...cards,document.getElementById('library-empty'));
-  let count=0;for(const card of cards){const d=Roster.selectable.find(d=>d.id===card.dataset.id),show=d?matches(d,origin,scope):!origin&&scope==='all';card.hidden=!show;card.style.order='';if(d&&show)count++;}
-  document.getElementById('library-count').textContent=count+'キャラ';document.getElementById('library-empty').hidden=!!count||!origin&&scope==='all';
+  const searchMatches=searchPredicate(query),showRandom=!origin&&scope==='all'&&matchesRandom(query);
+  let count=0;
+  for(const card of cards){
+   const id=card.dataset.id,d=Roster.selectable[order.get(id)];
+   const show=d?matches(d,origin,scope)&&searchMatches(id):id==='random'&&showRandom;
+   card.hidden=!show;card.style.order='';if(d&&show)count++;
+  }
+  document.getElementById('library-count').textContent=count+'キャラ';document.getElementById('library-empty').hidden=!!count||showRandom;
   for(const b of document.querySelectorAll('[data-library-scope]'))b.setAttribute('aria-pressed',String(b.dataset.libraryScope===scope));
   selected();Roster.fit();
  }
  function selected(){const b=document.getElementById('library-favorite'),id=Roster.selectionContext().characterId;if(!b)return;b.disabled=!valid.has(id);b.textContent=favorites.includes(id)?'★ 登録済み':'☆ 登録';b.setAttribute('aria-pressed',String(favorites.includes(id)));b.setAttribute('aria-label',(Roster.selectionContext().characterName||'選択キャラ')+'のお気に入り');}
  function init(){
-  load();const bar=document.createElement('div');bar.className='fighter-discovery';bar.innerHTML='<label>作品<select id="library-origin" aria-label="カードを登場作品で絞り込み"></select></label><div class="library-scopes" role="group" aria-label="キャラの表示範囲"><button type="button" data-library-scope="all" aria-pressed="true">すべて</button><button type="button" data-library-scope="favorites" aria-pressed="false">★ お気に入り</button><button type="button" data-library-scope="recent" aria-pressed="false">最近使った</button></div><button type="button" id="library-favorite">☆ 登録</button><span id="library-count" role="status"></span>';
+  load();const bar=document.createElement('div');bar.className='fighter-discovery';bar.innerHTML='<div class="fighter-discovery-filters"><input id="library-search" type="search" aria-label="キャラ検索" placeholder="キャラ・作品を検索" autocomplete="off"><label>作品<select id="library-origin" aria-label="カードを登場作品で絞り込み"></select></label></div><div class="library-scopes" role="group" aria-label="キャラの表示範囲"><button type="button" data-library-scope="all" aria-pressed="true">すべて</button><button type="button" data-library-scope="favorites" aria-pressed="false">★ お気に入り</button><button type="button" data-library-scope="recent" aria-pressed="false">最近使った</button></div><button type="button" id="library-favorite">☆ 登録</button><span id="library-count" role="status"></span>';
   document.querySelector('.roster-targets .costume-row').after(bar);
-  const grid=document.getElementById('fighter-grid');const empty=document.createElement('p');empty.id='library-empty';empty.hidden=true;empty.textContent='該当するキャラがいません。作品や表示範囲を変更してください。';grid.append(empty);
+  const grid=document.getElementById('fighter-grid');const empty=document.createElement('p');empty.id='library-empty';empty.hidden=true;empty.textContent='該当するキャラがいません。検索語や絞り込みを変更してください。';grid.append(empty);
   fill(document.getElementById('library-origin'));document.getElementById('library-origin').onchange=e=>{origin=e.target.value;apply();};
+  document.getElementById('library-search').oninput=e=>{query=e.target.value;apply();};
   for(const b of bar.querySelectorAll('[data-library-scope]'))b.onclick=()=>{scope=b.dataset.libraryScope;apply();};document.getElementById('library-favorite').onclick=()=>toggleFavorite(Roster.selectionContext().characterId);apply();
  }
  addEventListener('roster-context-change',selected);addEventListener('storage',e=>{if([favoriteKey,recentKey].includes(e.key)){load();changed();}if(e.key===folderKey){load();dispatchEvent(new Event('fighter-folders-change'));}});
- return{init,fill,series,matches,record,toggleFavorite,load,renameFolder,removeFolder,toggleFolderFighter,hasTrait,
+ return{init,fill,series,matches,record,toggleFavorite,load,renameFolder,removeFolder,toggleFolderFighter,hasTrait,readings,reading,normalize,searchPredicate,matchesRandom,
   get traits(){return traits.map(({id,label,description})=>({id,label,description}));},
   get folders(){return folders.map(f=>({...f,fighters:f.fighters.slice()}));},get recent(){return recent.slice();},get favorites(){return favorites.slice();}};
 })();

@@ -247,7 +247,7 @@ const Roster=(()=>{
   $roster('selection-player-label').textContent=$roster('battle-mode').value==='online'?Net.playerName(Net.slot):BattlePlayers.selection>=2?`${BattlePlayers.selection+1}P`:target==='cpu'?'CPU':'1P';
   document.querySelector('.selection-banner').classList.toggle('cpu-selection',target==='cpu');
   document.querySelector('#character-screen').classList.toggle('choosing-cpu',target==='cpu');
-  $roster('roster-selection-hint').textContent=target==='cpu'?'CPUのファイターを選択':'プレイヤーのファイターを選択';
+  $roster('roster-selection-hint').textContent='';
   const online=$roster('battle-mode').value==='online',cpu=$roster('cpu-character').value;$roster('select-player').querySelector('span').textContent=online?Net.playerName(Net.slot):'1P';
   for(const slot of ['player','cpu']){
    const button=$roster('select-'+slot),fighter=definitionFor(slot==='player'?chosen:cpu);

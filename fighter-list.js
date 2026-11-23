@@ -1,63 +1,10 @@
 'use strict';
 const FighterList=(()=>{
- const storageKey='tofu-bros.favorite-fighters.v1',valid=new Set(Roster.selectable.map(d=>d.id));
- const readings={isaac:'ろびん',okami:'おおかみ',twob:'とぅーびー',makoto:'ゆうきまこと',narukami:'なるかみゆう',naegi:'なえぎまこと',pawapuro:'ぱわぷろくん',headmaster:'じゅくちょう',sakuna:'さくなひめ',human:'ひゅーまん',miku:'はつねみく',naruhodo:'なるほどうりゅういち',layton:'れいとんきょうじゅ',kiryu:'きりゅうかずま',ryofu:'りょふ',edf:'ちきゅうぼうえいぐん',frog:'かえる',sumino:'すみのたくみ',eve:'いゔ',deemo:'でぃーも',hanajs:'はな',kisuke:'きすけ',c4621:'しーふぉーろくにーいち',toro:'とろ',hinako:'しみずひなこ',yuri:'ゆうり',katamari:'かたまりだましい',alucard:'あるかーど',kurabe:'くらべじゅうろう',karateka:'からてか',hayabusa:'りゅうはやぶさ',reimu:'はくれいれいむ',sakura:'しんぐうじさくら',miyabi:'ほしみみやび',agumon:'あぐもん',saki:'さきあまみや',megamanexe:'ろっくまんえぐぜ',kosmos:'こすもす'};
- const normalize=s=>String(s).normalize('NFKC').toLowerCase().replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-96)).replace(/[\s・･.ー\-]/g,'');
- const aliases={
-  dragoon:'Lalafell|Dragoon|FF14|FFXIV|Final Fantasy XIV',lid:'Lid|Final Fantasy Resonance|FF Resonance',
-  terra:'Terra Branford|Tina Branford|FF6|FFVI',tifa:'Tifa Lockhart|FF7|FFVII',zack:'Zack Fair|FF7|FFVII',
-  aerith:'Aerith Gainsborough|Aeris|FF7|FFVII',yuffie:'Yuffie Kisaragi|FF7|FFVII',vincent:'Vincent Valentine|FF7|FFVII',
-  zidane:'Zidane Tribal|FF9|FFIX',vivi:'Vivi Ornitier|FF9|FFIX',tidus:'Tidus|FF10|FFX',lightning:'Lightning|FF13|FFXIII',
-  noctis:'Noctis Lucis Caelum|FF15|FFXV',clive:'Clive Rosfield|FF16|FFXVI',hydaelyn:'Hydaelyn|FF14|FFXIV',
-  onionknight:'Onion Knight|FF3|FFIII',twob:'2B|YoRHa No. 2 Type B|NieR Automata',nier:'NieR|NieR Replicant',
-  naruhodo:'Phoenix Wright|Ryuichi Naruhodo|Ace Attorney',isaac:'Isaac|Robin|Golden Sun',edf:'Earth Defense Force|EDF',
-  maruku:'Marx|Kirby',pneuma:'Pneuma|Pyra and Mythra|Xenoblade Chronicles 2',nargacuga:'Nargacuga|Monster Hunter|モンハン',
-  felyne:'Felyne|Palico|Monster Hunter|モンハン',hunter:'Hunter|Monster Hunter|モンハン',quote:'Quote|Cave Story',
-  miku:'Hatsune Miku',okami:'Amaterasu|Okami|Ōkami',kiryu:'Kazuma Kiryu|Yakuza|Like a Dragon',
-  reimu:'Reimu Hakurei|Hakurei Reimu|Touhou|とうほう',megamanexe:'Mega Man EXE|Rockman EXE|Battle Network',
-  zero3:'Zero|Drakengard 3',hanajs:'Poppi|Hana JS|Xenoblade Chronicles 2',lloyd:'Lloyd Irving|Tales of Symphonia',
-  velvet:'Velvet Crowe|Tales of Berseria',kurabe:'Juro Kurabe|13 Sentinels Aegis Rim',
-  kingbonby:'King Bonby|King Bomby|Momotaro Dentetsu',octoling:'Octoling|Splatoon',cubivore:'Cubivore|Animal Leader'
- };
- const romajiRows=[
-  ['あいうえお','a i u e o'],['かきくけこ','ka ki ku ke ko'],['さしすせそ','sa shi su se so'],
-  ['たちつてと','ta chi tsu te to'],['なにぬねの','na ni nu ne no'],['はひふへほ','ha hi fu he ho'],
-  ['まみむめも','ma mi mu me mo'],['やゆよ','ya yu yo'],['らりるれろ','ra ri ru re ro'],['わをん','wa wo n'],
-  ['がぎぐげご','ga gi gu ge go'],['ざじずぜぞ','za ji zu ze zo'],['だぢづでど','da ji zu de do'],
-  ['ばびぶべぼ','ba bi bu be bo'],['ぱぴぷぺぽ','pa pi pu pe po'],['ぁぃぅぇぉ','a i u e o']
- ];
- const romaji=new Map(romajiRows.flatMap(([kana,letters])=>[...kana].map((key,n)=>[key,letters.split(' ')[n]])));
- const digraphs={き:'ky',ぎ:'gy',し:'sh',じ:'j',ち:'ch',に:'ny',ひ:'hy',び:'by',ぴ:'py',み:'my',り:'ry'};
- for(const [kana,prefix] of Object.entries(digraphs))for(const [tail,vowel] of Object.entries({ゃ:'a',ゅ:'u',ょ:'o',ぇ:'e'}))romaji.set(kana+tail,prefix+vowel);
- for(const [kana,letters] of Object.entries({てぃ:'ti',でぃ:'di',とぅ:'tu',どぅ:'du',ふぁ:'fa',ふぃ:'fi',ふぇ:'fe',ふぉ:'fo',うぃ:'wi',うぇ:'we',うぉ:'wo',ゔ:'vu',ゔぁ:'va',ゔぃ:'vi',ゔぇ:'ve',ゔぉ:'vo'}))romaji.set(kana,letters);
- function kanaLatin(value){
-  const kana=normalize(value);let text='',double=false;
-  for(let i=0;i<kana.length;i++){
-   if(kana[i]==='っ'){double=true;continue;}
-   const pair=romaji.get(kana.slice(i,i+2)),part=pair||romaji.get(kana[i])||kana[i];
-   if(double){text+=part.startsWith('ch')?'t':part[0];double=false;}
-   text+=part;if(pair&&i+1<kana.length)i++;
-  }
-  return text;
- }
- const searchKey=value=>normalize(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').normalize('NFC').replace(/[\p{P}\p{S}]/gu,'');
- function searchTerms(d){
-  const titles=[d.origin,FighterLibrary.series(d)];
-  const franchise=titles.flatMap(title=>title?.includes('ファイナルファンタジー')?['FF','Final Fantasy']:title?.startsWith('テイルズ オブ')?['Tales of']:[]);
-  return [d.name,reading(d),kanaLatin(reading(d)),d.id,...titles,...titles.filter(Boolean).map(kanaLatin),...franchise,...(aliases[d.id]||'').split('|'),(d.style||'').split('/')[0]].filter(Boolean).map(searchKey);
- }
- const searchIndex=new Map(Roster.selectable.map(d=>[d.id,searchTerms(d)]));
- function searchPredicate(query){
-  const words=query.normalize('NFKC').trim().split(/\s+/).map(searchKey).filter(Boolean),combined=words.join('');
-  return id=>{
-   const terms=searchIndex.get(id)||[];
-   return !words.length||terms.some(term=>term.includes(combined))||words.every(word=>terms.some(term=>term.includes(word)));
-  };
- }
+ const storageKey='tofu-bros.favorite-fighters.v1';
+ const {readings,reading,normalize,searchPredicate,matchesRandom}=FighterLibrary;
  const collator=new Intl.Collator('ja',{sensitivity:'base',numeric:true});
  let favorites=new Set(),onlyFavorites=false,onlyRecent=false,folderId='';
  function load(){FighterLibrary.load();favorites=new Set(FighterLibrary.favorites);}
- function reading(d){return readings[d.id]||d.name;}
  function render(){const list=document.getElementById('fighter-name-list'),query=document.getElementById('fighter-list-search').value,sorted=document.getElementById('fighter-list-sort').value==='kana';
   const work=document.getElementById('fighter-list-origin').value,trait=document.getElementById('fighter-trait-select').value;
   const searchMatches=searchPredicate(query),folder=FighterLibrary.folders.find(f=>f.id===folderId);
@@ -71,7 +18,7 @@ const FighterList=(()=>{
    remove.onclick=()=>{const saved=FighterLibrary.toggleFolderFighter(folder.id,id);folderMessage('フォルダから外しました。',saved);document.getElementById('fighter-folder-select').focus();};
    row.append(remove);
   }
-  if(!folder&&!onlyFavorites&&!onlyRecent&&!work&&!trait&&[normalize('おまかせ'),'random','omakase'].some(value=>value.includes(searchKey(query)))){const row=document.createElement('li'),choose=document.createElement('button');choose.className='fighter-name-choice';const name=document.createElement('span');name.className='fighter-name-label';name.textContent='おまかせ';choose.append(name);choose.dataset.fighterId='random';choose.onclick=()=>{pick('random');};row.append(choose);fragment.append(row);}
+  if(!folder&&!onlyFavorites&&!onlyRecent&&!work&&!trait&&matchesRandom(query)){const row=document.createElement('li'),choose=document.createElement('button');choose.className='fighter-name-choice';const name=document.createElement('span');name.className='fighter-name-label';name.textContent='おまかせ';choose.append(name);choose.dataset.fighterId='random';choose.onclick=()=>{pick('random');};row.append(choose);fragment.append(row);}
   list.replaceChildren(fragment);document.getElementById('fighter-list-count').textContent=rows.length+'キャラ';document.getElementById('fighter-list-empty').hidden=!!list.children.length;document.getElementById('fighter-list-favorites').setAttribute('aria-pressed',String(onlyFavorites));refreshTarget();
  }
  function refreshTarget(){

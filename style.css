@@ -457,3 +457,10 @@ body[data-text-size="1.2"] #result-ready-players :is(span,b){font-size:14px}body
 .character-traits{display:flex;gap:5px;flex-wrap:wrap;padding:0;list-style:none}
 .character-traits li{border:1px solid #7097af;padding:4px 8px;border-radius:20px;color:#d5eeff;font-size:11px}
 #restore-last-squad{flex:0 0 auto;max-width:6.5em;padding:3px 6px;line-height:1.15;font-size:clamp(10px,1.4vw,12px);background:#20354c;color:#e0efff;border:1px solid #557392;border-radius:5px}
+#roster-selection-hint:empty{display:none}
+.fighter-discovery-filters{display:flex;align-items:center;gap:6px;min-width:0;max-width:100%}
+#library-search{box-sizing:border-box;width:clamp(132px,13vw,190px);min-width:0;min-height:28px;margin:0;padding:4px 7px;color:#eef5ff;background:#101e30;border:1px solid #4d6985;border-radius:5px;font-size:12px;color-scheme:dark}
+#library-search::placeholder{color:#9fb6cc}
+#library-search:focus-visible{outline:2px solid #87d6ff;outline-offset:1px}
+body:not([data-text-size="1"]) #library-search{font-size:calc(12px * var(--readable-scale));min-height:32px}
+@media(max-width:600px){.fighter-discovery-filters{flex:1 1 100%}#library-search{flex:1;width:auto}}
