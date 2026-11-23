@@ -346,9 +346,21 @@ const Roster=(()=>{
  }
  function stagePreview(d,image){
   if(d.id==='random')return '<span class="stage-random" aria-hidden="true">?</span>';
-  const backdrop=image?`<image href="${image}" width="1440" height="810" preserveAspectRatio="xMidYMid slice"/><rect width="1440" height="810" fill="#071022" opacity=".22"/>`:'<rect width="1440" height="810" fill="#101b30"/>';
+  const backdrop=image?`<image data-stage-preview="${image}" width="1440" height="810" preserveAspectRatio="xMidYMid slice"/><rect width="1440" height="810" fill="#071022" opacity=".22"/>`:'<rect width="1440" height="810" fill="#101b30"/>';
   const ledges=d.platforms.map(p=>`<rect x="${p.x}" y="${p.y}" width="${p.w}" height="${p.main?60:28}" rx="12" fill="${d.color}" stroke="#152234" stroke-width="10" paint-order="stroke"/>`).join('');
   return `<svg viewBox="0 0 1440 810" aria-hidden="true">${backdrop}${ledges}</svg>`;
+ }
+ function loadStagePreviews(container){
+  const images=container.querySelectorAll('[data-stage-preview]');
+  const load=image=>image.setAttribute(image.localName==='image'?'href':'src',image.dataset.stagePreview);
+  if(typeof IntersectionObserver!=='function'){images.forEach(load);return;}
+  const observer=new IntersectionObserver(entries=>{
+   for(const entry of entries)if(entry.isIntersecting){
+    load(entry.target);
+    observer.unobserve(entry.target);
+   }
+  },{root:container,rootMargin:'40px'});
+  images.forEach(image=>observer.observe(image));
  }
  function initStages(){
   const select=$roster('stage'),previous=select.value,strip=$roster('stage-strip'),dialog=$roster('stage-list-dialog'),grid=$roster('stage-list-grid');
@@ -367,7 +379,8 @@ const Roster=(()=>{
   select.value=StageCatalog.normalize(previous);
   $roster('stage-details').onclick=()=>{
    Controls.clear();
-   if(!grid.children.length)for(const d of entries){
+   const firstOpen=!grid.children.length;
+   if(firstOpen)for(const d of entries){
     const button=document.createElement('button');button.type='button';button.className='stage-detail-card';button.dataset.stage=d.id;
     const picture=document.createElement('span');picture.className='stage-detail-art';picture.innerHTML=stagePreview(d,imageFor(d));
     const name=document.createElement('b');name.textContent=d.name;
@@ -399,10 +412,11 @@ const Roster=(()=>{
     };
    }
    refreshStages();dialog.showModal();grid.querySelector('.selected')?.focus({preventScroll:true});
+   if(firstOpen)loadStagePreviews(dialog);
   };
   $roster('close-stage-list').onclick=()=>dialog.close();
   dialog.addEventListener('close',()=>Controls.clear());
-  const previews=strip.querySelectorAll('[data-stage-preview]');if(previews.length){if(typeof IntersectionObserver==='function'){const observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.src=e.target.dataset.stagePreview;observer.unobserve(e.target);}},{root:strip,rootMargin:'40px'});previews.forEach(el=>observer.observe(el));}else previews.forEach(el=>el.src=el.dataset.stagePreview);}
+  loadStagePreviews(strip);
   for(const [id,direction]of [['stage-prev',-1],['stage-next',1]])$roster(id).onclick=()=>strip.scrollBy({left:direction*strip.clientWidth*.8,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
  }
  function fit(){

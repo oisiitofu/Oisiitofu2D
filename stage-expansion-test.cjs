@@ -33,6 +33,11 @@ async function local(browser,errors){
  await page.click('#stage-details');
  assert.equal(await page.locator('.stage-detail-card').count(),StageCatalog.stages.length+1);
  assert(await page.locator('#stage-list-dialog').evaluate((dialog,count)=>dialog.scrollWidth<=dialog.clientWidth&&(count>36||dialog.scrollHeight<=dialog.clientHeight),StageCatalog.stages.length+1));
+ await page.waitForFunction(()=>document.querySelector('#stage-list-grid image[data-stage-preview][href]'));
+ const lastPreview=page.locator('#stage-list-grid image[data-stage-preview]').last();
+ assert.equal(await lastPreview.getAttribute('href'),null,'Far-off thumbnails should wait for scrolling');
+ await lastPreview.scrollIntoViewIfNeeded();
+ await page.waitForFunction(()=>document.querySelector('#stage-list-grid .stage-detail-entry:last-child image[href]'));
  const workStages=StageCatalog.stages.filter(stage=>stage.origin);
  assert.equal(new Set(workStages.map(stage=>stage.origin)).size,workStages.length);
  const workNames=await page.evaluate(()=>Roster.selectable.map(fighter=>fighter.origin));
@@ -285,7 +290,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37','39','40','43','44','47','49','52','53','54','59','60','62','64','65','67','69','70','73','74','75','78','80','81','83','84','85','87','88','89','90','93','95','97','98','101','103','104','106','108','109','111','112','114','116','118','119','122','124','125','126','127','129','131','133','135','136','138','140','141']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37','39','40','43','44','47','49','52','53','54','59','60','62','64','65','67','69','70','73','74','75','78','80','81','83','84','85','87','88','89','90','93','95','97','98','101','103','104','106','108','109','111','112','114','116','118','119','122','124','125','126','127','129','131','133','135','136','138','140','141','143','144','145']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}

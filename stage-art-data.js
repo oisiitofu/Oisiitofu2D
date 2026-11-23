@@ -3578,5 +3578,101 @@ const StageArtData={
    "surfaceRight": 728,
    "walkY": 15
   }
+ },
+ "hitoyori": {
+  "backgroundSource": "assets/stage-v37-hitoyori-background.png",
+  "background": "assets/ready/stage-v37-hitoyori-background-598d29afb53c3007.webp",
+  "preview": "assets/ready/stage-picker-hitoyori-806f78e799390641.webp",
+  "main": {
+   "source": "assets/stage-v37-hitoyori-main.png",
+   "image": "assets/ready/stage-v37-hitoyori-main-8c30056fded12a07.webp",
+   "width": 1529,
+   "height": 261,
+   "surfaceLeft": 30,
+   "surfaceRight": 1502,
+   "walkY": 11,
+   "verticalScale": 0.64
+  },
+  "small": {
+   "source": "assets/stage-v37-hitoyori-small.png",
+   "image": "assets/ready/stage-v37-hitoyori-small-fca454d754bb9935.webp",
+   "width": 787,
+   "height": 189,
+   "surfaceLeft": 36,
+   "surfaceRight": 752,
+   "walkY": 13
+  }
+ },
+ "rockymountain": {
+  "backgroundSource": "assets/stage-v37-rockymountain-background.png",
+  "background": "assets/ready/stage-v37-rockymountain-background-2fc7ee37114d28de.webp",
+  "preview": "assets/ready/stage-picker-rockymountain-dac362d4d16156ec.webp",
+  "main": {
+   "source": "assets/stage-v37-rockymountain-main.png",
+   "image": "assets/ready/stage-v37-rockymountain-main-70b1694b30dad701.webp",
+   "width": 1496,
+   "height": 261,
+   "surfaceLeft": 17,
+   "surfaceRight": 1478,
+   "walkY": 12,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v37-rockymountain-small.png",
+   "image": "assets/ready/stage-v37-rockymountain-small-808d31397fc0f027.webp",
+   "width": 764,
+   "height": 204,
+   "surfaceLeft": 22,
+   "surfaceRight": 744,
+   "walkY": 12
+  }
+ },
+ "defenseacademy": {
+  "backgroundSource": "assets/stage-v37-defenseacademy-background.png",
+  "background": "assets/ready/stage-v37-defenseacademy-background-14e8680dc68c7461.webp",
+  "preview": "assets/ready/stage-picker-defenseacademy-36ff79b48ad7ee19.webp",
+  "main": {
+   "source": "assets/stage-v37-defenseacademy-main.png",
+   "image": "assets/ready/stage-v37-defenseacademy-main-48d7281e905b0d07.webp",
+   "width": 1536,
+   "height": 243,
+   "surfaceLeft": 46,
+   "surfaceRight": 1489,
+   "walkY": 17,
+   "verticalScale": 0.56
+  },
+  "small": {
+   "source": "assets/stage-v37-defenseacademy-small.png",
+   "image": "assets/ready/stage-v37-defenseacademy-small-f2388c9bf60290bb.webp",
+   "width": 745,
+   "height": 205,
+   "surfaceLeft": 30,
+   "surfaceRight": 715,
+   "walkY": 14
+  }
+ },
+ "steambison": {
+  "backgroundSource": "assets/stage-v37-steambison-background.png",
+  "background": "assets/ready/stage-v37-steambison-background-c1a87b22dc69aa11.webp",
+  "preview": "assets/ready/stage-picker-steambison-0dafe624a9176e9b.webp",
+  "main": {
+   "source": "assets/stage-v37-steambison-main.png",
+   "image": "assets/ready/stage-v37-steambison-main-f50bd9e03580bbf1.webp",
+   "width": 1536,
+   "height": 285,
+   "surfaceLeft": 48,
+   "surfaceRight": 1487,
+   "walkY": 10,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v37-steambison-small.png",
+   "image": "assets/ready/stage-v37-steambison-small-13e85207a19b1ee1.webp",
+   "width": 818,
+   "height": 197,
+   "surfaceLeft": 15,
+   "surfaceRight": 802,
+   "walkY": 9
+  }
  }
 };
