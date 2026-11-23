@@ -22,17 +22,34 @@ const StageVisuals=(()=>{
   }
   if(stage.theme==='factory'){for(let n=0;n<9;n++){const x=110+n*160,y=H-80-((clock*.65+n*47)%190);ctx.globalAlpha=.12;line([[x,y],[x-2,y+5]],'#ffbc5f',1.3);}}
   if(stage.theme==='sports'){for(let n=0;n<7;n++){const x=80+n*207,y=H*.3+(n%2)*45;ctx.globalAlpha=Math.max(0,Math.sin(clock*.035+n*2.1)-.94)*5;line([[x-3,y],[x+3,y]],'#fff',1);line([[x,y-3],[x,y+3]],'#fff',1);}}
+  if(stage.theme==='shadow')theatreLights(stage);
   if(stage.layout)atmosphere(stage.theme,color);
   ctx.restore();return true;
  }
+ function theatreLights(stage){
+  for(const p of stage.platforms){
+   if(!p.motion)continue;
+   const stops=p.motion.path,t=clock%stops.at(-1)[0];
+   const rise=stops.findIndex((stop,n)=>n>0&&stop[2]<stops[n-1][2]);
+   const begin=stops[rise-1][0],end=stops[rise][0],fadeStart=begin-45;
+   if(t<fadeStart||t>end+24)continue;
+   const opacity=Math.min(1,(t-fadeStart)/20,(end+24-t)/24);
+   const x=p.x+p.w/2,light=ctx.createLinearGradient(0,165,0,p.y+15);
+   light.addColorStop(0,'#ffe5ae00');light.addColorStop(.8,'#ffe5ae8c');light.addColorStop(1,'#ffc97822');
+   ctx.globalAlpha=.48*opacity;
+   path([[x-10,165],[x+10,165],[x+p.w*.56,p.y+15],[x-p.w*.56,p.y+15]],light);
+   ctx.globalAlpha=.65*opacity;
+   line([[p.x+11,p.y+10],[p.x+p.w-11,p.y+10]],'#ffcc89',2);
+  }
+ }
  function atmosphere(theme,color){
   for(let n=0;n<12;n++){
-   const rise=theme==='abyss'||theme==='mycelium',drift=theme==='rail'?2.7:theme==='aurora'?.85:.25;
+   const rise=theme==='abyss'||theme==='mycelium'||theme==='hollow',drift=theme==='rail'?2.7:theme==='aurora'?.85:.25;
    const x=(W*100+n*211.7+(theme==='rail'?-1:1)*clock*drift)%W;
    const y=(H*100+n*113.7+(rise?-1:1)*clock*(theme==='abyss'?.72:.30))%H;
    ctx.globalAlpha=.13+(Math.sin(clock*.018+n)+1)*.055;
    if(theme==='abyss'){ctx.strokeStyle=color;ctx.beginPath();ctx.arc(x,y,2+n%5,0,TAU);ctx.stroke();}
-   else if(theme==='rail'||theme==='aurora')line([[x,y],[x+7+n%4*3,y+(theme==='aurora'?2:0)]],color,1);
+   else if(theme==='rail'||theme==='aurora'||theme==='salt')line([[x,y],[x+7+n%4*3,y+(theme==='aurora'?2:0)]],color,1);
    else if(theme==='archive'||theme==='origami'){
     ctx.save();ctx.translate(x,y);ctx.rotate(n+clock*.017);path([[-3,-2],[3,-2],[5,2],[-2,3]],color);ctx.restore();
    }else ellipse(x,y,2+n%3,2+n%3,color);
@@ -40,7 +57,7 @@ const StageVisuals=(()=>{
  }
  function geometry(p){
   const art=StageArtData[StageCatalog.get(activeStage).theme]?.[p.main?'main':'small'];if(!art)return null;
-  const scaleX=p.w/(art.surfaceRight-art.surfaceLeft),scaleY=scaleX*(p.main?.76:.60);
+  const scaleX=p.w/(art.surfaceRight-art.surfaceLeft),scaleY=scaleX*(art.verticalScale??(p.main?.76:.60));
   return{art,x:p.x-art.surfaceLeft*scaleX,y:p.y-art.walkY*scaleY,w:art.width*scaleX,h:art.height*scaleY,scaleX,scaleY};
  }
  function platform(p){

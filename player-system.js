@@ -223,7 +223,7 @@ for(const character of Object.values(CharacterData))character.fastFallSpeed=char
 const StageRules={blast:{left:-780,right:2220,top:-480,bottom:1200},camera:{minX:-560,maxX:2000,minY:-400,maxY:1350,minZoom:.56,maxZoom:1.5},loupe:{radius:39,inset:48,warningDistance:180},ledges:[],oneOnOne:false};
 // Taper the main island below its unchanged top lip. Floating platforms remain one-way.
 const StageGeometry={
- profile(p){return{lip:12,depth:90,bevel:Math.min(p.w*.4,360)};},
+ profile(p){return{lip:12,depth:p.depth??90,bevel:Math.min(p.w*.4,360)};},
  bottom(p,x,r=0){const q=clamp(p.x+p.w/2,x-r,x+r),s=this.profile(p),inset=Math.max(0,Math.min(q-p.x,p.x+p.w-q));return p.y+s.lip+(s.depth-s.lip)*Math.min(1,inset/s.bevel);},
  overlaps(p,x,y,r=0,h=0){return x+r>p.x&&x-r<p.x+p.w&&y>p.y+1&&y-h<this.bottom(p,x,r)-.0001;},
  sweep(p,f,from,to){const e=f.character.ecb;if(this.overlaps(p,from.x,from.y,e.radius,e.height))return null;const n=Math.max(1,Math.ceil(Math.max(Math.abs(to.x-from.x),Math.abs(to.y-from.y))/5));let previous=0;

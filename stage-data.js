@@ -38,6 +38,24 @@ const StageCatalog=(()=>{
   {id:'18',name:'宵越しの夜行列車',theme:'rail',folder:'midnight-express',color:'#ffc482',layout:'保線車が上下2段の経路を周回',platforms:[
    {x:190,y:560,w:1060,main:true},{x:1038,y:396,w:154},
    {x:340,y:436,w:170,motion:{path:[[0,0,0],[35,0,0],[200,510,0],[262,510,-114],[422,0,-114],[485,0,0],[520,0,0]]}}
+  ]},
+  {id:'19',name:'塩湖の鏡面桟橋',theme:'salt',folder:'salt-mirror-pier',color:'#a7e7f1',layout:'崖の外から主足場の下へ回り込める',platforms:[
+   {x:295,y:521,w:850,main:true,depth:54},{x:112,y:681,w:1216}
+  ]},
+  {id:'20',name:'白磁の焼き物市',theme:'porcelain',folder:'porcelain-market',color:'#adc9ff',layout:'中央に寄る2枚の足場が左右に開く',platforms:[
+   {x:212,y:560,w:1016,main:true},
+   {x:482,y:400,w:216,motion:{path:[[0,0,0],[110,0,0],[235,-175,0],[355,-175,0],[480,0,0],[540,0,0]]}},
+   {x:742,y:400,w:216,motion:{path:[[0,0,0],[110,0,0],[235,175,0],[355,175,0],[480,0,0],[540,0,0]]}}
+  ]},
+  {id:'21',name:'影絵の野外劇場',theme:'shadow',folder:'shadow-puppet-theatre',color:'#ffc98e',layout:'照明の合図で左・中央・右の足場が順に上昇',platforms:[
+   {x:232,y:560,w:976,main:true},
+   {x:325,y:451,w:183,motion:{path:[[0,0,0],[82,0,0],[164,0,-113],[235,0,-113],[292,0,0],[720,0,0]]}},
+   {x:625,y:436,w:190,motion:{path:[[0,0,0],[287,0,0],[369,0,-134],[440,0,-134],[497,0,0],[720,0,0]]}},
+   {x:932,y:461,w:183,motion:{path:[[0,0,0],[492,0,0],[574,0,-113],[645,0,-113],[702,0,0],[720,0,0]]}}
+  ]},
+  {id:'22',name:'巨木の空洞',theme:'hollow',folder:'redwood-hollow',color:'#d5e6a0',layout:'左右2段の枝が中央の吹き抜けを挟む',platforms:[
+   {x:248,y:560,w:944,main:true},{x:268,y:424,w:237},{x:236,y:274,w:226},
+   {x:935,y:454,w:237},{x:845,y:310,w:227}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

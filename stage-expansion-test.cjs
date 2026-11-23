@@ -34,12 +34,12 @@ async function local(browser,errors){
  assert(await page.locator('#stage-list-dialog').evaluate(dialog=>dialog.scrollHeight<=dialog.clientHeight));
  const toggles=page.locator('.stage-random-switch');
  assert.equal(await toggles.count(),StageCatalog.stages.length);
- const included='13';
+ const included='19';
  for(const input of await toggles.all()){
   if(await input.getAttribute('data-stage')!==included)await input.uncheck();
  }
- assert(await page.locator('.stage-random-switch[data-stage="13"]').isDisabled());
- assert.match(await page.locator('#stage-random-count').textContent(),/1 \/ 19/);
+ assert(await page.locator('.stage-random-switch[data-stage="19"]').isDisabled());
+ assert((await page.locator('#stage-random-count').textContent()).includes('1 / '+StageCatalog.stages.length));
  assert(await page.locator('#stage-list-dialog').evaluate(dialog=>dialog.open));
  await page.keyboard.press('Escape');
  await page.waitForFunction(()=>document.activeElement.id==='stage-details');
@@ -68,7 +68,7 @@ async function local(browser,errors){
 
  await pick(page,'random');
  await page.click('#start');
- await page.waitForFunction(()=>state==='battle'&&activeStage==='13'&&countdown===0);
+ await page.waitForFunction(()=>state==='battle'&&activeStage==='19'&&countdown===0);
  assert(await page.evaluate(()=>training&&StageVisuals.prepared()&&fighters.every(fighter=>fighter.grounded)));
  for(const stage of stages){
   const results=await page.evaluate(async id=>{
@@ -106,7 +106,23 @@ async function local(browser,errors){
     updateFighter(fighter,emptyInput());
     if(!fighter.grounded||Math.abs(fighter.y-platform.y)>.01)lands=false;
    }
+   if(id==='19'){
+    const under=platforms[1];
+    for(const direction of [-1,1]){
+     const traveller=makeFighter(0,0,'doshin');
+     const entry=direction>0?main.x-100:main.x+main.w+100;
+     const exit=direction>0?main.x+main.w+50:main.x-50;
+     Object.assign(traveller,{x:entry,y:under.y,vx:0,vy:0,grounded:true});
+     PlayerStates.enter(traveller,'Idle');
+     for(let tick=0;tick<240&&direction*(traveller.x-exit)<0;tick++){
+      updateFighter(traveller,{...emptyInput(),x:direction});
+      if(!traveller.grounded||traveller.y!==under.y)throw Error('Lost footing under the salt pier');
+     }
+     if(direction*(traveller.x-exit)<0)throw Error('Could not cross under the salt pier');
+    }
+   }
    fighters.forEach((f,i)=>Object.assign(f,{x:main.x+main.w*(i+1)/(fighters.length+1),y:main.y,vx:0,vy:0,grounded:true,inv:0}));
+   if(id==='21')for(let n=0;n<70;n++)StageVisuals.tick();
    render();
    return {align,lands,loop:true,tracks:moved.size};
   },stage.id);
@@ -180,7 +196,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of ['13','18'])console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of ['13','18','20','21'])console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}
