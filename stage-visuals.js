@@ -80,6 +80,15 @@ const StageVisuals=(()=>{
   ctx.save();ctx.drawImage(img,d.x,d.y,d.w,d.h);
   // The subtle rim is exactly at the collision top and follows moving platforms.
   ctx.globalAlpha=.22;line([[p.x+3,p.y+.5],[p.x+p.w-3,p.y+.5]],'#fff5de',1);
+  if(p.beltSpeed){
+   const spacing=24,direction=Math.sign(p.beltSpeed);
+   const offset=(clock*p.beltSpeed%spacing+spacing)%spacing;
+   ctx.beginPath();ctx.rect(p.x+4,p.y+2,p.w-8,9);ctx.clip();
+   ctx.globalAlpha=.72;ctx.fillStyle='#202832';ctx.fillRect(p.x+4,p.y+2,p.w-8,9);
+   for(let x=p.x-spacing+offset;x<p.x+p.w+spacing;x+=spacing){
+    line([[x,p.y+3],[x+4*direction,p.y+6.5],[x,p.y+10]],'#f9dc80',1.6);
+   }
+  }
   ctx.restore();return true;
  }
  function reset(){clock=0;}
@@ -103,7 +112,11 @@ const StageVisuals=(()=>{
    const oldX=p.x,oldY=p.y,[dx,dy,dw=0]=motionOffset(p.motion,clock);
    p.x=p.baseX+dx;p.y=p.baseY+dy;p.w=p.baseW+dw;p.dx=p.x-oldX;p.dy=p.y-oldY;
   }
-  fighters.forEach((f,n)=>{const p=riders[n];if(p?.motion){f.x+=p.dx;f.y+=p.dy;}});
+  fighters.forEach((f,n)=>{
+   const p=riders[n];
+   if(p?.motion){f.x+=p.dx;f.y+=p.dy;}
+   if(p?.beltSpeed&&f.x>=p.x-9&&f.x<=p.x+p.w+9)f.x+=p.beltSpeed;
+  });
  }
  return{load,prepared,retain,background,platform,geometry,reset,tick,get ready(){return prepared()},get clock(){return clock},get diagnostics(){return{images:images.size}}};
 })();

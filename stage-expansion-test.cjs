@@ -70,8 +70,9 @@ async function local(browser,errors){
   await toggle.uncheck();
   assert(!(await toggle.isChecked()));
   assert(await mobile.locator('#stage-list-dialog').evaluate(dialog=>dialog.scrollWidth<=dialog.clientWidth));
-  await mobile.locator('.stage-detail-card').last().click();
-  assert.equal(await mobile.locator('#stage').inputValue(),stages.at(-1).id);
+  const selected=stages.at(-1).id;
+  await mobile.locator(`.stage-detail-card[data-stage="${selected}"]`).click();
+  assert.equal(await mobile.locator('#stage').inputValue(),selected);
   await mobile.context().close();
  }
 
@@ -120,6 +121,15 @@ async function local(browser,errors){
     }
    }
    setupStage(id);
+   for(const belt of platforms.filter(p=>p.beltSpeed)){
+    const center=belt.x+belt.w/2;
+    Object.assign(fighter,{x:center,y:belt.y,grounded:true,ledge:null,respawn:0});
+    for(let tick=0;tick<30;tick++)StageVisuals.tick();
+    if(Math.abs(fighter.x-center-30*belt.beltSpeed)>.01||fighter.y!==belt.y)throw Error('Conveyor did not carry the grounded fighter');
+    Object.assign(fighter,{x:center,y:belt.y-1,grounded:false});
+    StageVisuals.tick();
+    if(fighter.x!==center)throw Error('Conveyor moved an airborne fighter');
+   }
    if(id==='70'){
     const lift=platforms.find(p=>p.motion),upper=platforms.find(p=>p.y===356);
     for(let tick=0;tick<263;tick++)StageVisuals.tick();
@@ -226,7 +236,13 @@ async function online(browser,errors,id){
   await pick(page,id==='13'?'random':id);
   await page.evaluate(()=>{
    window.stageFrames=[];
-   addEventListener('online-frame',event=>stageFrames.push([event.detail,StageVisuals.clock,platforms.map(p=>[p.x,p.y,p.w]),fighters.map(f=>[f.x,f.y])]));
+   addEventListener('online-frame',event=>{
+    if(StageVisuals.clock===1){
+     const belts=platforms.filter(p=>p.beltSpeed);
+     belts.forEach((belt,i)=>Object.assign(fighters[i],{x:belt.x+belt.w/2,y:belt.y,vx:0,vy:0,grounded:true}));
+    }
+    stageFrames.push([event.detail,StageVisuals.clock,platforms.map(p=>[p.x,p.y,p.w]),fighters.map(f=>[f.x,f.y])]);
+   });
   });
   await page.click('#open-room');
   await page.click('#ready-room');
@@ -249,6 +265,11 @@ async function online(browser,errors,id){
   assert(shared.some(row=>row[2][i].some((value,axis)=>Math.abs(value-[platform.x,platform.y,platform.w][axis])>1)),
    'Movement was not observed for platform '+i+' on stage '+id);
  });
+ platformsForStage.filter(p=>p.beltSpeed).forEach((belt,i)=>{
+  const center=belt.x+belt.w/2;
+  assert(shared.some(row=>Math.abs(row[3][i][1]-belt.y)<.01&&(row[3][i][0]-center)*Math.sign(belt.beltSpeed)>20),
+   'Conveyor did not carry online fighter '+i+' on stage '+id);
+ });
  await host.evaluate(()=>Net.leave());
  await guest.waitForFunction(()=>!Net.code&&!Net.active);
  await Promise.all(pages.map(page=>page.context().close()));
@@ -264,7 +285,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37','39','40','43','44','47','49','52','53','54','59','60','62','64','65','67','69','70','73','74','75','78','80','81','83','84','85','87','88','89','90','93','95','97','98','101','103','104','106','108','109','111','112','114','116','118','119']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37','39','40','43','44','47','49','52','53','54','59','60','62','64','65','67','69','70','73','74','75','78','80','81','83','84','85','87','88','89','90','93','95','97','98','101','103','104','106','108','109','111','112','114','116','118','119','122','124','125']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}

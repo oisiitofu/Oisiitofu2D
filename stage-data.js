@@ -670,6 +670,34 @@ const StageCatalog=(()=>{
    {x:223,y:397,w:297},
    {x:613,y:473,w:214},
    {x:945,y:427,w:314}
+  ]},
+  {id:"122",name:"ダークスター",origin:"カスタムロボ",theme:"darkstar",folder:"dark-star-holosseum",color:"#d8c8a8",layout:"暗いホロセウムの中央に短い足場があり、左右の発光台が異なる軌道で近づく。縁の灯りで着地できる範囲を示す",platforms:[
+   {x:321,y:554,w:798,main:true},
+   {x:626,y:330,w:178},
+   {x:251,y:421,w:184,motion:{x:78,y:28,period:481,phase:-1.5707963267948966}},
+   {x:1018,y:439,w:186,motion:{x:54,y:49,period:627,phase:1.5707963267948966,harmonicY:2}}
+  ]},
+  {id:"123",name:"ネオ・アルカディア",origin:"ロックマン ゼロ",theme:"neoarcadia",folder:"neo-arcadia",color:"#b6e5e2",layout:"白い主塔の左に長い監視廊があり、右の高台からは短い足場と低い踊り場へ順に降りられる",platforms:[
+   {x:211,y:559,w:1018,main:true},
+   {x:119,y:371,w:335},
+   {x:502,y:259,w:163},
+   {x:826,y:321,w:241},
+   {x:1028,y:429,w:170},
+   {x:1228,y:606,w:163}
+  ]},
+  {id:"124",name:"パニックファクトリー",origin:"ボンバーマン",theme:"panicfactory",folder:"panic-factory",color:"#f3dc95",layout:"上段と下段のベルトコンベアが互いに逆方向へファイターを運ぶ。中央の固定床からどちらにも飛び移れる",platforms:[
+   {x:246,y:557,w:948,main:true},
+   {x:125,y:475,w:162},
+   {x:334,y:419,w:365,beltSpeed:1.05},
+   {x:739,y:358,w:396,beltSpeed:-1.16},
+   {x:1180,y:481,w:154}
+  ]},
+  {id:"125",name:"天つ空町",origin:"どこでもいっしょ",theme:"amatsusora",folder:"amatsusora-town",color:"#f0ca9b",layout:"温泉街の石橋を挟み、左は荷台が低い軒先へ上がる。右は短い旅館の庇を二段で上れる",platforms:[
+   {x:192,y:559,w:1026,main:true},
+   {x:339,y:346,w:309},
+   {x:864,y:438,w:181},
+   {x:1066,y:359,w:192},
+   {x:46,y:634,w:140,motion:{path:[[0,0,0],[96,0,0],[232,0,-155],[337,110,-155],[407,110,-155],[528,0,-155],[645,0,0],[710,0,0]]}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

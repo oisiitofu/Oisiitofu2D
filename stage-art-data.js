@@ -3098,5 +3098,101 @@ const StageArtData={
    "surfaceRight": 793,
    "walkY": 9
   }
+ },
+ "darkstar": {
+  "backgroundSource": "assets/stage-v32-darkstar-background.png",
+  "background": "assets/ready/stage-v32-darkstar-background-0169286333911115.webp",
+  "preview": "assets/ready/stage-picker-darkstar-283747b6bc522def.webp",
+  "main": {
+   "source": "assets/stage-v32-darkstar-main.png",
+   "image": "assets/ready/stage-v32-darkstar-main-e8fa5b690e3f3368.webp",
+   "width": 1499,
+   "height": 316,
+   "surfaceLeft": 20,
+   "surfaceRight": 1479,
+   "walkY": 9,
+   "verticalScale": 0.58
+  },
+  "small": {
+   "source": "assets/stage-v32-darkstar-small.png",
+   "image": "assets/ready/stage-v32-darkstar-small-ff65d03c269f524c.webp",
+   "width": 765,
+   "height": 161,
+   "surfaceLeft": 18,
+   "surfaceRight": 745,
+   "walkY": 9
+  }
+ },
+ "neoarcadia": {
+  "backgroundSource": "assets/stage-v32-neoarcadia-background.png",
+  "background": "assets/ready/stage-v32-neoarcadia-background-b9084fc29d156d29.webp",
+  "preview": "assets/ready/stage-picker-neoarcadia-fa04a718811696fc.webp",
+  "main": {
+   "source": "assets/stage-v32-neoarcadia-main.png",
+   "image": "assets/ready/stage-v32-neoarcadia-main-9eb09cdc2871b4b4.webp",
+   "width": 1527,
+   "height": 213,
+   "surfaceLeft": 40,
+   "surfaceRight": 1487,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v32-neoarcadia-small.png",
+   "image": "assets/ready/stage-v32-neoarcadia-small-6bf9ce91bf14a9ab.webp",
+   "width": 764,
+   "height": 193,
+   "surfaceLeft": 38,
+   "surfaceRight": 725,
+   "walkY": 8
+  }
+ },
+ "panicfactory": {
+  "backgroundSource": "assets/stage-v32-panicfactory-background.png",
+  "background": "assets/ready/stage-v32-panicfactory-background-0e45563fde2c3456.webp",
+  "preview": "assets/ready/stage-picker-panicfactory-30d844e245e9a4eb.webp",
+  "main": {
+   "source": "assets/stage-v32-panicfactory-main.png",
+   "image": "assets/ready/stage-v32-panicfactory-main-b8a5e9a959203a8c.webp",
+   "width": 1520,
+   "height": 234,
+   "surfaceLeft": 62,
+   "surfaceRight": 1457,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v32-panicfactory-small.png",
+   "image": "assets/ready/stage-v32-panicfactory-small-62593603253bb45e.webp",
+   "width": 772,
+   "height": 190,
+   "surfaceLeft": 38,
+   "surfaceRight": 730,
+   "walkY": 10
+  }
+ },
+ "amatsusora": {
+  "backgroundSource": "assets/stage-v32-amatsusora-background.png",
+  "background": "assets/ready/stage-v32-amatsusora-background-04a8f299dce4a9f1.webp",
+  "preview": "assets/ready/stage-picker-amatsusora-bd6f09fb2aca60a2.webp",
+  "main": {
+   "source": "assets/stage-v32-amatsusora-main.png",
+   "image": "assets/ready/stage-v32-amatsusora-main-1519923493079f4d.webp",
+   "width": 1536,
+   "height": 276,
+   "surfaceLeft": 30,
+   "surfaceRight": 1509,
+   "walkY": 10,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v32-amatsusora-small.png",
+   "image": "assets/ready/stage-v32-amatsusora-small-9ac65c58879bb68e.webp",
+   "width": 803,
+   "height": 194,
+   "surfaceLeft": 31,
+   "surfaceRight": 771,
+   "walkY": 9
+  }
  }
 };
