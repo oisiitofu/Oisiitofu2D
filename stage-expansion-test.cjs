@@ -42,7 +42,7 @@ async function local(browser,errors){
  }
  const toggles=page.locator('.stage-random-switch');
  assert.equal(await toggles.count(),StageCatalog.stages.length);
- const included='27';
+ const included='28';
  for(const input of await toggles.all()){
   if(await input.getAttribute('data-stage')!==included)await input.uncheck();
  }
@@ -212,7 +212,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of ['13','18','20','21','25'])console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of ['13','18','20','21','25','28'])console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}

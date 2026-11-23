@@ -74,6 +74,14 @@ const StageCatalog=(()=>{
   {id:'27',name:'ガウル平原',origin:'ゼノブレイド',theme:'gaur',folder:'gaur-plain',color:'#c7e58d',layout:'左右の岩棚を渡って中央のアーチ上部へ登る',platforms:[
    {x:218,y:560,w:1004,main:true},{x:195,y:482,w:190},{x:332,y:376,w:198},
    {x:566,y:278,w:244},{x:816,y:333,w:216},{x:1018,y:434,w:208}
+  ]},
+  {id:'28',name:'ハイリア湖',origin:'ゼルダの伝説 トワイライトプリンセス',theme:'hylia',folder:'lake-hylia',color:'#9cd6eb',layout:'左の復帰用いかだと右の高い足場',platforms:[
+   {x:330,y:560,w:824,main:true},{x:932,y:375,w:188,art:'main'},
+   {x:140,y:513,w:173,motion:{path:[[0,0,0],[65,0,0],[190,130,-22],[272,240,-5],[345,240,-5],[505,0,0],[570,0,0]]}}
+  ]},
+  {id:'29',name:'廃墟都市',origin:'ニーア オートマタ',theme:'cityruins',folder:'city-ruins',color:'#c9d8b3',layout:'左の大屋上と、右の崖下に残る非常用の足場',platforms:[
+   {x:230,y:540,w:880,main:true},{x:276,y:378,w:455},
+   {x:807,y:441,w:163},{x:1127,y:642,w:188}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

@@ -49,7 +49,7 @@ const StageVisuals=(()=>{
    const y=(H*100+n*113.7+(rise?-1:1)*clock*(theme==='abyss'?.72:.30))%H;
    ctx.globalAlpha=.13+(Math.sin(clock*.018+n)+1)*.055;
    if(theme==='abyss'){ctx.strokeStyle=color;ctx.beginPath();ctx.arc(x,y,2+n%5,0,TAU);ctx.stroke();}
-   else if(theme==='rail'||theme==='aurora'||theme==='salt'||theme==='gaur')line([[x,y],[x+7+n%4*3,y+(theme==='aurora'||theme==='gaur'?2:0)]],color,1);
+   else if(theme==='rail'||theme==='aurora'||theme==='salt'||theme==='gaur'||theme==='hylia')line([[x,y],[x+7+n%4*3,y+(theme==='aurora'||theme==='gaur'?2:0)]],color,1);
    else if(theme==='archive'||theme==='origami'||theme==='dusk'){
     ctx.save();ctx.translate(x,y);ctx.rotate(n+clock*.017);path([[-3,-2],[3,-2],[5,2],[-2,3]],color);ctx.restore();
    }else if(theme==='crystal'){
@@ -60,7 +60,7 @@ const StageVisuals=(()=>{
   }
  }
  function geometry(p){
-  const art=StageArtData[StageCatalog.get(activeStage).theme]?.[p.main?'main':'small'];if(!art)return null;
+  const art=StageArtData[StageCatalog.get(activeStage).theme]?.[p.art??(p.main?'main':'small')];if(!art)return null;
   const scaleX=p.w/(art.surfaceRight-art.surfaceLeft),scaleY=scaleX*(art.verticalScale??(p.main?.76:.60));
   return{art,x:p.x-art.surfaceLeft*scaleX,y:p.y-art.walkY*scaleY,w:art.width*scaleX,h:art.height*scaleY,scaleX,scaleY};
  }

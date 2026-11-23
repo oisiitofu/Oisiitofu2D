@@ -841,5 +841,53 @@ const StageArtData={
    "surfaceRight": 1040,
    "walkY": 83
   }
+ },
+ "hylia": {
+  "backgroundSource": "assets/stage-v8-hylia-background.png",
+  "background": "assets/ready/stage-v8-hylia-background-295106ce2a1bd70e.webp",
+  "preview": "assets/ready/stage-picker-hylia-60e3dbb9ef74cb48.webp",
+  "main": {
+   "source": "assets/stage-v8-hylia-main.png",
+   "image": "assets/ready/stage-v8-hylia-main-11d71990040d819b.webp",
+   "width": 1536,
+   "height": 364,
+   "surfaceLeft": 15,
+   "surfaceRight": 1524,
+   "walkY": 58,
+   "verticalScale": 0.56
+  },
+  "small": {
+   "source": "assets/stage-v8-hylia-small.png",
+   "image": "assets/ready/stage-v8-hylia-small-6c2c45839cc0228b.webp",
+   "width": 1350,
+   "height": 146,
+   "surfaceLeft": 26,
+   "surfaceRight": 1325,
+   "walkY": 28
+  }
+ },
+ "cityruins": {
+  "backgroundSource": "assets/stage-v8-cityruins-background.png",
+  "background": "assets/ready/stage-v8-cityruins-background-84f61dd82cdeeaf6.webp",
+  "preview": "assets/ready/stage-picker-cityruins-f92959cfceddba4a.webp",
+  "main": {
+   "source": "assets/stage-v8-cityruins-main.png",
+   "image": "assets/ready/stage-v8-cityruins-main-dc3bfefe7b54cc1a.webp",
+   "width": 1501,
+   "height": 453,
+   "surfaceLeft": 9,
+   "surfaceRight": 1492,
+   "walkY": 71,
+   "verticalScale": 0.57
+  },
+  "small": {
+   "source": "assets/stage-v8-cityruins-small.png",
+   "image": "assets/ready/stage-v8-cityruins-small-a0dea0b679996f1b.webp",
+   "width": 821,
+   "height": 213,
+   "surfaceLeft": 12,
+   "surfaceRight": 808,
+   "walkY": 46
+  }
  }
 };
