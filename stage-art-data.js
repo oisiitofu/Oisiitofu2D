@@ -3482,5 +3482,101 @@ const StageArtData={
    "surfaceRight": 755,
    "walkY": 11
   }
+ },
+ "springvalley": {
+  "backgroundSource": "assets/stage-v36-springvalley-background.png",
+  "background": "assets/ready/stage-v36-springvalley-background-2e5e48ac4c8df5d1.webp",
+  "preview": "assets/ready/stage-picker-springvalley-d4a44a9074da0e71.webp",
+  "main": {
+   "source": "assets/stage-v36-springvalley-main.png",
+   "image": "assets/ready/stage-v36-springvalley-main-9aece4fe6de60ce6.webp",
+   "width": 1515,
+   "height": 303,
+   "surfaceLeft": 40,
+   "surfaceRight": 1478,
+   "walkY": 14,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v36-springvalley-small.png",
+   "image": "assets/ready/stage-v36-springvalley-small-42f42ca96a9881cc.webp",
+   "width": 748,
+   "height": 190,
+   "surfaceLeft": 32,
+   "surfaceRight": 719,
+   "walkY": 18
+  }
+ },
+ "fruitdojo": {
+  "backgroundSource": "assets/stage-v36-fruitdojo-background.png",
+  "background": "assets/ready/stage-v36-fruitdojo-background-6309e618cd6f55dd.webp",
+  "preview": "assets/ready/stage-picker-fruitdojo-18e85af52e219eb5.webp",
+  "main": {
+   "source": "assets/stage-v36-fruitdojo-main.png",
+   "image": "assets/ready/stage-v36-fruitdojo-main-e8bf65e60e4e2cce.webp",
+   "width": 1530,
+   "height": 255,
+   "surfaceLeft": 63,
+   "surfaceRight": 1466,
+   "walkY": 9,
+   "verticalScale": 0.57
+  },
+  "small": {
+   "source": "assets/stage-v36-fruitdojo-small.png",
+   "image": "assets/ready/stage-v36-fruitdojo-small-0d8be977cfb59b24.webp",
+   "width": 799,
+   "height": 169,
+   "surfaceLeft": 37,
+   "surfaceRight": 761,
+   "walkY": 9
+  }
+ },
+ "bunkum": {
+  "backgroundSource": "assets/stage-v36-bunkum-background.png",
+  "background": "assets/ready/stage-v36-bunkum-background-5908e0fdee7d0a4f.webp",
+  "preview": "assets/ready/stage-picker-bunkum-49c4fdb2250f746b.webp",
+  "main": {
+   "source": "assets/stage-v36-bunkum-main.png",
+   "image": "assets/ready/stage-v36-bunkum-main-d51ddde50c28474e.webp",
+   "width": 1530,
+   "height": 218,
+   "surfaceLeft": 23,
+   "surfaceRight": 1508,
+   "walkY": 9,
+   "verticalScale": 0.64
+  },
+  "small": {
+   "source": "assets/stage-v36-bunkum-small.png",
+   "image": "assets/ready/stage-v36-bunkum-small-1a13fd93ea3ffa30.webp",
+   "width": 782,
+   "height": 162,
+   "surfaceLeft": 37,
+   "surfaceRight": 744,
+   "walkY": 10
+  }
+ },
+ "timestation": {
+  "backgroundSource": "assets/stage-v36-timestation-background.png",
+  "background": "assets/ready/stage-v36-timestation-background-addc4bfecde428a5.webp",
+  "preview": "assets/ready/stage-picker-timestation-a76f671a0a6857aa.webp",
+  "main": {
+   "source": "assets/stage-v36-timestation-main.png",
+   "image": "assets/ready/stage-v36-timestation-main-0c754df6ef3287fe.webp",
+   "width": 1496,
+   "height": 207,
+   "surfaceLeft": 55,
+   "surfaceRight": 1439,
+   "walkY": 10,
+   "verticalScale": 0.56
+  },
+  "small": {
+   "source": "assets/stage-v36-timestation-small.png",
+   "image": "assets/ready/stage-v36-timestation-small-4532ad641b667499.webp",
+   "width": 772,
+   "height": 171,
+   "surfaceLeft": 43,
+   "surfaceRight": 728,
+   "walkY": 15
+  }
  }
 };
