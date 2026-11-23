@@ -430,3 +430,30 @@ body[data-text-size="1.2"] #result-ready-players :is(span,b){font-size:14px}body
 #online-stats table{width:100%;border-collapse:collapse;text-align:right;font-variant-numeric:tabular-nums}
 #online-stats :is(th,td){padding:8px 5px;border-bottom:1px solid #89b8e933}
 #online-stats :is(th,td):first-child{text-align:left;overflow-wrap:anywhere}
+.room-ready-reason{display:block;margin-top:.35rem;color:var(--ready-reason-color,#ffd28a);font-size:.8rem;line-height:1.35}
+.setup-dialog.fighter-list-dialog[open]{overflow-y:auto}
+.fighter-folders{display:flex;align-items:end;flex-wrap:wrap;gap:6px 12px;margin-top:10px}
+.fighter-folders label{display:grid;gap:4px;font-size:12px;min-width:140px}
+.fighter-folders summary{cursor:pointer;padding:7px 0;font-size:13px}
+.fighter-folders details[open]{flex:1 1 100%}
+.fighter-folder-actions{display:flex;flex-wrap:wrap;align-items:end;gap:8px;padding:8px 0}
+.fighter-folders :is(input,select,button){min-height:34px;border:1px solid #88917e;border-radius:5px;padding:5px 8px;color:#252824;background:#fffef6}
+.fighter-folders button:disabled{opacity:.45}
+#fighter-folder-status{width:100%;margin:0;font-size:12px;color:#465d34}
+#fighter-folder-status:empty{display:none}
+#fighter-name-list .fighter-folder-remove{flex:0 0 36px;text-align:center;font-size:17px}
+.fighter-comparison{margin-top:16px;padding:12px;border:1px solid #88917e70;border-radius:6px}
+.fighter-comparison summary{cursor:pointer;font-size:14px;font-weight:700}
+.fighter-comparison-selectors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}
+.fighter-comparison-selectors label{display:grid;gap:4px;min-width:0;font-size:12px}
+.fighter-comparison-selectors select{max-width:100%;min-width:0;padding:6px;color:#252824;background:#fffef6}
+.fighter-comparison table{width:100%;table-layout:fixed;border-collapse:collapse;text-align:left;font-variant-numeric:tabular-nums}
+.fighter-comparison :is(th,td){padding:6px;border-bottom:1px solid #88917e60;overflow-wrap:anywhere;font-size:12px}
+.fighter-comparison-note{margin:8px 0 0;font-size:12px}
+.character-guide-practice{display:block;margin-top:6px;padding:5px 8px;font-size:12px}
+#training-practice-status{margin:.4em 0;padding:6px 8px;border-inline-start:2px solid #9ed9ff;font-size:12px;line-height:1.4}
+#fighter-trait-description{flex:1 0 100%;margin:0;color:#465d34;font-size:12px}
+#fighter-trait-description:empty{display:none}
+.character-traits{display:flex;gap:5px;flex-wrap:wrap;padding:0;list-style:none}
+.character-traits li{border:1px solid #7097af;padding:4px 8px;border-radius:20px;color:#d5eeff;font-size:11px}
+#restore-last-squad{flex:0 0 auto;max-width:6.5em;padding:3px 6px;line-height:1.15;font-size:clamp(10px,1.4vw,12px);background:#20354c;color:#e0efff;border:1px solid #557392;border-radius:5px}

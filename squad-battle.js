@@ -2,6 +2,7 @@
 // A stock belongs to a team member. Replacing a member never resets the opponent.
 const SquadBattle=(()=>{
  const teams={player:['random','random','random','random','random'],cpu:['random','random','random','random','random']},slots={player:0,cpu:0};let previousSize=1,moving=null;
+ const lastLineups=new Map();
  const editable=()=>state==='menu'&&!(document.querySelector('#battle-mode').value==='online'&&Net.lineupLocked);
  function cancelReorder(){moving=null;refresh();}
  function swap(side,from,to){if(!editable()||![from,to].every(n=>Number.isInteger(n)&&n>=0&&n<size()))return false;[teams[side][from],teams[side][to]]=[teams[side][to],teams[side][from]];slots[side]=to;moving=null;Roster.chooseForSlot(teams[side][to]);refresh();document.querySelector('#squad-lineup').dispatchEvent(new Event('change',{bubbles:true}));return true;}
@@ -10,6 +11,41 @@ const SquadBattle=(()=>{
  function available(id){if(document.querySelector('#match-kind').value==='bingo'&&document.querySelector('#battle-mode').value==='online')return false;const side=document.querySelector('#battle-mode').value==='online'?'player':Roster.target;return size()<2||id==='random'||!teams[side].slice(0,size()).some((used,n)=>n!==slots[side]&&used===id);}
  function valid(){return size()<2||(document.querySelector('#battle-mode').value==='online'?['player']:['player','cpu']).every(side=>!SquadRules.duplicate(teams[side].slice(0,size())));}
  function choose(id){if(!available(id)){document.querySelector('#roster-selection-hint').textContent='そのキャラは別の出場枠で選択済みです';return false;}if(size()>1)teams[Roster.target][slots[Roster.target]]=id;return true;}
+ const storageKey=(online,count)=>'tofu-bros.last-squad.v1.'+(online?'online':'local')+'.'+count;
+ function savedLineup(online,count){
+  const key=storageKey(online,count);
+  let value=lastLineups.get(key);
+  if(!lastLineups.has(key)){
+   try{value=JSON.parse(localStorage.getItem(key)||'null');}catch{}
+   lastLineups.set(key,value);
+  }
+  const ids=new Set(Roster.selectable.map(d=>d.id));
+  if(!Array.isArray(value)||value.length!==(online?1:2)||!value.every(team=>
+   Array.isArray(team?.ids)&&team.ids.length===count&&new Set(team.ids).size===count&&
+   team.ids.every(id=>ids.has(id))&&Number.isInteger(team.color)&&team.color>=0&&team.color<5))return null;
+  return value;
+ }
+ function remember(count){
+  const online=Net.active,key=storageKey(online,count);
+  const played=(online?[fighters[Net.slot]]:fighters.slice(0,2)).map(f=>({ids:f.squad.slice(),color:f.color}));
+  lastLineups.set(key,played);
+  try{localStorage.setItem(key,JSON.stringify(played));}catch{}
+ }
+ function restore(saved,online,count){
+  if(!editable()||size()!==count)return;
+  moving=null;
+  const target=Roster.target,sides=online?['player']:['player','cpu'];
+  for(const [i,side] of sides.entries()){
+   teams[side].splice(0,count,...saved[i].ids);slots[side]=0;
+  }
+  for(const [i,side] of sides.entries()){
+   Roster.setTarget(side);Roster.chooseForSlot(teams[side][0]);Roster.setColor(saved[i].color);
+  }
+  Roster.setTarget(target);refresh();
+  document.querySelector('#squad-lineup').dispatchEvent(new Event('change',{bubbles:true}));
+  document.querySelector('#roster-selection-hint').textContent='前回の出場順とカラーを復元しました。';
+  document.getElementById('restore-last-squad')?.focus();
+ }
  function refresh(){
   const bingo=document.querySelector('#match-kind').value==='bingo'&&document.querySelector('#battle-mode').value==='online',count=size(),online=document.querySelector('#battle-mode').value==='online',joined=online&&!!Net.code;document.querySelector('#online-lineup-size').value=String(count);document.querySelector('#online-lineup-help').textContent=joined&&Net.slot!==0?'編成数はルーム作成者が設定':count>1?'出場枠 → ファイターを選択':'3・5キャラの団体戦も選べます';const row=document.querySelector('#squad-lineup');if(!row)return;
   if(count>1&&previousSize===1){teams.player[0]=Roster.selected;teams.cpu[0]=document.querySelector('#cpu-character').value;slots.player=slots.cpu=0;}if(count>previousSize)for(const side of ['player','cpu']){const seen=new Set();for(let n=0;n<count;n++){const id=teams[side][n];if(id==='random')continue;if(seen.has(id))teams[side][n]='random';else seen.add(id);}}previousSize=count;for(const side of ['player','cpu'])slots[side]=Math.min(slots[side],Math.max(0,count-1));
@@ -25,10 +61,16 @@ const SquadBattle=(()=>{
    const clearHold=()=>{clearTimeout(hold);hold=null;};button.onpointerdown=e=>{if(e.button!==0||!editable())return;start={x:e.clientX,y:e.clientY};held=false;hold=setTimeout(()=>{held=true;reorder(n);},500);};button.onpointermove=e=>{if(start&&Math.hypot(e.clientX-start.x,e.clientY-start.y)>9)clearHold();};button.onpointerup=button.onpointercancel=button.onpointerleave=clearHold;
    button.ondragstart=e=>{clearHold();moving={side,slot:n};e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('application/x-squad-slot',JSON.stringify(moving));};button.ondragover=e=>{if(editable()&&moving?.side===side){e.preventDefault();e.dataTransfer.dropEffect='move';button.classList.add('drop-target');}};button.ondragleave=()=>button.classList.remove('drop-target');button.ondrop=e=>{e.preventDefault();if(moving?.side===side)swap(side,moving.slot,n);};button.ondragend=()=>{if(moving)cancelReorder();};row.append(button);
   }
+  const saved=savedLineup(online,count);
+  if(saved){
+   const button=document.createElement('button');button.id='restore-last-squad';button.type='button';button.textContent='前回の編成';
+   button.title='最後に対戦した出場順とカラーを復元';button.disabled=!editable();
+   button.onclick=()=>restore(saved,online,count);row.append(button);
+  }
   document.querySelector('#roster-selection-hint').textContent=moving?.side===side?'入れ替える出場枠を押してください（同じ枠でキャンセル）':owner+' '+count+'キャラ団体戦 · ドラッグ / 長押しで順番入れ替え';
  }
  function config(){const count=size();return{size:count,teams:['player','cpu'].map(side=>SquadRules.resolve(teams[side].slice(0,count),Roster.selectable.map(d=>d.id)))};}
- function start(config){if(!config||config.size<2)return;for(let n=0;n<fighters.length;n++){const team=config.teams[n],previous=fighters[n];fighters[n]=Object.assign(makeFighter(n,previous.color,team[0]),{control:previous.control,team:previous.team,x:previous.x,y:previous.y,face:previous.face,squad:team.slice(),squadIndex:0,stocks:team.length});}}
+ function start(config){if(!config||config.size<2)return;for(let n=0;n<fighters.length;n++){const team=config.teams[n],previous=fighters[n];fighters[n]=Object.assign(makeFighter(n,previous.color,team[0]),{control:previous.control,team:previous.team,x:previous.x,y:previous.y,face:previous.face,squad:team.slice(),squadIndex:0,stocks:team.length});}remember(config.size);}
  function onKO(f){if(!f.squad||f.stocks<=0)return;for(const rules of Object.values(NewcomerCore.registry))for(const q of rules.objects)if(q.owner===f.id)q.dead=true;f.nextSquadIndex=f.squadIndex+1;}
  function respawn(f){
   if(!f.squad)return false;

@@ -174,6 +174,33 @@ const BattleSize=(()=>{
  function geometry(f){const id=f.characterId,img=characterArt[id]?.frames[0];return geometryIds.has(id)&&img?physicsHeights[id]/(img.height*sourceNative(id,0)*FIGHTER_SCALE):1;}
  function originY(f){return f.characterId==='kitten'?kittenDrawOriginY(f):f.y;}
  function point(f,p){const s=geometry(f),y=originY(f);return{x:f.x+(p.x-f.x)*s,y:y+(p.y-y)*s};}
+ // Measured grip for the large, multi-armed hold pose, in body-relative units.
+ const grabHands={estark:{reach:.41,height:.53}};
+ const grabReleases=new WeakMap(),noGrabOffset={x:0,y:0};
+ function grabBody(f){
+  const scale=MorphieRules.scale(f);
+  return{height:(heights[f.characterId]||f.character.ecb.height)*scale,radius:f.character.ecb.radius*scale};
+ }
+ function grabGrip(f){
+  const body=grabBody(f),hand=grabHands[f.characterId];
+  const reach=hand?body.height*hand.reach:18+body.radius*.68;
+  return{x:f.x+f.face*reach,y:f.y-body.height*(hand?.height??.53)};
+ }
+ function grabOffset(f){
+  const owner=f.grabOwner;
+  if(f.mode==='Grabbed'&&owner?.grabbed===f&&['GrabHold','Pummel'].includes(owner.mode)){
+   const body=grabBody(f),grip=grabGrip(owner);
+   const inset=body.radius*.55+Math.max(0,body.height-105)*.30;
+   const x=grip.x+owner.face*inset,y=Math.min(owner.y,grip.y+body.height*.53);
+   return{x:x-f.x,y:y-f.y};
+  }
+  const release=grabReleases.get(f);if(!release)return noGrabOffset;
+  const age=frame-release.frame-release.hitlag;
+  if(age>=7||f.respawn){grabReleases.delete(f);return noGrabOffset;}
+  const fade=Math.min(1,1-age/7);
+  return{x:release.offset.x*fade,y:release.offset.y*fade};
+ }
+ function rememberGrabRelease(f,offset){grabReleases.set(f,{offset,frame,hitlag:f.hitlag});}
  function prepare(f){const s=geometry(f),c=f.character;c.ecb={radius:c.ecb.radius*s,height:Math.min(c.ecb.height*s,physicsHeights[f.characterId]||Infinity,displayScale[f.characterId]||tiers[f.characterId]?heights[f.characterId]:Infinity)};c.shieldSize*=s;c.shieldOffset=c.shieldOffset.map(v=>v*s);}
- return{heights,tiers,tierHeights,legacyHeights,locomotionScale,native,baseNative,imagePose,art,baseline,geometry,originY,point,prepare};
+ return{heights,tiers,tierHeights,legacyHeights,locomotionScale,native,baseNative,imagePose,art,baseline,geometry,originY,point,grabGrip,grabOffset,rememberGrabRelease,prepare};
 })();

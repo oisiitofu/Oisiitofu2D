@@ -2,14 +2,49 @@
 const Net=(()=>{
  let socket=null,active=false,starting=false,applying=false,slot=0,code='',inputs=null,config=null,pingTimer=null,lastFrame=0,pending=false,roomPlaying=false,matchId=0,queuedReady=null,loadingReady=false,readyRequestPending=false,preparation=null,roomState=null,outbox=[],compactInput=false;
  const pacing=NetworkPacing.create();
+ let resumeToken=null,reconnecting=false,peerWaiting=false,retryTimer=null,resumeDeadline=null,finishedPacket=null;
+ let readySelection=null;
  const $=id=>document.getElementById(id);
  const ruleIds=['match-kind','player-count','battle-format','stock-count','time-limit','squad-size','team-attack','one-on-one','limit-break'];
+ const readyReasons={
+  character:'キャラを変更',color:'カラーを変更',stage:'ステージの希望を変更',lineup:'団体戦の編成を変更',
+  selection:'対戦の選択を変更',rules:'部屋のルールを変更',teams:'チーム分けを変更',
+  'teams-invalid':'赤・青両チームへの参加が必要',participant:'参加者が退出',lobby:'キャラ選択に戻った',
+  'load-error':'対戦画像の準備に失敗','load-timeout':'対戦画像の準備時間を超過',
+  'bingo-card':'ビンゴカードを配り直した','bingo-choice':'ビンゴの選択確定を取り消した'
+ };
  const playerName=id=>PlayerNames.normalize((active?config:roomState)?.players?.[id]?.name)||PlayerNames.normalize(roomState?.players?.[id]?.name)||(id===slot?PlayerNames.current:(id+1)+'P');
- const status=message=>{document.querySelector('#roster-online-status').textContent=message;Roster.summary();document.querySelector('#online-status').textContent=message;document.querySelector('.live').textContent=active?'● ONLINE · '+playerName(slot):'● '+message;};
+ const status=message=>{document.querySelector('#roster-online-status').textContent=message;Roster.summary();document.querySelector('#online-status').textContent=message;document.querySelector('.live').textContent=active&&!reconnecting&&!peerWaiting?'● ONLINE · '+playerName(slot):'● '+message;};
  const send=data=>{if(socket?.readyState===WebSocket.OPEN)socket.send(JSON.stringify(data));};
  function invitation(value){const url=new URL(location.href);url.searchParams.delete('room');if(value)url.searchParams.set('room',value);if(url.href!==location.href)history.replaceState(history.state,'',url);}
  function refreshResult(){ResultReadiness.refresh({code,slot,pending:readyRequestPending||!!queuedReady||loadingReady,result:state==='result',online:$('battle-mode').value==='online'});}
- function clearRoom(){ResultReadiness.clear();readyRequestPending=false;NetworkStatus.reset();PlayerNames.lock(false);pacing.reset();compactInput=false;BingoBattle.accept(null);roomState=null;preparation=null;roomPlaying=false;matchId=0;queuedReady=null;loadingReady=false;code='';$('open-match-settings').classList.remove('hidden');document.querySelector('#room-code').value='';document.querySelector('#room-id').textContent='';document.querySelector('#network-ping').textContent='';document.querySelector('#room-players').replaceChildren();document.querySelector('#room-match-rule').textContent='';document.querySelector('#room-connect').classList.remove('hidden');document.querySelector('#room-lobby').classList.add('hidden');invitation('');BattlePlayers.refresh();SquadBattle.refresh();refreshResult();}
+ function stopReconnect(){clearTimeout(retryTimer);clearTimeout(resumeDeadline);retryTimer=resumeDeadline=null;reconnecting=false;}
+ function clearRoom(){stopReconnect();resumeToken=null;peerWaiting=false;finishedPacket=null;readySelection=null;config=null;ResultReadiness.clear();readyRequestPending=false;NetworkStatus.reset();PlayerNames.lock(false);pacing.reset();compactInput=false;BingoBattle.accept(null);roomState=null;preparation=null;roomPlaying=false;matchId=0;queuedReady=null;loadingReady=false;code='';$('open-match-settings').classList.remove('hidden');document.querySelector('#room-code').value='';document.querySelector('#room-id').textContent='';document.querySelector('#network-ping').textContent='';document.querySelector('#room-players').replaceChildren();document.querySelector('#room-match-rule').textContent='';document.querySelector('#room-connect').classList.remove('hidden');document.querySelector('#room-lobby').classList.add('hidden');invitation('');BattlePlayers.refresh();SquadBattle.refresh();refreshResult();}
+ function syncConnectionStatus(waiting=peerWaiting){
+  peerWaiting=waiting;
+  NetworkStatus.connectionChanged(state==='battle'?(reconnecting?'local':peerWaiting?'peer':null):null);
+  if(reconnecting)status('接続が切れました。再接続しています…');
+  else if(peerWaiting)status('参加者の再接続を待っています…');
+ }
+ function failReconnect(){
+  const connection=socket;socket=null;outbox=[];clearInterval(pingTimer);connection?.close();
+  clearRoom();end('再接続できませんでした。ルームを作成するか参加し直してください。');
+ }
+ function retryConnection(){
+  clearTimeout(retryTimer);
+  retryTimer=setTimeout(()=>{
+   outbox=[];
+   openConnection({type:'resume',code,token:resumeToken,matchId:config?.matchId,lastFrame,inputFormat:InputCodec.format});
+  },300);
+ }
+ function reconnect(){
+  if(!resumeToken){clearRoom();end('接続が切れました。ルームを作成・参加し直してください。');return;}
+  if(!reconnecting){
+   reconnecting=true;resumeDeadline=setTimeout(failReconnect,14500);preparation=null;readyRequestPending=false;
+   keys.clear();pressed.clear();Controls.clear();syncConnectionStatus();
+  }
+  retryConnection();
+ }
  function rules(prefix=''){
   const value=id=>$(prefix+id).value;
   return{ruleSet:value('match-kind'),playerCount:+value('player-count'),format:value('battle-format'),stocks:+value('stock-count'),timeLimit:+value('time-limit'),squadSize:+value('squad-size'),teamAttack:value('team-attack')==='on',oneOnOne:$(prefix+'one-on-one').checked,limitBreak:$(prefix+'limit-break').checked};
@@ -21,43 +56,69 @@ const Net=(()=>{
  }
  function connect(type,roomCode){
   if(pending||code)return;
-  const request={...rules('create-'),type,name:PlayerNames.current,inputFormat:InputCodec.format,code:(roomCode??$('room-code').value).trim().toUpperCase()};
+  const request={...rules('create-'),type,name:PlayerNames.current,inputFormat:InputCodec.format,reconnect:1,code:(roomCode??$('room-code').value).trim().toUpperCase()};
   if(type==='join'&&!/^[A-F0-9]{6}$/.test(request.code)){status('6文字のルームコードを入力してください（0〜9・A〜F）。');return;}
   pending=true;openConnection(request);
  }
  function openConnection(request){
   if(socket?.readyState===WebSocket.OPEN){send(request);return;}
   outbox.push(request);if(socket?.readyState===WebSocket.CONNECTING)return;
-  const protocol=location.protocol==='https:'?'wss:':'ws:';socket=new WebSocket(`${protocol}//${location.host}/online`);status('サーバーに接続しています…');const connection=socket;
+  const protocol=location.protocol==='https:'?'wss:':'ws:';socket=new WebSocket(`${protocol}//${location.host}/online`);if(!reconnecting)status('サーバーに接続しています…');const connection=socket;
   socket.onopen=()=>{if(socket!==connection)return;for(const item of outbox.splice(0))send(item);clearInterval(pingTimer);pingTimer=setInterval(()=>send({type:'ping',time:Date.now()}),3000);};
   socket.onmessage=e=>{if(socket!==connection)return;let m=JSON.parse(e.data);
    if(m.type==='rooms')renderRooms(m.rooms);
-   if(m.type==='joined'){compactInput=m.inputFormat===InputCodec.format;pending=false;slot=m.slot;$('online-team').value=String(slot%2);code=m.code;$('room-code').value=code;$('room-id').textContent=code;invitation(code);$('room-lobby').classList.remove('hidden');$('room-connect').classList.add('hidden');Roster.open('online');$('online-room').close();status('キャラとステージを選び、ルームで準備完了を押してください。');}
+   if(m.type==='joined'){resumeToken=m.resumeToken||null;compactInput=m.inputFormat===InputCodec.format;pending=false;slot=m.slot;$('online-team').value=String(slot%2);code=m.code;$('room-code').value=code;$('room-id').textContent=code;invitation(code);$('room-lobby').classList.remove('hidden');$('room-connect').classList.add('hidden');Roster.open('online');$('online-room').close();status('キャラとステージを選び、ルームで準備完了を押してください。');}
+   if(m.type==='resumed'){
+    stopReconnect();compactInput=m.inputFormat===InputCodec.format;
+    if(finishedPacket?.matchId===m.matchId)send(finishedPacket);
+    syncConnectionStatus(m.waiting);
+    if(!peerWaiting)status(active?'対戦に復帰しました':'ルームに再接続しました。');
+   }
+   if(m.type==='resume-denied'){failReconnect();return;}
+   if(m.type==='connection-status'){
+    const wasWaiting=peerWaiting;syncConnectionStatus(m.waiting);
+    if(wasWaiting&&!peerWaiting&&!reconnecting)status(active?'対戦を再開しました':'参加者が再接続しました。');
+   }
    if(m.type==='room')renderRoom(m);
    if(m.type==='room-closed'){clearRoom();end(m.message);if(state==='menu'){showBrowser();status(m.message);}}
    if(m.type==='prepare'){const ticket={connection,code,matchId:m.config.matchId};preparation=ticket;matchId=ticket.matchId;roomPlaying=true;status('対戦の画像を準備しています…');prepareMatchArt(matchArtPlayers(m.config),m.config.stage,m.config.limitBreak).then(()=>{if(preparation!==ticket||socket!==connection||code!==ticket.code)return;send({type:'loaded',matchId:ticket.matchId});status('画像の準備完了 · 相手を待っています');}).catch(()=>{if(preparation!==ticket||socket!==connection)return;preparation=null;send({type:'load-error',matchId:ticket.matchId});status('画像を準備できませんでした。もう一度お試しください。');});}
    if(m.type==='start'){readyRequestPending=false;ResultReadiness.begin(m.config,code);preparation=null;config=m.config;matchId=config.matchId||0;roomPlaying=true;queuedReady=null;document.querySelector('#time-limit').value=String(MatchRules.time(config.timeLimit));document.querySelector('#team-attack').value=MatchRules.teamAttack(config.teamAttack)?'on':'off';document.querySelector('#squad-size').value=String(config.squadSize||1);SquadBattle.refresh();for(const b of document.querySelectorAll('#result .restart')){b.disabled=false;b.textContent='再戦する →';}document.querySelector('#stock-count').value=String(config.stocks||3);document.querySelector('#player-count').value=String(config.players.length);document.querySelector('#battle-format').value=config.format||'free';active=true;starting=true;lastFrame=0;pacing.reset();NetworkStatus.begin(performance.now());document.querySelector('#one-on-one').checked=config.oneOnOne;document.querySelector('#limit-break').checked=config.limitBreak===true;document.querySelector('#color2').value=String(config.players[1].color);start();frame=0;starting=false;status('対戦中 · '+playerName(slot));refreshResult();}
-   if(m.type==='frame'&&(m.matchId===undefined||m.matchId===matchId)&&active&&state==='battle'){if(m.frame!==lastFrame+1){end('通信の遅延で同期が途切れました。ルームから再戦してください。');return;}lastFrame=m.frame;try{pacing.receive(m,performance.now());}catch{end('通信の遅延が大きいため同期を続けられません。ルームから再戦してください。');return;}if(document.hidden)pump(performance.now());}
+   if(m.type==='frame'&&(m.matchId===undefined||m.matchId===matchId)&&active&&state==='battle'){
+    if(m.frame!==lastFrame+1&&resumeToken){connection.close(4000,'Frame gap');return;}
+    if(m.frame!==lastFrame+1){end('通信の遅延で同期が途切れました。ルームから再戦してください。');return;}
+    try{pacing.receive(m,performance.now());}catch{end('通信の遅延が大きいため同期を続けられません。ルームから再戦してください。');return;}
+    lastFrame=m.frame;if(document.hidden)pump(performance.now());
+   }
    if(m.type==='ended')end(m.message);if(m.type==='error'){pending=false;readyRequestPending=false;queuedReady=null;loadingReady=false;status(m.message);BingoBattle.message(m.message);refreshResult();}if(m.type==='pong')document.querySelector('#network-ping').textContent=`${Math.max(0,Date.now()-m.time)} ms`;
   };
-  socket.onclose=()=>{if(socket!==connection)return;clearInterval(pingTimer);socket=null;outbox=[];pending=false;const joined=!!(code||active);if(joined){clearRoom();end('接続が切れました。ルームを作成・参加し直してください。');}else status('接続が切れました。「更新」で接続し直せます。');};socket.onerror=()=>{if(socket===connection)status('接続できません。サーバーの起動を確認してください。');};
+  socket.onclose=()=>{if(socket!==connection)return;clearInterval(pingTimer);socket=null;outbox=[];pending=false;if(code||active)reconnect();else status('接続が切れました。「更新」で接続し直せます。');};socket.onerror=()=>{if(socket===connection&&!reconnecting)status('接続できません。サーバーの起動を確認してください。');};
  }
  function applyFrame(m){inputs=m.inputFormat===InputCodec.format?m.inputs.map(InputCodec.decode):m.inputs;applying=true;try{update();effects();}finally{applying=false;}NetworkStatus.applied(performance.now());dispatchEvent(new CustomEvent('online-frame',{detail:m.frame}));return active&&state==='battle';}
- function pump(now){if(!active||state!=='battle'){NetworkStatus.reset();return 0;}const steps=document.hidden?pacing.flush(applyFrame):pacing.advance(now,applyFrame);NetworkStatus.pump(now,active&&state==='battle',document.hidden);return steps;}
- function capture(){Controls.poll();const input=Controls.read();send({type:'input',matchId,input:compactInput?InputCodec.encode(input):input});Controls.consume();}
- function ready(){if(active||readyRequestPending||queuedReady)return;if(BingoBattle.online&&code){BingoBattle.openOnline();return;}if(!SquadBattle.valid()){status('編成内で同じキャラは選べません。出場枠を変更してください。');return;}if(!code){if(state==='result')document.querySelector('#result .back').click();browse();status('先に部屋を作成するか、一覧から参加してください。');return;}if(!loaded){if(!loadingReady){loadingReady=true;refreshResult();status('画像を読み込んでいます… 完了後に準備完了になります');const wait=()=>{if(!loadingReady)return;if(loaded){loadingReady=false;ready();}else setTimeout(wait,100);};setTimeout(wait,100);}return;}const request={type:'ready',team:SquadBattle.teams.player.slice(),color:selected,character:Roster.selected,stage:document.querySelector('#stage').value};readyRequestPending=true;if(roomPlaying)queuedReady=request;else send({...request,matchId});status('準備完了 · 相手を待っています');refreshResult();}
- function end(message){readyRequestPending=false;NetworkStatus.reset();pacing.reset();preparation=null;queuedReady=null;loadingReady=false;active=false;status(message);if(state==='battle'||state==='pause'){state='result';document.querySelector('#winner').textContent=code?'対戦終了':'接続終了';document.querySelector('#resultdetail').textContent=message;document.querySelector('#stats').textContent='';document.querySelector('#result').classList.remove('hidden');}refreshResult();}
- function leave(){NetworkStatus.reset();const connected=!!(socket||code||active);active=false;pending=false;outbox=[];clearInterval(pingTimer);const connection=socket;socket=null;connection?.close();clearRoom();if(connected)status('部屋を選んで参加するか、ルールを設定して作成してください。');}
- function finished(winner){NetworkStatus.reset();pacing.reset();send({type:'finished',matchId,winner,played:fighters.map(f=>(f.squadIndex??0)+1)});active=false;status('対戦終了 · 同じ部屋で再戦できます');}
- function returnToSelection(){loadingReady=false;readyRequestPending=false;NetworkStatus.reset();preparation=null;active=false;queuedReady=null;send({type:'lobby',matchId});status('同じ部屋でキャラクターを選び直せます。出場順・ステージを選んで準備完了を押してください。');}
+ function pump(now){if(!active||state!=='battle'){NetworkStatus.reset();return 0;}const steps=document.hidden||reconnecting||peerWaiting?pacing.flush(applyFrame):pacing.advance(now,applyFrame);NetworkStatus.pump(now,active&&state==='battle',document.hidden);return steps;}
+ function capture(){Controls.poll();if(!reconnecting&&!peerWaiting){const input=Controls.read();send({type:'input',matchId,input:compactInput?InputCodec.encode(input):input});}Controls.consume();}
+ const lineupKey=team=>team.slice(0,SquadBattle.size()).join(',');
+ function ready(){if(active||reconnecting||readyRequestPending||queuedReady)return;if(BingoBattle.online&&code){BingoBattle.openOnline();return;}if(!SquadBattle.valid()){status('編成内で同じキャラは選べません。出場枠を変更してください。');return;}if(!code){if(state==='result')document.querySelector('#result .back').click();browse();status('先に部屋を作成するか、一覧から参加してください。');return;}if(!loaded){if(!loadingReady){loadingReady=true;refreshResult();status('画像を読み込んでいます… 完了後に準備完了になります');const wait=()=>{if(!loadingReady)return;if(loaded){loadingReady=false;ready();}else setTimeout(wait,100);};setTimeout(wait,100);}return;}const request={type:'ready',team:SquadBattle.teams.player.slice(),color:selected,character:Roster.selected,stage:document.querySelector('#stage').value};readySelection={...request,lineup:lineupKey(request.team)};readyRequestPending=true;if(roomPlaying)queuedReady=request;else send({...request,matchId});status('準備完了 · 相手を待っています');refreshResult();}
+ function end(message){readyRequestPending=false;peerWaiting=false;NetworkStatus.reset();pacing.reset();preparation=null;queuedReady=null;loadingReady=false;finishedPacket=null;active=false;status(message);if(state==='battle'||state==='pause'){state='result';document.querySelector('#winner').textContent=code?'対戦終了':'接続終了';document.querySelector('#resultdetail').textContent=message;document.querySelector('#stats').textContent='';document.querySelector('#result').classList.remove('hidden');}refreshResult();}
+ function leave(){NetworkStatus.reset();const connected=!!(socket||code||active);send({type:'leave'});active=false;pending=false;outbox=[];clearInterval(pingTimer);const connection=socket;socket=null;connection?.close();clearRoom();if(connected)status('部屋を選んで参加するか、ルールを設定して作成してください。');}
+ function finished(winner){NetworkStatus.reset();pacing.reset();finishedPacket={type:'finished',matchId,winner,played:fighters.map(f=>(f.squadIndex??0)+1)};send(finishedPacket);active=false;status('対戦終了 · 同じ部屋で再戦できます');}
+ function returnToSelection(){if(reconnecting){leave();return;}loadingReady=false;readyRequestPending=false;NetworkStatus.reset();preparation=null;active=false;queuedReady=null;send({type:'lobby',matchId});status('同じ部屋でキャラクターを選び直せます。出場順・ステージを選んで準備完了を押してください。');}
  function selectionChanged(event){
-  if(!code||roomPlaying||$('battle-mode').value!=='online')return;
-  loadingReady=false;readyRequestPending=false;queuedReady=null;
+  if(!code||roomPlaying||reconnecting||$('battle-mode').value!=='online')return;
   const id=event.target.id;
   if(ruleIds.includes(id)){
    if(slot===0)send({type:'settings',matchId,...rules()});
    else if(roomState)renderRoom(roomState);
-  }else if(!roomState?.bingo)send({type:'unready',matchId});
+   return;
+  }
+  if(!readySelection||roomState?.bingo)return;
+  let reason;
+  if(readySelection.stage!==$('stage').value)reason='stage';
+  else if(SquadBattle.size()>1&&readySelection.lineup!==lineupKey(SquadBattle.teams.player))reason='lineup';
+  else if(readySelection.color!==selected)reason='color';
+  else if(SquadBattle.size()===1&&readySelection.character!==Roster.selected)reason='character';
+  if(!reason)return;
+  loadingReady=false;readyRequestPending=false;queuedReady=null;readySelection=null;
+  send({type:'unready',matchId,reason});
  }
  function showBrowser(){
   state='menu';$('menu').classList.remove('hidden');$('result').classList.add('hidden');$('pause').classList.add('hidden');$('home-screen').classList.remove('hidden');$('character-screen').classList.add('hidden');browse();
@@ -75,6 +136,7 @@ const Net=(()=>{
   $('refresh-rooms').disabled=false;if(!code&&!pending)status('部屋を選んで参加するか、ルールを設定して作成してください。');
  }
  function renderRoom(m){
+  const prevReason=roomState?.players[slot]?.readyReason;
   ResultReadiness.accept(m,code);if(m.players[slot]?.ready&&!queuedReady)readyRequestPending=false;
   roomState=m;roomPlaying=!!(m.playing||m.preparing);if(!roomPlaying)preparation=null;matchId=m.matchId||0;
   for(const [id,value] of Object.entries({'match-kind':m.ruleSet||'normal','time-limit':MatchRules.time(m.timeLimit),'team-attack':MatchRules.teamAttack(m.teamAttack)?'on':'off','squad-size':m.squadSize||1,'player-count':m.playerCount||2,'battle-format':m.format||'free','stock-count':m.stocks||3}))$(id).value=String(value);
@@ -90,9 +152,16 @@ const Net=(()=>{
   $('room-role').textContent=slot===0?'あなたが部屋主です。ルール・チーム分けを変更できます。':'参加者 · ルールとチーム分けは部屋主が設定します。';
   $('edit-online-lineup').textContent=m.bingo?'← ビンゴカードに戻る':'← キャラ・ステージ選択に戻る';
   $('ready-room').textContent=m.bingo?(mine?.ready?'選択確定 · 全員を待っています':'ビンゴのマスを選んで準備完了 →'):m.revealed?'全員準備完了 · 出場順決定':mine?.ready?'準備完了 · 全員を待っています':m.squadSize>1?'出場順を確定 · 準備完了':'準備完了';
+  if(mine?.readyReason&&mine.readyReason!==prevReason){
+   readySelection=null;readyRequestPending=false;
+   if(readyReasons[mine.readyReason])status('準備解除 · '+readyReasons[mine.readyReason]);
+  }
   $('room-match-rule').textContent=ruleLabel(m);
   const list=$('room-players');list.replaceChildren();m.players.forEach((p,n)=>{
-   const el=document.createElement('div');el.className='room-player';el.textContent=p?`${playerName(n)} ${n===0?'部屋主':n===slot?'あなた':'参加者'}${m.format==='teams'?' / '+(p.battleTeam===0?'赤':'青'):''} · ${p.ready?'準備完了':'キャラ選択中'}${p.stage===null||p.stage===undefined?'':' · 希望：'+StageCatalog.name(p.stage)}`:`${n+1}P · 参加待ち`;
+   const el=document.createElement('div');el.className='room-player';el.textContent=p?`${playerName(n)} ${n===0?'部屋主':n===slot?'あなた':'参加者'}${m.format==='teams'?' / '+(p.battleTeam===0?'赤':'青'):''} · ${p.disconnected?'再接続待ち':p.ready?'準備完了':'キャラ選択中'}${p.stage===null||p.stage===undefined?'':' · 希望：'+StageCatalog.name(p.stage)}`:`${n+1}P · 参加待ち`;
+   if(p&&!p.ready&&!p.disconnected&&Object.hasOwn(readyReasons,p.readyReason)){
+    const reason=document.createElement('small');reason.className='room-ready-reason';reason.textContent='準備解除 · '+readyReasons[p.readyReason];el.append(reason);
+   }
    if(p&&m.format==='teams'&&slot===0){const team=document.createElement('select');team.className='room-team';team.setAttribute('aria-label',playerName(n)+'のチーム');for(const [value,text] of [[0,'赤チーム'],[1,'青チーム']])team.add(new Option(text,value));team.value=String(p.battleTeam);team.disabled=roomPlaying||bingoLocked;team.onchange=()=>send({type:'settings',matchId,battleTeams:m.players.map((q,k)=>k===n?+team.value:q?.battleTeam??k%2)});el.append(team);}
    if((n===slot||m.revealed)&&p?.ready&&m.squadSize>1&&p.team){const lineup=document.createElement('span');lineup.className='room-lineup';lineup.textContent=p.team.map((id,n)=>(n+1)+'. '+(Roster.definitions.find(d=>d.id===id)?.name||'おまかせ')).join(' → ');el.append(lineup);}else if(p&&n!==slot&&m.squadSize>1){const hidden=document.createElement('span');hidden.className='room-lineup concealed';hidden.textContent='出場キャラは全員の準備完了後に公開';el.append(hidden);}list.append(el);
   });Roster.fit();BingoBattle.accept(m.bingo||null);if(m.notice&&m.bingo)status(m.notice);

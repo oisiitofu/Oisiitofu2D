@@ -15,7 +15,19 @@ const TrainingDemo=(()=>{
   return '';
  }
  function display(message){const panel=document.getElementById('training-demo');panel.classList.remove('hidden');document.getElementById('training-tools').classList.add('demo-view');document.getElementById('training-demo-status').textContent=message;document.getElementById('demo-cancel').disabled=!job;}
- function clear(){job=null;lastMove=null;document.getElementById('training-demo')?.classList.add('hidden');document.getElementById('training-tools')?.classList.remove('demo-view');}
+ function clear(){job=null;lastMove=null;document.getElementById('training-demo')?.classList.add('hidden');document.getElementById('training-tools')?.classList.remove('demo-view');document.getElementById('training-practice-status').hidden=true;}
+ function practice(move){
+  if(!enabled())return;
+  const [f,dummy]=fighters,main=platforms.find(p=>p.main),a=movesFor(f)[move.key];
+  const recovery=move.key==='rise',distance=a?.projectile||move.key==='dash'?180:70;
+  f.x=recovery?main.x+35:main.x+main.w*.48;f.face=recovery?-1:1;
+  dummy.x=recovery?main.x+main.w*.60:f.x+distance;
+  dummy.damage=move.key==='gale'?25:0;
+  document.getElementById('dummy-percent').value=String(dummy.damage);
+  const message=document.getElementById('training-practice-status');
+  message.textContent=move.name+' · '+move.command+(recovery?'。崖の外に出て復帰を練習できます。':'。正面のダミーに向けて練習できます。');
+  message.hidden=false;
+ }
  function launch(request){
   if(!enabled()||request.round!==round||request.characterId!==(fighters[0].evolutionRoot||fighters[0].characterId))return false;
   const initial=movesFor({characterId:request.characterId,id:Symbol('demo-inspect')}),a=initial[request.key];
@@ -41,5 +53,5 @@ const TrainingDemo=(()=>{
  }
  function input(){return job&&enabled()?emptyInput():null;}
  addEventListener('DOMContentLoaded',()=>{document.getElementById('demo-replay').onclick=replay;document.getElementById('demo-cancel').onclick=cancel;});
- return{enabled,reason,start,replay,cancel,clear,tick,input,get status(){return job?{key:job.key,name:job.name,age:job.age,running:true}:lastMove?{key:lastMove.key,name:lastMove.name,running:false}:null;}};
+ return{enabled,reason,start,practice,replay,cancel,clear,tick,input,get status(){return job?{key:job.key,name:job.name,age:job.age,running:true}:lastMove?{key:lastMove.key,name:lastMove.name,running:false}:null;}};
 })();

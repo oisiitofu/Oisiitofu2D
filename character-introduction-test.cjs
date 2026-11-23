@@ -47,6 +47,13 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),{chromium}=requ
   await page.click('#open-match-settings');await page.click('#help');check('manual also uses remapped bindings '+width,(await page.locator('#manual-character .character-guide-binding').textContent()).includes('キー P'));await page.click('#closehelp');
   await page.locator('#fighter-grid [data-id="random"]').click();await page.click('#open-character-guide');check('selected random omits move names '+width,await page.locator('#character-guide-content').evaluate(e=>!e.querySelector('[data-move]')&&e.textContent.includes('対戦開始時')));await page.keyboard.press('Escape');
   const configBefore=await page.evaluate(()=>JSON.stringify(Controls.config));await page.click('#back-home');await page.click('#home-help');await page.keyboard.press('KeyP');check('help does not leak combat input '+width,await page.evaluate(()=>!Controls.read().special&&state==='menu'));await page.click('#closehelp');check('guide never saves controls '+width,configBefore===await page.evaluate(()=>JSON.stringify(Controls.config)));
+  await page.click('#enter-roster');await page.locator('#fighter-grid [data-id="noctis"]').click();await page.click('#open-character-guide');
+  await page.locator('#character-guide-content [data-move="rise"] button').click();
+  await page.waitForFunction(()=>state==='battle'&&!document.getElementById('training-practice-status').hidden);
+  check('guide starts recovery practice for selected fighter '+width,await page.evaluate(()=>{
+   const floor=platforms.find(p=>p.main);
+   return training&&fighters.length===2&&fighters[0].characterId==='noctis'&&fighters[0].x===floor.x+35&&fighters[0].face===-1&&fighters[1].control==='cpu'&&document.getElementById('training-practice-status').textContent.includes(NoctisMoves.rise.name);
+  }));
   await page.close();
  }
  const report={checks:checks.length,failed:checks.filter(c=>!c.pass),errors,resolutions:[[1280,720],[1440,900]]};fs.writeFileSync(`previews/quality/character-intro-${tag}.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));assert.deepEqual(report.failed,[]);assert.deepEqual(errors,[]);

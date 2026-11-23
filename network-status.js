@@ -17,13 +17,22 @@ const NetworkStatus=(()=>{
   }
   return{begin,reset,applied,grace,update,get state(){return{active,lastApplied,waiting,recoverySince};}};
  }
- const monitor=create();let shown=false;
- function show(value){if(shown===value)return;shown=value;if(typeof document!=='undefined')document.getElementById('network-wait')?.classList.toggle('hidden',!value);}
- function reset(){monitor.reset();show(false);}
+ const monitor=create();let shown=false,connection=null;
+ function show(waiting){const value=connection||(waiting?'waiting':false);if(shown===value)return;shown=value;
+  if(typeof document==='undefined')return;
+  const panel=document.getElementById('network-wait');if(!panel)return;
+  panel.classList.toggle('hidden',!value);
+  if(value){
+   panel.querySelector('b').textContent=value==='local'?'再接続しています…':value==='peer'?'相手の再接続を待っています…':'通信待ち…';
+   panel.querySelector('small').textContent=connection?'接続が戻るまで対戦を中断します':'入力の同期を待っています';
+  }
+ }
+ function connectionChanged(value){connection=value;show(false);}
+ function reset(){monitor.reset();connectionChanged(null);}
  function begin(now){monitor.begin(now);show(false);}
  function applied(now){monitor.applied(now);}
  function pump(now,eligible,hidden){show(monitor.update(now,eligible,hidden));}
  if(typeof document!=='undefined')document.addEventListener('visibilitychange',()=>{monitor.grace(performance.now());show(false);});
- return{create,begin,reset,applied,pump};
+ return{create,begin,reset,applied,pump,connectionChanged};
 })();
 if(typeof module!=='undefined'&&module.exports)module.exports=NetworkStatus;

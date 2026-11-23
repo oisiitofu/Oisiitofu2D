@@ -7,6 +7,37 @@ const fs=require('fs'),assert=require('node:assert/strict'),{chromium}=require('
  await p.click('#enter-roster');await p.click('#open-fighter-list');check('modal searchable and name-only',await p.locator('#fighter-list-dialog').evaluate(e=>e.open&&e.querySelectorAll('img').length===0));check('all selectable plus random',await p.locator('.fighter-name-choice').count()===await p.evaluate(()=>Roster.selectable.length+1));
  await p.fill('#fighter-list-search','はくれい');check('reading search',await p.locator('.fighter-name-label').allTextContents().then(a=>a.length===1&&a[0]==='博麗霊夢'));await p.click('[aria-label="博麗霊夢のお気に入り"]');check('star selected',await p.locator('[aria-label="博麗霊夢のお気に入り"]').getAttribute('aria-pressed')==='true');
  await p.fill('#fighter-list-search','ｼﾞｪｯﾄ');check('half-width search',await p.locator('.fighter-name-label').allTextContents().then(a=>a.length===1&&a[0]==='ジェット'));
+ for(const [query,id]of [['Ｐｈｏｅｎｉｘ　Ｗｒｉｇｈｔ','naruhodo'],['FF7 Tifa','tifa'],['hakurei','reimu'],['もんはん なるが','nargacuga'],['NieR Automata','twob'],['かべ','']]){
+  await p.fill('#fighter-list-search',query);
+  const ids=await p.locator('.fighter-name-choice').evaluateAll(nodes=>nodes.map(node=>node.dataset.fighterId));
+  check('expanded character search: '+query,id?ids.includes(id):ids.length===0);
+ }
+ await p.fill('#fighter-list-search','');
+ await p.click('#fighter-folder-manage summary');
+ await p.fill('#fighter-folder-name','練習中');await p.click('#fighter-folder-create');
+ const folder=await p.inputValue('#fighter-folder-select');
+ await p.selectOption('#fighter-folder-character','tifa');await p.click('#fighter-folder-add');
+ check('folder displays only its members',await p.locator('.fighter-name-label').allTextContents().then(a=>a.length===1&&a[0]==='ティファ'));
+ await p.fill('#fighter-folder-name','復帰練習');await p.click('#fighter-folder-rename');
+ check('folder stores new name and existing members',await p.evaluate(id=>FighterLibrary.folders.some(f=>f.id===id&&f.name==='復帰練習'&&f.fighters[0]==='tifa'),folder));
+ const state=await p.context().storageState();const folderContext=await b.newContext({storageState:state});
+ try{
+  const folderPage=await folderContext.newPage();await folderPage.goto(url);await folderPage.waitForFunction(()=>AstralEdge.assetsLoaded);
+  await folderPage.click('#enter-roster');await folderPage.click('#open-fighter-list');await folderPage.selectOption('#fighter-folder-select',folder);
+  check('folder survives browser reload',await folderPage.locator('.fighter-name-label').allTextContents().then(a=>a[0]==='ティファ'));
+  await folderPage.click('[aria-label="ティファをフォルダから外す"]');
+  check('removing a member leaves the empty folder',await folderPage.locator('#fighter-list-empty').isVisible());
+  await folderPage.click('#fighter-folder-manage summary');await folderPage.click('#fighter-folder-delete');
+  check('deleting a folder preserves legacy star registration',await folderPage.evaluate(()=>FighterLibrary.folders.length===0&&FighterLibrary.favorites.includes('reimu')));
+ }finally{await folderContext.close();}
+ await p.selectOption('#fighter-folder-select','');await p.click('#fighter-folder-manage summary');
+ await p.selectOption('#fighter-trait-select','tether');
+ check('trait view shows hook recoveries and excludes random',await p.locator('.fighter-name-choice').evaluateAll(nodes=>nodes.some(node=>node.dataset.fighterId==='ratchet')&&!nodes.some(node=>['random','tifa'].includes(node.dataset.fighterId))));
+ await p.fill('#fighter-list-search','Hornet');
+ check('trait filter combines with search',await p.locator('.fighter-name-choice').evaluateAll(nodes=>nodes.length===1&&nodes[0].dataset.fighterId==='hornet'));
+ await p.selectOption('#fighter-trait-select','hover');await p.fill('#fighter-list-search','');
+ check('hover scope uses playable flight data',await p.locator('.fighter-name-choice').evaluateAll(nodes=>nodes.some(node=>node.dataset.fighterId==='terra')&&nodes.every(node=>CharacterData[node.dataset.fighterId]?.airMobility?.frames)));
+ await p.selectOption('#fighter-trait-select','');
  await p.fill('#fighter-list-search','');await p.selectOption('#fighter-list-sort','kana');check('kana sort and random last',await p.evaluate(()=>{const names=[...document.querySelectorAll('.fighter-name-choice')].map(e=>e.querySelector('.fighter-name-label').textContent);return names[0]==='アイアイ'&&names.at(-1)==='おまかせ'&&names.indexOf('博麗霊夢')<names.indexOf('初音ミク');}));
  await p.click('#fighter-list-favorites');check('favorites only',await p.locator('.fighter-name-label').allTextContents().then(a=>a.length===1&&a[0]==='博麗霊夢'));await p.click('[data-fighter-id="reimu"]');check('list selection uses roster',await p.evaluate(()=>!document.querySelector('#fighter-list-dialog').open&&Roster.selected==='reimu'));
  await p.reload();await p.waitForFunction(()=>AstralEdge.assetsLoaded,null,{timeout:120000});await p.click('#enter-roster');await p.click('#open-fighter-list');await p.click('#fighter-list-favorites');check('favorite survives reload',await p.locator('.fighter-name-label').allTextContents().then(a=>a.length===1&&a[0]==='博麗霊夢'));await p.click('#fighter-list-favorites');await p.fill('#fighter-list-search','絶対に存在しない名前');check('empty results',await p.locator('#fighter-list-empty').isVisible());await p.keyboard.press('Escape');await p.keyboard.press('Escape');check('escape closes dialog',await p.locator('#fighter-list-dialog').evaluate(e=>!e.open));
