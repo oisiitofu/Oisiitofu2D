@@ -4,7 +4,7 @@
 const ThrowTuning=(()=>{
  const directions=['forwardThrow','backThrow','upThrow','downThrow'];
  const groups={
-  balanced:'diana cubivore leanne nights ryuta mono felyne sackboy rayman quote battlecat ringfit qbby ryoku tails etna ratchet astro sam reimu zack presea hachiware tidus terra onionknight arthur sakura billy riesz edea narmaya wonder rena gran welch zoe ky alphen ash judas rion sol miyabi zero3 dana isaac ulgrim monokuma roxas twob zero lightning rean estelle noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian chef morphie human kitten elma goemon metabee nier dante leon charlotta twinbee edf arus maelle sumino frog tressa eve saki hanajk hanajd kisuke ray alain hinako megamanexe fiora krystal malenia alucard kurabe shizuna',
+  balanced:'lid diana cubivore leanne nights ryuta mono felyne sackboy rayman quote battlecat ringfit qbby ryoku tails etna ratchet astro sam reimu zack presea hachiware tidus terra onionknight arthur sakura billy riesz edea narmaya wonder rena gran welch zoe ky alphen ash judas rion sol miyabi zero3 dana isaac ulgrim monokuma roxas twob zero lightning rean estelle noctis clive narukami rex luke fayt noah lloyd shiren hunter adol terry valkyrie haseo terrarian chef morphie human kitten elma goemon metabee nier dante leon charlotta twinbee edf arus maelle sumino frog tressa eve saki hanajk hanajd kisuke ray alain hinako megamanexe fiora krystal malenia alucard kurabe shizuna',
   rising:'dragoon gundam kosmos pawapuro horse bayleef piposaru pneuma odio laharl kasane greymon metalgreymon wargreymon omegamon hanajs c4621',
   agile:'yuma parappa octane jett viewtifuljoe ellen chibirobo octoling chiikawa chocobo riki rin makoto neku pokoa jibanyan zidane yuffie crash knight shadow moogle cojicoji hornet klonoa karateka aiai hayabusa',
   grappler:'agumon akira fei tifa kiryu ryofu edelgard guile sukapon doshin kingbonby',
@@ -49,6 +49,8 @@ const ThrowTuning=(()=>{
  // Launch coefficients are populated from real grab-release flight checks.
  const koGrowth={forwardThrow:.043,backThrow:.043,upThrow:.065,downThrow:.075};
  const koCalibration={
+  "lid":{"backThrow":{"growth":0.0516,"percent":160}},
+  "nargacuga":{"forwardThrow":{"growth":0.0516,"percent":150}},
   "yuma":{"backThrow":{"growth":0.047831,"percent":175}},
   "leanne":{"backThrow":{"growth":0.051591,"percent":160}},
   "reimu":{"upThrow":{"growth":0.062261,"percent":160}},
