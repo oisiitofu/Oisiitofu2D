@@ -56,6 +56,20 @@ const StageCatalog=(()=>{
   {id:'22',name:'巨木の空洞',theme:'hollow',folder:'redwood-hollow',color:'#d5e6a0',layout:'左右2段の枝が中央の吹き抜けを挟む',platforms:[
    {x:248,y:560,w:944,main:true},{x:268,y:424,w:237},{x:236,y:274,w:226},
    {x:935,y:454,w:237},{x:845,y:310,w:227}
+  ]},
+  {id:'23',name:'結晶巡礼の聖堂',origin:'ファイナルファンタジー',theme:'crystal',folder:'crystal-pilgrimage',color:'#c3c9ff',layout:'広い中段回廊と左右に分かれた高台',platforms:[
+   {x:226,y:560,w:988,main:true},{x:443,y:432,w:554},{x:310,y:307,w:186},{x:944,y:307,w:186}
+  ]},
+  {id:'24',name:'黄昏の記憶街',origin:'キングダム ハーツ',theme:'dusk',folder:'twilight-memory-quarter',color:'#ffc0a7',layout:'左は開けた地上、右は崖外に張り出す大屋根',platforms:[
+   {x:214,y:560,w:884,main:true},{x:694,y:423,w:524}
+  ]},
+  {id:'25',name:'時層の観測庭',origin:'クロノ・トリガー',theme:'chrono',folder:'epoch-observatory',color:'#adbcff',layout:'時針の足場が中央を8の字に巡る',platforms:[
+   {x:222,y:560,w:996,main:true},{x:273,y:451,w:156},
+   {x:622,y:345,w:196,motion:{x:295,y:65,harmonicY:2,period:540}}
+  ]},
+  {id:'26',name:'風車丘の旅路',origin:'ドラゴンクエスト',theme:'windhill',folder:'windmill-trail',color:'#dffe9a',layout:'左の長い復帰橋と、右へ上がる3段の丘棚',platforms:[
+   {x:348,y:560,w:888,main:true},{x:128,y:480,w:306},{x:578,y:464,w:203},
+   {x:827,y:392,w:207},{x:1046,y:315,w:209}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);

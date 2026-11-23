@@ -50,8 +50,12 @@ const StageVisuals=(()=>{
    ctx.globalAlpha=.13+(Math.sin(clock*.018+n)+1)*.055;
    if(theme==='abyss'){ctx.strokeStyle=color;ctx.beginPath();ctx.arc(x,y,2+n%5,0,TAU);ctx.stroke();}
    else if(theme==='rail'||theme==='aurora'||theme==='salt')line([[x,y],[x+7+n%4*3,y+(theme==='aurora'?2:0)]],color,1);
-   else if(theme==='archive'||theme==='origami'){
+   else if(theme==='archive'||theme==='origami'||theme==='dusk'){
     ctx.save();ctx.translate(x,y);ctx.rotate(n+clock*.017);path([[-3,-2],[3,-2],[5,2],[-2,3]],color);ctx.restore();
+   }else if(theme==='crystal'){
+    path([[x,y-4],[x+2,y],[x,y+4],[x-2,y]],color);
+   }else if(theme==='chrono'){
+    ctx.strokeStyle=color;ctx.beginPath();ctx.arc(x,y,3+n%3,clock*.011+n,clock*.011+n+Math.PI*1.4);ctx.stroke();
    }else ellipse(x,y,2+n%3,2+n%3,color);
   }
  }
@@ -76,7 +80,7 @@ const StageVisuals=(()=>{
    return[x0+(x1-x0)*smooth,y0+(y1-y0)*smooth];
   }
   const phase=motion.phase||0,phaseY=phase+(motion.phaseY||0),t=time*TAU/motion.period;
-  return[(motion.x||0)*(Math.sin(t+phase)-Math.sin(phase)),(motion.y||0)*(Math.sin(t+phaseY)-Math.sin(phaseY))];
+  return[(motion.x||0)*(Math.sin(t+phase)-Math.sin(phase)),(motion.y||0)*(Math.sin(t*(motion.harmonicY??1)+phaseY)-Math.sin(phaseY))];
  }
  function tick(){
   // Pick support before moving any platform. Two crossing platforms must never

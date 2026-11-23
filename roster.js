@@ -360,7 +360,7 @@ const Roster=(()=>{
   }
   for(const d of entries){
    const option=document.createElement('option');option.value=d.id;option.textContent=d.name;select.append(option);
-   const button=document.createElement('button');button.type='button';button.className='stage-card';button.dataset.stage=d.id;button.title=d.id==='random'?'全ステージから対戦開始ごとに抽選':d.name;
+   const button=document.createElement('button');button.type='button';button.className='stage-card';button.dataset.stage=d.id;button.title=d.id==='random'?'全ステージから対戦開始ごとに抽選':d.origin?`${d.name}（${d.origin}）`:d.name;
    const image=imageFor(d),touch=typeof TouchControls!=='undefined'&&TouchControls.enabled,art=stagePreview(d,image);
    button.innerHTML=(touch&&image?`<img class="stage-preview-image" data-stage-preview="${image}" alt="" decoding="async" fetchpriority="low">`:art)+`<b>${d.name}</b>`;button.onclick=()=>choose(d.id);strip.append(button);
   }
@@ -372,7 +372,12 @@ const Roster=(()=>{
     const picture=document.createElement('span');picture.className='stage-detail-art';picture.innerHTML=stagePreview(d,imageFor(d));
     const name=document.createElement('b');name.textContent=d.name;
     const caption=document.createElement('small');caption.textContent=d.layout||(d.platforms?.some(p=>p.motion)?'移動する足場':'固定の足場');
-    button.append(picture,name,caption);
+    button.append(picture,name);
+    if(d.origin){
+     const origin=document.createElement('span');origin.className='stage-detail-origin';origin.textContent=d.origin;
+     button.append(origin);
+    }
+    button.append(caption);
     const entry=document.createElement('div');entry.className='stage-detail-entry';entry.append(button);grid.append(entry);
     if(d.id!=='random'){
      const label=document.createElement('label');label.className='stage-random-option';

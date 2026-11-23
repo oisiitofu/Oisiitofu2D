@@ -500,3 +500,5 @@ body:not([data-text-size="1"]) #library-search{font-size:calc(12px * var(--reada
 .stage-random-switch:focus-visible{outline:2px solid #9de1ff;outline-offset:3px}
 body.touch-mode .stage-random-option{min-height:36px}
 @media(min-width:901px) and (min-height:651px){#stage-list-grid{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.stage-detail-origin{padding-inline:3px;color:#9bdcff;font-size:10px;overflow-wrap:anywhere}
+@media(min-width:1051px) and (min-height:651px){#stage-list-grid{grid-template-columns:repeat(7,minmax(0,1fr))}}

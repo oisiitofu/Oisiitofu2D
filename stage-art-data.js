@@ -724,5 +724,99 @@ const StageArtData={
    "surfaceRight": 763,
    "walkY": 42
   }
+ },
+ "crystal": {
+  "backgroundSource": "assets/stage-v6-crystal-background.png",
+  "background": "assets/ready/stage-v6-crystal-background-e0cfc9a0230ac222.webp",
+  "preview": "assets/ready/stage-picker-crystal-908820fedda872d5.webp",
+  "main": {
+   "source": "assets/stage-v6-crystal-main.png",
+   "image": "assets/ready/stage-v6-crystal-main-ce29a4c5ef73f828.webp",
+   "width": 1516,
+   "height": 229,
+   "surfaceLeft": 11,
+   "surfaceRight": 1504,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v6-crystal-small.png",
+   "image": "assets/ready/stage-v6-crystal-small-0ecec02ad7ab5728.webp",
+   "width": 725,
+   "height": 169,
+   "surfaceLeft": 8,
+   "surfaceRight": 716,
+   "walkY": 9,
+   "verticalScale": 0.54
+  }
+ },
+ "dusk": {
+  "backgroundSource": "assets/stage-v6-dusk-background.png",
+  "background": "assets/ready/stage-v6-dusk-background-c5976b0717c1a907.webp",
+  "preview": "assets/ready/stage-picker-dusk-670d671d0b0c2a2c.webp",
+  "main": {
+   "source": "assets/stage-v6-dusk-main.png",
+   "image": "assets/ready/stage-v6-dusk-main-d50fa89d701b3af4.webp",
+   "width": 1524,
+   "height": 376,
+   "surfaceLeft": 92,
+   "surfaceRight": 1431,
+   "walkY": 14
+  },
+  "small": {
+   "source": "assets/stage-v6-dusk-small.png",
+   "image": "assets/ready/stage-v6-dusk-small-aa197c084e5c1636.webp",
+   "width": 707,
+   "height": 187,
+   "surfaceLeft": 15,
+   "surfaceRight": 690,
+   "walkY": 11,
+   "verticalScale": 0.48
+  }
+ },
+ "chrono": {
+  "backgroundSource": "assets/stage-v6-chrono-background.png",
+  "background": "assets/ready/stage-v6-chrono-background-58ac4925325ae9e6.webp",
+  "preview": "assets/ready/stage-picker-chrono-24cfbc9cfc74250e.webp",
+  "main": {
+   "source": "assets/stage-v6-chrono-main.png",
+   "image": "assets/ready/stage-v6-chrono-main-0de42023fd25fd2a.webp",
+   "width": 1494,
+   "height": 292,
+   "surfaceLeft": 8,
+   "surfaceRight": 1486,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v6-chrono-small.png",
+   "image": "assets/ready/stage-v6-chrono-small-08b66c78455cdbae.webp",
+   "width": 878,
+   "height": 143,
+   "surfaceLeft": 8,
+   "surfaceRight": 869,
+   "walkY": 8
+  }
+ },
+ "windhill": {
+  "backgroundSource": "assets/stage-v6-windhill-background.png",
+  "background": "assets/ready/stage-v6-windhill-background-a9fb83834a073604.webp",
+  "preview": "assets/ready/stage-picker-windhill-deaa4fd76ff93e62.webp",
+  "main": {
+   "source": "assets/stage-v6-windhill-main.png",
+   "image": "assets/ready/stage-v6-windhill-main-4882d4bda18654db.webp",
+   "width": 1529,
+   "height": 281,
+   "surfaceLeft": 31,
+   "surfaceRight": 1497,
+   "walkY": 32
+  },
+  "small": {
+   "source": "assets/stage-v6-windhill-small.png",
+   "image": "assets/ready/stage-v6-windhill-small-687f3f6bd3e5564b.webp",
+   "width": 787,
+   "height": 205,
+   "surfaceLeft": 26,
+   "surfaceRight": 761,
+   "walkY": 25
+  }
  }
 };

@@ -32,13 +32,21 @@ async function local(browser,errors){
  await page.click('#stage-details');
  assert.equal(await page.locator('.stage-detail-card').count(),StageCatalog.stages.length+1);
  assert(await page.locator('#stage-list-dialog').evaluate(dialog=>dialog.scrollHeight<=dialog.clientHeight));
+ const workStages=StageCatalog.stages.filter(stage=>stage.origin);
+ assert.equal(new Set(workStages.map(stage=>stage.origin)).size,workStages.length);
+ const workNames=await page.evaluate(()=>Roster.selectable.map(fighter=>fighter.origin));
+ for(const stage of workStages){
+  assert(workNames.includes(stage.origin),stage.name);
+  const label=page.locator(`.stage-detail-card[data-stage="${stage.id}"] .stage-detail-origin`);
+  assert.equal(await label.textContent(),stage.origin);
+ }
  const toggles=page.locator('.stage-random-switch');
  assert.equal(await toggles.count(),StageCatalog.stages.length);
- const included='19';
+ const included='25';
  for(const input of await toggles.all()){
   if(await input.getAttribute('data-stage')!==included)await input.uncheck();
  }
- assert(await page.locator('.stage-random-switch[data-stage="19"]').isDisabled());
+ assert(await page.locator(`.stage-random-switch[data-stage="${included}"]`).isDisabled());
  assert((await page.locator('#stage-random-count').textContent()).includes('1 / '+StageCatalog.stages.length));
  assert(await page.locator('#stage-list-dialog').evaluate(dialog=>dialog.open));
  await page.keyboard.press('Escape');
@@ -68,7 +76,7 @@ async function local(browser,errors){
 
  await pick(page,'random');
  await page.click('#start');
- await page.waitForFunction(()=>state==='battle'&&activeStage==='19'&&countdown===0);
+ await page.waitForFunction(stage=>state==='battle'&&activeStage===stage&&countdown===0,included);
  assert(await page.evaluate(()=>training&&StageVisuals.prepared()&&fighters.every(fighter=>fighter.grounded)));
  for(const stage of stages){
   const results=await page.evaluate(async id=>{
@@ -90,14 +98,22 @@ async function local(browser,errors){
     if(index<0)throw Error('Platform disappeared');
     const p=platforms[index],{x,y,w,motion}=p;
     const period=motion.path?.at(-1)[0]??motion.period;
+    const samples=new Map();
     Object.assign(fighter,{x:x+w/2,y,grounded:true,ledge:null,respawn:0});
     let carried=true;
     for(let tick=0;tick<period;tick++){
      StageVisuals.tick();
+     if(id==='25'&&tick%45===44)samples.set(tick+1,[p.x,p.y]);
      if(Math.abs(fighter.x-p.x-w/2)>.01||Math.abs(fighter.y-p.y)>.01)carried=false;
      if(Math.abs(p.x-x)+Math.abs(p.y-y)>1)moved.add(index);
     }
     if(!carried||Math.abs(p.x-x)+Math.abs(p.y-y)>.01)return {align,carried,loop:false,tracks:0};
+    if(id==='25'){
+     const [rightLow,rightHigh,leftLow,leftHigh]=[45,225,315,495].map(t=>samples.get(t));
+     if(Math.abs(rightLow[0]-rightHigh[0])>.01||Math.abs(leftLow[0]-leftHigh[0])>.01||
+       rightLow[1]<=rightHigh[1]||leftLow[1]<=leftHigh[1]||
+       Math.abs(samples.get(270)[0]-x)>.01||Math.abs(samples.get(270)[1]-y)>.01)throw Error('The clock hand did not trace both loops');
+    }
    }
    setupStage(id);
    let lands=true;
@@ -196,7 +212,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of ['13','18','20','21'])console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of ['13','18','20','21','25'])console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}
