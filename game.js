@@ -19,7 +19,8 @@ function makeFighterBase(id,color,characterId=Roster.resolve(id?$('#cpu-characte
 function makeFighter(id,color,characterId){return prepareFighter(makeFighterBase(id,color,characterId));}
 let activeStage='0';
 function setupStage(id=StageCatalog.resolve(Roster.stageChoice())){
- activeStage=id;StageVisuals.reset();platforms=StageCatalog.get(id).platforms.map(p=>({...p}));
+ const stage=StageCatalog.get(id);
+ activeStage=id;StageVisuals.reset();platforms=stage.platforms.map(p=>({...p}));StageRules.groundTraction=stage.groundTraction??1;
  const main=platforms.find(p=>p.main);
  StageRules.ledges=[{x:main.x,y:main.y,face:1},{x:main.x+main.w,y:main.y,face:-1}];
 }

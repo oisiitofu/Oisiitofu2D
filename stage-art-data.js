@@ -1082,5 +1082,101 @@ const StageArtData={
    "surfaceRight": 560,
    "walkY": 9
   }
+ },
+ "swordcity": {
+  "backgroundSource": "assets/stage-v11-swordcity-background.png",
+  "background": "assets/ready/stage-v11-swordcity-background-d93b11555b4493d7.webp",
+  "preview": "assets/ready/stage-picker-swordcity-3dce47e8ddc03755.webp",
+  "main": {
+   "source": "assets/stage-v11-swordcity-main.png",
+   "image": "assets/ready/stage-v11-swordcity-main-09e397b4d1b95c4c.webp",
+   "width": 1478,
+   "height": 298,
+   "surfaceLeft": 7,
+   "surfaceRight": 1470,
+   "walkY": 10,
+   "verticalScale": 0.66
+  },
+  "small": {
+   "source": "assets/stage-v11-swordcity-small.png",
+   "image": "assets/ready/stage-v11-swordcity-small-a131ca11e7c5a0da.webp",
+   "width": 826,
+   "height": 142,
+   "surfaceLeft": 7,
+   "surfaceRight": 818,
+   "walkY": 48
+  }
+ },
+ "inkplaza": {
+  "backgroundSource": "assets/stage-v11-inkplaza-background.png",
+  "background": "assets/ready/stage-v11-inkplaza-background-0bf75797b358454e.webp",
+  "preview": "assets/ready/stage-picker-inkplaza-40adfdccf0830739.webp",
+  "main": {
+   "source": "assets/stage-v11-inkplaza-main.png",
+   "image": "assets/ready/stage-v11-inkplaza-main-3b188429810128b8.webp",
+   "width": 1518,
+   "height": 400,
+   "surfaceLeft": 12,
+   "surfaceRight": 1505,
+   "walkY": 208,
+   "verticalScale": 0.57
+  },
+  "small": {
+   "source": "assets/stage-v11-inkplaza-small.png",
+   "image": "assets/ready/stage-v11-inkplaza-small-789ee06ad20fe480.webp",
+   "width": 868,
+   "height": 209,
+   "surfaceLeft": 10,
+   "surfaceRight": 857,
+   "walkY": 54
+  }
+ },
+ "snowdin": {
+  "backgroundSource": "assets/stage-v11-snowdin-background.png",
+  "background": "assets/ready/stage-v11-snowdin-background-3bb205f096f56c82.webp",
+  "preview": "assets/ready/stage-picker-snowdin-6f409e7da096ea21.webp",
+  "main": {
+   "source": "assets/stage-v11-snowdin-main.png",
+   "image": "assets/ready/stage-v11-snowdin-main-213e598845217cad.webp",
+   "width": 1514,
+   "height": 302,
+   "surfaceLeft": 24,
+   "surfaceRight": 1489,
+   "walkY": 11,
+   "verticalScale": 0.59
+  },
+  "small": {
+   "source": "assets/stage-v11-snowdin-small.png",
+   "image": "assets/ready/stage-v11-snowdin-small-23b43cbdc930a72d.webp",
+   "width": 828,
+   "height": 184,
+   "surfaceLeft": 15,
+   "surfaceRight": 812,
+   "walkY": 10
+  }
+ },
+ "kamiki": {
+  "backgroundSource": "assets/stage-v11-kamiki-background.png",
+  "background": "assets/ready/stage-v11-kamiki-background-b5bbd7b4e6cc0b78.webp",
+  "preview": "assets/ready/stage-picker-kamiki-cc5e14b5d1bd4e37.webp",
+  "main": {
+   "source": "assets/stage-v11-kamiki-main.png",
+   "image": "assets/ready/stage-v11-kamiki-main-5965da948c1654d4.webp",
+   "width": 1505,
+   "height": 382,
+   "surfaceLeft": 13,
+   "surfaceRight": 1489,
+   "walkY": 53,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v11-kamiki-small.png",
+   "image": "assets/ready/stage-v11-kamiki-small-3b0f1c9ff09e03bd.webp",
+   "width": 820,
+   "height": 177,
+   "surfaceLeft": 14,
+   "surfaceRight": 806,
+   "walkY": 21
+  }
  }
 };

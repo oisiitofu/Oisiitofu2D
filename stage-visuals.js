@@ -50,8 +50,10 @@ const StageVisuals=(()=>{
    ctx.globalAlpha=.13+(Math.sin(clock*.018+n)+1)*.055;
    if(theme==='abyss'){ctx.strokeStyle=color;ctx.beginPath();ctx.arc(x,y,2+n%5,0,TAU);ctx.stroke();}
    else if(theme==='rail'||theme==='aurora'||theme==='salt'||theme==='gaur'||theme==='hylia'||theme==='rolante'||theme==='floatisles'||theme==='meteobelt'||theme==='stone')line([[x,y],[x+7+n%4*3,y+(theme==='stone'?9:theme==='aurora'||theme==='gaur'?2:0)]],color,1);
-   else if(theme==='archive'||theme==='origami'||theme==='dusk'||theme==='shrine'){
+   else if(theme==='archive'||theme==='origami'||theme==='dusk'||theme==='shrine'||theme==='kamiki'){
     ctx.save();ctx.translate(x,y);ctx.rotate(n+clock*.017);path([[-3,-2],[3,-2],[5,2],[-2,3]],color);ctx.restore();
+   }else if(theme==='snowdin'){
+    ellipse(x,y,1+n%3*.45,1+n%3*.45,color);
    }else if(theme==='crystal'){
     path([[x,y-4],[x+2,y],[x,y+4],[x-2,y]],color);
    }else if(theme==='chrono'){

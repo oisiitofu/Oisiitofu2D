@@ -117,6 +117,18 @@ async function local(browser,errors){
     }
    }
    setupStage(id);
+   if(id==='40'){
+    const braking=(stage)=>{
+     setupStage(stage);
+     const floor=platforms.find(p=>p.main),runner=makeFighter(0,0,'dragoon');
+     Object.assign(runner,{x:floor.x+floor.w/2,y:floor.y,vx:runner.character.runSpeed,vy:0,grounded:true});
+     PlayerStates.enter(runner,'Run');
+     updateFighter(runner,emptyInput());
+     return runner.character.runSpeed-runner.vx;
+    };
+    if(Math.abs(braking(id)-braking('0')*0.72)>.0001)throw Error('Snowdin braking is not reduced');
+    setupStage(id);
+   }
    let lands=true;
    for(const platform of platforms.filter(p=>!p.main)){
     Object.assign(fighter,{x:platform.x+platform.w/2,y:platform.y-6,vx:0,vy:9,grounded:false,ledge:null,respawn:0,inv:0});
@@ -213,7 +225,7 @@ async function online(browser,errors,id){
    console.log('Local: '+stages.length+' stages, landing and moving riders, BGM decode, desktop and narrow stage picker.');
   }
   if(process.env.STAGE_TEST_MODE!=='local'){
-   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
+   for(const id of (process.env.STAGE_ONLINE_IDS?.split(',')||['13','18','20','21','25','28','30','32','33','35','37','39','40']))console.log('Online stage '+id+': '+await online(browser,errors,id)+' synchronized frames.');
   }
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}

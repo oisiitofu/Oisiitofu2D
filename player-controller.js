@@ -34,6 +34,7 @@ const PlayerController=(()=>{
  // launch/steering phases, follow-up input windows and hitstun keep their rules.
  function helplessDrift(f){const a=f.attack;return !!a?.helpless&&!f.grounded&&f.vy>=0&&!f.hitlag&&!f.hitstun&&!f.pendingLaunch&&!a.escapeSide&&f.timer>Math.max(a.activeEnd||0,a.motionLastEvent||0,a.motionCommitEnd||0,...a.activeFrames.map(w=>w.end));}
  function groundMove(f,i){let c=f.character,x=i.x,dir=Math.sign(x),mode=f.mode;
+  const traction=c.traction*(StageRules.groundTraction??1);
   // Use held stick strength for locomotion. A gradual push can miss the
   // one-frame smash flick, but must still start running. Hysteresis avoids
   // alternating walk/run when the stick hovers around the run threshold.
@@ -42,7 +43,7 @@ const PlayerController=(()=>{
    if(dir&&dir!==f.face&&wantsRun){f.face=dir;enter(f,'InitialDash',c.initialDashFrames);f.vx=dir*c.initialDashSpeed;return;}
    f.vx=moveToward(f.vx,f.face*c.initialDashSpeed,c.runAcceleration);return;
   }
-  if(Math.abs(x)<.1){if(is(f,'Run','InitialDash','RunTurn','Turn')){f.turnTarget=f.turnFrame=null;enter(f,'RunBrake',8);}f.vx=moveToward(f.vx,0,c.traction);if(f.mode==='RunBrake'&&f.stateFrame<=f.stateDuration)return;if(Math.abs(f.vx)<.05)enterIf(f,i.y>.5?'Crouch':'Idle');return;}
+  if(Math.abs(x)<.1){if(is(f,'Run','InitialDash','RunTurn','Turn')){f.turnTarget=f.turnFrame=null;enter(f,'RunBrake',8);}f.vx=moveToward(f.vx,0,traction);if(f.mode==='RunBrake'&&f.stateFrame<=f.stateDuration)return;if(Math.abs(f.vx)<.05)enterIf(f,i.y>.5?'Crouch':'Idle');return;}
   if(is(f,'RunTurn','Turn')){
    // A turn commits only while its direction is still requested. Returning
    // to the current facing resumes locomotion without a fresh dash burst.
@@ -50,9 +51,9 @@ const PlayerController=(()=>{
     if(dir===f.face){f.turnTarget=f.turnFrame=null;enter(f,wantsRun?'Run':'Walk');f.vx=moveToward(f.vx,wantsRun?dir*c.runSpeed:x*c.walkSpeed,wantsRun?c.runAcceleration:c.walkAcceleration);return;}
     f.turnTarget=dir;f.turnFrame=4;enter(f,wantsRun?'RunTurn':'Turn',wantsRun?8:4);
    }
-   if(f.stateFrame===f.turnFrame)f.face=f.turnTarget;f.vx=moveToward(f.vx,wantsRun?dir*c.runSpeed:x*c.walkSpeed,c.traction);if(f.stateFrame>f.stateDuration)enter(f,wantsRun?'Run':'Walk');return;
+   if(f.stateFrame===f.turnFrame)f.face=f.turnTarget;f.vx=moveToward(f.vx,wantsRun?dir*c.runSpeed:x*c.walkSpeed,traction);if(f.stateFrame>f.stateDuration)enter(f,wantsRun?'Run':'Walk');return;
   }
-  if(dir!==f.face&&Math.abs(f.vx)>2){f.turnTarget=dir;f.turnFrame=4;enter(f,wantsRun?'RunTurn':'Turn',wantsRun?8:4);f.vx=moveToward(f.vx,wantsRun?dir*c.runSpeed:x*c.walkSpeed,c.traction);return;}
+  if(dir!==f.face&&Math.abs(f.vx)>2){f.turnTarget=dir;f.turnFrame=4;enter(f,wantsRun?'RunTurn':'Turn',wantsRun?8:4);f.vx=moveToward(f.vx,wantsRun?dir*c.runSpeed:x*c.walkSpeed,traction);return;}
   f.face=dir;if(wantsRun&&!is(f,'InitialDash','Run')){enter(f,'InitialDash',c.initialDashFrames);f.vx=dir*c.initialDashSpeed;return;}
   if(f.mode==='InitialDash')enter(f,wantsRun?'Run':'Walk');
   if(f.mode==='Run'&&wantsRun)f.vx=moveToward(f.vx,dir*c.runSpeed,c.runAcceleration);

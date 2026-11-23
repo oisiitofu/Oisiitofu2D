@@ -126,6 +126,28 @@ const StageCatalog=(()=>{
   {id:"37",name:"メテオ",origin:"スターフォックス",theme:"meteobelt",folder:"meteo-belt",color:"#aabef2",layout:"岩の足場が右の崖外まで回り、上空を通って戻る",platforms:[
    {x:338,y:560,w:764,main:true},
    {x:179,y:435,w:171,motion:{path:[[0,0,0],[90,0,0],[245,380,-147],[450,828,-40],[540,870,40],[635,685,-125],[790,335,-163],[970,0,0],[1010,0,0]]}}
+  ]},
+  {id:"38",name:"シティー",origin:"ゼノブレイド3",theme:"swordcity",folder:"sword-city",color:"#c6c4b4",layout:"左は長い中段デッキ、右は離れた高い見張り台",platforms:[
+   {x:211,y:560,w:1018,main:true},
+   {x:224,y:444,w:425},
+   {x:713,y:334,w:161},
+   {x:987,y:385,w:192}
+  ]},
+  {id:"39",name:"ハイカラシティ",origin:"スプラトゥーン",theme:"inkplaza",folder:"inkopolis-plaza",color:"#b5f385",layout:"看板台が互い違いに移動し、交差する入口が変わる",platforms:[
+   {x:200,y:560,w:1040,main:true},
+   {x:325,y:411,w:201,motion:{path:[[0,0,0],[85,0,0],[205,420,0],[310,420,0],[495,0,0],[525,0,0]]}},
+   {x:851,y:325,w:168,motion:{path:[[0,0,0],[107,0,0],[249,-357,0],[345,-357,0],[504,0,0],[525,0,0]]}}
+  ]},
+  {id:"40",name:"スノーフル",origin:"UNDERTALE",theme:"snowdin",folder:"snowdin",color:"#b9e7ff",layout:"雪道では止まりにくく、上段の足場は1枚",groundTraction:0.72,platforms:[
+   {x:257,y:560,w:926,main:true},
+   {x:590,y:393,w:260}
+  ]},
+  {id:"41",name:"神木村",origin:"大神",theme:"kamiki",folder:"kamiki-village",color:"#f4cbd4",layout:"左に寄った二段の枝と、右の長い低台",platforms:[
+   {x:235,y:560,w:970,main:true},
+   {x:265,y:435,w:175},
+   {x:402,y:325,w:174},
+   {x:646,y:357,w:189},
+   {x:840,y:474,w:300}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
