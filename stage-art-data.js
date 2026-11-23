@@ -1466,5 +1466,101 @@ const StageArtData={
    "surfaceRight": 751,
    "walkY": 10
   }
+ },
+ "bellhill": {
+  "backgroundSource": "assets/stage-v15-bellhill-background.png",
+  "background": "assets/ready/stage-v15-bellhill-background-4ad8f0ed59ab60cd.webp",
+  "preview": "assets/ready/stage-picker-bellhill-35241fb07f8b1bc8.webp",
+  "main": {
+   "source": "assets/stage-v15-bellhill-main.png",
+   "image": "assets/ready/stage-v15-bellhill-main-023fe9501ed3f788.webp",
+   "width": 1495,
+   "height": 247,
+   "surfaceLeft": 29,
+   "surfaceRight": 1469,
+   "walkY": 13,
+   "verticalScale": 0.64
+  },
+  "small": {
+   "source": "assets/stage-v15-bellhill-small.png",
+   "image": "assets/ready/stage-v15-bellhill-small-42208726284f89ac.webp",
+   "width": 774,
+   "height": 190,
+   "surfaceLeft": 19,
+   "surfaceRight": 755,
+   "walkY": 38
+  }
+ },
+ "ebisu": {
+  "backgroundSource": "assets/stage-v15-ebisu-background.png",
+  "background": "assets/ready/stage-v15-ebisu-background-027b8086b32f5901.webp",
+  "preview": "assets/ready/stage-picker-ebisu-66b9b7d6f7b20b61.webp",
+  "main": {
+   "source": "assets/stage-v15-ebisu-main.png",
+   "image": "assets/ready/stage-v15-ebisu-main-31bde7baaa58b3d4.webp",
+   "width": 1523,
+   "height": 331,
+   "surfaceLeft": 52,
+   "surfaceRight": 1471,
+   "walkY": 9,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v15-ebisu-small.png",
+   "image": "assets/ready/stage-v15-ebisu-small-c4fe01c09875ca72.webp",
+   "width": 882,
+   "height": 148,
+   "surfaceLeft": 42,
+   "surfaceRight": 839,
+   "walkY": 10
+  }
+ },
+ "celadon": {
+  "backgroundSource": "assets/stage-v15-celadon-background.png",
+  "background": "assets/ready/stage-v15-celadon-background-68d88a93b64b6516.webp",
+  "preview": "assets/ready/stage-picker-celadon-2d4fcb5b777cad0b.webp",
+  "main": {
+   "source": "assets/stage-v15-celadon-main.png",
+   "image": "assets/ready/stage-v15-celadon-main-282fa286b63286c7.webp",
+   "width": 1495,
+   "height": 279,
+   "surfaceLeft": 45,
+   "surfaceRight": 1449,
+   "walkY": 9,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v15-celadon-small.png",
+   "image": "assets/ready/stage-v15-celadon-small-677a6e9d8ff0abb2.webp",
+   "width": 779,
+   "height": 177,
+   "surfaceLeft": 25,
+   "surfaceRight": 752,
+   "walkY": 9
+  }
+ },
+ "inaba": {
+  "backgroundSource": "assets/stage-v15-inaba-background.png",
+  "background": "assets/ready/stage-v15-inaba-background-1071b0ddd5bdd475.webp",
+  "preview": "assets/ready/stage-picker-inaba-c59fea27b3e8f6c6.webp",
+  "main": {
+   "source": "assets/stage-v15-inaba-main.png",
+   "image": "assets/ready/stage-v15-inaba-main-ce9b08b78da4bb35.webp",
+   "width": 1536,
+   "height": 324,
+   "surfaceLeft": 37,
+   "surfaceRight": 1499,
+   "walkY": 10,
+   "verticalScale": 0.65
+  },
+  "small": {
+   "source": "assets/stage-v15-inaba-small.png",
+   "image": "assets/ready/stage-v15-inaba-small-5318ffaad6613291.webp",
+   "width": 831,
+   "height": 196,
+   "surfaceLeft": 8,
+   "surfaceRight": 822,
+   "walkY": 9
+  }
  }
 };

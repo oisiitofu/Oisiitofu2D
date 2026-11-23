@@ -221,6 +221,30 @@ const StageCatalog=(()=>{
    {x:287,y:560,w:866,main:true},
    {x:589,y:381,w:185},
    {x:172,y:465,w:159,motion:{path:[[0,0,0],[98,0,0],[255,760,0],[304,760,0],[384,760,-165],[492,760,-165],[650,0,-165],[720,0,0],[785,0,0]]}}
+  ]},
+  {id:"54",name:"鐘の丘",origin:"風のクロノア",theme:"bellhill",folder:"bell-hill",color:"#ddf0ac",layout:"丘の下に避難できる棚があり、風を受けた足場は短く加速して上へ抜ける",platforms:[
+   {x:264,y:561,w:912,main:true},
+   {x:175,y:635,w:185},
+   {x:970,y:342,w:223},
+   {x:270,y:446,w:194,motion:{path:[[0,0,0],[160,0,0],[233,62,-58],[261,310,-144],[382,310,-144],[529,0,0],[600,0,0]]}}
+  ]},
+  {id:"55",name:"戎ヶ丘",origin:"SILENT HILL f",theme:"ebisu",folder:"ebisugaoka",color:"#d0c2b6",layout:"右の崖下へ向けて足場が下がる。左上は段差のない長い回廊",platforms:[
+   {x:306,y:555,w:826,main:true},
+   {x:115,y:385,w:396},
+   {x:814,y:469,w:179},
+   {x:1016,y:604,w:176},
+   {x:1177,y:672,w:153}
+  ]},
+  {id:"56",name:"タマムシシティ",origin:"ポケットモンスター",theme:"celadon",folder:"celadon-city",color:"#acdcca",layout:"長い屋上通路の両端に低い花壇、中央に小さな展望台",platforms:[
+   {x:157,y:560,w:1126,main:true},
+   {x:171,y:445,w:240},
+   {x:1029,y:443,w:240},
+   {x:650,y:315,w:140}
+  ]},
+  {id:"57",name:"稲羽中央商店街",origin:"ペルソナ4",theme:"inaba",folder:"inaba-central-shopping-district",color:"#eed193",layout:"地上の間合いを広く取り、同じ高さの店先の屋根を両端に離して配置",platforms:[
+   {x:195,y:560,w:1050,main:true},
+   {x:167,y:394,w:262},
+   {x:1011,y:394,w:262}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
