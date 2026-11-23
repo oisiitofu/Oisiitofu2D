@@ -2042,5 +2042,101 @@ const StageArtData={
    "surfaceRight": 727,
    "walkY": 9
   }
+ },
+ "mountainknot": {
+  "backgroundSource": "assets/stage-v21-mountainknot-background.png",
+  "background": "assets/ready/stage-v21-mountainknot-background-f9eaa97259ac0a77.webp",
+  "preview": "assets/ready/stage-picker-mountainknot-3a75239f388e4446.webp",
+  "main": {
+   "source": "assets/stage-v21-mountainknot-main.png",
+   "image": "assets/ready/stage-v21-mountainknot-main-b9d74c9d8ccece47.webp",
+   "width": 1528,
+   "height": 261,
+   "surfaceLeft": 61,
+   "surfaceRight": 1467,
+   "walkY": 10,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v21-mountainknot-small.png",
+   "image": "assets/ready/stage-v21-mountainknot-small-dd8f601759b0c674.webp",
+   "width": 830,
+   "height": 148,
+   "surfaceLeft": 50,
+   "surfaceRight": 779,
+   "walkY": 10
+  }
+ },
+ "shireninn": {
+  "backgroundSource": "assets/stage-v21-shireninn-background.png",
+  "background": "assets/ready/stage-v21-shireninn-background-f853303113ed78a2.webp",
+  "preview": "assets/ready/stage-picker-shireninn-b6cc3a876a23fd3f.webp",
+  "main": {
+   "source": "assets/stage-v21-shireninn-main.png",
+   "image": "assets/ready/stage-v21-shireninn-main-9bfe77f41ab29e55.webp",
+   "width": 1520,
+   "height": 263,
+   "surfaceLeft": 13,
+   "surfaceRight": 1502,
+   "walkY": 10,
+   "verticalScale": 0.63
+  },
+  "small": {
+   "source": "assets/stage-v21-shireninn-small.png",
+   "image": "assets/ready/stage-v21-shireninn-small-205756785f1a1250.webp",
+   "width": 771,
+   "height": 201,
+   "surfaceLeft": 10,
+   "surfaceRight": 759,
+   "walkY": 9
+  }
+ },
+ "kanai": {
+  "backgroundSource": "assets/stage-v21-kanai-background.png",
+  "background": "assets/ready/stage-v21-kanai-background-7494314647eecd6a.webp",
+  "preview": "assets/ready/stage-picker-kanai-17bce2e4df10e0e9.webp",
+  "main": {
+   "source": "assets/stage-v21-kanai-main.png",
+   "image": "assets/ready/stage-v21-kanai-main-ca12e8c51f310740.webp",
+   "width": 1522,
+   "height": 366,
+   "surfaceLeft": 61,
+   "surfaceRight": 1461,
+   "walkY": 8,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v21-kanai-small.png",
+   "image": "assets/ready/stage-v21-kanai-small-0b75e5d2b49b6482.webp",
+   "width": 806,
+   "height": 194,
+   "surfaceLeft": 24,
+   "surfaceRight": 782,
+   "walkY": 10
+  }
+ },
+ "jaburo": {
+  "backgroundSource": "assets/stage-v21-jaburo-background.png",
+  "background": "assets/ready/stage-v21-jaburo-background-b57bd944ee5892e7.webp",
+  "preview": "assets/ready/stage-picker-jaburo-10a852171402d908.webp",
+  "main": {
+   "source": "assets/stage-v21-jaburo-main.png",
+   "image": "assets/ready/stage-v21-jaburo-main-2a0be067f9674b78.webp",
+   "width": 1530,
+   "height": 289,
+   "surfaceLeft": 38,
+   "surfaceRight": 1491,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v21-jaburo-small.png",
+   "image": "assets/ready/stage-v21-jaburo-small-2f49712b6f230a7d.webp",
+   "width": 880,
+   "height": 144,
+   "surfaceLeft": 32,
+   "surfaceRight": 847,
+   "walkY": 9
+  }
  }
 };

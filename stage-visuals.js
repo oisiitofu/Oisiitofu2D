@@ -43,6 +43,14 @@ const StageVisuals=(()=>{
   }
  }
  function atmosphere(theme,color){
+  if(theme==='kanai'){
+   for(let n=0;n<48;n++){
+    const x=(n*201.73+W-clock*1.2%W)%W,y=(n*109.31+clock*(9+n%4))%H;
+    ctx.globalAlpha=.10+(n%5)*.027;
+    line([[x,y],[x-4,y+15+n%7]],'#b7caff',1);
+   }
+   return;
+  }
   for(let n=0;n<12;n++){
    const rise=theme==='abyss'||theme==='mycelium'||theme==='hollow',drift=theme==='meteobelt'?3.9:theme==='rail'||theme==='rolante'?2.7:theme==='gaur'?1.15:theme==='aurora'?.85:.25;
    const x=(W*100+n*211.7+(theme==='rail'||theme==='meteobelt'?-1:1)*clock*drift)%W;
