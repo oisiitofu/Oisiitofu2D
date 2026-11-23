@@ -1946,5 +1946,101 @@ const StageArtData={
    "surfaceRight": 801,
    "walkY": 9
   }
+ },
+ "momoland": {
+  "backgroundSource": "assets/stage-v20-momoland-background.png",
+  "background": "assets/ready/stage-v20-momoland-background-34fe27e948177cc5.webp",
+  "preview": "assets/ready/stage-picker-momoland-97fc2d969445f81e.webp",
+  "main": {
+   "source": "assets/stage-v20-momoland-main.png",
+   "image": "assets/ready/stage-v20-momoland-main-a86d6400b7fd4196.webp",
+   "width": 1446,
+   "height": 213,
+   "surfaceLeft": 27,
+   "surfaceRight": 1418,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v20-momoland-small.png",
+   "image": "assets/ready/stage-v20-momoland-small-4a9007283d781081.webp",
+   "width": 787,
+   "height": 177,
+   "surfaceLeft": 25,
+   "surfaceRight": 761,
+   "walkY": 9
+  }
+ },
+ "mugen": {
+  "backgroundSource": "assets/stage-v20-mugen-background.png",
+  "background": "assets/ready/stage-v20-mugen-background-b2da276f998e4fbd.webp",
+  "preview": "assets/ready/stage-picker-mugen-a238e3ca1e7f8c67.webp",
+  "main": {
+   "source": "assets/stage-v20-mugen-main.png",
+   "image": "assets/ready/stage-v20-mugen-main-a5ad095b70a12e97.webp",
+   "width": 1495,
+   "height": 300,
+   "surfaceLeft": 49,
+   "surfaceRight": 1455,
+   "walkY": 11,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v20-mugen-small.png",
+   "image": "assets/ready/stage-v20-mugen-small-a3e1dc538ed4d23b.webp",
+   "width": 623,
+   "height": 198,
+   "surfaceLeft": 20,
+   "surfaceRight": 610,
+   "walkY": 13
+  }
+ },
+ "bloodcathedral": {
+  "backgroundSource": "assets/stage-v20-bloodcathedral-background.png",
+  "background": "assets/ready/stage-v20-bloodcathedral-background-12d125d5e9c1c61a.webp",
+  "preview": "assets/ready/stage-picker-bloodcathedral-020b188a0c22711b.webp",
+  "main": {
+   "source": "assets/stage-v20-bloodcathedral-main.png",
+   "image": "assets/ready/stage-v20-bloodcathedral-main-7908e287305024ac.webp",
+   "width": 1509,
+   "height": 326,
+   "surfaceLeft": 36,
+   "surfaceRight": 1473,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v20-bloodcathedral-small.png",
+   "image": "assets/ready/stage-v20-bloodcathedral-small-48e219ceda90d338.webp",
+   "width": 756,
+   "height": 184,
+   "surfaceLeft": 17,
+   "surfaceRight": 739,
+   "walkY": 9
+  }
+ },
+ "hayabusa": {
+  "backgroundSource": "assets/stage-v20-hayabusa-background.png",
+  "background": "assets/ready/stage-v20-hayabusa-background-32cb87717de63ab8.webp",
+  "preview": "assets/ready/stage-picker-hayabusa-c5b081c2f0f207cf.webp",
+  "main": {
+   "source": "assets/stage-v20-hayabusa-main.png",
+   "image": "assets/ready/stage-v20-hayabusa-main-fb1584799cde286f.webp",
+   "width": 1490,
+   "height": 255,
+   "surfaceLeft": 20,
+   "surfaceRight": 1469,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v20-hayabusa-small.png",
+   "image": "assets/ready/stage-v20-hayabusa-small-f1a70d1ea8f35eee.webp",
+   "width": 750,
+   "height": 217,
+   "surfaceLeft": 23,
+   "surfaceRight": 727,
+   "walkY": 9
+  }
  }
 };

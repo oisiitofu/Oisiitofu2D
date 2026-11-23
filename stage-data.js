@@ -342,6 +342,36 @@ const StageCatalog=(()=>{
    {x:261,y:436,w:241},
    {x:600,y:324,w:177},
    {x:962,y:392,w:148,motion:{path:[[0,0,0,0],[95,0,0,0],[181,-195,-68,195],[263,-195,-68,195],[351,0,0,0],[440,0,0,0]]}}
+  ]},
+  {id:"74",name:"桃太郎ランド",origin:"桃太郎電鉄",theme:"momoland",folder:"momotaro-land",color:"#f6c8ad",layout:"観覧車の台2枚が同じ楕円軌道を半周ずれて巡る",platforms:[
+   {x:258,y:560,w:924,main:true},
+   {x:195,y:412,w:186},
+   {x:1060,y:409,w:186},
+   {x:634,y:485,w:172,motion:{x:215,y:106,phaseY:1.5707963267948966,period:590}},
+   {x:634,y:273,w:172,motion:{x:215,y:106,phase:3.141592653589793,phaseY:1.5707963267948966,period:590}}
+  ]},
+  {id:"75",name:"ムゲンマウンテン",origin:"デジモン",theme:"mugen",folder:"mugen-mountain",color:"#d1b6e9",layout:"左右の岩が外へ割れて下がり、崖外から中央へ戻る通り道になる",platforms:[
+   {x:316,y:558,w:808,main:true},
+   {x:624,y:343,w:192},
+   {x:262,y:439,w:192,motion:{path:[[0,0,0],[158,0,0],[238,-150,86],[340,-140,157],[442,-126,157],[572,0,0],[630,0,0]]}},
+   {x:990,y:441,w:188,motion:{path:[[0,0,0],[158,0,0],[244,139,81],[342,150,141],[442,150,141],[566,0,0],[630,0,0]]}}
+  ]},
+  {id:"76",name:"白い血の聖堂",origin:"コードヴェイン",theme:"bloodcathedral",folder:"cathedral-of-the-sacred-blood",color:"#e2dfef",layout:"左右の白い回廊と中央の踊り場に細い足場が8枚積み重なる",platforms:[
+   {x:383,y:560,w:674,main:true},
+   {x:138,y:493,w:180},
+   {x:291,y:419,w:180},
+   {x:444,y:352,w:168},
+   {x:607,y:269,w:179},
+   {x:786,y:351,w:164},
+   {x:937,y:410,w:205},
+   {x:1137,y:478,w:180}
+  ]},
+  {id:"77",name:"隼の里",origin:"NINJA GAIDEN",theme:"hayabusa",folder:"hayabusa-village",color:"#d6b5a9",layout:"中央をまたぐ高い屋根。左右の崖下で復帰の高さが異なる",platforms:[
+   {x:317,y:554,w:806,main:true},
+   {x:444,y:328,w:552},
+   {x:190,y:488,w:182},
+   {x:1138,y:607,w:176},
+   {x:1050,y:439,w:167}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
