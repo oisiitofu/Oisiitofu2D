@@ -3194,5 +3194,101 @@ const StageArtData={
    "surfaceRight": 771,
    "walkY": 9
   }
+ },
+ "woodypig": {
+  "backgroundSource": "assets/stage-v33-woodypig-background.png",
+  "background": "assets/ready/stage-v33-woodypig-background-aa3d4023e2ca82a2.webp",
+  "preview": "assets/ready/stage-picker-woodypig-c625324e498821fc.webp",
+  "main": {
+   "source": "assets/stage-v33-woodypig-main.png",
+   "image": "assets/ready/stage-v33-woodypig-main-0f527df7264674ef.webp",
+   "width": 1492,
+   "height": 278,
+   "surfaceLeft": 15,
+   "surfaceRight": 1477,
+   "walkY": 10,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v33-woodypig-small.png",
+   "image": "assets/ready/stage-v33-woodypig-small-d02b36e4c59813e8.webp",
+   "width": 797,
+   "height": 137,
+   "surfaceLeft": 13,
+   "surfaceRight": 782,
+   "walkY": 9
+  }
+ },
+ "fiestaelevadora": {
+  "backgroundSource": "assets/stage-v33-fiestaelevadora-background.png",
+  "background": "assets/ready/stage-v33-fiestaelevadora-background-6be44ea89dd79d40.webp",
+  "preview": "assets/ready/stage-picker-fiestaelevadora-c609bb3211050bbc.webp",
+  "main": {
+   "source": "assets/stage-v33-fiestaelevadora-main.png",
+   "image": "assets/ready/stage-v33-fiestaelevadora-main-286d29aa3f367a26.webp",
+   "width": 1534,
+   "height": 236,
+   "surfaceLeft": 72,
+   "surfaceRight": 1461,
+   "walkY": 10,
+   "verticalScale": 0.64
+  },
+  "small": {
+   "source": "assets/stage-v33-fiestaelevadora-small.png",
+   "image": "assets/ready/stage-v33-fiestaelevadora-small-5ed9efcc418e1aa6.webp",
+   "width": 728,
+   "height": 224,
+   "surfaceLeft": 42,
+   "surfaceRight": 685,
+   "walkY": 28
+  }
+ },
+ "junglehorse": {
+  "backgroundSource": "assets/stage-v33-junglehorse-background.png",
+  "background": "assets/ready/stage-v33-junglehorse-background-18940151365c355d.webp",
+  "preview": "assets/ready/stage-picker-junglehorse-22d748161eddde10.webp",
+  "main": {
+   "source": "assets/stage-v33-junglehorse-main.png",
+   "image": "assets/ready/stage-v33-junglehorse-main-a9d4f035eb066991.webp",
+   "width": 1495,
+   "height": 279,
+   "surfaceLeft": 17,
+   "surfaceRight": 1477,
+   "walkY": 10,
+   "verticalScale": 0.58
+  },
+  "small": {
+   "source": "assets/stage-v33-junglehorse-small.png",
+   "image": "assets/ready/stage-v33-junglehorse-small-c068443e059ae010.webp",
+   "width": 763,
+   "height": 187,
+   "surfaceLeft": 17,
+   "surfaceRight": 746,
+   "walkY": 9
+  }
+ },
+ "deemopiano": {
+  "backgroundSource": "assets/stage-v33-deemopiano-background.png",
+  "background": "assets/ready/stage-v33-deemopiano-background-97fdafebf6985012.webp",
+  "preview": "assets/ready/stage-picker-deemopiano-373ac44bde0d8771.webp",
+  "main": {
+   "source": "assets/stage-v33-deemopiano-main.png",
+   "image": "assets/ready/stage-v33-deemopiano-main-ee4385a73d90eb18.webp",
+   "width": 1536,
+   "height": 302,
+   "surfaceLeft": 29,
+   "surfaceRight": 1506,
+   "walkY": 9,
+   "verticalScale": 0.56
+  },
+  "small": {
+   "source": "assets/stage-v33-deemopiano-small.png",
+   "image": "assets/ready/stage-v33-deemopiano-small-1270701af0b81ce4.webp",
+   "width": 786,
+   "height": 174,
+   "surfaceLeft": 23,
+   "surfaceRight": 762,
+   "walkY": 8
+  }
  }
 };
