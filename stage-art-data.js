@@ -2714,5 +2714,101 @@ const StageArtData={
    "surfaceRight": 743,
    "walkY": 9
   }
+ },
+ "ascent": {
+  "backgroundSource": "assets/stage-v28-ascent-background.png",
+  "background": "assets/ready/stage-v28-ascent-background-31cd6ff3a15908a9.webp",
+  "preview": "assets/ready/stage-picker-ascent-b0edb3ec24f0458c.webp",
+  "main": {
+   "source": "assets/stage-v28-ascent-main.png",
+   "image": "assets/ready/stage-v28-ascent-main-e82f3483465a7dc8.webp",
+   "width": 1493,
+   "height": 333,
+   "surfaceLeft": 11,
+   "surfaceRight": 1482,
+   "walkY": 10,
+   "verticalScale": 0.65
+  },
+  "small": {
+   "source": "assets/stage-v28-ascent-small.png",
+   "image": "assets/ready/stage-v28-ascent-small-22971a21dc1e3be5.webp",
+   "width": 878,
+   "height": 219,
+   "surfaceLeft": 13,
+   "surfaceRight": 845,
+   "walkY": 70
+  }
+ },
+ "mimiga": {
+  "backgroundSource": "assets/stage-v28-mimiga-background.png",
+  "background": "assets/ready/stage-v28-mimiga-background-b2239dc45d8e003c.webp",
+  "preview": "assets/ready/stage-picker-mimiga-6e5c6ea616cb2192.webp",
+  "main": {
+   "source": "assets/stage-v28-mimiga-main.png",
+   "image": "assets/ready/stage-v28-mimiga-main-66b1bdf446f1ed15.webp",
+   "width": 1495,
+   "height": 243,
+   "surfaceLeft": 30,
+   "surfaceRight": 1463,
+   "walkY": 10,
+   "verticalScale": 0.58
+  },
+  "small": {
+   "source": "assets/stage-v28-mimiga-small.png",
+   "image": "assets/ready/stage-v28-mimiga-small-e05b43866c4832a0.webp",
+   "width": 728,
+   "height": 170,
+   "surfaceLeft": 24,
+   "surfaceRight": 701,
+   "walkY": 9
+  }
+ },
+ "onionkingdom": {
+  "backgroundSource": "assets/stage-v28-onionkingdom-background.png",
+  "background": "assets/ready/stage-v28-onionkingdom-background-b1e5a40a1f3c461b.webp",
+  "preview": "assets/ready/stage-picker-onionkingdom-2cba0dd3eb1fd7ee.webp",
+  "main": {
+   "source": "assets/stage-v28-onionkingdom-main.png",
+   "image": "assets/ready/stage-v28-onionkingdom-main-fdc0bbd880d3208b.webp",
+   "width": 1526,
+   "height": 270,
+   "surfaceLeft": 40,
+   "surfaceRight": 1484,
+   "walkY": 9,
+   "verticalScale": 0.66
+  },
+  "small": {
+   "source": "assets/stage-v28-onionkingdom-small.png",
+   "image": "assets/ready/stage-v28-onionkingdom-small-02f4b6e1298083a9.webp",
+   "width": 768,
+   "height": 199,
+   "surfaceLeft": 26,
+   "surfaceRight": 741,
+   "walkY": 8
+  }
+ },
+ "testchamber": {
+  "backgroundSource": "assets/stage-v28-testchamber-background.png",
+  "background": "assets/ready/stage-v28-testchamber-background-79b533d6e64a58d6.webp",
+  "preview": "assets/ready/stage-picker-testchamber-f10ca5933ffaae30.webp",
+  "main": {
+   "source": "assets/stage-v28-testchamber-main.png",
+   "image": "assets/ready/stage-v28-testchamber-main-24c206db5476e718.webp",
+   "width": 1522,
+   "height": 176,
+   "surfaceLeft": 53,
+   "surfaceRight": 1468,
+   "walkY": 8,
+   "verticalScale": 0.55
+  },
+  "small": {
+   "source": "assets/stage-v28-testchamber-small.png",
+   "image": "assets/ready/stage-v28-testchamber-small-3f52eb66032d28d9.webp",
+   "width": 782,
+   "height": 162,
+   "surfaceLeft": 7,
+   "surfaceRight": 774,
+   "walkY": 35
+  }
  }
 };
