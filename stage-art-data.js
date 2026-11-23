@@ -2330,5 +2330,101 @@ const StageArtData={
    "surfaceRight": 766,
    "walkY": 9
   }
+ },
+ "daikroft": {
+  "backgroundSource": "assets/stage-v24-daikroft-background.png",
+  "background": "assets/ready/stage-v24-daikroft-background-9954b5e3b2dfb74a.webp",
+  "preview": "assets/ready/stage-picker-daikroft-6270bee3c82ae5a5.webp",
+  "main": {
+   "source": "assets/stage-v24-daikroft-main.png",
+   "image": "assets/ready/stage-v24-daikroft-main-41669cfed437ea96.webp",
+   "width": 1524,
+   "height": 296,
+   "surfaceLeft": 41,
+   "surfaceRight": 1480,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v24-daikroft-small.png",
+   "image": "assets/ready/stage-v24-daikroft-small-5c02f277f7fbef2e.webp",
+   "width": 651,
+   "height": 174,
+   "surfaceLeft": 35,
+   "surfaceRight": 616,
+   "walkY": 11
+  }
+ },
+ "metox": {
+  "backgroundSource": "assets/stage-v24-metox-background.png",
+  "background": "assets/ready/stage-v24-metox-background-5b8193193fadc01b.webp",
+  "preview": "assets/ready/stage-picker-metox-15946aabb5a258d3.webp",
+  "main": {
+   "source": "assets/stage-v24-metox-main.png",
+   "image": "assets/ready/stage-v24-metox-main-0695def3a9dd3401.webp",
+   "width": 1494,
+   "height": 334,
+   "surfaceLeft": 13,
+   "surfaceRight": 1481,
+   "walkY": 9,
+   "verticalScale": 0.63
+  },
+  "small": {
+   "source": "assets/stage-v24-metox-small.png",
+   "image": "assets/ready/stage-v24-metox-small-7defdcb6252cf441.webp",
+   "width": 774,
+   "height": 187,
+   "surfaceLeft": 12,
+   "surfaceRight": 763,
+   "walkY": 11
+  }
+ },
+ "hopspeak": {
+  "backgroundSource": "assets/stage-v24-hopspeak-background.png",
+  "background": "assets/ready/stage-v24-hopspeak-background-ddcd77f7e0a6cf5b.webp",
+  "preview": "assets/ready/stage-picker-hopspeak-e39690627cf23860.webp",
+  "main": {
+   "source": "assets/stage-v24-hopspeak-main.png",
+   "image": "assets/ready/stage-v24-hopspeak-main-387e5c5298524d83.webp",
+   "width": 1526,
+   "height": 326,
+   "surfaceLeft": 73,
+   "surfaceRight": 1453,
+   "walkY": 9,
+   "verticalScale": 0.64
+  },
+  "small": {
+   "source": "assets/stage-v24-hopspeak-small.png",
+   "image": "assets/ready/stage-v24-hopspeak-small-8ba7c8da487197ec.webp",
+   "width": 776,
+   "height": 160,
+   "surfaceLeft": 38,
+   "surfaceRight": 737,
+   "walkY": 9
+  }
+ },
+ "qliphoth": {
+  "backgroundSource": "assets/stage-v24-qliphoth-background.png",
+  "background": "assets/ready/stage-v24-qliphoth-background-cb51f70d578774c8.webp",
+  "preview": "assets/ready/stage-picker-qliphoth-9e63cfff21dfd5ea.webp",
+  "main": {
+   "source": "assets/stage-v24-qliphoth-main.png",
+   "image": "assets/ready/stage-v24-qliphoth-main-67a790015b2b2362.webp",
+   "width": 1495,
+   "height": 283,
+   "surfaceLeft": 11,
+   "surfaceRight": 1483,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v24-qliphoth-small.png",
+   "image": "assets/ready/stage-v24-qliphoth-small-87ac7ca38132d6c7.webp",
+   "width": 775,
+   "height": 199,
+   "surfaceLeft": 9,
+   "surfaceRight": 765,
+   "walkY": 10
+  }
  }
 };
