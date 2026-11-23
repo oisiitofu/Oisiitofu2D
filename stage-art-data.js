@@ -2906,5 +2906,101 @@ const StageArtData={
    "surfaceRight": 780,
    "walkY": 10
   }
+ },
+ "lichyard": {
+  "backgroundSource": "assets/stage-v30-lichyard-background.png",
+  "background": "assets/ready/stage-v30-lichyard-background-487f86ca16b604f8.webp",
+  "preview": "assets/ready/stage-picker-lichyard-5ab655ef5107e5bf.webp",
+  "main": {
+   "source": "assets/stage-v30-lichyard-main.png",
+   "image": "assets/ready/stage-v30-lichyard-main-3386781eee437204.webp",
+   "width": 1518,
+   "height": 354,
+   "surfaceLeft": 40,
+   "surfaceRight": 1479,
+   "walkY": 10,
+   "verticalScale": 0.65
+  },
+  "small": {
+   "source": "assets/stage-v30-lichyard-small.png",
+   "image": "assets/ready/stage-v30-lichyard-small-496eb1e6c37c3c9f.webp",
+   "width": 777,
+   "height": 196,
+   "surfaceLeft": 22,
+   "surfaceRight": 753,
+   "walkY": 9
+  }
+ },
+ "feybreak": {
+  "backgroundSource": "assets/stage-v30-feybreak-background.png",
+  "background": "assets/ready/stage-v30-feybreak-background-92effa0199dcc496.webp",
+  "preview": "assets/ready/stage-picker-feybreak-fc4c8eaf1a9128a9.webp",
+  "main": {
+   "source": "assets/stage-v30-feybreak-main.png",
+   "image": "assets/ready/stage-v30-feybreak-main-19a4b598d20cc41a.webp",
+   "width": 1491,
+   "height": 318,
+   "surfaceLeft": 18,
+   "surfaceRight": 1475,
+   "walkY": 10,
+   "verticalScale": 0.63
+  },
+  "small": {
+   "source": "assets/stage-v30-feybreak-small.png",
+   "image": "assets/ready/stage-v30-feybreak-small-0995306872ddee9b.webp",
+   "width": 758,
+   "height": 185,
+   "surfaceLeft": 18,
+   "surfaceRight": 745,
+   "walkY": 11
+  }
+ },
+ "rigbarth": {
+  "backgroundSource": "assets/stage-v30-rigbarth-background.png",
+  "background": "assets/ready/stage-v30-rigbarth-background-53490dbfb97594bd.webp",
+  "preview": "assets/ready/stage-picker-rigbarth-2ae8209cb579b098.webp",
+  "main": {
+   "source": "assets/stage-v30-rigbarth-main.png",
+   "image": "assets/ready/stage-v30-rigbarth-main-87274018bee80776.webp",
+   "width": 1531,
+   "height": 331,
+   "surfaceLeft": 42,
+   "surfaceRight": 1489,
+   "walkY": 10,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v30-rigbarth-small.png",
+   "image": "assets/ready/stage-v30-rigbarth-small-a5c57e91fc6b9c85.webp",
+   "width": 765,
+   "height": 212,
+   "surfaceLeft": 27,
+   "surfaceRight": 736,
+   "walkY": 8
+  }
+ },
+ "sixthstreet": {
+  "backgroundSource": "assets/stage-v30-sixthstreet-background.png",
+  "background": "assets/ready/stage-v30-sixthstreet-background-19d962d53ba91f46.webp",
+  "preview": "assets/ready/stage-picker-sixthstreet-a4eef6f599be36ea.webp",
+  "main": {
+   "source": "assets/stage-v30-sixthstreet-main.png",
+   "image": "assets/ready/stage-v30-sixthstreet-main-a99bd9dc66b8db79.webp",
+   "width": 1502,
+   "height": 199,
+   "surfaceLeft": 48,
+   "surfaceRight": 1453,
+   "walkY": 9,
+   "verticalScale": 0.55
+  },
+  "small": {
+   "source": "assets/stage-v30-sixthstreet-small.png",
+   "image": "assets/ready/stage-v30-sixthstreet-small-1aeafead5f19b6aa.webp",
+   "width": 780,
+   "height": 173,
+   "surfaceLeft": 44,
+   "surfaceRight": 754,
+   "walkY": 10
+  }
  }
 };
