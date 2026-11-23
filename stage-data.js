@@ -531,6 +531,35 @@ const StageCatalog=(()=>{
    {x:216,y:407,w:296},
    {x:681,y:373,w:226},
    {x:1102,y:629,w:204,motion:{path:[[0,0,0],[97,0,0],[214,-205,0],[277,-205,0],[342,-205,-40],[416,0,-40],[482,0,0],[535,0,0]]}}
+  ]},
+  {id:"102",name:"王都グラン・トラド",origin:"メタファー：リファンタジオ",theme:"grandtrad",folder:"grand-trad",color:"#ead6aa",layout:"広い往来を挟み、左は短い尖塔の足場、右は長い回廊と崖下の通路に分かれる",platforms:[
+   {x:223,y:553,w:994,main:true},
+   {x:160,y:463,w:185},
+   {x:339,y:369,w:152},
+   {x:462,y:272,w:152},
+   {x:810,y:411,w:352},
+   {x:1159,y:598,w:178}
+  ]},
+  {id:"103",name:"じゃあくな大地",origin:"Terraria",theme:"corruption",folder:"the-corruption",color:"#d6afed",layout:"紫の長い崖棚の端が縮み、上から下へ降りる間合いが変わる",platforms:[
+   {x:329,y:561,w:782,main:true},
+   {x:172,y:483,w:158},
+   {x:1107,y:474,w:182},
+   {x:646,y:308,w:148},
+   {x:380,y:401,w:342,motion:{path:[[0,0,0,0],[110,0,0,0],[195,46,23,-126],[272,46,23,-126],[354,0,0,0],[425,0,0,0]]}}
+  ]},
+  {id:"104",name:"ワールズエッジ",origin:"Apex Legends",theme:"worldsedge",folder:"worlds-edge",color:"#c5d7e3",layout:"氷側に高い崖棚、溶岩側に低い戻り口があり、運搬台が高低差を越える",platforms:[
+   {x:301,y:559,w:838,main:true},
+   {x:155,y:382,w:265},
+   {x:597,y:306,w:160},
+   {x:1184,y:636,w:193},
+   {x:965,y:459,w:175,motion:{path:[[0,0,0],[88,0,0],[217,-287,-45],[288,-287,-45],[380,-483,-37],[496,0,0],[550,0,0]]}}
+  ]},
+  {id:"105",name:"虎牢関",origin:"真・三國無双",theme:"hulao",folder:"hulao-gate",color:"#eac9ac",layout:"城門前は中央が開け、左に櫓、右に短い壁が斜めに並ぶ",platforms:[
+   {x:196,y:558,w:1048,main:true},
+   {x:163,y:404,w:354},
+   {x:314,y:297,w:162},
+   {x:875,y:374,w:169},
+   {x:1091,y:486,w:204}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
