@@ -86,8 +86,11 @@ body.touch-mode .roster-heading>#back-home{grid-row:1;grid-column:1;min-height:2
 body.touch-mode .roster-toolbar{grid-column:2;grid-row:1/3;grid-template-columns:1fr 1fr;grid-template-rows:29px 24px;gap:3px 4px;align-self:start}
 body.touch-mode .roster-toolbar>#open-match-settings,body.touch-mode .roster-toolbar>.open-settings{min-height:29px;min-width:0;padding:3px;font-size:10px;line-height:1.2}
 body.touch-mode .roster-toolbar>#open-fighter-list{min-height:24px;padding:2px;font-size:10px}
-body.touch-mode .stage-picker{grid-column:1;grid-row:2;grid-template-rows:1fr;gap:0}
-body.touch-mode .stage-picker-heading{display:none}
+body.touch-mode .stage-picker{grid-column:1;grid-row:2;grid-template-rows:1fr;grid-template-columns:minmax(0,1fr) auto;gap:4px}
+body.touch-mode .stage-picker-heading{display:contents}
+body.touch-mode .stage-picker-heading>b,body.touch-mode #stage-selection-hint{display:none}
+body.touch-mode .stage-controls{grid-area:1/1}
+body.touch-mode #stage-details{grid-area:1/2;min-width:36px;height:30px;margin:0;padding:0 4px}
 body.touch-mode .stage-controls{grid-template-columns:22px minmax(0,1fr) 22px;gap:2px}
 body.touch-mode .stage-controls>button{min-width:22px;min-height:30px;font-size:18px}
 body.touch-mode .stage-strip .stage-card{flex-basis:112px;min-height:30px;padding:1px 3px;gap:3px}

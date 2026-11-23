@@ -5,8 +5,8 @@ const StageCatalog=require('./stage-data.js');
 const stages=StageCatalog.stages.filter(stage=>stage.layout);
 const base=process.env.GAME_URL||'http://127.0.0.1:4173';
 
-async function open(browser,viewport,errors){
- const page=await(await browser.newContext({viewport})).newPage();
+async function open(browser,viewport,errors,mobile=false){
+ const page=await(await browser.newContext({viewport,hasTouch:mobile,isMobile:mobile})).newPage();
  page.on('pageerror',error=>errors.push(error.message));
  await page.goto(base,{waitUntil:'domcontentloaded',timeout:60000});
  await page.waitForFunction(()=>window.AstralEdge?.assetsLoaded,{},{timeout:120000});
@@ -34,13 +34,16 @@ async function local(browser,errors){
  assert(await page.locator('#stage-list-dialog').evaluate(dialog=>dialog.scrollHeight<=dialog.clientHeight));
  await page.keyboard.press('Escape');
  await page.waitForFunction(()=>document.activeElement.id==='stage-details');
- const mobile=await open(browser,{width:390,height:700},errors);
- await mobile.click('#enter-training');
- await mobile.click('#stage-details');
- assert(await mobile.locator('#stage-list-dialog').evaluate(dialog=>dialog.scrollWidth<=dialog.clientWidth));
- await mobile.locator('.stage-detail-card').last().click();
- assert.equal(await mobile.locator('#stage').inputValue(),stages.at(-1).id);
- await mobile.context().close();
+ for(const viewport of [{width:390,height:700},{width:844,height:390}]){
+  const mobile=await open(browser,viewport,errors,true);
+  await mobile.click('#enter-training');
+  assert(await mobile.evaluate(()=>document.body.classList.contains('touch-mode')));
+  await mobile.click('#stage-details');
+  assert(await mobile.locator('#stage-list-dialog').evaluate(dialog=>dialog.scrollWidth<=dialog.clientWidth));
+  await mobile.locator('.stage-detail-card').last().click();
+  assert.equal(await mobile.locator('#stage').inputValue(),stages.at(-1).id);
+  await mobile.context().close();
+ }
 
  await pick(page,stages[0].id);
  await page.click('#start');
