@@ -3290,5 +3290,101 @@ const StageArtData={
    "surfaceRight": 762,
    "walkY": 8
   }
+ },
+ "devilscrossing": {
+  "backgroundSource": "assets/stage-v34-devilscrossing-background.png",
+  "background": "assets/ready/stage-v34-devilscrossing-background-ecade96f26c972c4.webp",
+  "preview": "assets/ready/stage-picker-devilscrossing-94f7a84144d41081.webp",
+  "main": {
+   "source": "assets/stage-v34-devilscrossing-main.png",
+   "image": "assets/ready/stage-v34-devilscrossing-main-74764a12a993d04e.webp",
+   "width": 1531,
+   "height": 284,
+   "surfaceLeft": 39,
+   "surfaceRight": 1492,
+   "walkY": 10,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v34-devilscrossing-small.png",
+   "image": "assets/ready/stage-v34-devilscrossing-small-e726fa96da516677.webp",
+   "width": 765,
+   "height": 201,
+   "surfaceLeft": 27,
+   "surfaceRight": 736,
+   "walkY": 9
+  }
+ },
+ "buckler": {
+  "backgroundSource": "assets/stage-v34-buckler-background.png",
+  "background": "assets/ready/stage-v34-buckler-background-2f05af2f55ad0a5d.webp",
+  "preview": "assets/ready/stage-picker-buckler-09f655fa8c37f31b.webp",
+  "main": {
+   "source": "assets/stage-v34-buckler-main.png",
+   "image": "assets/ready/stage-v34-buckler-main-228e03341e86873d.webp",
+   "width": 1511,
+   "height": 278,
+   "surfaceLeft": 67,
+   "surfaceRight": 1441,
+   "walkY": 9,
+   "verticalScale": 0.58
+  },
+  "small": {
+   "source": "assets/stage-v34-buckler-small.png",
+   "image": "assets/ready/stage-v34-buckler-small-9cc197654448c54c.webp",
+   "width": 761,
+   "height": 207,
+   "surfaceLeft": 23,
+   "surfaceRight": 736,
+   "walkY": 10
+  }
+ },
+ "whitehousereborn": {
+  "backgroundSource": "assets/stage-v34-whitehousereborn-background.png",
+  "background": "assets/ready/stage-v34-whitehousereborn-background-1d6ca31372fcfea9.webp",
+  "preview": "assets/ready/stage-picker-whitehousereborn-8919890dd7058248.webp",
+  "main": {
+   "source": "assets/stage-v34-whitehousereborn-main.png",
+   "image": "assets/ready/stage-v34-whitehousereborn-main-21a507ba9363ae53.webp",
+   "width": 1503,
+   "height": 295,
+   "surfaceLeft": 20,
+   "surfaceRight": 1481,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v34-whitehousereborn-small.png",
+   "image": "assets/ready/stage-v34-whitehousereborn-small-0dcca2019ba39609.webp",
+   "width": 762,
+   "height": 140,
+   "surfaceLeft": 16,
+   "surfaceRight": 745,
+   "walkY": 9
+  }
+ },
+ "nsanitybeach": {
+  "backgroundSource": "assets/stage-v34-nsanitybeach-background.png",
+  "background": "assets/ready/stage-v34-nsanitybeach-background-debce5ce9364d58a.webp",
+  "preview": "assets/ready/stage-picker-nsanitybeach-09860a06532d3084.webp",
+  "main": {
+   "source": "assets/stage-v34-nsanitybeach-main.png",
+   "image": "assets/ready/stage-v34-nsanitybeach-main-dde28ed7732dbe99.webp",
+   "width": 1518,
+   "height": 253,
+   "surfaceLeft": 34,
+   "surfaceRight": 1485,
+   "walkY": 9,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v34-nsanitybeach-small.png",
+   "image": "assets/ready/stage-v34-nsanitybeach-small-72a5faa70be11e4d.webp",
+   "width": 768,
+   "height": 178,
+   "surfaceLeft": 23,
+   "surfaceRight": 739,
+   "walkY": 10
+  }
  }
 };
