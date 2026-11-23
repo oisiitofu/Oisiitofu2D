@@ -291,11 +291,57 @@ const Roster=(()=>{
   document.querySelectorAll('[data-home-fighter]').forEach(el=>{if(typeof TouchControls!=='undefined'&&TouchControls.enabled){el.loading='lazy';el.decoding='async';el.fetchPriority='low';}const url=ArtLoader.portrait(el.dataset.homeFighter,0,0);if(url&&el.getAttribute('src')!==url)el.src=url;});document.querySelector('#costume-name').textContent=names[color];document.querySelectorAll('#swatches button').forEach((b,i)=>{b.classList.toggle('selected',i===color);b.setAttribute('aria-pressed',String(i===color));});for(const slot of ['player','cpu']){const id=slot==='player'?chosen:$roster('cpu-character').value,url=id==='random'?randomPortrait:ArtLoader.portrait(id,slot==='player'?selected:+$roster('color2').value,0,true),img=$roster('select-'+slot).querySelector('img');if(url&&img.getAttribute('src')!==url)img.src=url;}
  }
  function summary(){const bingo=document.querySelector('#match-kind').value==='bingo'&&document.querySelector('#battle-mode').value==='online',startButton=document.querySelector('#start');if(startButton.dataset.bingo!==String(bingo)){startButton.dataset.bingo=String(bingo);startButton.innerHTML=bingo?'ビンゴカードから選ぶ <span>→</span>':'READY TO FIGHT <span>→</span>';}const online=document.querySelector('#battle-mode').value==='online',mode=document.querySelector('#battle-mode').selectedOptions[0].textContent,stage=document.querySelector('#stage').selectedOptions[0].textContent,cpu=document.querySelector('#cpu-character').selectedOptions[0].textContent;document.querySelector('#match-summary').textContent=mode+(document.querySelector('#match-kind').value==='bingo'&&document.querySelector('#battle-mode').value==='online'?' · ビンゴ対戦':'')+' · '+(SquadBattle.size()>1?(online?BattlePlayers.count()+'人 / ':'')+SquadBattle.size()+'キャラ団体戦':BattlePlayers.count()+'人 / '+($roster('battle-format').value==='teams'?'チーム戦・チームアタック'+(BattlePlayers.teamAttack()?'あり':'なし')+' / ':'')+BattlePlayers.stockCount()+'ストック')+(online||BattlePlayers.count()>2?'':' / '+cpu)+' / '+MatchRules.timeLabel(BattlePlayers.timeLimit())+' · '+stage;document.querySelector('#open-room').textContent=Net.code?'ROOM '+Net.code+(bingo?' · ビンゴカードを選ぶ →':' · 準備完了 / 参加者 →'):'ルームをつくる / 参加する →';refreshStages();}
+ const stagePoolStorage='tofu-stage-random-excluded-v1';
+ const excludedStages=new Set();
+ let stagePoolChangedAt=0;
+ function applyStagePool(record){
+  if(!Array.isArray(record?.excluded)||!Number.isSafeInteger(record.updatedAt)||record.updatedAt<=stagePoolChangedAt)return;
+  const ids=StageCatalog.stages.filter(stage=>record.excluded.includes(stage.id)).map(stage=>stage.id);
+  if(ids.length===StageCatalog.stages.length)return;
+  excludedStages.clear();ids.forEach(id=>excludedStages.add(id));
+  stagePoolChangedAt=record.updatedAt;
+ }
+ function stagePoolRecord(){return {excluded:[...excludedStages],updatedAt:stagePoolChangedAt};}
+ function saveStagePool(){
+  try{localStorage.setItem(stagePoolStorage,JSON.stringify(stagePoolRecord()));}catch{}
+ }
+ try{
+  applyStagePool(JSON.parse(localStorage.getItem(stagePoolStorage)));
+ }catch{}
+ const entryPool=new URLSearchParams(location.hash.slice(1)).get('stage-random');
+ if(entryPool&&new URLSearchParams(location.search).get('mode')==='online'){
+  const previous=stagePoolChangedAt;
+  try{applyStagePool(JSON.parse(entryPool));}catch{}
+  if(stagePoolChangedAt!==previous)saveStagePool();
+  history.replaceState(history.state,'',location.pathname+location.search);
+ }
+ function stageChoice(){
+  const stage=$roster('stage').value;
+  if(stage!=='random'||!excludedStages.size)return stage;
+  const candidates=StageCatalog.stages.filter(d=>!excludedStages.has(d.id));
+  return candidates[Math.floor(Math.random()*candidates.length)].id;
+ }
+ function stageKey(){
+  const stage=$roster('stage').value;
+  return stage==='random'?stage+':'+[...excludedStages].sort().join(','):stage;
+ }
  function refreshStages(){
   const id=$roster('stage').value,online=$roster('battle-mode').value==='online';
+  const eligible=StageCatalog.stages.length-excludedStages.size;
   document.querySelectorAll('.stage-card,.stage-detail-card').forEach(button=>{const selected=button.dataset.stage===id;button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));});
+  document.querySelectorAll('.stage-random-switch').forEach(input=>{
+   input.checked=!excludedStages.has(input.dataset.stage);
+   input.disabled=input.checked&&eligible===1;
+   input.nextElementSibling.textContent=input.checked?'おまかせ ON':'おまかせ OFF';
+  });
+  const count=$roster('stage-random-count'),label=`抽選対象 ${eligible} / ${StageCatalog.stages.length} 面`+(eligible===1?'（1面以上必要）':'');
+  if(count.textContent!==label)count.textContent=label;
+  const randomCaption=$roster('stage-list-grid').querySelector('[data-stage="random"] small');
+  if(randomCaption)randomCaption.textContent=`${eligible}面から抽選`;
+  const randomCard=$roster('stage-strip').querySelector('[data-stage="random"]');
+  if(randomCard)randomCard.title=`${eligible}面から対戦開始ごとに抽選`;
   $roster('stage-selection-hint').textContent=online?'参加者の希望から抽選':'ステージを選択';
-  $roster('stage-list-mode').textContent=online?'各プレイヤーの希望から対戦ステージを抽選します。':'カードを押して対戦するステージを選びます。';
+  $roster('stage-list-mode').textContent=online?'自分の「おまかせ」の抽選対象を設定できます。対戦では参加者の希望から抽選します。':'カードを押してステージを選びます。おまかせ OFF の面も手動で選べます。';
   document.querySelector('.stage-preview span').textContent=StageCatalog.name(id);
  }
  function stagePreview(d,image){
@@ -325,8 +371,22 @@ const Roster=(()=>{
     const button=document.createElement('button');button.type='button';button.className='stage-detail-card';button.dataset.stage=d.id;
     const picture=document.createElement('span');picture.className='stage-detail-art';picture.innerHTML=stagePreview(d,imageFor(d));
     const name=document.createElement('b');name.textContent=d.name;
-    const caption=document.createElement('small');caption.textContent=d.layout||(d.id==='random'?'全ステージから抽選':d.platforms.some(p=>p.motion)?'移動する足場':'固定の足場');
-    button.append(picture,name,caption);grid.append(button);
+    const caption=document.createElement('small');caption.textContent=d.layout||(d.platforms?.some(p=>p.motion)?'移動する足場':'固定の足場');
+    button.append(picture,name,caption);
+    const entry=document.createElement('div');entry.className='stage-detail-entry';entry.append(button);grid.append(entry);
+    if(d.id!=='random'){
+     const label=document.createElement('label');label.className='stage-random-option';
+     const input=document.createElement('input');input.type='checkbox';input.className='stage-random-switch';input.dataset.stage=d.id;
+     input.setAttribute('role','switch');input.setAttribute('aria-label',d.name+'をおまかせの抽選対象にする');
+     const value=document.createElement('span');value.setAttribute('aria-hidden','true');
+     input.onchange=()=>{
+      if(input.checked)excludedStages.delete(d.id);
+      else if(excludedStages.size<StageCatalog.stages.length-1)excludedStages.add(d.id);
+      stagePoolChangedAt=Math.max(Date.now(),stagePoolChangedAt+1);saveStagePool();
+      select.dispatchEvent(new Event('change',{bubbles:true}));
+     };
+     label.append(input,value);entry.append(label);
+    }
     button.onclick=()=>{
      choose(d.id);dialog.close();
      const selected=strip.querySelector('.stage-card.selected');
@@ -371,5 +431,5 @@ const Roster=(()=>{
   for(const d of selectable){const option=[...cpu.options].find(o=>o.value===d.id)||new Option(d.name,d.id);cpu.append(option);}
   const random=[...cpu.options].find(o=>o.value==='random');if(random)cpu.append(random);cpu.value=previous;
   document.querySelector('#open-match-settings').onclick=()=>document.querySelector('#match-settings').showModal();document.querySelector('#close-match-settings').onclick=()=>document.querySelector('#match-settings').close();document.querySelector('#open-room').onclick=()=>BingoBattle.enabled()?BingoBattle.openOnline(false):Net.browse();document.querySelector('#close-room').onclick=()=>document.querySelector('#online-room').close();for(const id of ['cpu-character','difficulty','stage','color2','one-on-one'])document.getElementById(id).addEventListener('change',()=>{if(id==='cpu-character'||id==='color2')refreshSelection();else summary();});document.querySelector('#match-settings').addEventListener('click',e=>{if(e.target.closest('.open-settings,#help'))document.querySelector('#match-settings').close();},true);addEventListener('resize',fit);document.fonts.ready.then(fit);document.fonts.addEventListener('loadingdone',fit);summary();}
- return{definitions,selectable,fit,chooseForSlot:select,init(){initStages();init();initPanels();SquadBattle.init();BattlePlayers.init();},open,artReady,summary,closePanels,setColor,setTarget,refreshSelection,selectionContext,resolve,get target(){return target},get selected(){return chosen},get current(){return definitionFor(chosen)}};
+ return{definitions,selectable,fit,chooseForSlot:select,init(){initStages();init();initPanels();SquadBattle.init();BattlePlayers.init();},open,artReady,summary,closePanels,setColor,setTarget,refreshSelection,selectionContext,resolve,stageChoice,stageKey,stagePoolRecord,get target(){return target},get selected(){return chosen},get current(){return definitionFor(chosen)}};
 })();

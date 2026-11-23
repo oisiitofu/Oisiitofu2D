@@ -54,7 +54,7 @@ const CharacterGuide=(()=>{
    const seat=BattlePlayers.selection;
    const color=seat>=2?BattlePlayers.seats[seat].color:Roster.target==='cpu'?+document.getElementById('color2').value:selected;
    Roster.open('training');Roster.setTarget('player');Roster.chooseForSlot(profile.id);Roster.setColor(color);
-   const choices=BattlePlayers.config(),stage=StageCatalog.resolve(document.getElementById('stage').value),before=round;
+   const choices=BattlePlayers.config(),stage=StageCatalog.resolve(Roster.stageChoice()),before=round;
    const players=[
     {...choices.players[0],character:profile.id,color,control:choices.players[0].control==='cpu'?'primary':choices.players[0].control},
     {...choices.players[1],character:Roster.resolve(document.getElementById('cpu-character').value),control:'cpu'}

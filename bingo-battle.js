@@ -48,7 +48,7 @@ const BingoBattle=(()=>{
  }
  function sendChoice(type,data={}){Net.bingo(type,{generation:online.generation,bingoRound:online.round,...data});}
  function choose(cell){if(!enabled()||online.revealed||online.result||online.champion||!BingoRules.available(online,seat()).includes(cell)||pendingAction)return;if(online.picks[seat()]){pendingAction='cancel';sendChoice('bingo-cancel');}draft=cell;render();}
- function confirm(){if(draft===null||pendingAction||online?.picks[seat()]||!enabled()||online.revealed||!BingoRules.available(online,seat()).includes(draft))return;pendingAction='pick';sendChoice('bingo-pick',{cell:draft,color:selected,stage:$('stage').value});render();}
+ function confirm(){if(draft===null||pendingAction||online?.picks[seat()]||!enabled()||online.revealed||!BingoRules.available(online,seat()).includes(draft))return;pendingAction='pick';sendChoice('bingo-pick',{cell:draft,color:selected,stage:Roster.stageChoice()});render();}
  function cancel(){if(!enabled()||online.revealed||pendingAction)return;draft=null;if(online.picks[seat()]){pendingAction='cancel';sendChoice('bingo-cancel');}render();}
  function accept(s){
   const previous=online;online=s;const changed=!previous||!s||s.generation!==previous.generation||s.round!==previous.round;if(changed){draft=null;pendingAction=null;}else if(pendingAction==='pick'&&s.picks[seat()]||pendingAction==='cancel'&&!s.picks[seat()])pendingAction=null;const locked=!!(isOnline()&&s?.picks[Net.slot]&&!s.result);for(const field of document.querySelectorAll('#stage,.stage-card,#swatches button'))field.disabled=locked;if(!s){$('result').querySelector('.back').disabled=false;waitingResult=false;if(isOnline())close();$('bingo-result-summary').classList.add('hidden');return;}

@@ -32,20 +32,41 @@ async function local(browser,errors){
  await page.click('#stage-details');
  assert.equal(await page.locator('.stage-detail-card').count(),StageCatalog.stages.length+1);
  assert(await page.locator('#stage-list-dialog').evaluate(dialog=>dialog.scrollHeight<=dialog.clientHeight));
+ const toggles=page.locator('.stage-random-switch');
+ assert.equal(await toggles.count(),StageCatalog.stages.length);
+ const included='13';
+ for(const input of await toggles.all()){
+  if(await input.getAttribute('data-stage')!==included)await input.uncheck();
+ }
+ assert(await page.locator('.stage-random-switch[data-stage="13"]').isDisabled());
+ assert.match(await page.locator('#stage-random-count').textContent(),/1 \/ 19/);
+ assert(await page.locator('#stage-list-dialog').evaluate(dialog=>dialog.open));
  await page.keyboard.press('Escape');
  await page.waitForFunction(()=>document.activeElement.id==='stage-details');
+ await pick(page,'18');
+ assert.equal(await page.evaluate(()=>Roster.stageChoice()),'18');
+ await page.reload({waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>window.AstralEdge?.assetsLoaded);
+ await page.click('#enter-training');
+ await page.click('#stage-details');
+ assert.equal(await page.locator('.stage-random-switch:checked').count(),1);
+ assert.equal(await page.locator('.stage-random-switch:checked').getAttribute('data-stage'),included);
+ await page.keyboard.press('Escape');
  for(const viewport of [{width:390,height:700},{width:844,height:390}]){
   const mobile=await open(browser,viewport,errors,true);
   await mobile.click('#enter-training');
   assert(await mobile.evaluate(()=>document.body.classList.contains('touch-mode')));
   await mobile.click('#stage-details');
+  const toggle=mobile.locator('.stage-random-switch[data-stage="18"]');
+  await toggle.uncheck();
+  assert(!(await toggle.isChecked()));
   assert(await mobile.locator('#stage-list-dialog').evaluate(dialog=>dialog.scrollWidth<=dialog.clientWidth));
   await mobile.locator('.stage-detail-card').last().click();
   assert.equal(await mobile.locator('#stage').inputValue(),stages.at(-1).id);
   await mobile.context().close();
  }
 
- await pick(page,stages[0].id);
+ await pick(page,'random');
  await page.click('#start');
  await page.waitForFunction(()=>state==='battle'&&activeStage==='13'&&countdown===0);
  assert(await page.evaluate(()=>training&&StageVisuals.prepared()&&fighters.every(fighter=>fighter.grounded)));
@@ -126,7 +147,11 @@ async function online(browser,errors,id){
  await guest.waitForFunction(()=>Net.code.length===6);
  for(const page of pages){
   if(await page.locator('#online-room').evaluate(dialog=>dialog.open))await page.click('#edit-online-lineup');
-  await pick(page,id);
+  await page.click('#stage-details');
+  const switches=page.locator(id==='13'?'.stage-random-switch:not([data-stage="13"])':'.stage-random-switch[data-stage="18"]');
+  for(const input of await switches.all())await input.uncheck();
+  await page.keyboard.press('Escape');
+  await pick(page,id==='13'?'random':id);
   await page.evaluate(()=>{
    window.stageFrames=[];
    addEventListener('online-frame',event=>stageFrames.push([event.detail,StageVisuals.clock,platforms.map(p=>[p.x,p.y]),fighters.map(f=>[f.x,f.y])]));
