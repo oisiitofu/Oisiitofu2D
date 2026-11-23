@@ -726,9 +726,9 @@ const StageArtData={
   }
  },
  "crystal": {
-  "backgroundSource": "assets/stage-v6-crystal-background.png",
-  "background": "assets/ready/stage-v6-crystal-background-e0cfc9a0230ac222.webp",
-  "preview": "assets/ready/stage-picker-crystal-908820fedda872d5.webp",
+  "backgroundSource": "assets/stage-v7-crystal-background.png",
+  "background": "assets/ready/stage-v7-crystal-background-87d2858591dbb60d.webp",
+  "preview": "assets/ready/stage-picker-crystal-a0dc3d586aeb86d7.webp",
   "main": {
    "source": "assets/stage-v6-crystal-main.png",
    "image": "assets/ready/stage-v6-crystal-main-ce29a4c5ef73f828.webp",
@@ -774,26 +774,26 @@ const StageArtData={
   }
  },
  "chrono": {
-  "backgroundSource": "assets/stage-v6-chrono-background.png",
-  "background": "assets/ready/stage-v6-chrono-background-58ac4925325ae9e6.webp",
-  "preview": "assets/ready/stage-picker-chrono-24cfbc9cfc74250e.webp",
+  "backgroundSource": "assets/stage-v7-chrono-background.png",
+  "background": "assets/ready/stage-v7-chrono-background-843cfb21915a4621.webp",
+  "preview": "assets/ready/stage-picker-chrono-854087e9a2f76b9f.webp",
   "main": {
-   "source": "assets/stage-v6-chrono-main.png",
-   "image": "assets/ready/stage-v6-chrono-main-0de42023fd25fd2a.webp",
-   "width": 1494,
-   "height": 292,
-   "surfaceLeft": 8,
-   "surfaceRight": 1486,
-   "walkY": 9
+   "source": "assets/stage-v7-chrono-main.png",
+   "image": "assets/ready/stage-v7-chrono-main-52e3c691c96657d3.webp",
+   "width": 1536,
+   "height": 298,
+   "surfaceLeft": 13,
+   "surfaceRight": 1522,
+   "walkY": 10
   },
   "small": {
-   "source": "assets/stage-v6-chrono-small.png",
-   "image": "assets/ready/stage-v6-chrono-small-08b66c78455cdbae.webp",
-   "width": 878,
-   "height": 143,
-   "surfaceLeft": 8,
-   "surfaceRight": 869,
-   "walkY": 8
+   "source": "assets/stage-v7-chrono-small.png",
+   "image": "assets/ready/stage-v7-chrono-small-6cfe296e368e76c2.webp",
+   "width": 555,
+   "height": 183,
+   "surfaceLeft": 11,
+   "surfaceRight": 544,
+   "walkY": 10
   }
  },
  "windhill": {
@@ -817,6 +817,29 @@ const StageArtData={
    "surfaceLeft": 26,
    "surfaceRight": 761,
    "walkY": 25
+  }
+ },
+ "gaur": {
+  "backgroundSource": "assets/stage-v7-gaur-background.png",
+  "background": "assets/ready/stage-v7-gaur-background-8ca98a3c8ed2bc35.webp",
+  "preview": "assets/ready/stage-picker-gaur-ea15bab4b8bee514.webp",
+  "main": {
+   "source": "assets/stage-v7-gaur-main.png",
+   "image": "assets/ready/stage-v7-gaur-main-9d7547d7820548fe.webp",
+   "width": 2164,
+   "height": 394,
+   "surfaceLeft": 42,
+   "surfaceRight": 2118,
+   "walkY": 80
+  },
+  "small": {
+   "source": "assets/stage-v7-gaur-small.png",
+   "image": "assets/ready/stage-v7-gaur-small-c16305d4b6da0175.webp",
+   "width": 1095,
+   "height": 217,
+   "surfaceLeft": 53,
+   "surfaceRight": 1040,
+   "walkY": 83
   }
  }
 };

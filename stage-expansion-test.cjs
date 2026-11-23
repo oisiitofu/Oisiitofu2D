@@ -42,7 +42,7 @@ async function local(browser,errors){
  }
  const toggles=page.locator('.stage-random-switch');
  assert.equal(await toggles.count(),StageCatalog.stages.length);
- const included='25';
+ const included='27';
  for(const input of await toggles.all()){
   if(await input.getAttribute('data-stage')!==included)await input.uncheck();
  }
