@@ -4058,5 +4058,97 @@ const StageArtData={
    "surfaceRight": 738,
    "walkY": 9
   }
+ },
+ "megafloat": {
+  "backgroundSource": "assets/stage-v42-megafloat-background.png",
+  "background": "assets/ready/stage-v42-megafloat-background-7cace8e006b488cd.webp",
+  "preview": "assets/ready/stage-picker-megafloat-834efb9cf98b5777.webp",
+  "main": {
+   "source": "assets/stage-v42-megafloat-main.png",
+   "image": "assets/ready/stage-v42-megafloat-main-7acb9e9e14bb8ba3.webp",
+   "width": 1525,
+   "height": 198,
+   "surfaceLeft": 41,
+   "surfaceRight": 1483,
+   "walkY": 8
+  },
+  "small": {
+   "source": "assets/stage-v42-megafloat-small.png",
+   "image": "assets/ready/stage-v42-megafloat-small-8228622f98a42918.webp",
+   "width": 773,
+   "height": 112,
+   "surfaceLeft": 29,
+   "surfaceRight": 742,
+   "walkY": 9
+  }
+ },
+ "greatwallterraces": {
+  "backgroundSource": "assets/stage-v42-greatwallterraces-background.png",
+  "background": "assets/ready/stage-v42-greatwallterraces-background-48682a8d81de9c3e.webp",
+  "preview": "assets/ready/stage-picker-greatwallterraces-060d24feebb04165.webp",
+  "main": {
+   "source": "assets/stage-v42-greatwallterraces-main.png",
+   "image": "assets/ready/stage-v42-greatwallterraces-main-3403f28e472b672f.webp",
+   "width": 1507,
+   "height": 283,
+   "surfaceLeft": 54,
+   "surfaceRight": 1453,
+   "walkY": 11
+  },
+  "small": {
+   "source": "assets/stage-v42-greatwallterraces-small.png",
+   "image": "assets/ready/stage-v42-greatwallterraces-small-db1a2f8213fc752e.webp",
+   "width": 778,
+   "height": 204,
+   "surfaceLeft": 38,
+   "surfaceRight": 739,
+   "walkY": 10
+  }
+ },
+ "churchcity": {
+  "backgroundSource": "assets/stage-v42-churchcity-background.png",
+  "background": "assets/ready/stage-v42-churchcity-background-fda8b66f0a81deb3.webp",
+  "preview": "assets/ready/stage-picker-churchcity-e7039396e74459b2.webp",
+  "main": {
+   "source": "assets/stage-v42-churchcity-main.png",
+   "image": "assets/ready/stage-v42-churchcity-main-52e7568d648e514c.webp",
+   "width": 1523,
+   "height": 367,
+   "surfaceLeft": 20,
+   "surfaceRight": 1504,
+   "walkY": 10
+  },
+  "small": {
+   "source": "assets/stage-v42-churchcity-small.png",
+   "image": "assets/ready/stage-v42-churchcity-small-bf9e7d723dd1aceb.webp",
+   "width": 756,
+   "height": 227,
+   "surfaceLeft": 18,
+   "surfaceRight": 737,
+   "walkY": 10
+  }
+ },
+ "fallentower": {
+  "backgroundSource": "assets/stage-v42-fallentower-background.png",
+  "background": "assets/ready/stage-v42-fallentower-background-92fc5ec639c71131.webp",
+  "preview": "assets/ready/stage-picker-fallentower-d91b496767b44705.webp",
+  "main": {
+   "source": "assets/stage-v42-fallentower-main.png",
+   "image": "assets/ready/stage-v42-fallentower-main-3a6602f6a72f15bc.webp",
+   "width": 1507,
+   "height": 223,
+   "surfaceLeft": 51,
+   "surfaceRight": 1456,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v42-fallentower-small.png",
+   "image": "assets/ready/stage-v42-fallentower-small-97c9f1083448070d.webp",
+   "width": 722,
+   "height": 147,
+   "surfaceLeft": 39,
+   "surfaceRight": 682,
+   "walkY": 61
+  }
  }
 };
