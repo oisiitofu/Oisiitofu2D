@@ -3770,5 +3770,101 @@ const StageArtData={
    "surfaceRight": 772,
    "walkY": 8
   }
+ },
+ "luli": {
+  "backgroundSource": "assets/stage-v39-luli-background.png",
+  "background": "assets/ready/stage-v39-luli-background-6b622954df8ca83e.webp",
+  "preview": "assets/ready/stage-picker-luli-42964952e8967860.webp",
+  "main": {
+   "source": "assets/stage-v39-luli-main.png",
+   "image": "assets/ready/stage-v39-luli-main-ca63067f34979980.webp",
+   "width": 1512,
+   "height": 276,
+   "surfaceLeft": 39,
+   "surfaceRight": 1472,
+   "walkY": 9,
+   "verticalScale": 0.61
+  },
+  "small": {
+   "source": "assets/stage-v39-luli-small.png",
+   "image": "assets/ready/stage-v39-luli-small-c5f932ab0b39d816.webp",
+   "width": 791,
+   "height": 187,
+   "surfaceLeft": 23,
+   "surfaceRight": 768,
+   "walkY": 10
+  }
+ },
+ "miltia": {
+  "backgroundSource": "assets/stage-v39-miltia-background.png",
+  "background": "assets/ready/stage-v39-miltia-background-88d28c5693bf8475.webp",
+  "preview": "assets/ready/stage-picker-miltia-3107716e4e328798.webp",
+  "main": {
+   "source": "assets/stage-v39-miltia-main.png",
+   "image": "assets/ready/stage-v39-miltia-main-79e8d0fb6777a2cd.webp",
+   "width": 1517,
+   "height": 206,
+   "surfaceLeft": 67,
+   "surfaceRight": 1447,
+   "walkY": 9,
+   "verticalScale": 0.55
+  },
+  "small": {
+   "source": "assets/stage-v39-miltia-small.png",
+   "image": "assets/ready/stage-v39-miltia-small-735224877fea7a41.webp",
+   "width": 792,
+   "height": 123,
+   "surfaceLeft": 38,
+   "surfaceRight": 753,
+   "walkY": 9
+  }
+ },
+ "airyglyph": {
+  "backgroundSource": "assets/stage-v39-airyglyph-background.png",
+  "background": "assets/ready/stage-v39-airyglyph-background-956429fe7661b0a9.webp",
+  "preview": "assets/ready/stage-picker-airyglyph-d89493f5e1ba7341.webp",
+  "main": {
+   "source": "assets/stage-v39-airyglyph-main.png",
+   "image": "assets/ready/stage-v39-airyglyph-main-fa384ff1a458be68.webp",
+   "width": 1515,
+   "height": 207,
+   "surfaceLeft": 38,
+   "surfaceRight": 1476,
+   "walkY": 12,
+   "verticalScale": 0.63
+  },
+  "small": {
+   "source": "assets/stage-v39-airyglyph-small.png",
+   "image": "assets/ready/stage-v39-airyglyph-small-9e16099c9cd7bfda.webp",
+   "width": 760,
+   "height": 166,
+   "surfaceLeft": 28,
+   "surfaceRight": 732,
+   "walkY": 12
+  }
+ },
+ "macanu": {
+  "backgroundSource": "assets/stage-v39-macanu-background.png",
+  "background": "assets/ready/stage-v39-macanu-background-862ffe4b78404aab.webp",
+  "preview": "assets/ready/stage-picker-macanu-63197cd9b24e6247.webp",
+  "main": {
+   "source": "assets/stage-v39-macanu-main.png",
+   "image": "assets/ready/stage-v39-macanu-main-cb88bd8ab02818fb.webp",
+   "width": 1498,
+   "height": 319,
+   "surfaceLeft": 19,
+   "surfaceRight": 1480,
+   "walkY": 11,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v39-macanu-small.png",
+   "image": "assets/ready/stage-v39-macanu-small-5a6abf1142fedfd8.webp",
+   "width": 766,
+   "height": 164,
+   "surfaceLeft": 18,
+   "surfaceRight": 747,
+   "walkY": 9
+  }
  }
 };
