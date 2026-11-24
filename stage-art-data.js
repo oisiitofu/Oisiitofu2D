@@ -3674,5 +3674,101 @@ const StageArtData={
    "surfaceRight": 802,
    "walkY": 9
   }
+ },
+ "demoncastle": {
+  "backgroundSource": "assets/stage-v38-demoncastle-background.png",
+  "background": "assets/ready/stage-v38-demoncastle-background-c0544ce1f8404c98.webp",
+  "preview": "assets/ready/stage-picker-demoncastle-5dbcbac4875c5a6e.webp",
+  "main": {
+   "source": "assets/stage-v38-demoncastle-main.png",
+   "image": "assets/ready/stage-v38-demoncastle-main-588dd740781b62be.webp",
+   "width": 1487,
+   "height": 242,
+   "surfaceLeft": 38,
+   "surfaceRight": 1448,
+   "walkY": 10,
+   "verticalScale": 0.59
+  },
+  "small": {
+   "source": "assets/stage-v38-demoncastle-small.png",
+   "image": "assets/ready/stage-v38-demoncastle-small-89d031e3d4af36cd.webp",
+   "width": 773,
+   "height": 202,
+   "surfaceLeft": 27,
+   "surfaceRight": 746,
+   "walkY": 8
+  }
+ },
+ "hendonmyre": {
+  "backgroundSource": "assets/stage-v38-hendonmyre-background.png",
+  "background": "assets/ready/stage-v38-hendonmyre-background-15d867c9409aa9e3.webp",
+  "preview": "assets/ready/stage-picker-hendonmyre-8b34ce47e01b8bbc.webp",
+  "main": {
+   "source": "assets/stage-v38-hendonmyre-main.png",
+   "image": "assets/ready/stage-v38-hendonmyre-main-76ab7ab94a169e92.webp",
+   "width": 1527,
+   "height": 246,
+   "surfaceLeft": 40,
+   "surfaceRight": 1486,
+   "walkY": 9,
+   "verticalScale": 0.62
+  },
+  "small": {
+   "source": "assets/stage-v38-hendonmyre-small.png",
+   "image": "assets/ready/stage-v38-hendonmyre-small-45b42a43488e2d0c.webp",
+   "width": 801,
+   "height": 184,
+   "surfaceLeft": 21,
+   "surfaceRight": 779,
+   "walkY": 9
+  }
+ },
+ "scarletmansion": {
+  "backgroundSource": "assets/stage-v38-scarletmansion-background.png",
+  "background": "assets/ready/stage-v38-scarletmansion-background-23e5390a017e6cdd.webp",
+  "preview": "assets/ready/stage-picker-scarletmansion-2976aefe240e811b.webp",
+  "main": {
+   "source": "assets/stage-v38-scarletmansion-main.png",
+   "image": "assets/ready/stage-v38-scarletmansion-main-0d4c3dd6f9c35ba6.webp",
+   "width": 1480,
+   "height": 303,
+   "surfaceLeft": 11,
+   "surfaceRight": 1468,
+   "walkY": 8,
+   "verticalScale": 0.6
+  },
+  "small": {
+   "source": "assets/stage-v38-scarletmansion-small.png",
+   "image": "assets/ready/stage-v38-scarletmansion-small-0f822b83b6ca597f.webp",
+   "width": 756,
+   "height": 196,
+   "surfaceLeft": 13,
+   "surfaceRight": 743,
+   "walkY": 11
+  }
+ },
+ "mobliz": {
+  "backgroundSource": "assets/stage-v38-mobliz-background.png",
+  "background": "assets/ready/stage-v38-mobliz-background-2616669ff6f40052.webp",
+  "preview": "assets/ready/stage-picker-mobliz-450d5c0807dd0acb.webp",
+  "main": {
+   "source": "assets/stage-v38-mobliz-main.png",
+   "image": "assets/ready/stage-v38-mobliz-main-70cf845d8eee9517.webp",
+   "width": 1522,
+   "height": 285,
+   "surfaceLeft": 14,
+   "surfaceRight": 1507,
+   "walkY": 22,
+   "verticalScale": 0.57
+  },
+  "small": {
+   "source": "assets/stage-v38-mobliz-small.png",
+   "image": "assets/ready/stage-v38-mobliz-small-5259625957402760.webp",
+   "width": 793,
+   "height": 130,
+   "surfaceLeft": 20,
+   "surfaceRight": 772,
+   "walkY": 8
+  }
  }
 };
