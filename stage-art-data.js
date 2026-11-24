@@ -4426,5 +4426,97 @@ const StageArtData={
    "surfaceRight": 744,
    "walkY": 8
   }
+ },
+ "cubivorefield": {
+  "backgroundSource": "assets/stage-v46-cubivorefield-background.png",
+  "background": "assets/ready/stage-v46-cubivorefield-background-27562e37119cfe6c.webp",
+  "preview": "assets/ready/stage-picker-cubivorefield-95f2520a5ee695e5.webp",
+  "main": {
+   "source": "assets/stage-v46-cubivorefield-main.png",
+   "image": "assets/ready/stage-v46-cubivorefield-main-7711b7b676b6c90a.webp",
+   "width": 1504,
+   "height": 251,
+   "surfaceLeft": 33,
+   "surfaceRight": 1470,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v46-cubivorefield-small.png",
+   "image": "assets/ready/stage-v46-cubivorefield-small-b7d9d85607b1ef5d.webp",
+   "width": 756,
+   "height": 170,
+   "surfaceLeft": 28,
+   "surfaceRight": 727,
+   "walkY": 9
+  }
+ },
+ "yuuhi": {
+  "backgroundSource": "assets/stage-v46-yuuhi-background.png",
+  "background": "assets/ready/stage-v46-yuuhi-background-e9c0da7ef92b61a3.webp",
+  "preview": "assets/ready/stage-picker-yuuhi-823be3213e7ee447.webp",
+  "main": {
+   "source": "assets/stage-v46-yuuhi-main.png",
+   "image": "assets/ready/stage-v46-yuuhi-main-dd301c863a4f8139.webp",
+   "width": 1494,
+   "height": 260,
+   "surfaceLeft": 60,
+   "surfaceRight": 1434,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v46-yuuhi-small.png",
+   "image": "assets/ready/stage-v46-yuuhi-small-d154864e3d09f52e.webp",
+   "width": 789,
+   "height": 205,
+   "surfaceLeft": 42,
+   "surfaceRight": 748,
+   "walkY": 9
+  }
+ },
+ "dustcity": {
+  "backgroundSource": "assets/stage-v46-dustcity-background.png",
+  "background": "assets/ready/stage-v46-dustcity-background-6d4d1ea8efd673f9.webp",
+  "preview": "assets/ready/stage-picker-dustcity-1865a521d01c51e3.webp",
+  "main": {
+   "source": "assets/stage-v46-dustcity-main.png",
+   "image": "assets/ready/stage-v46-dustcity-main-1380a9de2c141459.webp",
+   "width": 1514,
+   "height": 243,
+   "surfaceLeft": 46,
+   "surfaceRight": 1467,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v46-dustcity-small.png",
+   "image": "assets/ready/stage-v46-dustcity-small-3a1782f6b2abd7f4.webp",
+   "width": 772,
+   "height": 183,
+   "surfaceLeft": 25,
+   "surfaceRight": 746,
+   "walkY": 9
+  }
+ },
+ "stagesekai": {
+  "backgroundSource": "assets/stage-v46-stagesekai-background.png",
+  "background": "assets/ready/stage-v46-stagesekai-background-12ee91b6ceeffe53.webp",
+  "preview": "assets/ready/stage-picker-stagesekai-b7bfaa00de54d920.webp",
+  "main": {
+   "source": "assets/stage-v46-stagesekai-main.png",
+   "image": "assets/ready/stage-v46-stagesekai-main-fc09b94475896c87.webp",
+   "width": 1514,
+   "height": 207,
+   "surfaceLeft": 44,
+   "surfaceRight": 1469,
+   "walkY": 10
+  },
+  "small": {
+   "source": "assets/stage-v46-stagesekai-small.png",
+   "image": "assets/ready/stage-v46-stagesekai-small-26233ff24f45dda4.webp",
+   "width": 778,
+   "height": 174,
+   "surfaceLeft": 37,
+   "surfaceRight": 740,
+   "walkY": 9
+  }
  }
 };
