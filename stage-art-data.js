@@ -4334,5 +4334,97 @@ const StageArtData={
    "surfaceRight": 773,
    "walkY": 9
   }
+ },
+ "brainacademy": {
+  "backgroundSource": "assets/stage-v45-brainacademy-background.png",
+  "background": "assets/ready/stage-v45-brainacademy-background-8be59b885ba65a71.webp",
+  "preview": "assets/ready/stage-picker-brainacademy-6eb2f4a2532b5f26.webp",
+  "main": {
+   "source": "assets/stage-v45-brainacademy-main.png",
+   "image": "assets/ready/stage-v45-brainacademy-main-2218d0e0e078842b.webp",
+   "width": 1509,
+   "height": 272,
+   "surfaceLeft": 54,
+   "surfaceRight": 1452,
+   "walkY": 8
+  },
+  "small": {
+   "source": "assets/stage-v45-brainacademy-small.png",
+   "image": "assets/ready/stage-v45-brainacademy-small-de9e29b9ec9fe16c.webp",
+   "width": 795,
+   "height": 201,
+   "surfaceLeft": 37,
+   "surfaceRight": 757,
+   "walkY": 9
+  }
+ },
+ "emonlab": {
+  "backgroundSource": "assets/stage-v45-emonlab-background.png",
+  "background": "assets/ready/stage-v45-emonlab-background-af34b369d897c95f.webp",
+  "preview": "assets/ready/stage-picker-emonlab-16c4270b17f93619.webp",
+  "main": {
+   "source": "assets/stage-v45-emonlab-main.png",
+   "image": "assets/ready/stage-v45-emonlab-main-57ff8b1aa4079efb.webp",
+   "width": 1528,
+   "height": 185,
+   "surfaceLeft": 42,
+   "surfaceRight": 1486,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v45-emonlab-small.png",
+   "image": "assets/ready/stage-v45-emonlab-small-5c6c44fb278f45e9.webp",
+   "width": 789,
+   "height": 151,
+   "surfaceLeft": 38,
+   "surfaceRight": 751,
+   "walkY": 10
+  }
+ },
+ "popples": {
+  "backgroundSource": "assets/stage-v45-popples-background.png",
+  "background": "assets/ready/stage-v45-popples-background-d835a8047b1761aa.webp",
+  "preview": "assets/ready/stage-picker-popples-78ff577ebd555e87.webp",
+  "main": {
+   "source": "assets/stage-v45-popples-main.png",
+   "image": "assets/ready/stage-v45-popples-main-8ad639ad3de5692a.webp",
+   "width": 1484,
+   "height": 194,
+   "surfaceLeft": 35,
+   "surfaceRight": 1450,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v45-popples-small.png",
+   "image": "assets/ready/stage-v45-popples-small-ef891613192a43ab.webp",
+   "width": 762,
+   "height": 179,
+   "surfaceLeft": 24,
+   "surfaceRight": 738,
+   "walkY": 9
+  }
+ },
+ "hakoship": {
+  "backgroundSource": "assets/stage-v45-hakoship-background.png",
+  "background": "assets/ready/stage-v45-hakoship-background-63f79c959f40d73c.webp",
+  "preview": "assets/ready/stage-picker-hakoship-f12b459066336995.webp",
+  "main": {
+   "source": "assets/stage-v45-hakoship-main.png",
+   "image": "assets/ready/stage-v45-hakoship-main-54350f4694afccdf.webp",
+   "width": 1503,
+   "height": 186,
+   "surfaceLeft": 48,
+   "surfaceRight": 1455,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v45-hakoship-small.png",
+   "image": "assets/ready/stage-v45-hakoship-small-f2309543354944ec.webp",
+   "width": 790,
+   "height": 170,
+   "surfaceLeft": 45,
+   "surfaceRight": 744,
+   "walkY": 8
+  }
  }
 };
