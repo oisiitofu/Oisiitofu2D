@@ -4150,5 +4150,97 @@ const StageArtData={
    "surfaceRight": 682,
    "walkY": 61
   }
+ },
+ "tamagotland": {
+  "backgroundSource": "assets/stage-v43-tamagotland-background.png",
+  "background": "assets/ready/stage-v43-tamagotland-background-7dcf9c8aef37498e.webp",
+  "preview": "assets/ready/stage-picker-tamagotland-e1bfc1c6614d3551.webp",
+  "main": {
+   "source": "assets/stage-v43-tamagotland-main.png",
+   "image": "assets/ready/stage-v43-tamagotland-main-ea2b8173f6d80e96.webp",
+   "width": 1504,
+   "height": 303,
+   "surfaceLeft": 24,
+   "surfaceRight": 1481,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v43-tamagotland-small.png",
+   "image": "assets/ready/stage-v43-tamagotland-small-ea0c0b63054382bb.webp",
+   "width": 771,
+   "height": 179,
+   "surfaceLeft": 17,
+   "surfaceRight": 752,
+   "walkY": 9
+  }
+ },
+ "nyankocastle": {
+  "backgroundSource": "assets/stage-v43-nyankocastle-background.png",
+  "background": "assets/ready/stage-v43-nyankocastle-background-94861977b5d564aa.webp",
+  "preview": "assets/ready/stage-picker-nyankocastle-ffc63fa99f61681c.webp",
+  "main": {
+   "source": "assets/stage-v43-nyankocastle-main.png",
+   "image": "assets/ready/stage-v43-nyankocastle-main-efe00286437d4aeb.webp",
+   "width": 1518,
+   "height": 288,
+   "surfaceLeft": 35,
+   "surfaceRight": 1483,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v43-nyankocastle-small.png",
+   "image": "assets/ready/stage-v43-nyankocastle-small-1ba7b6f1af8989b0.webp",
+   "width": 776,
+   "height": 148,
+   "surfaceLeft": 20,
+   "surfaceRight": 755,
+   "walkY": 9
+  }
+ },
+ "cojiclass": {
+  "backgroundSource": "assets/stage-v43-cojiclass-background.png",
+  "background": "assets/ready/stage-v43-cojiclass-background-392fe6bb5b3e93d8.webp",
+  "preview": "assets/ready/stage-picker-cojiclass-c6cdbb2b7730b17f.webp",
+  "main": {
+   "source": "assets/stage-v43-cojiclass-main.png",
+   "image": "assets/ready/stage-v43-cojiclass-main-094548d5cbd8f164.webp",
+   "width": 1536,
+   "height": 222,
+   "surfaceLeft": 69,
+   "surfaceRight": 1466,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v43-cojiclass-small.png",
+   "image": "assets/ready/stage-v43-cojiclass-small-b4c6a14a30f6b8b9.webp",
+   "width": 796,
+   "height": 141,
+   "surfaceLeft": 35,
+   "surfaceRight": 760,
+   "walkY": 9
+  }
+ },
+ "ochaland": {
+  "backgroundSource": "assets/stage-v43-ochaland-background.png",
+  "background": "assets/ready/stage-v43-ochaland-background-aba67e004292f40c.webp",
+  "preview": "assets/ready/stage-picker-ochaland-ba25bb4c7991aec5.webp",
+  "main": {
+   "source": "assets/stage-v43-ochaland-main.png",
+   "image": "assets/ready/stage-v43-ochaland-main-d9a4e0aa61cfd745.webp",
+   "width": 1524,
+   "height": 267,
+   "surfaceLeft": 85,
+   "surfaceRight": 1432,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v43-ochaland-small.png",
+   "image": "assets/ready/stage-v43-ochaland-small-592576dc00c2639d.webp",
+   "width": 813,
+   "height": 172,
+   "surfaceLeft": 34,
+   "surfaceRight": 778,
+   "walkY": 10
+  }
  }
 };

@@ -970,6 +970,30 @@ const StageCatalog=(()=>{
    {x:240,y:314,w:265},
    {x:1057,y:383,w:276},
    {x:518,y:415,w:230,motion:{path:[[0,0,0,0],[106,0,0,0],[179,-53,0,148],[286,-53,0,148],[393,-11,-101,96],[468,-11,-101,96],[575,0,0,0],[653,0,0,0]]}}
+  ]},
+  {id:"166",name:"たまごっち星 りくフィールド",origin:"たまごっち",theme:"tamagotland",folder:"tamagotchi-land-field",color:"#d8edac",layout:"丸い丘の足場は左に大きく張り出し、右側は高さをそろえた一対の小さな岩棚が離れている",platforms:[
+   {x:288,y:555,w:864,main:true},
+   {x:101,y:395,w:356},
+   {x:516,y:464,w:183},
+   {x:863,y:343,w:182},
+   {x:1133,y:343,w:189}
+  ]},
+  {id:"167",name:"にゃんこ城",origin:"にゃんこ大戦争",theme:"nyankocastle",folder:"nyanko-castle",color:"#dedaa4",layout:"城壁の長い足場は中央が開け、左右の見張り台が城の外から出てくる。片方は低いところで、もう片方は高いところで止まる",platforms:[
+   {x:159,y:555,w:1120,main:true},
+   {x:620,y:289,w:208},
+   {x:187,y:438,w:230,motion:{path:[[0,0,0],[106,0,0],[264,290,-54],[351,290,-54],[490,0,0],[610,0,0]]}},
+   {x:1022,y:335,w:197,motion:{path:[[0,0,0],[172,0,0],[301,-171,45],[402,-171,45],[535,0,0],[610,0,0]]}}
+  ]},
+  {id:"168",name:"メルヘンの国 3年インコ組",origin:"コジコジ",theme:"cojiclass",folder:"coji-fairyland-classroom",color:"#f1d7ad",layout:"広い床の左側に幅のある読書台が低くあり、右側には背の高い机が一つだけある",platforms:[
+   {x:113,y:549,w:1214,main:true},
+   {x:158,y:456,w:414},
+   {x:954,y:338,w:238}
+  ]},
+  {id:"169",name:"お茶犬ランド",origin:"お茶犬",theme:"ochaland",folder:"ocha-ken-land",color:"#c8e6ba",layout:"木橋を主床に、遊具の小台が長い弧を描く。短い台は下段を、広い台は反対側の上段を回る",platforms:[
+   {x:227,y:552,w:986,main:true},
+   {x:673,y:316,w:195},
+   {x:163,y:435,w:151,motion:{x:108,y:53,period:572,phase:-1.5707963267948966,phaseY:1.5707963267948966}},
+   {x:1022,y:387,w:247,motion:{x:89,y:54,period:628,phase:1.5707963267948966,phaseY:-1.5707963267948966}}
   ]}
  ];
  const draw=n=>Math.floor(Math.random()*n);
