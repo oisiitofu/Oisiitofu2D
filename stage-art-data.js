@@ -4242,5 +4242,97 @@ const StageArtData={
    "surfaceRight": 778,
    "walkY": 10
   }
+ },
+ "donburi": {
+  "backgroundSource": "assets/stage-v44-donburi-background.png",
+  "background": "assets/ready/stage-v44-donburi-background-bf5644d9139687ab.webp",
+  "preview": "assets/ready/stage-picker-donburi-f496f2321ec7a8f2.webp",
+  "main": {
+   "source": "assets/stage-v44-donburi-main.png",
+   "image": "assets/ready/stage-v44-donburi-main-eff0756a0abefc7b.webp",
+   "width": 1502,
+   "height": 345,
+   "surfaceLeft": 54,
+   "surfaceRight": 1458,
+   "walkY": 10
+  },
+  "small": {
+   "source": "assets/stage-v44-donburi-small.png",
+   "image": "assets/ready/stage-v44-donburi-small-98ad820d74b75d6e.webp",
+   "width": 753,
+   "height": 223,
+   "surfaceLeft": 31,
+   "surfaceRight": 717,
+   "walkY": 13
+  }
+ },
+ "movieland": {
+  "backgroundSource": "assets/stage-v44-movieland-background.png",
+  "background": "assets/ready/stage-v44-movieland-background-41f2873f7282d340.webp",
+  "preview": "assets/ready/stage-picker-movieland-947c7288f65d5dbf.webp",
+  "main": {
+   "source": "assets/stage-v44-movieland-main.png",
+   "image": "assets/ready/stage-v44-movieland-main-a0ac27bee573f35d.webp",
+   "width": 1490,
+   "height": 186,
+   "surfaceLeft": 34,
+   "surfaceRight": 1456,
+   "walkY": 10
+  },
+  "small": {
+   "source": "assets/stage-v44-movieland-small.png",
+   "image": "assets/ready/stage-v44-movieland-small-1b408aeef9bc8f3b.webp",
+   "width": 771,
+   "height": 142,
+   "surfaceLeft": 32,
+   "surfaceRight": 738,
+   "walkY": 9
+  }
+ },
+ "medaropolis": {
+  "backgroundSource": "assets/stage-v44-medaropolis-background.png",
+  "background": "assets/ready/stage-v44-medaropolis-background-7a8b62c3bd1b4e9b.webp",
+  "preview": "assets/ready/stage-picker-medaropolis-d4fb904a974c51c6.webp",
+  "main": {
+   "source": "assets/stage-v44-medaropolis-main.png",
+   "image": "assets/ready/stage-v44-medaropolis-main-5f1fa91777ed5765.webp",
+   "width": 1495,
+   "height": 228,
+   "surfaceLeft": 40,
+   "surfaceRight": 1454,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v44-medaropolis-small.png",
+   "image": "assets/ready/stage-v44-medaropolis-small-d0762b6f3679b25d.webp",
+   "width": 765,
+   "height": 164,
+   "surfaceLeft": 28,
+   "surfaceRight": 737,
+   "walkY": 8
+  }
+ },
+ "hachihachi": {
+  "backgroundSource": "assets/stage-v44-hachihachi-background.png",
+  "background": "assets/ready/stage-v44-hachihachi-background-14ba16fb95f7f306.webp",
+  "preview": "assets/ready/stage-picker-hachihachi-0e9623020691bb8c.webp",
+  "main": {
+   "source": "assets/stage-v44-hachihachi-main.png",
+   "image": "assets/ready/stage-v44-hachihachi-main-f3ad4e94ba3c90d2.webp",
+   "width": 1502,
+   "height": 205,
+   "surfaceLeft": 24,
+   "surfaceRight": 1478,
+   "walkY": 9
+  },
+  "small": {
+   "source": "assets/stage-v44-hachihachi-small.png",
+   "image": "assets/ready/stage-v44-hachihachi-small-c752423cd4dd3cbb.webp",
+   "width": 788,
+   "height": 166,
+   "surfaceLeft": 14,
+   "surfaceRight": 773,
+   "walkY": 9
+  }
  }
 };
