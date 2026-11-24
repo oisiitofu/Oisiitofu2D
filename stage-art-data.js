@@ -4518,5 +4518,97 @@ const StageArtData={
    "surfaceRight": 740,
    "walkY": 9
   }
+ },
+ "ichinoichi": {
+  "backgroundSource": "assets/stage-v47-ichinoichi-background.png",
+  "background": "assets/ready/stage-v47-ichinoichi-background-02ff5c48738d5ecb.webp",
+  "preview": "assets/ready/stage-picker-ichinoichi-9f880c6186f9196c.webp",
+  "main": {
+   "source": "assets/stage-v47-ichinoichi-main.png",
+   "image": "assets/ready/stage-v47-ichinoichi-main-3f5a8a556559d470.webp",
+   "width": 1508,
+   "height": 327,
+   "surfaceLeft": 92,
+   "surfaceRight": 1415,
+   "walkY": 37
+  },
+  "small": {
+   "source": "assets/stage-v47-ichinoichi-small.png",
+   "image": "assets/ready/stage-v47-ichinoichi-small-7a9be63c5c41b0db.webp",
+   "width": 750,
+   "height": 162,
+   "surfaceLeft": 44,
+   "surfaceRight": 705,
+   "walkY": 23
+  }
+ },
+ "junkmarket": {
+  "backgroundSource": "assets/stage-v47-junkmarket-background.png",
+  "background": "assets/ready/stage-v47-junkmarket-background-37dd69cc4e9778aa.webp",
+  "preview": "assets/ready/stage-picker-junkmarket-3ff4c367fc44b25b.webp",
+  "main": {
+   "source": "assets/stage-v47-junkmarket-main.png",
+   "image": "assets/ready/stage-v47-junkmarket-main-6c713f75d83ce02e.webp",
+   "width": 1512,
+   "height": 259,
+   "surfaceLeft": 31,
+   "surfaceRight": 1480,
+   "walkY": 10
+  },
+  "small": {
+   "source": "assets/stage-v47-junkmarket-small.png",
+   "image": "assets/ready/stage-v47-junkmarket-small-a2c83e4340f963b0.webp",
+   "width": 779,
+   "height": 183,
+   "surfaceLeft": 32,
+   "surfaceRight": 747,
+   "walkY": 11
+  }
+ },
+ "dreamforest": {
+  "backgroundSource": "assets/stage-v47-dreamforest-background.png",
+  "background": "assets/ready/stage-v47-dreamforest-background-fd10642991af78ce.webp",
+  "preview": "assets/ready/stage-picker-dreamforest-e5cb8c3539a7a04a.webp",
+  "main": {
+   "source": "assets/stage-v47-dreamforest-main.png",
+   "image": "assets/ready/stage-v47-dreamforest-main-2eedc73bbd7ba9dc.webp",
+   "width": 1509,
+   "height": 277,
+   "surfaceLeft": 29,
+   "surfaceRight": 1483,
+   "walkY": 18
+  },
+  "small": {
+   "source": "assets/stage-v47-dreamforest-small.png",
+   "image": "assets/ready/stage-v47-dreamforest-small-9e558b1f5a9018b2.webp",
+   "width": 735,
+   "height": 201,
+   "surfaceLeft": 11,
+   "surfaceRight": 720,
+   "walkY": 53
+  }
+ },
+ "chiikawahouse": {
+  "backgroundSource": "assets/stage-v47-chiikawahouse-background.png",
+  "background": "assets/ready/stage-v47-chiikawahouse-background-8d001999bbb4fd2a.webp",
+  "preview": "assets/ready/stage-picker-chiikawahouse-b47c97ebbd7c6ca4.webp",
+  "main": {
+   "source": "assets/stage-v47-chiikawahouse-main.png",
+   "image": "assets/ready/stage-v47-chiikawahouse-main-a28a2819ce5b8947.webp",
+   "width": 1519,
+   "height": 288,
+   "surfaceLeft": 54,
+   "surfaceRight": 1461,
+   "walkY": 97
+  },
+  "small": {
+   "source": "assets/stage-v47-chiikawahouse-small.png",
+   "image": "assets/ready/stage-v47-chiikawahouse-small-eac7de8793ed5155.webp",
+   "width": 776,
+   "height": 184,
+   "surfaceLeft": 27,
+   "surfaceRight": 749,
+   "walkY": 32
+  }
  }
 };
