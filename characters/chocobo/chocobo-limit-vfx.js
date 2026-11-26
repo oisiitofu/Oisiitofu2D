@@ -37,7 +37,8 @@ const ChocoboLimitVFX=(()=>{
   ctx.lineTo(844,463);ctx.lineTo(805,475);ctx.lineTo(722,466);ctx.closePath();ctx.fill();ctx.stroke();
   ctx.beginPath();ctx.moveTo(724,441);ctx.lineTo(752,448);ctx.lineTo(783,439);ctx.lineTo(816,446);ctx.stroke();
   const sprite={...attacker,x,y,face:pose===20?-1:1,attack:null,mode:'Idle',state:'idle',grounded:true,inv:0,intangible:0};
-  drawSprite(sprite,1,pose,3);
+  const intermediate=ChocoboMotionPreview.limit(t,pose);
+  if(!MotionPreview.cinematic(sprite,intermediate,1,3))drawSprite(sprite,1,pose,3);
   target(opponent,tx,ty-impact*16,-.15-impact*.4-ease((t-192)/25)*1.41,2.6);
   for(const [i,hit] of hits.entries()){
    const strength=pulse(t,hit,5,9);
